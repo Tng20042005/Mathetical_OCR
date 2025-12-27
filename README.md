@@ -38,13 +38,3 @@ SciViT adopts an encoder-decoder paradigm. We replace the traditional CNN backbo
 </div>
 
 ---
-
-## 🛠️ Installation
-
-```bash
-# Clone the repository
-git clone [https://github.com/yourusername/SciViT.git](https://github.com/yourusername/SciViT.git)
-cd SciViT
-
-# Install dependencies
-pip install -r requirements.txt
