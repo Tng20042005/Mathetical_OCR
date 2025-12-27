@@ -1,0 +1,65 @@
+|  |  |  |
+| --- | --- | --- |
+|  | 0=\iint\_{\mathbb{R}^{2}}\chi\_{\Sigma}(t,x){\,\rm d}t{\,\rm d}x=\iint\_{\mathbb{% R}^{2}}\chi\_{\Sigma}(t,t+\eta){\,\rm d}t{\,\rm d}\eta. |  |
+
+By Fubini’s Theorem,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathbb{R}}\left(\int\_{\mathbb{R}}\chi\_{\Sigma}(t,t+\eta){\,\rm d}t% \right){\,\rm d}\eta=0. |  |
+
+The inner integral is exactly the one-dimensional Lebesgue measure of \Sigma\_{\eta}, \mbox{meas}\_{\mathbb{R}}(\Sigma\_{\eta}).
+Hence,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathbb{R}}\mbox{meas}\_{\mathbb{R}}(\Sigma\_{\eta}){\,\rm d}\eta=0. |  |
+
+It follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}}(\Sigma\_{\eta})=0\quad\text{for almost every }\eta\in% \mathbb{R}. |  |
+
+This gives the desired conclusion.
+∎
+
+Next, we investigate the observability for the transport equation:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle(\partial\_{t}-\partial\_{x})u=0,\quad u|\_{t=0}=u\_{0}\in L^{2}({% \mathbb{T}}), |  | (A.7) |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle(\partial\_{t}+\partial\_{x})u=0,\quad u|\_{t=0}=u\_{0}\in L^{2}({% \mathbb{T}}). |  | (A.8) |
+
+Since the proofs of the two observability inequalities for (A.7) and (A.8) are almost the same, we only present the proof for (A.7). Let \widehat{u}(k) be the k-th Fourier coefficient of u defined as
+\widehat{u}(k)=\frac{1}{2\pi}\int\_{0}^{2\pi}u(x)\mathrm{e}^{-\mathrm{i}kx}{\,%
+\rm d}x. We write the initial state u\_{0} and its associated solution u to (A.7) into Fourier series
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{0}(x)=\sum\_{k\in\mathbb{Z}}\widehat{u\_{0}}(k)\mathrm{e}^{\mathrm{i}kx},\;u(% t,x)=\sum\_{k\in\mathbb{Z}}\widehat{u\_{0}}(k)\mathrm{e}^{\mathrm{i}k(t+x)}. |  |
+
+Then the observability \|u\_{0}\|^{2}\_{L^{2}({\mathbb{T}})}\leq C\int\_{G}|u(t,x)|^{2}{\,\rm d}x{\,\rm d}t for the transport equation (A.7)
+is equivalent to
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{k\in\mathbb{Z}}|\widehat{u\_{0}}(k)|^{2}\leq C\int\_{G}|\sum\_{k\in\mathbb{% Z}}\widehat{u\_{0}}(k)\mathrm{e}^{\mathrm{i}k(t+x)}|^{2}{\,\rm d}x{\,\rm d}t. |  |
+
+###### Proposition A.4.
+
+Let G\subset{\mathbb{T}}^{2} be a measurable set with positive measure and G satisfy (GCC). Then for any subset \Lambda\subset\mathbb{Z} and any \{a\_{k}\}\_{k\in\Lambda}\in l^{2}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle 2\pi c\_{0}\sum\_{k\in\Lambda}|a\_{k}|^{2}\leq\int\_{G}|\sum\_{k\in% \Lambda}a\_{k}\mathrm{e}^{\mathrm{i}k(t+x)}|^{2}{\,\rm d}x{\,\rm d}t, |  | (A.9) |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle 2\pi c\_{0}\sum\_{k\in\Lambda}|a\_{k}|^{2}\leq\int\_{G}|\sum\_{k\in% \Lambda}a\_{k}\mathrm{e}^{-\mathrm{i}k(t-x)}|^{2}{\,\rm d}x{\,\rm d}t. |  | (A.10) |
+
+###### Proof.
+
+We prove (A.9) by direct computation (similarly for (A.10)). Let A\_{k}:=\left\{\begin{array}[]{cc}a\_{k},&k\in\Lambda,\\
+0,&\text{otherwise.}\end{array}\right.

@@ -1,0 +1,47 @@
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{S/C}\otimes\_{\mathcal{O}}\hat{\mathcal{O}}\rightarrow\left(\mathrm{Fil}^{1}% \_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{% \mathcal{O}})\right)(-1) |  |
+
+whose composition with q\_{\tilde{S}} is equal to \kappa\_{\tilde{S}\_{\mathrm{dR}}}.
+
+###### Remark 1.1.4.
+
+In particular, if \mathrm{Fil}^{2}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb%
+{Q}\_{p}}}\hat{\mathcal{O}})=0, then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\mathrm{Fil}^{1}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{% \mathbb{Q}\_{p}}}\hat{\mathcal{O}})\right)(-1)=\left(\mathrm{gr}^{1}\_{\mathrm{% HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}% )\right)(-1) |  |
+
+and in this case Theorem A says \kappa\_{\tilde{S}}=\kappa\_{\tilde{S}\_{\mathrm{dR}}}. If G is reductive and there is a Hodge cocharacter (e.g. if S is geometrically connected), then this is precisely the case in which that cocharacter is minuscule — this is the situation one is in when considering local and global Shimura varieties. In general, the uniqueness statement means that even when \mathrm{Fil}^{2}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb%
+{Q}\_{p}}}\hat{\mathcal{O}})\neq 0, the Kodaira-Spencer morphism uniquely determines the geometric Sen morphism.
+
+#### 1.1.5. Sketch of proof
+
+That such a lift is unique if it exists is a straightforward consideration of Hodge-Tate weights and the vanishing of \nu\_{\*}\left(\hat{\mathcal{O}}(k)\right) for k<0 established in [8], where \nu is the natural map S\_{\mathrm{pro\acute{e}t}}\rightarrow S\_{\mathrm{\acute{e}t}}. To show that geometric Sen does indeed lift Kodaira–Spencer, since both are functorial it suffices to treat the case of G=\mathrm{GL}\_{n}. In this case it can be extracted directly from a comparison with the p-adic Simpson correspondence of [4]. This same compatibility is used already in the proofs for local and global Shimura varieties, thus, the main innovation in Theorem A was perhaps just to find a natural statement.
+
+### 1.2. Examples and applications
+
+For canonical torsors over Shimura varieties, Theorem A was established in [RodriguezCamargo.LocallyAnalyticCompletedCohomology] (building on the case of the modular curve treated in [6]). The case of canonical torsors over local Shimura varieties was established in [DospinescuRodriguezCamargo.JacquetLanglands]. Both are in the minuscule setting as in Remark 1.1.4; below we give one more example (Example 1.2.1) where we recover a prior computation in the minuscule setting, then discuss some new examples in the non-minuscule setting. In particular, Example 1.2.4 generalizes the case of local Shimura varieties to non-miniscule flat crystalline period domains. In §1.2.5 we explain how these examples relate to conjectures and results on perfectoidness of torsors. Finally, in §1.2.6 we explain the connection with derivatives of period maps.
+
+###### Example 1.2.1 (Abelian varieties).
+
+Let L be a p-adic field, let C=\overline{L}^{\wedge}, and let A/L be an abelian variety. The tower (A)\_{n\in\mathbb{N}} with transition maps multiplication by p is a torsor over A for the p-adic Tate module111This is not strictly within the purview of Theorem A since T\_{p}A over L is not a p-adic Lie group but rather an arithmetically twisted p-adic Lie group. Nonetheless, there is still a geometric Sen morphism because, for g=\dim A, (T\_{p}A)\_{C}\cong\underline{\mathbb{Z}\_{p}}^{2g} is a p-adic Lie group, and the geometric Sen morphism can be constructed purely over C. To make the following argument precise one can instead work with a \mathrm{GL}\_{2g}(\mathbb{Z}\_{p})\ltimes\mathbb{Z}\_{p}^{2g}-torsor by taking also trivializations of T\_{p}A (so that the \mathrm{GL}\_{2g}(\mathbb{Z}\_{p}) part of the torsor is purely arithmetic). T\_{p}A. The associated torsor on the de Rham side is the H\_{1,\mathrm{dR}}(A)-torsor of splittings of the relative de Rham homology sequence over A
+
+|  |  |  |
+| --- | --- | --- |
+|  | 0\rightarrow H\_{1,\mathrm{dR}}(A)\otimes\_{L}\mathcal{O}\_{A}\rightarrow\mathcal% {H}\_{1,\mathrm{dR}}(A,\{a,0\})\rightarrow\mathcal{O}\_{A}\rightarrow 0 |  |
+
+associated to the map of varieties over A,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \{\ast\_{1},\ast\_{2}\}\times A\rightarrow A\times A/A,\;(\ast\_{1},a)\mapsto(0,a% )\textrm{ and }(\ast\_{2},a)\mapsto(a,a). |  |
+
+By a complex analytic computation (passing to a finitely generated extension of \mathbb{Q} over which A is defined and then base changing to \mathbb{C}), one finds that, above a point a\in A, the Kodaira-Spencer map on \mathcal{H}\_{1,\mathrm{dR}}(A,\{a,0\})) sends t\in T\_{a}A=\operatorname{Lie}A to the element of \mathrm{gr}^{-1}\mathrm{End}(\mathcal{H}\_{1,\mathrm{dR}}(A,\{a,0\})) represented by the composition of projection from \mathcal{H}\_{1,\mathrm{dR}}(A,\{a,0\}) onto \mathcal{O}\_{A} with the map from \mathcal{O}\_{A} sending 1 to
+
+|  |  |  |
+| --- | --- | --- |
+|  | t\in\operatorname{Lie}A=H\_{1,\mathrm{dR}}(A)/\mathrm{Fil}^{0}H\_{1,\mathrm{dR}}% (A)\subseteq H\_{1,\mathrm{dR}}(A,\{a,0\})/\mathrm{Fil}^{0}H\_{1,\mathrm{dR}}(A,% \{a,0\}). |  |
+
+Applying Theorem A, one finds that the geometric Sen morphism is the map induced by the inclusion of the Hodge-Tate filtration \operatorname{Lie}A\subseteq T\_{p}A\otimes C(-1), recovering in this case [BellovinCaiHowe.Cha

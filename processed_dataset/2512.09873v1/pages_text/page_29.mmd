@@ -1,0 +1,186 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \iint\_{A\times[0,T]}\frac{\partial v}{\partial\tau}{\,\rm d}\eta{\,\rm d}\tau=% \int\_{A}\biggl{(}\int\_{0}^{T}\frac{\partial v}{\partial\tau}{\,\rm d}\tau% \biggr{)}{\,\rm d}\eta. |  |
+
+For fixed \eta, the fundamental theorem of calculus gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{0}^{T}\frac{\partial v}{\partial\tau}{\,\rm d}\tau=v(\eta,T)-v(\eta,0)=u% (\eta+T,T)-u(\eta,0). |  |
+
+Hence
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{B}\bigl{(}u(\eta+T,T)-u(\eta,0)\bigr{)}{\,\rm d}\eta=\int\_{B}u(\eta+T,T)% \,d\eta-\int\_{B}u(\eta,0){\,\rm d}\eta. |  |
+
+In the first integral set x=\eta+T. When \eta\in B, we have x\in T+B and {\,\rm d}\eta={\,\rm d}x; therefore
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{B}u(\eta+T,T){\,\rm d}\eta=\int\_{T+B}u(x,T){\,\rm d}x. |  |
+
+Consequently,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \iint\_{\Omega^{+}}(u\_{x}+u\_{t}){\,\rm d}x{\,\rm d}t=\int\_{T+B}u(x,T)\,dx-\int\_% {B}u(x,0){\,\rm d}x, |  |
+
+which completes the proof.
+∎
+
+## References
+
+* [AEWZ14]
+
+  J. Apraiz, L. Escauriaza, G. Wang, and C. Zhang.
+  Observability inequalities and measurable sets.
+  J. Eur. Math. Soc. (JEMS), 16(11):2433–2475, 2014.
+* [BDE20]
+
+  K. Beauchard, J. Dardé, and S. Ervedoza.
+  Minimal time issues for the observability of Grushin-type
+  equations.
+  Ann. Inst. Fourier (Grenoble), 70(1):247–312, 2020.
+* [BDE25]
+
+  E. Burman, G. Delay, and A. Ern.
+  The unique continuation problem for the wave equation discretized
+  with a high-order space-time nonconforming method.
+  Numer. Math., 157(4):1259–1284, 2025.
+* [BG97]
+
+  N. Burq and P. Gérard.
+  Condition nécessaire et suffisante pour la contrôlabilité
+  exacte des ondes.
+  C. R. Acad. Sci. Paris Sér. I Math., 325(7):749–752, 1997.
+* [BLR92]
+
+  C. Bardos, Gille Lebeau, and Jeffrey Rauch.
+  Sharp sufficient conditions for the observation, control, and
+  stabilization of waves from the boundary.
+  SIAM J. Control Optim., 30(5):1024–1065, 1992.
+* [Bur98]
+
+  N. Burq.
+  Décroissance de l’énergie locale de l’équation des ondes pour
+  le problème extérieur et absence de résonance au voisinage du réel.
+  Acta Math., 180(1):1–29, 1998.
+* [BZ04]
+
+  N. Burq and M. Zworski.
+  Geometric control in the presence of a black box.
+  J. Amer. Math. Soc., 17(2):443–471, 2004.
+* [BZ25a]
+
+  N. Burq and H. Zhu.
+  Observability of Schrödinger propagators on tori in rough
+  settings.
+  arXiv:2509.23965, 2025.
+* [BZ25b]
+
+  N. Burq and H. Zhu.
+  Resolvent bounds imply observability from measurable time sets for
+  Schrödinger equations.
+  arXiv:2510.24517, 2025.
+* [CCM14]
+
+  C. Castro, N. Cîndea, and A. Münch.
+  Controllability of the linear one-dimensional wave equation with
+  inner moving forces.
+  SIAM J. Control Optim., 52(6):4027–4056, 2014.
+* [CKX25a]
+
+  J.-M. Coron, J. Krieger, and S. Xiang.
+  Global controllability and stabilization of the wave maps equation
+  from a circle to a sphere.
+  Calc. Var. Partial Differential Equations, 64(4):Paper No. 108,
+  39, 2025.
+* [CKX25b]
+
+  J.-M. Coron, J. Krieger, and S. Xiang.
+  Wave maps from circle to riemannian manifold: global controllability
+  is equivalent to homotopy.
+  arXiv preprint, 2025.
+* [Cor07]
+
+  J.-M. Coron.
+  Control and nonlinearity, volume 136 of Mathematical
+  Surveys and Monographs.
+  American Mathematical Society, Providence, RI, 2007.
+* [CX25]
+
+  J.-M. Coron and S. Xiang.
+  Global controllability to harmonic maps of the heat flow from a
+  circle to a sphere.
+  J. Math. Pures Appl. (9), 204:Paper No. 103761, 47, 2025.
+* [DLZ03]
+
+  B. Dehman, G. Lebeau, and E. Zuazua.
+  Stabilization and control for the subcritical semilinear wave
+  equation.
+  Ann. Sci. École Norm. Sup. (4), 36(4):525–551, 2003.
+* [DZZ08]
+
+  T. Duyckaerts, X. Zhang, and E. Zuazua.
+  On the optimality of the observability inequalities for parabolic and
+  hyperbolic systems with potentials.
+  Ann. Inst. H. Poincaré C Anal. Non Linéaire, 25(1):1–41,
+  2008.
+* [EZ13]
+
+  S. Ervedoza and E. Zuazua.
+  Numerical approximation of exact controls for waves.
+  SpringerBriefs in Mathematics. Springer, New York, 2013.
+* [FLL25]
+
+  S. Filippas, C. Laurent, and M. Léautaud.
+  Unique continuation for Schrödinger operators with partially
+  Gevrey coefficients.
+  Commun. Am. Math. Soc., 5:321–391, 2025.
+* [Har89]
+
+  A. Haraux.
+  Une remarque sur la stabilisation de certains systèmes du
+  deuxième ordre en temps.
+  Portugal. Math., 46(3):245–258, 1989.
+* [Hör92]
+
+  L. Hörmander.
+  A uniqueness theorem for second order hyperbolic differential
+  equations.
+  Comm. Partial Differential Equations, 17(5-6):699–714, 1992.
+* [Hör97]
+
+  L. Hörmander.
+  On the uniqueness of the Cauchy problem under partial analyticity
+  assumptions.
+  In Geometrical optics and related topics (Cortona, 1996),
+  volume 32 of Progr. Nonlinear Differential Equations Appl., pages
+  179–219. Birkhäuser Boston, Boston, MA, 1997.
+* [Kle25]
+
+  P. Kleinhenz.
+  Sharp conditions for exponential and non-exponential uniform
+  stabilization of the time-dependent damped wave equation.
+  To appear in Trans. Amer. Math. Soc., 2025.
+* [KX24]
+
+  J. Krieger and S. Xiang.
+  Semi-global controllability of a geometric wave equation.
+  Pure Appl. Math. Q., 20(4):1763–1824, 2024.
+* [Leb92]
+
+  G. Lebeau.
+  Control for hyperbolic equations.
+  In Journées “Équations aux Dérivées Partielles”
+  (Saint-Jean-de-Monts, 1992), page 24. École Polytech., Palaiseau,
+  1992.
+* [Li10]
+
+  T. Li.
+  Controllability and observability for quasilinear hyperbolic
+  systems, volume 3 of AIMS Series on Applied Mathematics.
+  American Institute of Mathematical Sciences (AIMS), Springfield, MO;
+  Higher Education Press, Beijing, 2010.
+* [LL19]

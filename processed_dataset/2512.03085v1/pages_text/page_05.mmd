@@ -1,0 +1,54 @@
+when n\geq 0, and a similar list when n<0. Thus
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{m}g(m)g(n+m)=r-|n|\quad\text{for }|n|\leq r-1, |  |
+
+and zero otherwise. Comparing with the defining formula
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{r}(n)=\frac{1}{r}\Bigl{(}1-\frac{|n|}{r}\Bigr{)}=\frac{r-|n|}{r^{2}}\quad(|% n|\leq r-1) |  |
+
+shows that indeed F\_{r}(n)=(1/r^{2})\sum\_{m}g(m)g(n+m) for all n.
+∎
+
+Using this representation, the Fourier transform and its basic properties follow at once.
+
+###### Proposition 4.2 (Fourier symbol and bounds).
+
+Let N\geq 2 and 1\leq r\leq\lfloor N/2\rfloor. Then for k\in\mathbb{Z}/N\mathbb{Z},
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{F\_{r}}(k)=\sum\_{n\in\mathbb{Z}/N\mathbb{Z}}F\_{r}(n)e^{-2\pi ikn/N}=% \begin{cases}\displaystyle\Biggl{(}\frac{\sin(\pi rk/N)}{r\,\sin(\pi k/N)}% \Biggr{)}^{\!2},&k\not\equiv 0\pmod{N},\\[10.0pt] 1,&k\equiv 0\pmod{N}.\end{cases} |  |
+
+In particular, \widehat{F\_{r}}(k)\geq 0 and \widehat{F\_{r}}(k)\leq 1 for all k\in\mathbb{Z}/N\mathbb{Z}.
+
+###### Proof.
+
+By Lemma 4.1,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{F\_{r}}(k)=\sum\_{n}F\_{r}(n)e^{-2\pi ikn/N}=\frac{1}{r^{2}}\sum\_{n}\sum% \_{m}g(m)g(n+m)e^{-2\pi ikn/N}. |  |
+
+Interchanging the order of summation and using a change of variables n\mapsto n-m gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{F\_{r}}(k)=\frac{1}{r^{2}}\sum\_{m}g(m)\sum\_{n}g(n)e^{-2\pi ik(n-m)/N}=% \frac{1}{r^{2}}\Bigl{(}\sum\_{n}g(n)e^{-2\pi ikn/N}\Bigr{)}\Bigl{(}\sum\_{m}g(m)% e^{2\pi ikm/N}\Bigr{)}. |  |
+
+Thus
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{F\_{r}}(k)=\frac{1}{r^{2}}\,|\widehat{g}(k)|^{2}, |  |
+
+where \widehat{g}(k)=\sum\_{n=0}^{r-1}e^{-2\pi ikn/N} is the DFT of the boxcar g. A direct geometric series computation yields, for k\not\equiv 0\pmod{N},
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{g}(k)=\sum\_{n=0}^{r-1}e^{-2\pi ikn/N}=e^{-\pi ik(r-1)/N}\,\frac{\sin(% \pi rk/N)}{\sin(\pi k/N)}, |  |
+
+so that

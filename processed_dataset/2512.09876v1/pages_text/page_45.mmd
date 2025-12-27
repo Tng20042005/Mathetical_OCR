@@ -1,0 +1,50 @@
+Under the assumptions of the previous lemma, we call \underline{\mathcal{M}} the
+unramified sheaf associated with the MW-homodule \mathcal{M}.
+The same definition applies to an M-module, or more generally to an MW-module when we assuming the existence
+of a pinning on S.
+
+The following theorem is a reinforcement of the fundamental result of [BHP23],
+the Gersten resolution for Milnor-Witt K-theory of a local essentially smooth scheme over a Dedekind ring.
+What our theory brings is the construction of the Nisnevich sheaf \underline{M}, and in particular its contravariant
+functoriality.
+
+###### Theorem 4.3.5.
+
+Assume that S is a regular base scheme of dimension \leq 1, with codimension function \delta=-\operatorname{codim}\_{S}
+and consider the pinning given by \mathcal{O}\_{S} on S.
+Let M be an MW-module M obtained by e-localization or e-trivialization of \operatorname{K}^{MW}.
+
+Then \underline{M} is a homotopy module over S.
+Moreover, for any essentially smooth S-scheme X and line bundle \mathcal{L} over X,
+and any topology t={\mathrm{Zar}},{\mathrm{Nis}},
+one has an isomorphism of \mathbf{Z}-graded abelian groups, natural with respect
+to essentially smooth pullbacks:
+
+|  |  |  |
+| --- | --- | --- |
+|  | A^{p}(X,M,\mathcal{L}^{\vee})\simeq H^{p}\_{t}(X,\underline{M}\_{X}\{\mathcal{L}\}) |  |
+
+where we have put \underline{M}\_{X}\{\mathcal{L}\}=\underline{M}|\_{X\_{t}}\otimes\_{\mathbf{G}\_{m}%
+}\mathcal{L}^{\times}, as sheaves
+over the small site X\_{t}, using the action given by the suspension map (4.3.1.a).
+
+In particular, we obtain Bloch’s formula and its extension to Chow-Witt groups,
+as defined in 4.2.3:
+for any essentially smooth S-scheme X, and any integer p, t={\mathrm{Zar}},{\mathrm{Nis}},
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (4.3.5.a) |  | \displaystyle\operatorname{CH}^{p}(X) | \displaystyle\simeq H^{p}\_{t}\big{(}X,\underline{\operatorname{K}}^{M}\_{p}\big% {)}, |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (4.3.5.b) |  | \displaystyle\widetilde{\operatorname{CH}}{}^{p}(X) | \displaystyle\simeq H^{p}\_{t}\big{(}X,\underline{\operatorname{K}}^{MW}\_{p}% \big{)}. |  |
+
+###### Proof.
+
+The sequence (4.3.1.b) defines an augmented complex of \mathbf{Z}-graded abelian sheaves on X\_{t}.
+Moreover C^{\*}(-,\operatorname{\mathcal{D}}\_{\lambda}(M),\mathcal{L}) is a complex which satisfies the Brown-Gersten property: *i.e.* it is Nisnevich local
+and therefore flasque (Zariski-local).
+Therefore, one only needs to prove that (4.3.1.b) is exact whenever X is essentially smooth and local over S.
+Then the canonical map X\rightarrow S factors through the localization j:S\_{(s)}\rightarrow S where s is the image
+of the closed point of X. As the map j is pro-open, one reduces to the case S=S\_{(s)}.
+Then S is an excellent discrete valuation ring and one can apply [BHP23, Th. 1.1] to the MW-module M.

@@ -1,0 +1,72 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle a\_{j}=\partial\_{\xi}u|\_{\{t=0,\xi\_{0}\in\mathcal{U}\_{j}\}}=% \partial\_{\xi}u|\_{L\_{\xi=\xi\_{0}}}=\partial\_{\xi}u(\xi\_{0},\eta\_{0}) |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\partial\_{\eta}u|\_{L\_{\eta=\eta\_{0}}}=\partial\_{\xi}u|\_{\{t=0,% \eta\_{0}\in\mathcal{V}\_{k}\}}=b\_{k}. |  |
+
+This shows that, for every set \mathcal{U}\_{j}, there exists a unique set \mathcal{V}\_{k} corresponding to it. Thus, after relabeled \mathcal{V}\_{k}, we can rewrite (3.6) and (3.7) as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \partial\_{\xi}u|\_{t=0}=\sum\_{j=1}^{K}\mathbf{1}\_{\mathcal{U}\_{j}}(x)a\_{j},% \quad a.e.x\in{\mathbb{T}} |  | (3.8) |
+
+and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \partial\_{\eta}u|\_{t=0}=\sum\_{j=1}^{K}\mathbf{1}\_{\mathcal{V}\_{j}}(x)a\_{j},% \quad a.e.x\in{\mathbb{T}}. |  | (3.9) |
+
+This proves that (\partial\_{\xi}u|\_{t=0},\partial\_{\eta}u|\_{t=0})\in\mathcal{S}^{2}\_{c}. Indeed, \{\mathcal{V}\_{k},\mathcal{U}\_{k}\}\_{1\leq k\leq M} is a decomposition pair in Definition 2.6.
+∎
+
+###### Remark 3.4.
+
+Proposition 3.3 says that if the solution to (1.4) satisfies u\_{t}=0 on some G with ({\rm GCC}), then the initial data (u\_{0x}+u\_{1},u\_{0x}-u\_{1}) is a symmetric simple function pair. This result can be understood as a
+unique continuation property up to the set \mathcal{S}^{2}\_{c}.
+
+###### Corollary 3.5 (Unique continuation).
+
+Let T>0. Assume that G\in[0,T]\times{\mathbb{T}} satisfies ({\rm GCC}) and does not obey the ({\rm OSC}) for any non-trivial pair (A,B).
+If u solves the wave equation (1.1) and u\_{t}=0 on G, then u\equiv 0.
+
+###### Proof.
+
+Thanks to Proposition 3.3, we know that (\partial\_{\xi}u|\_{t=0},\partial\_{\eta}u|\_{t=0})\in\mathcal{S}^{2}\_{c}. So we can assume that (3.8) and (3.9) hold.
+We split the discussion into two cases.
+
+Case (1). We assume K=1. In this case, by (3.8) and (3.9) we have \partial\_{\xi}u|\_{t=0}=\partial\_{\eta}u|\_{t=0}=a\_{1} for almost every x\in{\mathbb{T}}. It follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{x}u(t,x)|\_{t=0}=\frac{1}{2}(\partial\_{\xi}u|\_{t=0}+\partial\_{\eta}u|% \_{t=0})=a\_{1}. |  |
+
+Note that u(0,x)=u\_{0}\in\dot{H}^{1}({\mathbb{T}}), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{1}=\partial\_{x}u(0,x)=\sum\_{k\neq 0}\widehat{\partial\_{x}u\_{0}(k)}e^{ikx} |  |
+
+where \widehat{\partial\_{x}u\_{0}(k)} is the k-th Fourier coefficient of \partial\_{x}u\_{0}. It follows that a\_{1}=0 and thus u\_{0}\equiv 0. This also implies that u\_{1}\equiv 0. Hence, the solution u\equiv 0.
+
+Case (2). We assume K\geq 2.
+In the sequel, we shall show that this case will never happen, due to our assumption that G does not obey the ({\rm OSC}) for any non-trivial pair (A,B). In fact, thanks to (3.3), we know
+
+|  |  |  |
+| --- | --- | --- |
+|  | G\subset\{(t,x)\in[0,T]\times{\mathbb{T}}:\partial\_{\xi}u=\partial\_{\eta}u\}. |  |
+
+This, together with (3.8)-(3.9), implies
+that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle G\subset\bigcup\_{l=1}^{K}(L\_{\xi\in\mathcal{U}\_{l}}\cap L\_{\eta% \in\mathcal{V}\_{l}}) |  | (3.10) |
+
+up to a set with zero measure.
+
+Now we define G\_{l}:=G\cap L\_{\xi\in\mathcal{U}\_{l}}\cap L\_{\eta\in\mathcal{V}\_{l}}, l\in\{1,\ldots,K\}. Then, using (3.10), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle G=G\bigcap\bigcup\_{l=1}^{K}(L\_{\xi\in\mathcal{U}\_{l}}\cap L\_{% \eta\in\mathcal{V}\_{l}})=\bigcup\_{l=1}^{K}G\_{l} |  | (3.11) |

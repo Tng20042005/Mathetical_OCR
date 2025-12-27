@@ -1,0 +1,48 @@
+###### Remark 3.2.2.
+
+1. (1)
+
+   Our axioms, while slightly different from the ones in [Fel20] and [BHP23], are indeed equivalent to the latter, see 3.3.5 below.101010Beware
+   that in axiom (D4), [Fel20] uses the normal bundle N\_{v} while we are using here the conormal sheaf \nu\_{v}. This explains the difference of signs in the first formula (R3e).
+2. (2)
+
+   Note that we distinguish the notion of *S-fields* from the one of *S-points*: the latter refers to points on (the underlying topological space of) S, which are particular cases of S-fields.
+
+###### Example 3.2.3.
+
+According to [Fel20, Th. 4.13], \mathcal{K}^{MW}\_{\*} defines a MW-cycle module over a perfect field k.
+More generally, over any base scheme S, \mathcal{K}^{MW}\_{\*} does satisfy the axioms
+of a MW-premodule. We refer the reader to [Dég25, §5]
+for the construction of the functoriality and the proof of the relations in this generality.
+
+### 3.3. Milnor-Witt cycle modules
+
+###### 3.3.1.
+
+As in the homological case, we would like to promote *Milnor-Witt cycle premodules* into *Milnor-Witt cycle modules* (see Definition 1.2.2).
+The main obstruction for doing so in the cohomological setting lies in the difference between the axioms for residue maps: indeed, the axiom 3.2.1
+only requires residues for (discrete) valuation rings, while the axiom 1.1.1 requires residues for all 1-dimensional local domains.
+In some sense, this difficulty is similar to the problem of defining direct images in bivariant theory (see [DJK21]). We deal with this problem
+in the particular case of cycle premodules by using the notion of pinning introduced in 3.1.3 and Notation 3.1.4.
+
+Let us fix (S,\lambda) a base scheme (excellent according to our conventions) with a pinning and M a MW-premodule over S.
+We introduce the following operations on M:
+
+1. (1)
+
+   If A is an S-DVR with fraction field F, maximal ideal \mathfrak{m} and residue field \kappa, we define the following a map using 3.2.1
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (3.3.1.a) |  | \displaystyle M\_{n}(F,\lambda\_{F})\simeq M\_{n}(F)\otimes\_{R[A^{\times}]}R[% \lambda\_{A}^{\times}]\xrightarrow{\ref{itm:D4}}M\_{n-1}(\kappa,\mathfrak{m}/% \mathfrak{m}^{2})\otimes\_{R[A^{\times}]}R[\lambda\_{A}^{\times}]\simeq M\_{n-1}(% \kappa,\lambda\_{\kappa}). |  |
+2. (2)
+
+   For a finite morphism of S-fields \phi:E\to F, we define the following map using 3.2.1
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (3.3.1.b) |  | \displaystyle\phi^{!}:M\_{n}(F,\lambda\_{F})\simeq M\_{n}(F,f^{\*}\lambda\_{E}% \otimes\omega\_{F/E})\xrightarrow{\ref{itm:D2}}M\_{n}(E,\lambda\_{E}). |  |
+3. (3)
+
+   Let \mathcal{O} be a 1-dimensional local domain which is essentially of finite type over S, with fraction field F and residue field \kappa. Let A be the integral closure of \mathcal{O} (in F).
+   Since S is noetherian and O is essentially of finite type over S, we have that O is noetherian. By Krull-Akizuki theorem ([Sta25, Tag 09IG]), we know that A is a Dedekind domain with finitely many closed points denoted by z\_{1},\dots,z\_{n} and that each closed point z\_{i} corresponds to a discrete valuation on F whose residue field \kappa(z\_{i}) is finite over \kappa. Denote by d\_{i} the defect of the field extension \kappa(z\_{i})/\kappa(z): we have d\_{i}=1 in our setting since the base scheme S is universally Japanese (see [Dég25, Prop. 5.3.12] for more detail). Denote by \phi\_{i}:\kappa\to\kappa(z\_{i}) the induced finite morphism of S-fields. We then define a map

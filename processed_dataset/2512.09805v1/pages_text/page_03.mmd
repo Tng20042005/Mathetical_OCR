@@ -1,0 +1,75 @@
+on \mathbb{C}^{p}\setminus\{0\} gives a positive measure on S\_{p}(r) with total measure 1, i.e.
+\int\_{S\_{p}(r)}\iota^{\*}\sigma\_{p}=1. We define
+\nu\_{p}(z)=dd^{c}|z|^{2}\text{ on }\mathbb{C}^{p}.
+It defines a Lebesgue measure on \mathbb{C}^{p} such that B\_{p}(r) has measure r^{2p}.
+
+Let h be a holomorphic function on an open domain U\subset\mathbb{C}^{p}.
+For every a\in U, we expand h around a as
+
+|  |  |  |
+| --- | --- | --- |
+|  | h=\sum\_{m}P\_{m}(z-a), |  |
+
+where P\_{m} are homogeneous polynomials of degree m.
+Then we define the divisor \nu^{0}\_{h}:U\to\mathbb{Z} associated to h by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \nu^{0}\_{h}(a):=\min\{m\mid P\_{m}\not\equiv 0\}. |  |
+
+A map \nu:U\to\mathbb{Z} is called a *divisor* if for every z\_{0}\in U, there exist two nonzero holomorphic functions h,g on a connected open neighborhood W\subset U of z\_{0} such that
+\nu(z)=\nu^{0}\_{h}(z)-\nu^{0}\_{g}(z)~{}~{}~{}~{}\text{for each }z\in W
+outside an analytic subset of W of dimension \leq p-2.
+We denote the support of \nu by
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\nu|=\{z\in U\mid\nu(z)\neq 0\}\cap U, |  |
+
+which is a purely (p-1)-dimensional analytic subset of U if |\nu|\neq\varnothing.
+We view two divisors as the same if they are identical outside an analytic subset of dimension \leq p-2.
+
+We now recall the standard notation in Nevanlinna theory (see [19], [20]).
+Let X be a smooth projective variety of dimension n and D be an effective Cartier divisor on X. Denote by [D] the line bundle associated to D, and fix a Hermitian metric on [D].
+Let f be a meromorphic map of \mathbb{C}^{p} into  X, with f(\mathbb{C}^{p})\not\subset\text{Supp}D.
+
+Fix s>0. We define the *counting function* of f with respect to D by
+
+|  |  |  |
+| --- | --- | --- |
+|  | N\_{f}(r,s,D)=\int\_{s}^{r}\frac{dt}{t^{2p-1}}\int\_{B\_{p}(t)\cap f^{\*}D}v\_{p}^{p% -1}. |  |
+
+Let f^{\*}D=\sum\_{\lambda}\,k\_{\lambda}D\_{\lambda} be its irreducible decomposition.
+For 1\leq k\leq\infty, denote (f^{\*}D)^{(k)}=\sum\_{\lambda}\,\min\{k,k\_{\lambda}\}D\_{\lambda}, the *truncated counting function of f to level k* with respect to D is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | N^{(k)}\_{f}(r,s,D)=\int\_{s}^{r}\frac{dt}{t^{2p-1}}\int\_{B\_{p}(t)\cap(f^{\*}D)^{% (k)}}v\_{p}^{p-1}. |  |
+
+Note that N^{(\infty)}\_{f}(r,s,D)=N\_{f}(r,s,D).
+
+The *Weil function* on X with respect to D is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\_{D}(x)=-\log\|s\_{D}(x)\|, |  |
+
+where s\_{D} is the canonical section of [D]. The *proximity function* of f with respect to D is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | m\_{f}(r,s,D)=\int\_{S\_{p}(r)}\lambda\_{D}(f)~{}\sigma\_{p}-\int\_{S\_{p}(s)}\lambda% \_{D}(f)~{}\sigma\_{p}. |  |
+
+The *characteristic function* of f with respect to D is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{f}(r,s,D)=\int\_{s}^{r}\frac{dt}{t^{2p-1}}\int\_{B\_{p}(t)}f^{\*}c\_{1}[D]\wedge v% \_{p}^{p-1}. |  |
+
+Note that for 1\leq k\leq\infty, T\_{f}(r,s,D), m\_{f}(r,s,D), \text{and }N^{(k)}\_{f}(r,s,D) only depend on s up to a bounded term, so sometimes we denote them as T\_{f}(r,D), m\_{f}(r,D), and N^{(k)}\_{f}(r,s,D) when s=1.
+
+As is customary in Nevanlinna theory, we use the symbol S\_{f}(r,D) for a non-negative small term such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | S\_{f}(r,D)\leq\_{exc}O(\log^{+}T\_{f}(r,D))+O(\log r)+O(1). |  |

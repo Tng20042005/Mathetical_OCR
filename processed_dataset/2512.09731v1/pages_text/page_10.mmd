@@ -1,0 +1,58 @@
+The condition that \dim P and \dim I do not have zero components seems to be crucial. In all the cases we checked, where some of the components vanish
+(both for A\_{n} and D\_{n} quivers), M^{1} was different from P\oplus I and thus \{M:\ M^{0}\leq M\leq P\oplus I\} was a strict subgraph of \Gamma\_{\bf d}(1).
+
+###### Example 4.3.
+
+Let Q be the A\_{3} quiver of the form \bullet\rightarrow\bullet\leftarrow\bullet.
+Let P=P\_{1}\oplus P\_{2}\oplus P\_{3} and I=I\_{1}\oplus I\_{3}. Then {\bf d}=(2,3,2), \dim I=(1,0,1), and \dim P=(1,3,1).
+
+In this case, whatever the representation M is, any one-dimensional subspace of M\_{1} and any one-dimensional subspace of M\_{3} define a subrepresentation of dimension \dim P. Thus, \mathrm{Gr}\_{\dim P}(M)\cong\mathbb{P}^{1}\times\mathbb{P}^{1} for every M. So, \Gamma\_{\bf d}(1)=\Gamma\_{\bf d} and M^{1}=2S\_{1}\oplus 3S\_{2}\oplus 2S\_{3} which is not P\oplus I.
+
+###### Example 4.4.
+
+Let Q be the A\_{4} quiver of the form \bullet\rightarrow\bullet\leftarrow\bullet\leftarrow\bullet.
+Let P=\oplus\_{i=1}^{4}P\_{i} and I=I\_{1}\oplus I\_{3}\oplus I\_{4}. Then {\bf d}=(2,4,3,3), \dim I=(1,0,1,2), and \dim P=(1,4,2,1).
+
+In this case \Gamma\_{\bf d}(1)\neq\Gamma\_{\bf d}, but
+
+|  |  |  |
+| --- | --- | --- |
+|  | M^{1}=2U(1,1)+4U(2,2)+U(3,3)+2U(3,4)+U(4,4), |  |
+
+which differs from
+
+|  |  |  |
+| --- | --- | --- |
+|  | P\oplus I=U(1,1)+U(1,2)+U(2,2)+U(2,3)+U(2,4)+U(3,4)+U(4,4). |  |
+
+In the degenerate examples that we studied, the representation M^{1} can be constructed from P\oplus I in the following way. Let’s call a vertex k deficient if (\dim P)\_{k}=0 or (\dim I)\_{k}=0. For every direct summand of P\oplus I, “split” it at every deficient vertex by vanishing the maps incidental to this vertex. The resulting sum will be M^{1}.
+
+In the previous A\_{4} example, the deficient vertex is 2, and we have four summands M in P\oplus I such that M\_{2}\neq 0. Let’s split those supported not only at 2:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle U(1,2) | \displaystyle\mapsto U(1,1)+U(2,2), |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle U(2,3) | \displaystyle\mapsto U(2,2)+U(3,3), |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle U(2,4) | \displaystyle\mapsto U(2,2)+U(3,4). |  |
+
+The resulting sum
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle U(1,1)+(U(1,1)+U(2,2))+U(2,2)+(U(2,2)+U(3,3))+ |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle(U(2,2)+U(3,4))+U(3,4)+U(4,4) |  |
+
+is exactly M^{1}.
+
+## 5. Minimal dimension locus
+
+In this section we study the locus of representations M such that the quiver Grassmannian
+\mathrm{Gr}\_{\dim P}(M) is of the expected (minimal possible) dimension
+\langle\dim P,\dim I\rangle, but may have more than one irreducible component.
+We denote by \Gamma\_{\bf d}(2) the poset of isoclasses of such representations M.

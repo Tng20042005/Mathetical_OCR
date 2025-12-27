@@ -1,0 +1,59 @@
+Note that B[s\_{1},t\_{1}] forms a connected, locally connected, and locally compact metric space when equipped with the Euclidean metric on \mathbbm{C}.
+By Definition 3.1, B[s\_{1},t\_{1}] cannot be disconnected by removing any single point (otherwise it would contradict the definition of s\_{1}). Furthermore, on the event \{\ell\_{1}\cap\mathbbm{A}\_{1/2}\neq\emptyset\}\cap\{\widetilde{\ell}\_{1}\cap%
+\varepsilon\mathbbm{D}\neq\emptyset\}, there are s,t\in[s\_{1},t\_{1}] such that B\_{s}\in\varepsilon\mathbbm{D} and B\_{t}\in\mathbbm{A}\_{1/2}.
+Thus by Theorem 4.1,
+there exist two arcs on B[s\_{1},t\_{1}] from B\_{s} to B\_{t}, staying disjoint apart from their endpoints. The result then follows by taking the sub-trajectories of these two arcs from their last hitting points of \varepsilon\mathbbm{S}^{1} to their first hitting points of \frac{1}{2}\mathbbm{S}^{1}, respectively.
+∎
+
+###### Proof of Theorem 1.1, the lower bound.
+
+By Lemma 4.2, we have \mathbbm{P}[\mathsf{Bac}\_{\varepsilon}]\geq\mathbbm{P}[\ell\_{1}\cap\mathbbm{A}%
+\_{1/2}\neq\emptyset,\ \widetilde{\ell}\_{1}\cap\varepsilon\mathbbm{D}\neq\emptyset]. Note that \mathbbm{P}[\ell\_{1}\cap\mathbbm{A}\_{1/2}\neq\emptyset]=p\_{0}>0, which does not depend on \varepsilon. On the other hand,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathbbm{P}[\widetilde{\ell}\_{1}\cap\varepsilon\mathbbm{D}\neq% \emptyset|\ell\_{1}\cap\mathbbm{A}\_{1/2}\neq\emptyset] | \displaystyle\geq\mathbbm{P}[\mathrm{CR}(\widetilde{\ell}\_{1},0)<\varepsilon|% \ell\_{1}\cap\mathbbm{A}\_{1/2}\neq\emptyset] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\mathbbm{P}[\mathrm{CR}(\rho,0)<\varepsilon|\ell\_{1}\cap% \mathbbm{A}\_{1/2}\neq\emptyset] |  |
+
+due to Schwartz’s lemma and that \mathrm{CR}(\rho,0)=\frac{\mathrm{CR}(\widetilde{\ell}\_{1},0)}{\mathrm{CR}(%
+\ell\_{1},0)}>\mathrm{CR}(\widetilde{\ell}\_{1},0). By Lemma 3.5, \mathrm{CR}(\rho,0) is independent of \ell\_{1}. Therefore, combined with Corollary 3.7, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbbm{P}[\mathsf{Bac}\_{\varepsilon}]\geq p\_{0}\mathbbm{P}[\mathrm{CR}(\rho,% 0)<\varepsilon]\geq\frac{C\_{1}}{\log|\log\varepsilon|} |  |
+
+for some positive constant C\_{1}, as desired.
+∎
+
+Now we turn to the upper bound of \mathbbm{P}[\mathsf{Bac}\_{\varepsilon}]. We first need the following basic fact.
+
+###### Lemma 4.3.
+
+Let \varepsilon\in(0,10^{-2}). Suppose \ell\subset\mathbbm{D} is a simple loop such that \mathrm{dist}(\ell,0)>5\sqrt{\varepsilon}, and let g:D(\ell)\to\mathbbm{D} be any conformal map such that g(0)=0. Then \overline{g(\varepsilon\mathbbm{D})}\subset 5\sqrt{\varepsilon}\mathbbm{D} and g(\frac{1}{2}\mathbbm{D}\cap D(\ell))\supset\frac{1}{2}\mathbbm{D}.
+
+###### Proof.
+
+By applying Schwartz’s lemma for g^{-1}, we have g(\frac{1}{2}\mathbbm{D}\cap D(\ell))\supset\frac{1}{2}\mathbbm{D},
+and \frac{1}{|g^{\prime}(0)|}=\mathrm{CR}(\ell,0)\geq\mathrm{dist}(\ell,0)>5\sqrt{\varepsilon}. Let \widetilde{g}(z):=\frac{|g^{\prime}(0)|}{5\sqrt{\varepsilon}}g^{-1}(5\sqrt{%
+\varepsilon}z); note that \widetilde{g}(0)=0 and |\widetilde{g}^{\prime}(0)|=1. By Koebe’s 1/4 theorem, we have \frac{1}{4}\mathbbm{D}\subset\widetilde{g}(\mathbbm{D}), which implies \frac{1}{4}\mathbbm{D}\subset\frac{|g^{\prime}(0)|}{5\sqrt{\varepsilon}}g^{-1}%
+(5\sqrt{\varepsilon}\mathbbm{D})\subset\frac{1}{5\varepsilon}g^{-1}(5\sqrt{%
+\varepsilon}\mathbbm{D}), as desired.
+∎
+
+The upper bound of \mathbbm{P}[\mathsf{Bac}\_{\varepsilon}] then relies on the following iterative inequality.
+
+###### Proposition 4.4.
+
+Let q\_{0}=\mathbbm{P}[\widetilde{\ell}\_{1}\cap\mathbbm{A}\_{1/2}\neq\emptyset]\in(0%
+,1). Then
+there is a constant C\_{0}>0 such that for any \varepsilon\in(0,10^{-4}),
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbbm{P}[\mathsf{Bac}\_{\varepsilon}]\leq\frac{C\_{0}}{\log|\log\varepsilon|}% +q\_{0}\mathbbm{P}[\mathsf{Bac}\_{5\sqrt{\varepsilon}}]. |  |
+
+###### Proof.
+
+Note that

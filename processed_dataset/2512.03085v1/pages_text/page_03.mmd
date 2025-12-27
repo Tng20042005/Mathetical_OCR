@@ -1,0 +1,55 @@
+###### Definition 3.1 (Triangular kernel on \mathbb{Z}/N\mathbb{Z}).
+
+Let N\geq 2 and let r be an integer with 1\leq r\leq\lfloor N/2\rfloor. For n\in\mathbb{Z}/N\mathbb{Z} let |n| denote the least absolute value representative in \{-\lfloor N/2\rfloor,\dots,\lfloor N/2\rfloor\}. Define F\_{r}:\mathbb{Z}/N\mathbb{Z}\to[0,\infty) by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | F\_{r}(n):=\frac{1}{r}\,\max\Bigl{(}0,\,1-\frac{|n|}{r}\Bigr{)},\qquad n\in% \mathbb{Z}/N\mathbb{Z}. |  | (1) |
+
+Equivalently, F\_{r} is supported on \{|n|\leq r-1\} and has the triangular shape
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{r}(n)=\frac{1}{r}\Bigl{(}1-\frac{|n|}{r}\Bigr{)}\quad\text{for }|n|\leq r-1% ,\qquad F\_{r}(n)=0\ \text{otherwise}. |  |
+
+Since r\leq N/2, this definition is unambiguous on \mathbb{Z}/N\mathbb{Z} (the support does not wrap around the circle). A direct computation shows that F\_{r} is nonnegative, even, and has unit mass.
+
+###### Lemma 3.2 (Basic properties of F\_{r}).
+
+Let N\geq 2 and 1\leq r\leq\lfloor N/2\rfloor. Then F\_{r}:\mathbb{Z}/N\mathbb{Z}\to\mathbb{R}\_{\geq 0} satisfies:
+
+1. 1.
+
+   (Support) F\_{r}(n)=0 for |n|\geq r.
+2. 2.
+
+   (Symmetry) F\_{r}(-n)=F\_{r}(n) for all n\in\mathbb{Z}/N\mathbb{Z}.
+3. 3.
+
+   (Unit mass) \displaystyle\sum\_{n\in\mathbb{Z}/N\mathbb{Z}}F\_{r}(n)=1.
+
+###### Proof.
+
+(1) and (2) are immediate from the definition (1). For (3), we compute on representatives n\in\{-r+1,\dots,r-1\}:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{n\in\mathbb{Z}/N\mathbb{Z}}F\_{r}(n)=\sum\_{|n|\leq r-1}\frac{1}{r}\Bigl{(% }1-\frac{|n|}{r}\Bigr{)}=\frac{1}{r}\Biggl{[}1+2\sum\_{n=1}^{r-1}\Bigl{(}1-% \frac{n}{r}\Bigr{)}\Biggr{]}. |  |
+
+The inner sum is
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{n=1}^{r-1}\Bigl{(}1-\frac{n}{r}\Bigr{)}=(r-1)-\frac{1}{r}\sum\_{n=1}^{r-1% }n=(r-1)-\frac{1}{r}\cdot\frac{(r-1)r}{2}=\frac{r-1}{2}. |  |
+
+Therefore
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{n\in\mathbb{Z}/N\mathbb{Z}}F\_{r}(n)=\frac{1}{r}\Bigl{(}1+2\cdot\frac{r-1% }{2}\Bigr{)}=\frac{1}{r}\cdot r=1.\qed |  |
+
+It is convenient to record the L^{2} norm of F\_{r}.
+
+###### Lemma 3.3 (L^{2} norm of F\_{r}).
+
+For N\geq 2 and 1\leq r\leq\lfloor N/2\rfloor,

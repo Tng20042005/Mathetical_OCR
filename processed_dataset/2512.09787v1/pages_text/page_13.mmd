@@ -1,0 +1,53 @@
+where x\_{j} is the j-th root of the generalized Laguerre polynomials L\_{N}^{(\alpha)}(x) and the weight w\_{j,\alpha} is given by [1, 27]:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | w\_{j,\alpha}=\frac{\Gamma(N+\alpha+1)x\_{j}}{N!(N+1)^{2}[L\_{N+1}^{(\alpha)}(x\_{% j})]^{2}}. |  | (43) |
+
+This way, the derivative with respect to \theta\_{5} can be given as:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\partial\_{\theta\_{5}}c(\bm{\theta})\approx-\frac{1}{\theta\_{1}^{1% +\theta\_{6}}}\sum\_{j=1}^{N}\frac{w\_{j,\theta\_{6}}(\theta\_{2}\theta\_{1}^{-% \theta\_{3}}x\_{j}^{\theta\_{3}}+\theta\_{4})^{\theta\_{5}}\text{log}\left(\theta\_{% 2}\theta\_{1}^{-\theta\_{3}}x\_{j}^{\theta\_{3}}+\theta\_{4}\right)}{\exp\{(\theta\_% {2}\theta\_{1}^{-\theta\_{3}}x\_{j}^{\theta\_{3}}+\theta\_{4})^{\theta\_{5}}\}}. |  | (44) |
+
+In particular, if \theta\_{5}=m\in\mathbb{N},
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \partial\_{\theta\_{5}}c(\bm{\theta})\approx-\frac{1}{\theta\_{1}^{1+\theta\_{6}}}% \sum\_{j=1}^{N}\sum\_{k=0}^{m}\left(\begin{array}[]{c}m\\ k\end{array}\right)\theta\_{2}^{k}\theta\_{1}^{-\theta\_{3}k}\theta\_{4}^{m-k}x\_{j% }^{k}\frac{w\_{j,\theta\_{6}}\text{log}\left(\theta\_{2}\theta\_{1}^{-\theta\_{3}}x% \_{j}^{\theta\_{3}}+\theta\_{4}\right)}{\exp\{(\theta\_{2}\theta\_{1}^{-\theta\_{3}}% x\_{j}^{\theta\_{3}}+\theta\_{4})^{m}\}}. |  | (45) |
+
+Finally,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \partial\_{\theta\_{6}}c(\bm{\theta})=\theta\_{1}^{-\theta\_{6}-1}\sum\_{n=0}^{% \infty}\frac{(-\theta\_{4}^{m})^{n}}{n!}\sum\_{k=0}^{mn}\frac{(mn)!}{(mn-k)!k!}% \left(\frac{\theta\_{2}}{\theta\_{4}\theta\_{1}^{\theta\_{3}}}\right)^{k}\Gamma(% \theta\_{6}+1+\theta\_{3}k)\left[\Psi(\theta\_{6}+1+\theta\_{3}k)-\log\theta\_{1}% \right]. |  | (46) |
+
+Now, we are able to describe the score functions:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\theta\_{1}}\ell(\bm{\theta})=n\frac{\mathbb{H}(\theta\_{1},\theta\_{2}% ,\theta\_{3},\theta\_{4},\theta\_{5},\theta\_{6}-1)}{\mathbb{H}(\theta\_{1},\theta\_% {2},\theta\_{3},\theta\_{4},\theta\_{5},\theta\_{6})}-\sum\_{j=1}^{n}Y\_{j}, |  |
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\partial\_{\theta\_{2}}\ell(\bm{\theta}) | \displaystyle= | \displaystyle-\frac{n}{c(\bm{\theta})}\left[-\theta\_{5}\sum\_{k=0}^{m-1}\left(% \begin{array}[]{c}\hidden@noalign{}\hfil m-1\\ \hidden@noalign{}\hfil k\end{array}\right)\theta\_{2}^{k}\theta\_{4}^{m-1-k}% \mathbb{H}(\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},\theta\_{5},\theta\_{6}+% \theta\_{3}(k+1))\right] |  |
+|  |  | \displaystyle- | \displaystyle\theta\_{5}\sum\_{j=1}^{n}\left(\theta\_{2}Y\_{j}^{\theta\_{3}}+\theta% \_{4}\right)^{\theta\_{5}-1}Y\_{j}^{\theta\_{3}}, |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\theta\_{3}}\ell(\bm{\theta})=-\frac{n}{c(\bm{\theta})}\partial\_{% \theta\_{3}}c(\bm{\theta})-m\theta\_{2}\sum\_{j=1}^{n}\sum\_{k=0}^{m-1}\left(% \begin{array}[]{c}m-1\\ k\end{array}\right)\theta\_{2}^{k}\theta\_{4}^{m-1-k}Y\_{j}^{\theta\_{3}(k+1)}\log Y% \_{j}, |  |
+
+where \partial\_{\theta\_{3}}c(\bm{\theta}) is given in (LABEL:eq\_partial\_derivative3\_llf).
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\theta\_{4}}\ell(\bm{\theta})=-m\sum\_{k=0}^{m-1}\left(\begin{array}[]% {c}m-1\\ k\end{array}\right)\theta\_{2}^{k}\theta\_{4}^{m-1-k}\mathbb{H}(\theta\_{1},% \theta\_{2},\theta\_{3},\theta\_{4},\theta\_{5},\theta\_{6}+\theta\_{3}k), |  |
+
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | \displaystyle\partial\_{\theta\_{5}}\ell(\bm{\theta}) | \displaystyle\approx | \displaystyle-\frac{n}{c(\bm{\theta})}\left[\frac{1}{\theta\_{1}^{1+\theta\_{6}}% }\sum\_{j=1}^{N}\sum\_{k=0}^{m}\left(\begin{array}[]{c}\hidden@noalign{}\hfil m% \\ \hidden@noalign{}\hfil k\end{array}\right)\theta\_{2}^{k}\theta\_{1}^{-\theta\_{3% }k}\theta\_{4}^{m-k}x\_{j}^{k}\frac{w\_{j,\theta\_{6}}\text{log}\left(\theta\_{2}% \theta\_{1}^{-\theta\_{3}}x\_{j}^{\theta\_{3}}+\theta\_{4}\right)}{\exp\{(\theta\_{2% }\theta\_{1}^{-\theta\_{3}}x\_{j}^{\theta\_{3}}+\theta\_{4})^{m}\}}\right] |  | (52) |
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | \displaystyle- | \displaystyle\sum\_{j=1}^{n}\sum\_{k=0}^{m}\left(\begin{array}[]{c}% \hidden@noalign{}\hfil m\\ \hidden@noalign{}\hfil k\end{array}\right)\theta\_{2}^{k}\theta\_{4}^{m-k}Y\_{j}^% {\theta\_{3}k}\log(\theta\_{2}Y\_{j}^{\theta\_{3}}+\theta\_{4}), |  | (55) |
+
+and

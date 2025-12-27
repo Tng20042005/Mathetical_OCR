@@ -1,0 +1,69 @@
+A mixed local-nonlocal Hénon problem in \mathbb{R}^{N}
+
+# A mixed local-nonlocal Hénon problem in \mathbb{R}^{N}
+
+Pablo Ochoa
+P. Ochoa.
+  
+Universidad Nacional de Cuyo, Fac. de Ingeniería. CONICET. Universidad J. A. Maza
+  
+Parque Gral. San Martín 5500
+  
+Mendoza, Argentina.
+pablo.ochoa@ingenieria.uncuyo.edu.ar
+ and 
+Ariel Salort
+A. Salort
+  
+Departamento de Matemáticas y Ciencia de Datos, Universidad San Pablo-CEU, CEU Universities, Urbanización Montepríncipe, 28660 Boadilla del Monte, Madrid, Spain.
+ariel.salort@ceu.es
+
+###### Abstract.
+
+In this article, we study a Hénon-type equation in \mathbb{R}^{N} driven by a nonlinear operator given by the combination of a local and a nonlocal term. This equation was originally proposed to model spherically symmetric stellar clusters. Here, we prove that, under a suitable relation among the parameters, there exists a threshold separating the existence and non-existence of solutions. Moreover, we establish regularity properties of the solutions.
+
+###### Key words and phrases:
+
+Hénon’s equation, Symmetry of solutions, p-Laplacian, fractional p-Laplacian, Variational Method
+
+###### 2020 Mathematics Subject Classification:
+
+35A15, 35A01, 35b06, 35R11, 35D30
+
+## 1. Introduction
+
+The classical Hénon problem, introduced in [13], consists of the following problem
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.1) |  | -\Delta u=|x|^{\alpha}u^{q-1}\text{ in }B\subset\mathbb{R}^{N},\qquad u>0, |  |
+
+with Dirichlet boundary conditions, where B denotes the unit ball in \mathbb{R}^{N}. The motivation in Hénon’s original paper [13] was a model of stationary solutions of the nonlinear Poisson equation describing cluster density under gravitational interaction with inhomogeneous distribution. In this direction, the seminal work of Ni [18] established that the weight |x|^{\alpha} allows for a wider admissible range of exponents 2<q<2^{\*}\_{\alpha}:=\frac{2(N+\alpha)}{N-2} for which solutions exist. This problem started a huge research on elliptic equations with nonlinear right-hand sides. The literature on the subject is now vast, and providing an exhaustive list of contributions lies beyond the scope of this work. In what follows, we restrict ourselves to highlighting a selection of results that extend the Hénon equation to nonlocal operators or in unbounded domains.
+
+A generalization of (1.1), involving a mixed local–nonlocal operator, was introduced in [21], where existence (and nonexistence) results for positive solutions of
+
+|  |  |  |
+| --- | --- | --- |
+|  | \gamma(-\Delta)\_{p}u+(1-\gamma)(-\Delta)\_{p}^{s}u=|x|^{\alpha}u^{q-1}\text{ in% }B\subset\mathbb{R}^{N},\qquad u>0, |  |
+
+under exterior Dirichlet boundary conditions were established for an appropriate range of parameters p<N and p<q<p^{\*}\_{\alpha}:=\frac{p(N+\alpha)}{N-sp}. Here, for p>1, for a function u smooth enough, \Delta\_{p}u:=\text{div}(|\nabla u|^{p-2}u) denotes the usual p-Laplacian of u, and given s\in(0,1), the fractional p-Laplacian of u is defined, up to a normalization constant, as
+
+|  |  |  |
+| --- | --- | --- |
+|  | (-\Delta\_{p})^{s}u(x):=\text{p.v.}\int\_{\mathbb{R}^{N}}\frac{|u(x)-u(y)|^{p-2}% (u(x)-u(y))}{|x-y|^{N+sp}}\,dy. |  |
+
+Further generalizations of (1.1) to the fractional Laplacian have been obtained in the unbounded setting, where the ball is replaced by the whole space \mathbb{R}^{N}. In [2] it was shown that, in contrast to the case of a bounded domain, the equation
+
+|  |  |  |
+| --- | --- | --- |
+|  | (-\Delta)^{s}u=|x|^{\alpha}u^{q-1}\text{ in }\mathbb{R}^{N},\qquad u>0, |  |
+
+admits no positive solutions in the range 1<q<2^{\*}\_{\alpha}:=\frac{2(N+\alpha)}{N-2s}, where \alpha>-2s, due to the loss of mass at infinity. Similar nonexistence results for the spectral fractional Laplacian were obtained in [24].
+
+In order to obtain existence of solutions in \mathbb{R}^{N}, a confining potential can be added to prevent the loss of mass at infinity. In the linear local case, [23] studied the Hénon-type equation
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.2) |  | -\Delta u+|x|^{\beta}u^{p-1}=|x|^{\alpha}u^{q-1}\text{ in }\mathbb{R}^{N},% \qquad u>0, |  |
+
+and proved the existence of a positive radial solution for N\geq 3 and p>1, under the assumptions \max\{2,p\}<q<p^{\*}\_{\alpha}:=\frac{p(N+\alpha)}{N-2} and \alpha-\beta<\frac{\beta+2(N-1)}{p+2}(q-p).

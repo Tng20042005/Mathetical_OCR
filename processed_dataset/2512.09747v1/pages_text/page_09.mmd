@@ -1,0 +1,52 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle e(G)\geq c(n,k)-q\geq\frac{1}{2}nk(2k-3)-\frac{1}{2}(2k^{3}-9k+6% )-6k^{2}-18k. |  | (5) |
+
+By Lemma 8, W\_{v}\leq k(k-3/2) for all v\in V(G). By Theorem 4, we may assume that k\geq 4.
+
+Claim 4. There exists v\in V(G) such that
+W\_{v}=k(k-3/2).
+
+Otherwise, we may assume that W\_{v}\leq k(k-3/2)-1/2 for all v\in V(G). Thus we get
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle e(G)\leq nk(k-3/2)-n/2. |  | (6) |
+
+Combining (5) and (6) , we may infer that n\leq 2k^{3}+12k^{2}+27k+6, a contradiction.
+This completes the proof of Claim 4.
+
+We choose x\in V(G) with W\_{x}=k(k-3/2).
+Suppose that following inequality holds
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle|\{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}|\leq k(k% -\frac{3}{2})+1, |  | (7) |
+
+Let G^{\prime} be a rainbow subgraph of \mathcal{G} avoiding the colors appearing in \{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}.
+By (7), we have e(G^{\prime})>f(n-1,k). Hence G^{\prime} contains a copy of \mathcal{F}\_{k} denoted by \mathcal{M}. Let y be the core of \mathcal{M}. We select a vertex
+x^{\prime}\in[n]-V(\mathcal{M})-\{x\}. Now E(\mathcal{M})\cup\{\{x^{\prime},x,y\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction. This contradiction concludes our proof. So next it is sufficient for us to show that (7) holds.
+
+Let F:=N\_{G}(x) denote the 2-graph with edge set N\_{G}(x) and vertex set V(N\_{G}(x)).
+By Lemma 8, F consists of two vertex-disjoint factor-critical graphs or satisfies (a), (b), and (c).
+
+We first prove the following claim, which provides a method for constructing a rainbow \mathcal{F}\_{k+1} in \mathcal{G} as described below.
+
+Claim 5. Let x\_{0}\in V(F) with d\_{F}(x\_{0})=k-1, and let \{y\_{0},w\}\subseteq[n]-(N\_{F}(x\_{0})\cup\{x,x\_{0}\}) be a 2-element set. If c(\{x\_{0},w,x\})\neq c(\{x\_{0},y\_{0},x\}), then \mathcal{G} has a rainbow F\_{k+1} with core x\_{0}.
+
+Let N\_{F}(x\_{0})=\{y\_{2},\ldots,y\_{k}\}. Our next step is to construct a rainbow copy of \mathcal{F}\_{k+1} with the core x\_{0}. According to Lemma 8, for 2\leq i\leq k, x\_{0}y\_{i} is A-type. Consequently, we know that
+d\_{G}(\{x\_{0},y\_{i}\})\geq 2k-1. For 2\leq i\leq k, we can pick a set \{y\_{i,1},...,y\_{i,2k-1}\}\subseteq N\_{G}(\{x\_{0},y\_{i}\}). Let T\_{1} be a 2-element subset chosen from the set [n]-V(F)-\{x,w,y\_{0}\}-(\bigcup\_{i=2}^{k}\bigcup\_{j=1}^{2k-1}\{y\_{i,j}\}).
+Since c(\{x\_{0},w,x\})\neq c(\{x\_{0},y\_{0},x\}), we have either c(T\_{1}\cup\{x\_{0}\})\neq c(\{x\_{0},y\_{0},x\}) or c(T\_{1}\cup\{x\_{0}\})\neq c(\{x\_{0},w,x\}). Without loss of generality, assume that c(T\_{1}\cup\{x\_{0}\})\neq c(\{x\_{0},y\_{0},x\}). Since G is a rainbow subgraph and k\geq 4, we can re-order the vertices y\_{2},...,y\_{k} in such a way that
+
+|  |  |  |
+| --- | --- | --- |
+|  | c(T\_{1}\cup\{x\_{0}\})\notin\{c(\{x\_{0},y\_{k-1},y\_{k-1,j}\})\ |\ j\in[2k-1]\} |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \{c(\{x\_{0},y\_{0},x\}),c(T\_{1}\cup\{x\_{0}\})\}\cap\{c(\{x\_{0},y\_{k},y\_{k,j}\})% \ |\ j\in[2k-1]\}=\emptyset. |  |
+
+Next, we aim to extend the sets T\_{1}\cup\{x\_{0}\}, \{x\_{0},y\_{0},x\} to form a rainbow copy of \mathcal{F}\_{k+1} with the core x\_{0}. Since k\geq 4, we can find a vertex y\_{2,1}^{\prime}\in N\_{G}(\{x\_{0},y\_{2}\})-\{x,y\_{3},\ldots,y\_{k}\}, such that \{\{T\_{1}\cup\{x\_{0}\},\{x\_{0},y\_{0},x\},\{x\_{0},y\_{2,1}^{\prime},y\_{2}\}\} induces a rainbow copy \mathcal{F}\_{3}. Now, assume that for some i<k-1, we have already constructed a collection \{\{T\_{1}\cup\{x\_{0}\},\{x\_{0},y\_{0},x\},\{x\_{0},y\_{2,1}^{\prime},y\_{2}\},%
+\ldots,\{x\_{0},y\_{i,1}^{

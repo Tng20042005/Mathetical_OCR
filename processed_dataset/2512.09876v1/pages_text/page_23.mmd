@@ -1,0 +1,61 @@
+au\_{E}}}A^{\*}\_{X}(E,\mathcal{M},\*^{\vee}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\xrightarrow{s\_{\*}}A^{\*}(E,\mathcal{M},\*^{\vee})\stackrel{{% \scriptstyle s^{\*}}}{{\simeq}}A^{\*}(X,\mathcal{M},\*^{\vee})\stackrel{{% \scriptstyle(1)}}{{\simeq}}A\_{\*}(X,\mathcal{M},\det(-E)\otimes\*), |  |
+
+where the map s\_{\*} forgets the support, the maps (1) follow from duality (1.3.7.b).
+
+## 3. Cohomological MW-modules
+
+The notion of *Milnor-Witt cycle modules* is introduced by the second-named author in [Fel20] over a perfect field which, after slight changes, can be generalized to more general base schemes (see [BHP23] for the case of a regular base scheme).
+In the spirit of the general formalism of *bivariant theories* (see [Dég18]), they should be considered as *cohomological* Milnor-Witt cycle modules, that we simply call MW-modules in contrast with homological Milnor-Witt cycle modules, *i.e* MW-homodules, that were introduced in Section 1. Our main result on MW-modules will be a duality theorem relating these objects to their homological counterparts, which hold for possibly singular schemes, see Theorems 3.5.9 and 3.3.4 below.
+
+### 3.1. Pinning and dualizing complexes
+
+###### Definition 3.1.1.
+
+We define the *fibred category of virtual schemes* \mathscr{K}^{!} as the category whose objects are pairs
+(X,v) where X is a scheme and v a virtual vector bundle over X,
+and with morphisms (Y,w)\rightarrow(X,v) the pairs (f,\phi)
+where f:Y\rightarrow X is an slci morphism of schemes
+and \phi:w\rightarrow\tau\_{f}+f^{-1}(v) an isomorphism of virtual vector bundles over Y.
+
+The composition of two twisted morphisms
+
+(Z,w)\xrightarrow{(g,\psi)}(Y,v)\xrightarrow{(f,\phi)}(X,u)
+
+is given by the composition of morphisms of schemes fg=f\circ g and by the following composite isomorphism:
+
+|  |  |  |
+| --- | --- | --- |
+|  | w\xrightarrow{\psi}\tau\_{g}+g^{-1}v\xrightarrow{Id+g^{-1}(\phi)}\tau\_{g}+g^{-1% }\tau\_{f}+g^{-1}f^{-1}(u)\simeq\tau\_{fg}+(fg)^{-1}(u) |  |
+
+where the last isomorphism is induced by the canonical isomorphism of virtual vector bundles
+(coming from the distinguished triangles of cotangent complexes).
+
+Note that we will denote a morphism (f,\phi) of one of the above two types simply by f
+when \phi is clear.
+
+Similar to the pseudo-functor \mathscr{K}, we have a pseudo-functor
+from the category of S-fields (see 0.0.2)
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.1.1.a) |  | \displaystyle\begin{split}\mathscr{L}:(\mathcal{F}\_{S})^{op}&\to\operatorname{% Spaces}\\ x&\mapsto\mathscr{L}(x)\end{split} | |  |
+
+where \mathscr{L}(x) is the space of line bundles on x. However, instead of the usual pull-back functoriality of line bundles, we consider the exceptional functor between line bundles: if f:\operatorname{Spec}F\to\operatorname{Spec}E is a morphism of S-fields, we define
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.1.1.b) |  | \displaystyle\begin{split}f^{!}:\mathscr{L}(E)&\to\mathscr{L}(F)\\ v&\mapsto f^{\*}v\otimes\omega\_{F/E}.\end{split} | |  |
+
+With this new functoriality we obtain another pseudo-functor
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.1.1.c) |  | \displaystyle\begin{split}\mathscr{L}^{!}:(\mathcal{F}\_{S})^{op}&\to% \operatorname{Spaces}\\ x&\mapsto\mathscr{L}(x).\end{split} | |  |
+
+###### 3.1.2.
+
+A morphism in the category \mathcal{G}\_{S} (see 0.0.2)
+is in particular a morphism between regular schemes, and is therefore a perfect morphism (see [Sta25, tag 0685]). For a morphism f:Y\to X in \mathcal{G}\_{S} , we define

@@ -1,0 +1,1081 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425</title>
+<!--Generated on Thu Dec 11 22:17:52 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Anti-Ramsey Number of Stars in 3-uniform hypergraphs<span class="ltx_note ltx_role_thanks"><sup class="ltx_note_mark">†</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">†</sup><span class="ltx_note_type">thanks: </span>Supported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural
+Science Foundation of China under grant No.12271425</span></span></span>
+</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Hongliang Lu, Xinyue Luo and Xinxin Ma
+<br class="ltx_break">School of Mathematics and Statistics
+<br class="ltx_break">Xi’an Jiaotong University
+<br class="ltx_break">Xi’an, Shaanxi 710049, China
+<br class="ltx_break">
+<br class="ltx_break">
+</span></span>
+</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+<p class="ltx_p">An edge-colored hypergraph is called <em class="ltx_emph ltx_font_italic">a rainbow hypergraph</em> if all the colors on its edges are distinct. Given two positive integers <span id="m1" class="ltx_Math">n,r</span> and an <span id="m2" class="ltx_Math">r</span>-uniform hypergraph <span id="m3" class="ltx_Math">\mathcal{G}</span>, the anti-Ramsey number <span id="m4" class="ltx_Math">ar_{r}(n,\mathcal{G})</span> is defined to be the minimum number of colors <span id="m5" class="ltx_Math">t</span> such that there exists a rainbow copy of <span id="m6" class="ltx_Math">\mathcal{G}</span> in any exactly <span id="m7" class="ltx_Math">t</span>-edge-coloring of the complete <span id="m8" class="ltx_Math">r</span>-uniform hypergraph of order <span id="m9" class="ltx_Math">n</span>. Let <span id="m10" class="ltx_Math">\mathcal{F}_{k}</span> denote the 3-graph (<span id="m11" class="ltx_Math">k</span>-star) consisting of <span id="m12" class="ltx_Math">k</span> edges sharing exactly one vertex. Tang, Li and Yan <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="" class="ltx_ref">23</a>]</cite> determined the value of <span id="m13" class="ltx_Math">ar_{3}(n,\mathcal{F}_{3})</span> when <span id="m14" class="ltx_Math">n\geq 20</span>. In this paper, we determine the anti-Ramsey number <span id="m15" class="ltx_Math">ar_{3}(n,\mathcal{F}_{k+1})</span>, where <span id="m16" class="ltx_Math">k\geq 3</span> and <span id="m17" class="ltx_Math">n&gt;\frac{5}{2}k^{3}+\frac{15}{2}k^{2}+26k-3</span>.
+</p>
+</div>
+<div id="p1" class="ltx_para ltx_align_left">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Key words:</span> anti-Ramsey number; <span id="p1.m1" class="ltx_Math">k</span>-star; rainbow hypergraph; matching</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">For a set <span id="S1.p1.m1" class="ltx_Math">S</span> and a positive integer <span id="S1.p1.m2" class="ltx_Math">k</span>, we use <span id="S1.p1.m3" class="ltx_Math">{S\choose k}</span> to denote the collection of all possible subsets of <span id="S1.p1.m4" class="ltx_Math">k</span> elements of <span id="S1.p1.m5" class="ltx_Math">S</span>. A <span class="ltx_text ltx_font_italic">hypergraph</span> <span id="S1.p1.m6" class="ltx_Math">\mathcal{F}=(V(\mathcal{F}),E(\mathcal{F}))</span> consists of a vertex set <span id="S1.p1.m7" class="ltx_Math">V(\mathcal{F})</span> and an edge set <span id="S1.p1.m8" class="ltx_Math">E(\mathcal{F})</span>, where each edge in <span id="S1.p1.m9" class="ltx_Math">E(\mathcal{F})</span> is a non-empty subset of <span id="S1.p1.m10" class="ltx_Math">V(\mathcal{F})</span>. The number of edges of <span id="S1.p1.m11" class="ltx_Math">\mathcal{F}</span> is denoted by <span id="S1.p1.m12" class="ltx_Math">e(\mathcal{F})</span>, that is, <span id="S1.p1.m13" class="ltx_Math">e(\mathcal{F}):=|E(\mathcal{F})|</span>. If <span id="S1.p1.m14" class="ltx_Math">|e|=r</span> for any <span id="S1.p1.m15" class="ltx_Math">e\in E(\mathcal{F})</span>, then <span id="S1.p1.m16" class="ltx_Math">\mathcal{F}</span> is called an <span id="S1.p1.m17" class="ltx_Math">r</span><span class="ltx_text ltx_font_italic">-uniform hypergraph</span> (or <span id="S1.p1.m18" class="ltx_Math">r</span>-graph, for simplicity).
+For <span id="S1.p1.m19" class="ltx_Math">u\in V(\mathcal{F})</span>, let <span id="S1.p1.m20" class="ltx_Math">N_{\mathcal{F}}(u):=\{e\ |\ e\subseteq V(\mathcal{F})\setminus\{u\}\ \mbox{and%
+}\ e\cup\{u\}\in E(\mathcal{F})\}</span> be the neighborhood of <span id="S1.p1.m21" class="ltx_Math">u</span> in <span id="S1.p1.m22" class="ltx_Math">\mathcal{F}</span>. The <span class="ltx_text ltx_font_italic">degree</span> of <span id="S1.p1.m23" class="ltx_Math">u</span> in <span id="S1.p1.m24" class="ltx_Math">\mathcal{F}</span>, denoted by <span id="S1.p1.m25" class="ltx_Math">d_{\mathcal{F}}(u)</span>, is the size of <span id="S1.p1.m26" class="ltx_Math">N_{\mathcal{F}}(u)</span>.
+For <span id="S1.p1.m27" class="ltx_Math">X\subseteq V(\mathcal{F})</span>, we define <span id="S1.p1.m28" class="ltx_Math">\mathcal{F}-X</span> as the subhypergraph of <span id="S1.p1.m29" class="ltx_Math">\mathcal{F}</span> obtained by removing all vertices in <span id="S1.p1.m30" class="ltx_Math">X</span> and all edges intersecting with <span id="S1.p1.m31" class="ltx_Math">X</span> in <span id="S1.p1.m32" class="ltx_Math">\mathcal{F}</span>.
+Similarly, if <span id="S1.p1.m33" class="ltx_Math">Y\subseteq E(\mathcal{F})</span>, we use
+<span id="S1.p1.m34" class="ltx_Math">\mathcal{F}-Y</span> to denote the hypergraph resulting from deleting all the edges in <span id="S1.p1.m35" class="ltx_Math">Y</span> from <span id="S1.p1.m36" class="ltx_Math">\mathcal{F}</span>.
+When <span id="S1.p1.m37" class="ltx_Math">X=\{x\}</span>, <span id="S1.p1.m38" class="ltx_Math">Y=\{e\}</span>, we respectively write <span id="S1.p1.m39" class="ltx_Math">\mathcal{F}-X=\mathcal{F}-x</span>, <span id="S1.p1.m40" class="ltx_Math">\mathcal{F}-Y=\mathcal{F}-e</span>. Specifically, to avoid confusion, for an edge <span id="S1.p1.m41" class="ltx_Math">e\in E(\mathcal{F})</span>, we use <span id="S1.p1.m42" class="ltx_Math">\mathcal{F}-V(e)</span> to denote the subgraph of <span id="S1.p1.m43" class="ltx_Math">\mathcal{F}</span> obtained by removing all vertices in <span id="S1.p1.m44" class="ltx_Math">e</span> and all edges intersecting with <span id="S1.p1.m45" class="ltx_Math">e</span> in <span id="S1.p1.m46" class="ltx_Math">\mathcal{F}</span>.
+For a non-empty subset <span id="S1.p1.m47" class="ltx_Math">X\subseteq V(\mathcal{F})</span>, let <span id="S1.p1.m48" class="ltx_Math">\mathcal{F}[X]</span> denote the subgraph <em class="ltx_emph ltx_font_italic">induced</em> by <span id="S1.p1.m49" class="ltx_Math">X</span>. For two disjoint sets <span id="S1.p1.m50" class="ltx_Math">U</span> and <span id="S1.p1.m51" class="ltx_Math">W</span>, we use <span id="S1.p1.m52" class="ltx_Math">U\times W</span> to denote the collection of 2-sets that intersect <span id="S1.p1.m53" class="ltx_Math">U</span> and <span id="S1.p1.m54" class="ltx_Math">W</span>. That is, <span id="S1.p1.m55" class="ltx_Math">U\times W=\{\{x,y\}\ |\ x\in U\mbox{ and }y\in W\}</span>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">For two vertex-disjoint hypergraphs <span id="S1.p2.m1" class="ltx_Math">\mathcal{F},\mathcal{H}</span>, the <span class="ltx_text ltx_font_italic">union</span> of <span id="S1.p2.m2" class="ltx_Math">\mathcal{F}</span> and <span id="S1.p2.m3" class="ltx_Math">\mathcal{H}</span> denoted by <span id="S1.p2.m4" class="ltx_Math">\mathcal{F}\cup\mathcal{H}</span> is the hypergraph with vertex set <span id="S1.p2.m5" class="ltx_Math">V(\mathcal{F})\cup V(\mathcal{H})</span> and edge set <span id="S1.p2.m6" class="ltx_Math">E(\mathcal{F})\cup E(\mathcal{H})</span>. When there is no confusion, for <span id="S1.p2.m7" class="ltx_Math">T\subseteq V(\mathcal{F})</span>, we also use <span id="S1.p2.m8" class="ltx_Math">N_{\mathcal{F}}(T)</span> to denote the <span id="S1.p2.m9" class="ltx_Math">(k-|T|)</span>-graph with vertex set <span id="S1.p2.m10" class="ltx_Math">V(\mathcal{F})-T</span> and edge set <span id="S1.p2.m11" class="ltx_Math">N_{\mathcal{F}}(T)</span>. A <em class="ltx_emph ltx_font_italic">matching</em> in a hypergraph <span id="S1.p2.m12" class="ltx_Math">H</span> is a set of pairwise disjoint edges in <span id="S1.p2.m13" class="ltx_Math">H</span>, and we use <span id="S1.p2.m14" class="ltx_Math">\nu(H)</span> to denote the maximum size of a matching in <span id="S1.p2.m15" class="ltx_Math">H</span>.
+
+A <span id="S1.p2.m16" class="ltx_Math">t</span>-<span class="ltx_text ltx_font_italic">edge-coloring</span> of a hypergraph is an assignment of <span id="S1.p2.m17" class="ltx_Math">t</span> colors to its edges, and an <span class="ltx_text ltx_font_italic">exactly <span id="S1.p2.m18" class="ltx_Math">t</span>-edge-coloring</span> uses all <span id="S1.p2.m19" class="ltx_Math">t</span> colors. An edge-colored graph is called <span class="ltx_text ltx_font_italic">rainbow</span> if all edges have distinct colors. Let <span id="S1.p2.m20" class="ltx_Math">[n]=\{1,...,n\}</span>. The complete <span id="S1.p2.m21" class="ltx_Math">r</span>-graph with order <span id="S1.p2.m22" class="ltx_Math">n</span> is denoted by <span id="S1.p2.m23" class="ltx_Math">K_{n}^{r}</span> . Given a positive integer <span id="S1.p2.m24" class="ltx_Math">n</span> and a hypergraph <span id="S1.p2.m25" class="ltx_Math">\mathcal{F}</span>, the <span class="ltx_text ltx_font_italic">anti-Ramsey number</span> <span id="S1.p2.m26" class="ltx_Math">ar_{r}(n,\mathcal{F})</span> is the minimum number of colors <span id="S1.p2.m27" class="ltx_Math">t</span> such that each edge-coloring of <span id="S1.p2.m28" class="ltx_Math">K_{n}^{r}</span> with exactly <span id="S1.p2.m29" class="ltx_Math">t</span> colors contains a rainbow copy of <span id="S1.p2.m30" class="ltx_Math">\mathcal{F}</span>. Given an edge-coloring <span id="S1.p2.m31" class="ltx_Math">C</span> of <span id="S1.p2.m32" class="ltx_Math">\mathcal{F}</span>, the colored hypergraph is <em class="ltx_emph ltx_font_italic"><span id="S1.p2.m33" class="ltx_Math">F</span>-free</em> if <span id="S1.p2.m34" class="ltx_Math">\mathcal{F}</span> has no rainbow subhypergraph which is isomorphic to <span id="S1.p2.m35" class="ltx_Math">F</span>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Given a hypergraph <span id="S1.p3.m1" class="ltx_Math">H</span> and a family of hypergraphs <span id="S1.p3.m2" class="ltx_Math">\mathcal{H}</span>, <span id="S1.p3.m3" class="ltx_Math">H</span> is called <em class="ltx_emph ltx_font_italic"><span id="S1.p3.m4" class="ltx_Math">\mathcal{H}</span>-free</em> if for any <span id="S1.p3.m5" class="ltx_Math">F\in\mathcal{H}</span>, <span id="S1.p3.m6" class="ltx_Math">H</span> does not contain <span id="S1.p3.m7" class="ltx_Math">F</span> as a subhypergraph.
+The Turán number of a fmaily of <span id="S1.p3.m8" class="ltx_Math">r</span>-graphs <span id="S1.p3.m9" class="ltx_Math">\mathcal{F}</span>, written <span id="S1.p3.m10" class="ltx_Math">ex_{r}(n,\mathcal{F})</span>, is the largest possible number of edges in an <span id="S1.p3.m11" class="ltx_Math">\mathcal{F}</span>-free <span id="S1.p3.m12" class="ltx_Math">r</span>-graph on <span id="S1.p3.m13" class="ltx_Math">n</span> vertices. When <span id="S1.p3.m14" class="ltx_Math">\mathcal{F}=\{F\}</span>, we use <span id="S1.p3.m15" class="ltx_Math">ex_{r}(n,F)</span> instead of <span id="S1.p3.m16" class="ltx_Math">ex_{r}(n,\{F\})</span>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Anti-Ramsey numbers were introduced by Erdős, Simonovits and Sós <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> in 1973. They found that the anti-Ramsey numbers are closely related to the Turán numbers. For an <span id="S1.p4.m1" class="ltx_Math">r</span>-graph <span id="S1.p4.m2" class="ltx_Math">F</span>, there is a natural lower bound of <span id="S1.p4.m3" class="ltx_Math">ar_{r}(n,F)</span> in terms of Turán number as follow,</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S1.E1.m1" class="ltx_Math">\displaystyle{}ar_{r}(n,F)\geq ex_{r}(n,\{F-e:e\in E(F)\})+2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This trivial lower bound is easily obtained by coloring a rainbow Turán extremal <span id="S1.p4.m4" class="ltx_Math">r</span>-graph for <span id="S1.p4.m5" class="ltx_Math">\{F-e:e\in F\}</span> in <span id="S1.p4.m6" class="ltx_Math">K_{n}^{r}</span>, and the remaining edges with an additional color <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="" class="ltx_ref">15</a>]</cite>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">In 1973, Erdős, Simonovits, and Sós <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> proved that there exists an integer <span id="S1.p5.m1" class="ltx_Math">n_{0}(p)</span> such that for all <span id="S1.p5.m2" class="ltx_Math">n&gt;n_{0}(p)</span>, the anti-Ramsey number <span id="S1.p5.m3" class="ltx_Math">ar(K_{p},n)</span> satisfies the equation <span id="S1.p5.m4" class="ltx_Math">ar(K_{p},n)=ex(n,K_{p-1})+2</span>. Later, Montellano-Ballesteros and Neumann-Lara <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="" class="ltx_ref">17</a>]</cite>, as well as Schiermeyer <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>]</cite>, independently extended this result to cover all values of <span id="S1.p5.m5" class="ltx_Math">n</span> and <span id="S1.p5.m6" class="ltx_Math">p</span> where <span id="S1.p5.m7" class="ltx_Math">n&gt;p\geq 3</span>.
+Jiang <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite> and Montellano-Ballesteros <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib18" title="" class="ltx_ref">18</a>]</cite> independently determined the anti-Ramsey numbers for stars in graphs. A variety of results regarding the anti-Ramsey numbers of 2-graphs have been achieved. These results cover various graph structures such as paths, cycles, and matchings.
+For a comprehensive overview, we recommend the survey paper <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>. Regarding 3-graphs, Guo, Lu, and Peng <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="" class="ltx_ref">13</a>]</cite> established the exact value of the anti-Ramsey number for matchings. Gu, Li, and Shi <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite> investigated the anti-Ramsey numbers of paths and cycles in hypergraphs. For other related results on the anti-Ramsey numbers of paths, cycles, and matchings in hypergraphs, interested readers are referred to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>, <a href="#bib.bib15" title="" class="ltx_ref">15</a>, <a href="#bib.bib22" title="" class="ltx_ref">22</a>, <a href="#bib.bib23" title="" class="ltx_ref">23</a>, <a href="#bib.bib18" title="" class="ltx_ref">18</a>, <a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite>.
+In this paper, we aim to investigate the anti-Ramsey numbers of stars of 3-graphs.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Let <span id="S1.p6.m1" class="ltx_Math">\mathcal{F}_{k}</span> (<span id="S1.p6.m2" class="ltx_Math">k</span>-star) denote the 3-graph consisting of <span id="S1.p6.m3" class="ltx_Math">k</span> edges sharing exactly one vertex, called the core of the star. Let <span id="S1.p6.m4" class="ltx_Math">f(n,k)</span> denote the maximum number of edges in <span id="S1.p6.m5" class="ltx_Math">3</span>-graph without <span id="S1.p6.m6" class="ltx_Math">k</span>-stars. <span id="S1.p6.m7" class="ltx_Math">f(n,2)</span> was determined exactly by Erdős and Sós<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>]</cite>.
+Duke and Erdős <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite> established linear lower and upper bounds on <span id="S1.p6.m8" class="ltx_Math">f(n,k)</span> for fixed <span id="S1.p6.m9" class="ltx_Math">k</span> (where the bounds scale linearly with <span id="S1.p6.m10" class="ltx_Math">n</span>). These bounds were subsequently improved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>, where the exact value of <span id="S1.p6.m11" class="ltx_Math">f(n,3)</span> was determined for all integers <span id="S1.p6.m12" class="ltx_Math">n\geq 54</span>. Further refinements were made in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, yielding bounds that are nearly best possible. Finally, Chung and Frankl <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> derived the exact value of <span id="S1.p6.m13" class="ltx_Math">f(n,k)</span> for 3-graphs in the regime <span id="S1.p6.m14" class="ltx_Math">n\geq\frac{5}{2}k^{3}</span>.
+</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span><span class="ltx_text ltx_font_bold"> (Erdős and Sós, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all <span id="Thmtheorem1.p1.m1" class="ltx_Math">n\geq 3</span>,</span></p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex1.m1" class="ltx_Math">f(n,2)=\begin{cases}n,&amp;\mbox{if}\ n\equiv 0\pmod{4},\\
+n-1,&amp;\mbox{if}\ n\equiv 1\pmod{4},\\
+n-2,&amp;\mbox{if}\ n\equiv 2,3\pmod{4}.\\
+\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span><span class="ltx_text ltx_font_bold"> (Chung and Frankl, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <span id="Thmtheorem2.p1.m1" class="ltx_Math">k\geq 3</span> is odd and <span id="Thmtheorem2.p1.m2" class="ltx_Math">n&gt;k(k-1)(5k+2)/2</span>, then <span id="Thmtheorem2.p1.m3" class="ltx_Math">f(n,k)=(n-2k)k(k-1))+2{k\choose 3}</span>. Moreover, a <span id="Thmtheorem2.p1.m4" class="ltx_Math">3</span>-graph <span id="Thmtheorem2.p1.m5" class="ltx_Math">\mathcal{F}</span> has <span id="Thmtheorem2.p1.m6" class="ltx_Math">f(n,k)</span> edges and contains no <span id="Thmtheorem2.p1.m7" class="ltx_Math">k</span>-star if and only if <span id="Thmtheorem2.p1.m8" class="ltx_Math">\mathcal{F}</span> is isomorphic to <span id="Thmtheorem2.p1.m9" class="ltx_Math">\mathscr{F}_{k}^{o}</span>.</span></p>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span><span class="ltx_text ltx_font_bold"> (Chung and Frankl, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <span id="Thmtheorem3.p1.m1" class="ltx_Math">k\geq 4</span> is even and <span id="Thmtheorem3.p1.m2" class="ltx_Math">n&gt;2k^{3}-9k+7</span>, then <span id="Thmtheorem3.p1.m3" class="ltx_Math">f(n,k)=\frac{1}{2}nk(2k-3)-\frac{1}{2}(2k^{3}-9k+6)</span>. Moreover, a <span id="Thmtheorem3.p1.m4" class="ltx_Math">3</span>-graph <span id="Thmtheorem3.p1.m5" class="ltx_Math">\mathcal{F}</span> has <span id="Thmtheorem3.p1.m6" class="ltx_Math">f(n,k)</span> edges and contains no <span id="Thmtheorem3.p1.m7" class="ltx_Math">k</span>-star if and only if <span id="Thmtheorem3.p1.m8" class="ltx_Math">\mathcal{F}</span> is isomorphic to <span id="Thmtheorem3.p1.m9" class="ltx_Math">\mathscr{F}_{k}^{e}</span>.</span></p>
+</div>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Chung and Frankl <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> proposed the following extremal graph construction.</p>
+</div>
+<div id="S1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The construction of <span id="S1.p8.m1" class="ltx_Math">\mathscr{F}_{k}^{o}</span> </span>: Let <span id="S1.p8.m2" class="ltx_Math">k</span> be odd and let <span id="S1.p8.m3" class="ltx_Math">S</span> and <span id="S1.p8.m4" class="ltx_Math">R</span> be two disjoint sets of <span id="S1.p8.m5" class="ltx_Math">[n]</span> of size <span id="S1.p8.m6" class="ltx_Math">k</span>. Consider the 3-graph <span id="S1.p8.m7" class="ltx_Math">\mathscr{F}_{k}^{o}</span> with vertex set <span id="S1.p8.m8" class="ltx_Math">[n]</span> and edge set</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">E(\mathscr{F}_{k}^{o})=\{T\in\binom{V}{3}:|T\cap S|\geq 2\ \mbox{ and }\ |T%
+\cap R|=\emptyset\}\cup\{T\in\binom{V}{3}:|T\cap R|\geq 2\ \mbox{ and }\ |T%
+\cap S|=\emptyset\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The construction of <span id="S1.p8.m9" class="ltx_Math">\mathscr{F}_{k}^{e}</span></span>: Let <span id="S1.p8.m10" class="ltx_Math">k</span> be even. Let <span id="S1.p8.m11" class="ltx_Math">G_{k}</span> be
+the 2-graph with <span id="S1.p8.m12" class="ltx_Math">2k-1</span> vertices, denoted by <span id="S1.p8.m13" class="ltx_Math">x_{1},\ldots,x_{k-1},y_{1},\ldots,y_{k-1}</span> and <span id="S1.p8.m14" class="ltx_Math">z</span>. The edge set of <span id="S1.p8.m15" class="ltx_Math">G_{k}</span> consists of all the pairs <span id="S1.p8.m16" class="ltx_Math">(x_{i},y_{j})</span>, except for <span id="S1.p8.m17" class="ltx_Math">(x_{i},y_{i})</span>
+with <span id="S1.p8.m18" class="ltx_Math">2i&gt;k</span> together with the pairs <span id="S1.p8.m19" class="ltx_Math">(x_{i},z),(y_{i},z)</span> with <span id="S1.p8.m20" class="ltx_Math">2i&gt;k</span>. It is easy to see that it has all degrees equal <span id="S1.p8.m21" class="ltx_Math">k-1</span>
+except for the degree of <span id="S1.p8.m22" class="ltx_Math">z</span>, which is <span id="S1.p8.m23" class="ltx_Math">k-2</span>. Let <span id="S1.p8.m24" class="ltx_Math">\mathscr{F}_{k}^{e}</span> denote the 3-graph on <span id="S1.p8.m25" class="ltx_Math">n</span> vertices such that each edge either intersects the vertex set <span id="S1.p8.m26" class="ltx_Math">V(G_{k})</span> in an edge of <span id="S1.p8.m27" class="ltx_Math">G_{k}</span> or contains two distinct edges of <span id="S1.p8.m28" class="ltx_Math">G_{k}</span>, together with all the triples of the form <span id="S1.p8.m29" class="ltx_Math">\{x_{i},y_{i},z\}</span> for <span id="S1.p8.m30" class="ltx_Math">1\leq i\leq k/2</span>.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">The anti-Ramsey number <span id="S1.p9.m1" class="ltx_Math">ar_{3}(n,\mathcal{F}_{2})=2</span> follows immediately from the definition. Tang, Li and Yan <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="" class="ltx_ref">23</a>]</cite> determined the value of <span id="S1.p9.m2" class="ltx_Math">ar_{3}(n,\mathcal{F}_{3})</span> when <span id="S1.p9.m3" class="ltx_Math">n\geq 20</span>.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span><span class="ltx_text ltx_font_bold"> (Tang, Li and Yan <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="" class="ltx_ref">23</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all <span id="Thmtheorem4.p1.m1" class="ltx_Math">n\geq 20</span>,</span></p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex3.m1" class="ltx_Math">ar_{3}(n,\mathcal{F}_{3})=\left\{\begin{array}[]{ll}f(n,2)+2,&amp;\mbox{if}\ n%
+\equiv 0\pmod{4},\\
+f(n,2)+2,&amp;\mbox{if}\ n\equiv 1\pmod{4},\\
+f(n,2)+3,&amp;\mbox{if}\ n\equiv 2,3\pmod{4}.\end{array}\right.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">In this paper, we determine the anti-Ramsey number of a star in 3-graphs for sufficiently large <span id="S1.p10.m1" class="ltx_Math">n</span>.
+</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5</span></span></h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For <span id="Thmtheorem5.p1.m1" class="ltx_Math">k\geq 3</span> and <span id="Thmtheorem5.p1.m2" class="ltx_Math">n&gt;\frac{5}{2}k^{3}+\frac{15}{2}k^{2}+26k-3</span>, <span id="Thmtheorem5.p1.m3" class="ltx_Math">ar_{3}(n,\mathcal{F}_{k+1})=f(n,k)+2</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Technical Lemmas</h2>
+
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 6</span></span><span class="ltx_text ltx_font_bold"> (Tutte, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="" class="ltx_ref">24</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A graph <span id="Thmtheorem6.p1.m1" class="ltx_Math">G</span> has a perfect matching if and only if</span></p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex4.m1" class="ltx_Math">o(G-S)\leq|S|\quad\mbox{for any }S\subseteq V(G),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem6.p1.m2" class="ltx_Math">o(G-S)</span> denotes the number of connected components of odd order in <span id="Thmtheorem6.p1.m3" class="ltx_Math">G-S</span>.</span></p>
+</div>
+</div>
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">A graph <span id="S2.p1.m1" class="ltx_Math">G</span> is called a <em class="ltx_emph ltx_font_italic">factor-critical</em> graph if <span id="S2.p1.m2" class="ltx_Math">G-v</span> has a perfect matching for each <span id="S2.p1.m3" class="ltx_Math">v\in V(G)</span>.
+Gallai <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite> introduced the concept of factor-critical graphs.
+By definition and Theorem <a href="#Thmtheorem6" title="Theorem 6 (Tutte, [24]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>, one can see that the following statement holds.</p>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 7</span></span><span class="ltx_text ltx_font_bold"> (Gallai, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A graph <span id="Thmtheorem7.p1.m1" class="ltx_Math">G</span> of odd order is factor-critical if and only if</span></p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex5.m1" class="ltx_Math">o(G-S)\leq|S|\quad\mbox{for any non-emptyset }S\subseteq V(G),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem7.p1.m2" class="ltx_Math">o(G-S)</span> denotes the number of connected components of odd order in <span id="Thmtheorem7.p1.m3" class="ltx_Math">G-S</span>.</span></p>
+</div>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Here we use a “weight function” method developed by Chung and Frankl <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> to characterize the structure of a 3-graph <span id="S2.p2.m1" class="ltx_Math">\mathcal{F}</span>.
+Suppose that <span id="S2.p2.m2" class="ltx_Math">\mathcal{F}</span> is a family of 3-element subsets of the <span id="S2.p2.m3" class="ltx_Math">n</span>-set <span id="S2.p2.m4" class="ltx_Math">V=V(\mathcal{F})</span>. Let <span id="S2.p2.m5" class="ltx_Math">P</span> denote the set of all pairs of vertices in <span id="S2.p2.m6" class="ltx_Math">V</span>. For each <span id="S2.p2.m7" class="ltx_Math">\{u,v\}</span> in <span id="S2.p2.m8" class="ltx_Math">P</span>, the pair frequency is</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex6.m1" class="ltx_Math">z(u,v)=|\{w:\{u,v,w\}\in\mathcal{F}\}|.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We also have</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex7.m1" class="ltx_Math">\displaystyle A:=\{\{u,v\}\in P:z(u,v)\geq 2k-1\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex8.m1" class="ltx_Math">\displaystyle B:=\{\{u,v\}\in P:2k-2\geq z(u,v)\geq k\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex9.m1" class="ltx_Math">\displaystyle C:=P-A-B</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The weight function <span id="S2.p2.m9" class="ltx_Math">\omega:\mathcal{F}\times P\rightarrow R</span> distributes weights to pairs within each triple in <span id="S2.p2.m10" class="ltx_Math">\mathcal{F}</span> according to the pair frequency.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">For a fixed triple <span id="S2.p3.m1" class="ltx_Math">T\in\mathcal{F}</span>, the three pairs in <span id="S2.p3.m2" class="ltx_Math">T</span> are denoted by <span id="S2.p3.m3" class="ltx_Math">z(p_{1})\geq z(p_{2})\geq z(p_{3})</span>. The <em class="ltx_emph ltx_font_italic">weight function</em> <span id="S2.p3.m4" class="ltx_Math">w</span> is defined as follows:</p>
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <span id="S2.I1.i1.p1.m1" class="ltx_Math">p_{1},p_{2},p_{3}\in A\cup B</span> or <span id="S2.I1.i1.p1.m2" class="ltx_Math">p_{1},p_{2},p_{3}\in B\cup C</span>, then <span id="S2.I1.i1.p1.m3" class="ltx_Math">\omega(T,p_{i})=\frac{1}{3}</span>.</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <span id="S2.I1.i2.p1.m1" class="ltx_Math">p_{1}\in A,p_{3}\in C</span>. If <span id="S2.I1.i2.p1.m2" class="ltx_Math">p_{2}\in A\cup B</span>, then <span id="S2.I1.i2.p1.m3" class="ltx_Math">\omega(T,p_{1})=\omega(T,p_{2})=\frac{1}{2},\omega(T,p_{3})=0</span>. If <span id="S2.I1.i2.p1.m4" class="ltx_Math">p_{2}\in C</span>, then <span id="S2.I1.i2.p1.m5" class="ltx_Math">\omega(T,p_{1})=1,\omega(T,p_{2})=\omega(T,p_{3})=0</span>.</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For convenience we set also <span id="S2.I1.i3.p1.m1" class="ltx_Math">\omega(T,p)=0</span> for <span id="S2.I1.i3.p1.m2" class="ltx_Math">p\nsubseteq T</span>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Obviously, we have</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex10.m1" class="ltx_Math">\sum_{1\leq i\leq 3}\omega(T,p_{i})=1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex11.m1" class="ltx_Math">\sum_{T\in\mathcal{F}}{\sum_{p}\omega(T,p)}=e(\mathcal{F})</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 8</span></span><span class="ltx_text ltx_font_bold"> (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>, <a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite>)</span>
+</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For every vertex <span id="Thmtheorem8.p1.m1" class="ltx_Math">v</span> in a 3-graph <span id="Thmtheorem8.p1.m2" class="ltx_Math">\mathcal{F}</span> which does not contain a <span id="Thmtheorem8.p1.m3" class="ltx_Math">k</span>-star, the following holds:</span></p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex12.m1" class="ltx_Math">W_{v}=\sum_{p\in N_{\mathcal{F}}(v)}\omega(\{v\}\cup p,p)\leq k(k-1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Moreover <span id="Thmtheorem8.p1.m4" class="ltx_Math">W_{v}\leq k(k-1)-\frac{2}{3}</span> unless <span id="Thmtheorem8.p1.m5" class="ltx_Math">N_{\mathcal{F}}(v)</span> is the disjoint of two complete 2-graphs on <span id="Thmtheorem8.p1.m6" class="ltx_Math">k</span> vertices and every edge of <span id="Thmtheorem8.p1.m7" class="ltx_Math">N_{\mathcal{F}}(v)</span> is <span id="Thmtheorem8.p1.m8" class="ltx_Math">A</span>-type. If <span id="Thmtheorem8.p1.m9" class="ltx_Math">k</span> is even, then one has the stronger inequality,</span></p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex13.m1" class="ltx_Math">W_{v}\leq k(k-3/2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Moreover, <span id="Thmtheorem8.p1.m10" class="ltx_Math">W_{v}\leq k(k-3/2)-1/2</span> unless <span id="Thmtheorem8.p1.m11" class="ltx_Math">N_{\mathcal{F}}(v)=K_{k-1}\cup C</span>, where <span id="Thmtheorem8.p1.m12" class="ltx_Math">C</span> is a factor-critical graph of order <span id="Thmtheorem8.p1.m13" class="ltx_Math">k+1</span> with degree sequence <span id="Thmtheorem8.p1.m14" class="ltx_Math">k-1,\ldots,k-1,k-2</span> or <span id="Thmtheorem8.p1.m15" class="ltx_Math">N_{\mathcal{F}}(v)</span> with maximum degree <span id="Thmtheorem8.p1.m16" class="ltx_Math">k-1</span> satisfies the following three conditions.</span></p>
+<ul id="S2.I2" class="ltx_itemize">
+<li id="S2.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S2.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists </span><span id="S2.I2.ix1.p1.m1" class="ltx_Math">S\subseteq V(N_{\mathcal{F}}(v))</span><span class="ltx_text ltx_font_italic"> such that </span><span id="S2.I2.ix1.p1.m2" class="ltx_Math">N_{\mathcal{F}}(v)-S</span><span class="ltx_text ltx_font_italic"> consists of isolated vertices and one factor-critical component denoted by </span><span id="S2.I2.ix1.p1.m3" class="ltx_Math">F_{0}</span><span class="ltx_text ltx_font_italic"> with </span><span id="S2.I2.ix1.p1.m4" class="ltx_Math">2k-1-2|S|\geq k+1</span><span class="ltx_text ltx_font_italic"> vertices and degree sequence </span><span id="S2.I2.ix1.p1.m5" class="ltx_Math">(k-1,...,k-1,k-2)</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="S2.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S2.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I2.ix2.p1.m1" class="ltx_Math">N_{\mathcal{F}}(v)-V(F_{0})</span><span class="ltx_text ltx_font_italic"> is the edge disjoint union of </span><span id="S2.I2.ix2.p1.m2" class="ltx_Math">|S|</span><span class="ltx_text ltx_font_italic"> stars, each with maximum degree </span><span id="S2.I2.ix2.p1.m3" class="ltx_Math">k-1</span><span class="ltx_text ltx_font_italic">; and</span></p>
+</div>
+</li>
+<li id="S2.I2.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(c)</span> 
+<div id="S2.I2.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">every edge of </span><span id="S2.I2.ix3.p1.m1" class="ltx_Math">N_{\mathcal{F}}(v)</span><span class="ltx_text ltx_font_italic"> is in </span><span id="S2.I2.ix3.p1.m2" class="ltx_Math">A</span><span class="ltx_text ltx_font_italic">, and all edges connecting </span><span id="S2.I2.ix3.p1.m3" class="ltx_Math">v</span><span class="ltx_text ltx_font_italic"> to </span><span id="S2.I2.ix3.p1.m4" class="ltx_Math">V(N_{\mathcal{F}}(v))</span><span class="ltx_text ltx_font_italic"> are in </span><span id="S2.I2.ix3.p1.m5" class="ltx_Math">C</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Chung and Frankl <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> first determined the value of <span id="S2.p4.m1" class="ltx_Math">f(n,k)</span>, though they did not characterize the corresponding extremal case: when <span id="S2.p4.m2" class="ltx_Math">N_{\mathcal{F}}(v)=K_{k-1}\cup C</span> (where <span id="S2.p4.m3" class="ltx_Math">C</span> is a factor-critical graph of order <span id="S2.p4.m4" class="ltx_Math">k+1</span> with degree sequence <span id="S2.p4.m5" class="ltx_Math">(k-1,\dots,k-1,k-2)</span>). Later, Zhu et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite> adopted a similar approach to fully characterize all extremal graphs (a method analogous to the one Chung and Frankl used in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> when handling the function <span id="S2.p4.m6" class="ltx_Math">\text{ex}_{3}(n,\mathcal{F}_{k})</span>).</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Write <span id="S2.p5.m1" class="ltx_Math">c(n,k):=ex_{3}(n,\mathcal{F}_{k})+2</span>. Given an edge-coloring <span id="S2.p5.m2" class="ltx_Math">c:E(K^{3}_{n})\rightarrow[c(n,k)]</span> such that <span id="S2.p5.m3" class="ltx_Math">c</span> is surjective and the colored hypergraph denoted by <span id="S2.p5.m4" class="ltx_Math">H</span> contains no rainbow <span id="S2.p5.m5" class="ltx_Math">\mathcal{F}_{k+1}</span>. For <span id="S2.p5.m6" class="ltx_Math">U\subseteq V(H)</span>, let <span id="S2.p5.m7" class="ltx_Math">Z_{c}(U):=\{c(e)\ |\ e\in H,U\subseteq e\}</span> and let <span id="S2.p5.m8" class="ltx_Math">z_{c}(U):=|Z_{c}(U)|</span>. When <span id="S2.p5.m9" class="ltx_Math">U=\{x\}</span>, we denote <span id="S2.p5.m10" class="ltx_Math">Z_{c}(U)</span> and <span id="S2.p5.m11" class="ltx_Math">z_{c}(U)</span> by <span id="S2.p5.m12" class="ltx_Math">Z_{c}(x)</span> and <span id="S2.p5.m13" class="ltx_Math">z_{c}(x)</span>, respectively.
+If <span id="S2.p5.m14" class="ltx_Math">z_{c}(\{u,v\})\leq 3k</span>, the pair <span id="S2.p5.m15" class="ltx_Math">\{u,v\}</span> is <em class="ltx_emph ltx_font_italic">good</em> in <span id="S2.p5.m16" class="ltx_Math">H</span>, saying <em class="ltx_emph ltx_font_italic">bad</em>, otherwise.</p>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 9</span></span></h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exist <span id="Thmtheorem9.p1.m1" class="ltx_Math">2k+6</span> disjoint good pairs in <span id="Thmtheorem9.p1.m2" class="ltx_Math">H</span>.</span></p>
+</div>
+</div>
+<div id="S2.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof.</span> Firstly, we show that the following claim.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 1. </span>For every <span id="S2.p7.m1" class="ltx_Math">u</span>, there exist at least <span id="S2.p7.m2" class="ltx_Math">n-k-1</span> vertices <span id="S2.p7.m3" class="ltx_Math">v\in V(H)</span> such that <span id="S2.p7.m4" class="ltx_Math">z_{c}(u,v)\leq 3k</span>.</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">By contradiction. Suppose the result does not hold. Then there exists <span id="S2.p8.m1" class="ltx_Math">u\in V(H)</span> and <span id="S2.p8.m2" class="ltx_Math">S\in{V(H)-u\choose k+1}</span> such that <span id="S2.p8.m3" class="ltx_Math">z_{c}(u,v)\geq 3k+1</span> for all <span id="S2.p8.m4" class="ltx_Math">v\in S</span>. Write <span id="S2.p8.m5" class="ltx_Math">S:=\{v_{1},\ldots,v_{k+1}\}</span>. We choose a maximal rainbow star <span id="S2.p8.m6" class="ltx_Math">\mathcal{F}_{r}</span> in <span id="S2.p8.m7" class="ltx_Math">H</span> with center <span id="S2.p8.m8" class="ltx_Math">u</span> such that <span id="S2.p8.m9" class="ltx_Math">V(\mathcal{F}_{r})\cap S=r</span>. Since <span id="S2.p8.m10" class="ltx_Math">H</span> is a complete graph, we may choose <span id="S2.p8.m11" class="ltx_Math">e_{1}</span> such that <span id="S2.p8.m12" class="ltx_Math">\{u,v_{1}\}\subseteq e_{1}</span> and <span id="S2.p8.m13" class="ltx_Math">|e_{1}\cap S|=1</span>. So we have <span id="S2.p8.m14" class="ltx_Math">V(\mathcal{F}_{r})\neq\emptyset</span>. Next we show that <span id="S2.p8.m15" class="ltx_Math">r\geq k+1</span>, which will contradict the hypothesis. Otherwise, suppose that <span id="S2.p8.m16" class="ltx_Math">r\leq k</span>. Then let <span id="S2.p8.m17" class="ltx_Math">v\in S-V(\mathcal{F}_{r})</span>. Since <span id="S2.p8.m18" class="ltx_Math">z_{c}(u,v)\geq 3k+1</span> and the number of edges containing <span id="S2.p8.m19" class="ltx_Math">\{u,v\}</span> and intersecting <span id="S2.p8.m20" class="ltx_Math">V(\mathcal{F}_{r})-u</span> is at most <span id="S2.p8.m21" class="ltx_Math">2r</span>, there exists an edge <span id="S2.p8.m22" class="ltx_Math">f</span> containing <span id="S2.p8.m23" class="ltx_Math">\{u,v\}</span> and <span id="S2.p8.m24" class="ltx_Math">f-\{u,v\}\notin V(\mathcal{F}_{r})</span> and <span id="S2.p8.m25" class="ltx_Math">c(f)\notin\{c(e)\ |\ e\in\mathcal{F}_{r}\}</span>. So <span id="S2.p8.m26" class="ltx_Math">\{f\}\cup E(\mathcal{F}_{r})</span> induces a rainbow <span id="S2.p8.m27" class="ltx_Math">\mathcal{F}_{r+1}</span>, which contradicts the choice of <span id="S2.p8.m28" class="ltx_Math">\mathcal{F}_{r}</span>. This completes the proof of claim 1.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Since <span id="S2.p9.m1" class="ltx_Math">n-k-1&gt;2(2k+6)</span>, by Claim 1, we may greedily choose a set of <span id="S2.p9.m2" class="ltx_Math">2k+6</span> vertex-disjoint good pairs in <span id="S2.p9.m3" class="ltx_Math">H</span>. This completes the proof.  <span id="S2.p9.m4" class="ltx_Math">\Box</span></p>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">The following lemma is crucial for the proof of our main theorem.</p>
+</div>
+<div id="Thmtheorem10" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 10</span></span></h6>
+<div id="Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem10.p1.m1" class="ltx_Math">k\geq 5</span> be an integer and let <span id="Thmtheorem10.p1.m2" class="ltx_Math">G</span> be a graph with at most <span id="Thmtheorem10.p1.m3" class="ltx_Math">2k-1</span> vertices. If <span id="Thmtheorem10.p1.m4" class="ltx_Math">G</span> contains at most one vertex of degree <span id="Thmtheorem10.p1.m5" class="ltx_Math">k-2</span> and the rest vertices has degree <span id="Thmtheorem10.p1.m6" class="ltx_Math">k-1</span>, then for any <span id="Thmtheorem10.p1.m7" class="ltx_Math">f\in E(G)</span>, <span id="Thmtheorem10.p1.m8" class="ltx_Math">G-f</span> is also factor-critical.
+</span></p>
+</div>
+</div>
+<div id="S2.p11" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof.</span> Otherwise, suppose that the result does not hold. Then there exists <span id="S2.p11.m1" class="ltx_Math">f\in E(G)</span> such that <span id="S2.p11.m2" class="ltx_Math">G-f</span> is not factor-critical. Then by Lemma <a href="#Thmtheorem7" title="Lemma 7 (Gallai, [12]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>, there exists <span id="S2.p11.m3" class="ltx_Math">S\subseteq V(G)</span> such that <span id="S2.p11.m4" class="ltx_Math">o(G-f-S)\geq|S|+1</span>. Recall that <span id="S2.p11.m5" class="ltx_Math">\delta(G)\geq k-2</span> and <span id="S2.p11.m6" class="ltx_Math">G</span> contains at most one vertex of degree <span id="S2.p11.m7" class="ltx_Math">k-2</span>.</p>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 1.</span> <span id="S2.p12.m1" class="ltx_Math">G</span> is <span id="S2.p12.m2" class="ltx_Math">(k-2)</span>-edge-connected.</p>
+</div>
+<div id="S2.p13" class="ltx_para">
+<p class="ltx_p">Otherwise, suppose that there exists <span id="S2.p13.m1" class="ltx_Math">M\subseteq E(G)</span> such that <span id="S2.p13.m2" class="ltx_Math">|M|\leq k-3</span> and <span id="S2.p13.m3" class="ltx_Math">G-M</span> is not connected. Let <span id="S2.p13.m4" class="ltx_Math">F_{1}</span> and <span id="S2.p13.m5" class="ltx_Math">F_{2}</span> be two connected components of <span id="S2.p13.m6" class="ltx_Math">G-M</span> such that <span id="S2.p13.m7" class="ltx_Math">|V(F_{1})|\leq|V(F_{2})|</span>. Since <span id="S2.p13.m8" class="ltx_Math">\delta(G)\geq k-2</span>, then we have <span id="S2.p13.m9" class="ltx_Math">2\leq|V(F_{1})|\leq k-1</span>.
+So we have</p>
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex14.m1" class="ltx_Math">\displaystyle|M|</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex14.m2" class="ltx_Math">\displaystyle\geq e_{G}(V(F_{1}),V(G)-V(F_{1}))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex15.m1" class="ltx_Math">\displaystyle\geq|V(F_{1})|(k-|V(F_{1})|)-1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex16.m1" class="ltx_Math">\displaystyle\geq k-2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which contradicts the hypothesis that <span id="S2.p13.m10" class="ltx_Math">|M|\leq k-3</span>. This completes the proof of Claim 1.</p>
+</div>
+<div id="S2.p14" class="ltx_para">
+<p class="ltx_p">By Claim 1, we have <span id="S2.p14.m1" class="ltx_Math">q\geq 2.</span> Let <span id="S2.p14.m2" class="ltx_Math">C_{1},\ldots,C_{q}</span> denote these odd components of <span id="S2.p14.m3" class="ltx_Math">G-S-f</span> such that <span id="S2.p14.m4" class="ltx_Math">|V(C_{1})|\geq\cdots\geq|V(C_{q})|</span>.</p>
+</div>
+<div id="S2.p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 2.</span> <span id="S2.p15.m1" class="ltx_Math">|V(C_{1})|\geq k</span>.</p>
+</div>
+<div id="S2.p16" class="ltx_para">
+<p class="ltx_p">Otherwise, suppose <span id="S2.p16.m1" class="ltx_Math">|V(C_{1})|\leq k-1</span>. Then for <span id="S2.p16.m2" class="ltx_Math">1\leq i\leq q</span>, <span id="S2.p16.m3" class="ltx_Math">e_{G}(V(C_{i}),V(G)-V(C_{i}))\geq k-2</span> with equality if and only if the vertex of degree <span id="S2.p16.m4" class="ltx_Math">k-2</span> in <span id="S2.p16.m5" class="ltx_Math">G</span> belongs to <span id="S2.p16.m6" class="ltx_Math">C_{i}</span>. Thus</p>
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex17.m1" class="ltx_Math">\displaystyle(k-1)|S|</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex17.m2" class="ltx_Math">\displaystyle\geq\sum_{x\in S}d_{G}(x)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex18.m1" class="ltx_Math">\displaystyle\geq\sum_{i=1}^{q}e_{G}(S,V(C_{i}))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex19.m1" class="ltx_Math">\displaystyle\geq(k-1)(|s|+1)-3</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex20.m1" class="ltx_Math">\displaystyle&gt;(k-1)|S|\quad\mbox{(since $k\geq 5$)},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">a contradiction. This completes the proof of Claim 2.</p>
+</div>
+<div id="S2.p17" class="ltx_para">
+<p class="ltx_p">By Claim 2, we have <span id="S2.p17.m1" class="ltx_Math">|V(G)-V(C_{1})|\leq k-1</span>.</p>
+</div>
+<div id="S2.p18" class="ltx_para">
+<p class="ltx_p">Suppose that <span id="S2.p18.m1" class="ltx_Math">\sum_{i=3}^{q}|V(C_{i})|\geq 1</span>. For any <span id="S2.p18.m2" class="ltx_Math">x\in V(\cup_{i=2}^{q}C_{i})</span>, it follows that <span id="S2.p18.m3" class="ltx_Math">d_{G-f}(x)\leq k-3</span>. Recall that <span id="S2.p18.m4" class="ltx_Math">G</span> contains exactly one vertex of degree <span id="S2.p18.m5" class="ltx_Math">k-2</span>. This implies that <span id="S2.p18.m6" class="ltx_Math">\sum_{i=2}^{q}|V(C_{i})|\leq 2</span>, which further yields <span id="S2.p18.m7" class="ltx_Math">q=3</span> and <span id="S2.p18.m8" class="ltx_Math">|V(C_{2})|=1</span>.
+Then for <span id="S2.p18.m9" class="ltx_Math">x\in V(C_{2}\cup C_{3})</span>,</p>
+<table id="S2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex21.m1" class="ltx_Math">d_{G}(x)\leq|S|+1\leq 3,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which contradicts the fact that <span id="S2.p18.m10" class="ltx_Math">G</span> contains exactly one vertex of degree <span id="S2.p18.m11" class="ltx_Math">k-2</span>.</p>
+</div>
+<div id="S2.p19" class="ltx_para">
+<p class="ltx_p">We proceed by considering the case where <span id="S2.p19.m1" class="ltx_Math">\sum_{i=3}^{q}|V(C_{i})|=0</span>. This immediately implies that <span id="S2.p19.m2" class="ltx_Math">q=2</span> and <span id="S2.p19.m3" class="ltx_Math">|S|=1</span>.
+By Claim 1, <span id="S2.p19.m4" class="ltx_Math">G</span> is 2-connected. Hence <span id="S2.p19.m5" class="ltx_Math">f\in E_{G}(V(C_{1}),V(C_{2}))</span>.
+If <span id="S2.p19.m6" class="ltx_Math">|V(C_{2})|\geq 3</span>, then there exist two vertices, say <span id="S2.p19.m7" class="ltx_Math">x_{1},x_{2}\in V(C_{2})-V(f)</span> such that <span id="S2.p19.m8" class="ltx_Math">d_{G}(x_{i})\leq k-2</span>, which contradicts the fact that <span id="S2.p19.m9" class="ltx_Math">G</span> contains exactly one vertex of degree <span id="S2.p19.m10" class="ltx_Math">k-2</span>. We thus conclude that <span id="S2.p19.m11" class="ltx_Math">|V(C_{2})|=1</span>. Then for <span id="S2.p19.m12" class="ltx_Math">x\in V(C_{2})</span>,
+<span id="S2.p19.m13" class="ltx_Math">d_{G}(x)\leq 2</span>, which once again contradicts the condition that <span id="S2.p19.m14" class="ltx_Math">\delta(G)\geq 3</span>.
+This completes the proof.  <span id="S2.p19.m15" class="ltx_Math">\Box</span></p>
+</div>
+<div id="Thmtheorem11" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 11</span></span></h6>
+<div id="Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem11.p1.m1" class="ltx_Math">G</span> be a simple graph with <span id="Thmtheorem11.p1.m2" class="ltx_Math">|V(G)|=6</span> and degree sequence <span id="Thmtheorem11.p1.m3" class="ltx_Math">(3,3,3,3,2,2)</span>. Then <span id="Thmtheorem11.p1.m4" class="ltx_Math">G</span> has a Hamiltonian cycle.</span></p>
+</div>
+</div>
+<div id="S2.p20" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proof.</span> Let <span id="S2.p20.m1" class="ltx_Math">V(G)=\{w_{1},w_{2},w_{3},w_{4},u,v\}</span>, where <span id="S2.p20.m2" class="ltx_Math">d_{G}(u)=d_{G}(v)=2</span> and <span id="S2.p20.m3" class="ltx_Math">d_{G}(w_{i})=3</span> for <span id="S2.p20.m4" class="ltx_Math">i\in[4]</span>.
+Without loss of generality, assume that <span id="S2.p20.m5" class="ltx_Math">uw_{1},vw_{2}\in E(G)</span>.</p>
+</div>
+<div id="S2.p21" class="ltx_para">
+<p class="ltx_p">Firstly, we consider the case where <span id="S2.p21.m1" class="ltx_Math">uv\in E(G)</span>.
+The subgraph <span id="S2.p21.m2" class="ltx_Math">G_{1}=G-\{u,v\}</span> has a degree sequence of <span id="S2.p21.m3" class="ltx_Math">(3,3,2,2)</span>. Then <span id="S2.p21.m4" class="ltx_Math">G_{1}</span> has a path <span id="S2.p21.m5" class="ltx_Math">P</span> of length three that connects <span id="S2.p21.m6" class="ltx_Math">w_{1}</span> and <span id="S2.p21.m7" class="ltx_Math">w_{2}</span>. The edge-set <span id="S2.p21.m8" class="ltx_Math">(E(P)\cup\{uw_{1},vw_{2},uv\}</span> forms a Hamiltonian cycle of <span id="S2.p21.m9" class="ltx_Math">G</span>.</p>
+</div>
+<div id="S2.p22" class="ltx_para">
+<p class="ltx_p">Next, we consider the case where <span id="S2.p22.m1" class="ltx_Math">uv\notin E(G)</span>. If <span id="S2.p22.m2" class="ltx_Math">G-\{u,v\}</span> is a 4-cycle, denoted as <span id="S2.p22.m3" class="ltx_Math">w_{1}w_{2}w_{3}w_{4}</span>, then by symmetry, we may assume that either <span id="S2.p22.m4" class="ltx_Math">N_{G}(u)=\{w_{1},w_{3}\}</span> or <span id="S2.p22.m5" class="ltx_Math">N_{G}(u)=\{w_{1},w_{4}\}</span>. In either of these two cases, <span id="S2.p22.m6" class="ltx_Math">G</span> has a Hamiltonian cycle.
+Otherwise, <span id="S2.p22.m7" class="ltx_Math">G-\{u,v\}</span> is a not 4-cycle, which implies that <span id="S2.p22.m8" class="ltx_Math">N_{G}(u)\cap N_{G}(v)\neq\emptyset</span>. Note that <span id="S2.p22.m9" class="ltx_Math">N_{G}(u)\neq N_{G}(v)</span>. So, we can assume that <span id="S2.p22.m10" class="ltx_Math">w_{3}\in N_{G}(u)\cap N_{G}(v)</span>. Without loss of generality, suppose that <span id="S2.p22.m11" class="ltx_Math">N_{G}(u)=\{w_{1},w_{3}\}</span> and <span id="S2.p22.m12" class="ltx_Math">N_{G}(v)=\{w_{2},w_{3}\}</span>. It follows that the edge set <span id="S2.p22.m13" class="ltx_Math">E(G)-\{w_{4}w_{3},w_{1}w_{2}\}</span> induces a Hamiltonian cycle of <span id="S2.p22.m14" class="ltx_Math">G</span>.
+This completes the proof.  <span id="S2.p22.m15" class="ltx_Math">\Box</span></p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Proof of Theorem <a href="#Thmtheorem5" title="Theorem 5 ‣ 1 Introduction ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>
+</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">By (<a href="#S1.E1" title="(1) ‣ 1 Introduction ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), we have <span id="S3.p1.m1" class="ltx_Math">ar_{3}(n,\mathcal{F}_{k+1})\geq f(n,k)+2</span>. Therefore the lower bound is followed. Next we assume <span id="S3.p1.m2" class="ltx_Math">k\geq 3</span>. Let <span id="S3.p1.m3" class="ltx_Math">c(n,k):=f(n,k)+2</span>. </p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">For the upper bound, we prove it by contradiction. Suppose that the result does not hold. Then there exists an edge-coloring <span id="S3.p2.m1" class="ltx_Math">c:E(K^{3}_{n})\rightarrow[c(n,k)]</span> such that <span id="S3.p2.m2" class="ltx_Math">c</span> is surjective and the colored hypergraph denoted by <span id="S3.p2.m3" class="ltx_Math">\mathcal{G}</span> contains no rainbow <span id="S3.p2.m4" class="ltx_Math">\mathcal{F}_{k+1}</span>. By Lemma <a href="#Thmtheorem9" title="Lemma 9 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, we can denote a set of <span id="S3.p2.m5" class="ltx_Math">2k+6</span> disjoint good pairs in <span id="S3.p2.m6" class="ltx_Math">\mathcal{G}</span> by <span id="S3.p2.m7" class="ltx_Math">Q=\{\{u_{1},v_{1}\},\ldots,\{u_{2k+6},v_{2k+6}\}\}</span>, that is <span id="S3.p2.m8" class="ltx_Math">z_{c}(u_{i},v_{i})\leq 3k</span> for <span id="S3.p2.m9" class="ltx_Math">1\leq i\leq 2k+6</span>.
+Define a color set</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex22.m1" class="ltx_Math">C_{Q}=\cup_{p\in Q}\{c(T)\ |\ T\subseteq\mathcal{G},p\subseteq T\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and let <span id="S3.p2.m10" class="ltx_Math">q=|C_{Q}|</span>. Then by Lemma <a href="#Thmtheorem9" title="Lemma 9 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, we have the following inequality</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex23.m1" class="ltx_Math">q\leq 6k^{2}+18k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <span id="S3.p2.m11" class="ltx_Math">G</span> be a rainbow subgraph of <span id="S3.p2.m12" class="ltx_Math">\mathcal{G}</span> with <span id="S3.p2.m13" class="ltx_Math">c(n,k)-q</span> edges and vertex set <span id="S3.p2.m14" class="ltx_Math">[n]</span> such that</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex24.m1" class="ltx_Math">\{c(e)\ |\ e\in E(G)\}\cap C_{Q}=\emptyset.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 1.</span> <span id="S3.p3.m1" class="ltx_Math">G</span> is <span id="S3.p3.m2" class="ltx_Math">\mathcal{F}_{k}</span>-free.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Otherwise, suppose that <span id="S3.p4.m1" class="ltx_Math">G</span> contains a copy of <span id="S3.p4.m2" class="ltx_Math">\mathcal{F}_{k}</span> denoted by <span id="S3.p4.m3" class="ltx_Math">\mathcal{F}</span> with center <span id="S3.p4.m4" class="ltx_Math">u</span>. Since <span id="S3.p4.m5" class="ltx_Math">|Q|\geq 2k+6</span> and <span id="S3.p4.m6" class="ltx_Math">|V(\mathcal{F})|=2k+1</span>, there exists <span id="S3.p4.m7" class="ltx_Math">\{u_{i},v_{i}\}\in Q</span> such that <span id="S3.p4.m8" class="ltx_Math">\{u_{i},v_{i}\}\cap V(\mathcal{F})=\emptyset</span>. By the definition of <span id="S3.p4.m9" class="ltx_Math">G</span>, <span id="S3.p4.m10" class="ltx_Math">E(\mathcal{F})\cup\{u,u_{i},v_{i}\}</span> induces a rainbow copy of <span id="S3.p4.m11" class="ltx_Math">\mathcal{F}_{k+1}</span>, contradicting the hypothesis. This completes the proof of Claim 1.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p5.m1" class="ltx_Math">w:G\times P\rightarrow R</span> be a weighted function defined as in Section 2. And we denote <span id="S3.p5.m2" class="ltx_Math">W_{v}=\sum_{p\in N(v)}w(v\cup p,p)</span>. Next we discuss two cases.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1. <span id="S3.p6.m1" class="ltx_Math">k</span></span> is odd.</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Then we have</p>
+<table id="S3.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E2.m1" class="ltx_Math">e(G)=c(n,k)-q\geq(n-2k)k(k-1)+2{k\choose 3}+2-6k^{2}-18k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">By Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, we have <span id="S3.p7.m1" class="ltx_Math">W_{v}\leq k(k-1)</span> for all <span id="S3.p7.m2" class="ltx_Math">v\in V(G)</span>. Let <span id="S3.p7.m3" class="ltx_Math">W:=\{v\in V(G)\ |\ W_{v}=k(k-1)\}</span>. Then we have the following claim.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 2. <span id="S3.p8.m1" class="ltx_Math">W\neq\emptyset</span></span>.</p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">Suppose to the contrary that <span id="S3.p9.m1" class="ltx_Math">W_{v}&lt;k(k-1)</span> for all <span id="S3.p9.m2" class="ltx_Math">v\in V(G)</span>. By the definition of weight function, we have <span id="S3.p9.m3" class="ltx_Math">W_{v}\leq k(k-1)-2/3</span> for all <span id="S3.p9.m4" class="ltx_Math">v\in V(G)</span>. So</p>
+<table id="S3.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E3.m1" class="ltx_Math">\displaystyle e(G)=\sum_{v\in V(G)}W_{v}\leq nk(k-1)-2n/3.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Combining (<a href="#S3.E2" title="(2) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and (<a href="#S3.E3" title="(3) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>), we may infer that</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex25.m1" class="ltx_Math">n\leq\frac{5}{2}k^{3}+\frac{15}{2}k^{2}+26k-3,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a contradiction. This completes the proof of Claim 2.</p>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">By Claim 2, we may choose <span id="S3.p10.m1" class="ltx_Math">x\in W</span> such that <span id="S3.p10.m2" class="ltx_Math">W_{x}=k(k-1)</span>. Then by Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, <span id="S3.p10.m3" class="ltx_Math">N_{G}(x)</span> is the disjoint union of two complete 2-graphs on <span id="S3.p10.m4" class="ltx_Math">k</span> vertices and every edge of <span id="S3.p10.m5" class="ltx_Math">N_{G}(x)</span> is in <span id="S3.p10.m6" class="ltx_Math">A</span>-type. Denote the two complete subgraphs by <span id="S3.p10.m7" class="ltx_Math">R_{1}</span> and <span id="S3.p10.m8" class="ltx_Math">R_{2}</span>.
+</p>
+</div>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 3. </span> <span id="S3.p11.m1" class="ltx_Math">|\{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}|\leq 2{k\choose 2}+1</span>.</p>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">Otherwise, suppose that <span id="S3.p12.m1" class="ltx_Math">|\{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}|\geq 2{k\choose 2}+2</span>. Then one can see that</p>
+<table id="S3.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E4.m1" class="ltx_Math">\displaystyle|\{c(p\cup\{x\})\ |\ p\notin E(R_{1}\cup R_{2})\mbox{ and }p\in{[%
+n]-x\choose 2}\}|\geq 2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We choose <span id="S3.p12.m2" class="ltx_Math">T_{1},T_{2}\in{[n]-\{x\}\choose 2}-({V(R_{1})\choose 2}\cup{V(R_{2})\choose 2})</span> such that <span id="S3.p12.m3" class="ltx_Math">c(T_{1}\cup\{x\})\neq c(T_{2}\cup\{x\})</span>, and for <span id="S3.p12.m4" class="ltx_Math">i\in[2]</span>, <span id="S3.p12.m5" class="ltx_Math">c(T_{i}\cup\{x\})\notin\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>. For <span id="S3.p12.m6" class="ltx_Math">i\in[2]</span>, <span id="S3.p12.m7" class="ltx_Math">F-V(T_{i})</span> has a matching <span id="S3.p12.m8" class="ltx_Math">M_{i}</span> of size <span id="S3.p12.m9" class="ltx_Math">k-1</span>. Note that</p>
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex26.m1" class="ltx_Math">|V(M_{1}\cup M_{2})\cup T_{1}\cup T_{2}|\leq 2k+4.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So by Lemma <a href="#Thmtheorem9" title="Lemma 9 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, we may choose <span id="S3.p12.m10" class="ltx_Math">T_{0}\in Q</span> such that <span id="S3.p12.m11" class="ltx_Math">x\notin T_{0}</span> and <span id="S3.p12.m12" class="ltx_Math">T_{0}\cap V(M_{1}\cup M_{2}\cup\{T_{1},T_{2}\})=\emptyset.</span> It follows that either <span id="S3.p12.m13" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{1}\cup\{T_{1},T_{0}\}\}</span> or <span id="S3.p12.m14" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{2}\cup\{T_{2},T_{0}\}\}</span> induces a rainbow copy of <span id="S3.p12.m15" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction.
+This completes the proof of Claim 3.</p>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p13.m1" class="ltx_Math">\mathcal{G}^{\prime}</span> be a rainbow edge-colored subgraph of <span id="S3.p13.m2" class="ltx_Math">\mathcal{G}-\{x\}</span> obtained by deleting the triples colored by the colors from <span id="S3.p13.m3" class="ltx_Math">\{c(e)\ |\ x\in e\mbox{ and }e\in{[n]\choose 3}\}</span>.
+By Claim 3, <span id="S3.p13.m4" class="ltx_Math">e(\mathcal{G}^{\prime})\geq f(n-1,k)+1</span>. Thus <span id="S3.p13.m5" class="ltx_Math">\mathcal{G}^{\prime}</span> has a rainbow copy of <span id="S3.p13.m6" class="ltx_Math">\mathcal{F}_{k}</span> with core <span id="S3.p13.m7" class="ltx_Math">y</span>. Choosing <span id="S3.p13.m8" class="ltx_Math">y^{\prime}\in[n]-V(\mathcal{F}_{k})-\{x\}</span>, in view of the preceding analysis, we know that <span id="S3.p13.m9" class="ltx_Math">c(\{x,y,y^{\prime}\})\notin\{c(e)\ |\ e\in\mathcal{F}_{k}\}</span>. It follows that <span id="S3.p13.m10" class="ltx_Math">\{x,y,y^{\prime}\}\cup\mathcal{F}_{k}</span> a rainbow copy of <span id="S3.p13.m11" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. This completes the proof.</p>
+</div>
+<div id="S3.p14" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2. <span id="S3.p14.m1" class="ltx_Math">k\geq 4</span></span> is even.</p>
+</div>
+<div id="S3.p15" class="ltx_para">
+<p class="ltx_p">Then we have</p>
+<table id="S3.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E5.m1" class="ltx_Math">\displaystyle e(G)\geq c(n,k)-q\geq\frac{1}{2}nk(2k-3)-\frac{1}{2}(2k^{3}-9k+6%
+)-6k^{2}-18k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.p16" class="ltx_para">
+<p class="ltx_p">By Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, <span id="S3.p16.m1" class="ltx_Math">W_{v}\leq k(k-3/2)</span> for all <span id="S3.p16.m2" class="ltx_Math">v\in V(G)</span>. By Theorem <a href="#Thmtheorem4" title="Theorem 4 (Tang, Li and Yan [23]) ‣ 1 Introduction ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, we may assume that <span id="S3.p16.m3" class="ltx_Math">k\geq 4</span>.</p>
+</div>
+<div id="S3.p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 4. </span>There exists <span id="S3.p17.m1" class="ltx_Math">v\in V(G)</span> such that
+<span id="S3.p17.m2" class="ltx_Math">W_{v}=k(k-3/2)</span>.</p>
+</div>
+<div id="S3.p18" class="ltx_para">
+<p class="ltx_p">Otherwise, we may assume that <span id="S3.p18.m1" class="ltx_Math">W_{v}\leq k(k-3/2)-1/2</span> for all <span id="S3.p18.m2" class="ltx_Math">v\in V(G)</span>. Thus we get</p>
+<table id="S3.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E6.m1" class="ltx_Math">\displaystyle e(G)\leq nk(k-3/2)-n/2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Combining (<a href="#S3.E5" title="(5) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) and (<a href="#S3.E6" title="(6) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) , we may infer that <span id="S3.p18.m3" class="ltx_Math">n\leq 2k^{3}+12k^{2}+27k+6</span>, a contradiction.
+This completes the proof of Claim 4.</p>
+</div>
+<div id="S3.p19" class="ltx_para">
+<p class="ltx_p">We choose <span id="S3.p19.m1" class="ltx_Math">x\in V(G)</span> with <span id="S3.p19.m2" class="ltx_Math">W_{x}=k(k-3/2)</span>.
+Suppose that following inequality holds</p>
+<table id="S3.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E7.m1" class="ltx_Math">\displaystyle|\{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}|\leq k(k%
+-\frac{3}{2})+1,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let <span id="S3.p19.m3" class="ltx_Math">G^{\prime}</span> be a rainbow subgraph of <span id="S3.p19.m4" class="ltx_Math">\mathcal{G}</span> avoiding the colors appearing in <span id="S3.p19.m5" class="ltx_Math">\{c(e)\ |\ x\in e\mbox{ and }e\subseteq{[n]\choose 3}\}</span>.
+By (<a href="#S3.E7" title="(7) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>), we have <span id="S3.p19.m6" class="ltx_Math">e(G^{\prime})&gt;f(n-1,k)</span>. Hence <span id="S3.p19.m7" class="ltx_Math">G^{\prime}</span> contains a copy of <span id="S3.p19.m8" class="ltx_Math">\mathcal{F}_{k}</span> denoted by <span id="S3.p19.m9" class="ltx_Math">\mathcal{M}</span>. Let <span id="S3.p19.m10" class="ltx_Math">y</span> be the core of <span id="S3.p19.m11" class="ltx_Math">\mathcal{M}</span>. We select a vertex
+<span id="S3.p19.m12" class="ltx_Math">x^{\prime}\in[n]-V(\mathcal{M})-\{x\}</span>. Now <span id="S3.p19.m13" class="ltx_Math">E(\mathcal{M})\cup\{\{x^{\prime},x,y\}\}</span> induces a rainbow copy of <span id="S3.p19.m14" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. This contradiction concludes our proof. So next it is sufficient for us to show that (<a href="#S3.E7" title="(7) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) holds.</p>
+</div>
+<div id="S3.p20" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p20.m1" class="ltx_Math">F:=N_{G}(x)</span> denote the 2-graph with edge set <span id="S3.p20.m2" class="ltx_Math">N_{G}(x)</span> and vertex set <span id="S3.p20.m3" class="ltx_Math">V(N_{G}(x))</span>.
+By Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, <span id="S3.p20.m4" class="ltx_Math">F</span> consists of two vertex-disjoint factor-critical graphs or satisfies (a), (b), and (c).</p>
+</div>
+<div id="S3.p21" class="ltx_para">
+<p class="ltx_p">We first prove the following claim, which provides a method for constructing a rainbow <span id="S3.p21.m1" class="ltx_Math">\mathcal{F}_{k+1}</span> in <span id="S3.p21.m2" class="ltx_Math">\mathcal{G}</span> as described below.</p>
+</div>
+<div id="S3.p22" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 5. </span>Let <span id="S3.p22.m1" class="ltx_Math">x_{0}\in V(F)</span> with <span id="S3.p22.m2" class="ltx_Math">d_{F}(x_{0})=k-1</span>, and let <span id="S3.p22.m3" class="ltx_Math">\{y_{0},w\}\subseteq[n]-(N_{F}(x_{0})\cup\{x,x_{0}\})</span> be a 2-element set. If <span id="S3.p22.m4" class="ltx_Math">c(\{x_{0},w,x\})\neq c(\{x_{0},y_{0},x\})</span>, then <span id="S3.p22.m5" class="ltx_Math">\mathcal{G}</span> has a rainbow <span id="S3.p22.m6" class="ltx_Math">F_{k+1}</span> with core <span id="S3.p22.m7" class="ltx_Math">x_{0}</span>.</p>
+</div>
+<div id="S3.p23" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p23.m1" class="ltx_Math">N_{F}(x_{0})=\{y_{2},\ldots,y_{k}\}</span>. Our next step is to construct a rainbow copy of <span id="S3.p23.m2" class="ltx_Math">\mathcal{F}_{k+1}</span> with the core <span id="S3.p23.m3" class="ltx_Math">x_{0}</span>. According to Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, for <span id="S3.p23.m4" class="ltx_Math">2\leq i\leq k</span>, <span id="S3.p23.m5" class="ltx_Math">x_{0}y_{i}</span> is <span id="S3.p23.m6" class="ltx_Math">A</span>-type. Consequently, we know that
+<span id="S3.p23.m7" class="ltx_Math">d_{G}(\{x_{0},y_{i}\})\geq 2k-1</span>. For <span id="S3.p23.m8" class="ltx_Math">2\leq i\leq k</span>, we can pick a set <span id="S3.p23.m9" class="ltx_Math">\{y_{i,1},...,y_{i,2k-1}\}\subseteq N_{G}(\{x_{0},y_{i}\})</span>. Let <span id="S3.p23.m10" class="ltx_Math">T_{1}</span> be a 2-element subset chosen from the set <span id="S3.p23.m11" class="ltx_Math">[n]-V(F)-\{x,w,y_{0}\}-(\bigcup_{i=2}^{k}\bigcup_{j=1}^{2k-1}\{y_{i,j}\})</span>.
+Since <span id="S3.p23.m12" class="ltx_Math">c(\{x_{0},w,x\})\neq c(\{x_{0},y_{0},x\})</span>, we have either <span id="S3.p23.m13" class="ltx_Math">c(T_{1}\cup\{x_{0}\})\neq c(\{x_{0},y_{0},x\})</span> or <span id="S3.p23.m14" class="ltx_Math">c(T_{1}\cup\{x_{0}\})\neq c(\{x_{0},w,x\})</span>. Without loss of generality, assume that <span id="S3.p23.m15" class="ltx_Math">c(T_{1}\cup\{x_{0}\})\neq c(\{x_{0},y_{0},x\})</span>. Since <span id="S3.p23.m16" class="ltx_Math">G</span> is a rainbow subgraph and <span id="S3.p23.m17" class="ltx_Math">k\geq 4</span>, we can re-order the vertices <span id="S3.p23.m18" class="ltx_Math">y_{2},...,y_{k}</span> in such a way that</p>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex27.m1" class="ltx_Math">c(T_{1}\cup\{x_{0}\})\notin\{c(\{x_{0},y_{k-1},y_{k-1,j}\})\ |\ j\in[2k-1]\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex28.m1" class="ltx_Math">\{c(\{x_{0},y_{0},x\}),c(T_{1}\cup\{x_{0}\})\}\cap\{c(\{x_{0},y_{k},y_{k,j}\})%
+\ |\ j\in[2k-1]\}=\emptyset.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p24" class="ltx_para">
+<p class="ltx_p">Next, we aim to extend the sets <span id="S3.p24.m1" class="ltx_Math">T_{1}\cup\{x_{0}\}</span>, <span id="S3.p24.m2" class="ltx_Math">\{x_{0},y_{0},x\}</span> to form a rainbow copy of <span id="S3.p24.m3" class="ltx_Math">\mathcal{F}_{k+1}</span> with the core <span id="S3.p24.m4" class="ltx_Math">x_{0}</span>. Since <span id="S3.p24.m5" class="ltx_Math">k\geq 4</span>, we can find a vertex <span id="S3.p24.m6" class="ltx_Math">y_{2,1}^{\prime}\in N_{G}(\{x_{0},y_{2}\})-\{x,y_{3},\ldots,y_{k}\}</span>, such that <span id="S3.p24.m7" class="ltx_Math">\{\{T_{1}\cup\{x_{0}\},\{x_{0},y_{0},x\},\{x_{0},y_{2,1}^{\prime},y_{2}\}\}</span> induces a rainbow copy <span id="S3.p24.m8" class="ltx_Math">\mathcal{F}_{3}</span>. Now, assume that for some <span id="S3.p24.m9" class="ltx_Math">i&lt;k-1</span>, we have already constructed a collection <span id="S3.p24.m10" class="ltx_Math">\{\{T_{1}\cup\{x_{0}\},\{x_{0},y_{0},x\},\{x_{0},y_{2,1}^{\prime},y_{2}\},%
+\ldots,\{x_{0},y_{i,1}^{\prime},y_{i}\}\}</span> that induce a rainbow copy of <span id="S3.p24.m11" class="ltx_Math">\mathcal{F}_{i+1}</span>, where <span id="S3.p24.m12" class="ltx_Math">\{y_{2,1}^{\prime},\ldots,y_{i,1}^{\prime}\}\cap N_{F}(x_{0})=\emptyset</span>. Define <span id="S3.p24.m13" class="ltx_Math">W_{i}:=\{\cup_{j=2}^{i}\{y_{j},y_{j,1}^{\prime}\}\}\cup\{y_{0},x_{0},x\}\cup V%
+(T_{1})</span>. Let’s consider the step for <span id="S3.p24.m14" class="ltx_Math">i+1</span>. Since <span id="S3.p24.m15" class="ltx_Math">d_{G}(\{y_{i+1},x_{0}\})\geq 2k-1</span> and <span id="S3.p24.m16" class="ltx_Math">T_{1}\cap N_{G}(\{y_{i+1},x_{0}\})=\emptyset</span>, there exists <span id="S3.p24.m17" class="ltx_Math">y_{i+1,1}^{\prime}\in N_{G}(\{y_{i+1},x_{0}\})-(W_{i}\cup N_{F}(x_{0})</span>
+such that <span id="S3.p24.m18" class="ltx_Math">\{\{T_{1}\cup\{x_{0}\},\{x_{0},y_{0},x\},\{x_{0},y_{2,1}^{\prime},y_{2}\},%
+\ldots,\{x_{0},y_{i+1,1}^{\prime},y_{i+1}\}\}</span> induces a rainbow copy of <span id="S3.p24.m19" class="ltx_Math">\mathcal{F}_{i+2}</span>. Continuing the process until <span id="S3.p24.m20" class="ltx_Math">i=k-1</span>, we can obtain a rainbow copy of <span id="S3.p24.m21" class="ltx_Math">\mathcal{F}_{k}</span> denoted by <span id="S3.p24.m22" class="ltx_Math">\mathcal{M}</span>. Recall that <span id="S3.p24.m23" class="ltx_Math">d_{G}(\{y_{k},x_{0}\})\geq 2k-1</span> and <span id="S3.p24.m24" class="ltx_Math">T_{1}\cap N_{G}(\{y_{k},x_{0}\})=\emptyset</span>. As a result, there exists a vertex <span id="S3.p24.m25" class="ltx_Math">y_{k,1}^{\prime}</span> in the set <span id="S3.p24.m26" class="ltx_Math">N_{G}(\{y_{k},x_{0}\})-W_{k-1}</span>. Moreover, by the choice of <span id="S3.p24.m27" class="ltx_Math">y_{k}</span>,
+<span id="S3.p24.m28" class="ltx_Math">c(\{x_{0},y_{k},y_{k,1}^{\prime}\})\notin\{c(\{x_{0},y_{0},x\}),c(T_{1}\cup\{x%
+_{0}\})\}</span>. Hence <span id="S3.p24.m29" class="ltx_Math">E(\mathcal{M})\cup\{x_{0},y_{k},y_{k,1}^{\prime}\}</span> induces a rainbow copy of <span id="S3.p24.m30" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction.
+This completes the proof of Claim 5.</p>
+</div>
+<div id="S3.p25" class="ltx_para">
+<p class="ltx_p">Next by Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, we proceed by discussing two subcases.</p>
+</div>
+<div id="S3.p26" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Subcase 2.1. <span id="S3.p26.m1" class="ltx_Math">F=R_{1}\cup R_{2}</span></span>, where <span id="S3.p26.m2" class="ltx_Math">R_{1}\cong K_{k-1}</span> and <span id="S3.p26.m3" class="ltx_Math">R_{2}</span> is a factor-critical graph of order <span id="S3.p26.m4" class="ltx_Math">k+1</span> with degree sequence <span id="S3.p26.m5" class="ltx_Math">(k-1,\ldots,k-1,k-2)</span>.</p>
+</div>
+<div id="S3.p27" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 6. </span> <span id="S3.p27.m1" class="ltx_Math">\{c(g\cup\{x\})\ |\ g\in{[n]-\{x\}-V(R_{1}\cup R_{2})\choose 2}\}</span> contains exactly one color denoted by <span id="S3.p27.m2" class="ltx_Math">c_{0}</span> which belongs to the color set <span id="S3.p27.m3" class="ltx_Math">C_{Q}</span>.</p>
+</div>
+<div id="S3.p28" class="ltx_para">
+<p class="ltx_p">We will use a proof by contradiction. Firstly, suppose that there exists <span id="S3.p28.m1" class="ltx_Math">g\in{[n]-\{x\}-V(R_{1}\cup R_{2})\choose 2}</span> such that <span id="S3.p28.m2" class="ltx_Math">c(g\cup\{x\})\in\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>. Write <span id="S3.p28.m3" class="ltx_Math">c(g\cup\{x\})=c(g^{\prime}\cup\{x\})</span>, where <span id="S3.p28.m4" class="ltx_Math">g^{\prime}\in E(R_{1}\cup R_{2})</span>. Since <span id="S3.p28.m5" class="ltx_Math">R_{1}</span> and <span id="S3.p28.m6" class="ltx_Math">R_{2}</span> are factor-critical graphs, <span id="S3.p28.m7" class="ltx_Math">F-g^{\prime}</span> has a matching <span id="S3.p28.m8" class="ltx_Math">M_{1}</span> of size <span id="S3.p28.m9" class="ltx_Math">k-1</span>. Let <span id="S3.p28.m10" class="ltx_Math">h\in Q</span> such that <span id="S3.p28.m11" class="ltx_Math">x\notin h</span> and <span id="S3.p28.m12" class="ltx_Math">h\cap V(M_{1}\cup\{g\})=\emptyset.</span> It follows that <span id="S3.p28.m13" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{1}\cup\{g,h\}\}</span> induces a rainbow copy of <span id="S3.p28.m14" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. Subsequently, suppose that there are two distinct edges <span id="S3.p28.m15" class="ltx_Math">g_{1},g_{2}\in{[n]-\{x\}-V(R_{1})-V(R_{2})\choose 2}</span> such that <span id="S3.p28.m16" class="ltx_Math">c(g_{1}\cup\{x\})\neq c(g_{2}\cup\{x\})</span> and neither of them belongs to <span id="S3.p28.m17" class="ltx_Math">\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>.
+Let <span id="S3.p28.m18" class="ltx_Math">M_{2}</span> be a matching of size <span id="S3.p28.m19" class="ltx_Math">k-1</span> in <span id="S3.p28.m20" class="ltx_Math">R_{1}\cup R_{2}</span>. Since <span id="S3.p28.m21" class="ltx_Math">|Q|\geq 2k+6</span>, we may choose <span id="S3.p28.m22" class="ltx_Math">h\in Q</span> such that <span id="S3.p28.m23" class="ltx_Math">x\notin h</span> and <span id="S3.p28.m24" class="ltx_Math">h\cap V(M_{2}\cup\{g_{1},g_{2}\})=\emptyset.</span> It follows that either <span id="S3.p28.m25" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{2}\cup\{g_{1},h\}\}</span> or <span id="S3.p28.m26" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{2}\cup\{g_{2},h\}\}</span> induces a rainbow copy of <span id="S3.p28.m27" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. This completes the proof of Claim 6.</p>
+</div>
+<div id="S3.p29" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 7. </span>For any <span id="S3.p29.m1" class="ltx_Math">f\in([n]-V(R_{1})-\{x\})\times V(R_{1})</span>, we have <span id="S3.p29.m2" class="ltx_Math">c(f\cup\{x\})\in\{c_{0}\}\cup\{c(p\cup\{x\})\ |\ p\in E(F)\}</span>; and for any <span id="S3.p29.m3" class="ltx_Math">g\in([n]-V(R_{1}\cup R_{2})-\{x\})\times V(R_{2})</span>, we have <span id="S3.p29.m4" class="ltx_Math">c(g\cup\{x\})=c_{0}</span>.
+</p>
+</div>
+<div id="S3.p30" class="ltx_para">
+<p class="ltx_p">We will use a proof by contradiction.
+Firstly, suppose that there exists <span id="S3.p30.m1" class="ltx_Math">f_{1}\in([n]-V(R_{1})-\{x\})\times V(R_{1})</span> such that <span id="S3.p30.m2" class="ltx_Math">c(f_{1}\cup\{x\})\notin\{c_{0}\}\cup\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>. Since <span id="S3.p30.m3" class="ltx_Math">R_{1}</span> and <span id="S3.p30.m4" class="ltx_Math">R_{2}</span> are factor-critical graphs, <span id="S3.p30.m5" class="ltx_Math">F-V(f_{1})</span> contains a matching <span id="S3.p30.m6" class="ltx_Math">M_{3}</span> of size <span id="S3.p30.m7" class="ltx_Math">k-1</span>. Then we can select <span id="S3.p30.m8" class="ltx_Math">h\in{[n]-V(R_{1}\cup R_{2})-\{x\}\choose 2}</span> such that <span id="S3.p30.m9" class="ltx_Math">h\cap V(f_{1})=\emptyset</span>. By Claim 6, we have <span id="S3.p30.m10" class="ltx_Math">c(h\cup\{x\})=c_{0}</span>. Thus <span id="S3.p30.m11" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{3}\cup\{f_{1},h\}\}</span> induces a rainbow copy of <span id="S3.p30.m12" class="ltx_Math">\mathcal{F}_{k+1}</span>, which is a contradiction.
+Next consider that there exists <span id="S3.p30.m13" class="ltx_Math">g_{1}\in([n]-V(R_{1}\cup R_{2})-\{x\})\times V(R_{2})</span> such that <span id="S3.p30.m14" class="ltx_Math">c(g_{1}\cup\{x\})\neq c_{0}</span>. If <span id="S3.p30.m15" class="ltx_Math">c(g_{1}\cup\{x\})\notin\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>, let <span id="S3.p30.m16" class="ltx_Math">M_{4}</span> be a matching of size <span id="S3.p30.m17" class="ltx_Math">k-1</span> of <span id="S3.p30.m18" class="ltx_Math">F-V(g_{1})</span> and let <span id="S3.p30.m19" class="ltx_Math">h^{\prime}</span> be a 2-subset of <span id="S3.p30.m20" class="ltx_Math">[n]-(g_{1}\cup V(F)\cup\{x\})\cup V(M)</span>, then <span id="S3.p30.m21" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{4}\cup\{g_{1},h^{\prime}\}\}</span> induces a rainbow copy of <span id="S3.p30.m22" class="ltx_Math">\mathcal{F}_{k+1}</span>
+a contradiction again. So we may assume that <span id="S3.p30.m23" class="ltx_Math">c(g_{1}\cup\{x\})\in\{c(p\cup\{x\})\ |\ p\in E(R_{1}\cup R_{2})\}</span>. Select an edge
+<span id="S3.p30.m24" class="ltx_Math">g_{2}\in E(R_{1}\cup R_{2})</span> such that <span id="S3.p30.m25" class="ltx_Math">c(g_{2}\cup\{x\})=c(g_{1}\cup\{x\})</span>. Then, pick an element <span id="S3.p30.m26" class="ltx_Math">g_{0}\in{[n]-V(F)-V(g_{1}\cup g_{2})-\{x\})\choose 2}</span>. By Claim 6, we have <span id="S3.p30.m27" class="ltx_Math">c(g_{0}\cup\{x\})=c_{0}</span>.
+If <span id="S3.p30.m28" class="ltx_Math">F-V(g_{1})-g_{2}</span> has a matching <span id="S3.p30.m29" class="ltx_Math">M</span> of size <span id="S3.p30.m30" class="ltx_Math">k-1</span>, then
+<span id="S3.p30.m31" class="ltx_Math">\{e\cup\{x\}\ |\ e\in M\cup\{g_{0},g_{1}\}\}</span> induces a rainbow copy of <span id="S3.p30.m32" class="ltx_Math">\mathcal{F}_{k+1}</span>, which is a contradiction.
+Consequently, we can assume that</p>
+<table id="S3.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E8.m1" class="ltx_Math">\displaystyle\nu(F-V(g_{1})-g_{2})&lt;k-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If <span id="S3.p30.m33" class="ltx_Math">k\geq 6</span>, by Lemma <a href="#Thmtheorem10" title="Lemma 10 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a>, <span id="S3.p30.m34" class="ltx_Math">\nu(F-V(g_{1})-g_{2})=k-1</span>, which contradicts inequality (<a href="#S3.E8" title="(8) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>). So we can conclude <span id="S3.p30.m35" class="ltx_Math">k=4</span>.
+Write <span id="S3.p30.m36" class="ltx_Math">V(R_{2}):=\{y_{0},y_{1},\ldots,y_{4}\}</span> such that <span id="S3.p30.m37" class="ltx_Math">d_{R_{2}}(y_{0})=2</span>, and <span id="S3.p30.m38" class="ltx_Math">y_{0}y_{1},y_{0}y_{4}\in E(R_{2})</span>. If <span id="S3.p30.m39" class="ltx_Math">g_{1}\cap\{y_{1},y_{4}\}=\emptyset</span> or <span id="S3.p30.m40" class="ltx_Math">g_{1}\cap g_{2}\neq\emptyset</span>, then <span id="S3.p30.m41" class="ltx_Math">F-V(g_{1})-g_{2}</span> has a matching of size <span id="S3.p30.m42" class="ltx_Math">3</span>, which again contradicts inequality (<a href="#S3.E8" title="(8) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>). Moreover, by symmetry, we may assume that <span id="S3.p30.m43" class="ltx_Math">y_{1}\in g_{1}\cap V(R_{2})</span> and <span id="S3.p30.m44" class="ltx_Math">g_{1}\cap g_{2}=\emptyset</span>.
+Recall that for every edge <span id="S3.p30.m45" class="ltx_Math">e\in E(R_{2})</span>, <span id="S3.p30.m46" class="ltx_Math">e</span> is type <span id="S3.p30.m47" class="ltx_Math">A</span> in <span id="S3.p30.m48" class="ltx_Math">G</span>, which means <span id="S3.p30.m49" class="ltx_Math">d_{G}(\{y_{1},y\})\geq 7</span> for <span id="S3.p30.m50" class="ltx_Math">y\in\{y_{0},y_{2},y_{3}\}</span>. Note that <span id="S3.p30.m51" class="ltx_Math">\{y_{2},y_{3},y_{0}\}\cap(g_{1}\cup\{x\})=\emptyset</span>. Let <span id="S3.p30.m52" class="ltx_Math">w\in[n]-V(F)-\{x\}</span>. By Claim 7, we have <span id="S3.p30.m53" class="ltx_Math">c(\{x,w,y_{1}\})=c_{0}\neq c(g_{1}\cup\{x\})</span>. With the same discussion as Claim 6,
+<span id="S3.p30.m54" class="ltx_Math">\{x\}\cup g_{1}</span> can be extended into a rainbow copy with core <span id="S3.p30.m55" class="ltx_Math">y_{1}</span> denoted by <span id="S3.p30.m56" class="ltx_Math">\mathcal{M}</span> of <span id="S3.p30.m57" class="ltx_Math">\mathcal{F}_{4}</span>, where <span id="S3.p30.m58" class="ltx_Math">\{c(e)\ |\ e\in E(F_{4})\}\subseteq\{c(e)\ |\ e\in E(\mathcal{M})\}</span>. By Lemma <a href="#Thmtheorem9" title="Lemma 9 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, we may choose <span id="S3.p30.m59" class="ltx_Math">h\in Q</span> such that <span id="S3.p30.m60" class="ltx_Math">h\cap V(\mathcal{M})=\emptyset</span>. Then <span id="S3.p30.m61" class="ltx_Math">\{h\cup\{y_{1}\}\}\cup E(\mathcal{M})</span> induces a rainbow copy of <span id="S3.p30.m62" class="ltx_Math">\mathcal{F}_{5}</span> in <span id="S3.p30.m63" class="ltx_Math">\mathcal{G}</span>, a contradiction.
+This completes the proof of Claim 7. </p>
+</div>
+<div id="S3.p31" class="ltx_para">
+<p class="ltx_p">By Claims 6 and 7, it is sufficient for us to show that
+for any <span id="S3.p31.m1" class="ltx_Math">l\in{V(R_{2})\choose 2}\setminus E(R_{2})</span>, <span id="S3.p31.m2" class="ltx_Math">c(l\cup\{x\})=c_{0}</span>.
+Suppose to the contrary that there exists <span id="S3.p31.m3" class="ltx_Math">l_{0}=\{x_{0},y_{0}\}\in{V(R_{2})\choose 2}\setminus E(R_{2})</span> such that <span id="S3.p31.m4" class="ltx_Math">c(\{x_{0},y_{0},x\})\neq c_{0}</span>. Note that <span id="S3.p31.m5" class="ltx_Math">R_{2}</span> is a factor-critical graph of order <span id="S3.p31.m6" class="ltx_Math">k+1</span> with degree sequence <span id="S3.p31.m7" class="ltx_Math">(k-1,\ldots,k-1,k-2)</span>. Without loss of generality, suppose <span id="S3.p31.m8" class="ltx_Math">d_{R_{2}}(x_{0})=k-1.</span> By Claim 7, for <span id="S3.p31.m9" class="ltx_Math">w\in[n]-V(F)-\{x\}</span>, <span id="S3.p31.m10" class="ltx_Math">c(\{x_{0},w,x\})=c_{0}\neq c(\{x_{0},y_{0},x\})</span>. By Claim 5, we can find a rainbow copy of <span id="S3.p31.m11" class="ltx_Math">\mathcal{F}_{k+1}</span> with the core <span id="S3.p31.m12" class="ltx_Math">x_{0}</span>, which contradicts the hypothesis.
+Thus we can derive that the inequality (<a href="#S3.E7" title="(7) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) holds.</p>
+</div>
+<div id="S3.p32" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Subcase 2.2. <span id="S3.p32.m1" class="ltx_Math">F</span></span> satisfies (a), (b) and (c).</p>
+</div>
+<div id="S3.p33" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p33.m1" class="ltx_Math">U_{k}</span> denote the set of vertices that serve as the centers of stars fulfilling condition (b) in Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>. Let <span id="S3.p33.m2" class="ltx_Math">V_{k}:=V(F)\setminus(V(F_{0})\cup U_{k})</span>. Let <span id="S3.p33.m3" class="ltx_Math">F_{0}</span> be the factor-critical component that satisfies condition (a) in Lemma <a href="#Thmtheorem8" title="Lemma 8 ([2, 25]) ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>.
+Since <span id="S3.p33.m4" class="ltx_Math">\nu(F)=k-1</span> and the number of vertices in <span id="S3.p33.m5" class="ltx_Math">F_{0}</span> is at least <span id="S3.p33.m6" class="ltx_Math">k+1</span> (i.e., <span id="S3.p33.m7" class="ltx_Math">|F_{0}|\geq k+1</span>), we can infer that the cardinality of the set <span id="S3.p33.m8" class="ltx_Math">U_{k}</span> is at most <span id="S3.p33.m9" class="ltx_Math">\frac{k}{2}-1</span>, that is, <span id="S3.p33.m10" class="ltx_Math">|U_{k}|\leq\frac{k}{2}-1</span>.</p>
+</div>
+<div id="S3.p34" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 8. </span>The set <span id="S3.p34.m1" class="ltx_Math">\{c(g\cup\{x\})\ |\ g\in{[n]-\{x\}-V(F)\choose 2}\}</span> contains exactly one color denoted by <span id="S3.p34.m2" class="ltx_Math">c_{1}</span>, which belongs to the color set <span id="S3.p34.m3" class="ltx_Math">C_{Q}</span>.</p>
+</div>
+<div id="S3.p35" class="ltx_para">
+<p class="ltx_p">We will prove this statement by contradiction. First, suppose that there exists <span id="S3.p35.m1" class="ltx_Math">g\in{[n]-\{x\}-V(F)\choose 2}</span> such that</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex29.m1" class="ltx_Math">c(g\cup\{x\})\in\{c(f\cup\{x\})\ |\ f\in E(F)\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Our goal is to construct a rainbow copy <span id="S3.p35.m2" class="ltx_Math">\mathcal{F}_{k+1}</span>, which will lead to a contradiction.
+Without loss of generality, assume that <span id="S3.p35.m3" class="ltx_Math">c(g\cup\{x\})=c(g^{\prime}\cup\{x\})</span>, where <span id="S3.p35.m4" class="ltx_Math">g^{\prime}\in E(F)</span>. Since <span id="S3.p35.m5" class="ltx_Math">F_{0}</span> is factor-critical and <span id="S3.p35.m6" class="ltx_Math">U_{k}\leq\frac{k}{2}-1</span>, <span id="S3.p35.m7" class="ltx_Math">F-g^{\prime}</span> has a matching <span id="S3.p35.m8" class="ltx_Math">M</span> of size <span id="S3.p35.m9" class="ltx_Math">k-1</span>. By Lemma <a href="#Thmtheorem9" title="Lemma 9 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, we can then find <span id="S3.p35.m10" class="ltx_Math">h\in Q</span> such that <span id="S3.p35.m11" class="ltx_Math">x\notin h</span> and <span id="S3.p35.m12" class="ltx_Math">h\cap V(M\cup\{g\})=\emptyset.</span> In this situation, the collection <span id="S3.p35.m13" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M\cup\{g,h\}\}</span> forms a rainbow copy of <span id="S3.p35.m14" class="ltx_Math">\mathcal{F}_{k+1}</span>, which contradicts our initial assumption. Next, consider the case when there are two distinct edges <span id="S3.p35.m15" class="ltx_Math">g_{1},g_{2}\in{[n]-\{x\}-V(F)\choose 2}</span> such that <span id="S3.p35.m16" class="ltx_Math">c(g_{1}\cup\{x\})\neq c(g_{2}\cup\{x\})</span> and neither <span id="S3.p35.m17" class="ltx_Math">c(g_{1}\cup\{x\})</span> nor <span id="S3.p35.m18" class="ltx_Math">c(g_{2}\cup\{x\})</span> belongs to the set <span id="S3.p35.m19" class="ltx_Math">\{c(p\cup\{x\})\ |\ p\in E(F)\}</span>.
+We select a matching <span id="S3.p35.m20" class="ltx_Math">M^{\prime}</span> of size <span id="S3.p35.m21" class="ltx_Math">k-1</span> in <span id="S3.p35.m22" class="ltx_Math">F</span>. Subsequently, we can find an element <span id="S3.p35.m23" class="ltx_Math">h\in Q</span> such that <span id="S3.p35.m24" class="ltx_Math">x\notin h</span> and <span id="S3.p35.m25" class="ltx_Math">h\cap V(M^{\prime}\cup\{g_{1},g_{2}\})=\emptyset.</span> As a consequence, either the set <span id="S3.p35.m26" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M^{\prime}\cup\{g_{1},h\}\}</span> or <span id="S3.p35.m27" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M^{\prime}\cup\{g_{2},h\}\}</span> forms a rainbow copy of <span id="S3.p35.m28" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. This completes the proof of Claim 8.</p>
+</div>
+<div id="S3.p36" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p36.m1" class="ltx_Math">\mathcal{C}:=\{c(p\cup\{x\})\ |\ p\in E(F)\}</span> and let <span id="S3.p36.m2" class="ltx_Math">\mathcal{C}^{\prime}:=\{c_{1}\}\cup\{c(p\cup\{x\})\ |\ p\in E(F)\}.</span></p>
+</div>
+<div id="S3.p37" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 9. </span>For any <span id="S3.p37.m1" class="ltx_Math">f\in\binom{[n]\setminus(U_{k}\cup\{x\})}{2}</span> satisfying <span id="S3.p37.m2" class="ltx_Math">|f\cap V(F_{0})|=1</span>, we have <span id="S3.p37.m3" class="ltx_Math">c(f\cup\{x\})=c_{1}</span>.</p>
+</div>
+<div id="S3.p38" class="ltx_para">
+<p class="ltx_p">Suppose that there exists <span id="S3.p38.m1" class="ltx_Math">g_{1}\in{[n]-U_{k}-\{x\}\choose 2}</span> such that <span id="S3.p38.m2" class="ltx_Math">|g_{1}\cap V(F_{0})|=1</span> and <span id="S3.p38.m3" class="ltx_Math">c(g_{1}\cup\{x\})\neq c_{1}</span>. We choose <span id="S3.p38.m4" class="ltx_Math">h\in{[n]-V(F)-\{x\}\choose 2}</span> such that <span id="S3.p38.m5" class="ltx_Math">h\cap V(g_{1})=\emptyset</span>. By Claim 8, we have <span id="S3.p38.m6" class="ltx_Math">c(h\cup\{x\})=c_{1}</span>. If <span id="S3.p38.m7" class="ltx_Math">c(g_{1}\cup\{x\})\notin\mathcal{C}</span>, we proceed as follows. Let <span id="S3.p38.m8" class="ltx_Math">M_{3}</span> be a matching <span id="S3.p38.m9" class="ltx_Math">M_{3}</span> of size <span id="S3.p38.m10" class="ltx_Math">k-1</span> in <span id="S3.p38.m11" class="ltx_Math">F-V(g_{1})</span>. Then, the collection <span id="S3.p38.m12" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{3}\cup\{g_{1},h\}\}</span> induces a rainbow copy of <span id="S3.p38.m13" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction.
+Hence we may infer that</p>
+<table id="S3.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E9.m1" class="ltx_Math">\displaystyle c(g_{1}\cup\{x\})\in\mathcal{C}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let <span id="S3.p38.m14" class="ltx_Math">g_{2}\in E(F)</span> such that <span id="S3.p38.m15" class="ltx_Math">c(g_{2}\cup\{x\})=c(g_{1}\cup\{x\})</span>.
+If <span id="S3.p38.m16" class="ltx_Math">F-V(g_{1})-g_{2}</span> contains a matching <span id="S3.p38.m17" class="ltx_Math">M_{4}</span> of size <span id="S3.p38.m18" class="ltx_Math">k-1</span>, <span id="S3.p38.m19" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{4}\cup\{g_{1},h\}\}</span> induces rainbow copy of <span id="S3.p38.m20" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction.
+Thus we have</p>
+<table id="S3.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E10.m1" class="ltx_Math">\displaystyle\nu(F-V(g_{1})-g_{2})&lt;k-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.p39" class="ltx_para">
+<p class="ltx_p">Then by Lemma <a href="#Thmtheorem10" title="Lemma 10 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a>, we may infer that <span id="S3.p39.m1" class="ltx_Math">k=4</span>.
+Let <span id="S3.p39.m2" class="ltx_Math">g_{1}\cap V(F_{0})=\{y_{0}\}</span>. Consider <span id="S3.p39.m3" class="ltx_Math">d_{F}(y_{0})=3</span>.
+By the proof of Claim 5, <span id="S3.p39.m4" class="ltx_Math">\{x\}\cup g_{1}</span> may be extended into a rainbow copy denoted by <span id="S3.p39.m5" class="ltx_Math">\mathcal{M}</span> of <span id="S3.p39.m6" class="ltx_Math">\mathcal{F}_{4}</span> such that for any <span id="S3.p39.m7" class="ltx_Math">e\in E(\mathcal{M})</span>, <span id="S3.p39.m8" class="ltx_Math">c(e)\in\{c(f)\ |\ f\in E(G)\}</span>.
+Now we select <span id="S3.p39.m9" class="ltx_Math">h\in Q</span> such that <span id="S3.p39.m10" class="ltx_Math">h\cap V(\mathcal{M})=\emptyset</span>. It follows that <span id="S3.p39.m11" class="ltx_Math">(\{\{y_{0}\}\cup h\})\cup E(M)</span> induces a rainbow copy of <span id="S3.p39.m12" class="ltx_Math">\mathcal{F}_{5}</span>, a contradiction.
+Next we may assume <span id="S3.p39.m13" class="ltx_Math">d_{F}(y_{0})=2</span>. Recall that <span id="S3.p39.m14" class="ltx_Math">g_{2}\in E(F)</span> such that
+<span id="S3.p39.m15" class="ltx_Math">c(g_{2}\cup\{x\})=c(g_{1}\cup\{x\})</span>. By Lemma <a href="#Thmtheorem11" title="Lemma 11 ‣ 2 Technical Lemmas ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>, <span id="S3.p39.m16" class="ltx_Math">F-V(g_{1})</span> contains a Hamilton cycle. So
+<span id="S3.p39.m17" class="ltx_Math">F-V(g_{1})-g_{2}</span> contains a matching <span id="S3.p39.m18" class="ltx_Math">M_{5}</span> of size <span id="S3.p39.m19" class="ltx_Math">3</span>, which contradicts the inequality (<a href="#S3.E10" title="(10) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a>). This completes the proof of Claim 9.</p>
+</div>
+<div id="S3.p40" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 10. </span>For any <span id="S3.p40.m1" class="ltx_Math">f\in\binom{[n]\setminus(U_{k}\cup\{x\}\cup V(F_{0}))}{2}</span> satisfying <span id="S3.p40.m2" class="ltx_Math">|f\cap V_{k}|=1</span>, we have <span id="S3.p40.m3" class="ltx_Math">c(f\cup\{x\})=c_{1}</span>.</p>
+</div>
+<div id="S3.p41" class="ltx_para">
+<p class="ltx_p">We proceed by contradiction.
+Suppose to the contrary that there exists <span id="S3.p41.m1" class="ltx_Math">f_{1}\in\binom{[n]\setminus\big{(}U_{k}\cup\{x\}\cup V(F_{0})\big{)}}{2}</span> such that <span id="S3.p41.m2" class="ltx_Math">c(f_{1}\cup\{x\})\neq c_{1}</span>.
+We choose <span id="S3.p41.m3" class="ltx_Math">h\in{[n]-V(F)-\{x\}\choose 2}</span> such that <span id="S3.p41.m4" class="ltx_Math">h\cap V(f_{1})=\emptyset</span>. It follows that <span id="S3.p41.m5" class="ltx_Math">c(h\cup\{x\})=c_{1}</span> by Claim 8. If <span id="S3.p41.m6" class="ltx_Math">c(f_{1}\cup\{x\})\in\mathcal{C}</span>, let <span id="S3.p41.m7" class="ltx_Math">f_{2}\in E(F)</span> such that <span id="S3.p41.m8" class="ltx_Math">c(f_{1}\cup\{x\})=c(f_{2}\cup\{x\})</span>; otherwise let <span id="S3.p41.m9" class="ltx_Math">f_{2}=\emptyset</span>. Since <span id="S3.p41.m10" class="ltx_Math">F_{0}</span> is a factor-critical graph, we know that <span id="S3.p41.m11" class="ltx_Math">F-V(f_{1})-f_{2}</span> contains a matching <span id="S3.p41.m12" class="ltx_Math">M_{2}</span> of size <span id="S3.p41.m13" class="ltx_Math">k-1</span>.
+Thus <span id="S3.p41.m14" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M_{2}\cup\{f_{1},h\}\}</span> induce a rainbow copy of <span id="S3.p41.m15" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction again. This completes the proof of Claim 10.</p>
+</div>
+<div id="S3.p42" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 11. </span>For any <span id="S3.p42.m1" class="ltx_Math">T\in{V_{k}\choose 2}</span>, <span id="S3.p42.m2" class="ltx_Math">c(T\cup\{x\})\in\mathcal{C}^{\prime}</span>.</p>
+</div>
+<div id="S3.p43" class="ltx_para">
+<p class="ltx_p">Suppose to the contrary that there exists <span id="S3.p43.m1" class="ltx_Math">T_{1}\in{V_{k}\choose 2}</span> such that <span id="S3.p43.m2" class="ltx_Math">c(T_{1}\cup\{x\})\notin\mathcal{C}^{\prime}</span>. Since <span id="S3.p43.m3" class="ltx_Math">d_{F}(w)=3</span> for <span id="S3.p43.m4" class="ltx_Math">w\in U_{k}</span> and <span id="S3.p43.m5" class="ltx_Math">k\geq 4</span>, <span id="S3.p43.m6" class="ltx_Math">F-V(T_{1})</span> has a matching <span id="S3.p43.m7" class="ltx_Math">M</span> of size <span id="S3.p43.m8" class="ltx_Math">k-1</span>. We may choose <span id="S3.p43.m9" class="ltx_Math">T_{2}\in{[n]-(\{x\}\cup V(F)\cup T_{1})\choose 2}</span>. It follows that <span id="S3.p43.m10" class="ltx_Math">c(T_{2}\cup\{x\})=c_{1}</span> by Claim 8. So <span id="S3.p43.m11" class="ltx_Math">\{p\cup\{x\}\ |\ p\in M\cup\{T_{2},T_{1}\}\}</span> induces a rainbow copy of <span id="S3.p43.m12" class="ltx_Math">\mathcal{F}_{k+1}</span>, a contradiction. This completes the proof of Claim 11.</p>
+</div>
+<div id="S3.p44" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p44.m1" class="ltx_Math">z\in V(F_{0})</span> such that <span id="S3.p44.m2" class="ltx_Math">d_{F_{0}}(z)=k-2</span>.</p>
+</div>
+<div id="S3.p45" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 12. </span> For any <span id="S3.p45.m1" class="ltx_Math">T\in\left((U_{k}\times V(F_{0}-z))\cup{V(F_{0})\choose 2}\right)\setminus E(F)</span>, <span id="S3.p45.m2" class="ltx_Math">c(T\cup\{x\})\in\mathcal{C}^{\prime}</span>.</p>
+</div>
+<div id="S3.p46" class="ltx_para">
+<p class="ltx_p">Suppose to the contrary that there exists <span id="S3.p46.m1" class="ltx_Math">T\in\left((U_{k}\times V(F_{0}-z))\cup{V(F_{0})\choose 2}\right)\setminus E(F)</span> such that <span id="S3.p46.m2" class="ltx_Math">c(T\cup\{x\})\notin\mathcal{C}^{\prime}</span>.
+Write <span id="S3.p46.m3" class="ltx_Math">T=\{y_{1},y_{2}\}</span>. Without loss of generality, let <span id="S3.p46.m4" class="ltx_Math">y_{1}</span> be a vertex in <span id="S3.p46.m5" class="ltx_Math">F_{0}</span> with degree <span id="S3.p46.m6" class="ltx_Math">k-1</span>. We choose <span id="S3.p46.m7" class="ltx_Math">w\in[n]-(V(F)\cup\{x\})</span>. By Claim 9, we have <span id="S3.p46.m8" class="ltx_Math">c(\{x,w,y_{1}\})=c_{1}</span>. So we have
+<span id="S3.p46.m9" class="ltx_Math">c(\{x,w,y_{1}\})\neq c(\{x,y_{1},y_{2}\})</span>. Recall that <span id="S3.p46.m10" class="ltx_Math">\{x,y_{1}\},\{y_{1},y_{2}\}\notin E(F)</span>. Then by Claim 5,
+we can find a rainbow copy of <span id="S3.p46.m11" class="ltx_Math">\mathcal{F}_{k+1}</span> in <span id="S3.p46.m12" class="ltx_Math">\mathcal{G}</span> with core <span id="S3.p46.m13" class="ltx_Math">y_{1}</span>, a contradiction. This completes the proof of Claim 12.
+</p>
+</div>
+<div id="S3.p47" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Claim 13. </span>For any <span id="S3.p47.m1" class="ltx_Math">T\in{[n]-(V(F_{0}-z)\cup\{x\})\choose 2}\setminus E(F)</span>, <span id="S3.p47.m2" class="ltx_Math">c(T\cup\{x\})\in\mathcal{C}^{\prime}</span>.</p>
+</div>
+<div id="S3.p48" class="ltx_para">
+<p class="ltx_p">Suppose to the contrary that there exists <span id="S3.p48.m1" class="ltx_Math">T\in{[n]-(V(F_{0})\cup\{x\})\choose 2}\setminus E(F)</span> such that <span id="S3.p48.m2" class="ltx_Math">c(T\cup\{x\})\notin\mathcal{C}^{\prime}</span>. Write <span id="S3.p48.m3" class="ltx_Math">T=\{x_{0},y_{0}\}</span>. By Claims 8, 9, 10 and 11, we have <span id="S3.p48.m4" class="ltx_Math">T\cap U_{k}\neq\emptyset</span>. Without loss generality, suppose that <span id="S3.p48.m5" class="ltx_Math">x_{0}\in U_{k}</span>. Then <span id="S3.p48.m6" class="ltx_Math">d_{F}(x_{0})=k-1.</span>
+Let <span id="S3.p48.m7" class="ltx_Math">w\in V(F_{0})-N_{F}(x_{0})</span> such that <span id="S3.p48.m8" class="ltx_Math">d_{F_{0}}(w)=k-1</span>. By Claim 12, we have <span id="S3.p48.m9" class="ltx_Math">c(\{w,x,x_{0}\})\in\{c(p\cup\{x\})\ |\ p\in E(F)\}\cup\{c_{1}\}</span>. Thus it follows that <span id="S3.p48.m10" class="ltx_Math">c(\{w,x,x_{0}\})\neq c(\{x,x_{0},y_{0}\})</span>. By Claim 5, we can find a rainbow copy of <span id="S3.p48.m11" class="ltx_Math">\mathcal{F}_{k+1}</span> with core <span id="S3.p48.m12" class="ltx_Math">x_{0}</span>, a contradiction. This completes the proof of Claim 13.</p>
+</div>
+<div id="S3.p49" class="ltx_para">
+<p class="ltx_p">By Claims 8,9,10,11,12 and 13, for any <span id="S3.p49.m1" class="ltx_Math">e\in{[n]-x\choose 2}</span>, <span id="S3.p49.m2" class="ltx_Math">c(e\cup\{x\})\in\mathcal{C^{\prime}}</span>. Thus we can derive that the inequality (<a href="#S3.E7" title="(7) ‣ 3 Proof of Theorem 5 ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) holds. This complete the proof of Theorem <a href="#Thmtheorem5" title="Theorem 5 ‣ 1 Introduction ‣ Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>.  <span id="S3.p49.m3" class="ltx_Math">\Box</span></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock">
+F. Chung, Unavoidable stars in 3-graphs, <em class="ltx_emph ltx_font_italic">J. Combin. Theory Ser. A</em>, <span class="ltx_text ltx_font_bold">35</span> (1983), 252–262.
+
+
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"> F. Chung and P. Frankl, The maximum number of edges in a 3-graph not containing a given star, <em class="ltx_emph ltx_font_italic">Graphs Combin.</em>, <span class="ltx_text ltx_font_bold">3</span> (1987), 111–126.
+
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"> G. Dirac, Some theorems on abstract graphs, <em class="ltx_emph ltx_font_italic">Proc. London Math. Soc.</em>, <span class="ltx_text ltx_font_bold">2</span> (1952), 68–81.
+
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock">
+R. Duke and P. Erdős, Systems offinite sets having a common intersection, <em class="ltx_emph ltx_font_italic">In: Proceedings, 8th S-E Conf. Combinatorics, Graph Theory and Computing</em>, 1977, pp. 247-252.
+
+
+
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"> P. Erdős and R. Rado, Intersection theorems for systems of sets,
+<em class="ltx_emph ltx_font_italic">J. London Math. Soc</em>, <span class="ltx_text ltx_font_bold">35</span> (1960), 85–90.
+
+
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"> P. Erdős and M. Simonovits, V. Sós, Anti-Ramsey theorems, Infinite and finite Sets, <em class="ltx_emph ltx_font_italic">Colloq. Math. Soc. János Bolyai</em>, <span class="ltx_text ltx_font_bold">10</span> (1975), 633–643.
+
+
+
+
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"> P. Erdős and V. Sós, Remarks on the connection of graph theory, finite geometry and block designs, <em class="ltx_emph ltx_font_italic">Accad. Naz. Lincei, Rome</em>, <span class="ltx_text ltx_font_bold">2</span> (1976), 223–233.
+
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"> P. Frankl, An extremal set theoretical characterization of some Steiner systems, <em class="ltx_emph ltx_font_italic">Com-
+binatorica</em>, <span class="ltx_text ltx_font_bold">3</span> (1983), 193–199.
+
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"> P. Frankl and A. Kupavskii, Two problems of P. Erdős on matchings in set families–in the footsteps of Erdős and Kleitman, <em class="ltx_emph ltx_font_italic">J. Combin. Theory Ser. B</em>, <span class="ltx_text ltx_font_bold">138</span> (2019), 286–313.
+
+
+</span>
+</li>
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"> S. Fujita, C. Magnant and K. Ozeki, Rainbow generalizations of Ramsey theory: A survey, <em class="ltx_emph ltx_font_italic">Graphs Combin.</em>, <span class="ltx_text ltx_font_bold">26</span> (2010), 1–30.
+
+
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"> R. Gu, J. Li and Y. Shi, Anti-Ramsey numbers of paths and cycles in hypergraphs, <em class="ltx_emph ltx_font_italic">SIAM J. Discrete Math.</em>, <span class="ltx_text ltx_font_bold">34(1)</span> (2020), 271–307.
+
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"> T. Gallai, Kritische Graphen für die perfekte Matchung, <span class="ltx_text ltx_font_italic">MTA Math. Kutató Int. Közl.</span>, <span class="ltx_text ltx_font_bold">8</span> (1963), 373–395.
+
+
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"> M. Guo, H. Lu and X. Peng, Anti-Ramsey number of matchings in 3-uniform hypergraphs, <em class="ltx_emph ltx_font_italic">SIAM J. Discrete Math.</em>, <span class="ltx_text ltx_font_bold">37(3)</span> (2023), 1970–1987.
+
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"> T. Jiang, Edge-colorings with no large polychromatic stars, <span class="ltx_text ltx_font_italic">Graphs Combin.</span>, <span class="ltx_text ltx_font_bold">18</span> (2002), 303–308.
+
+
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"> T. Li, Y. Tang, G. Wang and G. Yan, Anti-Ramsey numbers of loose paths and cycles in uniform hypergraphs, <span class="ltx_text ltx_font_italic">Graphs Combin.</span>, <span class="ltx_text ltx_font_bold">41</span> (2025), Paper No. 76.
+
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock">X. Liu and J. Song Hypergraph anti-Ramsey theorems, <span class="ltx_text ltx_font_italic">J. Graph Theory</span>, <span class="ltx_text ltx_font_bold">108</span> (2025), 808–-816.
+
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock">
+J. Montellano-Ballesteros and V. Neumann-Lara,
+
+</span>
+<span class="ltx_bibblock">An anti-Ramsey theorem,
+
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_italic">Combinatorica</span>, <span class="ltx_text ltx_font_bold">22</span> (2002), 445–449.
+
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock">
+J. Montellano-Ballesteros, On totally multicolored stars, <span class="ltx_text ltx_font_italic">J. Graph Theory</span>, <span class="ltx_text ltx_font_bold">51</span>(2006), 225-–243.
+
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"> L. Őzkahya and M. Young, Anti-Ramsey number of matchings in hypergraphs, <em class="ltx_emph ltx_font_italic">Discrete Math.</em>, <span class="ltx_text ltx_font_bold">313</span> (2013), 2359–2364.
+
+</span>
+</li>
+<li id="bib.bib20" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock">
+I. Schiermeyer,
+
+</span>
+<span class="ltx_bibblock">Rainbow numbers for matchings and complete graphs,
+
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_italic">Discrete Math.</span>, <span class="ltx_text ltx_font_bold">286</span> (2004), 157–162.
+
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"> V. Sós, Remarks on the connection of graph theory, finite geometry and block designs, <em class="ltx_emph ltx_font_italic">Accad. Naz. Lincei, Rome</em>, <span class="ltx_text ltx_font_bold">2</span> (1976), 223–233.
+
+
+
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"> Y. Tang and T. Li, Anti-Ramsey numbers of cycles of length three in uniform hypergraphs, <em class="ltx_emph ltx_font_italic">Acta Math. Appl. Sin. Engl. Ser.</em>, <span class="ltx_text ltx_font_bold">41</span> (2025), 797–805.
+
+
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"> Y. Tang, T. Li and G. Yan, Anti-Ramsey number of disjoint union of star-like hypergraphs, <em class="ltx_emph ltx_font_italic">Discrete Math.</em>, <span class="ltx_text ltx_font_bold">347</span> (2024), 11374. 
+</span>
+</li>
+<li id="bib.bib24" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock">
+W. Tutte, The factorization of linear graphs, <span class="ltx_text ltx_font_italic">J. London Math. Soc.</span>, <span class="ltx_text ltx_font_bold">22</span> (1947), 107–111.
+
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"> X. Zhu, Y. Chen, D. Gerbner, E. Györi and H. Karim, The maximum number of triangles in <span id="bib.bib25.m1" class="ltx_Math">F_{k}</span>-free graphs, <em class="ltx_emph ltx_font_italic">Eur. J. Comb.</em>, <span class="ltx_text ltx_font_bold">114</span> (2023), 103793.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:17:52 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

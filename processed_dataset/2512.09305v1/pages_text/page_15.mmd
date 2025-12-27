@@ -1,0 +1,55 @@
+ac{(1+p\_{2}u\_{1})}{\sqrt{p\_{2}(p\_{2}-1)}}\left(\frac{\int\_{0}^% {\infty}\tau e^{p\_{2}\rho\_{2}\tau}dH(\tau)}{\int\_{0}^{\infty}\frac{1}{\tau}e^{% p\_{2}\rho\_{2}\tau}dH(\tau)}\right)^{1/2} |  |
+   |  |  |  |  |  |
+   | --- | --- | --- | --- | --- |
+   |  | \displaystyle= | \displaystyle\frac{(1+p\_{2}u\_{1})}{\sqrt{p\_{2}(p\_{2}-1)}}\left(\int\_{0}^{% \infty}\tau^{2}f\_{\rho\_{2}}(\tau)dH(\tau)\right)^{1/2} |  | (25) |
+
+   where f\_{\rho\_{2}}(\tau)=\frac{\frac{1}{\tau}e^{p\_{2}\tau\rho}}{\int\_{0}^{\infty}%
+   \frac{1}{\tau}e^{p\_{2}\tau\rho}dH(\tau)}. Set f\_{0}(\tau)=\frac{\tau^{-1}}{\int\_{0}^{\infty}\tau^{-1}dH(\tau)}. Now \frac{f\_{\rho\_{2}}(\tau)}{f\_{0}(\tau)} is non-increasing in \tau, then by Lemma 2 we have
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \int\_{0}^{\infty}\tau^{2}f\_{\rho\_{2}}(\tau)dH(\tau)\leq\int\_{0}^{\infty}\tau^{% 2}f\_{0}(\tau)dH(\tau)=\frac{E(\tau)}{E(1/\tau)} |  | (26) |
+
+   Thus from the equations (3) and (26) we obtain
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \psi\_{2}(u\_{1};\rho\_{2})\leq\frac{(1+p\_{2}u\_{1})}{\sqrt{p\_{2}(p\_{2}-1)}}\left(% \frac{E(\tau)}{E(1/\tau)}\right)^{1/2} |  | (27) |
+
+   Hence for any \mu\_{2} and u\_{1}>0, we have
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \psi\_{2}(u\_{1};\rho\_{2})\leq\frac{(1+p\_{2}u\_{1})}{\sqrt{p\_{2}(p\_{2}-1)}}\min% \Bigg{\{}\left(\frac{E(\tau^{p\_{2}+2})}{E(\tau^{p\_{2}})}\right)^{1/2},\left(% \frac{E(\tau)}{E(\tau^{-1})}\right)^{1/2}\Bigg{\}}=\psi\_{21}(u\_{1}). |  |
+
+   Now using the convexity of R\_{2}(\delta\_{\psi\_{2}},\rho\_{2}) for P(\psi\_{21}(U\_{1})<\psi\_{2}(U\_{1}))>0 we get the result. Proof of (ii) is similar to (i), so we omit it.
+
+In Theorems 6 and 8, we derived improved estimator for \sigma\_{2} by using the statistics S\_{2} along with either the statistics S\_{1} or Y. Now we want to use simultaneously the information that the insights these statistics offer, then double shrinkage estimators are applied, as it demonstrated in Theorem 9 (see [15]).
+
+###### Theorem 9.
+
+To estimating the parameter \sigma\_{2}, under the symmetric loss function L\_{1}(\cdot) with the constraint \sigma\_{1}\leq\sigma\_{2}, we consider the estimator
+
+|  |  |  |
+| --- | --- | --- |
+|  | \delta\_{\psi\_{11}+\psi\_{21}-c\_{2}}=\left(\psi\_{11}(U)+\psi\_{21}(U\_{1})-c\_{2}% \right)S\_{2} |  |
+
+where \psi\_{11} is defined in Theorem 6, and \psi\_{21} is defined in Theorem 8 and c\_{2}=\sqrt{\frac{E(\tau)}{(p\_{2}-1)(p\_{2}-2)E(1/\tau)}}. then the estimator \delta\_{\psi\_{11}+\psi\_{21}-c\_{2}} has smaller or equal risk function than that of the estimator \delta\_{\psi\_{11}}=\max\left\{\psi\_{11}(U),c\_{2}\right\}S\_{2}, \delta\_{\psi\_{21}}=\min\left\{\psi\_{21}(U\_{1}),c\_{2}\right\}S\_{2} and so of the estimator \delta\_{12}=c\_{2}S\_{2} \forall 0<\frac{\sigma\_{1}}{\sigma\_{2}}\leq 1, \mu\_{2}\in\mathbb{R} and \tau>0.
+
+Proof. Considering the case where \psi\_{11}(U)>c\_{2}, and \psi\_{21}(U\_{1})<c\_{2}, we establish that \forall\ \theta=(\mu\_{1},\mu\_{2},\sigma\_{1},\sigma\_{2}),
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle R(\delta\_{\psi\_{11}+\psi\_{21}-c\_{2}};\theta)-R(\delta\_{\psi\_{21}% };\theta)= | \displaystyle E\left[\psi\_{21}(U\_{1})V\_{2}-c\_{2}V\_{2}+\frac{1}{\left(\psi\_{11}% (U)+\psi\_{21}(U\_{1})-c\_{2}\right)V\_{2}}+\frac{1}{\psi\_{11}(U)V\_{2}}\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\leq | \displaystyle E\left[\psi\_{11}(U)V\_{2}+\frac{1}{\psi\_{11}(U)V\_{2}}-2\right]+E% \left[c\_{2}V\_{2}+\frac{1}{c\_{2}V\_{2}}-2\right]\leq 0 |  |
+
+because of Theorem 6. In a similar way, we use the result in Theorem 8, R(\delta\_{\psi\_{11}+\psi\_{21}-c\_{2}};\theta)\leq R(\delta\_{\psi\_{21}};\theta)\leq
+0. Hence the theorem is proved.
+
+###### Remark 14.
+
+A similar result can be derived for the Stein-type loss function L\_{2}(\cdot) by applying the same line of reasoning as described above.
+
+## 4 Application

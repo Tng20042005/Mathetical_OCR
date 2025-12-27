@@ -1,0 +1,72 @@
+In particular, every regular scheme (or even Gorenstein scheme) has a canonical pinning since the structure sheaf is a dualizing complex. For example, if S is regular, then the pinning on S above is such that for every S-field \operatorname{Spec}E we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.1.5.b) |  | \displaystyle\lambda\_{E}=\omega\_{E/S}. |  |
+
+###### Remark 3.1.6.
+
+Example 3.1.5 is indeed the prototype of a pinning, which incarnates the data of “local orientations” at each point of a scheme. In Theorem 3.3.4 below we will establish a duality of Milnor-Witt cycle modules for schemes with pinnings: such an idea of relating dualizing complexes to duality already appeared in [JX25] in the special case of real étale sheaves.
+See also [ILO14, Exp. XVII] for a construction of similar spirit in the context of étale sheaves.
+
+Also note that since any scheme essentially of finite type over a regular scheme (or even a Gorenstein scheme) has a dualizing complex, the existence of a pinning is a relatively weak condition and does not really impose any restriction on the singularities of the scheme.
+
+###### 3.1.7.
+
+One can define several operations on pinnings,
+reflecting the theory of dualizing complexes.
+Let \lambda be a pinning on a scheme S.
+
+Given a morphism f:T\rightarrow S essentially of finite type,
+we define a pinning f^{\*}(\lambda) on T by the restriction of \lambda to \mathcal{G}\_{T}.
+Given \mathcal{L} a line bundle on S, we define another pinning \mathcal{L}\otimes\lambda on S
+such that for every object f:X\to S in \mathcal{G}\_{S}, (L\otimes\lambda)\_{X}=\lambda\_{X}\otimes f^{\*}\mathcal{L}.
+Finally, when f is essentially slci, one can define a twisted pullback by the formula:
+f^{!}\lambda=\omega\_{f}\otimes f^{\*}(\lambda).
+
+### 3.2. Cohomological Milnor-Witt cycle premodules
+
+The following definition is a generalization of [Fel20, Definition 3.1] and [BHP23]. We use Notation 0.0.2.
+The base scheme S can be arbitrary.
+
+###### Definition 3.2.1.
+
+A *(cohomological) Milnor-Witt cycle premodule* M over S, or simply *MW-premodule*,
+over the base scheme S and with coefficients in R is the data of an R-module
+M\_{n}(E) for any S-field E and any integer n, along with the following data
+3.2.1,…, 3.2.1 and the following rules 3.2.1,…, 3.2.1.
+
+(D1):
+:   For a morphism of S-fields \phi:E\to F, we have a map \phi\_{\*}:M\_{n}(E)\to M\_{n}(F).
+
+(D3):
+:   For an S-field E and an element x\in\mathcal{K}^{MW}\_{m}(E), a map \gamma\_{x}:M\_{n}(E)\to M\_{n+m}(E),
+    making M(E) a left \mathbf{Z}-graded module over the \mathbf{Z}-graded ring \mathcal{K}^{MW}\_{\*}(E)
+    (i.e. we have \gamma\_{x}\circ\gamma\_{y}=\gamma\_{x\cdot y} and \gamma\_{1}=\operatorname{Id}).
+
+Exactly as in the construction in (1.1.1.b), the axiom 3.2.1 allows us to define, for every S-field E and every 1-dimensional E-vector space \mathcal{L}, a graded R-module
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.2.1.a) |  | \displaystyle M\_{n}(E,\mathcal{L}):=M\_{n}(E)\otimes\_{R[E^{\times}]}R[\mathcal{% L}^{\times}]. |  |
+
+(D2):
+:   For a finite morphism of S-fields \phi:E\to F, we have a *trace* map
+
+    |  |  |  |
+    | --- | --- | --- |
+    |  | \phi^{!}:M\_{n}(F,\omega\_{F/E})\to M\_{n}(E). |  |
+
+(D4):
+:   For an S-field E and an S-valuation v on E, we have a *residue* map:
+
+    |  |  |  |
+    | --- | --- | --- |
+    |  | \partial\_{v}:M\_{n}(E)\to M\_{n-1}(\kappa(v),\nu\_{v}). |  |
+
+(R1a):
+:   For any composable morphisms of fields, one has (\varphi\circ\psi)\_{\*}=\varphi\_{\*}\circ\psi\_{\*}.
+
+(R1b):
+:   For any composable finite morphisms of fields, one has (\varphi\circ\psi)^{!}=\psi^{!}\circ\varphi^{!},
+    up to the obvious identification for twists.

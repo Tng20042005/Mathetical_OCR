@@ -1,0 +1,37 @@
+Furthermore, Borel functions on groupoids admit a natural *involution*: for a Borel function \pi:\mathcal{G}\rightarrow\mathbb{C} the function \pi^{\ast}:\mathcal{G}\rightarrow\mathbb{C},g\mapsto\overline{\pi(g^{-1})} is again Borel.
+
+### 3.2. Amenable groupoids
+
+As mentioned earlier, Renault’s notion of amenability for (discrete) measured groupoids admits several equivalent characterizations (see, e.g., [Anantharaman-DelarocheRenault2000]). For our purposes, the following formulation will be the most convenient.
+
+###### Definition 3.2 ([Anantharaman-DelarocheRenault2000, Definition 3.2.8]).
+
+Let (\mathcal{G},\mu) be a discrete measured groupoid. We say that (\mathcal{G},\mu) is *amenable* if there exists a bounded linear map \Phi\colon L^{\infty}(\mathcal{G},\mu\_{t})\to L^{\infty}(\mathcal{G}^{(0)},\mu) of norm 1 such that \Phi(f)=f for all f\in L^{\infty}(\mathcal{G}^{(0)},\mu), and \Phi(\alpha(\gamma)(f))=\alpha(\gamma)(\Phi(f)) for all f\in L^{\infty}(\mathcal{G},\mu\_{t}) and all \gamma\in[\mathcal{G}]. The map \Phi is called a *global invariant mean*.
+
+The proof of the “if” direction of Theorem B requires the following lemma.
+
+###### Lemma 3.3.
+
+Let (\mathcal{G},\mu) be a discrete p.m.p. groupoid. Then (\mathcal{G},\mu) is amenable if and only if there exists a [\mathcal{G}]-invariant mean m\in L^{\infty}(\mathcal{G},\mu\_{t})^{\ast} such that m(f)=\int\_{\mathcal{G}^{(0)}}f\,d\mu for all f\in L^{\infty}(\mathcal{G}^{(0)},\mu).
+
+###### Proof.
+
+For the “only if” direction, assume that there exists a global invariant mean \Phi\colon L^{\infty}(\mathcal{G},\mu\_{t})\to L^{\infty}(\mathcal{G}^{(0)},\mu) and define m\in L^{\infty}(\mathcal{G},\mu\_{t})^{\ast} by m(f):=\int\_{\mathcal{G}^{(0)}}\Phi(f)\,d\mu for f\in L^{\infty}(\mathcal{G},\mu\_{t}). Then m is a [\mathcal{G}]-invariant mean, and m(f)=\int\_{\mathcal{G}^{(0)}}f\,d\mu for all f\in L^{\infty}(\mathcal{G}^{(0)},\mu).
+
+For the “if” direction, let m\in L^{\infty}(\mathcal{G},\mu\_{t})^{\ast} be a [\mathcal{G}]-invariant mean satisfying m(f)=\int\_{\mathcal{G}^{(0)}}f\,d\mu for f\in L^{\infty}(\mathcal{G}^{(0)},\mu). Fix f\in L^{\infty}(\mathcal{G},\mu\_{t}). For every k\in L^{\infty}(\mathcal{G}^{(0)},\mu) we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | |m(kf)|\leq m(|fk|)\leq\|f\|\_{\infty}m(|k|)=\|f\|\_{\infty}\|k\|\_{1}\,. |  |
+
+Since \mu is a probability measure, L^{\infty}(\mathcal{G}^{(0)},\mu) is dense in L^{1}(\mathcal{G}^{(0)},\mu). Hence there exists a unique functional L\_{f}\in L^{1}(\mathcal{G}^{(0)},\mu)^{\ast}\cong L^{\infty}(\mathcal{G}^{(0)}%
+,\mu) with \|L\_{f}\|\leq\|f\|\_{\infty} such that L\_{f}(k)=m(fk) for all k\in L^{\infty}(\mathcal{G}^{(0)},\mu). Let \Phi(f)\in L^{\infty}(\mathcal{G}^{(0)},\mu) be the function corresponding to L\_{f} so that m(fk)=\int\_{\mathcal{G}^{(0)}}\Phi(f)k\,d\mu for all k\in L^{1}(\mathcal{G}^{(0)},\mu).
+
+Positivity of m shows that \Phi is positive and has norm 1. Moreover, since m(f)=\int\_{\mathcal{G}^{(0)}}f\,d\mu for all f\in L^{\infty}(\mathcal{G}^{(0)},\mu), we have \Phi(f)=f on L^{\infty}(\mathcal{G}^{(0)},\mu). Finally,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathcal{G}^{(0)}}\Phi(f)\,d\mu=m(f)=m(\alpha(\gamma)f)=\int\_{\mathcal{G% }^{(0)}}\Phi(\alpha(\gamma)f)\,d\mu |  |
+
+for all f\in L^{\infty}(\mathcal{G}^{(0)},\mu) and all \gamma\in[\mathcal{G}], proving that \Phi is a global invariant mean.
+∎

@@ -1,0 +1,85 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \iint\_{G\cap L\_{\xi\in A}}f{\,\rm d}x{\,\rm d}t=\iint\_{G\cap L\_{\eta\in B}}f{% \,\rm d}x{\,\rm d}t. |  |
+
+This, together with Lemma 2.1, gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{A}U(x,0){\,\rm d}x-\int\_{A-T}U(x,T){\,\rm d}x=\int\_{B+T}V(x,T){\,\rm d}x% -\int\_{B}V(x,0){\,\rm d}x, |  |
+
+which implies
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{A-T}U(x,T){\,\rm d}x+\int\_{B+T}V(x,T){\,\rm d}x=\int\_{A}U(x,0){\,\rm d}x% +\int\_{B}V(x,0){\,\rm d}x. |  |
+
+So I(T)=I(0) holds as desired.
+
+Step 2. We show that I(T^{\prime})=I(0) for all T^{\prime}\in(0,T). Fix T^{\prime}\in(0,T). We define
+
+|  |  |  |
+| --- | --- | --- |
+|  | L^{\prime}\_{\xi\in A}:=\bigcup\_{\xi\_{0}\in A}L^{\prime}\_{\xi=\xi\_{0}} |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | L^{\prime}\_{\xi=\xi\_{0}}=\{(t,x)\in[0,T^{\prime}]\times{\mathbb{T}}:x+t=\xi\_{0}\} |  |
+
+is the restriction of L\_{\xi=\xi\_{0}} on the region [0,T^{\prime}]\times{\mathbb{T}}. Thus
+
+|  |  |  |
+| --- | --- | --- |
+|  | G\cap L^{\prime}\_{\xi\in A}\subset G\cap L\_{\xi\in A}. |  |
+
+With this observation in mind, we find that if
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L\_{\xi\in A}]\,\Delta\,[G\cap L\_{% \eta\in B}]\Big{)}=0, |  |
+
+then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L^{\prime}\_{\xi\in A}]% \,\Delta\,[G\cap L^{\prime}\_{\eta\in B}]\Big{)}=0. |  | (2.4) |
+
+Indeed, if we set X=G\cap L\_{\xi\in A}, Y=G\cap L\_{\eta\in B}, Z=[0,T^{\prime}]\times{\mathbb{T}}, then
+
+|  |  |  |
+| --- | --- | --- |
+|  | [G\cap L^{\prime}\_{\xi\in A}]\,\Delta\,[G\cap L^{\prime}\_{\eta\in B}]=(X\cap Z% )\,\Delta\,(Y\cap Z)=(X\,\Delta\,Y)\cap Z. |  |
+
+Since (X\,\Delta\,Y) has zero measure, we conclude (2.4).
+
+With (2.4) in hand, the result in Step 1 yields that I(T^{\prime})=I(0) as desired.
+∎
+
+### 2.2. Necessary for controllability
+
+In this part, we prove the following result.
+
+###### Proposition 2.2 (Controllability implies OSC).
+
+If the system (1.3) is exactly controllable on some observation set G\subset[0,T]\times{\mathbb{T}}, then for any non-trivial pair (A,B), G does not obey the ({\rm OSC}).
+
+###### Proof.
+
+We argue by contradiction.
+Suppose that there are two non-trivial sets A,B such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L\_{\xi\in A}]\,\Delta\,[G\cap L\_{% \eta\in B}]\Big{)}=0. |  |
+
+According to Proposition 1.1, we have
+I(T)=I(0),
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | I(t)=\int\_{A-t}(u\_{x}+u\_{t})(t,x){\,\rm d}x+\int\_{B+t}(u\_{x}-u\_{t})(t,x){\,\rm d% }x. |  |
+
+Since A,B are both non-trivial, we can always choose initial data (u\_{0},u\_{1}) such that

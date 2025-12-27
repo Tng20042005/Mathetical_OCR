@@ -1,0 +1,51 @@
+Let \mathcal{O} be a 1-dimensional local domain which is essentially of finite type over S, with fraction field F and residue field \kappa. Then \mathcal{O} is an excellent ring. Let A be the integral closure of \mathcal{O}, which is regular, semi-local and finite over \mathcal{O}. Let \{z\_{1},\cdots,z\_{n}\} be the closed points of A, which correspond to valuations on F with residue fields \kappa(z\_{1}),\cdots,\kappa(z\_{n}) (indeed, the normalization morphism is finite because S is excellent). Denote by \phi\_{i}:\kappa\to\kappa(z\_{i}) the induced finite morphism of S-fields. We then define a map
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (3.5.4.a) |  | \displaystyle\partial\_{\mathcal{O}}:M\_{n}(F)\underset{\ref{itm:D4ori}}{% \xrightarrow{(\partial\_{z\_{i}})\_{i=1}^{n}}}\oplus\_{i=1}^{n}M\_{n-1}(\kappa(z\_{i% }))\underset{\ref{itm:D2ori}}{\xrightarrow{\sum\_{i=1}^{n}\phi\_{i\*}}}M\_{n-1}(% \kappa). |  |
+2. (2)
+
+   Let X be an S-scheme essentially of finite type, and let x and y be two points on X. We define a map
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (3.5.4.b) |  | \displaystyle\partial^{x}\_{y}:M\_{\*}(x)\to M\_{\*-1}(y) |  |
+
+   as follows: let Z be the reduced Zariski closure of x in X, and if y\in Z^{(1)}, then the map (3.5.4.b) is defined as the map \partial\_{\mathcal{O}\_{Z,y}} in (3.5.4.a) associated to the 1-dimensional local domain \mathcal{O}\_{Z,y}; otherwise we put \partial^{x}\_{y}=0.
+
+###### Definition 3.5.5.
+
+Consider the above notation. An *orientable Milnor-Witt cycle module* over S
+is an orientable Milnor-Witt cycle premodule (3.2.1) which in addition satisfies the conditions 3.5.5 and 3.5.5
+
+(fd):
+:   Finite support of divisors. Let X be an irreducible normal S-scheme with generic point \xi and let \rho be an element of M(\xi). Then \partial^{\xi}\_{x}(\rho)=0 for all but finitely many x\in X^{(1)}.
+
+(c):
+:   Closedness. Let X be a local, integral S-scheme of dimension 2, with generic point \xi and closed point x\_{0}. Then
+
+    |  |  |  |  |
+    | --- | --- | --- | --- |
+    | (3.5.5.a) |  | \displaystyle 0=\sum\_{x\in X^{(1)}}\partial^{x}\_{x\_{0}}\circ\partial^{\xi}\_{x}% :M\_{\*}(\xi)\to M\_{\*-2}(x\_{0}). |  |
+
+We also call such an object a *Milnor cycle module* over S, or simply *M-module*.
+We denote by \operatorname{M-Mod}\_{S} the category of Milnor cycle modules over S.
+
+###### Example 3.5.6.
+
+According to 3.4.4(1), Milnor K-theory defines a Milnor cycle module
+over any base scheme S equipped with a pinning.
+This follows from the fact that \operatorname{K}^{MW}\_{\*} is a MW-module over such bases,
+which follows the proof of [Kat86]. In fact, based on *loc. cit.*
+one deduces that \operatorname{K}^{M}\_{\*} is a Milnor cycle module over any base scheme S, without requiring
+the existence of a pinning.
+
+In [Ros96], Rost introduced the notion of cycle modules,
+focusing on schemes essentially of finite type over a given base field S=\operatorname{Spec}(k).
+However, it is straightforward to extend all the definitions of *loc. cit.* to the setting of a base scheme S
+equipped with a dimension function \delta,
+which replaces the Krull dimension used by Rost.
+In fact, our notion of Milnor cycle modules, as defined in 3.5.5, agrees with the original and the extended definitions
+of Rost cycle modules:
+
+###### Proposition 3.5.7.

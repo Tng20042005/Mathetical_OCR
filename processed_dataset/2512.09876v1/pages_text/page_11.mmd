@@ -1,0 +1,66 @@
+A morphism a:\mathcal{M}\to\mathcal{M}^{\prime} of MW-homodules is a natural transformation which commutes with the data 1.1.1,…, 1.1.1.
+
+In particular, MW-homodules over a base scheme S form a category which is denoted by \operatorname{MW-Homod}\_{S}.
+One can easily check that \operatorname{MW-Homod}\_{S} is in fact an abelian category.444It is actually
+a Grothendieck abelian symmetric monoidal category. However, as in the case of a base field
+([Dég11], [Fel21a]),
+this result is quite involved and we leave it for a later work.
+
+###### 1.2.6.
+
+In the following, let F be a field over S and {\mathbf{A}\_{F}^{1}=\operatorname{Spec}F[t]} be the affine line over \operatorname{Spec}F with function field F(t). Moreover, we fix n an integer and \* a line bundle over S.
+
+###### Proposition 1.2.7.
+
+Let \mathcal{M} be a MW-homodule over S. With the previous notations, the following properties hold.
+
+(H’):
+:   Homotopy
+    property for \mathbf{A}^{1}. We have a short exact sequence
+
+    \xymatrix@C=10pt@R=20pt{0\ar[r]&\mathcal{M}\_{n}(F,\*)\ar[r]^{-}{\operatorname{%
+    res}}\mathcal{M}\_{n}(F(t),\*)\ar[r]^{-}d\bigoplus\_{x\in{(\mathbf{A}\_{F}^{1})}\_{%
+    (1)}}\mathcal{M}\_{n-1}(\kappa(x),\*)\ar[r]0}
+
+    where the map d is defined in 1.2.4.
+
+(RC’):
+:   Reciprocity for curves. Let X be a proper curve over F with generic point \xi\_{X}. Then
+
+    \xymatrix{\mathcal{M}\_{n}(\xi\_{X},\*)\ar[r]^{-}d&\displaystyle\bigoplus\_{x\in X%
+    \_{(1)}}\mathcal{M}\_{n-1}(x,\*)\ar[r]^{-}c\mathcal{M}\_{n-1}(F,\*)}
+
+    is a complex, that is c\circ d=0 (where c={\sum\_{x}\operatorname{cores}\_{\kappa(x)/F}}).
+
+###### Remark 1.2.8.
+
+Axiom 1.2.2 enables one to write down the differential d of the soon-to-be-defined complex C\_{\*}(X,\mathcal{M},\*), axiom 1.2.2 guarantees that d\circ d=0, property 1.2.7 yields the homotopy invariance of the Chow groups A\_{\*}(X,\mathcal{M},\*) and finally 1.2.7 is needed to establish proper pushforward.
+
+### 1.3. The associated cycle complex
+
+###### 1.3.1.
+
+Let \mathcal{M} and \mathcal{M}^{\prime} be two MW-homodules over S, let X and Y be two schemes and let U\subset X and V\subset Y be subsets. Fix an integer n and a line bundle \*. Given a morphism
+
+\alpha:\displaystyle\bigoplus\_{x\in U}\mathcal{M}\_{n}(x,\*)\to\displaystyle%
+\bigoplus\_{y\in V}\mathcal{M}\_{n}^{\prime}(y,\*),
+
+we write \alpha^{x}\_{y}:\mathcal{M}\_{n}(x,\*)\to\mathcal{M}\_{n}^{\prime}(y,\*) for the components of \alpha.
+
+###### 1.3.2.
+
+Change of coefficients
+Let \alpha:\mathcal{M}\to\mathcal{M}^{\prime} be a morphism between two MW-homodules, let X be a scheme over S and U\subset X a subset. We put
+
+\alpha\_{\#}:\bigoplus\_{x\in U}\mathcal{M}\_{n}(x,\*)\to\bigoplus\_{x\in U}%
+\mathcal{M}\_{n}^{\prime}(x,\*)
+
+where (\alpha\_{\#})^{x}\_{x}=\alpha\_{\kappa(x)} and (\alpha\_{\#})^{x}\_{y}=0 for x\neq y.
+
+###### 1.3.3.
+
+Let \mathcal{M} be a MW-homodule, let X be a scheme with a line bundle denoted by \* and p be an integer. Recall that X\_{(p)} is the set of (p)-dimensional points of X. Define
+
+C\_{p}(X,\mathcal{M},\*)=\displaystyle\bigoplus\_{x\in X\_{(p)}}\mathcal{M}\_{n}(x,\*)
+
+and

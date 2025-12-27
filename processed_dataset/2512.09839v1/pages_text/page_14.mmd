@@ -1,0 +1,70 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle T\_{\alpha}^{-1}(B\_{1}(w\_{0})) | \displaystyle\subset\left\{r^{\alpha}\in[\rho\_{0}-1,\rho\_{0}+1],\left|\alpha% \theta\right|\leq\frac{2}{\sqrt{3}\rho\_{0}}\right\} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left\{r\in\left[\left(r\_{0}^{\alpha}-1\right)^{\frac{1}{\alpha}% },\left(r\_{0}^{\alpha}+1\right)^{\frac{1}{\alpha}}\right],\left|\theta\right|% \leq\frac{2}{\sqrt{3}\alpha r\_{0}^{\alpha}}\right\}. |  |
+
+Since
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left(r\_{0}^{\alpha}\pm 1\right)^{\frac{1}{\alpha}} | \displaystyle=r\_{0}\left(1\pm\frac{1}{r\_{0}^{\alpha}}\right)^{\frac{1}{\alpha}% }=r\_{0}\pm\frac{1}{\alpha r\_{0}^{\alpha-1}}-\frac{1-\frac{1}{\alpha}}{2\alpha r% \_{0}^{2\alpha-1}}+\ldots |  |
+
+then there exist r\_{2}(\alpha)\gg 1 so that whenever r\_{0}\geq r\_{2}, we have \left(r\_{0}^{\alpha}+1\right)^{\frac{1}{\alpha}}\leq r\_{0}+\frac{1}{2} and \left(r\_{0}^{\alpha}-1\right)^{\frac{1}{\alpha}}\geq r\_{0}-\frac{1}{2}.
+If r\_{0}\geq r\_{3}:=\left(\frac{2\sqrt{3}}{\alpha}\right)^{\frac{1}{\alpha-1}}, then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle T\_{\alpha}^{-1}(B\_{1}(w\_{0})) | \displaystyle\subset\left\{r\in\left[r\_{0}-\frac{1}{2},r\_{0}+\frac{1}{2}\right% ],\left|\theta\right|\leq\frac{1}{3r\_{0}}\right\}\subset B\_{1}(z\_{0}), |  |
+
+where we have used (4.3).
+It follows that B\_{1}(w\_{0})\subset T^{\alpha}(B\_{1}(z\_{0})).
+To complete the proof, choose r\_{\alpha}=\max\left\{r\_{1},r\_{2},r\_{3}\right\}.
+∎
+
+## 5. Proof of Theorem 1
+
+In this section, we prove the main result, Theorem 1.
+Before proceeding to the rigorous details, we describe the main steps:
+
+* •
+
+  Initialize the iterative argument by applying Theorem 3 to the solution function u.
+* •
+
+  Compose the solution with the transformation map given in (4.1) to get a solution v to a different Schrödinger equation, see Lemma 2.
+* •
+
+  Apply the iterative result, Proposition 2, to v many times to reduce the exponent.
+* •
+
+  Undo the change of variables to get the desired estimate for u.
+
+We recall the following result originally proved in [LMNN20], see also [Dav24, Theorem 1.1] in the case where N=0 for this formulation.
+This estimate serves as the initialization step in our iteration argument.
+
+###### Theorem 3 (Initialization step).
+
+For some a\_{0}>0, let V:\mathbb{R}^{2}\to\mathbb{R} satisfy \left\|V\right\|\_{L^{\infty}}\leq a\_{0}^{2}.
+Assume that u:\mathbb{R}^{2}\to\mathbb{R} is a solution to (1.4) that satisfies (1.5) and for each w\in\mathbb{R}^{2},
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left|u(w)\right|\leq\exp\left(c\_{0}\left|w\right|\right). |  |
+
+Then there exists constants \overline{C}\_{0}=\overline{C}\_{0}\left(a\_{0},c\_{0}\right)>0 and \overline{R}\_{0}>0 so that whenever R\geq\overline{R}\_{0}, it holds that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.1) |  | \inf\_{\left|w\_{0}\right|=R}\left\|u\right\|\_{L^{\infty}\left(B\_{1}(w\_{0})% \right)}\geq\exp\left(-\overline{C}\_{0}R\log^{\frac{3}{2}}R\right). |  |
+
+Observe that if u satisfies the hypothesis of Theorem 1, then it also satisfies the hypotheses of Theorem 3.
+We now have all of the tools we need to prove Theorem 1.
+
+###### Proof of Theorem 1.
+
+With N\in(0,2) as given, let \alpha=\left(1-\frac{N}{2}\right)^{-1}=\frac{2}{2-N}\in(1,\infty).
+Set \delta=\min\left\{\frac{\varepsilon}{2-N},1\right\}.
+With r\_{\alpha} from Lemma 3, \overline{C}\_{0}(a\_{0},c\_{0}) and \overline{R}\_{0} from Theorem 3, and \hat{R}\_{0}(a) from Proposition 2, define \bar{r}\_{1}\geq\max\left\{r\_{\alpha},\overline{R}\_{0}^{\frac{1}{\alpha}},\hat{%
+R}\_{0}\left(a\_{0}\alpha\right)\right\} as small as possible so that each of the following conditions hold:

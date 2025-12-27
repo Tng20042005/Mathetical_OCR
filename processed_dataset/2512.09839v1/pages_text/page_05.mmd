@@ -1,0 +1,72 @@
+{tikzpicture}\draw
+
+[thick] (4.33,2.5) arc (30:78.52:5cm);
+\draw[thick] (-4.33,2.5) arc (150:101.48:5cm);
+\draw[thick] (-0.995,4.9) arc (185.739:354.261:1cm);
+\draw[dashed] (-1.333,5) arc (180:360:1.333cm);
+\draw[color=black] (0,4.5) node 3D\_{j};
+\draw[color=black] (1,4) node 4D\_{j};
+\draw[fill=black] (1.294, 4.8296) circle (2pt);
+\draw[color=black] (1.34, 5.1) node z\_{a\_{2}};
+\draw[fill=black] (-0.9063, 4.577) circle (2pt);
+\draw[color=black] (-1, 4.3) node z\_{a\_{1}};
+\draw[fill=black] (-3.5355, 3.5355) circle (2pt);
+\draw[color=black] (-3.5,3.2) node z\_{b};
+
+Figure 2. A possible image of W\_{2} with case (a) illustrated by the points z\_{a\_{1}} and z\_{a\_{2}}, and case (b) illustrated by z\_{b}.
+
+Case (a): Since h doesn’t change sign in B\_{1}(z), then an application of [HL11, Lemma 1.10] shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left|\nabla h(z)\right| | \displaystyle\leq 2\left|h(z)\right|\leq 2\sup\_{B\_{R}\setminus\bigcup 3D\_{j}}% \left|h\right|\leq 2e^{M}, |  |
+
+where we have applied (2.1).
+  
+Case (b): Since B\_{1}(z)\subset B\_{R}\setminus\bigcup 3D\_{j}, then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left|\nabla h(z)\right| | \displaystyle\leq 2\sup\_{B\_{1}\left(z\right)}\left|h\right|\leq 2\sup\_{B\_{R}% \setminus\bigcup 3D\_{j}}\left|h\right|\leq 2e^{M}. |  |
+
+By combining both cases, we see that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.6) |  | \sup\_{W\_{2}}\left|h\right|\leq e^{M},\;\sup\_{W\_{2}}\left|\nabla h\right|\leq 2% e^{M}. |  |
+
+We now use these estimates on h from above to understand the behavior of the analytic function \displaystyle f=\frac{h\_{x}-ih\_{y}}{z^{k}}.
+Define the set \Omega\_{1}\subset\Omega as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Omega\_{1}:=\left\{\frac{r}{2}<\left|z\right|<T\right\}\setminus\bigcup 3D\_{j}. |  |
+
+Using containment, assumption (2.4), and our normalization (2.3), we see that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\sup\_{B\_{\frac{r}{2}}\setminus\bigcup 3D\_{j}}\left|h\right|\leq% \sup\_{B\_{r}\setminus\bigcup 3D\_{j}}\left|h\right|\leq\left(\frac{16r}{R}\right% )^{3k}<1=\sup\_{B\_{T}\setminus\bigcup 3D\_{j}}\left|h\right|. |  |
+
+Therefore, there exists z\_{0}\in\Omega\_{1} for which \left|h(z\_{0})\right|=1.
+By (2.5), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\sup\_{W\_{1}}\left|h\right|\leq\left(\frac{16r}{R}\right)^{2k}<% \frac{1}{2}, |  |
+
+so there exists z\_{1}\in W\_{1} for which \left|h(z\_{1})\right|=\alpha<\frac{1}{2}.
+Let \Gamma be a path in \Omega\_{1} from z\_{0} to z\_{1} for which \ell\left(\Gamma\right)\leq 4R.
+If we assume that \left|\nabla h(z)\right|<\frac{1}{8R} for all z\in\Gamma, then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\frac{1}{2}<\left|h(z\_{1})-h(z\_{0})\right|=\left|\int\_{\Gamma}% \nabla h(w)\cdot dw\right|\leq\int\_{\Gamma}\left|\nabla h(w)\right|\left|dw% \right|<\frac{1}{8R}\ell\left(\Gamma\right)<\frac{1}{2}, |  |
+
+which is impossible so it follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\sup\_{\Omega}\left|\nabla h\right|\geq\sup\_{\Omega\_{1}}\left|% \nabla h\right|\geq\frac{1}{8R}. |  |
+
+Therefore,

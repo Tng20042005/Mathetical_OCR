@@ -1,0 +1,81 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.2) |  | \displaystyle r^{\delta}\geq\overline{C}\_{0}\alpha^{\frac{3}{2}}\log^{\frac{3}% {2}}r |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.3) |  | \displaystyle r\log r\geq c\_{d} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.4) |  | \displaystyle r^{\frac{\delta}{1+\delta}}\geq\frac{3a\_{0}\alpha C\_{H}}{2^{14}% \left(5c\_{0}+4\right)}\sqrt{\frac{C\_{K}}{32\ln 2}}\sqrt{\log r} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.5) |  | \displaystyle r^{\frac{\delta^{2}}{2}}\geq\left[2^{14}\left(5c\_{0}+4\right)+% \frac{2}{5}\right]\log r |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.6) |  | \displaystyle r^{\frac{5\delta^{2}}{6}}\geq\left[2^{14}\left(5c\_{0}+4\right)+% \frac{2}{5}\right]\log\left[\frac{4\alpha}{\sqrt{3}}\left(\frac{3}{2}r\right)^% {\alpha}\right]. |  |
+
+Here C\_{K} and c\_{d} are universal constants from Proposition 2 and C\_{H} is the universal Harnack constant from Lemma 1.
+
+For each k\in\mathbb{N}, define
+
+|  |  |  |
+| --- | --- | --- |
+|  | \alpha\_{k}=\frac{2+(k-1)N}{2+(k-2)N}>1. |  |
+
+Observe that \alpha\_{1}=\alpha, \alpha\_{k+1}=2-\frac{1}{\alpha\_{k}}<\alpha\_{k}, and \displaystyle\lim\_{k\to\infty}\alpha\_{k}=1.
+Choose \ell\in\mathbb{N} so that \frac{N}{2+\left(\ell-2\right)N}\leq\delta<\frac{N}{2+\left(\ell-3\right)N} or \alpha\_{\ell}\leq 1+\delta<\alpha\_{\ell-1}.
+For each k\in\left\{1,2,\ldots,\ell-1\right\}, recursively define \bar{r}\_{k+1}=\bar{r}\_{k}^{\alpha\_{k}+\delta}+\frac{1}{2}\bar{r}\_{k}-1, where \bar{r}\_{1} is from above.
+Take w\_{0}\in\mathbb{R}^{2} with \left|w\_{0}\right|\geq R\_{0}:=\bar{r}\_{\ell}^{\alpha}.
+After a rotation, we may assume that w\_{0} belongs to the positive x-axis.
+Choose r\_{1}\geq\bar{r}\_{1} so that with r\_{k+1}=r\_{k}^{\alpha\_{k}+\delta}+\frac{1}{2}r\_{k}-1 for each k\in\left\{1,\ldots,\ell-1\right\}, it holds that \left|w\_{0}\right|=r\_{\ell}^{\alpha}.
+Set z\_{k}=\left(r\_{k},0\right)\in\mathbb{R}^{2}\_{+} for each k\in\left\{1,\ldots,\ell-1\right\} so that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.7) |  | \left|z\_{k}\right|=\left|z\_{k-1}\right|^{\alpha\_{k-1}+\delta}+\frac{1}{2}\left% |z\_{k-1}\right|-1. |  |
+
+With \alpha=\alpha\_{1}>1, let T\_{\alpha}:\mathbb{R}^{2}\_{+}\to\mathbb{R}^{2} be as given in (4.1), see Section 4.
+Define v:\mathbb{R}^{2}\_{+}\to\mathbb{R} by v(z)=u(T\_{\alpha}(z)).
+
+###### Claim.
+
+For every k\in\left\{1,\ldots,\ell-1\right\},
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (5.8) |  | \displaystyle\left\|v\right\|\_{L^{\infty}\left(B\_{1}(z\_{k})\right)} | \displaystyle\geq\exp\left(-\left|z\_{k}\right|^{\alpha\_{k}+\delta}\right). |  |
+
+To prove the claim, we proceed by induction.
+Define w\_{1}=T\_{\alpha}(z\_{1})=(r\_{1}^{\alpha},0).
+Since r\_{1}\geq r\_{\alpha}, Lemma 3 implies that B\_{1}(w\_{1})\subset T\_{\alpha}(B\_{1}(z\_{1})) and then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left\|v\right\|\_{L^{\infty}\left(B\_{1}(z\_{1})\right)} | \displaystyle=\left\|u\circ T\_{\alpha}\right\|\_{L^{\infty}\left(B\_{1}(z\_{1})% \right)}=\left\|u\right\|\_{L^{\infty}\left(T\_{\alpha}(B\_{1}(z\_{1}))\right)}% \geq\left\|u\right\|\_{L^{\infty}\left(B\_{1}(w\_{1})\right)}. |  |
+
+As \left|w\_{1}\right|=r\_{1}^{\alpha}\geq\overline{R}\_{0}, an application of (5.1) from Theorem 3 shows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left\|u\right\|\_{L^{\infty}(B\_{1}(w\_{1}))}\geq\exp\left(-\overline{C}\_{0}% \left|w\_{1}\right|\log^{\frac{3}{2}}\left|w\_{1}\right|\right). |  |
+
+Because \left|w\_{1}\right|=\left|z\_{1}\right|^{\alpha}, then \overline{C}\_{0}\left|w\_{1}\right|\log^{\frac{3}{2}}\left|w\_{1}\right|=%
+\overline{C}\_{0}\left|z\_{1}\right|^{\alpha}\log^{\frac{3}{2}}\left|z\_{1}\right%
+|^{\alpha}=\overline{C}\_{0}\alpha^{\frac{3}{2}}\left|z\_{1}\right|^{\alpha}\log%
+^{\frac{3}{2}}\left|z\_{1}\right|\leq\left|z\_{1}\right|^{\alpha+\delta}, where we have used (5.2) to reach the last bound.
+Combining these observations shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left\|v\right\|\_{L^{\infty}\left(B\_{1}(z\_{1})\right)} | \displaystyle\geq\left\|u\right\|\_{L^{\infty}\left(B\_{1}(w\_{1})\right)}\geq% \exp\left(-\overline{C}\_{0}\left|w\_{1}\right|\log^{\frac{3}{2}}\left|w\_{1}% \right|\right)\geq\exp\left(-\left|z\_{1}\right|^{\alpha+\delta}\right). |  |
+
+In other words, (5.8) holds for k=1.
+
+Now assume that (5.8) holds for k-1\in\mathbb{N}.
+Define S\_{k}=\frac{1}{2}\left|z\_{k-1}\right| and R\_{k}=\left|z\_{k-1}\right|^{\alpha\_{k-1}+\delta}.
+Comparing with (5.7), we see that \left|z\_{k}\right|=R\_{k}+S\_{k}-1.
+Since B\_{1}(z\_{k-1})\subset B\_{R\_{k}-S\_{k}}(z\_{k}), then the inductive hypothesis shows that there exists z\_{0}\in\overline{B}\_{R\_{k}-S\_{k}}(z\_{k}) so that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\left|v(z\_{0})\right|\geq\exp\left(-\left|z\_{k-1}\right|^{\alpha\_% {k-1}+\delta}\right)=\exp\left(-R\_{k}\right). |  |

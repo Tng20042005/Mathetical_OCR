@@ -1,0 +1,132 @@
+[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1\_1) at (-6,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1\_2) at (-5.5,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1\_3) at (-4.5,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1\_4) at (-4,-8) ;
+
+\node
+
+[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1\_1) at (6,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1\_2) at (6.5,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1\_3) at (7.5,-8) ;
+\node[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1\_4) at (8,-8) ;
+
+\node
+
+[font=] at (-6,-8.3) \vdots;
+\node[font=] at (-6.3,-8.3) \vdots;
+\node[font=] at (-7,-8.3) \vdots;
+\node[font=] at (-7.3,-8.3) \vdots;
+\node[font=] at (-7.7,-8.3) \vdots;
+\node[font=] at (-8,-8.3) \vdots;
+\node[font=] at (-5.5,-8.3) \vdots;
+\node[font=] at (-4.5,-8.3) \vdots;
+\node[font=] at (-4,-8.3) \vdots;
+
+\node
+
+[font=] at (6,-8.3) \vdots;
+\node[font=] at (6.5,-8.3) \vdots;
+\node[font=] at (7.5,-8.3) \vdots;
+\node[font=] at (8,-8.3) \vdots;
+
+\draw
+
+(A) – (B);
+\draw(A) – (C);
+\draw(A) – (D);
+
+\draw
+
+(B) – (E);
+\draw(B) – (F);
+\draw(B) – (G);
+
+\draw
+
+(C) – (H);
+\draw(C) – (I);
+\draw(C) – (J);
+
+\draw
+
+(D) – (K);
+\draw(D) – (L);
+\draw(D) – (M);
+
+\draw
+
+(E) – (A1);
+\draw(F) – (B1);
+\draw(M) – (T1);
+
+\draw
+
+(A1) – (A1\_1);
+\draw(A1) – (A1\_2);
+\draw(A1) – (A1\_3);
+\draw(A1) – (A1\_4);
+
+\draw
+
+(B1) – (B1\_1);
+\draw(B1) – (B1\_2);
+\draw(B1) – (B1\_3);
+\draw(B1) – (B1\_4);
+
+\draw
+
+(T1) – (T1\_1);
+\draw(T1) – (T1\_2);
+\draw(T1) – (T1\_3);
+\draw(T1) – (T1\_4);
+
+\node
+
+[font=] at (0,-8) \dots;
+
+Figure 3: A practical application of the Albertson index.
+
+In fact, through Lemma 4.2 establishes a lower bound on the Albertson index of a tree based on its degree sequence.
+
+###### Lemma 4.2.
+
+Let T be a tree of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) where d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}. Then, the Albertson index satisfy
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\frac{2n\sqrt{2n}}{4}<\frac{(n^{2}-2m)\Delta\sqrt{2mn}}{2m\lambda\sqrt{2m}}% \leqslant\operatorname{irr}(T). |  | (24) |
+
+###### Proof.
+
+Assume a degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) where d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}. Clearly, \Delta\leqslant\lambda\varphi where we consider \varphi\approx 1.66, notice that d\_{n}-d\_{n-1}>d\_{2}, d\_{n-1}-d\_{n-2}>d\_{2},\dots, which indicate sufficient irregularity in the degree sequence. Thus, by considering the constant term is d\_{n}^{2}+d\_{1}^{2}+d\_{n}-d\_{1}-2n+2, which is used to form a lower bound on the Albertson index. Then, the Albertson index satisfy
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}2n\sqrt{2n}<\lambda\operatorname{irr}(T). |  | (25) |
+
+This relation leads us to, through the ratio achieved for the arithmetic mean of the elements of the given degree sequence \lambda and the maximum degree \Delta as n^{2}\leqslant\frac{3\Delta}{\lambda}. It follows that an upper bound on \operatorname{irr}(T) satisfy
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}(T)\leqslant\frac{2\lambda mn^{2}-4\Delta n-n^{3}}{4m% \sqrt{2m}}. |  | (26) |
+
+Therefore, by combining the inequalities (25) and (26), we deduce
+\sqrt{2\lambda mn^{2}}>\operatorname{irr}(T). Then,
+
+|  |  |  |
+| --- | --- | --- |
+|  | 4\Delta(d\_{n}-d\_{n-1})<(n^{2}-2m)\Delta, |  |
+
+where is satisfy the relationship (n^{2}-2m)\Delta\sqrt{2mn}>\operatorname{irr}(T)+4\Delta(d\_{n}-d\_{n-1}). Thus,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}(n^{2}-2m)\Delta\sqrt{2mn}>\operatorname{irr}(T)+4\Delta(d\_{n-k}-d\_{k}), |  | (27) |
+
+where \Delta<k<n. Then, we noticed that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\frac{(n^{2}-2m)\Delta\sqrt{2mn}}{2m\lambda\sqrt{2m}}\leqslant\operatorname% {irr}(T). |  | (28) |
+
+Through this relation, the upper bound has been proven. From (28) establishes a further lower bound for the Albertson index. Hence, for the left-hand side, by testing the ratio of the number of vertices to the number of edges, it satisfies 2\Delta n>m/n and 2n\sqrt{2n}>2\Delta. Then, according to (27) and (28) we find that

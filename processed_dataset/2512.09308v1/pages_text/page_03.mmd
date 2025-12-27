@@ -1,0 +1,55 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle f(\lambda):=\sum\_{j=1}^{n}\frac{c\_{1}(\kappa\_{j})}{2}A\_{j}\Big{(% }K\_{\frac{\kappa\_{j}-1}{2}}\left(|\lambda+w\_{j}|\right)|\lambda+w\_{j}|^{\frac{% \kappa\_{j}-1}{2}}+K\_{\frac{\kappa\_{j}-1}{2}}\left(|\lambda-w\_{j}|\right)|% \lambda-w\_{j}|^{\frac{\kappa\_{j}-1}{2}}\Big{)} |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle+\frac{c\_{1}(\kappa\_{0})}{2}A\_{0}K\_{\frac{\kappa\_{0}-1}{2}}(|% \lambda|)|\lambda|^{\frac{\kappa\_{0}-1}{2}}=\sum\_{j=1}^{n}\frac{c\_{2}(\kappa\_{% j})}{2}A\_{j}\left(\frac{1-\theta\_{\kappa\_{j}}(|\lambda+w\_{j}|)}{|\lambda+w\_{j}% |^{1-\kappa\_{j}}}+\frac{1-\theta\_{\kappa\_{j}}(|\lambda-w\_{j}|)}{|\lambda-w\_{j}% |^{1-\kappa\_{j}}}\right) |  |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.7) |  | +\frac{c\_{2}(\kappa\_{0})}{2}A\_{0}\frac{1-\theta\_{\kappa\_{0}(|\lambda|)}}{|% \lambda|^{1-\kappa\_{0}}}=\sum\_{j=0}^{n}f\_{\kappa\_{j},w\_{j}}(\lambda), |  |
+
+where c\_{1}(\kappa\_{j}):=2^{\mathbf{1}\_{\{0\}}(j)}{2^{\frac{1-\kappa\_{j}}{2}}}/\left%
+({\sqrt{\pi}{\Gamma\left({\kappa\_{j}}/{2}\right)}}\right), c\_{2}(\kappa\_{j}):=\left(2^{1-\mathbf{1}\_{\{0\}}(j)}\Gamma(\kappa\_{j})\cos%
+\left({\kappa\_{j}\pi}/{2}\right)\right)^{-1}, \mathbf{1}\_{A}(\cdot) is the indicator function of a set A, and K\_{\nu}(\cdot) is the modified Bessel function of the second kind
+
+|  |  |  |
+| --- | --- | --- |
+|  | K\_{\nu}(z)=\frac{1}{2}\int\_{0}^{\infty}s^{\nu-1}\exp\left(-\frac{1}{2}\left(s+% \frac{1}{s}\right)z\right)ds,\quad z\geq 0,\quad\nu\in\mathbb{R}. |  |
+
+The functions \theta\_{\kappa\_{j}}(\cdot) are defined as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.8) |  | \theta\_{\kappa\_{j}}(|\lambda|)=1-\frac{c\_{1}(\kappa\_{j})}{c\_{2}(\kappa\_{j})}K\_% {\frac{\kappa\_{j}-1}{2}}(|\lambda|)|\lambda|^{\frac{1-\kappa\_{j}}{2}}. |  |
+
+Let us introduce the values w\_{-j}=-w\_{j},\,\kappa\_{-j}=\kappa\_{j},\,j=1,...,n. Then, the spectral density (2.7) can be rewritten in the consise form
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.9) |  | f(\lambda)=\sum\_{j=-n}^{n}\frac{c\_{2}(\kappa\_{j})}{2}A\_{j}\frac{1-\theta\_{% \kappa\_{j}}(|\lambda+w\_{j}|)}{|\lambda+w\_{j}|^{1-\kappa\_{j}}}. |  |
+
+The spectral density has singularities at the origin and the points \pm w\_{j}, j=1,...,n, with power-law types |\lambda\pm w\_{j}|^{\kappa\_{j}-1}.
+For any \kappa\_{j}\in(0,1), the function \theta\_{\kappa\_{j}}(\lambda) is bounded and satisfies |\theta\_{\kappa\_{j}}(\lambda)|\leq 1 for all \lambda\in\mathbb{R}. Moreover, the following asymptotic holds
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\theta\_{\kappa\_{j}}(|\lambda|)=\frac{\Gamma\left(\frac{\kappa\_{j}% +1}{2}\right)}{2^{1-\kappa\_{j}}\,\Gamma\left(\frac{3-\kappa\_{j}}{2}\right)}% \left|\lambda\right|^{1-\kappa\_{j}}-\frac{|\lambda|^{2}}{2(\kappa\_{j}+1)}+o(|% \lambda|^{2}),\quad|\lambda|\to 0. |  |
+
+At infinity, the components f\_{\kappa\_{j},w\_{j}}(\cdot) of the spectral density (2.7) exhibit the following limit behavior
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle f\_{\kappa\_{j},w\_{j}}(\lambda)\sim\frac{A\_{j}\sqrt{\pi}c\_{1}(% \kappa\_{j})(e^{w\_{j}}+e^{-w\_{j}})}{2^{1/2+\mathbf{1}\_{\{0\}}(j)}|\lambda|^{1-% \kappa\_{j}/2}}e^{-|\lambda|},\quad|\lambda|\to\infty. |  |
+
+The spectral density f(\cdot) is an even function. We assume that W(\cdot) is a symmetric random measure. Hence, all random processes considered thereafter are real-valued.
+
+## 3. Multiscaling limits for fractional Riesz–Bessel equations
+
+This section examines the asymptotic behavior of FRBEs given by (2.1) with initial random conditions defined by (2.2) for the cases of classical long-memory and cyclic long-memory behavior.
+
+First, the result for only the cyclic long-memory case is presented.
+
+###### Theorem 3.1.
+
+Consider the random field u(t,x), t>0, x\in\mathbb{R}, defined by  (2.1) with \alpha>1/2, and the random initial condition (2.2). Let \xi(x), x\in\mathbb{R}, have a covariance function satisfying Assumption 2.1 with A\_{0}=0. If \varepsilon\to 0, then the finite-dimensional distributions of the random fields

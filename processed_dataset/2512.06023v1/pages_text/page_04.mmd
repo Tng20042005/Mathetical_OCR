@@ -1,0 +1,89 @@
+## 3 Bounds on The Minimum Value of Albertson Index
+
+The study of irregularity measures in graphs provides valuable insights into their structural properties and embeddings. Among these, the Albertson index, which quantifies the minimum total imbalance across all possible planar embeddings of a graph, is particularly significant for understanding the combinatorial and geometric constraints of trees. In this section, we explore bounds on the minimum Albertson index, \operatorname{irr}\_{\min}, for a tree T of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}), where the degrees are ordered such that d\_{n}\geqslant d\_{n-1}\geqslant\cdots\geqslant d\_{1}. The maximum degree of the tree is denoted by \Delta=d\_{n}.
+
+We present two key propositions that establish bounds on \operatorname{irr}\_{\min} in terms of the degree sequence. Proposition 3.1 provides a normalized bound, demonstrating that the minimum Albertson index scales relative to \Delta(\Delta-1)^{2}, yielding a value strictly between 0 and 1. Proposition 3.2 offers a lower bound for \operatorname{irr}\_{\min}, expressing it in relation to the sum of squared degrees and specific terms involving the smallest and largest degrees in the sequence. Together, these propositions deepen our understanding of the interplay between a tree’s degree distribution and its embedding irregularity, paving the way for further exploration of graph-theoretic properties in combinatorial settings.
+
+###### Proposition 3.1.
+
+Let T be a tree of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}). Then the minimum value of the Albertson index satisfies
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}0<\frac{2\operatorname{irr}\_{\min}}{\Delta(\Delta-1)^{2}}<1. |  | (4) |
+
+###### Proof.
+
+Suppose the degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) is ordered such that d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}. Then, clearly \Delta=d\_{n} and \operatorname{irr}\_{\min}>0. Thus,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\sqrt{\frac{n\Delta}{2}}<\operatorname{irr}\_{\min}. |  | (5) |
+
+Therefore,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}\_{\min}<nd\_{1}+\sum\_{i=1,2,4}(d\_{i}+2)(d\_{i}-1). |  | (6) |
+
+Note that since the degree sequence is increasing, inequality (6) holds for the two fundamental parameters n and \Delta. Therefore, when taking the difference between them, relation (7) is satisfied by considering relation (5). Thus,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}3d\_{n}^{2}-\frac{\Delta(\Delta-1)^{2}}{n}\leqslant 2\operatorname{irr}\_{% \min}. |  | (7) |
+
+From (5) and (7), we conclude that (4) holds.
+∎
+
+Proposition 3.2 holds for trees where the Albertson index is significantly larger than \sum d\_{i}^{2}, possibly trees with high maximum degrees or specific structures.
+
+###### Proposition 3.2.
+
+Let T be a tree of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}). Then the minimum value of the Albertson index satisfies
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}\_{\min}-\left(\sum\_{i=1}^{n}d\_{i}^{2}+2d\_{1}+d\_{2}-3d\_{3}% +2(d\_{n-1}+d\_{n})\right)\geqslant\frac{\Delta}{4}. |  | (8) |
+
+###### Proof.
+
+Let T be a tree of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) ordered such that d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}. Then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}\_{\min}\geqslant\sum\_{i=1}^{n}d\_{i}^{2}+c, |  | (9) |
+
+where c is a correction term depending on the degrees.
+
+For the degree sequence in non-increasing order \mathscr{D}=(\Delta,1,1,\dots,1), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sum\_{i=1}^{n}d\_{i}^{2}=\Delta^{2}+\Delta. |  |
+
+Also,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\lambda=\sum\_{i=1}^{n}d\_{i}^{2}+2d\_{1}+d\_{2}-3d\_{3}+2(d\_{n-1}+d\_{n})% \leqslant 4\Delta. |  | (10) |
+
+Since relation (10) involves the degree sequence with the terms 2d\_{1}+d\_{2}-3d\_{3} and twice the sum of the last two degrees 2(d\_{n-1}+d\_{n}), we note that it is necessary that
+
+|  |  |  |
+| --- | --- | --- |
+|  | 2(d\_{n-1}+d\_{n})>2d\_{1}+d\_{2}-3d\_{3}\quad\text{and}\quad d\_{n-1}+d\_{n}>\Delta |  |
+
+to satisfy the relation
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\frac{\operatorname{irr}\_{\min}}{2d\_{1}+d\_{2}-3d\_{3}+2(d\_{n-1}+d\_{n})}<d\_{n}. |  | (11) |
+
+Thus, from (9), (10), and (11), inequality (8) holds.
+∎
+
+Let \alpha=(d\_{1}+d\_{2})/2 and \beta=(d\_{n-1}+d\_{n})/2,
+
+###### Proposition 3.3.
+
+Let T be a tree of order n with degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) and integers \alpha and \beta. Then

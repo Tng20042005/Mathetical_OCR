@@ -1,0 +1,38 @@
+where \psi\_{11} and \psi\_{21} are defined in Theorem 13, and c\_{2}=\left(\frac{b(b-1)}{(p\_{2}-1)(p\_{2}-2)}\right)^{1/2}. Then the estimator \delta\_{D1} has smaller or equal risk function than that of the estimator \delta\_{\psi\_{11}}, \delta\_{\psi\_{21}} and so of the estimator \delta\_{12}=c\_{2}S\_{2}.
+2. (ii)
+
+   The estimator
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{D2}=\left(\psi\_{21}(U)+\psi\_{22}(U\_{1})-d\_{2}\right)S\_{2} |  |
+
+   has the smaller risk than that of the estimator \delta\_{\psi\_{21}}, \delta\_{\psi\_{22}} and so of the estimator \delta\_{22}=d\_{2}S\_{2} under the loss function L\_{2}(\cdot).
+
+### 4.2 Simulation study
+
+In this Subsection, we will do simulation study to compare the risk performance of the estimators proposed in the Section 4.1. To carry out the simulation study, we have generated 50,000 random samples from two populations following the distributions Exp\left(\mu\_{1},\frac{\sigma\_{1}}{\tau}\right) and Exp\left(\mu\_{2},\frac{\sigma\_{2}}{\tau}\right) for various values of (\mu\_{1},\mu\_{2}) and (\sigma\_{1},\sigma\_{2}). For multivariate Lomax distribution, we generate samples of \tau from \Gamma(b,1) distribution for b=3,5,7. Observed that the risk of the estimators are depends on the parameters \sigma\_{1} and \sigma\_{2} through \eta=\sigma\_{1}/\sigma\_{2}. The performance of the improved estimators is calculated using the relative risk improvement (RRI) with respect to the BAEE under the Stein loss L\_{2}(\cdot). The RRI of an estimator \delta is with the respect to \delta\_{1} is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{RRI}(\delta)=\frac{\mbox{Risk}(\delta\_{1})-\mbox{Risk}(\delta)}{\mbox{% Risk}(\delta\_{1})}\times 100\% |  |
+
+It is known that in a neighborhood of (\mu\_{1},\mu\_{2})=(0,0), [38]-type estimators gives the best performance. Thus we have computed the RRI around the neighborhood of (\mu\_{1},\mu\_{2})=(0,0). Further in the table where the risk improvement is given as 0.000\% this implies that it is less than 0.001\%.
+In Table ML1-ML4, we have presented RRI values of \delta\_{12}^{2}, \delta\_{13}^{2} and \delta\_{14}^{2} with respect to the BAEE \delta\_{21}. From the tabulated RRI values we have observed that the RRI of \delta\_{12}^{2}, \delta\_{13}^{2} and \delta\_{14}^{2} are decreasing function of b for b>2. Also the RRI of \delta\_{12}^{2}, \delta\_{13}^{2} and \delta\_{14}^{2} are increasing function of \eta for 0<\eta\leq 1.
+In Table ML5 we have tabulated the RRI \delta\_{11}^{2} and \delta\_{\varphi\_{\*}^{2}}.
+It can be easily seen that the risk of these estimators are independent of the parameter \mu\_{1} and \mu\_{2}. Thus we have compute the RRI of \delta\_{11}^{2} and \delta\_{\varphi\_{\*}^{2}} only at (\mu\_{1},\mu\_{2})=(0,0). Here the RRI of \delta\_{11}^{2} and \delta\_{\varphi\_{\*}^{2}} are decreasing function of b. RRI of \delta\_{11}^{2} is increasing in \eta but RRI of the estimator \delta\_{\varphi\_{\*}^{2}} is not monotone it is increasing when \eta<0.7 (approximately) and decreasing when \eta>0.7 (approximately). Overall, Table ML5 shows that \delta\_{\varphi\_{\*}^{2}} performs better than \delta\_{11}^{2} when 0<\eta<0.5 (approximately) and when \eta>0.5 (approximately) then \delta\_{11}^{2} performed better than \delta\_{\varphi\_{\*}^{2}}.
+Now we discuss the numerical performance of the estimators for the parameter \sigma\_{2} under the loss function L\_{2}(\cdot). In Table ML6, we present the RRI of \delta\_{21}^{2} and \delta\_{\psi\_{\*}^{2}} over \delta\_{22} for estimating \sigma\_{2}. The RRI of \delta\_{21} is increasing function of \eta, whereas the RRI of \delta\_{\psi\_{\*}^{2}} is not monotonic in \eta; it is increasing when \eta<0.7 (approximately) and then it decreases. In Table ML7, the RRI of \delta\_{D2} is an increasing function of \eta and a decreasing function of b.Moreover, the double shrinkage estimator \delta\_{D2} gives higher RRI values when the (\mu\_{1},\mu\_{2})=(0,0). Among the estimators \delta\_{21}^{2}, \delta\_{\psi\_{\*}^{2}} and \delta\_{D2} for estimating \sigma\_{2}, we can conclude that \delta\_{D2} performs better than \delta\_{21}^{2} and \delta\_{\psi\_{\*}^{2}} when (\mu\_{1},\mu\_{2})=(0,0). In all other cases, \delta\_{\psi\_{\*}^{2}} preferable than \delta\_{D2} and \delta\_{21}^{2} for estimating \sigma\_{2}.
+The same observations can be found for the loss function L\_{1}(\cdot), and hence we omit the discussion for the sake of simplicity.
+
+Table ML1: RRI of improved estimators of \sigma\_{1} under L\_{2}(\cdot) over \delta\_{21} when (\mu\_{1},\mu\_{2})=(-0.5,-0.3)
+
+| (p\_{1},p\_{2}) | \eta | b=3 | | | b=5 | | | b=7 | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | \delta\_{12}^{2} | \delta\_{13}^{2} | \delta\_{14}^{2} | \delta\_{12}^{2} | \delta\_{13}^{2} | \delta\_{14}^{2} | \delta\_{12}^{2} | \delta\_{13}^{2} | \delta\_{14}^{2} |
+| (5,5) | 0.1 | 0.000 | 0.132 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+|  | 0.3 | 0.019 | 0.651 | 0.000 | 0.000 | 0.077 | 0.000 | 0.000 | 0.000 | 0.000 |
+|  | 0.5 | 0.055 | 1.004 | 0.003 | 0.037 | 0.146 | 0.000 | 0.000 | 0.002 | 0.000 |
+|  | 0.7 | 0.124 | 1.209 | 0.007 | 0.030 | 0.196 | 0.000 | 0.000 | 0.008 | 0.000 |
+|  | 0.9 | 0.415 | 1.307 | 0.018 | 0.046 | 0.222 | 0.000 | 0.015 | 0.011 | 0.000 |
+| (5,8) | 0.1 | 0.000 | 0.027 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
+|  | 0.3 | 0.025 | 0.229 | 0.000 | 0.000 | 0.009 | 0.000 | 0.000 | 0.000 | 0.000 |

@@ -1,0 +1,46 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \pi(\sigma\_{1},\sigma\_{2},\mu\_{1},\mu\_{2}\big{|}X,S\_{1},Y,S\_{2})\propto\frac{% \tau^{p\_{1}+p\_{2}-2}}{\sigma\_{1}^{p\_{1}}\sigma\_{2}^{p\_{2}}}e^{-\frac{\tau S\_{1% }}{\sigma\_{1}}-\frac{\tau S\_{2}}{\sigma\_{2}}}\frac{p\_{1}\tau}{\sigma\_{1}}e^{-% \frac{p\_{1}\tau}{\sigma\_{1}}(X-\mu\_{1})}\frac{p\_{2}\tau}{\sigma\_{2}}e^{-\frac{% p\_{2}\tau}{\sigma\_{2}}(Y-\mu\_{2})}, |  | (5) |
+
+where \mu\_{1}\leq x,\ \mu\_{2}\leq y,\ 0<\sigma\_{1}\leq\sigma\_{2}. For the symmetric loss function L\_{1}(\cdot), the generalized Bayes estimator of \sigma\_{1} is obtained as follows
+
+|  |  |  |
+| --- | --- | --- |
+|  | \delta\_{1B}^{1}=\left(\frac{E\left(\sigma\_{1}\big{|}X,S\_{1},Y,S\_{2}\right)}{E% \left(\frac{1}{\sigma\_{1}}\big{|}X,S\_{1},Y,S\_{2}\right)}\right)^{1/2}, |  |
+
+where the expectation are taken with respect to the posterior distribution specified in the equation (5). After some calculation, it is found that the generalized Bayes estimator coincides with the estimator \delta\_{\varphi\_{\*}^{1}}.
+
+###### Remark 7.
+
+By using a similar argument, we can prove that the generalized Bayes estimator of \sigma\_{1} under the entropy loss function L\_{2}(\cdot), with respect to the same prior distribution \pi(\sigma\_{1},\sigma\_{2},\mu\_{1},\mu\_{2}), also coincides with the \delta\_{\varphi\_{\*}^{2}}.
+
+When \tau=1 with probability one, then the Theorem 2 reduces to the following result which was previously derived by [29] in Corollary 2.11 and Corollary 2.10 respectively.
+
+###### Theorem 3.
+
+1. (i)
+
+   Suppose \varphi\_{1}(u) be a function satisfies the following conditions:
+
+   1. (a)
+
+      \varphi\_{1}(u) is non-decreasing in u and \lim\limits\_{u\rightarrow\infty}\varphi\_{1}(u)=\left(\frac{1}{(p\_{1}-1)(p\_{1}-%
+      2)}\right)^{1/2}
+   2. (b)
+
+      \varphi\_{1}(u)\geq\varphi\_{\*}^{1}(u)=\left(\frac{B\left(\frac{u}{1+u};p\_{1}-2,%
+      p\_{2}-1\right)}{(p\_{1}+p\_{2}-2)(p\_{1}+p\_{2}-3)B\left(\frac{u}{1+u};p\_{1},p\_{2}%
+      -1\right)}\right)^{1/2}.
+
+   Then the estimator \delta\_{\varphi\_{1}} defined in (3) dominates \delta\_{11} under the symmetric loss function L\_{1}(\cdot).
+2. (ii)
+
+   Let \varphi\_{1}(u) satisfies the following conditions:
+
+   1. (a)
+
+      \varphi\_{1}(u) is non-decreasing in u and \lim\limits\_{u\rightarrow\infty}\varphi\_{1}(u)=\frac{1}{(p\_{1}-1)}
+   2. (b)
+
+      \varphi\_{1}(u)\geq\varphi\_{\*}^{2}(u)=\frac{B\left(\frac{u}{1+u};p\_{1}-1,p\_{2}-%
+      1\right)}{(p\_{1}+p\_{2}-2)B\left(\frac{u}{1+u};p\_{1},p\_{2}-1\right)}.

@@ -1,0 +1,72 @@
+- | --- | --- |
+|  |  | \displaystyle\leq C\_{1}\|u\_{n}\|\_{s,p,\beta}^{\eta\_{2}}\left(\int\_{\mathbb{R}^% {N}}|x|^{\alpha}|u\_{n}-u|^{q}\,dx\right)^{\frac{1}{q}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq C\_{2}\left(\int\_{\mathbb{R}^{N}}|x|^{\alpha}|u\_{n}-u|^{q}\,% dx\right)^{\frac{1}{q}}\to 0\quad\text{ as }n\to\infty, |  |
+
+where C, C\_{1}, C\_{2}, \eta\_{1}, \eta\_{2} and \omega\_{1} are positive constants depending only of N,s,p,q.
+
+Therefore, since by Remark 4.1 below, the operator \mathcal{\tilde{L}} defined on \mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N})\times\mathcal{W}^{s,p}\_{\beta}(%
+\mathbb{R}^{N}) as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle\mathcal{\tilde{L}}u,v\rangle:=\langle\mathcal{L}\_{s,p,\gamma}\,u,v% \rangle+\int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx |  |
+
+fulfills the (S)-property of compactness, due to Proposition 6.3 and the previous computations, we get that u\_{n}\to u strongly in \mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}).
+
+(iv)   To obtain a positive solution, we choose the mapping P defined as P(u)=|u|. This map is continuous, \mathcal{J}(P(u))=\mathcal{J}(u) for all u\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}), P(0)=0 and, taking P(v)=v when v\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}) is positive.
+
+Therefore, the conclusion follow from Lemma 6.1. This concludes the proof.
+
+###### Remark 4.1.
+
+Given u,v\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}), s\in(0,1], by Hölder’s inequality
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\langle\mathcal{L}\_{s,p,\gamma}\,u,v\rangle | \displaystyle\leq\gamma\left(\int\_{\mathbb{R}^{N}}(|\nabla u|^{p-1})^{p^{% \prime}}\right)^{\frac{1}{p^{\prime}}}\left(\int\_{\mathbb{R}^{N}}|\nabla v|^{p% }\right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle+(1-\gamma)\left(\iint\_{\mathbb{R}^{2N}}\left(\frac{|u(x)-u(y)|}{% |x-y|^{\frac{N+sp}{p^{\prime}}}}\right)^{p^{\prime}}dxdy\right)^{\frac{1}{p^{% \prime}}}\left(\iint\_{\mathbb{R}^{2N}}\frac{|v(x)-v(y)|^{p}}{|x-y|^{N+sp}}\,% dxdy\right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\gamma\|\nabla u\|\_{p}^{p-1}\|\nabla v\|\_{p}+(1-\gamma)[u]\_{s,p}% ^{p-1}[v]\_{s,p}. |  |
+
+If \gamma=0, and hence s\in(0,1), then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.1) |  | \displaystyle\langle\mathcal{L}\_{s,p,\gamma}\,u,v\rangle\leq[u]\_{s,p}^{p-1}[v]% \_{s,p}\leq\|u\|\_{s,p,\beta}^{p-1}\|v\|\_{s,p,\beta}. |  |
+
+If \gamma\in(0,1], and hence s=1, using (3.3), we get that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (4.2) |  | \displaystyle\langle\mathcal{L}\_{s,p,\gamma}\,u,v\rangle | \displaystyle\leq\gamma\|\nabla u\|\_{p}^{p-1}\|\nabla v\|\_{p}+(1-\gamma)[u]\_{s% ,p}^{p-1}[v]\_{s,p}\leq C\|u\|\_{1,p,\beta}^{p-1}\|v\|\_{1,p,\beta}. |  |
+
+Moreover,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.3) |  | \int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx\leq\int\_{\mathbb{R}^{N}}|x|^{% \frac{\beta(p-1)}{p}}|u|^{p-1}|x|^{\frac{\beta}{p}}v\,dx\leq\left(\int\_{% \mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\right)^{\frac{p-1}{p}}\left(\int\_{% \mathbb{R}^{N}}|x|^{\beta}|v|^{p}\right)^{\frac{1}{p}}. |  |
+
+Hence, from (4.1), (4.2) and (4.3), we get that the operator \mathcal{\tilde{L}} defined as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle\mathcal{\tilde{L}}\_{s,p,\gamma}u,v\rangle:=\langle\mathcal{L}\_{s,p,% \gamma}\,u,v\rangle+\int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx |  |
+
+fulfills the following relation
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle\mathcal{\tilde{L}}\_{s,p,\gamma}u,v\rangle\leq C\|u\|\_{s,p,\beta}^{p-1}% \|v\|\_{s,p,\beta}. |  |
+
+Moreover, by definition
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle\mathcal{\tilde{L}}\_{s,p,\gamma}u,v\rangle=\langle\mathcal{L}\_{s,p,% \gamma}\,u,u\rangle+\int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\leq C\|u\|\_{s,% p,\beta}^{p}. |  |
+
+Therefore, in light of Proposition 6.3, the operator \mathcal{\tilde{L}}\_{s,p,\gamma} satisfies the (S)-property of compactness according to Definition 6.2.

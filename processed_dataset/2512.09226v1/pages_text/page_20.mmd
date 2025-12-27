@@ -1,0 +1,63 @@
+Finally, we show that uniformly random generators satisfy Conjecture 7.
+Recall the theorem of Dixon [13]: an iid sample of uniformly random permutations \pi\_{1},...\pi\_{r} (r\geq 2) generate the subgroup Alt\_{n} (the alternating group) or the entire symmetric group Sym\_{n} with probability >1-O(1/\log\log n)=1-o(1).
+In particular, the probability that the generated subgroup is Alt\_{n} equals 1/2^{r}\pm o(1).
+
+{prop}
+
+[Naor]
+For each r\geq 2 let \pi\_{1},...,\pi\_{r}\in Sym\_{n} be iid sampled permutations from the uniform distribution. Then with high probability
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{E}d\_{\{\pi\_{1},...,\pi\_{r}\}}(1,W\_{t})\gtrsim t\;\;\;for\;all\;\;t=1,.% ..,O(\log n), |  |
+
+where \{W\_{t}\}\_{t=1}^{\infty} is the simple random walk on <\pi\_{1},...,\pi\_{r}>.
+
+###### First proof.
+
+Note that by a theorem of Dixon [13], with high probability <\pi\_{1},...,\pi\_{r}>=Sym\_{n} or Alt\_{n} (the alternating group).
+We will consider the action of the group <\pi\_{1},...,\pi\_{r}>\curvearrowright\binom{[n]}{4} on the collection of all 4-element subsets on n.
+We can build the Schreier graph \Gamma\_{n}(4) with vertices \binom{[n]}{4}, where we connect (A,\pi\_{i}[A]) for each generator \pi\_{i} and subset A\in\binom{[n]}{4}.
+  
+By a theorem of Friedman-Joux-Roichman-Stern-Tillich [16],
+\Gamma\_{n}(4) is an expander with high probability.
+Denote by W\_{t} the simple random walk on Sym\_{n} (or Alt\_{n})
+and by W\_{t}(\{1,2,3,4\}) the image of the set \{1,2,3,4\} under the permutation W\_{t}, and by d\_{\Gamma\_{n}(4)} the shortest path metric on the expander graph.
+By the basic fact above we get:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{E}d\_{\Gamma\_{n}(4)}(\{1,2,3,4\},W\_{t}(\{1,2,3,4\}))\gtrsim t\;\;\;for% \;all\;\;t=1,...,O(\log n). |  |
+
+  
+
+The shortest path metric on the Schreier graph is at most by the shortest path metric on the Cayley graph (as the latter covers the former).
+This means that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{E}\;d\_{\{\pi\_{1},...,\pi\_{r}\}}(1,W\_{t})\gtrsim t\;\;\;for\;all\;\;t=1% ,...,O(\log n). |  |
+
+∎
+
+###### Second proof.
+
+By a theorem of Dixon-Pyber-Seress-Shalev[14] for any nonempty freely reduced word w in the generators and inverses \{\pi\_{1},...,\pi\_{r},\pi\_{1}^{-1},...,\pi\_{r}^{-1}\},
+p\_{n}:=\mathbb{P}[w=1]\to 0 as n\to\infty.
+By the union bound on all words of length <\log\_{2r}1/p\_{n}-1, we conclude that the
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{E}\;girth(\Gamma(Sym\_{n},\{\pi\_{1},...,\pi\_{r}\}))\gtrsim\log\dfrac{1}% {p\_{n}}\to\infty\;\;\;as\;n\to\infty. |  |
+
+For small times, the simple random walk on a degree 2r regular graph of high girth is identical to that of a 2r-regular tree, therefore \mathbb{E}d\_{\{\pi\_{1},...,\pi\_{r}\}}(1,W\_{t})\gtrsim t for times 1\leq t\leq girth(\Gamma)/2.
+∎
+
+## 8. Proof of test space characterization of type
+
+If X has trivial Rademacher type, then L\_{1} is finitely representable into X by Pisier [42].
+By Theorem 1, for each n\in\mathbb{N}, \Gamma(Sym\_{n},\{c,t\}) embeds into l\_{1}^{m} with distortion <1000 for sufficiently high m,
+hence \Gamma(Sym\_{n},\{c,t\}) embeds into X with distortion <1000.
+
+For the other direction, it suffices to show the following claim.
+The embedding is similar to that of Arzhantseva, Guba and Sapir [2] for \mathbb{Z}/n\wr\mathbb{Z}/n.

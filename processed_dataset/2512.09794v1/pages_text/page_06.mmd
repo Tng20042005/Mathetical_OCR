@@ -1,0 +1,65 @@
+Let s\in(0,1] such that 0<s<N/p. Let \alpha\in\mathbb{R} be such that -sp<\alpha, (1-sp)\alpha\leq(N-1)sp, and p<q<\frac{p(N+\alpha)}{N-sp}. Then, there are C>0 and c=(q,s) with -sp<c<\alpha, such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.6) |  | \left(\int\_{\mathbb{R}^{N}}|x|^{c}|u|^{q}\,dx\right)^{1/q}\leq C\|u\|\_{{s,p}}, |  |
+
+for all u\in W\_{rad}^{s,p}(\mathbb{R}^{N}).
+
+###### Proof.
+
+Let s\in(0,1] such that 0<s<N/p, and consider \alpha,q such that -sp<\alpha\leq\frac{(N-1)sp}{1-sp} and p<q<\frac{p(N+\alpha)}{N-sp}. Let u\in W^{s,p}\_{rad}(\mathbb{R}^{N}). We choose 0<s^{\prime}<s closed enough to s so that it satisfies the following conditions. First, s^{\prime} satisfies the relation
+
+|  |  |  |
+| --- | --- | --- |
+|  | q<\dfrac{p(N+\alpha)}{N-s^{\prime}p}, |  |
+
+which is true since the function
+
+|  |  |  |
+| --- | --- | --- |
+|  | g(r,t):=\frac{p(N+r)}{N-tp} |  |
+
+is increasing in r and t, and s^{\prime} is close to s. Moreover, letting
+
+|  |  |  |
+| --- | --- | --- |
+|  | \delta:=sp-s^{\prime}p>0, |  |
+
+we require s^{\prime} close enough to s so that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.7) |  | \left(\dfrac{1-s^{\prime}p}{1-s^{\prime}p-\delta}\right)\left(Ns^{\prime}p-s^{% \prime}p+\delta N\right)<(N-1)s^{\prime}p. |  |
+
+Now, by taking s^{\prime} even closer to s, there is c=c(q,s)<\alpha such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.8) |  | q=\dfrac{p(N+c)}{N-s^{\prime}p}. |  |
+
+In order to apply Lemma 3.4, we need to check that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.9) |  | (1-s^{\prime}p)c\leq(N-1)s^{\prime}p. |  |
+
+Observe that from (3.8), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | c=\dfrac{q(N-s^{\prime}p)}{p}-N, |  |
+
+and so recalling the assumptions on q and \alpha, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.10) |  | \begin{split}(1-s^{\prime}p)c&=(1-s^{\prime}p)\left(\dfrac{q(N-s^{\prime}p)}{p% }-N\right)\\ &<(1-s^{\prime}p)\left(\dfrac{(N-s^{\prime}p)}{p}.\frac{p(N+\alpha)}{N-sp}-N% \right)\\ &\leq(1-s^{\prime}p)\left(\dfrac{N-s^{\prime}p}{N-sp}\left(N+\dfrac{(N-1)sp}{1% -sp}\right)-N\right)\\ &=\dfrac{1-s^{\prime}p}{1-sp}(Nsp-s^{\prime}p)\\ &=\dfrac{1-s^{\prime}p}{1-s^{\prime}p-\delta}(Ns^{\prime}p-s^{\prime}p+\delta N% )<(N-1)s^{\prime}p,\end{split} |  |
+
+where we have used the assumption on \delta given in (3.7). This proves that c satisfies (3.9).
+
+Then, by Lemma 3.4, it follows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.11) |  | \left(\int\_{\mathbb{R}^{N}}|x|^{c}|v|^{q}\,dx\right)^{1/q}\leq C\|v\|\_{H^{s^{% \prime},p}}, |  |

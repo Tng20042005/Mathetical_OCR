@@ -1,0 +1,41 @@
+###### Proof.
+
+Let \partial be an LND on \mathbb{K}[X\_{f}] corresponding to R. and let \{f\_{i}\} be a finite generating set of the algebra \mathbb{K}[X]. Then \partial(f\_{i})=h\_{i}/f^{n\_{i}} for some h\_{i}\in\mathbb{K}[X] and n\_{i}\in\mathbb{Z}\_{\geq 0}. Put N=\max\{n\_{i}\}.
+By Corollary 2 we have \partial(f)=0, so \widetilde{\partial}=f^{N}\partial is also an LND on \mathbb{K}[X\_{f}]. Let \widetilde{R} be the \mathbb{G}\_{a}-subgroup on X\_{f} corresponding to \widetilde{\partial}.
+Clearly, \widetilde{\partial}(f\_{i})\in\mathbb{K}[X] for all i, so by the Leibnitz rule we have \widetilde{\partial}(\mathbb{K}[X])\subset\mathbb{K}[X]. It follows that \widetilde{\partial} is an LND on \mathbb{K}[X], hence the action of \widetilde{R} extends to the whole X.
+
+Let us show that for every point x\_{0}\in X\_{f} the orbits \widetilde{R}x\_{0} and Rx\_{0} coincide.
+Let \mathfrak{m}\subset\mathbb{K}[X] be the maximal ideal of x\_{0}.
+Taking into account that f=f(x\_{0})\ {\rm mod}\ \mathfrak{m}, for the rescaled parameterization \widetilde{t}=f(x\_{0})^{N}t we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \exp(t\widetilde{\partial})\exp(-\widetilde{t}\partial)\mathfrak{m}=\sum\_{i=0}% \frac{t^{i}(f^{N}\partial)^{i}}{i!}(\exp(-\widetilde{t}\partial)\mathfrak{m})= |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | =\sum\_{i=0}\frac{(tf^{N})^{i}\partial^{i}}{i!}\exp(-\widetilde{t}\partial)% \mathfrak{m}\subset\sum\_{i=0}\frac{(tf^{N}(x\_{0}))^{i}\partial^{i}}{i!}(\exp(-% \widetilde{t}\partial)\mathfrak{m})+\mathfrak{m}\subset\mathfrak{m}. |  |
+
+Since both ideals are maximal, the last inclusion is an equality, which implies \exp(t\widetilde{\partial})x\_{0}=\exp(\widetilde{t}\partial)x\_{0} for all t\in\mathbb{K}.
+∎
+
+Every irreducible quasiaffine spherical G-variety X naturally embeds in the affine spherical variety \widetilde{X}=\operatorname{Spec}\mathbb{K}[X] with closed G-stable boundary \widetilde{X}\setminus X of codimension at least two.
+In view of this, in what follows we shall work with affine spherical varieties X together with a fixed closed G-stable boundary subset \partial X keeping in mind the possibility to extend the results to the open quasiaffine subvariety X\setminus\partial X.
+
+###### Lemma 3.
+
+Let X be an irreducible affine G-variety and let \partial X\subset X be a closed G-stable subvariety. Let Y be a G-orbit not contained in \partial X and let D\_{Y}\subset Y be a proper closed B-stable subvariety. Then there is a B-semiinvariant function f\in\mathbb{K}[X] vanishing on \partial X\cup D\_{Y} and not vanishing identically on Y.
+
+###### Proof.
+
+Let \overline{Y} be the closure of Y in X and let \pi\colon\mathbb{K}[X]\rightarrow\mathbb{K}[\overline{Y}] be the natural surjective map given by restricting functions. Let I\_{\partial X}\subset\mathbb{K}[X] be the ideal defining \partial X. Similarly, let I\_{D\_{Y}}\subset\mathbb{K}[\overline{Y}] be the ideal defining D\_{Y}.
+Since Y is not contained in the union of \partial X and D\_{Y}, there is a function F\in\mathbb{K}[X] that vanishes on \partial X\cup D\_{Y} and not on Y, so that F\in I\_{\partial X} and \pi(F)\in I\_{D\_{Y}}\setminus\{0\}. By the Lie–Kolchin theorem we may assume that \pi(F) is B-semiinvariant. Since G is reductive, there is a G-module decomposition \langle GF\rangle=\left.\operatorname{Ker}\pi\right|\_{\langle GF\rangle}\oplus
+V for some G-submodule V\subset\langle GF\rangle. Consider the expression F=f\_{0}+f with respect to this decomposition.
+Clearly, \pi maps V isomorphically to its image \pi(V)=\pi(\langle GF\rangle), so f is also B-semiinvariant and hence has all the desired properties.
+∎
+
+## 3. Local structure theorems
+
+Now let us recall some versions of the Local Structure Theorem. We will use the form discovered by F. Knop ([Kno]) in slightly less general formulation since we work only with affine varieties.
+
+Let X be a normal irreducible affine G-variety.

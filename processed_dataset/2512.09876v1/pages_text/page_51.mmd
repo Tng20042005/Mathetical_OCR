@@ -1,0 +1,73 @@
+|  |  |  |
+| --- | --- | --- |
+|  | A\_{0}(X,\operatorname{I}^{1},\mathcal{L})\rightarrow\widetilde{\operatorname{% CH}}{}\_{0}(X,\mathcal{L})\xrightarrow{F}\operatorname{CH}\_{0}(X)\rightarrow 0. |  |
+
+Therefore, it suffices to prove that the abelian group A\_{0}(X,\operatorname{I}^{1},\mathcal{L}) vanishes.
+Next, the exact sequence (3.4.6.a) gives the following short exact sequence:
+
+|  |  |  |
+| --- | --- | --- |
+|  | A\_{0}(X,\operatorname{I}^{2},\mathcal{L})\rightarrow A\_{0}(X,\operatorname{I}^% {1},\mathcal{L})\rightarrow A\_{0}(X,\operatorname{K}^{M}\_{1}/2,\mathcal{L})% \rightarrow 0. |  |
+
+where A\_{0}(X,\operatorname{I}^{2},\mathcal{L}) is a sub-quotient of
+\bigoplus\_{x\in X\_{(0)}}\operatorname{I}^{2}(\kappa(x),\lambda\_{x}\otimes%
+\mathcal{L}\_{x}).
+Therefore, assumption (1) implies that A\_{0}(X,\operatorname{I}^{2},\mathcal{L})=0, and it follows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.6.a) |  | A\_{0}(X,\operatorname{I},\mathcal{L})\simeq A\_{0}(X,\operatorname{K}^{M}\_{1}/2% ,\mathcal{L})\simeq A\_{0}(X,\operatorname{K}^{M}\_{1},\mathcal{L})/2\stackrel{{% \scriptstyle\eqref{eq:rem:SK1}}}{{\simeq}}\operatorname{SK}^{\prime}\_{1}(X)/2. |  |
+
+Thus assumption (2) allows us to conclude.
+∎
+
+###### Example 4.4.7.
+
+We now give examples where the assumptions of Theorem 4.4.6 are fulfilled.
+
+1. (1)
+
+   The first assumption of Theorem 4.4.6 is concerned with fields k such that
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | I^{2}(k)=0. |  |
+
+   Given the separation of the I-adic filtration of the Witt group of k, this amounts to require that I^{2}(k)=I^{3}(k).
+
+   If k has characteristic different from 2,
+   the two Milnor conjectures (see [Voe03], [OVV07, Th. 4.1]) gives an isomorphism I^{2}(k)/I^{3}(k)\simeq H^{2}(k,\mu\_{2}) with étale cohomology.
+   In particular, if k is a field of étale cohomological 2-dimension at most 2, then I^{2}(k)=0.
+   This is the case if k is finite, or even quasi-finite.
+
+   Assume that k is a field of characteristic 2.
+   Then Kato proved in [Kat82, Introduction, Theorem (2)] that I^{2}(k)/I^{3}(k)=\nu(2)\_{k} where \nu(2)\_{k} is a sub-group
+   of \Omega^{2}(k/k^{2}), the absolute Kähler 2-differential forms of k.
+   On deduces that I^{2}(k)=0 if k is either perfect, or the function field of a curve over a perfect base field,
+   or a local field with perfect residue field.
+2. (2)
+
+   The second assumption of Theorem 4.4.6 is satisfied when X is the spectrum of a regular domain R such that \operatorname{SK}\_{1}(R)=0. In particular, this is the case when R is either euclidean, or if R=\mathcal{O}\_{F,S} for a number field F ([Mil71, Corollary 16.3, page 159]),
+   or if R is a Dedekind domain of finite type over a finite field ([Bas68, VI Corollary 8.5, page 337]).
+
+In summary, Theorem 4.4.6 applies to the following cases:
+
+###### Corollary 4.4.8.
+
+Let X=\operatorname{Spec}R, where R is either a Dedekind domain of finite type over \mathbf{Z}, or a Euclidean domain such that all the residue fields of its closed points satisfy I^{2}(k)=0. Then the map \widetilde{\operatorname{CH}}{}\_{0}(X,\mathcal{L})\rightarrow\operatorname{CH}%
+\_{0}(X) in (4.4.4.b) is an isomorphism.
+
+The following lemma is useful to compute \operatorname{SK}^{\prime}\_{1} in the singular case:
+
+###### Lemma 4.4.9.
+
+Let X be a 1-dimensional, reduced, Noetherian Nagata scheme. Let us consider the cartesian square:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \xymatrix@R=10pt@C=18pt{T\ar[r]\ar\_{q}[d]\ar@{}|\Delta[rd]&\widetilde{X}\ar^{p% }[d]\\ Z\ar|i[r]X} |  |
+
+such that Z is the singular locus of X, and \widetilde{X} the normalization of X.
+Then Z is a finite set of closed points of X, and T/Z is finite.
+
+Moreover, if \operatorname{SK}\_{1}(\widetilde{X})=0, then there exists an exact sequence:

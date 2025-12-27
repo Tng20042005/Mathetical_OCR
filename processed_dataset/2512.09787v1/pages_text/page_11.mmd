@@ -1,0 +1,47 @@
+Consider the case \theta\_{5}=m\in\mathbb{N} being a known parameter and \theta\_{3}=1. It follows from Binomial expansion that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle g(y;\bm{\theta}) | \displaystyle= | \displaystyle\exp\left(-\sum\_{k=0}^{m}\left(\begin{array}[]{c}\hidden@noalign{% }\hfil m\\ \hidden@noalign{}\hfil k\end{array}\right)\theta\_{2}^{k}\theta\_{4}^{m-k}y^{k}-% \theta\_{1}y+\theta\_{6}\log y-\log c(\bm{\theta})\right) |  |
+|  |  | \displaystyle= | \displaystyle\exp\left(\sum\_{j=0}^{m+2}a\_{j}(\bm{\theta})T\_{j}(y)+b(\bm{\theta% })\right), |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{j}(\bm{\theta})=\left\{\begin{array}[]{cc}-\left(\begin{array}[]{c}m\\ j\end{array}\right)\theta\_{2}^{j}\theta\_{4}^{m-j},&j=0,1,\cdots,m,\\ -\theta\_{1},&j=m+1,\\ \theta\_{6},&j=m+2,\end{array}\right. |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{j}(y)=\left\{\begin{array}[]{cc}y^{j},&j=0,1,\cdots,m,\\ y,&j=m+1,\\ \log y,&j=m+2,\end{array}\right. |  |
+
+and b(\bm{\theta})=-\log c(\bm{\theta}). That means, g(y;\bm{\theta}) belongs to exponential family, provided that \theta\_{3}=1 and \theta\_{5}=m.
+
+### 4.2 Least squares estimation
+
+Let \mathbf{Y}=(Y\_{1},\cdots,Y\_{n}) be a random sample of g(\cdot;\bm{\theta}).
+Consider the empirical CDF (ECDF) \hat{G}(y) defined as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \hat{G}(y):=\frac{1}{n}\sum\_{i=1}^{n}\mathbbm{1}\_{\{Y\_{i}\leq y\}}, |  |
+
+where \mathbbm{1}\_{A} denotes the indicator of the set A.
+
+A widely used estimation method in linear models is the least squares estimator (LSE) (cf. [24]). In our case, we aim to estimate \bm{\theta} by comparing the theoretical CDF G(y;\bm{\theta}), given in (4), with the ECDF \hat{G}(y). To realize this, we minimize the quadratic loss function over a search space \Theta\_{0}\subset\Theta. Thus, the LSE, \hat{\bm{\theta}}=\bm{\hat{}}{\theta}\_{LSE}(\mathbf{Y}), is given by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \hat{\bm{\theta}}\in\arg\min\left\{\sum\_{j=1}^{n}\left[G(Y\_{j};\bm{\theta})-% \hat{G}(Y\_{j})\right]^{2}\right\}, |  | (29) |
+
+with respect to \bm{\theta}\in\Theta\_{0}.
+
+### 4.3 Maximum likelihood estimation
+
+Let \mathbf{Y}=(Y\_{1},\cdots,Y\_{n}) be a random sample of g(\cdot;\bm{\theta}). The (random) log-likelihood function is given by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \ell(\bm{\theta})=\ell(\bm{\theta};\mathbf{Y})=-n\log c(\bm{\theta})+\theta\_{6% }\sum\_{j=1}^{n}\log Y\_{j}-\theta\_{1}\sum\_{j=1}^{n}Y\_{j}-\sum\_{j=1}^{n}\left(% \theta\_{2}Y\_{j}^{\theta\_{3}}+\theta\_{4}\right)^{\theta\_{5}}. |  | (30) |
+
+The maximum likelihood estimator (MLE) is given by

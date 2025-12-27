@@ -1,0 +1,53 @@
+arallel to an element of \Phi. Throughout this document, we may interchangeably think of an element A\in\mathcal{M} as a coset or a vertex of the associated polytope. In line with usual matroid theory, when \mathcal{M} is a Coxeter matroid, it’s elements will be referred to as *bases*.
+
+### 2.1. Minuscule Coxeter Matroids and the Strong Exchange Property
+
+Let W be a Weyl group associated to the root system \Phi, P\leq W parabolic, and \mathcal{M}\subseteq W/P. Then \mathcal{M} possesses the *strong exchange property* if for all A,B\in\mathcal{M}, there exists a reflection s\in\Phi such that the mirror defined by s separates A and B, and sA,sB\in\mathcal{M}. Observe that this definition mimics the symmetric exchange property for usual matroids. Any collection of cosets with the strong exchange property is a Coxeter matroid [3, Theorem 6.1.2], but the converse fails [3, 4.2.4]. Finally, the *Bruhat order* is a partial ordering on W which extends to W/P. When the resulting poset is a lattice, then P, is said to be *minuscule* [15]. In that case, P is always maximal. That is, P=P\_{r}\coloneqq\langle s\_{1},\dots\hat{s}\_{r},\dots,s\_{n}\rangle.
+
+###### Remark 2.1.
+
+Minuscule parabolic subgroups may also be defined in terms of fundamental weights coming from representation theory. The quotient \mathbb{G}/\mathbb{P} of a reductive group by a parabolic subgroup is naturally a projective variety. For minuscule representations, the ambient projective space of this variety naturally comes with a basis indexed by the cosets of the Weyl group. This allows one to concretely write equations in explicit coordinates that cut out \mathbb{G}/\mathbb{P} [17].
+
+### 2.2. Set-theoretic Identification of Cosets
+
+In the types A\_{n-1},B\_{n},C\_{n}, and D\_{n} with minuscule parabolic P one can identify cosets in W/P with subsets of [n]. We may identify the Weyl group W(A\_{n-1}) with the symmetric group S\_{n}. The generating set is that of neighbor transpositions s\_{i}=(i,i+1), and all P\_{r}=\langle s\_{1},\dots,\hat{s}\_{r},\dots,s\_{n}\rangle=\operatorname{stab}\_{%
+S\_{n}}([r]) are minuscule. We then identify any coset wP\_{r} with w([r])\in 2^{[n]} for w\in S\_{n}. Moreover, under this identification, the polytope \Delta(A\_{n}/P\_{r}) is identified with the (r,n)-hypersimplex \Delta(r,n)=\mathrm{conv}\{e\_{A}\mid A\in\binom{[n]}{r}\}.
+
+The Weyl group of B\_{n} and C\_{n} is the hyperoctahedral group, i.e., the group of permutations of [n]\sqcup-[n] commuting with the involution i\mapsto-i. As generators we have s\_{i}=(i,i+1)(-i,-(i+1)) for i=1,\dots,n-1, and s\_{n}=(n,-n). The only minuscule parabolic subgroup of B\_{n} is P\_{n}=\langle s\_{1},\dots,s\_{n-1}\rangle=\operatorname{stab}\_{W(B\_{n})}(-[n]). We now identify cosets in W(B\_{n})/P with subsets of [n] via wP\mapsto w(-[n])\cap[n]. Hence, the polytope \Delta(B\_{n}/P\_{n})=\mathrm{conv}\{e\_{A}-(-\frac{1}{2},\dots,-\frac{1}{2})\mid
+A%
+\in 2^{[n]}\} is exactly the shifted unit n-cube.
+
+### 2.3. Strong Exchange Equations
+
+Let (W,P) be minuscule, and \mathcal{M}\subseteq W/P. Let \mu\_{\mathcal{M}}\in\{0,\infty\}^{W/P} such that \mu\_{\mathcal{M}}(A)=0 if A\in\mathcal{M} and \mu\_{\mathcal{M}}(A)=\infty otherwise. Recently, in [6] the authors introduced collections of tropical equations \mathcal{F} such that the minimum of f\in\mathcal{F} is attained at least twice when evaluated at \mu\_{\mathcal{M}} if and only if \mathcal{M} is a strong Coxeter matroid. These equations are square-free, quadratic, and reflect the polyhedral structure of \Delta(W/P), where the (degree-2)-monomials correspond to pairs of antipodes on a face. These equations are similar in spirit to those studied in [1, 2], however the latter works only cover usual matroids, and consider different hyperfields to detect matroidal properties.
+
+## 3. The Coxeter Dressian
+
+In this section, we will introduce valuated Coxeter matroids as well as the spaces parameterizing them. Recall that \mathbb{T} denotes the tropical \min-semifield with operations denoted by \oplus and \odot.
+
+###### Definition 3.1.
+
+Let W be a Weyl group and P a minuscule parabolic subgroup. Let \mathcal{F} be the collection of associated strong exchange equations (see Equations
+3,
+4,
+5,
+6,
+7). The *(strong) Coxeter Dressian* of W/P is the tropical prevariety
+
+|  |  |  |
+| --- | --- | --- |
+|  | \text{Dr}(W,P)=\bigcap\_{f\in\mathcal{F}}V^{\operatorname{trop}}(f)\subseteq% \mathbb{T}^{W/P}. |  |
+
+We will call points \mu\in\operatorname{Dr}(W,P) *valuated Coxeter matroids*. Usually, to declutter notation, we will write the Coxeter Dressian, for example, as \operatorname{Dr}(A\_{n},P\_{r}).
+
+###### Definition 3.2.
+
+Let E\subset\mathbb{R}^{n} be finite. We say that a set
+\mathcal{F}\subseteq\mathbb{T}[x\_{e}|e\in E] of tropical polynomials with trivial coefficients is *affinely invariant* if for any function \mu:E\to\mathbb{T}
+and for for all affine linear functions \varphi:\mathbb{R}^{n}\to\mathbb{R} we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mu\in V^{\operatorname{trop}}(\mathcal{F})\text{ if and only if }\mu+\varphi|% \_{E}\in V^{\operatorname{trop}}(\mathcal{F})\,. |  |
+
+###### Theorem 3.3.

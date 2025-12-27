@@ -1,0 +1,44 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd 0&0\\ {\mathrm{Ker}(\theta\_{V}\otimes 1+1\otimes\overline{\nabla})}{\mathbb{L}% \otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}}\\ {\bigoplus\_{j}\mathrm{gr}^{-j}\_{\mathrm{Hdg}}\mathcal{V}\otimes\_{\mathcal{O}}% \mathcal{O}\mathbb{C}(j)}{\mathbb{L}\otimes\_{\underline{\mathbb{Q}\_{p}}}% \mathcal{O}\mathbb{C}}\\ {\bigoplus\_{j}\mathrm{gr}^{-j}\_{\mathrm{Hdg}}\mathcal{V}\otimes\_{\mathcal{O}}% \mathcal{O}\mathbb{C}(j)\otimes\_{\mathcal{O}}\Omega^{1}}{\mathbb{L}\otimes\_{% \underline{\mathbb{Q}\_{p}}}\mathcal{O}\mathbb{C}\otimes\_{\mathcal{O}}\Omega}% \arrow["{=}"{description},from=1-1,to=1-2]\arrow[from=1-1,to=2-1]\arrow[from=1% -2,to=2-2]\arrow["{=}"{description},nohead,from=2-1,to=2-2]\arrow[from=2-1,to=% 3-1]\arrow[from=2-2,to=3-2]\arrow["{\theta\_{\mathcal{V}}\otimes 1+1\otimes% \overline{\nabla}}",from=3-1,to=4-1]\arrow["{=}"{description},nohead,from=3-2,% to=3-1]\arrow["{1\otimes\overline{\nabla}}",from=3-2,to=4-2]\arrow["{=}"{% description},nohead,from=4-2,to=4-1] |  |
+
+Now, note that \theta\_{\mathcal{V}}\otimes 1+1\otimes\overline{\nabla} preserves the filtration
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathrm{Fil}^{i}\_{\mathrm{HT}}(\oplus\_{j}\ldots)=\oplus\_{j\geq i}\ldots. |  |
+
+The induced filtration on the kernel is the Hodge-Tate filtration on \mathbb{L}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}, and because \theta\_{\mathcal{V}} increases the j degree, the associated graded is computed as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathrm{Ker}\left(\oplus\_{j}\mathrm{gr}^{-j}\_{\mathrm{Hdg}}\mathcal{V}\otimes\_% {\mathcal{O}}\mathcal{O}\mathbb{C}(j))\xrightarrow{1\otimes\overline{\nabla}}% \oplus\_{j}\mathrm{gr}^{-j}\_{\mathrm{Hdg}}\mathcal{V}\otimes\_{\mathcal{O}}% \mathcal{O}\mathbb{C}(j)\otimes\_{\mathcal{O}}\Omega\right)=\oplus\_{j}\mathrm{% gr}^{-j}\_{\mathrm{Hdg}}\mathcal{V}\otimes\_{\mathcal{O}}\hat{\mathcal{O}}(j) |  |
+
+and this computation *is* the Hodge-Tate comparison isomorphism for \mathbb{L}.
+
+We can also use this diagram to compute \theta\_{\mathbb{L}}. Indeed, by [7, Proposition 3.5.2], the geometric Sen operator on \mathcal{O}\mathbb{C} is -\overline{\nabla}. Tate twists do not change the geometric Sen operator, nor does tensoring with an étale vector bundle, so the geometric Sen operator on
+
+|  |  |  |
+| --- | --- | --- |
+|  | \bigoplus\mathrm{gr}\_{\mathrm{Hdg}}^{-j}\mathcal{V}\otimes\_{\mathcal{O}}% \mathcal{O}(\mathbb{C})(j) |  |
+
+is just -1\otimes\overline{\nabla}. On the kernel of \theta\_{\mathcal{V}}\otimes 1+1\otimes\overline{\nabla} we have \theta\_{\mathcal{V}}\otimes 1=-1\otimes\overline{\nabla}, and thus on this kernel, which is \mathbb{L}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}},
+the geometric Sen operator agrees with \theta\_{\mathcal{V}}\otimes 1. In particular, it increases the Hodge-Tate filtration by 1, and the image in the associated graded of the endomorphism sheaf is precisely the map induced by \theta\_{\mathcal{V}} and the Hodge-Tate comparison.
+∎
+
+## References
+
+* [1]
+  T. He (2026)
+  Perfectoidness via Sen theory and applications to Shimura varieties.
+  J. Amer. Math. Soc. 39 (1),  pp. 95–176.
+  External Links: ISSN 0894-0347,1088-6834,
+  Document,
+  Link,
+  MathReview Entry
+  Cited by: §1.2.5,
+  §1.
+* [2]
+  S. Howe and C. Klevdal (2023)
+  Admissible pairs and p-adic Hodge structures II: the bi-analytic Ax-Lindemann theorem.
+  arXiv:2308.11064.

@@ -1,0 +1,46 @@
+###### Corollary 5.2 (Smoothed discrepancy for indicator functions).
+
+Let N\geq 2, 1\leq r\leq\lfloor N/2\rfloor, and let A\subset\mathbb{Z}/N\mathbb{Z}. Define f\_{A} as above and g\_{A}:=f\_{A}\*F\_{r}. Then for all n\in\mathbb{Z}/N\mathbb{Z},
+
+|  |  |  |
+| --- | --- | --- |
+|  | |g\_{A}(n)|=\Bigl{|}\sum\_{m\in\mathbb{Z}/N\mathbb{Z}}\Bigl{(}\mathbf{1}\_{A}(n-m% )-\frac{|A|}{N}\Bigr{)}F\_{r}(m)\Bigr{|}\leq\sqrt{\frac{5}{3}}\,r^{-1/2}\|f\_{A}% \|\_{2}\leq\sqrt{\frac{5}{12}}\,r^{-1/2}N^{1/2}. |  |
+
+Equivalently,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Bigl{|}\sum\_{m\in\mathbb{Z}/N\mathbb{Z}}\mathbf{1}\_{A}(n-m)F\_{r}(m)-\frac{|A|% }{N}\Bigr{|}\ll r^{-1/2}N^{1/2}, |  |
+
+where the implied constant is absolute.
+
+###### Proof.
+
+The first inequality follows from Theorem 5.1 applied to f\_{A}. The second inequality uses \|f\_{A}\|\_{2}\leq\sqrt{N}/2.
+∎
+
+###### Remark 5.3.
+
+One may interpret \sum\_{m}\mathbf{1}\_{A}(n-m)F\_{r}(m) as a Fejér-type smoothed local density of A around the point n, with averaging window of size \sim r. Corollary 5.2 then states that, in the worst case, the deviation of this local smoothed density from the global density |A|/N is controlled by O(r^{-1/2}N^{1/2}). This is consistent with the heuristic that smoothing over a window of size r reduces fluctuations by a factor of order r^{1/2} when only L^{2} control is available.
+
+###### Remark 5.4 (Relation to interval discrepancy).
+
+If one is interested in sharp interval discrepancy
+
+|  |  |  |
+| --- | --- | --- |
+|  | D(A,r):=\max\_{I}\Bigl{|}|A\cap I|-\frac{|A|}{N}|I|\Bigr{|}, |  |
+
+where I ranges over intervals of length O(r) in \mathbb{Z}/N\mathbb{Z}, then one may relate D(A,r) to the smoothed quantities g\_{A}(n) in Corollary 5.2 by comparing the sharp interval indicator with a suitable translate of the triangular kernel F\_{r}. This introduces an additional error of at most 1 due to the discrete boundary, a phenomenon that is well known in the use of smoothing kernels; see, for instance, [1, § VII.2]. We do not pursue this direction here, since our main focus is the L^{2}\to L^{\infty} bound.
+
+## 6 A small numerical illustration
+
+For completeness, we briefly illustrate the behavior of the bound from Theorem 5.1 on a small example. Let N=101 and choose a subset A\subset\mathbb{Z}/N\mathbb{Z} of size |A|=50 at random. Define f\_{A} and g\_{A}=f\_{A}\*F\_{r} as above. For r\in\{5,10,20\}, one observes numerically that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|g\_{A}\|\_{\infty}\approx c(r)\,r^{-1/2}N^{1/2} |  |
+
+with c(r) bounded and typically significantly smaller than the worst-case constant \sqrt{5/12}\approx 0.645 appearing in Corollary 5.2. This is in line with the fact that Corollary 5.2 is uniform in A and does not exploit any additional structure.
+
+We omit detailed tables, as they depend on the particular choice of A, but such computations can be carried out straightforwardly in any numerical environment that supports discrete convolution and random subset generation.

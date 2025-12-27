@@ -1,0 +1,46 @@
+}, and let \Lambda be a non-uniform lattice in Isom(X). We call such a group a non-uniform rank one lattice. By Selberg’s lemma [SEL60], \Lambda is virtually torsion-free. Since we are concerned with the quasi-isometry type of \Lambda, we may assume without loss of generality that \Lambda is torsion-free. Then X/\Lambda is a finite-volume non-compact manifold. By truncating the cusps of X/\Lambda we obtain a compact manifold with boundary Y, and the universal cover is a neutered space B\subset X. By definition, B is the complement in X of the union of an infinite equivariant family of open horoballs with pairwise disjoint closures. We refer to the boundaries of these horoballs as the peripheral horospheres (or just horospheres) of B. Since X/\Lambda has finite volume, it has finitely many cusps and Y has finitely many boundary components. It follows that there is an R>0 such that the d\_{X}-distance between every pair of distinct horosopheres of B is at least R. A horosphere O is centered at a point p in the ideal boundary \partial X. We say that p is the basepoint of O and that O is based at p. Since X/\Lambda has finite volume, the basepoints of the horospheres of B are dense in \partial X. In general, two horospheres in X share a basepoint if and only if the Hausdorff distance between them is finite.
+
+Since B is a subspace of X, it has two natural metrics: the restricted metric d\_{X}|\_{B}, and the induced length metric d\_{B}(x,y)\vcentcolon=\inf\_{p}\text{length}\_{X}(p), where the infimum is taken over all paths in B between x and y. We will often use the following fact, sometimes without mention.
+
+###### Lemma 8 ([DK18] Lemma 24.2).
+
+The identity map (B,d\_{B})\to(B,d\_{X}|\_{B}) is 1-Lipschitz and uniformly proper.
+
+Recall that a map f:Z\to W between proper metric spaces is uniformly proper if f is coarse Lipschitz and there exists a function \zeta:\mathbb{R}\_{+}\to\mathbb{R}\_{+} such that \text{diam}(f^{-1}(B(w,r)))\leq\zeta(r) for all w\in W, r>0.
+
+## 3. Projecting a quasi-action
+
+Let X,\Lambda,Y, and B be as above. Let L be a lattice in a simply connected nilpotent Lie group N. Define M to be the product Y\times(N/L). Let \Gamma be a finitely generated group and assume that \Gamma is quasi-isometric to \Lambda\times L. Then by Lemma 7, the quasi-isometry between \Gamma and \pi\_{1}(M)=\Lambda\times L induces a k-cobounded k-quasi-action h of \Gamma on \widetilde{M}=B\times N for some k\geq 1. We denote the metrics on B\times N,X, and B by d,d\_{X}, and d\_{B}, respectively.
+
+We first show that h induces a quasi-action of \Gamma on B. In order to do so, we use a theorem of Kapovich–Kleiner–Leeb [KKL98] which implies that quasi-isometries of the product B\times N coarsely project to quasi-isometries of B. Their theorem is more general than we need, so we only state its application in our situation.
+
+###### Proposition 9.
+
+[KKL98, Theorem B]
+There exist D>0 and k^{\prime}\geq 1, both depending only on k, for which the following holds: For each \gamma\in\Gamma, there exists a (k^{\prime},k^{\prime})-quasi-isometry \psi(\gamma):B\to B with k^{\prime}-dense image such that the diagram
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd B\times N\rightarrow[r,"h(\gamma)"]\rightarrow[d,"\pi"^{\prime}]&B% \times N\rightarrow[d,"\pi"]\\ B\rightarrow[r,"\psi(\gamma)"^{\prime}]B |  |
+
+commutes up to an error bounded by D, where \pi:B\times N\to B is the natural projection.
+
+In an effort to make calculations more readable, we denote the value of \pi at (b,n)\in B\times N by \pi[(b,n)] instead of \pi((b,n)).
+
+###### Lemma 10.
+
+The map \psi:\Gamma\to\textup{QI}(B) is a K-cobounded K-quasi-action for some K\geq 1.
+
+###### Proof.
+
+By definition, we already know that each \psi(\gamma) is a (k^{\prime},k^{\prime})-quasi-isometry with k^{\prime}-dense image. In the following calculations, 1 denotes the identity element of \Gamma and e denotes the identity element of N. For all b\in B,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle d\_{B}(\psi(1)(b),b) | \displaystyle\leq d\_{B}(\psi(1)(b),\pi[h(1)(b,e)])+d\_{B}(\pi[h(1)(b,e)],\pi[(b% ,e)]) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq D+d(h(1)(b,e),(b,e)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq D+k. |  |

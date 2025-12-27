@@ -1,0 +1,43 @@
+A surface \Sigma of infinite type falls into one of two classes depending on whether or not it contains a finite-type non-displaceable subsurface—a subsurface which intersects its image under every homeomorphism of \Sigma. According to recent work, the large-scale geometry of the big mapping class group \operatorname{Map}(\Sigma) often depends on whether or not \Sigma contains a non-displaceable subsurface of finite type. For example, if \Sigma does contain a non-displaceable subsurface of finite type, then \operatorname{Map}(\Sigma) is not coarsely bounded [MR23] and it admits a continuous and nonelementary action by isometries on a Gromov hyperbolic space [HQR22] (the authors also prove that under an extra condition, \operatorname{Map}(\Sigma) admits such an action only if \Sigma contains a non-displaceable subsurface). On the other hand, if \Sigma does not contain a non-displaceable subsurface and \operatorname{Map}(\Sigma) is not CB, then \operatorname{Map}(\Sigma) has infinite asymptotic dimension [9].
+
+In an effort to further classify the number of ends of big mapping class groups, we focus on those surfaces \Sigma which do not contain a non-displaceable subsurface. Since we are attempting to analyze the large-scale geometry of \operatorname{Map}(\Sigma), we are only interested in the surfaces for which \operatorname{Map}(\Sigma) is CB generated, but not CB itself. A broad class of surfaces which satisfy these conditions is the class of avenue surfaces (Section 2.6). Avenue surfaces were defined in [HQR22], and the only additional condition imposed on them is a weak topological condition called tameness on the space of ends of \Sigma. Tameness is rather technical and lengthy to define, so we choose to work within the slightly more restrictive, but much more easily defined, class of stable surfaces. Stable surfaces form a substantial subclass of tame surfaces, and it has become somewhat standard to work with them. For example, several other works in the literature [BV23, 9, 4] similarly restrict to stable surfaces in order to conveniently work within the framework developed in [MR23]. That being said, we expect our results to also hold in the setting of surfaces with tame end spaces.
+
+Every avenue surface has two distinct ends e\_{+} and e\_{-} which are maximal with respect to the partial pre-order \preceq on {\mathrm{End}}(\Sigma) defined in [MR23]. It follows from [SCH24] that for every end x which is an immediate predecessor of e\_{+} (and e\_{-}), the equivalence class of x is either a discrete set or a totally disconnected perfect set, where the equivalence relation is defined by \preceq. In the first case, we say the end x is of discrete type. We can now state our main theorem.
+
+###### Theorem.
+
+If \Sigma is a stable avenue surface with at least one discrete-type end, then \operatorname{Map}(\Sigma) is one-ended.
+
+The most basic example of a surface covered by this theorem is the bi-infinite flute surface. This surface indeed has exactly two maximal ends, and all other ends, represented by punctures, form a single equivalence class homeomorphic to \mathbb{Z}. On the other hand, one surface which is not covered by our theorem is the Jacob’s ladder surface, which has exactly two ends, each accumulated by genus. It may seem at first that the Jacob’s ladder surface should be no more difficult to handle than the bi-infinite flute surface. However, one significant difference is that in the bi-infinite flute surface, curves cannot meaningfully “interact” with the punctures, since the punctures are not points on the surface, but in the Jacob’s ladder surface, curves may “interact” with the handles in a highly non-trivial way. We do not know whether our methods may be generalized to deal with this additional layer of complexity, so we ask the following.
+
+###### Question 1.2.
+
+Is the mapping class group of the Jacob’s ladder surface one-ended? More generally, if \Sigma is a stable avenue surface without any discrete-type ends, is \operatorname{Map}(\Sigma) one-ended?
+
+A common strategy to study mapping class groups is to construct appropriate metric spaces on which the groups act with good geometric properties. For finite-type surfaces, these spaces are often graphs whose vertices are represented by curves and arcs on the surface, and the fundamental example is the curve graph defined in [HAR81]. Avenue surfaces fall in the broader class of translatable surfaces, for which Schaffer-Cohen [SCH24] introduced the *translatable curve graph*, whose vertices correspond to simple closed curves which separate the two maximal ends, and whose edges connect pairs of vertices whenever the corresponding curves bound a subsurface homeomorphic to one of a pre-chosen finite collection of subsurfaces (Section 2.7). The translatable curve graph is not only an analogue of the curve graph in the setting of translatable surfaces; it is even quasi-isometric to the associated mapping class group [SCH24]. So every property which is invariant under quasi-isometry holds for the mapping class group precisely when it holds for the translatable curve graph. Therefore, we directly analyze the translatable curve graph in order to determine the number of ends of the mapping class group. To this end, we construct an operation called lassoing that takes a vertex in the graph to an adjacent vertex and, more generally, takes a (well-behaved) path to an adjacent path. Furthermore, we find some lower bounds, which we call flux and Hamming distance, on the graph distance which are crucial to guaranteeing that points are sufficiently far from a given basepoint. Section 3 presents a proof of the theorem in the case of the bi-infinite flute, capturing many of the key ideas, and the theorem is proved in full in Section 4.
+
+We finish with some more questions that arose during our investigation.
+
+### Open Questions
+
+This paper concerns only those surfaces which do not contain a non-displaceable subsurface of finite type. This, of course, raises the following question.
+
+###### Question 1.3.
+
+Can one classify the number of ends of \operatorname{Map}(\Sigma) when \Sigma is an infinite-type surface which contains a non-displaceable subsurface of finite type?
+
+In particular, this question is open for the specific surface studied in [BAV16] that initiated much of the recent interest in big mapping class groups.
+
+###### Question 1.4.
+
+Let \Sigma=\mathbb{R}^{2}\setminus\mathcal{C} be the plane minus a Cantor set. How many ends does \operatorname{Map}(\Sigma) have?
+
+Schaffer-Cohen proved that \operatorname{Map}(\Sigma) is quasi-isometric to the loop graph [SCH24, Theorem 6.5], which, in turn, is quasi-isometric to the ray graph [BAV16, Proposition 3.11]. Bavard–Walker gave a characterization of the Gromov boundary of the ray graph in [BW18]. However, their results do not immediately determine the number of ends of the ray graph.
+
+A question that approaches the subject from another angle is:
+
+###### Question 1.5.
+
+Does there exist a big mapping class group with more than one end?
+
+Recall that a finitely generated group is two-ended if and only if it contains an infinite cyclic subgroup of finite index. This motivates the next question.

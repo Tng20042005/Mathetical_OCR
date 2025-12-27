@@ -1,0 +1,53 @@
+Computational complexity is dominated by this OT computation. The source and target distributions are both supported on n points, and we require accuracy \delta=n^{-p/(d+2p)}. Computing the relevant cost matrix requires time O(n^{2}d). Using a state of the art OT solver based on entropic OT (e.g., Luo et al., 2023) gives a running time of O(C\_{\infty}n^{2}/\delta)=O(C\_{\infty}n^{2+p/(d+2p)}), where C\_{\infty} is the largest distance between a source point and a target point.
+
+### B.4 One-Dimensional Refinements (3)
+
+In one dimension, OT maps can be expressed concisely in terms of CDFs; in particular, if \mu and \nu have strictly increasing CDFs F\_{\mu} and F\_{\nu}, respectively, then the map T^{\star}(x)=F\_{\nu}^{-1}(F\_{\mu}(x)) solves the \Wp(\mu,\nu) problem for all p\geq 1. As a result, many OT-based inference tasks become more analytically tractable when d=1, including map estimation. In fact, minor adjustments to folklore techniques imply that the optimal risk of n^{-1/(2p)} is achievable when d=1. We now provide a clean derivation of this risk bound using the Kolmogorov-Smirnov (KS) distance.
+
+The KS distance is a useful alternative to the TV metric in one dimension, defined via \|\mu-\nu\|\_{\KS}\defeq\sup\_{t\in\R}|(\mu-\nu)((-\infty,t])|=\|F\_{\mu}-F\_{\nu}%
+\|\_{\infty}. We always have \|\mu-\nu\|\_{\KS}\leq\|\mu-\nu\|\_{\tv}, since \|\mu-\nu\|\_{\tv} can alternatively be expressed as \sup\_{A\text{ meas.}}|(\mu-\nu)(A)|. A comparison with \Wp mirroring Fact 1 is direct.
+
+###### Lemma 11 (\Wp-KS comparison).
+
+For \mu,\nu\in\cP([0,D]), we have
+\Wp(\mu,\nu)\leq D\|\mu-\nu\|\_{\KS}^{1/p}.
+
+###### Proof.
+
+Writing F,G for the CDFs of \mu and \nu, with generalized inverses F^{-1} and G^{-1}, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\Wp(\mu,\nu)^{p} | \displaystyle=\int\_{0}^{1}|F^{-1}(u)-G^{-1}(u)|^{p}\dd u |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq D^{p-1}\int\_{0}^{1}|F^{-1}(u)-G^{-1}(u)|\dd u |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=D^{p-1}\int\_{0}^{D}|F(x)-G(x)|\dd x |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq D^{p}\|\mu-\nu\|\_{\KS}. |  |
+
+Taking pth roots gives the statement.
+∎
+
+The KS distance admits useful empirical convergence guarantees not shared by the TV distance.
+
+###### Fact 2 (KS empirical convergence, Massart, 1990).
+
+For all \mu\in\cP(\R), \E[\|\mu-\hat{\mu}\_{n}\|\_{\KS}]\leq 1/\sqrt{n}.
+
+Moreover, for fixed \mu and \nu, there exists an optimal kernel for \Wp(\mu,\nu) (namely, based on CDFs as above), which is near-optimal for all \mu^{\prime} in a KS neighborhood of \mu, as shown next.
+
+###### Lemma 12 (KS corruptions in \mu).
+
+For \cX,\cY\subseteq\R, fix \mu\in\cP(\cX) and \nu\in\cP(\cY). There exists an optimal kernel \kappa^{\star}\in\cK(\cX,\cY) for the \Wp(\mu,\nu) problem such that, for all \mu^{\prime}\in\cP(\cX), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \cE\_{p}(\kappa^{\star};\mu^{\prime},\nu)\lesssim\diam(\cY)\|\mu-\mu^{\prime}\|% \_{\KS}^{1/p}. |  |
+
+###### Proof.
+
+Write F,F^{\prime},G, for the CDFs of \mu, \mu^{\prime}, and \nu, respectively, and let \eps=\|\mu-\mu^{\prime}\|\_{\KS}=\|F-F^{\prime}\|\_{\infty}. Write D=\diam(\cY) and suppose without loss of generality t

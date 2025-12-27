@@ -1,0 +1,68 @@
+Fix \mu\in\cP(\cX) and \nu,\nu^{\prime}\in\cP(\cY). For each \kappa\in\cK(\cX,\cY), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\bigl{|}\cE\_{p}(\kappa;\mu,\nu)-\cE\_{p}(\kappa;\mu,\nu^{\prime})% \bigr{|}\leq 2\,\Wp(\nu,\nu^{\prime})\leq 2\diam(\cY)\|\nu-\nu^{\prime}\|\_{\tv% }^{1/p}.\vspace{-1mm} |  |
+
+The \cE\_{p} metric tolerates \Wp perturbations of \mu when \kappa is appropriately Hölder continuous.
+
+###### Lemma 4 (\Wp stability in \mu).
+
+Fix \mu,\mu^{\prime}\!\in\!\cP(\cX), \nu\!\in\!\cP(\cY), and \kappa\!\in\!\cK(\cX,\cY) with \Wp(\kappa\_{x},\kappa\_{x^{\prime}})\!\leq\!L\|x\!-\!x^{\prime}\|^{\alpha} for all x,x^{\prime}\in\cX, where 0<\alpha\leq 1. Setting \rho=\Wp(\mu^{\prime},\mu), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\cE\_{p}(\kappa;\mu^{\prime},\nu)-\cE\_{p}(\kappa;\mu,\nu)|\leq 2\rho+2L\rho^{% \alpha}. |  |
+
+In particular, the above holds with \alpha=1 whenever \kappa is induced by a deterministic, L-Lipschitz map.
+
+We can treat TV perturbations of the source measure when \cY is bounded.
+
+###### Lemma 5 (TV stability in \mu).
+
+Fix \mu,\mu^{\prime}\in\cP(\cX), \nu\in\cP(\cY), and kernel \kappa\in\cK(\cX,\cY). Setting \eps=\|\mu-\mu^{\prime}\|\_{\tv}, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \cE\_{p}(\kappa;\mu^{\prime},\nu)\lesssim\cE\_{p}(\kappa;\mu,\nu)+\cE\_{p}(\kappa% ;\mu,\nu)^{\frac{1}{p}}\Wp(\mu,\nu)^{\frac{p-1}{p}}+\diam(\cY)\eps^{1/p}. |  |
+
+In particular, we have \cE\_{1}(\kappa;\mu^{\prime},\nu)\lesssim\cE\_{1}(\kappa;\mu,\nu)+\diam(\cY)\eps.
+
+That is, if \mu^{\prime} and \mu share substantial mass, and \kappa performs well on \mu, then its performance on \mu^{\prime} under \cE\_{p} cannot be substantially worse. In particular, the proof in A.6 decomposes \mu=\alpha+\beta, where \alpha is its shared mass with \mu^{\prime}, and uses that, if \kappa is optimal for the \Wp(\mu,\nu) problem, then it must also be optimal for the \Wp(\alpha,\kappa\_{\sharp}\alpha) sub-problem.
+
+Finally, we consider the behavior of \cE\_{p} when evaluated on composite kernels, which we employ in some of the subsequent kernel estimators.
+
+###### Lemma 6 (Kernel composition).
+
+Fixing an intermediate space \cZ\subseteq\R^{d}, let \mu\in\cP(\cX), \nu\in\cP(\cY), \lambda\in\cK(\cX,\cZ), and \kappa\in\cK(\cZ,\cY). We then bound
+
+|  |  |  |
+| --- | --- | --- |
+|  | \bigl{|}\cE\_{p}(\kappa\circ\lambda;\mu,\nu)-\cE\_{p}(\kappa;\lambda\_{\sharp}\mu% ,\nu)\bigr{|}\leq 2\smash{\left(\iint\|z-x\|^{p}\dd\lambda\_{x}(z)\dd\mu(x)% \right)^{\frac{1}{p}}}.\vspace{1mm} |  |
+
+In particular, for \lambda induced by a deterministic map f:\cX\to\cZ, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \bigl{|}\cE\_{p}(\kappa\circ f;\mu,\nu)-\cE\_{p}(\kappa;f\_{\sharp}\mu,\nu)\bigr{% |}\leq 2\|f-\Id\|\_{L^{p}(\mu)}. |  |
+
+This can be applied iteratively to analyze the composition of many kernels, peeling off one at a time.
+
+## 3 Finite-Sample Estimation and Computation
+
+Under \cE\_{p}, we can perform kernel estimation without regularity or existence of a Brenier map. We analyze one estimator based on EOT using \Wp stability (4) and another based on rounding using TV stability (5). The former is closer to existing estimators, but the latter achieves sharper rates under milder assumptions. Fixing n\geq 3, we have i.i.d. samples X\_{1},\dots,X\_{n}\sim\mu\in\cP(\cX) and Y\_{1},\dots,Y\_{n}\sim\nu\in\cP(\cY), whose empirical measures we denote by \hat{\mu}\_{n} and \hat{\nu}\_{n} respectively.
+
+Entropic kernel estimator. As a warm-up, we recall the EOT problem, defined for \tau>0 by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | S\_{p,\tau}(\mu,\nu)\defeq\inf\_{\pi\in\Pi(\mu,\nu)}\iint\|x-y\|^{p}\dd\pi(x,y)+% \tau\mathsf{D}\_{\mathrm{KL}}(\pi\|\mu\otimes\nu), |  | (5) |
+
+where the Kullback-Leibler (KL) divergence is \mathsf{D}\_{\mathrm{KL}}(\mu\|\nu)\coloneqq\int\log\bigl{(}\frac{d\mu}{d\nu}%
+\bigr{)}\dd\mu if \mu\ll\nu and +\infty otherwise. This objective is strictly convex due to the KL penalty, so a unique optimal coupling always exists (supposing that the value is finite). Most solvers for EOT use its equivalent dual formulation:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | S\_{p,\tau}(\mu,\nu)=\sup\_{\begin{subarray}{c}f\in L^{1}(\mu)\\ g\in L^{1}(\nu)\end{subarray}}\int f\dd\mu+\int g\,\dd\nu-\tau\iint e^{(f(x)+g% (x)-\|x-y\|^{p})/\tau}\dd\mu(x)\dd\nu(y)+\tau. |  | (6) |
+
+The primal and dual structure of EOT is well-studied (see, e.g., Cuturi, 2013; Genevay et al., 2019). In particular, if \pi\_{\tau} minimizes (5), then there exists maximizers f\_{\tau},g\_{\tau} for (6), termed *entropic potentials*, such that the conditional *entropic kernel* \pi\_{\tau}(\cdot|x) can be written as

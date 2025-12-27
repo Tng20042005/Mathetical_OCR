@@ -1,0 +1,66 @@
+since \theta is continuous in [0,u).
+Again from the continuity of \theta in [0,u), we have that for each x,y\in[\theta(u^{+})+\theta(x\_{0}),+\infty] with x<y there exist two elements x^{\*},y^{\*}\in[0,x\_{0}] satisfying x=\theta(u^{+})+\theta(x^{\*}) and y=\theta(u^{+})+\theta(y^{\*}). Hence \theta(x^{\*})<\theta(y^{\*}). This means x^{\*}>y^{\*} since \theta is non-increasing in [0,x\_{0}]. Thus \vartheta(\theta(u^{+})+\theta(x^{\*}))\geq\vartheta(\theta(u^{+})+\theta(y^{\*})) since O\_{\theta,\vartheta} is non-decreasing i.e., \vartheta(x)\geq\vartheta(y). Therefore, by the arbitrariness of x,y the last inequality implies that \vartheta is non-increasing in [\theta(u^{+})+\theta(x\_{0}),+\infty]. On the other hand, from (1) and (2), we get that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(\theta(x\_{0})+\theta(u^{-}))=\vartheta(\theta(x\_{0})+\theta(u^{+}))=% \vartheta(\theta(x\_{1})+\theta(u^{+})), |  |
+
+showing that \vartheta(v)=c for any v\in[\theta(x\_{0})+\theta(u^{+}),\theta(x\_{1})+\theta(u^{+})].
+
+Similarly, there exists an x\_{2}\in[0,x\_{0}) with x\_{2}<x\_{1} such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(\theta(x\_{1})+\theta(u^{-}))=\vartheta(\theta(x\_{1})+\theta(u^{+}))=% \vartheta(\theta(x\_{2})+\theta(u^{+})), |  |
+
+showing that \vartheta(v)=c for any v\in[\theta(x\_{1})+\theta(u^{+}),\theta(x\_{2})+\theta(u^{+})].
+
+Repeating the above process, we get that for arbitrary x,y\in(0,x\_{0}], \vartheta(\theta(x)+\theta(u^{+}))=\vartheta(\theta(y)+\theta(u^{+})), i.e., \vartheta(v)=c for any v\in[\theta(u^{+})+\theta(x\_{0}),+\infty). Moreover, if c=0, then \vartheta(\theta(x)+\theta(u^{+}))=0 with x\neq 0 and u\neq 0, contrary to Definition (O2). Hence c>0, contrary to the continuity of O\_{\theta,\vartheta} since \vartheta(+\infty)=0. Therefore, \theta is continuous.
+(ii) From Proposition 2.1 (2), if \theta is a monotone function then \theta must be non-increasing. Now, supposing that \theta is not a monotone function, there exist x\_{1},x\_{2},x\_{3} such that \theta is non-increasing in [0,x\_{1}] and \theta is non-decreasing in [x\_{2},x\_{3}] in which either x\_{1}=x\_{2} or x\_{1}<x\_{2} with \theta(x\_{1})=\theta(x\_{2}). Thus there exists an x\_{4}\in[0,x\_{1}] such that \theta(x\_{4})=\theta(x\_{3})>\theta(x\_{1}) since \theta(0)=+\infty. This follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(\theta(x\_{4})+\theta(x))\leq\vartheta(\theta(x\_{1})+\theta(x))\leq% \vartheta(\theta(x\_{3})+\theta(x))=\vartheta(\theta(x\_{4})+\theta(x)) |  |
+
+for each x\in[0,1] since O\_{\theta,\vartheta} is non-decreasing, i.e.,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \vartheta(\theta(x\_{4})+\theta(x))=\vartheta(\theta(x\_{1})+\theta(x)) |  | (3) |
+
+for all x\in[0,1].
+
+On the one hand, there is a u\_{1}\in(0,x\_{4}) such that \theta(u\_{1})>\theta(x\_{4}) since \theta is non-increasing in [0,x\_{1}] and, from (3) we have \vartheta(\theta(u\_{1})+\theta(x\_{4}))=\vartheta(\theta(u\_{1})+\theta(x\_{1})). On the other hand, from (i) there exists a u\_{2}\in[0,x\_{4}] with u\_{2}<u\_{1} such that \theta(u\_{2})+\theta(x\_{1})=\theta(u\_{1})+\theta(x\_{4}) since \theta(x\_{4})>\theta(x\_{1}). Then \vartheta(\theta(u\_{1})+\theta(x\_{1}))=\vartheta(\theta(u\_{1})+\theta(x\_{4}))=%
+\vartheta(\theta(u\_{2})+\theta(x\_{1})). Obviously, \vartheta is non-increasing in [2\theta(x\_{1}),+\infty] since \theta is non-increasing in [0,x\_{1}]. Thus \vartheta(v)=c for any v\in[\theta(x\_{4})+\theta(x\_{1}),\theta(u\_{2})+\theta(x\_{1})].
+
+Analogously, there exists a u\_{3}\in[0,x\_{4}] with u\_{3}<u\_{2} such that \theta(u\_{3})>\theta(u\_{2}). Thus \vartheta(v)=c for any v\in[\theta(u\_{2})+\theta(x\_{1}),\theta(u\_{3})+\theta(x\_{1})].
+
+Repeating the above process, we get that for arbitrary x,y\in(0,x\_{4}],
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(\theta(x)+\theta(x\_{1}))=\vartheta(\theta(y)+\theta(x\_{1})), |  |
+
+i.e., \vartheta(v)=c for any v\in[\theta(x\_{4})+\theta(x\_{1}),+\infty) with c>0, violating the continuity of O\_{\theta,\vartheta} since \vartheta(+\infty)=0.
+
+(iii) From Proposition 2.1 (2), it is obviously true.
+
+(iv) Since \theta is non-increasing, \theta(x)\geq\theta(1) for each x\in[0,1). Suppose that there exists a u\in[0,1) such that \theta(1)=\theta(u). Then O\_{\theta,\vartheta}(u,u)=\vartheta(\theta(u)+\theta(u))=\vartheta(\theta(1)+%
+\theta(1))=O\_{\theta,\vartheta}(1,1)=1 with u\neq 1, contrary to Definition 2.1 (O3). Therefore, \theta(x)>\theta(1) for each x\in[0,1).
+
+Conversely, let \vartheta:[0,+\infty]\rightarrow[-\infty,+\infty] be a function satisfying the following three conditions:
+
+* (a)
+
+  \vartheta is continuous and non-increasing in [2\theta(1),+\infty];
+* (b)
+
+  \vartheta(x)=0 with x\in[2\theta(1),+\infty] if and only if x=+\infty;
+* (c)
+
+  \vartheta(x)=1 with x\in[2\theta(1),+\infty] if and only if x=2\theta(1).
+
+Next, we prove that the bivariate function O\_{\theta,\vartheta}:[0,1]^{2}\rightarrow[0,1] given by
+
+|  |  |  |
+| --- | --- | --- |

@@ -1,0 +1,60 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \|B(\epsilon)\|\geq\|\mathbf{1}\|\_{2}\,\|x\_{\epsilon}\|\_{2}=\sqrt{n}\,\sqrt{(1% -\epsilon)^{2}+\tfrac{\epsilon^{2}}{\,n-1\,}}\,. |  |
+
+The function F(\epsilon):=(1-\epsilon)^{2}+\frac{\epsilon^{2}}{n-1} is continuous on [0,1] and attains its maximum at \epsilon=0. Hence, there exists a \epsilon\_{0}>0 such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sqrt{F(\epsilon\_{0})}>1-\frac{\delta}{\sqrt{n}}\,. |  |
+
+Let A\_{\delta}:=B(\epsilon\_{0}), so that \|A\_{\delta}\|>\sqrt{n}-\delta.
+∎
+
+Fix \delta\in(0,\tfrac{1}{2}) and let \pi\_{0}^{\prime}\colon\mathcal{R}\_{0}\to[0,\infty) be a Borel field of probability measures. For n\geq 1, define a Borel field \pi\_{n}\colon\mathcal{S}\_{n}\to[0,\infty) of probability measures by setting \pi\_{n}(i,j):=A\_{\delta}(i,j) for 1\leq i,j\leq n, where A\_{\delta} is as in Lemma 4.1. These fields combine to a Borel field of probability measures \pi:\mathcal{R}\rightarrow[0,1) defined to be equal to \pi\_{0}^{\prime}\times\pi\_{n} on each component \mathcal{R}\_{0}\times\mathcal{S}\_{n}. The associated Markov operator decomposes as
+
+|  |  |  |
+| --- | --- | --- |
+|  | P^{\pi}=\bigoplus\_{n\in\mathbb{N}}(P^{\pi\_{0}^{\prime}}\otimes P^{\pi\_{n}})\;% \in\;\bigoplus\_{n\in\mathbb{N}}\mathbb{B}\!\left(\ell^{2}(\mathcal{R}\_{0})% \otimes\ell^{2}(\mathcal{S}\_{n})\right)\,. |  |
+
+Since
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sup\_{n\in\mathbb{N}}\|P^{\pi\_{0}^{\prime}}\otimes P^{\pi\_{n}}\|=\|P^{\pi\_{0}^% {\prime}}\|\left(\sup\_{n\in\mathbb{N}}\|P^{\pi\_{n}}\|\right)>\|P^{\pi\_{0}^{% \prime}}\|\left(\sup\_{n\in\mathbb{N}}(\sqrt{n}-\delta)\right)=\infty\,, |  |
+
+the operator P^{\pi} is unbounded.
+
+The construction above enjoys several noteworthy features. First, if (Y,\nu) is non-atomic, then so is the resulting unit space (X,\mu). Second, if \mathcal{R}\_{0} is amenable, then \mathcal{R} is amenable as well. Finally, the field \pi is non-degenerate in the sense of [Berendschot2024, Definition 2.1].
+
+### 4.2. Second example
+
+For our second example, consider the full equivalence relation \mathcal{R}:=\mathbb{N}\times\mathbb{N} on \mathbb{N}, equipped with the counting measure \mu. The pair (\mathcal{R},\mu) forms a *discrete measure-preserving* groupoid, meaning that the induced measures \mu\_{s} and \mu\_{t} introduced in Subsection 2.4 coincide; indeed, both agree with the counting measure on \mathbb{N}^{2}. Moreover, (\mathcal{R},\mu) is ergodic. Note, however, that (\mathcal{R},\mu) is not a discrete p.m.p. groupoid.
+
+For k\in\mathbb{N} define
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{k}:=\mathbb{N}\cap\big{[}\tfrac{k(k+1)}{2},\,\tfrac{(k+1)(k+2)}{2}\big{)}\,, |  |
+
+so that \mathbb{N}=\bigsqcup\_{k\in\mathbb{N}}I\_{k} is a partition of the natural numbers. Define a map \pi\colon\mathcal{R}\to[0,\infty) by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \pi(m,n):=\begin{cases}1\,,&\text{if }n\in I\_{m}\,,\\[5.690551pt] 0\,,&\text{otherwise},\end{cases}\quad\text{for }(m,n)\in\mathcal{R}\,. |  |
+
+Then \sum\_{m\in\mathbb{N}}\pi(m,n)=1 for each n\in\mathbb{N}, so \pi is a (non-symmetric) Borel field of probability measures.
+
+For each k\in\mathbb{N} define \xi\_{k}\in L^{2}(\mathcal{R},\mu\_{t}) by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \xi\_{k}(m,n):=\begin{cases}\pi(k,n)\,,&\text{if }m=k\,,\\[2.845276pt] 0\,,&\text{otherwise},\end{cases}\quad\text{for }(m,n)\in\mathcal{R}\,. |  |
+
+A direct computation shows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | P^{\pi}(\xi\_{k})(m,n)=\sum\_{a\in\mathbb{N}}\xi\_{k}(m,a)\,\pi(n,a)=\begin{cases% }\displaystyle\sum\_{a\in\mathbb{N}}\pi(k,a)\pi(n,a)\,,&\text{if }m=k\,,\\[5.69% 0551pt] 0\,,&\text{otherwise},\end{cases} |  |
+
+so that in particular,

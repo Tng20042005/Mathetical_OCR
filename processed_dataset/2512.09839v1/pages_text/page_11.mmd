@@ -1,0 +1,61 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\left(1+c\_{b}\varepsilon^{2}\right)\left|f(z\_{0})\right|\geq\left% |v(z\_{0})\right|\geq\exp\left(-L\right). |  |
+
+Since \tilde{g}(z\_{0})\in B\_{\widetilde{T}}\setminus\bigcup 3\widetilde{D}\_{j}, then
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.9) |  | \displaystyle\sup\_{B\_{\widetilde{T}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right| | \displaystyle\geq\left|\tilde{h}\circ\tilde{g}(z\_{0})\right|=\left|f(z\_{0})% \right|\geq\frac{e^{-L}}{1+c\_{b}\varepsilon^{2}}. |  |
+
+An application of (3.1) shows that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.10) |  | \displaystyle\sup\_{B\_{\widetilde{R}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right| | \displaystyle\leq\sup\_{B\_{\widetilde{R}}}\left|\tilde{h}\right|=\sup\_{\tilde{g% }\left(B\_{R}\right)}\left|f\circ\tilde{g}^{-1}\right|=\sup\_{B\_{R}}\left|f% \right|\leq\frac{1}{1-c\_{b}\varepsilon^{2}}\sup\_{B\_{R}}\left|v\right|\leq\frac% {e^{c\_{1}R}}{1-c\_{b}\varepsilon^{2}}. |  |
+
+Combining (3.9) and (3.10) then shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\sup\_{B\_{\widetilde{T}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right| | \displaystyle\geq\frac{1-c\_{b}\varepsilon^{2}}{1+c\_{b}\varepsilon^{2}}e^{-% \left(c\_{1}R+L\right)}\frac{e^{c\_{1}R}}{1-c\_{b}\varepsilon^{2}}\geq e^{-M}\sup% \_{B\_{\widetilde{R}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|\tilde{h}\right|, |  |
+
+where we introduce M:=c\_{1}R+L+\frac{c\_{d}}{\log R} and c\_{d} depends on c\_{b} and C\_{K}, see (3.8).
+Because R\geq R\_{2} implies that 16\widetilde{R}=16C\_{1}R\sqrt{\log R}<R^{2}, then because c\_{1}\geq 1, M>R\geq 2^{10}, and we have M>\log(16\widetilde{R}).
+Therefore, all of the hypotheses of Proposition 1 hold hold with h, \left\{D\_{j}\right\}, R, S, and T replaced by \tilde{h}, \left\{\widetilde{D}\_{j}\right\}, \widetilde{R}, \widetilde{S}, and \widetilde{T}, respectively.
+
+For r\ll R, an application of (3.7) shows that g\left(B\_{r}\right) contains a disk of radius r\_{1}, where
+
+|  |  |  |
+| --- | --- | --- |
+|  | r\_{1}\geq\frac{R}{16}\left(\frac{r}{R}\right)^{K}\geq\frac{R}{16}\left(\frac{r% }{R}\right)^{2}. |  |
+
+It follows that \tilde{g}\left(B\_{r}\right)\supset B\_{\tilde{r}}, where
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.11) |  | \frac{16\tilde{r}}{\widetilde{R}}=\left(\frac{r}{R}\right)^{2}. |  |
+
+If r\leq\sqrt{\frac{98\cdot 16R}{C\_{1}\sqrt{\log R}}}, then \tilde{r}\leq 98, so that B\_{\tilde{r}}\setminus\bigcup 3\widetilde{D}\_{j}=B\_{\tilde{r}}, and then
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.12) |  | \displaystyle\sup\_{B\_{\tilde{r}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right| | \displaystyle=\sup\_{B\_{\tilde{r}}}\left|\tilde{h}\right|\leq\sup\_{\tilde{g}% \left(B\_{r}\right)}\left|f\circ\tilde{g}^{-1}\right|=\sup\_{B\_{r}}\left|f\right|. |  |
+
+Since r\in\left(0,\frac{R}{2^{3}}\right) implies that \tilde{r}\in\left(0,\frac{\widetilde{R}}{2^{10}}\right), then in this case we may apply Proposition 1 with r replaced by \tilde{r}.
+In particular, the conclusion (2.2) from Proposition 1 shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.13) |  | \displaystyle\sup\_{B\_{\tilde{r}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right|\geq\left(\frac{16{\tilde{r}}}{\widetilde{R}}\right)^{\tilde{% \kappa}}\sup\_{B\_{\widetilde{T}}\setminus\bigcup 3\widetilde{D}\_{j}}\left|% \tilde{h}\right|, |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\tilde{\kappa}:=\kappa\left(\widetilde{R},\widetilde{S},M\right)=% \max\left\{6C\_{H}C\_{1}R\sqrt{\log R},2^{13}\left(c\_{1}R+L+\frac{c\_{d}}{\log R}% \right)RS^{-1}\right\}. |  |
+
+Since R\geq 2^{10} implies \frac{R}{8}>1, while R\geq R\_{2} implies \sqrt{\frac{98\cdot 16R}{C\_{1}\sqrt{\log R}}}>1, then r\_{0}:=\min\left\{\frac{R}{8},\sqrt{\frac{98\cdot 16R}{C\_{1}\sqrt{\log R}}}%
+\right\}>1.
+Assume that R\geq\hat{R}\_{0} and r<r\_{0}.
+Combining (3.6), (3.12), (3.13), (3.11), and (3.9) shows that

@@ -1,0 +1,68 @@
+ually
+holds for an arbitrary choice of dualizing complex K\_{S}.
+In particular, when X=S is regular separated, and K\_{X}=\mathcal{O}\_{X}[\dim(X)], 2 invertible on X, this is also
+the E\_{2}-term of the Gersten-Witt spectral sequence of Balmer and Walter, [BW02].
+
+### 4.3. Unramified sheaves and Bloch formulas
+
+###### 4.3.1.
+
+We introduce a weaker, relative, version of homotopy modules ([Fel21a, Def. 4.1.2]) over a base scheme S.
+A *homotopy premodule* over S will be a \mathbf{Z}-graded Nisnevich sheaf F=F\_{\*} of abelian groups on \mathit{Sm}\_{S}
+equipped with isomorphisms \epsilon\_{n}:F\_{n}\rightarrow(F\_{n+1})\_{-1} where the right-hand side is obtained
+by Voevodsky’s construction (*loc. cit.* 4.1.1).
+Recall that by adjunction, the map \epsilon\_{n} corresponds
+to the so-called *suspension maps*
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.3.1.a) |  | \sigma\_{n}:\mathbf{G}\_{m}\otimes F\_{n}\rightarrow F\_{n+1}. |  |
+
+It is not difficult to see that homotopy premodules over S,
+with obvious morphisms, form a Grothendieck abelian category.
+We say that F is a *homotopy module* if it is \mathbf{A}^{1}-local, that is, if its cohomology is \mathbf{A}^{1}-invariant.
+
+Let S be a scheme such that \delta=-\operatorname{codim}\_{S} is a dimension function on S.
+For example, this is the case if S is normal and quasi-excellent ([ILO14, XIV, 2.3.3]),
+or if S is universally catenary, equidimensional, and its irreducible components are equicodimensional ([GD67, 0\_{IV}, 14.3.3], [ILO14, footnote before Lemme 2.4.2]).
+
+Given an arbitrary MW-homodule \mathcal{M} over S, the Rost-Schmid complex of an S-scheme X with line bundle \mathcal{L}
+induces a left-augmented bounded complex of \mathbf{Z}-graded abelian groups:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.3.1.b) |  | 0\rightarrow A^{0}(X,\mathcal{M},\mathcal{L})\rightarrow C^{0}(X,\mathcal{M},% \mathcal{L})\xrightarrow{d^{0}}C^{1}(X,\mathcal{M},\mathcal{L})\rightarrow\ldots |  |
+
+This complex is natural with respect to essentially smooth pullbacks (1.4.2).
+
+###### Lemma 4.3.2.
+
+Consider the above assumptions and notation.
+Then the functor
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.3.2.a) |  | \underline{\mathcal{M}}(X)=A^{0}(X,\mathcal{M},\mathcal{L}). |  |
+
+for X\in\mathit{Sm}\_{S} has a canonical structure of a homotopy premodule over S, which is \mathbf{A}^{1}-invariant.
+Moreover, the functor \mathcal{M}\mapsto\underline{\mathcal{M}} is left exact.
+
+###### Proof.
+
+The fact \underline{\mathcal{M}} really is a presheaf on \mathit{Sm}\_{S} follows from 2.2.6.
+The remaining of the proof is the same as that of [Fel21a, 4.1.7],
+as in our more general case, we also have the localization exact sequence  (1.5.8.a),
+and the \mathbf{A}^{1}-invariance result 2.1.4.
+The left exactness follows from the long exact sequence associated with an exact sequence of MW-homodules.
+∎
+
+###### Example 4.3.3.
+
+For these examples, we assume in addition that S admits pinning \lambda.
+Then the lemma applies to any MW-module M by considering
+the associated MW-homodule \operatorname{\mathcal{D}}\_{\lambda}(M) as in 3.3.4. We let \underline{M}:=\underline{\operatorname{\mathcal{D}}\_{\lambda}(M)}.
+Our main examples come from 3.4.4. We therefore obtain the homotopy premodules over S:
+\underline{\operatorname{K}}^{MW}\_{\*}, \underline{\operatorname{K}}^{M}\_{\*}, \underline{\operatorname{W}} and \underline{\operatorname{I}}^{\*} obtained by the applying the previous lemma to the MW-cycle module M=\operatorname{K}^{MW}\_{\*} over S,
+and respectively to its \eta-quotient, \eta-localization and h-quotient.
+
+###### Definition 4.3.4.

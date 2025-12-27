@@ -1,0 +1,89 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|P\_{\leq N}u\_{0}\|\_{H^{10}}\lesssim N^{100}. |  | (4.6) |
+
+and in particular
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|\nabla\_{t,x}P\_{\leq N}e^{it\Delta}u\_{0}\|\_{L\_{t}^{\infty}L^{\infty}\_{x}}% \lesssim N^{100} |  | (4.7) |
+
+We first prove Lemma 3.4 assuming Lemma 4.2, Lemma 4.3.
+
+###### Proof.
+
+We short e^{it\Delta}u\_{0} via u\_{lin}
+First observe, since N\sim\epsilon^{-1000/\theta}. For any fixed points (x\_{1},t\_{1}),...,(x\_{L},t\_{L}), with L\lesssim N^{1000}, one has (since polynomial always dominated by exponential), thanks to Lemma 4.1,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | -\ln\mathbb{P}\left(\sup\_{i=1,...,L}|u\_{lin}(t\_{i},x\_{i})|>z\_{0}\epsilon^{-1/2% }\right)=\frac{z\_{0}^{2}\epsilon^{-1}}{\sum\_{n}|c\_{n}|^{2}}+o(\epsilon^{-1}) |  | (4.8) |
+
+Secondly, by Lemma 4.2, (since N^{-\theta/100}\sim\epsilon^{10}\ll\epsilon^{-1/2}), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | -\ln\mathbb{P}\left(\sup\_{i=1,...,L}|P\_{\leq N}u\_{lin}(t\_{i},x\_{i})|>z\_{0}% \epsilon^{-1/2}\right)=\frac{z\_{0}^{2}\epsilon^{-1}}{\sum\_{n}|c\_{n}|^{2}}+o(% \epsilon^{-1}) |  | (4.9) |
+
+Now, we pose (x\_{1},t\_{1}),...,(x\_{L},t\_{L}) even on [0,T\_{\epsilon}]\times\mathbb{T}, thus for any t\in[0,T\_{\epsilon}], one can find (essentially unique)|(t\_{i},x\_{i})-(t,x)|\lesssim N^{-500}, thus by (4.7), we have the desired
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | -\ln\mathbb{P}\left(\sup\_{t}\|u\_{lin}(t,x)\|\_{L\_{x}^{\infty}}>z\_{0}\epsilon^{-% 1/2}\right)=\frac{z\_{0}^{2}\epsilon^{-1}}{\sum\_{n}|c\_{n}|^{2}}+o(\epsilon^{-1}) |  | (4.10) |
+
+∎
+
+We are left with the proof of Lemma 4.2 and Lemma 4.3.
+
+We first prove Lemma 4.3. It is almost direct since (4.3) implies (4.6), and by Sobolev embedding and the equation of linear Schrodinger, we obtain (4.7).
+
+We now prove Lemma 4.2.
+
+It is enough to prove for all M\geq N, one has up to probability e^{-M^{\theta/150}}, there holds (4.4).
+
+This part is similar to our previous proof of Lemma 3.4 assuming Lemma 4.2, Lemma 4.3.
+
+Note that for any (x\_{1},t\_{1}),...,(x\_{L},t\_{L}), with L\lesssim M^{1000}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathbb{P}(\sup\_{l}|P\_{M}u\_{lin}(x\_{l},t\_{l})|>M^{-\theta/100})\lesssim e^{-M^% {\theta/100}} |  | (4.11) |
+
+Furthermore, we have, up to probability e^{-M}
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|P\_{M}u\_{0}\|\_{H^{10}}\leq M^{100} |  | (4.12) |
+
+and thus
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|\nabla\_{t,x}e^{it\Delta}P\_{M}u\_{0}\|\_{L\_{t,x}^{\infty}}\lesssim M^{100}. |  | (4.13) |
+
+Pose (x\_{1},t\_{1}),...,(x\_{L},t\_{L}) evenly on [0,T\_{\epsilon}]\times\mathbb{T}, and the desired estimates follows as we do for (4.10).
+
+### 4.2 Proof of Lemma 3.1
+
+Lemma 3.1 follows almost same as the argument in previous section.
+
+It suffices to show (3.4) for b(t,x):=e^{2it\epsilon^{2}\frac{1}{2\pi}\|u\_{0}\|\_{2}^{2}}u\_{app}=\sum\_{k}c\_{k%
+}g\_{k}e^{e^{ikx+it\epsilon^{2}c\_{k}^{2}|g\_{k}|^{2}-itk^{2}}}. Fix t, noting that \{g\_{k}e^{it\epsilon^{2}c\_{k}^{2}|g\_{k}|^{2}}\}\_{k\in\mathbb{Z}} are still i.i.d complex Guassian normal random variables (see [7, Lemma 4.2]), thus Lemma 4.1 remains valid.
+
+The Sobolev norm control in space is same as the free linear flow. The time derivative control is slightly different. But observe, in frequency k, the time derivative for the free flow gives an extra k^{2}, (\partial\_{t}(e^{-itk^{2}})e^{ikx}=-ik^{2}\partial\_{t}(e^{-itk^{2}})e^{ikx}). But for the modified linear flow, the time derivative at frequency k gives an extra \epsilon^{2}c\_{k}^{2}|g\_{k}|^{2}, noting that we are doing ldp for g\_{k} at level of \epsilon^{-1/2}, so this part is neglectable compared to k^{2}, and previous arguments works line by line same.
+
+## 5 Error control
+
+We first prove Lemma 3.3 assuming Lemma 3.5 and Lemma 3.6.
+
+To start, we first observe Lemma 3.5 implies the following (one may need to slightly change \delta\_{2}),
+
+###### Lemma 5.1.
+
+Let u,u\_{app},T\_{\epsilon} be as in Lemma 3.3. For all (fixed) \theta>0. There exists some s>\frac{1}{2}, so that the following holds.
+
+Assume that for some t\_{0}\leq T\_{\epsilon}, one has
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|u(t\_{0})-u\_{app}(t\_{0})\|\_{H^{s}\_{x}}\leq\epsilon^{-\frac{1}{2}}, |  | (5.1) |

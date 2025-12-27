@@ -1,0 +1,62 @@
+up to a set with zero measure. With K\geq 2 in mind, since |G|>0, there exist at least two sets G\_{l\_{0}},G\_{l\_{0}^{\prime}} such that \mbox{meas}\_{\mathbb{R}^{2}}(G\_{l\_{0}})>0,\mbox{meas}\_{\mathbb{R}^{2}}(G\_{l\_{0%
+}^{\prime}})>0. Thus, the sets \mathcal{U}\_{l\_{0}} and \mathcal{V}\_{l\_{0}} associated with G\_{l\_{0}} satisfy that
+
+|  |  |  |
+| --- | --- | --- |
+|  | 0<\mbox{meas}\_{\mathbb{R}}(\mathcal{U}\_{l\_{0}}),\mbox{meas}\_{\mathbb{R}}(% \mathcal{V}\_{l\_{0}})<2\pi. |  |
+
+In other words, they are non-trivial sets.
+However, for these \mathcal{U}\_{l\_{0}} and \mathcal{V}\_{l\_{0}}, using (3.11), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle G\cap L\_{\xi\in\mathcal{U}\_{l\_{0}}}=\bigcup\_{l=1}^{K}(G\_{l}\cap L% \_{\xi\in\mathcal{U}\_{l\_{0}}})=G\_{l\_{0}}\cap L\_{\xi\in\mathcal{U}\_{l\_{0}}}\cap L% \_{\eta\in\mathcal{V}\_{l\_{0}}}=\bigcup\_{l=1}^{K}(G\_{l}\cap L\_{\eta\in\mathcal{V% }\_{l\_{0}}})=G\cap L\_{\eta\in\mathcal{V}\_{l\_{0}}} |  |
+
+up to a set with zero measure. This implies that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L\_{\xi\in\mathcal{U}\_{l\_{0}}}]\,% \Delta\,[G\cap L\_{\eta\in\mathcal{V}\_{l\_{0}}}]\Big{)}=0, |  |
+
+and thus G obeys ({\rm OSC}) with the non-trivial pair (L\_{\xi\in\mathcal{U}\_{l\_{0}}},L\_{\eta\in\mathcal{V}\_{l\_{0}}}), which contradicts to our assumptions.
+
+The above analysis shows that case (2) is impossible, and in case (1) we must have \partial\_{\eta}u|\_{t=0}=\partial\_{\xi}u|\_{t=0}\equiv 0. Hence, we obtain
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\partial\_{t}u(0,x)=0,\;\partial\_{x}u(0,x)=0. |  |
+
+This implies that the solution u to (1.1) is identically 0.
+∎
+
+### 3.3. OSC and weak GCC imply unique continuation
+
+In this sequel, we generalize the result in Proposition 3.3, which forms the following proposition.
+
+###### Proposition 3.6 (Weak GCC implies UCP up to \mathcal{S}^{2}).
+
+Let T>0. Let G\in[0,T]\times{\mathbb{T}} satisfy the (weak GCC).
+If u solves the wave equation (1.1) and u\_{t}=0 on G, then its initial state (\partial\_{\xi}u,\partial\_{\eta}u)|\_{t=0} belongs to the symmetry function pair class \mathcal{S}^{2}.
+
+###### Proof.
+
+We use the same notation in the proof of Proposition 3.3. Recall that we have the relation (3.5), namely
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\eta}u|\_{\{t=0\}\cap L\_{\eta=\eta\_{0}}}=\partial\_{\eta}u(\xi\_{0},% \eta\_{0})=\partial\_{\xi}u|\_{\{t=0\}\cap L\_{\xi\in\mathcal{U}\_{\eta=\eta\_{0}}}} |  |
+
+up to sets with zero measure.
+Namely, the value of \partial\_{\eta}u(\xi\_{0},\eta\_{0}) determines almost every value of \partial\_{\xi}u|\_{\{t=0\}\cap L\_{\xi\in\mathcal{U}\_{\eta=\eta\_{0}}}}. Since G satisfies the (weak GCC), we know
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}}(\{t=0\}\cap L\_{\xi\in\mathcal{U}\_{\eta=\eta\_{0}}})>0. |  |
+
+In other words, \partial\_{\xi}u|\_{\{t=0\}} equals to \partial\_{\eta}u(\xi\_{0},\eta\_{0}) at least on a positive measure subset set of {\mathbb{T}}. Thus the set
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{U}\_{(\xi\_{0},\eta\_{0})}:=\{x\_{0}\in{\mathbb{T}}:\partial\_{\xi}u|\_{\{t% =0,x=x\_{0}\}}=\partial\_{\eta}u(\xi\_{0},\eta\_{0})\} |  |
+
+has positive measure. Repeating this process for other point (\xi\_{0}^{\prime},\eta\_{0}^{\prime})\in[0,T]\times{\mathbb{T}}, we shall find that, there exists a family sets \mathcal{U}\_{\ell}(\ell\in I), I is a index set, such that

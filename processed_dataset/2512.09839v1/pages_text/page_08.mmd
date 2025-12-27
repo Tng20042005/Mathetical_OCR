@@ -1,0 +1,90 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\frac{R}{r}\right)^{k}\geq 2^{10k}>16C\_{H}R\cdot 2^{9k}. |  |
+
+Combining (2.14) with (2.13) shows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left|h(sz\_{j\_{0}})\right|>\frac{m\_{j\_{0}}}{2}\geq\frac{1}{16C\_{H}R}\left(% \frac{r}{2R}\right)^{k}>2^{9k}\left(\frac{r}{R}\right)^{k}\left(\frac{r}{2R}% \right)^{k}=\left(\frac{16r}{R}\right)^{2k}. |  |
+
+By comparing this bound with (2.5), we conclude that sz\_{j\_{0}}\notin W\_{1} so it must hold that sz\_{j\_{0}}\in\partial\left(3D\_{j\_{2}}\right) for some 3D\_{j\_{2}}\subset\left\{\frac{r}{2}<\left|z\right|<R-1\right\}.
+Then Lemma 1, that \left|z\_{j\_{2}}\right|\leq\left|sz\_{j\_{0}}\right|, and (2.14) show that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (2.15) |  | \displaystyle C\_{H}m\_{j\_{2}}\left|z\_{j\_{2}}\right|^{-k} | \displaystyle\geq\sup\_{\partial\left(3D\_{j\_{2}}\right)}\left|h\right|\left|z\_{% j\_{2}}\right|^{-k}\geq\left|h(sz\_{j\_{0}})\right|\left|sz\_{j\_{0}}\right|^{-k}% \geq\frac{m\_{j\_{0}}}{2}s^{-k}\left|z\_{j\_{0}}\right|^{-k}. |  |
+
+Since z\_{j\_{0}}\in\partial\left(3D\_{j\_{0}}\right) and sz\_{j\_{0}}\in\partial\left(3D\_{j\_{2}}\right) where j\_{0}\neq j\_{2}, and the balls \left\{D\_{j}\right\} are of unit radius and 100-separated, then \left|z\_{j\_{0}}-sz\_{j\_{0}}\right|\geq 96.
+After rearrangement, we see that s^{-k}\geq\left(1-\frac{96}{R}\right)^{-k}.
+Since 10\leq C\_{H}, 2C\_{H}R\leq k, and \frac{96}{R}<-\log\left(1-\frac{96}{R}\right), then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\log\left(2C\_{H}\right) | \displaystyle<96\cdot 2C\_{H}\leq\frac{96}{R}k<-k\log\left(1-\frac{96}{R}\right% )\leq-k\log s, |  |
+
+from which it follows that s^{-k}>2C\_{H}.
+We then conclude from (2.15) that m\_{j\_{2}}\left|z\_{j\_{2}}\right|^{-k}>m\_{j\_{0}}\left|z\_{j\_{0}}\right|^{-k} which contradicts (2.11) and gives the desired contradiction.
+In other words, (2.4) fails to hold and we see that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\sup\_{B\_{r}\setminus\bigcup 3D\_{j}}\left|h\right| | \displaystyle>\left(\frac{16r}{R}\right)^{3k}=\left(\frac{16r}{R}\right)^{3k}% \sup\_{B\_{T}\setminus\bigcup 3D\_{j}}\left|h\right|, |  |
+
+which implies (2.2) by our choice of k.
+∎
+
+## 3. The iterative proposition
+
+Here we present the proposition that is used repeatedly in the iteration argument.
+This unique continuation result takes the form of a three-ball inequality for solutions to Schrödinger equations.
+The techniques used to prove this theorem are very similar to those that appear in the proofs of [LMNN20, Theorem 2.2] and [Dav24, Theorem 1.2].
+
+###### Proposition 2 (Iterative Proposition).
+
+Given a>0 and R\geq\hat{R}\_{0}(a), let W:B\_{R}\to\mathbb{R} satisfy \left\|W\right\|\_{L^{\infty}(B\_{R})}\leq a^{2} and let v:B\_{R}\to\mathbb{R} be a solution to
+
+|  |  |  |
+| --- | --- | --- |
+|  | -\Delta v+Wv=0\;\text{ in }B\_{R} |  |
+
+with
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.1) |  | \left\|v\right\|\_{L^{\infty}(B\_{R})}\leq e^{c\_{1}R} |  |
+
+for some c\_{1}\geq 1.
+Assume that for some S\in\left(2^{8},\frac{R}{2}\right), there exists z\_{0}\in\overline{B}\_{R-S} and L\geq 0 such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.2) |  | \left|v(z\_{0})\right|\geq e^{-L}. |  |
+
+Then there exists r\_{0}(a,R)>1 so that whenever r\in(0,r\_{0}), it holds that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.3) |  | \displaystyle\left\|v\right\|\_{L^{\infty}(B\_{r})} | \displaystyle\geq\left(\frac{r}{R}\right)^{\tau}, |  |
+
+with
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tau(R,S,L,a,c\_{1})=\max\left\{3aC\_{H}\sqrt{\frac{C\_{K}}{32\ln 2}}R\sqrt{\log R% },2^{14}\left(c\_{1}R+L+\frac{c\_{d}}{\log R}\right)RS^{-1}\right\}+\frac{1}{5}% \left(L+\frac{c\_{d}}{\log R}\right), |  |
+
+where C\_{K} and c\_{d} are universal constants, and C\_{H} is the Harnack constant from Lemma 1.
+
+###### Proof.
+
+Let v:B\_{R}\to\mathbb{R}, W:B\_{R}\to\mathbb{R} and z\_{0}\in\overline{B}\_{R-S} be as given in the statement.
+Let F\_{0} denote the nodal set of v, i.e.
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}=\left\{z\in\mathbb{R}^{2}:v(z)=0\right\}. |  |
+
+Set c\_{s}=2^{10}10^{2}.
+For \rho>0 to be specified below, there exists a set F\_{1}\subset B\_{R} that consists of a collection of c\_{s}\rho-separated closed disks of radius \rho that are also c\_{s}\rho-separated from 0, z\_{0}, F\_{0}, and \partial B\_{R}.
+Moreover, the set F\_{0}\bigcup F\_{1}\bigcup\partial B\_{R} is a 10c\_{s}\rho-net in B\_{R}.
+A more detailed description of this process is given in [LMNN20, §2, Act I].

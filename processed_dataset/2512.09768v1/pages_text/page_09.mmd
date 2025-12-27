@@ -1,0 +1,126 @@
+for some real \lambda if and only if G^{\sigma} is one of the following:
+
+1. (i)
+
+   a balanced cycle with
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \lambda=2\cos\Bigl{(}\frac{2\pi j}{g}\Bigr{)},\qquad j=1,2,\dots,\Bigl{\lceil}% \frac{g}{2}\Bigr{\rceil}-1; |  |
+2. (ii)
+
+   an unbalanced cycle with
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \lambda=2\cos\Bigl{(}\frac{(2j+1)\pi}{g}\Bigr{)},\qquad j=0,1,\dots,\Bigl{% \lceil}\frac{g-1}{2}\Bigr{\rceil}-1. |  |
+
+###### Proof.
+
+Since g(C\_{n}^{\sigma})=n, the condition becomes
+
+|  |  |  |
+| --- | --- | --- |
+|  | m(C\_{n}^{\sigma},\lambda)=2. |  |
+
+We use the explicit eigenvalues of signed cycles.
+
+Balanced cycle.
+Balanced cycle eigenvalues (Lemma 6(i)) satisfy
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\_{j}=2\cos\Bigl{(}\frac{2\pi j}{n}\Bigr{)},\qquad\lambda\_{j}=\lambda\_{n% -j}. |  |
+
+Thus every eigenvalue has multiplicity 2 except:
+
+|  |  |  |
+| --- | --- | --- |
+|  | j=0\quad(\lambda=2),\qquad j=n/2\text{ when $n$ is even }(\lambda=-2). |  |
+
+Hence the multiplicity-two eigenvalues are
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\_{j}=2\cos\Bigl{(}\frac{2\pi j}{n}\Bigr{)},\qquad j=1,\dots,\Bigl{% \lceil}\frac{n}{2}\Bigr{\rceil}-1. |  |
+
+Unbalanced cycle.
+Unbalanced cycle eigenvalues (Lemma 6(ii)) satisfy
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\_{j}=2\cos\Bigl{(}\frac{(2j+1)\pi}{n}\Bigr{)},\qquad\lambda\_{j}=\lambda% \_{n-1-j}. |  |
+
+Thus every eigenvalue has multiplicity 2 except the possible simple eigenvalue -2 when n is odd.
+Hence the multiplicity-two eigenvalues are
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\_{j}=2\cos\Bigl{(}\frac{(2j+1)\pi}{n}\Bigr{)},\qquad j=0,\dots,\Bigl{% \lceil}\frac{n-1}{2}\Bigr{\rceil}-1. |  |
+
+Replacing n by g in both cases yields the statements (i) and (ii).
+The converse is immediate from Lemma 6.
+∎
+
+## 5 Conclusion and Future Directions
+
+In this paper we established a sharp upper bound for the multiplicity of any real eigenvalue
+\lambda of a connected signed graph G^{\sigma} in terms of its girth. Specifically, we showed that
+
+|  |  |  |
+| --- | --- | --- |
+|  | m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2, |  |
+
+and we completely characterized all signed graphs attaining equality.
+The extremal cases are precisely the balanced and antibalanced complete signed graphs, as well as
+the balanced complete bipartite signed graphs, corresponding to the eigenvalues -1, 1, and 0,
+respectively. These results fully generalize the theorem of Wu et al. [37], which treated
+only the special case \lambda=0, and they reveal a unified structural principle: equality holds
+exactly when the adjacency matrix exhibits minimal possible rank compatible with the girth.
+
+We further analyzed signed cycles in detail and determined all eigenvalues that occur with
+multiplicity 1 or 2. Using explicit spectral formulas, we obtained complete characterizations of
+balanced and unbalanced cycles realizing
+
+|  |  |  |
+| --- | --- | --- |
+|  | m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q,\qquad q\in\{1,2\}. |  |
+
+These results illustrate how the interplay between cycle parity, balance, and switching equivalence
+governs the spectrum of signed cycles.
+
+Future work.
+The results presented here suggest several natural directions for further research:
+
+* •
+
+  Laplacian eigenvalue multiplicities.
+  Extending our girth-based multiplicity bounds to the signed Laplacian or the A\_{\alpha}-matrix
+  may reveal new relationships between structural balance and spectral extremality.
+* •
+
+  Beyond girth: cycle rank and cyclomatic number.
+  Since the cyclomatic number measures the complexity of cycle space, it would be interesting to
+  derive multiplicity bounds involving both girth and cyclomatic number, generalizing results such
+  as those of Ma et al. [22] and Tam–Huang [30].
+* •
+
+  Higher multiplicity phenomena.
+  The extremal patterns identified for complete and complete bipartite signed graphs raise the
+  question of whether similar structural characterizations exist for multiplicities of the form
+  m(G^{\sigma},\lambda)=n-g(G^{\sigma})+k for k>2.
+* •
+
+  Random and sparse signed graphs.
+  Investigating typical multiplicity behavior in random signed graphs or sparse models may provide
+  probabilistic analogues of our extremal results.
+* •
+
+  Algorithmic detection of extremal switching classes.
+  Since the extremal graphs are defined up to switching, developing efficient algorithms to detect
+  whether a signed graph lies in one of the extremal switching classes would have practical
+  applications in network analysis.
+
+Overall, the results of this paper highlight how cycle structure, balance, and switching equivalence
+interact to control eigenvalue multiplicities in signed graphs. We hope that the techniques
+developed here will serve as a foundation for further investigations in signed spectral graph theory.

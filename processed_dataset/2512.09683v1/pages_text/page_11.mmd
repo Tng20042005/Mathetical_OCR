@@ -1,0 +1,39 @@
+In this appendix, we provide the proof of Theorem 2.1, which is implicit in [ARS25b]. For convenience, we consider the upper half plane \mathbbm{H}:=\{z\in\mathbbm{C}:\text{Im}(z)>0\}, and let \mathsf{m} be the restriction of the \operatorname{SLE}\_{8/3} loop measure on \mathbbm{C} to the loops that are contained in \mathbbm{H} and surround i. According to the conformal restriction [Wer08], if \Phi:\mathbbm{D}\to\mathbbm{H} is a conformal map with \Phi(0)=i, then \mathsf{m}=\Phi\_{\*}\operatorname{SLE}\_{8/3,\mathbbm{D}}^{\mathrm{loop}}. Therefore, to prove Theorem 2.1, it suffices to show the following
+
+###### Theorem A.1.
+
+There is a constant C>0 such that for any measurable function f:\mathbbm{R}\_{+}\to\mathbbm{R}\_{+} and \lambda\geq 0, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int f\left(\mathrm{Mod}(\mathbbm{H}\backslash\overline{D(\eta)})\right)\psi\_{% \eta}^{\prime}(i)^{\lambda}\mathsf{m}(d\eta)=C\frac{\sqrt{12\lambda-1}}{\sinh% \left(\frac{\pi}{3}\sqrt{12\lambda-1}\right)}\int\_{0}^{\infty}e^{-(2\lambda-% \frac{1}{6})\pi\tau}\eta(2i\tau)f(\tau)d\tau. |  |
+
+Here \psi\_{\eta} is the conformal map from \mathbbm{H} to D(\eta) such that \psi\_{\eta}(i)=i and \psi\_{\eta}^{\prime}(i)>0.
+
+The proof of Theorem A.1 is based on the SLE-coupled Liouville quantum gravity with parameter \sqrt{\frac{8}{3}}. In the following we fix \gamma=\sqrt{\frac{8}{3}} and let Q=\frac{\gamma}{2}+\frac{2}{\gamma}. Let \mathbbm{P}\_{\mathbbm{H}} be the law of the free boundary Gaussian free field (GFF) on \mathbbm{H} with mean zero on the upper semi-circle \mathbbm{S}^{1}\cap\mathbbm{H}.
+
+###### Definition A.2 (Liouville field on \mathbbm{H}).
+
+Let (h,c) be sampled from \mathbbm{P}\_{\mathbbm{H}}\times[e^{-Qc}dc], and let \phi(z)=h(z)-2Q\log|z|\_{+}+c (here |z|\_{+}:=\max\{|z|,1\}). Denote the law of \phi by \mathrm{LF}\_{\mathbbm{H}}.
+
+For \alpha\in\mathbbm{R}, let \mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)}(d\phi):=\lim\_{\varepsilon\to 0}%
+\varepsilon^{\frac{\alpha^{2}}{2}}e^{\alpha\phi\_{\varepsilon}(i)}\mathrm{LF}\_{%
+\mathbbm{H}}(d\phi) (the limit exists in the vague topology, see [ARS25a, Lemma 2.2]). Here \phi\_{\varepsilon}(i) is the average of \phi over the circle \partial B\_{\varepsilon}(i).
+
+For a sample \phi from \mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)}, we can define its boundary Gaussian multiplicative chaos (GMC) measure \nu\_{\phi}:=\lim\limits\_{\varepsilon\to 0}\varepsilon^{\frac{\gamma^{2}}{4}}e^%
+{\frac{\gamma}{2}\phi\_{\varepsilon}(x)}dx, where \phi\_{\varepsilon}(x) is the average of \phi over the semi-circle \partial B\_{\varepsilon}(x)\cap\mathbbm{H}.
+Then denote \{\mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)}(\ell)\}\_{\ell>0} to be the disintegration of \mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)} over \nu\_{\phi}(\mathbbm{R}); i.e. \mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)}=\int\_{0}^{\infty}\mathrm{LF}\_{\mathbbm{%
+H}}^{(\alpha,i)}(\ell)d\ell. We refer readers to see e.g. [ARS25a, Section 2.2] for further details. In particular, by [ARS25a, Lemma 2.7], for \alpha>\frac{\gamma}{2},
+there are constants C\_{\alpha,\gamma}>0 such that |\mathrm{LF}\_{\mathbbm{H}}^{(\alpha,i)}(\ell)|=C\_{\alpha,\gamma}\ell^{\frac{2}%
+{\gamma}(\alpha-Q)-1} for any \ell>0.
+
+We also need the Liouville field on the annulus. For \tau>0, let \mathcal{C}\_{\tau}=[0,\tau]\times[0,1]/\mathord{\sim} be the horizontal cylinder with modulus \tau, where under \sim we identify (x,0) and (x,1) for each x\in[0,\tau]. Let \mathbbm{P}\_{\tau} be the free boundary GFF on \mathcal{C}\_{\tau}
+with zero mean on the circle \{\frac{\tau}{2}\}\times[0,1]/\mathord{\sim}.
+
+###### Definition A.3 ([ARS25b, Definition 2.2]).
+
+Let (h,c) be sampled from \mathbbm{P}\_{\tau}\times dc. Then denote the law of \phi=h+c by \mathrm{LF}\_{\tau} (which is an infinite measure on H^{-1}(\mathcal{C}\_{\tau})).
+
+For a sample \phi from \mathrm{LF}\_{\tau},
+we can similarly define its boundary GMC measures \nu^{1}\_{\phi},\nu\_{\phi}^{2} on the two boundaries \partial\_{1}\mathcal{C}\_{\tau}=\{0\}\times[0,1]\mathord{\sim} and \partial\_{2}\mathcal{C}\_{\tau}=\{1\}\times[0,1]\mathord{\sim}, respectively. We also let \{\mathrm{LF}\_{\tau}(\ell\_{1},\ell\_{2})\}\_{\ell\_{1},\ell\_{2}>0} be the disintegration of \mathrm{LF}\_{\tau} over \nu\_{\phi}^{1}(\partial\mathcal{C}\_{1}) and \nu\_{\phi}^{2}(\partial\mathcal{C}\_{2}), i.e. \mathrm{LF}\_{\tau}=\iint\_{\mathbbm{R}\_{+}^{2}}\mathrm{LF}\_{\tau}(\ell\_{1},\ell%
+\_{2})d\ell\_{1}d\ell\_{2}. The following result from [ARS25b] gives the exact solvability of |\mathrm{LF}\_{\tau}(\ell\_{1},\ell\_{2})|, which is based on [Wu22].

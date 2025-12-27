@@ -1,0 +1,29 @@
+hat \cY=[0,D]. For now, suppose further that 1/\eps=3M is a multiple of 3 (without loss of generality) and that F is continuous (which will be relaxed). We consider the kernel induced by the map T^{\star}=G^{-1}\circ F, where G^{-1} is the generalized inverse of G with G^{-1}(q) defined as as 0 for q\leq 0 and D for q\geq 1. In particular, we compare T^{\star} with the optimal kernel G^{-1}\circ F^{\prime} for the \Wp(\mu^{\prime},\nu) problem, bounding
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{\cX}\bigl{|}G^{-1}(F(x))-G^{-1}(F^{\prime}(x))\bigr{|}^{p}% \dd F^{\prime}(x) | \displaystyle\leq\int\_{\cX}\bigl{|}G^{-1}(F^{\prime}(x)\pm\eps)-G^{-1}(F^{% \prime}(x))\bigr{|}^{p}\dd F^{\prime}(x) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\int\_{0}^{1}\bigl{|}G^{-1}(u\pm\eps)-G^{-1}(u)\bigr{|}^{p}\dd u |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\sum\_{i=0}^{3M-1}\int\_{i\eps}^{(i+1)\eps}\bigl{|}G^{-1}(u\pm\eps% )-G^{-1}(u)\bigr{|}^{p}\dd u |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\eps\sum\_{i=0}^{3M-1}\bigl{[}G^{-1}((i+2)\eps)-G^{-1}((i-1)% \eps)\bigr{]}^{p}. |  |
+
+Here, the first equality uses that F^{\prime}\_{\sharp}\mu^{\prime}=\Unif([0,1]), and the second inequality uses that G^{-1} is monotonic. If F^{\prime} is discontinuous, one should replace it with the kernel \tilde{F}^{\prime} which coincides with F^{\prime} where continuous and, at any point x where there is a jump from p\_{1} to p\_{2}, satisfies \tilde{F}^{\prime}\_{\sharp}\delta\_{x}=\Unif([p\_{1},p\_{2}]). By this choice, we have \tilde{F}^{\prime}\_{\sharp}\mu=\Unif([0,1]), and one can do the same for F to obtain \tilde{F} such that \mathsf{W}\_{\infty}(\tilde{F}\_{\sharp}\mu,\tilde{F}^{\prime}\_{\sharp}\mu)\leq\eps. At this point, we can derive the same bound as above. Now, writing \Delta\_{i}=G^{-1}((i+3)\eps)-G^{-1}(i\eps), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{\cX}\bigl{|}G^{-1}(F(x)) | \displaystyle-G^{-1}(F^{\prime}(x))\bigr{|}^{p}\dd F^{\prime}(x) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\eps\sum\_{i=-1}^{3M-2}\Delta\_{i}^{p} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\eps\left(\sum\_{i=0}^{M-1}\Delta\_{3i-1}^{p}+\sum\_{i=0}^{M-1}% \Delta\_{3i}^{p}+\sum\_{i=0}^{M-1}\Delta\_{3i+1}^{p}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\eps D^{p}\left(\sum\_{i=0}^{M-1}\left(\frac{\Delta\_{3i-1}}{D}% \right)^{p}+\sum\_{i=0}^{M-1}\left(\fr

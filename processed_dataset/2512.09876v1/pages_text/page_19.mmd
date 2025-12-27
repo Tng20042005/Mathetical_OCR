@@ -1,0 +1,52 @@
+where E\_{p,q}^{1,\pi} is (abusively) defined as previously, but twisted accordingly.
+By Theorem 2.1.3, the page E\_{p,q}^{1,\pi} is isomorphic to \bigoplus\_{x\in X\_{(p)}}A\_{q}(V\_{x},\mathcal{M},\*). According to the property 1.2.7, this last expression is isomorphic (via the map \pi) to \bigoplus\_{x\in X\_{(p)}}A\_{q}(\operatorname{Spec}\kappa(x),\mathcal{M},\*). Using again 2.1.3, this group is isomorphic to E\_{p,q}^{1,\operatorname{Id}\_{X}}, which converge to A\_{p+q}(X,\mathcal{M},\*). By Proposition 1.5.4, the map \pi induces a morphism of exact couples
+
+(D\_{p,q}^{1,\operatorname{Id}\_{X}},E\_{p,q}^{1,\operatorname{Id}\_{X}})\to(D\_{p,%
+q+n}^{1,\pi},E\_{p,q+n}^{1,\pi})
+
+hence we have compatible isomorphisms on the pages which induce the pullback
+
+{\pi^{!}:A\_{q}(X,\mathcal{M},\*)\to A\_{q+n}(V,\mathcal{M},\*)}.
+
+∎
+
+### 2.2. Gysin morphisms for slci maps
+
+###### 2.2.1.
+
+The classical approach of Fulton-Verdier ([Ful98, §6]) defines Gysin morphisms at the level of Chow groups associated with slci morphisms, which is a cornerstone of the intersection theory in Chow groups; such a construction has been extended to Chow groups with coefficients in cycle modules ([Ros96, §11]), and more recently to twisted Borel-Moore theories that are representable in the motivic stable homotopy category ([DJK21]). 888In a forthcoming work,
+we will extend Gysin morphisms to the level of cycles via \infty-categorical techniques.
+We use the same strategy here to define Gysin morphisms for Chow-Witt groups with coefficients in MW-homodules, while carefully taking into account the twists as in [Fel20, §10].
+
+###### 2.2.2.
+
+For the remainder on the section, we fix \mathcal{M} a MW-homodule.
+Let i:Z\to X be a closed immersion of (possibly singular) S-schemes. Let t be a parameter of \mathbf{A}^{1} and let
+
+{q:X\times\_{S}(\mathbf{A}^{1}\setminus\{0\})\to X}
+
+be the canonical projection. Denote by D=D\_{Z}X the deformation space such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | {D=U\sqcup N\_{Z}X} |  |
+
+where U=X\times\_{S}(\mathbf{A}^{1}\setminus\{0\}) (see [Ros96, §10] for more details).
+
+Consider the morphism
+
+J(X,Z)=J\_{Z/X}:A^{\*}(X,\mathcal{M}\_{q},\*)\to A^{\*}(N\_{Z}X,\mathcal{M}\_{q},\*)
+
+defined by the composition:
+
+\xymatrix@=14pt{A\_{p}(X,\mathcal{M}\_{q},\*)\ar[r]^{-}{q^{!}}\ar@{-->}[d]\_{J\_{Z/%
+X}}&A\_{p+1}(U,\mathcal{M}\_{q-1},\*)\ar[d]^{[t]}\\
+A\_{p}(N\_{Z}X,\mathcal{M}\_{q},\*)A\_{p+1}(U,\mathcal{M}\_{q},\*)\ar[l]^{-}\partial}
+
+where \partial is the boundary map of 1.4.6, associated with the closed immersion N\_{Z}X\rightarrow D\_{Z}X.
+This defines a morphism (also denoted by J(X,Z) or J\_{Z/X}) by passing to homology.
+
+Assume moreover that i:Z\to X is regular of codimension n, the map \pi:N\_{Z}X\to Z is a vector bundle over X of dimension n. By homotopy invariance (Theorem 2.1.4), we have an isomorphism
+
+\pi^{!}:A\_{p-n}(Z,\mathcal{M}\_{q},\omega\_{i}\otimes\*)\to A\_{p}(N\_{Z}X,\mathcal%
+{M}\_{q},\*)

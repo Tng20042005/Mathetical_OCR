@@ -1,0 +1,142 @@
+###### Lemma 1 (Harnack application).
+
+Let \left\{D\_{j}\right\} be a finite collection of 100-separated unit disks in the plane.
+Assume that h is real-valued and harmonic in \mathbb{R}^{2}\setminus\bigcup D\_{j} and that for each index j, h doesn’t change sign in 5D\_{j}\setminus D\_{j}.
+There exists an absolute constant C\_{H}\geq 10 for which
+
+1. (1)
+
+   \displaystyle\max\_{\partial\left(3D\_{j}\right)}\left|h\right|\leq C\_{H}\min\_{%
+   \partial\left(3D\_{j}\right)}\left|h\right|
+2. (2)
+
+   \displaystyle\max\_{\partial\left(3D\_{j}\right)}\left|\nabla h\right|\leq C\_{H}%
+   \min\_{\partial\left(3D\_{j}\right)}\left|h\right|.
+
+###### Proof.
+
+An application of the Harnack inequality shows that there exists C\_{H}>0 so that for every j
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\max\_{\partial\left(3D\_{j}\right)}\left|h\right| | \displaystyle\leq\sup\_{4D\_{j}\setminus 2D\_{j}}\left|h\right|\leq C\_{H}\inf\_{4D% \_{j}\setminus 2D\_{j}}\left|h\right|\leq C\_{H}\min\_{\partial\left(3D\_{j}\right)% }\left|h\right|. |  |
+
+For each z\in\partial\left(3D\_{j}\right), since h doesn’t change signs in B\_{2}(z), an application of Cauchy’s inequality as in [HL11, Lemma 1.11] shows that \left|\nabla h(z)\right|\leq\left|h(z)\right| and the conclusion follows.
+∎
+
+Now we state and prove the main result of this section.
+The following is a slight modification of [Dav24, Lemma 2.1], which resembles the result [LMNN20, Theorem 5.3].
+
+###### Proposition 1 (Three-ball inequality for harmonic function in punctured domain).
+
+Let \left\{D\_{j}\right\} be a finite collection of 100-separated unit disks in the plane for which 0\notin\bigcup 3D\_{j}.
+For some R\geq 2^{10}, let h be a harmonic function in B\_{R}\setminus\bigcup D\_{j} with the property that for each index j, h doesn’t change sign in \left(5D\_{j}\setminus D\_{j}\right)\cap B\_{R}.
+Assume that for some S\in\left(2^{8},\frac{R}{2}\right) and some M>\log\left(16R\right), with T:=R-\frac{S}{32},
+it holds that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.1) |  | \sup\_{B\_{T}\setminus\bigcup 3D\_{j}}\left|h\right|\geq e^{-M}\sup\_{B\_{R}% \setminus\bigcup 3D\_{j}}\left|h\right|. |  |
+
+Then for every r\in\left(0,\frac{R}{2^{10}}\right), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.2) |  | \sup\_{B\_{r}\setminus\bigcup 3D\_{j}}\left|h\right|\geq\left(\frac{16r}{R}\right% )^{\kappa}\sup\_{B\_{T}\setminus\bigcup 3D\_{j}}\left|h\right|, |  |
+
+where \kappa(R,S,M)=\max\left\{6C\_{H}R,2^{13}MRS^{-1}\right\} and C\_{H}\geq 10 is from Lemma 1.
+
+###### Remark 2.
+
+In contrast to [Dav24, Lemma 2.1], we no longer assume that S is bounded from below with respect to R and we impose a lower bound on M.
+This flexibility is useful for the iterative argument.
+
+###### Proof.
+
+We may assume without loss of generality that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.3) |  | \sup\_{B\_{T}\setminus\bigcup 3D\_{j}}\left|h\right|=1. |  |
+
+Set k=\max\left\{2C\_{H}R,2^{10}MRS^{-1}\right\}.
+For the sake of contradiction, assume that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.4) |  | \sup\_{B\_{r}\setminus\bigcup 3D\_{j}}\left|h\right|\leq\left(\frac{16r}{R}\right% )^{3k}. |  |
+
+Define the punctured annular region
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Omega:=\left\{\frac{r}{2}<\left|z\right|<R-1\right\}\setminus\bigcup 3D\_{j} |  |
+
+and the function
+
+|  |  |  |
+| --- | --- | --- |
+|  | f(z)=\frac{h\_{x}-ih\_{y}}{z^{k}}. |  |
+
+Observe that f is analytic in \Omega and \left|f(z)\right|=\left|\nabla h(z)\right|\left|z\right|^{-k}.
+We’ll analyze the behavior of f over \Omega.
+We begin with bounding h and \nabla h over the innermost and outermost parts of the boundary of \Omega.
+
+Let W\_{1} be the connected component of \partial\Omega that intersects the inner circle \left\{\left|z\right|=\frac{r}{2}\right\}.
+If z\in W\_{1}, then there are three cases to consider:
+
+* (a)
+
+  \left|z\right|\neq\frac{r}{2}.
+* (b)
+
+  \left|z\right|=\frac{r}{2} and there exists j for which z\in 4D\_{j}\setminus 3D\_{j}.
+* (c)
+
+  \left|z\right|=\frac{r}{2} and z\cap 4D\_{j} is empty for all j.
+
+{tikzpicture}\draw
+
+[thick] (-1,0) arc (180:450:1cm);
+\draw[thick] (0,1) arc (-24.3:294.3:2cm);
+\draw[dashed] (0,1) arc (-24.3:360:2cm);
+\draw[fill=black] (0,0) circle (1.5pt);
+\draw[-¿] (0,0) – (0.707, 0.707);
+\draw[color=black] (0.5,0.2) node \frac{r}{2};
+\draw[fill=black] (0.177,1.822) circle (2pt);
+\draw[color=black] (-1.8,1.822) node 3D\_{j};
+\draw[color=black] (0.45,1.822) node z\_{a};
+  {tikzpicture}
+\draw[thick] (-1,0) arc (180:540:1cm);
+\draw(-1,1) arc (0:360:2cm);
+\draw[dashed] (-0.333,1) arc (0:360:2.666cm);
+\draw[color=black] (-3,1) node 3D\_{j};
+\draw[color=black] (-2,3) node 4D\_{j};
+\draw[fill=black] (0,0) circle (1.5pt);
+\draw[-¿] (0,0) – (0.707, 0.707);
+\draw[color=black] (0.5,0.2) node \frac{r}{2};
+\draw[fill=black] (-0.707, 0.707) circle (2pt);
+\draw[color=black] (-0.6,0.45) node z\_{b};
+\draw[fill=black] (0, -1) circle (2pt);
+\draw[color=black] (0,-1.3) node z\_{c};
+
+Figure 1. Possible images of W\_{1} with cases (a), (b) and (c) illustrated by the points z\_{a}, z\_{b}, and z\_{c}, respectively.
+
+Case (a): There exists j for which z\in\partial\left(3D\_{j}\right) and 3D\_{j}\cap\left\{\left|z\right|=\frac{r}{2}\right\} is non-empty.
+An application of Lemma 1 combined with the fact that \partial\left(3D\_{j}\right)\cap B\_{R} is non-empty shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left|h(z)\right|,\left|\nabla h(z)\right| | \displaystyle\leq C\_{H}\min\_{\partial\left(3D\_{j}\right)}\left|h\right|\leq C\_% {H}\sup\_{B\_{r}\setminus\bigcup 3D\_{j}}\left|h\right|\leq C\_{H}\left(\frac{16r}% {R}\right)^{3k}, |  |
+
+where the last inequality follows from (2.4).
+  
+Case (b): Since h doesn’t change signs in B\_{1}(z), then an application of [HL11, Lemma 1.11] shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left|\nabla h(z)\right| | \displaystyle\leq 2\left|h(z)\right|\leq 2\sup\_{B\_{R}\setminus\bigcup 3D\_{j}}% \left|h\right|\leq 2\left(\frac{16r}{R}\right)^{3k}, |  |
+
+where the second inequality uses that z\notin\bigcup 3D\_{j} and we have again applied (2.4).
+  
+Case (c): Let d=\min\left\{1,\frac{r}{2}\right\} and observe that B\_{d}\left(z\right)\subset B\_{R}\setminus\bigcup 3D\_{j}, so an application of Cauchy’s inequality, [HL11, Lemma 1.10], shows that

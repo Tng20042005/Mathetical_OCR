@@ -1,0 +1,45 @@
+Assume that \mathcal{O} is the closure of a smooth bounded domain of \mathbb{R}^{d}. Because \mathcal{O} is bounded, we simply work on \mathcal{P}(\mathcal{O}) and there is no need to specify integrability conditions on the measures. In this somehow simpler case, the geometry of \mathcal{O} is still flat, hence the parallel transport on \mathcal{O} is trivial.
+
+In this case, we define the tangent space of \mu\in\mathcal{P}(\mathcal{O}) as
+
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{\mu}(\mathcal{P}(\mathcal{O})):=\left\{\psi:\mathcal{O}\to\mathcal{P}(% \mathbb{R}^{d})\bigg{|}\int\_{\bar{\mathcal{O}}\times\mathbb{R}^{d}}|z|\psi\_{x}% (dz)\mu(dx)<\infty\right\}. |  |
+
+Note that the integrability condition is of the L^{1} type, this is natural from a duality standpoint, since \mathcal{O} is bounded. This notion of tangent space can be justified by the same heuristics as the ones we gave in Section 2.2. Moreover, in this case, it can be identified with \{\gamma\in\mathcal{P}\_{1}(\mathcal{O}\times\mathbb{R}^{d})|(\pi\_{1})\_{\#}%
+\gamma=\mu\}.
+
+Parallel transport is here defined as follows.
+
+###### Definition 5.1.
+
+Let \mu\in\mathcal{P}(\mathcal{O}), \psi\in T\_{\mu}(\mathcal{P}(\mathcal{O})) and \eta\in\mathcal{P}(\mathcal{C}([0,1],\mathcal{O})) such that (e\_{0})\_{\#}\eta=\mu. A parallel transport of \psi along \eta is a measure \Psi\in\mathcal{P}(\mathcal{C}([0,1],\mathcal{O}\times\mathbb{R}^{d})) concentrated on C^{1}\_{y}([0,1],\mathcal{O}\times\mathbb{R}^{d}) such that
+
+* •
+
+  (p\_{1})\_{\#}\Psi=\eta.
+* •
+
+  (\partial\_{2})\_{\#}\Psi=\delta\_{0}.
+* •
+
+  (e\_{0})\_{\#}\Psi(dx,dz)=\mu(dx)\psi\_{x}(dz).
+
+All the results and example established in the case of \mathcal{P}\_{2}(\mathbb{R}^{d}) follow in a similar manner and their details are omitted to avoid repetitions.
+
+### 5.2. The case of smooth Riemannian manifold
+
+Let (M,g) be smooth bounded Riemannian manifold. The tangent space to M at x\in M is denoted T\_{x}M, and TM is the tangent bundle. The notion of parallel transport on (M,g) is the one associated to the Levi-Civita connection. Recall that given a C^{1} curve \theta:[0,1]\to M, and \xi\in T\_{\theta(0)}M, there exists a unique parallel transport of \xi along \theta, and it will be noted \tau\_{\theta}(\xi), which is, to fix a convention here, a curve in TM.
+
+For \mu\in\mathcal{P}(M), the tangent space to \mathcal{P}(M) at \mu is
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (4) |  | \displaystyle T\_{\mu}(\mathcal{P}(M)):=\bigg{\{} | \displaystyle\psi:M\to\cup\_{x\in M}\mathcal{P}(T\_{x}M),\text{ measurable, } |  |
+|  |  | \displaystyle\bigg{|}\forall x\in M,\psi\_{x}\in\mathcal{P}(T\_{x}M),\int\_{M}% \int\_{T\_{x}M}|z|\_{x}\psi\_{x}(dz)\mu(dx)<\infty\bigg{\}}. |  |
+
+The interpretation of the previous is quite clear: we keep the idea of allowing for a probabilistic description of the tangent vectors over every points. The integrability condition is in L^{1} because M is bounded. In this setting, one can identify, for \mu\in\mathcal{P}(M), T\_{\mu}(\mathcal{P}(M)) with \{\gamma\in\mathcal{P}\_{1}(TM)|(\pi\_{1})\_{\#}\gamma=\mu\}. Note that the norm |z|\_{x} in (4) is the one of T\_{x}M induced by g\_{x}.
+
+In this setting, parallel transport on \mathcal{P}(M) is defined as follows.
+
+###### Definition 5.2.

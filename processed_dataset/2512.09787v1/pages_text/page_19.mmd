@@ -1,0 +1,38 @@
+According to Table 1, the Fréchet RV X can be expressed by a distribution of the extreme value \mathbb{H}-function class with the parameter set \bm{\theta}\_{X\_{0}}=(0,0.0727,1,0,-1.564,-2.564).
+We take \bm{\theta}\_{X\_{0}} as a initial guess and estimate the parameter set \widehat{\bm{\theta}\_{X}} which better fits to data.
+The parameters estimation was done by means of an optimization procedure by minimizing the distance (mean squared error) between the empirical cumulative density function (ECDF) and the CDF (see Algorithm 4.4.2).
+
+The parameter set \hat{\theta}^{MLE}\_{X}=(0.021,0.0008,3.973,0.007,-9.51,-0.899) yields a better fit as supported by the information criteria such as the Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC), and Efficient Determination Criterion (EDC).
+These estimates were obtained using Algorithm 4.4.2.
+The same procedure were used to get \widehat{\theta\_{Y}} and \widehat{\theta\_{Z}} (respectively, \hat{\theta}^{MLE}\_{Y} and \hat{\theta}^{MLE}\_{Z}), which are presented on Table 3.
+
+Table 3: Estimated parameters and information criteria for model selection. \mathbb{H}-extreme distribution outperforms particular cases.
+
+| Dataset | PDF | \widehat{\theta} | AIC | BIC | EDC |
+| --- | --- | --- | --- | --- | --- |
+| X | Fréchet | \bm{\theta}\_{X\_{0}}=(0,0.0727,1,0,-1.564,-2.564) | 333.70 | 343.68 | 313.9 |
+|  | \mathbb{H}-extreme | \widehat{\bm{\theta}\_{X}}=(0.013,0.364,0.517,0.0006,-5.089,-1.446) | 332.34 | 342.32 | 312.55 |
+|  |  | \hat{\theta}^{MLE}\_{X}=(0.021,0.0008,3.973,0.007,-9.51,-0.899) | 328.89 | 338.87 | 309.10 |
+| Y | Weibull | \bm{\theta}\_{Y\_{0}}=(0,0.377,1,0,5.50,4.50) | 111.19 | 124.60 | 90.53 |
+|  | \mathbb{H}-extreme | \widehat{\bm{\theta}\_{Y}}=(0.002,0.5,0.80,0.03,5.44,6.12) | 110.35 | 123.75 | 89.69 |
+|  |  | \hat{\bm{\theta}}^{MLE}\_{X}=(0.0,0.657,0.621,0.0,5.394,7.150) | 109.75 | 123.15 | 89.09 |
+| Z | Gamma | \bm{\theta}\_{Z\_{0}}=(0.0018,0,1,0,1,-0.1726) | 2876.85 | 2896.67 | 2854.84 |
+|  | \mathbb{H}-extreme | \widehat{\bm{\theta}\_{Z}}=(0.0015,7.17,-6.55,0.0018,8.57,-0.29) | 2865.10 | 2884.92 | 2843.09 |
+|  |  | \hat{\bm{\theta}}^{MLE}\_{Z}=(0.0017,7.17,-6.55,0.005,8.57,-0.195) | 2863.10 | 2882.92 | 2841.09 |
+
+Table 3 summarizes the improvements achieved through estimations using both LSE (Algorithm 4.4.2) and MLE (Algorithm 4.4.2). For all the datasets, the modeling gains of using MLE instead of LSE were validated by the information criteria (AIC, BIC, EDC). Such findings are justified by the fact that MLE explicitly incorporates the probabilistic structure of the data through the likelihood function. By maximizing the likelihood, MLE identifies parameter values that make the observed data most probable under the assumed model, leading to estimators that are typically unbiased, consistent, and asymptotically efficient. In contrast, LSE focuses solely on minimizing the squared deviation between observed and predicted values, without considering the underlying distributional properties. As a result, MLE tends to provide more accurate and statistically meaningful estimates. Figure 5 shows the fit of the theoretical PDF to the histogram of the data.
+
+|  |  |  |
+| --- | --- | --- |
+| (a) | (b) | (c) |
+
+Figure 5: Histograms and fitted probability density functions for (a) X, (b) Y and (c) Z.
+
+To ensure statistical validity when model parameters are estimated from the data, a parametric bootstrap procedure was implemented to obtain reliable p-values for the fitted CDFs. Specifically, we employed the Kolmogorov–Smirnov (KS) and Cramér–von Mises (CVM) goodness-of-fit tests, combined with bootstrap-based resampling using
+M=1,000 (see, e.g., Chapter 4.2.3 in [6]). This approach accounts for the composite nature of the null hypothesis and provides corrected significance levels. The resulting p-values indicate that the fitted models adequately describe the data: for dataset X, the KS and CVM p-values are 0.60 and 0.83, respectively; for Y, 0.99 and 0.99; and for Z, 0.99 and 0.95. All values are sufficiently high to suggest no significant departure between the empirical and fitted distributions.
+
+|  |  |  |
+| --- | --- | --- |
+| (a) | (b) | (c) |
+
+Figure 6: Normal Quantile-Quantile plot displaying residuals from fitted models for (a) X, (b) Y and (c) Z.

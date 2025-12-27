@@ -1,0 +1,62 @@
+For the rest of the axioms it suffices to proceed line by line and check that the corresponding versions match with each other, which makes use of the compatibilities of the isomorphisms stated in 3.1.4. The proof for \operatorname{D}\_{\lambda}(\mathcal{M}) is similar, and we leave the details to the reader.
+∎
+
+###### Remark 3.3.5.
+
+Assume that the base scheme S is the spectrum of a perfect field \operatorname{Spec}(k) (resp. the spectrum of an excellent DVR) equipped with its canonical pinning.
+Then the category of MW-module (in the sense of 3.3.2) is equivalent to the category of Milnor-Witt cycle module in the sense of [Fel20, §2] (resp. in the sense of [BHP23]).
+Indeed, the definitions are almost identical. The main point is that under the axiom 3.2.1, twists by line bundles can be defined using the twist *à la Morel* in (3.2.1.a) and are consequences of the other axioms (see also 1.1.3).
+
+###### Example 3.3.6.
+
+Let (S,\lambda) be a base scheme with a pinning.
+Then the MW-premodule \operatorname{K}^{MW}\_{\*} over S constructed in 3.2.3 is actually
+a MW-module.
+
+Indeed, this follows from the proof of [BHP23, Th. 1.4],
+though an argument is missing point in *loc. cit.*
+First, the axiom (FD) of 3.3.2 is obvious (see e.g. [Dég25, Lem. 3.1.2]).
+The problem in the proof of *loc. cit.* happens with axiom (C).
+In fact, the reduction of Step 2 in *loc. cit.*, to the case of a local *complete* 2-dimensional
+domain A uses the existence of flat pullbacks on the Rost-Schmid complex.
+Indeed, to prove axiom (C), one reduces to a 2-dimension local excellent scheme X\_{0}=\operatorname{Spec}(A\_{0}).
+Then the completion A=\widehat{A\_{0}} is flat over A of relative dimension 0.111111Flatness is classical
+(see [Sta25, Tag 00MB] and relative dimension 0 follows as A\_{0} and A have the same residue field.
+One then needs to use the existence of the flat pullback along f:X=\operatorname{Spec}(A)\rightarrow X\_{0}=\operatorname{Spec}(A\_{0}),
+as in Step 3 of the proof of [EKM08, Prop. 49.30],
+to reduce to the case of the local complete scheme X, using that A and A\_{0} have the same residue field.
+Such a pullback is defined in [FJ25], and the above proof shows that \operatorname{K}^{MW}\_{\*}
+satisfies both axioms of 3.3.2.
+
+One then applies Theorem 3.3.4 to deduce a MW-cycle homodule \operatorname{\mathcal{D}}\_{\lambda}(\operatorname{K}^{MW}\_{\*}) over S,
+with the formula:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.3.6.a) |  | \operatorname{\mathcal{D}}\_{\lambda}(\operatorname{K}^{MW}\_{\*})\_{n}(E)=% \operatorname{K}^{MW}\_{n}(E,\lambda\_{E})=\mathcal{K}^{MW}\_{\*}(E)\otimes\_{% \mathbf{Z}[E^{\times}]}\mathbf{Z}[\lambda\_{E}^{\times}]. |  |
+
+###### 3.3.7.
+
+Let (S,\lambda) be a base scheme with a pinning (recall that, according to our conventions,
+S is equipped with a dimension function \delta).
+According to 3.3.4, one can transport all constructions obtained earlier for MW-homodules to
+the case of a MW-module M. Explicitly, give an S-scheme X essentially of finite type (resp. essentially slci)
+and a line bundle \mathcal{L} over X,
+one defines the homological (resp. cohomological) complex of cycles of X with coefficients in M and twists \mathcal{L}
+as follows:
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.3.7.a) |  | \displaystyle C\_{p}(X,M\_{q},\mathcal{L}) | \displaystyle=C\_{p}(X,\mathcal{D}\_{\lambda}(M)\_{q},\mathcal{L})=\bigoplus\_{x% \in X\_{(p)}}M\_{q+p}(x,\lambda\_{x}\otimes\mathcal{L}\_{x}) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.3.7.b) |  | \displaystyle C^{p}(X,M\_{q},\mathcal{L}) | \displaystyle=C^{p}(X,\mathcal{D}\_{\lambda}(M)\_{q},\mathcal{L})=\bigoplus\_{x% \in X^{(p)}}M\_{q-p}(x,\omega\_{X,x}\otimes\lambda\_{x}\otimes\mathcal{L}\_{x}^{% \vee}). |  |
+
+so that if X/S is of relative dimension d
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.3.7.c) |  | C^{p}(X,M\_{q},\mathcal{L})\simeq C\_{d-p}(X,M\_{q-d},\omega\_{X}\otimes\mathcal{L% }^{\vee}). |  |
+
+See respectively (1.3.3.a), (1.3.7.a), (1.3.7.b),
+and use 1.1.4.

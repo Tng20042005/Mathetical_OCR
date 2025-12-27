@@ -1,0 +1,57 @@
+map is valued in \cup\_{\nu\in\mathcal{P}\_{2}(\mathbb{R}^{d})}L^{2}((\mathbb{R}^{d},\nu),\mathbb%
+{R}^{d})\subset T\mathcal{P}\_{2}(\mathbb{R}^{d}) and a suitable notion of parallel transport is needed to compare, for \mu\neq\nu D\_{\mu}U(\mu)\in L^{2}((\mathbb{R}^{d},\mu),\mathbb{R}^{d}) and D\_{\mu}U(\nu)\in L^{2}((\mathbb{R}^{d},\nu),\mathbb{R}^{d}). We adopt the following definition, in which we make constant use of the notation \gamma\in\Pi(\mu,\nu), of Proposition 3.6 and of the notation \mathcal{T}^{\gamma}(\psi) to denote the parallel transport of \psi along the coupling \gamma.
+
+###### Definition 6.7.
+
+Let U:\mathcal{P}\_{2}(\mathbb{R}^{d})\to\mathbb{R} be a differentiable map at any \mu\in\mathcal{P}\_{2}(\mathbb{R}^{d}). We say that it is \mathcal{C}^{1} if, for any \mu\in\mathcal{P}\_{2}(\mathbb{R}^{d}),
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lim\_{C\_{2}(\gamma)\to 0}d\_{\nu}(\mathcal{T}^{\gamma}(D\_{\mu}U(\mu)),D\_{\mu}U(% \nu))=0. |  |
+
+For \alpha\in(0,1), we say that this function is in \mathcal{C}^{1,\alpha}(\mathcal{P}\_{2}(\mathbb{R}^{d})) if
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (7) |  | I\_{\alpha}(D\_{\mu}U):=\sup\_{\gamma,0<C\_{2}(\gamma)\leq 1}\frac{d\_{\nu}(% \mathcal{T}^{\gamma}(D\_{\mu}U(\mu)),D\_{\mu}U(\nu))}{C\_{2}(\gamma)^{\alpha}}<\infty. |  |
+
+The space \mathcal{C}^{1,1}(\mathcal{P}\_{2}(\mathbb{R}^{d})) is defined in a similar way except for the fact that the supremum is taken over all \gamma such that C\_{2}(\gamma)>0.
+
+###### Remark 6.8.
+
+Remark that, for \mu,\nu\in\mathcal{P}\_{2}(\mathbb{R}^{d}), \phi,\psi being deterministic elements of respectively T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})),T\_{\nu}(\mathcal{P}\_{2}(\mathbb{R}^{d%
+})), and \gamma\in\Pi(\mu,\nu),
+
+|  |  |  |
+| --- | --- | --- |
+|  | d^{2}\_{\nu}(\mathcal{T}^{\gamma}(D\_{\mu}U(\mu)),D\_{\mu}U(\nu))=\int\_{\mathbb{R% }^{d}\times\mathbb{R}^{d}}|\phi(x)-\psi(y)|^{2}\gamma(dx,dy). |  |
+
+This definition is perfectly equivalent to standard \mathcal{C}^{1,\alpha} regularity of the lift \tilde{U} of U in L^{2}(\Omega,\mathbb{R}^{d}) introduced in Section 4, except that this language allows to define such a solution even when the state space is not \mathbb{R}^{d}. We believe it is a strong justification of the regularity of the regularization of W\_{2}^{2} introduced in [9].
+
+###### Remark 6.9.
+
+Below we shall comment on the choice of the quantity C\_{2}(\gamma)^{\alpha} in (7), namely that we could also have used C\_{2\alpha}(\gamma)^{\alpha}.
+
+The following holds.
+
+###### Proposition 6.10.
+
+For \alpha\in(0,1], \mathcal{C}^{1,\alpha}(\mathcal{P}\_{2}(\mathbb{R}^{d}))\cap L^{\infty}(%
+\mathcal{P}\_{2}(\mathbb{R}^{d})) is a normed vector space when equipped with the norm \mathcal{N} defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{N}(U):=\|U\|\_{\infty}+\sup\_{\mu\in\mathcal{P}\_{2}(\mathbb{R}^{d})}\{d% \_{\mu}(D\_{\mu}U(\mu),0)\}+I\_{\alpha}(D\_{\mu}U). |  |
+
+###### Remark 6.11.
+
+* •
+
+  The same result holds for \mathcal{C}^{1,0}(\mathcal{P}\_{2}(\mathbb{R}^{d})) with the convention that I\_{0}(D\_{\mu}U)=0 for any U.
+* •
+
+  The boundedness of U and D\_{\mu}U can be relaxed in the usual way: by considering weighted norms which allow for a fixed growth in W\_{2}(\mu,\delta\_{0}) (polynomial e.g.).
+
+###### Proof.
+
+The probabilistic reformulation of d\_{\mu} implies that I\_{\alpha} indeed satisfies I\_{\alpha}(\lambda D\_{\mu})=|\lambda|I\_{\alpha}(D\_{\mu}U). Hence, to verify that \mathcal{N} is a norm, we only need to check the triangular inequality. This does not raise any issue, for instance it follows easily from the probabilistic representation of d^{2}\_{\mu}. The fact that \mathcal{N} is a norm then implies the vector space structure.

@@ -1,0 +1,64 @@
+Then the risk of \delta\_{\varphi\_{1}} is nowhere larger than that of \delta\_{21} with respect to the Stein type loss function L\_{2}(\cdot).
+
+Now we define a bigger class of estimators based on the statistics (S\_{1},S\_{2},X) of the form
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathcal{D}\_{2}=\left\{\delta\_{\varphi\_{2}}=\varphi\_{2}\left(W,W\_{1}\right)S\_{% 1};\ W=\frac{S\_{2}}{S\_{1}},\ W\_{1}=\frac{X}{S\_{1}}\right\} |  | (6) |
+
+In the next theorem we will propose an estimator that dominates the estimator \delta\_{\varphi\_{2}}. As a consequences of this theorem we will obtain an estimator that dominates BAEE of \sigma\_{1}.
+
+###### Theorem 4.
+
+1. (i)
+
+   Under the L\_{1}(\cdot) loss function, the risk of the estimator
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \delta\_{1S2}^{1}=\begin{cases}\min\left\{\varphi\_{2}(W,W\_{1}),\varphi\_{21}(W,W% \_{1})\right\}S\_{1},&\ W\_{1}>0\\ \varphi\_{2}(W,W\_{1})S\_{1},&\text{otherwise}\end{cases} |  | (7) |
+
+   is nowhere larger than that of the estimator \delta\_{\varphi\_{2}} provide P(\varphi\_{2}(W,W\_{1}) >\varphi\_{21}(W,W\_{1}))>0, where
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \varphi\_{21}(W,W\_{1})=\frac{(1+W+p\_{1}W\_{1})}{\sqrt{(p\_{1}+p\_{2}-1)(p\_{1}+p\_{2% }-2)}}\min\left\{\left(\frac{E(\tau^{p\_{1}+p\_{2}+1})}{E(\tau^{p\_{1}+p\_{2}-1})}% \right)^{1/2},\left(\frac{E(\tau)}{E(\tau^{-1})}\right)^{1/2}\right\}. |  |
+2. (ii)
+
+   For the loss function L\_{2}(\cdot), the risk of the estimator
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \delta\_{1S2}^{2}=\begin{cases}\min\left\{\varphi\_{2}W,W\_{1}),\varphi\_{22}(W,W\_% {1})\right\}S\_{1},&\ W\_{1}>0\\ \varphi\_{2}(W,W\_{1})S\_{1},&\text{otherwise}\end{cases} |  | (8) |
+
+   is nowhere larger than that of the estimator \delta\_{\varphi\_{2}} provide P\left(\varphi\_{2}(W,W\_{1})>\varphi^{2}\_{2}(W,W\_{1})\right)>0, where
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \varphi\_{22}(W,W\_{1})=\frac{(1+W+p\_{1}W\_{1})}{p\_{1}+p\_{2}-1}\min\Bigg{\{}\frac% {E(\tau^{p\_{1}+p\_{2}})}{E(\tau^{p\_{1}+p\_{2}-1})},\frac{1}{E(\tau)}\Bigg{\}}. |  |
+
+Proof: (i) Under the loss function L\_{1}(\cdot), the risk of the estimator \delta\_{\varphi\_{2}}(W,W\_{1}) can be expressed as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle R(\delta\_{\varphi\_{2}},\mu\_{1},\sigma\_{1},\sigma\_{2})=E^{W,W\_{1}% }E\left[\left(\varphi\_{2}(W,W\_{1})V\_{1}+\frac{1}{\varphi\_{2}(W,W\_{1})V\_{1}}-2% \right)\bigg{|}W,W\_{1}\right] |  |
+
+For given \tau>0, the conditional density of V\_{1} given W=w, W\_{1}=w\_{1} obtain as
+
+|  |  |  |
+| --- | --- | --- |
+|  | f\_{\eta,\rho}(v\_{1}|w,w\_{1})=\frac{v\_{1}^{p\_{1}+p\_{2}-2}e^{-\tau v\_{1}(1+w\eta% +p\_{1}w\_{1})}e^{p\_{1}\tau\rho}\tau^{p\_{1}+p\_{2}-1}}{\int\_{0}^{\infty}\int\_{% \frac{\rho}{w\_{1}}}^{\infty}v\_{1}^{p\_{1}+p\_{2}-2}e^{-\tau v\_{1}(1+w\eta+p\_{1}w% \_{1})}e^{p\_{1}\tau\rho}\tau^{p\_{1}+p\_{2}-1}dv\_{1}dH(\tau)},~{}\max\{0,\frac{% \rho}{w\_{1}}\}\leq v\_{1}<\infty, |  |
+
+where \eta=\frac{\sigma\_{1}}{\sigma\_{2}}\leq 1, \rho=\frac{\mu\_{1}}{\sigma\_{1}}\in\mathbb{R}. It can be easily seen that the conditional risk function
+
+|  |  |  |
+| --- | --- | --- |
+|  | R\_{1}(\delta\_{\varphi\_{2}},\eta,\rho)=E\left[\left(\varphi\_{2}(w,w\_{1})V\_{1}+% \frac{1}{\varphi\_{2}(w,w\_{1})V\_{1}}-2\right)\bigg{|}W=w,W\_{1}=w\_{1}\right] |  |
+
+is minimized at
+
+|  |  |  |
+| --- | --- | --- |
+|  | \varphi\_{2}(w,w\_{1};\eta,\rho)=\left(\frac{E\left[1/V\_{1}|W=w,W\_{1}=w\_{1}% \right]}{E\left[V\_{1}|W=w,W\_{1}=w\_{1}\right]}\right)^{1/2} |  |
+
+Now we will consider two cases. First case, we consider \mu\_{1}>0, w\_{1}>0. In this case we have

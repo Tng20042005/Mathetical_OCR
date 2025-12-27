@@ -1,0 +1,57 @@
+in p-adic geometry Hodge period maps lift canonically to lattice Hodge period maps with target the Schubert split
+B^{+}\_{\mathrm{dR}}-affine Grassmannian. Our result then implies that the geometric Sen morphism is the derivative of this lattice lift (this is made precise using the inscribed v-sheaves of [Howe.InscriptionTwistorsAndPAdicPeriods]).
+
+One consequence of Theorem A is that injectivity of geometric Sen can be checked at the level of Kodaira-Spencer. This has implications for perfectoidness; in particular, it furnishes many new examples where He’s stalkwise perfectoidness criterion applies (§1.2.5).
+
+### 1.1. Statement of the main result
+
+Before discussing these examples and applications in more detail, we want to give a precise statement of our result. Thus, we first set up some notation about p-adic Lie torsors and filtered torsors with integrable connection. To that end, let G/\mathbb{Q}\_{p} be a connected linear algebraic group, let K\subseteq G(\mathbb{Q}\_{p}) be an open subgroup, and let \mathfrak{g}:=\operatorname{Lie}K=\operatorname{Lie}G(\mathbb{Q}\_{p}). Let L be a p-adic field (that is, a complete discretely valued extension of \mathbb{Q}\_{p} with perfect residue field), and let S/L be a smooth rigid analytic variety.
+
+#### 1.1.1. The geometric Sen morphism
+
+From \tilde{S}/S a proétale K-torsor, [7, Theorem 1.0.4] constructs a canonical twisted Higgs field
+
+|  |  |  |
+| --- | --- | --- |
+|  | \theta\_{\tilde{S}}\in\left(\Omega^{1}\_{S/C}\otimes\_{\mathcal{O}}\left(\tilde{% \mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}{\widehat{\mathcal{O}}}(-1)% \right)\right)(S), |  |
+
+where \tilde{\mathfrak{g}}=\tilde{S}\times^{K}\underline{\mathfrak{g}} is the form of the constant local system \underline{\mathfrak{g}} obtained by twisting by \tilde{S} along the adjoint action of K on \mathfrak{g}. Dually, we view \theta\_{\tilde{S}} as a morphism on S\_{\mathrm{pro\acute{e}t}},
+
+|  |  |  |
+| --- | --- | --- |
+|  | \kappa\_{\tilde{S}}:T\_{S/C}\otimes\_{\mathcal{O}}\hat{\mathcal{O}}\rightarrow% \tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}(-1). |  |
+
+#### 1.1.2. de Rham torsors and the Kodaira–Spencer morphism
+
+A proétale K-torsor \tilde{S}/S is called de Rham if, for every V\in\mathrm{Rep}\_{\mathbb{Q}\_{p}}G, the associated \mathbb{Q}\_{p}-local system \tilde{K}\times^{K}V is de Rham in the sense of [8] (it is equivalent to check this for one faithful representation and, by [4], it even suffices to check that the pullback to a single classical point in each connected component is a de Rham Galois representation). Associated to any de Rham torsor \tilde{S}, we have a filtered G-torsor with integrable connection satisfying Griffiths transversality, \tilde{S}\_{\mathrm{dR}}/S. We write \tilde{\mathfrak{g}}\_{\mathrm{dR}}=\tilde{S}\_{\mathrm{dR}}\times^{G}%
+\operatorname{Lie}G, which is the filtered vector bundle with integrable connection satisfying Griffiths transversality associated to the de Rham \mathbb{Q}\_{p}-local system \tilde{\mathfrak{g}}. It has a natural Hodge filtration, and the Kodaira–Spencer morphism for \tilde{S}\_{\mathrm{dR}} is a map
+
+|  |  |  |
+| --- | --- | --- |
+|  | \kappa\_{\tilde{S}\_{\mathrm{dR}}}:T\_{S/C}\rightarrow\mathrm{gr}^{-1}\_{\mathrm{% Hdg}}(\tilde{\mathfrak{g}}\_{\mathrm{dR}}) |  |
+
+(that it lands inside of \mathrm{gr}^{-1}\_{\mathrm{Hdg}}(\tilde{\mathfrak{g}}\_{\mathrm{dR}}) rather than just \tilde{\mathfrak{g}}\_{\mathrm{dR}}/\mathrm{Fil}^{0}\tilde{\mathfrak{g}}\_{%
+\mathrm{dR}} *is* Griffiths transversality).
+
+#### 1.1.3. The comparison
+
+For \tilde{S}/S a de Rham K-torsor, there is a Hodge-Tate filtration on (\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}) and the Hodge-Tate comparison gives a canonical isomorphism
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\mathrm{gr}^{1}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{% \mathbb{Q}\_{p}}}\hat{\mathcal{O}})\right)(-1)=\left(\mathrm{gr}^{-1}\_{\mathrm{% Hdg}}(\tilde{\mathfrak{g}}\_{\mathrm{dR}})\right)\otimes\_{\mathcal{O}}\hat{% \mathcal{O}}. |  |
+
+On the other hand, we have the natural quotient map \mathrm{Fil}^{1}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb%
+{Q}\_{p}}}\hat{\mathcal{O}})\twoheadrightarrow\mathrm{gr}^{1}\_{\mathrm{HT}}(%
+\tilde{\mathfrak{g}}\otimes\_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}}). Composing these two maps, we obtain a natural surjection
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.1.3.1) |  | q\_{\tilde{S}}:\left(\mathrm{Fil}^{1}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes% \_{\underline{\mathbb{Q}\_{p}}}\hat{\mathcal{O}})\right)(-1)\twoheadrightarrow% \left(\mathrm{gr}^{-1}\_{\mathrm{Hdg}}(\tilde{\mathfrak{g}}\_{\mathrm{dR}})% \right)\otimes\_{\mathcal{O}}\hat{\mathcal{O}}. |  |
+
+Our main result compares \kappa\_{\tilde{S}} and \kappa\_{\tilde{S}\_{\mathrm{dR}}} using this map:
+
+###### Theorem A.
+
+Let L be a p-adic field, let S/L be a smooth rigid analytic variety, let G/\mathbb{Q}\_{p} be a connected linear algebraic group, and let K\leq G(\mathbb{Q}\_{p}) be an open subgroup. For any de Rham K-torsor \tilde{S}/S, \kappa\_{\tilde{S}} factors through \left(\mathrm{Fil}^{1}\_{\mathrm{HT}}(\tilde{\mathfrak{g}}\otimes\_{\underline{%
+\mathbb{Q}\_{p}}}\hat{\mathcal{O}})\right)(-1) and is the unique map

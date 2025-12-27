@@ -1,0 +1,40 @@
+## 5. Boundedness of solutions
+
+In this section, we prove that any radial solution
+u of problem (1.4) is bounded.
+
+###### Proof of Theorem 1.2.
+
+In what follows, we will apply a De Giorgi’s iteration scheme to control the level sets of a solution u to problem (1.4).
+
+For a positive integer k, define
+
+|  |  |  |
+| --- | --- | --- |
+|  | w\_{k}:=(u-(1-2^{-k}))\_{+}. |  |
+
+Then, as in [11], the following holds
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.1) |  | w\_{k+1}\leq w\_{k}\text{ in }\mathbb{R}^{N},\quad u(x)<(2^{k+1}-1)w\_{k}\text{ % in }\left\{w\_{k+1}>0\right\},\quad\text{and }\left\{w\_{k+1}>0\right\}\subset% \left\{w\_{k}>2^{-(k+1)}\right\}. |  |
+
+Also, 0\leq w\_{k}\leq|u|+1\in L^{1}(\mathbb{R}^{N}) and w\_{k}(x)\to(u(x)-1)\_{+} a.e. in \mathbb{R}^{N}, so by dominated convergence theorem,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.2) |  | \lim\_{k\to\infty}\int\_{\mathbb{R}^{N}}|x|^{\alpha}|w\_{k}|^{q}\,dx=\int\_{% \mathbb{R}^{N}}|x|^{\alpha}|(u-1)\_{+}|^{q}\,dx. |  |
+
+Now,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5.3) |  | \begin{split}\frac{1}{p}\|w\_{k+1}\|\_{s,p,\beta}&\leq C(p,\gamma)\bigg{(}\gamma% \int\_{\mathbb{R}^{N}}|\nabla w\_{k+1}|^{p-2}\nabla w\_{k+1}\cdot\nabla w\_{k+1}\,% dx\\ &+(1-\gamma)\int\_{\mathbb{R}^{N}}\int\_{\mathbb{R}^{N}}\dfrac{|w\_{k+1}(x)-w\_{k+% 1}(y)|^{p-2}(w\_{k+1}(x)-w\_{k+1}(y))(w\_{k+1}(x)-w\_{k+1}(y))}{|x-y|^{N+sp}}\,dx% \,dy\bigg{)}\\ &+\int\_{\mathbb{R}^{N}}|x|^{\beta}|w\_{k+1}|^{p-1}w\_{k+1}\,dx\\ &\leq C(p,\gamma)\bigg{(}\gamma\int\_{\mathbb{R}^{N}}|\nabla u|^{p-2}\nabla u% \cdot\nabla w\_{k+1}\,dx\\ &+(1-\gamma)\int\_{\mathbb{R}^{N}}\int\_{\mathbb{R}^{N}}\dfrac{|u(x)-u(y)|^{p-2}% (u(x)-u(y))(w\_{k+1}(x)-w\_{k+1}(y))}{|x-y|^{N+sp}}\,dx\,dy\bigg{)}\\ &+\int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-1}w\_{k+1}\,dx\\ &=C(p,\gamma)\int\_{\mathbb{R}^{N}}|x|^{\alpha}|u|^{q-1}w\_{k+1}\,dx,\end{split} |  |
+
+where we have used the fact that
+
+|  |  |  |
+| --- | --- | --- |
+|  | |v\_{+}(x)-v\_{+}(y)|^{p}\leq(v(x)-v(y))(v\_{+}(x)-v\_{+}(y))|v\_{+}(x)-v\_{+}(y)|^{% p-2} |  |
+
+and also that u is a solution of (1.4). Now, by (5.1), we get

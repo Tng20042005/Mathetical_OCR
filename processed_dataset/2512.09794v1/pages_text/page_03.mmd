@@ -1,0 +1,59 @@
+The proof of Theorem 1.1 relies mainly on establishing a suitable compact embedding of the fractional Sobolev space of weighted radial functions into an appropriate weighted Lebesgue space (see Theorem 3.7). This compactness result is the key ingredient that enables the application of a Mountain Pass–type existence theorem (see Lemma 6.1).
+
+We note that our result extends the existence obtained in [6, 23, 16] to the setting of local-nonlocal nonlinear operators on unbounded domains. Furthermore, the range of parameters given in (1.6) improves upon that obtained in [16] in the particular case p=2 and \beta=2.
+
+Regarding regularity, in the following result, by employing a De Giorgi’s iteration scheme, we find that radial weak solutions of (1.4) are indeed bounded.
+
+###### Theorem 1.2.
+
+Let s\in(0,1] be such that 1/p<s<N/p, \alpha>-sp and p<q<p^{\*}\_{\gamma,s,\alpha}. Moreover, assume condition (1.6). Then, for any radial weak solution u to (1.4), there is a constant C>0 such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|u\|\_{L^{\infty}(\mathbb{R}^{N})}\leq C. |  |
+
+Finally, by applying a generalization of Pohozaev’s existence result established in [20], we show that the value \frac{p(N+\alpha)}{N-sp} serves as a threshold for the existence of bounded solutions with a weighted control of the gradient.
+
+###### Theorem 1.3.
+
+Let s\in(0,1] be such that 1/p<s<N/p, \alpha>-sp and \beta>p(1-s). Then, for all q>p^{\*}\_{\gamma,s,\alpha}, problem (1.4) has no solutions u\in\mathcal{\tilde{X}}(\mathbb{R}^{N}), being
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{\tilde{X}}(\mathbb{R}^{N})=\{u\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}% ^{N})\cap L^{\infty}(\mathbb{R}^{N})\text{ such that }|\nabla u(x)||x|\in L^{r% }(\mathbb{R}^{N})\text{ for some }r>1\}. |  |
+
+The paper is organized as follows. In Section 2 we provide the functional framework and preliminary definitions. In the next Section 3, we quote the main properties of radial functions related to our problem, specially, Strauss’ type lemmas, generalized Rother’s Lemma and compactness of embeddings between fractional Sobolev spaces of radial functions and appropriate Lebesgue weighted spaces. In Section 4, we state the existence of solutions to problem (1.4) through variational methods, and in Section 5 we prove the boundedness of radial solutions. Finally, Section 6 is devoted to prove our non-existence result. For convenience of the reader, we add an Appendix with the Brezis-Nirenberg version of the Mountain Pass Theorem and some monotonicity properties of operators that we employ in the paper.
+
+## 2. Preliminaries
+
+### 2.1. Functional framework
+
+Given p>1, \beta>0 and s\in(0,1] we consider the weighted fractional Sobolev space
+
+|  |  |  |
+| --- | --- | --- |
+|  | W\_{\beta}^{s,p}(\mathbb{R}^{N})=\{u\in L^{p}\_{\beta}(\mathbb{R}^{N})\colon[u]\_% {s,p}<\infty\} |  |
+
+endowed with the norm
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|u\|\_{s,p,\beta}:=\|u\|\_{p,\beta}+[u]\_{s,p}, |  |
+
+where \|u\|\_{p}:=\left(\int\_{\mathbb{R}^{N}}|u|^{p}\,dx\right)^{1/p} and the seminorm is given by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle[u]\_{s,p}=\begin{cases}\hidden@noalign{}\textstyle\displaystyle% \left(\int\_{\mathbb{R}^{N}}\int\_{\mathbb{R}^{N}}\dfrac{|u(x)-u(y)|^{p}}{|x-y|^% {sp+N}}\,dx\,dy\right)^{1/p}&\text{ if }s\in(0,1)\\ \hidden@noalign{}\textstyle\displaystyle\left(\int\_{\mathbb{R}^{N}}|\nabla u|^% {p}\,dx\right)^{1/p}&\text{ if }s=1.\end{cases} |  |
+
+Here, the following weighted Lebesgue spaces are used
+
+|  |  |  |
+| --- | --- | --- |
+|  | L^{p}\_{\beta}(\mathbb{R}^{N}):=\left\{u:\mathbb{R}^{N}\to\mathbb{R}:\int\_{% \mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx<\infty\right\} |  |
+
+with the corresponding norm
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|u\|\_{p,\beta}=\left(\int\_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\right)^{1/p}. |  |

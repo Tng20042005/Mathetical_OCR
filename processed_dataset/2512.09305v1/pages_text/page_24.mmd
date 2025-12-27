@@ -1,0 +1,76 @@
+###### Theorem 17.
+
+1. (i)
+
+   Under the loss function L\_{1}(\cdot) we have \varphi\_{41}(W,W\_{1},W\_{2})=(1+W+p\_{1}W\_{1}+p\_{2}W\_{2})\left(\frac{m}{(1/m+1/n%
+   )(p\_{1}+p\_{2})(p\_{1}+p\_{2}-1)}\right)^{1/2}. The improved estimator of \sigma\_{1} is obtained as
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{14}^{1}=\begin{cases}\min\left\{\varphi\_{41}(W,W\_{1},W\_{2}),d\_{1}% \right\}S\_{1},&\ W\_{1}>0,\ W\_{2}>0\\ d\_{1}S\_{1},&\text{otherwise}\end{cases} |  |
+2. (ii)
+
+   For the Stein type loss function L\_{2}(\cdot), we have \varphi\_{42}(W,W\_{1},W\_{2})=(1+W+p\_{1}W\_{1}+p\_{2}W\_{2})\frac{mn}{(m+n)(p\_{1}+p%
+   \_{2})}. We get the improved estimators as
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{14}^{2}=\begin{cases}\min\left\{\varphi\_{42}(W,W\_{1},W\_{2}),d\_{1}% \right\}S\_{1},&W\_{1}>0,\ W\_{2}>0\\ d\_{1}S\_{1},&\text{otherwise}\end{cases} |  |
+
+As in the previous section, now we have obtain an improved estimator for \sigma\_{1} within the class of estimators (3) using the IERD method of [19]. In that case, we have the following theorem as.
+
+###### Theorem 18.
+
+1. (i)
+
+   Under the loss function L\_{1}(\cdot), the risk of the estimator \delta\_{\varphi\_{1}} defined in (3) is nowhere larger than that of \delta\_{11} provided the function \varphi\_{1}(w) satisfies
+
+   1. (a)
+
+      \varphi\_{1}(w) is non-decreasing in w and \lim\limits\_{w\rightarrow\infty}\varphi\_{1}(w)=\left(\frac{m}{(p\_{1}-1)(p\_{1}-%
+      2)\left(1/m+1/n\right)}\right)^{1/2}
+   2. (b)
+
+      \varphi\_{1}(w)\geq\varphi\_{\*}^{1}(w)=\left(\frac{m\ B\left(\frac{w}{1+w};p\_{1}%
+      -2,p\_{2}-1\right)}{\left(1/m+1/n\right)(p\_{1}+p\_{2}-2)(p\_{1}+p\_{2}-3)B\left(%
+      \frac{w}{1+w};p\_{1},p\_{2}-1\right)}\right)^{1/2}.
+2. (ii)
+
+   Let us assume that the function \varphi\_{1}(w) satisfies the following conditions:
+
+   1. (a)
+
+      \varphi\_{1}(w) is non-decreasing in w and \lim\limits\_{w\rightarrow\infty}\varphi\_{1}(w)=\frac{1}{(p\_{1}-1)\left(1/m+1/n%
+      \right)}
+   2. (b)
+
+      \varphi\_{1}(w)\geq\varphi\_{\*}^{2}(w)=\left(\frac{B\left(\frac{w}{1+w};p\_{1}-1,%
+      p\_{2}-1\right)}{\left(1/m+1/n\right)(p\_{1}+p\_{2}-2)B\left(\frac{w}{1+w};p\_{1},%
+      p\_{2}-1\right)}\right)^{1/2}
+
+   Then the risk of the estimator \delta\_{\varphi\_{1}} defined in (3) is nowhere larger than that of \delta\_{21}.
+
+Now we have obtained the improve estimator of \sigma\_{2} for L\_{1}(\cdot) and L\_{2}(\cdot) loss functions respectively.
+
+###### Theorem 19.
+
+1. (i)
+
+   For the loss L\_{1}(\cdot), we have \psi\_{11}(U)=(1+U)\left(\frac{m}{(p\_{1}+p\_{2}-2)(p\_{1}+p\_{2}-3)(1/m+1/n)}%
+   \right)^{1/2}, \psi\_{21}(U\_{1})=\frac{(1+p\_{2}U\_{1})m^{1/2}}{\left(p\_{2}(p\_{2}-1)(1/m+1/n)%
+   \right)^{1/2}}. The improve estimator of \sigma\_{2} are obtained as follows
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{21}^{1}(X,S)=\max\left\{\psi\_{11}(U),c\_{2}\right\}S\_{2} |  |
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{22}^{1}=\begin{cases}\min\left\{\psi\_{21}(U\_{1}),c\_{2}\right\}S\_{2},&% \ U\_{1}>0\\ c\_{2}S\_{2},&\text{otherwise}\end{cases} |  |
+2. (ii)
+
+   Under L\_{2}(\cdot) loss function, we have \psi\_{12}(U)=\frac{(1+U)}{(p\_{1}+p\_{2}-2)(1/m+1/n)}, \psi\_{22}(U\_{1})=\frac{(1+p\_{2}U\_{1})}{p\_{2}(1/m+1/n)}. We get the improve estimator of \sigma\_{2} as
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{21}^{2}(X,S)=\max\left\{\psi\_{12}(U),d\_{2}\right\}S\_{2}, |  |

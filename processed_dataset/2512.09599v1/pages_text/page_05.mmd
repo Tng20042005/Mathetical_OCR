@@ -1,0 +1,94 @@
+nce our initial data is at size \epsilon^{-1/2}, the nonlinearity is of cubic form \epsilon|u|^{2}u, and crucially, we only need to control error at size \epsilon^{1/2-\delta\_{1}} rather than critical scale \epsilon^{1/2}. This actually freedom, combines the hypercontractivity estimate, Lemma 2.1, allows a loss of probability e^{-\epsilon^{-1-\delta\_{2}}} rather than e^{-\epsilon^{-1}}, the latter would be too large for our application.
+
+∎
+
+The second one is a normal form type transformation, which is also the key in [7], except that here we needs to combine it with the analysis based on Lemma 3.5, via computations of same nature as the X^{s,b} type computations in [3].
+
+###### Lemma 3.6.
+
+Let u,u\_{app},u\_{0},T\_{\epsilon} be as in Lemma 3.3. Let C\_{1}\gg C\_{0}\gg 1 and C\_{2}\gg 1, s>\frac{1}{2}. Let 0<\delta\_{1}\ll 1.
+Let F\_{\epsilon}=\{\omega|\|u\_{0}\|\_{2}\leq C\_{1}\epsilon^{-1/2}\}. Then there exists a set E\_{\epsilon} with probability measure e^{-\epsilon^{-1-\delta\_{3}}}, for some \delta\_{3}>0, such that the following holds for all \omega\in F\_{\epsilon}-E\_{\epsilon}:
+
+If there holds bootstrap hypothesis, for all t\leq T\leq T\_{\epsilon}
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|u-u\_{app}\|\_{C\_{t}H^{s}([0,T]\times\mathbb{T})}\leq\epsilon^{-\frac{1}{2}-% \delta\_{1}}, |  | (3.13) |
+
+then there holds bootstrap estimate
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|u-u\_{app}\|\_{C\_{t}H^{s}([0,T]\times\mathbb{T})}\leq\epsilon^{\frac{1}{2}-C\_{% 2}\delta\_{1}} |  | (3.14) |
+
+We will present the proof of Lemma 3.3 assuming Lemma 3.5 and Lemma 3.6 in Section 5.
+
+## 4 LDP for the linear flow and modified linear flow
+
+We prove Lemma 3.4 and Lemma 3.1 in this section. The proof are of same nature. We start with Lemma 3.4, which is slightly easier.
+
+### 4.1 Proof of Lemma 3.4
+
+We first start with the following classical pointwise Large Deviations Principle for e^{it\Delta}u\_{0}(x).
+
+Recall u\_{0}=\sum\_{n}\frac{g\_{n}}{\langle n\rangle^{\frac{1}{2}+\theta}}e^{inx}.
+
+###### Lemma 4.1.
+
+Fix t,x, then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathbb{P}(|e^{it\Delta}u\_{0}(x)|>z\_{0}\epsilon^{-\frac{1}{2}})=e% ^{-\frac{z\_{0}^{2}\epsilon^{-1}}{\sum\limits\_{n\in\mathbb{Z}}|c\_{n}|^{2}}}. |  | (4.1) |
+
+###### Proof.
+
+Fix t,x, it is well-known that e^{it\Delta}u\_{0}(x) is still a Guassian with mean 0 and variance \sum\limits\_{n\in\mathbb{Z}}|c\_{n}|^{2}. Therefore, e^{it\Delta}u\_{0}(x) follows a Rayleigh distibution and (4.1) holds, see also [7].
+∎
+
+Now we apply Lemma 4.1 to obtain Lemma 3.4.
+We fix z\_{0},\epsilon>0 throughout.
+
+Applying (4.1), we have the desired lower bound
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\mathbb{P}(\sup\_{t\in[0,T]}\sup\_{x\in\mathbb{T}}|e^{it\Delta}u\_{0% }(x)|>z\_{0}\epsilon^{-\frac{1}{2}})\geq e^{-\frac{z\_{0}^{2}\epsilon^{-1}}{\sum% \limits\_{n\in\mathbb{Z}}|c\_{n}|^{2}}}. |  |
+
+Next we turn to the upper bound. Those types of computations originates from [3], and play an important role in [4], in particular proof of Prop 4.1, see also [6].
+
+Let us fix dyadic N\sim\epsilon^{-\frac{1000}{\theta}} large.
+
+We note that up to probability e^{-N^{\theta/100}}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | |g\_{n}|\leq\langle n\rangle^{\frac{\theta}{100}},|n|\geq N. |  | (4.2) |
+
+and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | |g\_{n}|\leq N,|n|\leq N |  | (4.3) |
+
+We claim
+
+###### Lemma 4.2.
+
+Take dyadic N\sim\epsilon^{-\frac{1000}{\theta}} large, up to probability e^{-N^{\theta/200}}\ll e^{-\epsilon^{-2}}, one has for all dyadic M\geq N
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sup\_{t\in[0,T\_{\epsilon}]}\|P\_{M}e^{it\Delta}u\_{0}\|\_{L^{\infty}}\lesssim M^{% -\theta/100} |  | (4.4) |
+
+and in particular
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sup\_{t\in[0,T\_{\epsilon}]}\|P\_{\geq N}e^{it\Delta}u\_{0}\|\_{L^{\infty}}% \lesssim N^{-\theta/100}. |  | (4.5) |
+
+Furthermore, we claim
+
+###### Lemma 4.3.
+
+Under the same assumptions of Lemma 4.2, up to probability e^{-N}\ll e^{-\epsilon^{-2}}, we have

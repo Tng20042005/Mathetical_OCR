@@ -1,0 +1,68 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\vartheta\circ{g}({h}\circ\theta(x)+{h}\circ\theta(y))= | \displaystyle\vartheta\circ{g}(k(\theta(x)+\theta(y))+2b) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\frac{k(\theta(x)+\theta(y))+2b-2b}{k}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\theta(x)+\theta(y)). |  |
+
+In particular, we have the following corollary.
+
+###### Corollary 3.1.
+
+Let \theta:[0,1]\rightarrow[0,+\infty] be a function with both \theta(x^{-}) and \theta(x^{+}) existing for every x\in[0,1] and \vartheta:[0,+\infty]\rightarrow[-\infty,+\infty] be a function. If (\theta,\vartheta) is an additive generator pair of the overlap function O\_{\theta,\vartheta}:[0,1]^{2}\rightarrow[0,1] given by O\_{\theta,\vartheta}(x,y)=\vartheta(\theta(x)+\theta(y)), then (\theta^{\*},\vartheta^{\*}) is also an additive generator pair of O\_{\theta,\vartheta} where \theta^{\*}:[0,1]\rightarrow(-\infty,+\infty] is given by \theta^{\*}(x)=\theta(x)+b with a certain constant b\in\mathbb{R} and, \vartheta^{\*}:[2\theta(1)+2b,+\infty]\rightarrow[0,1] is defined by \vartheta^{\*}(x)=\vartheta(x-2b) with a certain constant b\in\mathbb{R}.
+
+Therefore, in what follows, we only need to consider the case a=0, i.e., \theta(1)=0 and \vartheta(0)=1 whenever applying Theorem 2.1.
+
+###### Remark 3.1.
+
+*In general, in Proposition 3.1 if h is not an affine function then there exist no functions g such that ({h}\circ\theta,\vartheta\circ{g}) is an additive generator pair of the overlap function O\_{\theta,\vartheta}*.
+
+###### Example 3.1.
+
+*Consider the functions \theta:[0,1]\rightarrow[0,+\infty] and \vartheta:[0,+\infty]\rightarrow[0,1] defined by*
+
+|  |  |  |
+| --- | --- | --- |
+|  | \theta(x)=\begin{cases}-\mbox{ln}x&\mbox{if}\ x\neq 0,\\ +\infty&\mbox{if}\ x=0\end{cases} |  |
+
+*and*
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(x)=\begin{cases}0&\mbox{if}\ x=+\infty,\\ e^{-x}&\mbox{if}\ x\in[0,+\infty),\end{cases} |  |
+
+*respectively. One can check that (\theta,\vartheta) is an additive generator pair of the overlap function O\_{\theta\,\vartheta}(x,y)=xy.*
+
+*Now, we consider the function h:[0,+\infty]\rightarrow[0,+\infty] with h(x)=x^{2}. If there exists a function g such that (h\circ\theta,\vartheta\circ{g}) is an additive generator of O\_{\theta\,\vartheta}=xy, then \vartheta\circ{g}(\theta^{2}(x)+\theta^{2}(y))=\vartheta\circ{g}(h\circ\theta(%
+x)+h\circ\theta(y))=\vartheta(\theta(x)+\theta(y)). Thus for each x,y\in[0,1],*
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | g(\theta^{2}(x)+\theta^{2}(y))=\theta(x)+\theta(y) |  | (4) |
+
+*since \vartheta is strictly decreasing and continuous. This follows that g(({\ln}x)^{2}+({\ln}x)^{2})=-2{\ln}x, i.e., g(x)=(2x)^{\frac{1}{2}} for any x\in[0,+\infty]. Thus g(\theta^{2}(\frac{1}{2})+\theta^{2}(1))=\sqrt{2}{\ln}2. On the other hand, \theta(\frac{1}{2})+\theta(1)={\ln}2. Therefore, g(\theta^{2}(\frac{1}{2})+\theta^{2}(1))\neq\theta(\frac{1}{2})+\theta(1), contrary to Eq.(4).*
+
+Below, we cite an important lemma which will be useful in the sequel.
+
+###### Lemma 3.1 ([14]).
+
+Let D\subset\mathbb{R}^{N} be a convex set such that \emph{int }D\neq\emptyset. A function f:D\to\mathbb{R} is a continuous solution of equation
+
+|  |  |  |
+| --- | --- | --- |
+|  | f(\frac{x+y}{2})=\frac{f(x)+f(y)}{2} |  |
+
+if and only if
+
+|  |  |  |
+| --- | --- | --- |
+|  | f(x)=cx+a,\quad x\in D, |  |
+
+with certain constants c\in\mathbb{R}^{N}, a\in\mathbb{R}.
+
+###### Theorem 3.1.
+
+Let \theta:[0,1]\rightarrow[0,+\infty] be a function with both \theta(x^{-}) and \theta(x^{+}) existing for every x\in[0,1] and \vartheta:[0,+\infty]\rightarrow[0,1] be a strictly decreasing function. Let (\theta,\vartheta) be an additive generator pair of the overlap function O\_{\theta,\vartheta}:[0,1]^{2}\rightarrow[0,1] given by O\_{\theta

@@ -1,0 +1,84 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \|(u-u\_{app})(t)\|\_{H^{s}}\leq C\epsilon^{2}\|u\_{0}\|\_{L\_{x}^{2}}^{2}\int\_{0}^% {t}\|u(\tau)-u\_{app}(\tau)\|\_{H^{s}}d\tau+C\epsilon^{1/2-C\_{3}\delta\_{3}} |  | (5.6) |
+
+for all t\leq T.
+
+We first prove Lemma 3.6 assuming Lemma 5.2.
+
+###### Proof.
+
+It is standard gronwall argument.
+  
+Let A(t):=\|(u-u\_{app})(t)\|\_{H^{s}} and B(t):=\int\_{0}^{t}A(\tau)d\tau. By Lemma 5.2, for all t\leq T and \omega\in F\_{\epsilon}-E\_{\epsilon}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | A(t)\leq CC\_{1}^{2}\epsilon\int\_{0}^{t}A(\tau)d\tau+C\epsilon^{1/2-C\_{3}\delta% \_{3}}. |  | (5.7) |
+
+Thus, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | B(t)^{\prime}\leq CC\_{1}^{2}\epsilon B(t)+C\epsilon^{1/2-C\_{3}\delta\_{3}}, |  |
+
+which implies
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{d}{dt}(e^{-CC\_{1}^{2}\epsilon t}B(t))\leq C\epsilon^{1/2-C\_{3}\delta\_{3}% }e^{-CC\_{1}^{2}\epsilon t}. |  |
+
+Note that B(0)=0. For all t\leq T and \omega\in F\_{\epsilon}-E\_{\epsilon}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | B(t)\leq C\_{1}^{-2}\epsilon^{-1/2-C\_{3}\delta\_{3}}(e^{CC\_{1}^{2}\epsilon t}-1). |  | (5.8) |
+
+Inserting (5.8) into (5.7), yields (3.14) if we take C\_{2}=2C\_{3} and \delta\_{1}=\delta\_{3}.
+∎
+
+###### Remark 5.3.
+
+We can obtain T\_{\epsilon}\leq c\epsilon^{-1}|\ln\epsilon| for some universal constant with 0<c\ll 1 as in [7].
+
+We now turn to the proof of Lemma 5.2, which is the most technical part of the article.
+
+###### Proof.
+
+Let w(t,x)=e^{2it\epsilon^{2}\frac{1}{2\pi}\|u\_{0}\|\_{L\_{x}^{2}}^{2}-it\Delta}u(t,%
+x)=\sum\limits\_{k}w\_{k}(t)e^{ikx}. From (1.1), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\begin{cases}i\partial\_{t}w\_{k}=-\epsilon^{2}|w\_{k}|^{2}w\_{k}+% \epsilon^{2}\sum\limits\_{R\_{k}(k\_{1},k\_{2},k\_{3})}w\_{k\_{1}}\overline{w\_{k\_{2}}% }w\_{k\_{3}}e^{-it\Omega}\\ w\_{k}(0)=\frac{g\_{k}}{\left\langle k\right\rangle^{\frac{1}{2}+\theta}}\end{% cases}, |  | (5.9) |
+
+where \Omega=k\_{1}^{2}-k\_{2}^{2}+k\_{3}^{2}-k^{2}, R\_{k}(k\_{1},k\_{2},k\_{3})=\{(k\_{1},k\_{2},k\_{3})\in\mathbb{Z}^{3}:k=k\_{1}-k\_{2}+%
+k\_{3},\Omega\neq 0\}, see also [7, (4.5)].
+Let a(t,x)=e^{2it\epsilon^{2}\frac{1}{2\pi}\|u\_{0}\|\_{L\_{x}^{2}}^{2}-it\Delta}u\_{%
+app}(t,x)=\sum\limits\_{k}a\_{k}(t)e^{ikx}.
+From (3.3), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\begin{cases}\hidden@noalign{}\textstyle$$i\partial\_{t}a\_{k}=-% \epsilon^{2}|a\_{k}|^{2}a\_{k}$$\\ \hidden@noalign{}\textstyle$$a\_{k}(0)=\frac{g\_{k}}{\left\langle k\right\rangle% ^{\frac{1}{2}+\theta}}$$\end{cases}, |  | (5.12) |
+
+see also [7, (4.6)].
+We subtract (5.12) from (5.9), then integrate it from 0 to t and use the fact that \|(u-u\_{app})(t)\|\_{H^{s}}=\|(w-a)(t)\|\_{H^{s}}, the square of the LHS of (5.6) is bounded by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\epsilon^{4}\sum\_{k}\left|\int\_{0}^{t}\left(|a\_{k}|^{2}a\_{k}-|w\_{% k}|^{2}w\_{k}\right)(\tau)d\tau\right|^{2}\left\langle k\right\rangle^{2s}+% \epsilon^{4}\sum\_{k}\left|\sum\_{R\_{k}(k\_{1},k\_{2},k\_{3})}\int\_{0}^{t}\left(w\_{% k\_{1}}\overline{w\_{k\_{2}}}w\_{k\_{3}}\right)(\tau)e^{-i\tau\Omega}d\tau\right|^{% 2}\left\langle k\right\rangle^{2s}. |  | (5.13) |
+
+Next, Minkowski’s inequality implies that the first term of (5.13) is controlled by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\lesssim\epsilon^{4}\sum\_{k\in\mathbb{Z}}\langle k\rangle^{2s}% \left(\int\_{0}^{t}\left(|a\_{k}|^{2}+|w\_{k}|^{2}\right)\left|a\_{k}-w\_{k}\right|% d\tau\right)^{2}\lesssim\epsilon^{4}\|u\_{0}\|\_{L\_{x}^{2}}^{4}\left(\int\_{0}^{t% }\|u(\tau)-u\_{app}(\tau)\|\_{H^{s}}d\tau\right)^{2}, |  |
+
+which accounts for the first term in (5.6). In order to get the other term, following [7], we first integrate by parts
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{0}^{t}w\_{k\_{1}}\overline{w\_{k\_{2}}}w\_{k\_{3}}e^{-i\tau\Omega% }d\tau=-\frac{1}{i\Omega}w\_{k\_{1}}\overline{w\_{k\_{2}}}w\_{k\_{3}}e^{-i\tau\Omega% }\Bigg{|}\_{\tau=0}^{\tau=t}+\frac{1}{i\Omega}\int\_{0}^{t}\partial\_{\tau}\left(% w\_{k\_{1}}\overline{w\_{k\_{2}}}w\_{k\_{3}}\right)e^{-i\tau\Omega}d\tau. |  | (5.14) |
+
+Therefore, we reduce (5.6) to the following two estimates: for all \omega\in F\_{\epsilon}-E\_{\epsilon}, one has

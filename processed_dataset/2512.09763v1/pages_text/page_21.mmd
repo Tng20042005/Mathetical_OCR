@@ -1,0 +1,38 @@
+The proof is rather simple. On the first side, we note (\Omega,\mathcal{A},\mathbb{P}) the atomeless probabilistic space onto which the process (X\_{t},Z\_{t})\_{t\in[0,1]} is defined. Without loss of generality, we can assume that (\Omega,\mathcal{A},\mathbb{P})=([0,1]^{N},\mathcal{B},Leb). Taking K=\Omega, b(t,x,k)=Z\_{t}(k) for (t,x,k)\in[0,1]\times\mathcal{O}\times K and \mu\_{t}=\mathcal{L}(X\_{t},Z\_{t}) yields the solution.
+
+On the other side, we use Ambrosio’s superposition principle (in \mathbb{R}^{d}\times\mathbb{R}^{N}) to obtain a process (X\_{t},k\_{t})\_{t\in[0,1]} from \mu on a probabilistic space (\Omega,\mathcal{A},\mathbb{P}). Observe that almost surely k is constant. We then define Z\_{t}(\omega)=b(t,X\_{t}(\omega),k\_{t}(\omega)) and the result follows.
+∎
+
+###### Remark 7.3.
+
+Note that the set K is somehow free in the previous statement, as it can be changed into any non-atomic probabilistic space.
+
+###### Remark 7.4.
+
+Clearly, the curves satisfying the assumptions of Theorem 7.1 also satisfy the assumptions of Proposition 7.2. Furthermore, consider (b,\mu,K) as in Proposition 7.2. Applying the more general version of Theorem 7.1 to the process given by Proposition 7.2, we obtain that there exists a measurable \alpha:[0,T]\times\mathbb{R}^{d}\to\mathbb{R}^{d} such that m\_{t}:=(\pi\_{1})\_{\#}\mu\_{t} solves (8). In fact, \alpha(t,\cdot) is given m\_{t} almost everywhere by \alpha(t,x):=\mathbb{E}[Z\_{t}|X\_{t}=x].
+
+The interpretation of this reformulation is that the set K is the set used to randomize the speed we associated to particles located at x\in\mathbb{R}^{d}. Ambrosio’s superposition principle basically states that we can forget this space if we are only interested in the evolution of the marginal in x\in\mathbb{R}^{d} of (13). Since it is not the case here, this generalization shall have some importance.
+
+The main role of the previous result is to avoid pathological situation such as the one mentioned before the Proposition.
+
+### 7.2. Translating the curves
+
+Given a \mathcal{C}^{1} curve (x\_{t})\_{t\in[0,1]} in \mathbb{R}^{d}, and a point y\_{0}\in\mathbb{R}^{d}, we can easily understand the translation of (x\_{t})\_{t\in[0,1]} to y\_{0} as the curve (y\_{t})\_{t\in[0,1]} defined by y\_{t}:=y\_{0}+\int\_{0}^{t}\dot{x}\_{s}ds. We now define a similar notion for curves on \mathcal{P}\_{2}(\mathbb{R}^{d}) satisfying the assumptions of Proposition 7.2. Ideally, we would like to say that we simply need, at each time, to parallel transport the ”speed” of the curve toward another point. However, this strategy runs into the following difficulty: a proper parallel transport is not simply defined between two measures, but along a path (or a minima a coupling in this case). Thus, we need to treat with care the way we are going to connect our two curves as time passes. We shall do so by not only seeking for the translated curve (\tilde{m}\_{t})\_{t\in[0,1]} of (m\_{t})\_{t\in[0,1]}, but rather by seeking for curves which are couplings between them.
+
+We now propose the following notion of translated curve.
+
+###### Definition 7.5.
+
+For any curve (m\_{t})\_{t\in[0,1]} which can be represented through b,K,\mu as in Proposition 7.2, any \tilde{m}\_{0}\in\mathcal{P}\_{2}(\mathbb{R}^{d}) and coupling \gamma\_{0}\in\Pi(m\_{0},\tilde{m}\_{0}), a coupling curve (\eta\_{t})\_{t\in[0,1]} is a curve in \mathcal{P}\_{2}(\mathbb{R}^{d}\times\mathbb{R}^{d}\times K), weak solution of
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{t}\eta+\text{div}\_{x}(b\eta)+\text{div}\_{y}(b\eta)=0\text{ in }(0,1)% \times\mathbb{R}^{d}\times\mathbb{R}^{d}\times K, |  |
+
+with initial condition \eta\_{0}(dx,dy,dk)=\gamma\_{0}(dx,dy)\psi\_{x}(dk) where m\_{0}(dx)\psi\_{x}(dk):=\mu\_{0}(dx,dk). The curve ((\pi\_{2})\_{\#}\eta\_{t})\_{t\in[0,1]} is called a translation of (m\_{t})\_{t\in[0,1]} along \gamma\_{0}. Furthermore, the curve ((\pi\_{1},\pi\_{2})\_{\#}\eta\_{t})\_{t\in[0,1]} is called the associated translated pair.
+
+###### Remark 7.6.
+
+Of course, if (m\_{t})\_{t\in[0,1]} is represented (as it is usually the case), without a probabilistic space K, then it can be omitted in the previous. Note however that in such a case, it is still likely that the base space \mathbb{R}^{d} shall play the role of K for the translation ((\pi\_{2})\_{\#}\eta\_{t})\_{t\in[0,1]}.
+
+Coupling curves exist in general as the next result shows.

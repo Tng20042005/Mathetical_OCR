@@ -1,0 +1,28 @@
+Anti-Ramsey Number of Stars in 3-uniform hypergraphsSupported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425
+
+# Anti-Ramsey Number of Stars in 3-uniform hypergraphs††thanks: Supported by National Key Research and Development Program of China 2023YFA1010203 and the National Natural Science Foundation of China under grant No.12271425
+
+Hongliang Lu, Xinyue Luo and Xinxin Ma
+  
+School of Mathematics and Statistics
+  
+Xi’an Jiaotong University
+  
+Xi’an, Shaanxi 710049, China
+
+###### Abstract
+
+An edge-colored hypergraph is called *a rainbow hypergraph* if all the colors on its edges are distinct. Given two positive integers n,r and an r-uniform hypergraph \mathcal{G}, the anti-Ramsey number ar\_{r}(n,\mathcal{G}) is defined to be the minimum number of colors t such that there exists a rainbow copy of \mathcal{G} in any exactly t-edge-coloring of the complete r-uniform hypergraph of order n. Let \mathcal{F}\_{k} denote the 3-graph (k-star) consisting of k edges sharing exactly one vertex. Tang, Li and Yan [23] determined the value of ar\_{3}(n,\mathcal{F}\_{3}) when n\geq 20. In this paper, we determine the anti-Ramsey number ar\_{3}(n,\mathcal{F}\_{k+1}), where k\geq 3 and n>\frac{5}{2}k^{3}+\frac{15}{2}k^{2}+26k-3.
+
+Key words: anti-Ramsey number; k-star; rainbow hypergraph; matching
+
+## 1 Introduction
+
+For a set S and a positive integer k, we use {S\choose k} to denote the collection of all possible subsets of k elements of S. A hypergraph \mathcal{F}=(V(\mathcal{F}),E(\mathcal{F})) consists of a vertex set V(\mathcal{F}) and an edge set E(\mathcal{F}), where each edge in E(\mathcal{F}) is a non-empty subset of V(\mathcal{F}). The number of edges of \mathcal{F} is denoted by e(\mathcal{F}), that is, e(\mathcal{F}):=|E(\mathcal{F})|. If |e|=r for any e\in E(\mathcal{F}), then \mathcal{F} is called an r-uniform hypergraph (or r-graph, for simplicity).
+For u\in V(\mathcal{F}), let N\_{\mathcal{F}}(u):=\{e\ |\ e\subseteq V(\mathcal{F})\setminus\{u\}\ \mbox{and%
+}\ e\cup\{u\}\in E(\mathcal{F})\} be the neighborhood of u in \mathcal{F}. The degree of u in \mathcal{F}, denoted by d\_{\mathcal{F}}(u), is the size of N\_{\mathcal{F}}(u).
+For X\subseteq V(\mathcal{F}), we define \mathcal{F}-X as the subhypergraph of \mathcal{F} obtained by removing all vertices in X and all edges intersecting with X in \mathcal{F}.
+Similarly, if Y\subseteq E(\mathcal{F}), we use
+\mathcal{F}-Y to denote the hypergraph resulting from deleting all the edges in Y from \mathcal{F}.
+When X=\{x\}, Y=\{e\}, we respectively write \mathcal{F}-X=\mathcal{F}-x, \mathcal{F}-Y=\mathcal{F}-e. Specifically, to avoid confusion, for an edge e\in E(\mathcal{F}), we use \mathcal{F}-V(e) to denote the subgraph of \mathcal{F} obtained by removing all vertices in e and all edges intersecting with e in \mathcal{F}.
+For a non-empty subset X\subseteq V(\mathcal{F}), let \mathcal{F}[X] denote the subgraph *induced* by X. For two disjoint sets U and W, we use U\times W to denote the collection of 2-sets that intersect U and W. That is, U\times W=\{\{x,y\}\ |\ x\in U\mbox{ and }y\in W\}.

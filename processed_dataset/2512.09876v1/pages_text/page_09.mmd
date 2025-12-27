@@ -1,0 +1,53 @@
+Finally, the twists defined above only depends on the class of \mathcal{L}
+modulo squares. Let us be more precise. First, for any line bundle \mathcal{L}^{\prime},
+there exists an equality: \mathcal{M}\_{n}(E,\mathcal{L}^{\prime\otimes 2})=\mathcal{M}\_{n}(E),
+according to Formula (1.1.1.b).
+One deduces that any isomorphism \varphi:\mathcal{L}\rightarrow\mathcal{L}^{\prime,\otimes 2}
+(also called an *orientation of \mathcal{L}*) induces a canonical isomorphism:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.1.4.a) |  | \varphi\_{\*}:\mathcal{M}\_{n}(E,\mathcal{L})\rightarrow\mathcal{M}\_{n}(E,% \mathcal{L}^{\prime\otimes 2})=\mathcal{M}\_{n}(E). |  |
+
+###### Remark 1.1.5.
+
+It is reasonable to expect the rule 1.1.1 to hold because the base scheme S is excellent. Otherwhise, one would have to ask for the identity:
+
+\partial\_{v}\circ\phi^{\*}=\sum\_{w}(d\_{w})\_{\epsilon}(\phi\_{w})^{\*}\circ%
+\partial\_{w},
+
+where we used the notations of 1.1.1 and where d\_{w} is the defect of w (see [Dég25, Prop. 5.3.12])
+
+###### Remark 1.1.6.
+
+If \mathcal{M} is a MW-prehomodule and n an integer, then we can define the n-shifted MW-prehomodule associated to \mathcal{M}, denoted \mathcal{M}\{n\}, by the formula:
+
+\mathcal{M}\{n\}\_{m}(E)=\mathcal{M}\_{m+n}(E)
+
+for any integer m and any S-field E.
+
+###### Example 1.1.7.
+
+The main source of MW-prehomodule comes from a twisted Borel-Moore homology theory333This can be defined by using the properties of bivariant theories in [DJK21, §2],
+and working over the fix base scheme S.
+H\_{\*} relative to the base S.
+
+1. (1)
+
+   One can consider H\_{\*}=K^{\prime}\_{\*} the Quillen K^{\prime}-theory or Thomason’s G-theory.
+   The associated MW-prehomodule \mathcal{K}\_{\*} is in fact oriented in the sense of 3.5.2, so that twists by line bundles are trivial.
+2. (2)
+
+   Let us assume that S admits a dualizing complex K\_{S}.
+   Then one can define the hermitian analog of K’-theory using the fundamental work [CDH{}^{+}23, CDH{}^{+}25] as follows.
+   Let f:X\rightarrow S be a morphism essentially of finite type, and let K\_{X}:=f^{!}K\_{S} seen as a dualizing complex. Let \mathcal{L} be a line bundle over X
+   and n be an integer.
+   One considers the stable \infty-category \mathrm{D}^{b}\_{coh}(X) of derived coherent sheaves on X,
+   and equipped it with the Poincaré structure with quadratic functor \text{\text{\char 21}}=\operatorname{\underline{Hom}}(-,\mathcal{L}\otimes K\_{%
+   X}[n]) ([CDH{}^{+}23, Def. 1.2.8]).
+   Then we denote by \operatorname{GW}^{BM[n]}(X,\mathcal{L}) the associated Grothendieck-Witt spectrum as defined in [CDH{}^{+}25, Def. 4.2.1],
+   and put \operatorname{GW}^{BM[n]}\_{\*}(X,\mathcal{L})=\pi\_{\*}\operatorname{GW}^{BM}(X,%
+   \mathcal{L}).
+   Taking all n and \mathcal{L} together, one gets a twisted Borel-Moore homology theory.
+   The pushforward and pullback functorialities follow from the functoriality of the construction of the associated Grothendieck-Witt spectrum,
+   and the localization long exact sequence from [CDH{}^{+}25, Cor. 4.2.2].

@@ -1,0 +1,57 @@
+For a point M\in{\rm Rep}\_{\bf d} let \mathcal{O}(M)\subset{\rm Rep}\_{\bf d} be the orbit G\_{\bf d}M.
+The dimension and codimension of an orbit are computed by the following formulas:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \dim\mathcal{O}(M)=\dim G\_{d}-\dim{\rm End}\_{Q}(M),\ {\rm codim}\_{{\rm Rep}\_{% \bf d}}\mathcal{O}(M)=\dim{\rm Ext}^{1}\_{Q}(M,M). |  |
+
+In particular, an orbit \mathcal{O}(M) is dense in the representation space if and only if M
+is rigid, i.e. {\rm Ext}^{1}\_{Q}(M,M)=0. For a Dynkin quiver Q there is only finitely many
+isoclasses of Q modules of a given dimension. Hence, there exists a unique open dense
+orbit.
+
+We say that M degenerates to N
+if \overline{\mathcal{O}(M)}\supset\mathcal{O}(N); we write M\leq N. One has the following theorem of
+Bongartz [Bo96]: M\leq N if and only if
+
+|  |  |  |
+| --- | --- | --- |
+|  | \dim{\rm Hom}\_{Q}(M,X)\leq\dim{\rm Hom}\_{Q}(N,X)\quad\forall X\in{\rm Rep}(Q) |  |
+
+or, equivalently, if
+
+|  |  |  |
+| --- | --- | --- |
+|  | \dim{\rm Hom}\_{Q}(X,M)\leq\dim{\rm Hom}\_{Q}(X,N)\quad\forall X\in{\rm Rep}(Q). |  |
+
+The degeneration order induces the structure of a poset on the set of isoclasses of
+Q-modules of a fixed dimension {\bf d}: we say that the isoclass of M is less than or
+equal to the isoclass of N if M degenerated to N. We denote this poset by \Gamma\_{\bf d}.
+In particular, \Gamma\_{\bf d} has a unique minimal element corresponding to the open dense
+orbit.
+
+Figure 1. Degeneration picture for Q=\bullet\rightarrow\bullet\leftarrow\bullet,
+{\bf d}=(3,4,3).
+
+###### Remark 2.1.
+
+Let Q be the equioriented type A quiver. Then the Bongartz criterion can be
+explicitly formulated as follows: M degenerates to N if and only if, for any path in Q, the rank
+of the map in M corresponding this path is no smaller than the
+corresponding rank of the map in N [AdF84].
+The general type A case is worked out on [AdF85].
+
+For two vectors {\bf a},{\bf b}\in{\mathbb{Z}}^{Q\_{0}} we denote by \langle{\bf a},{\bf b}\rangle
+the value of the Euler form on these vectors given by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle{\bf a},{\bf b}\rangle=\sum\_{i\in Q\_{0}}a\_{i}b\_{i}-\sum\_{\alpha\in Q\_{1% }}a\_{s(\alpha)}b\_{t(\alpha)}. |  |
+
+For representations M\in{\rm Rep}\_{\bf a} and N\in{\rm Rep}\_{\bf b} one has
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle{\bf a},{\bf b}\rangle=\dim\mathrm{Hom}\_{Q}(M,N)-\dim{\rm Ext}^{1}\_{Q}(% M,N). |  |
+
+### 2.2. Quiver Grassmannians

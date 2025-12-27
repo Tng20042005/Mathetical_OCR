@@ -1,0 +1,70 @@
+Let S be a normal base scheme, with \delta=-\operatorname{codim}\_{S}.
+
+1. (1)
+
+   The following canonical map is an isomorphism of Nisnevich sheaves over \mathit{Sm}\_{S}:202020Remark that according to 3.5.6,
+   one does not need that S admits a pinning for this assertion.
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (4.3.11.a) |  | \mathbf{G}\_{m}\rightarrow\underline{\operatorname{K}}^{M}\_{1} |  |
+2. (2)
+
+   Assume in addition that S admits a pinning. Then the following short sequence
+   of \mathbf{A}^{1}-invariant Nisnevich sheaves over \mathit{Sm}\_{S} is exact:
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (4.3.11.b) |  | 0\rightarrow\underline{\operatorname{I}}^{2}\rightarrow\underline{% \operatorname{K}}^{MW}\_{1}\xrightarrow{F}\mathbf{G}\_{m}\rightarrow 0 |  |
+
+   where the map F is induced by the projection to the cokernel of \gamma\_{\eta}:\underline{\operatorname{K}}^{MW}\_{2}\rightarrow\underline{%
+   \operatorname{K}}^{MW}\_{1}.
+
+###### Proof.
+
+The first point follows as a normal noetherian domain A with fraction field K is the intersection of
+the discrete valuation rings V such that A\subset V\subset K.
+For the second point, taking into account the first exact sequence of 3.4.6,
+one is left to prove that the map denoted by F in the above proposition is surjective.
+This can be check over the spectrum of a local essentially smooth S-ring A, say with fraction field K.
+By construction, \underline{\operatorname{K}}^{MW}\_{1}(A) is the sub-group of \operatorname{K}^{MW}\_{1}(K,\lambda\_{K}) made of unramified elements,
+where \lambda\_{K} is given by the chosen pinning over S.
+Let us choose a non-zero element l\in\lambda\_{K}.
+Given a unit a\in A^{\times}, the element x\_{a}=[a]\otimes l in \operatorname{K}^{MW}\_{1}(K,\lambda\_{K})
+is unramified at every place of A. Hence it defines an element x\_{a}\in\operatorname{K}^{MW}\_{1}(A),
+which obviously satisfies F(x\_{a})=a.
+∎
+
+###### Remark 4.3.12.
+
+If S is singular, the first assertion is not true.
+For example if X is the normal crossing divisor in \mathbf{P}^{2} given by the union of the two projective lines x=0, y=0,
+\mathbf{G}\_{m}(X)=k^{\times} but \underline{\operatorname{K}}^{M}\_{1}(X)=k^{\times}\times k^{\times}.
+
+###### 4.3.13.
+
+Given an arbitrary locally noetherian normal scheme S, one deduces from [GD67, 21.6.10] that the particular case of Bloch’s formula
+(4.3.5.a):
+
+|  |  |  |
+| --- | --- | --- |
+|  | Pic(S)=H^{1}\_{\mathrm{Nis}}(S,\mathbf{G}\_{m})\simeq\operatorname{CH}^{1}(S) |  |
+
+is valid if and only if S is locally factorial. The latter condition is strictly weaker than
+regular, at least in dimension bigger than 2.
+The Milnor-Witt case is much more difficult to establish. One can still obtain
+the following extension of 4.3.5, using the Gersten conjecture for the Witt group,
+due to Balmer and Walter [BW02].
+
+###### Proposition 4.3.14.
+
+Let S be a regular base \mathbf{Z}[1/2]-scheme with \delta=-\operatorname{codim}\_{S} of dimension less than 4.
+Then the canonical map
+
+|  |  |  |
+| --- | --- | --- |
+|  | H^{1}\_{\mathrm{Nis}}(S,\underline{\operatorname{K}}^{MW}\_{1})\rightarrow% \widetilde{\operatorname{CH}}{}^{1}(S) |  |
+
+is an isomorphism.
+
+One simply uses the previously mentioned results, together with the exact sequence (3.4.5.b).

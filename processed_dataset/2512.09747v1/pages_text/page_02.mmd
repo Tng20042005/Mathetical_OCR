@@ -1,0 +1,21 @@
+For two vertex-disjoint hypergraphs \mathcal{F},\mathcal{H}, the union of \mathcal{F} and \mathcal{H} denoted by \mathcal{F}\cup\mathcal{H} is the hypergraph with vertex set V(\mathcal{F})\cup V(\mathcal{H}) and edge set E(\mathcal{F})\cup E(\mathcal{H}). When there is no confusion, for T\subseteq V(\mathcal{F}), we also use N\_{\mathcal{F}}(T) to denote the (k-|T|)-graph with vertex set V(\mathcal{F})-T and edge set N\_{\mathcal{F}}(T). A *matching* in a hypergraph H is a set of pairwise disjoint edges in H, and we use \nu(H) to denote the maximum size of a matching in H.
+A t-edge-coloring of a hypergraph is an assignment of t colors to its edges, and an exactly t-edge-coloring uses all t colors. An edge-colored graph is called rainbow if all edges have distinct colors. Let [n]=\{1,...,n\}. The complete r-graph with order n is denoted by K\_{n}^{r} . Given a positive integer n and a hypergraph \mathcal{F}, the anti-Ramsey number ar\_{r}(n,\mathcal{F}) is the minimum number of colors t such that each edge-coloring of K\_{n}^{r} with exactly t colors contains a rainbow copy of \mathcal{F}. Given an edge-coloring C of \mathcal{F}, the colored hypergraph is *F-free* if \mathcal{F} has no rainbow subhypergraph which is isomorphic to F.
+
+Given a hypergraph H and a family of hypergraphs \mathcal{H}, H is called *\mathcal{H}-free* if for any F\in\mathcal{H}, H does not contain F as a subhypergraph.
+The Turán number of a fmaily of r-graphs \mathcal{F}, written ex\_{r}(n,\mathcal{F}), is the largest possible number of edges in an \mathcal{F}-free r-graph on n vertices. When \mathcal{F}=\{F\}, we use ex\_{r}(n,F) instead of ex\_{r}(n,\{F\}).
+
+Anti-Ramsey numbers were introduced by Erdős, Simonovits and Sós [6] in 1973. They found that the anti-Ramsey numbers are closely related to the Turán numbers. For an r-graph F, there is a natural lower bound of ar\_{r}(n,F) in terms of Turán number as follow,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle{}ar\_{r}(n,F)\geq ex\_{r}(n,\{F-e:e\in E(F)\})+2. |  | (1) |
+
+This trivial lower bound is easily obtained by coloring a rainbow Turán extremal r-graph for \{F-e:e\in F\} in K\_{n}^{r}, and the remaining edges with an additional color [15].
+
+In 1973, Erdős, Simonovits, and Sós [6] proved that there exists an integer n\_{0}(p) such that for all n>n\_{0}(p), the anti-Ramsey number ar(K\_{p},n) satisfies the equation ar(K\_{p},n)=ex(n,K\_{p-1})+2. Later, Montellano-Ballesteros and Neumann-Lara [17], as well as Schiermeyer [20], independently extended this result to cover all values of n and p where n>p\geq 3.
+Jiang [14] and Montellano-Ballesteros [18] independently determined the anti-Ramsey numbers for stars in graphs. A variety of results regarding the anti-Ramsey numbers of 2-graphs have been achieved. These results cover various graph structures such as paths, cycles, and matchings.
+For a comprehensive overview, we recommend the survey paper [10]. Regarding 3-graphs, Guo, Lu, and Peng [13] established the exact value of the anti-Ramsey number for matchings. Gu, Li, and Shi [11] investigated the anti-Ramsey numbers of paths and cycles in hypergraphs. For other related results on the anti-Ramsey numbers of paths, cycles, and matchings in hypergraphs, interested readers are referred to [9, 15, 22, 23, 18, 16].
+In this paper, we aim to investigate the anti-Ramsey numbers of stars of 3-graphs.
+
+Let \mathcal{F}\_{k} (k-star) denote the 3-graph consisting of k edges sharing exactly one vertex, called the core of the star. Let f(n,k) denote the maximum number of edges in 3-graph without k-stars. f(n,2) was determined exactly by Erdős and Sós[21].
+Duke and Erdős [4] established linear lower and upper bounds on f(n,k) for fixed k (where the bounds scale linearly with n). These bounds were subsequently improved in [8], where the exact value of f(n,3) was determined for all integers n\geq 54. Further refinements were made in [1], yielding bounds that are nearly best possible. Finally, Chung and Frankl [2] derived the exact value of f(n,k) for 3-graphs in the regime n\geq\frac{5}{2}k^{3}.

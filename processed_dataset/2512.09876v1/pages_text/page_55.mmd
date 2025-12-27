@@ -1,0 +1,54 @@
+Let X=\operatorname{Spec}(R) be the spectrum of a Dedekind domain of finite type over \mathbf{Z}, with function field K, and let r be the number of real places of K. Let \mathcal{L} be a line bundle over \operatorname{Spec}(R), corresponding to a projective R-module L of rank 1. Then one gets:
+
+|  |  |
+| --- | --- |
+| A\_{0}(X,\operatorname{K}^{W}\_{q},\mathcal{L})=\begin{cases}0&q>0,\\ \operatorname{Cl}(R)/2&q\leq 0,\end{cases} | A\_{1}(X,\operatorname{K}^{W}\_{q-1},\mathcal{L})=\begin{cases}\underline{% \operatorname{W}}(R,L)&q\leq 0,\\ \underline{\operatorname{I}}^{q}(R,L)&q>0.\end{cases} |
+
+Moreover, \underline{\operatorname{W}}(R,L) is a sub-ring of \operatorname{W}(K,L\_{K}) and one has a chain of ideals
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.17.a) |  | \underline{\operatorname{W}}(R,L)\supset\underline{\operatorname{I}}(R,L)% \supset\underline{\operatorname{I}}^{2}(R,L)\supset\ldots |  |
+
+In general, \underline{\operatorname{I}}^{q}(R,L)\subset\mathrm{I}^{q}(K,L\_{K}) as ideals of \operatorname{W}(K,L\_{K}).
+One has exact sequences:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.17.b) |  | \displaystyle 0\rightarrow\underline{\operatorname{I}}(R,L)\rightarrow% \underline{\operatorname{W}}(R,L)\rightarrow\mathbf{Z}/2\rightarrow 0 |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.17.c) |  | \displaystyle 0\rightarrow\underline{\operatorname{I}}^{2}(R,L)\rightarrow% \underline{\operatorname{I}}(R,L)\rightarrow R^{\times}/2\rightarrow 0 |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.17.d) |  | \displaystyle 0\rightarrow\underline{\operatorname{I}}^{3}(R,L)\rightarrow% \underline{\operatorname{I}}^{2}(R,L)\rightarrow\underline{\operatorname{k}}^{% M}\_{2}(R)\rightarrow 0. |  |
+
+If q\geq 3,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.17.e) |  | \underline{\operatorname{I}}^{q}(R,L)\stackrel{{\scriptstyle(1)}}{{=}}I^{q}(K,% L\_{K})\stackrel{{\scriptstyle(2)}}{{=}}[(2^{q})W(K,L\_{K})]^{r}\simeq\mathbf{Z}% ^{r},r\text{ number of real places of }K. |  |
+
+If the field K has characteristic 2, \underline{\operatorname{I}}^{q}(R,L)=0 when q\geq 2.
+
+###### Proof.
+
+We consider the first two stated computations.
+The second column follows from our notation, and the fact \operatorname{K}^{W}\_{q}(k)=\operatorname{W}(k)
+for any field k and any q\leq 0.
+Consider the first colomn.
+The case q>1 follows as I^{q}(k)=0 for a finite field k and an integer q>1.
+The case q=1 follows from (4.4.6.a). The case q=0 follows from the case q=1
+together with the exact sequence (3.4.6.a) for p=q=0. For q=-1, the same exact sequence gives:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \underline{\operatorname{W}}(X,\mathcal{L})\rightarrow\mathbf{Z}/2\rightarrow A% \_{0}(X,\operatorname{K}^{W}\_{0},\mathcal{L})\xrightarrow{\nu}A\_{0}(X,% \operatorname{K}^{W}\_{-1},\mathcal{L})\rightarrow 0 |  |
+
+which concludes, as \underline{\operatorname{W}}(X,\mathcal{L}) is not the zero ring. The case q<-1 then follows as multiplication by \eta
+induces an isomorphism on \operatorname{K}^{W}\_{\*} in negative degrees.
+
+Next, the sequence of inclusion (4.4.17.a), and the accompanying assertions, together with
+the exact sequence (4.4.17.b) all follows from the part of the exact sequence (3.4.6.a)
+concerning p=1.
+Similarly, (4.4.17.c) follows from the same exact sequence, the vanishing of A\

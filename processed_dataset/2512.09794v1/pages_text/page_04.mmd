@@ -1,0 +1,52 @@
+When \beta=0 we just write \|u\|\_{s,p} and \|u\|\_{p} instead of \|u\|\_{s,p,0} and \|u\|\_{p,0}, respectively. Moreover, we write W^{s,p}(\mathbb{R}^{N}) in place of W^{s,p}\_{0}(\mathbb{R}^{N}).
+  
+The corresponding subset of radial functions is defined as
+
+|  |  |  |
+| --- | --- | --- |
+|  | W\_{rad,\beta}^{s,p}(\mathbb{R}^{N})=\left\{u\in W\_{\beta}^{s,p}(\mathbb{R}^{N}% ):\text{ $u$ is radial}\right\}. |  |
+
+With the aforementioned definitions, the natural framework for introducing weak solutions of (1.4) is the space
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.3) |  | \displaystyle\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N})=\begin{cases}% \hidden@noalign{}\textstyle W^{s,p}\_{rad,\beta}(\mathbb{R}^{N})&\text{ if }% \gamma=0\\ \hidden@noalign{}\textstyle W^{1,p}\_{rad,\beta}(\mathbb{R}^{N})&\text{ if }% \gamma\in(0,1].\end{cases} |  |
+
+Once the functional spaces have been introduced, the relation between the parameter \gamma\in[0,1] in the Hénon equation (1.4) and the fractional parameter s\in(0,1] becomes clear: we have
+s=1 whenever \gamma\in[0,1), whereas s\in(0,1) when \gamma=0.
+
+### 2.2. The operator \mathcal{L}\_{s,p,\gamma}
+
+Given \gamma\in[0,1], s\in(0,1) and 1<p<q, we define the mixed local-nonlocal operator
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{L}\_{s,p,\gamma}\,u:=\gamma(-\Delta)\_{p}u+(1-\gamma)(-\Delta)\_{p}^{s}u |  |
+
+for all u\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}). Here, we denote the fractional p-Laplacian of order s\in(0,1] as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle(-\Delta\_{p})^{s}u(x):=\begin{cases}\hidden@noalign{}\textstyle% \text{p.v.}\displaystyle\int\_{\mathbb{R}^{N}}\frac{|u(x)-u(y)|^{p-2}(u(x)-u(y)% )}{|x-y|^{N+sp}}\,dy&\text{ if }s\in(0,1)\\[15.0pt] \hidden@noalign{}\textstyle-\text{div}\,(|\nabla u(x)|^{p-2}\nabla u(x))&\text% { if }s=1.\end{cases} |  |
+
+Thus, (-\Delta\_{p})^{1}u stands for -\Delta\_{p}u.
+
+The operator \mathcal{L}\_{s,p,\gamma} is well defined between W^{s,p}(\mathbb{R}^{N}) and its dual space, and the following representation formula holds: given u\in W^{s,p}(\mathbb{R}^{N})
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\langle\mathcal{L}\_{s,p,\gamma}\,u,v\rangle | \displaystyle=\gamma\int\_{\mathbb{R}^{N}}\Phi\_{p}(\nabla u)\cdot\nabla v\,dx+(% 1-\gamma)\iint\_{\mathbb{R}^{N}\times\mathbb{R}^{N}}\frac{\Phi\_{p}(u(x)-u(y))(v% (x)-v(y))}{|x-y|^{N+sp}}\,dxdy |  |
+
+for all v\in W^{s,p}(\mathbb{R}^{N}), being \Phi\_{p}(t):=|t|^{p-2}t for t\in\mathbb{R}. Therefore, we say that u\in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}) is a *weak solution* of (1.4) if
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle\mathcal{L}\_{s,p,\gamma}u,v\rangle+\int\_{\mathbb{R}^{N}}|x|^{\beta}\Phi% \_{p}(u)v\,dx=\int\_{\mathbb{R}^{N}}|x|^{\alpha}\Phi\_{q}(u)v\,dx\qquad\forall v% \in\mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}). |  |
+
+Observe that weak solutions are critical points of the functional
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{J}(u):=\frac{\gamma}{p}\|\nabla u\|\_{p}^{p}+\frac{1-\gamma}{p}[u]\_{s,% p}+\frac{1}{p}\|u\|\_{p,\beta}-\frac{1}{q}\|u\|\_{q,\alpha} |  |
+
+defined on \mathcal{W}^{s,p}\_{\beta}(\mathbb{R}^{N}), whose Frechét derivative is given by

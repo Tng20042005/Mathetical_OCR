@@ -1,0 +1,62 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\varphi\_{1}(w;\eta)= | \displaystyle(1+w\eta)\left(\frac{\int\_{0}^{\infty}\tau\int\_{0}^{\infty}z\_{1}^% {p\_{1}+p\_{2}-4}e^{-z\_{1}}dz\_{1}dH(\tau)}{\int\_{0}^{\infty}\frac{1}{\tau}\int\_{% 0}^{\infty}z\_{1}^{p\_{1}+p\_{2}-2}e^{-z\_{1}}dz\_{1}dH(\tau)}\right)^{\frac{1}{2}}% =(1+w\eta)\left(\frac{E(\tau)\left(E(1/\tau)\right)^{-1}}{(p\_{1}+p\_{2}-2)(p\_{1% }+p\_{2}-3)}\right)^{\frac{1}{2}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\leq | \displaystyle(1+w)\left(\frac{E(\tau)\left(E(1/\tau)\right)^{-1}}{(p\_{1}+p\_{2}% -2)(p\_{1}+p\_{2}-3)}\right)^{\frac{1}{2}}=\varphi\_{11}(w) |  |
+
+Now using the convexity of R(\delta\_{\varphi\_{1}};\eta) we get the result. Proof of (ii) similar to (i). So we omit it.
+
+###### Remark 4.
+
+When \tau=1 with probability one, Theorem 1 reduces to the result which was previously derived by [29] in Example 2.3 and Example 2.4 under entropy and symmetric loss function respectively.
+
+Now we aim to derive a class of improved estimators. For this purpose, we applied integral expression of risk difference (IERD) approach of [19]. In the following theorem we give sufficient conditions under which we obtain a class of improved estimators.
+
+###### Theorem 2.
+
+1. (i)
+
+   Suppose \varphi\_{1}(u) be a function satisfies the following conditions:
+
+   1. (a)
+
+      \varphi\_{1}(u) is non-decreasing in u and \lim\limits\_{u\rightarrow\infty}\varphi\_{1}(u)=\left(\frac{E(\tau)}{(p\_{1}-1)(%
+      p\_{1}-2)E(1/\tau)}\right)^{1/2}
+   2. (b)
+
+      \varphi\_{1}(u)\geq\varphi\_{\*}^{1}(u), where \varphi\_{\*}^{1}(u)=\left(\frac{E(\tau)B\left(\frac{u}{1+u};p\_{1}-2,p\_{2}-1%
+      \right)}{E(1/\tau)(p\_{1}+p\_{2}-2)(p\_{1}+p\_{2}-3)B\left(\frac{u}{1+u};p\_{1},p\_{%
+      2}-1\right)}\right)^{1/2}with B(x;a,b) is the incomplete Beta function.
+
+   Then the estimator \delta\_{\varphi\_{1}} defined in (3) dominates \delta\_{11} under the symmetric loss function L\_{1}.
+2. (ii)
+
+   Let \varphi\_{1}(u) satisfies the following conditions:
+
+   1. (a)
+
+      \varphi\_{1}(u) is non-decreasing in u and \lim\limits\_{u\rightarrow\infty}\varphi\_{1}(u)=\frac{1}{(p\_{1}-1)E\left(1/\tau%
+      \right)}
+   2. (b)
+
+      \varphi\_{1}(u)\geq\varphi\_{\*}^{2}(u)=\frac{B\left(\frac{u}{1+u};p\_{1}-1,p\_{2}-%
+      1\right)}{E(1/\tau)(p\_{1}+p\_{2}-2)B\left(\frac{u}{1+u};p\_{1},p\_{2}-1\right)}.
+
+   Then the risk of \delta\_{\varphi\_{1}} is nowhere larger than that of \delta\_{21} with respect to the Stein type loss function L\_{2}(\cdot).
+
+Proof: We denote g\_{i} and G\_{i} is the density and cdf of the random variable V\_{i}=\frac{\tau S\_{i}}{\sigma\_{i}} given \tau>0 respectively.
+
+1. (i)
+
+   The risk difference of the estimators \delta\_{11} and \delta\_{\varphi\_{1}} is
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \displaystyle\Delta\_{1}= | \displaystyle E\left[\int\_{1}^{\infty}\left(\varphi\_{1}^{\prime}\left(\frac{1}% {\eta}\frac{v\_{2}}{v\_{1}}t\right)\frac{1}{\eta}v\_{2}-\frac{\varphi\_{1}^{\prime% }\left(\frac{1}{\eta}\frac{v\_{2}}{v\_{1}}t\right)\frac{1}{\eta}\frac{v\_{2}}{v\_{% 1}}}{\varphi\_{1}^{2}\left(\frac{1}{\eta}\frac{v\_{2}}{v\_{1}}t\right)v\_{1}}% \right)dt\right] |  |
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \displaystyle\geq | \displaystyle E\left[\int\_{1}^{\infty}\left(v\_{2}-\frac{v\_{2}}{v\_{1}^{2}% \varphi\_{1}^{2}\left(t\frac{v\_{2}}{v\_{1}}\right)}\right)\varphi\_{1}^{\prime}% \left(\frac{1}{\eta}\frac{v\_{2}}{v\_{1}}t\right)dt\right] |  |
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \displaystyle= | \displaystyle\int\_{0}^{\infty}\int\_{0}^{\infty}\int\_{0}^{\infty}\int\_{1}^{% \infty}\left(v\_{2}-\frac{v\_{2}}{v\_{1}^{2}\varphi\_{1}^{2}\left(t\frac{v\_{2}}{v\_% {1}}\right)}\right)\varphi\_{1}^{\prime}\left(\frac{1}{\eta}\frac{v\_{2}}{v\_{1}}% t\right)\tau g\_{1}(\tau v\_{1})\tau g\_{2}(\tau v\_{2})dtdv\_{1}dv\_{2}dH(\tau) |  |

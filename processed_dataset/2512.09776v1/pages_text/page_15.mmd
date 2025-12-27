@@ -1,0 +1,73 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \left|{P(\alpha)\triangle P(\beta)}\right|\leq\left|{P(\alpha)\triangle P(% \gamma)\cup P(\gamma)\triangle P(\beta)}\right|\leq\left|{P(\alpha)\triangle P% (\gamma)}\right|+\left|{P(\gamma)\triangle P(\beta)}\right| |  |
+
+and letting \eta be a separating curve in \alpha\_{+}\cap\beta\_{+}\cap\gamma\_{+},
+
+|  |  |  |
+| --- | --- | --- |
+|  | g(\alpha,\beta)=\left|{g\_{0}(\alpha,\eta)-g\_{0}(\beta,\eta)}\right|=\left|{g\_{% 0}(\alpha,\eta)-g\_{0}(\gamma,\eta)+g\_{0}(\gamma,\eta)-g\_{0}(\beta,\eta)}\right% |\leq g(\alpha,\gamma)+g(\gamma,\beta). |  |
+
+∎
+
+Furthermore, the Hamming distance gives a tighter lower bound on the graph distance d in \Gamma.
+
+###### Lemma 4.11.
+
+For all separating curves \alpha and \beta, we have d(\alpha,\beta)\geq H(\alpha,\beta)\geq F(\alpha,\beta).
+
+###### Proof.
+
+The first inequality follows from the same argument used in the proof of Lemma 3.16. To get the second inequality, let \gamma be a separating curve in \alpha\_{+}\cap\beta\_{+}. By definition, p\_{0}(\alpha,\gamma)=\left|{{\mathrm{End}}\_{d}([\alpha,\gamma])}\right| and p\_{0}(\beta,\gamma)=\left|{{\mathrm{End}}\_{d}([\beta,\gamma])}\right|. Since \gamma\_{+} is contained in both \alpha\_{+} and \beta\_{+},
+
+|  |  |  |
+| --- | --- | --- |
+|  | P(\alpha)\triangle P(\beta)={\mathrm{End}}\_{d}([\alpha,\gamma])\triangle{% \mathrm{End}}\_{d}([\beta,\gamma]). |  |
+
+Hence,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle H(\alpha,\beta) | \displaystyle=\left|{P(\alpha)\triangle P(\beta)}\right|+g(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left|{{\mathrm{End}}\_{d}([\alpha,\gamma])\triangle{\mathrm{End}% }\_{d}([\beta,\gamma])}\right|+g(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\left|{\left|{{\mathrm{End}}\_{d}([\alpha,\gamma])}\right|-% \left|{{\mathrm{End}}\_{d}([\beta,\gamma])}\right|}\right|+g(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left|{p\_{0}(\alpha,\gamma)-p\_{0}(\beta,\gamma)}\right|+g(\alpha% ,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=p(\alpha,\beta)+g(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=F(\alpha,\beta). |  |
+
+∎
+
+We now aim to understand how lassoing affects the Hamming distance between curves.
+
+###### Lemma 4.12.
+
+Let \alpha be a separating curve. If \alpha(\eta,\lambda) is a lasso curve defined by \alpha and some \eta and \lambda, then P(\alpha)\triangle P(\alpha(\eta,\lambda))={\mathrm{End}}\_{d}(C\_{\eta}).
+
+###### Proof.
+
+First suppose \eta lies on the right side of \alpha, so that {\mathrm{End}}(C\_{\eta})\subset{\mathrm{End}}(\alpha\_{+}). It follows from the construction of \alpha(\eta,\lambda) that after lassoing, \eta now lies on the left side of \alpha(\eta,\lambda), and {\mathrm{End}}(\alpha(\eta,\lambda)\_{+})={\mathrm{End}}(\alpha\_{+})\setminus{%
+\mathrm{End}}(C\_{\eta}). Similarly, if \eta lies on the left side of \alpha, then {\mathrm{End}}(C\_{\eta}) and {\mathrm{End}}(\alpha\_{+}) are disjoint, and {\mathrm{End}}(\alpha(\eta,\lambda)\_{+})={\mathrm{End}}(\alpha\_{+})\sqcup{%
+\mathrm{End}}(C\_{\eta}). Thus, in both cases, {\mathrm{End}}(\alpha\_{+})\triangle{\mathrm{End}}(\alpha(\eta,\lambda)\_{+})={%
+\mathrm{End}}(C\_{\eta}). Considering only the discrete-type ends in these sets then gives the result.
+∎
+
+We observe in the next lemma that given a pair of curves, applying the lassoing procedure to just one of the curves, with respect to a discrete-type end that is on the same side of both curves, increases the Hamming distance between the pair.
+
+###### Lemma 4.13.
+
+Let \alpha and \beta be separating curves. Suppose \alpha(\eta,\lambda) is a lasso curve such that \eta lies on the same side of \alpha and \beta, and C\_{\eta} has genus 0 if S has finite genus. Then H(\alpha(\eta,\lambda),\beta)=H(\alpha,\beta)+\left|{{\mathrm{End}}\_{d}(C\_{%
+\eta})}\right|.
+
+###### Proof.
+
+If S has infinite genus, then g(\alpha(\eta,\lambda),\beta)=0=g(\alpha,\beta). On the other hand, if S has finite genus, then C\_{\eta} has genus 0 by the hypothesis, and it follows that g(\alpha(\eta,\lambda),\beta)=g(\alpha,\beta).

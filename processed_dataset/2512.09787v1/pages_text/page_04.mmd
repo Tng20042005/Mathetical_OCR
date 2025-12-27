@@ -1,0 +1,29 @@
+ay}\right)\left(\frac{\theta\_{2}}{\theta\_{4}}% \right)^{k}\left[\frac{\Gamma(\theta\_{6}+\theta\_{3}k+1)-\gamma(\theta\_{6}+% \theta\_{3}k+1,x)}{\theta\_{1}^{\theta\_{6}+\theta\_{3}k+1}}\right],\leavevmode% \nobreak\ \leavevmode\nobreak\ x>0. |  | (10) |
+
+### 2.2 Particular probability models
+
+Some particular examples of densities g(y;\bm{\theta}) are presented in Table 1. Figure 2 presents the plots of the PDFs of such particular cases. There are other models that are not particular cases of (2), but it can be written as a finite mixture of g(y;\bm{\theta}) (see Subsection 2.5).
+
+Table 1: Particular cases of PDF g(y;\bm{\theta}).
+
+| Distribution | PDF | \bm{\theta} |
+| --- | --- | --- |
+| Gamma [9] | \frac{\beta^{\alpha}}{\Gamma(\alpha)}y^{\alpha-1}\exp\left(-\beta y\right), \alpha,\beta>0 | (\beta,0,1,0,1,\alpha-1) |
+| Generalized Gamma [26] | \frac{\gamma\beta^{\alpha/\gamma}}{\Gamma(\alpha/\gamma)}y^{\alpha-1}\exp\left% (-\beta y^{\gamma}\right), \alpha,\beta,\gamma>0 | (0,\beta,\gamma,0,1,\alpha-1) |
+| Inverse Gamma [18] | \frac{\beta^{\alpha}}{\Gamma(\alpha)}y^{-(\alpha+1)}\exp\left(-\beta\frac{1}{y% }\right), \alpha,\beta>0 | (0,\beta,-1,0,1,-\alpha-1) |
+| Weibull [9] | \frac{\alpha}{\sigma}\left(\frac{y}{\sigma}\right)^{\alpha-1}\exp\left(-\left(% \frac{y}{\sigma}\right)^{\alpha}\right), \alpha,\sigma>0 | (0,1/\sigma,1,0,\alpha,\alpha-1) |
+| Fréchet [19] | \frac{\alpha}{\sigma}\left(\frac{y}{\sigma}\right)^{-\alpha-1}\exp\left(-\left% (\frac{y}{\sigma}\right)^{-\alpha}\right), \alpha,\sigma>0 | (0,1/\sigma,1,0,-\alpha,-\alpha-1) |
+| Half-normal [9] | \frac{\sqrt{2}}{\sigma\sqrt{\pi}}\exp\left(-\frac{y^{2}}{2\sigma^{2}}\right), \sigma>0 | (0,\frac{1}{2\sigma^{2}},2,0,1,0) |
+| Modified half-normal [28] | \frac{2\beta^{\alpha/2}}{\Psi\left(\alpha/2,\gamma/\sqrt{\beta}\right)}y^{% \alpha-1}\exp\left(\gamma x-\beta x^{2}\right), \alpha,\beta>0,\gamma<0 | (-\gamma,\beta,2,0,1,\alpha-1) |
+| Rayleigh [9] | \frac{1}{\sigma^{2}}y\exp\left(-\frac{1}{2\sigma^{2}}y^{2}\right), \sigma>0 | (0,\frac{1}{2\sigma^{2}},2,0,1,1) |
+| Erlang [9] | \frac{\beta^{k}}{(k-1)!}y^{k-1}\exp\left(-\beta y\right), \beta>0, k=1,2,\cdots | (\beta,0,1,1,1,k-1) |
+
+Figure 2: Plots of the PDF g(y;\bm{\theta}) for particular models presented in Table 1.
+
+It is interesting to highlight that Gumbel random variables are a limiting case of the new class of random variables hereby presented. In that case, one may notice that:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \exp(z)=\lim\_{n\to\infty}\left(1+\frac{z}{n}\right)^{n} |  | (11) |
+
+Thus, considering the PDF of Gumbel distribution with location parameter \alpha\in\mathbb{R} and scale \beta>0:

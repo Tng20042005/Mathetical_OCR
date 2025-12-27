@@ -1,0 +1,30 @@
+Write V(R\_{2}):=\{y\_{0},y\_{1},\ldots,y\_{4}\} such that d\_{R\_{2}}(y\_{0})=2, and y\_{0}y\_{1},y\_{0}y\_{4}\in E(R\_{2}). If g\_{1}\cap\{y\_{1},y\_{4}\}=\emptyset or g\_{1}\cap g\_{2}\neq\emptyset, then F-V(g\_{1})-g\_{2} has a matching of size 3, which again contradicts inequality (8). Moreover, by symmetry, we may assume that y\_{1}\in g\_{1}\cap V(R\_{2}) and g\_{1}\cap g\_{2}=\emptyset.
+Recall that for every edge e\in E(R\_{2}), e is type A in G, which means d\_{G}(\{y\_{1},y\})\geq 7 for y\in\{y\_{0},y\_{2},y\_{3}\}. Note that \{y\_{2},y\_{3},y\_{0}\}\cap(g\_{1}\cup\{x\})=\emptyset. Let w\in[n]-V(F)-\{x\}. By Claim 7, we have c(\{x,w,y\_{1}\})=c\_{0}\neq c(g\_{1}\cup\{x\}). With the same discussion as Claim 6,
+\{x\}\cup g\_{1} can be extended into a rainbow copy with core y\_{1} denoted by \mathcal{M} of \mathcal{F}\_{4}, where \{c(e)\ |\ e\in E(F\_{4})\}\subseteq\{c(e)\ |\ e\in E(\mathcal{M})\}. By Lemma 9, we may choose h\in Q such that h\cap V(\mathcal{M})=\emptyset. Then \{h\cup\{y\_{1}\}\}\cup E(\mathcal{M}) induces a rainbow copy of \mathcal{F}\_{5} in \mathcal{G}, a contradiction.
+This completes the proof of Claim 7.
+
+By Claims 6 and 7, it is sufficient for us to show that
+for any l\in{V(R\_{2})\choose 2}\setminus E(R\_{2}), c(l\cup\{x\})=c\_{0}.
+Suppose to the contrary that there exists l\_{0}=\{x\_{0},y\_{0}\}\in{V(R\_{2})\choose 2}\setminus E(R\_{2}) such that c(\{x\_{0},y\_{0},x\})\neq c\_{0}. Note that R\_{2} is a factor-critical graph of order k+1 with degree sequence (k-1,\ldots,k-1,k-2). Without loss of generality, suppose d\_{R\_{2}}(x\_{0})=k-1. By Claim 7, for w\in[n]-V(F)-\{x\}, c(\{x\_{0},w,x\})=c\_{0}\neq c(\{x\_{0},y\_{0},x\}). By Claim 5, we can find a rainbow copy of \mathcal{F}\_{k+1} with the core x\_{0}, which contradicts the hypothesis.
+Thus we can derive that the inequality (7) holds.
+
+Subcase 2.2. F satisfies (a), (b) and (c).
+
+Let U\_{k} denote the set of vertices that serve as the centers of stars fulfilling condition (b) in Lemma 8. Let V\_{k}:=V(F)\setminus(V(F\_{0})\cup U\_{k}). Let F\_{0} be the factor-critical component that satisfies condition (a) in Lemma 8.
+Since \nu(F)=k-1 and the number of vertices in F\_{0} is at least k+1 (i.e., |F\_{0}|\geq k+1), we can infer that the cardinality of the set U\_{k} is at most \frac{k}{2}-1, that is, |U\_{k}|\leq\frac{k}{2}-1.
+
+Claim 8. The set \{c(g\cup\{x\})\ |\ g\in{[n]-\{x\}-V(F)\choose 2}\} contains exactly one color denoted by c\_{1}, which belongs to the color set C\_{Q}.
+
+We will prove this statement by contradiction. First, suppose that there exists g\in{[n]-\{x\}-V(F)\choose 2} such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | c(g\cup\{x\})\in\{c(f\cup\{x\})\ |\ f\in E(F)\}. |  |
+
+Our goal is to construct a rainbow copy \mathcal{F}\_{k+1}, which will lead to a contradiction.
+Without loss of generality, assume that c(g\cup\{x\})=c(g^{\prime}\cup\{x\}), where g^{\prime}\in E(F). Since F\_{0} is factor-critical and U\_{k}\leq\frac{k}{2}-1, F-g^{\prime} has a matching M of size k-1. By Lemma 9, we can then find h\in Q such that x\notin h and h\cap V(M\cup\{g\})=\emptyset. In this situation, the collection \{p\cup\{x\}\ |\ p\in M\cup\{g,h\}\} forms a rainbow copy of \mathcal{F}\_{k+1}, which contradicts our initial assumption. Next, consider the case when there are two distinct edges g\_{1},g\_{2}\in{[n]-\{x\}-V(F)\choose 2} such that c(g\_{1}\cup\{x\})\neq c(g\_{2}\cup\{x\}) and neither c(g\_{1}\cup\{x\}) nor c(g\_{2}\cup\{x\}) belongs to the set \{c(p\cup\{x\})\ |\ p\in E(F)\}.
+We select a matching M^{\prime} of size k-1 in F. Subsequently, we can find an element h\in Q such that x\notin h and h\cap V(M^{\prime}\cup\{g\_{1},g\_{2}\})=\emptyset. As a consequence, either the set \{p\cup\{x\}\ |\ p\in M^{\prime}\cup\{g\_{1},h\}\} or \{p\cup\{x\}\ |\ p\in M^{\prime}\cup\{g\_{2},h\}\} forms a rainbow copy of \mathcal{F}\_{k+1}, a contradiction. This completes the proof of Claim 8.
+
+Let \mathcal{C}:=\{c(p\cup\{x\})\ |\ p\in E(F)\} and let \mathcal{C}^{\prime}:=\{c\_{1}\}\cup\{c(p\cup\{x\})\ |\ p\in E(F)\}.
+
+Claim 9. For any f\in\binom{[n]\setminus(U\_{k}\cup\{x\})}{2} satisfying |f\cap V(F\_{0})|=1, we have c(f\cup\{x\})=c\_{1}.

@@ -1,0 +1,45 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\|r\_{\cP}-\Id\|\_{L^{p}(\mu)} | \displaystyle\leq\left(\sum\_{i=0}^{\infty}\sum\_{P\in\cP\_{i}}\mu(P)\diam(P)^{p}% \right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\left(\sum\_{i=0}^{\infty}(2^{i}\cdot 6\delta)^{p}\mu(S\_{i})% \right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\left(\sum\_{i=0}^{\infty}(2^{i}\delta)^{p}2^{(1-i)(p+1)}% \right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\delta\left(\sum\_{i=0}^{\infty}2^{p+1-i}\right)^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\delta, |  |
+
+as desired.
+∎
+
+We now prove the theorem. First, note that for D=\sqrt{4\log(n)}, we have \max\_{i=1,\dots,n}\|Y\_{i}\|\leq DS with probability at least 1/n, by 8. Now, for a general partition \cP, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu) | \displaystyle=\cE\_{p}(\bar{\kappa}\_{n}\circ r\_{\cP};\mu,\nu) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq\cE\_{p}(\bar{\kappa}\_{n};\mu^{\prime},\nu)+2\,\|r\_{\cP}-\Id\|% \_{L^{p}(\mu)} |  | (6) |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq\cE\_{p}(\bar{\kappa}\_{n};\mu^{\prime},\hat{\nu}\_{n})+2\,\|r\_{% \cP}-\Id\|\_{L^{p}(\mu)}+\Wp(\nu,\hat{\nu}\_{n}) |  | (3) |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\|(r\_{\cP})\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_{\tv}^{1/p}% \cdot\diam(\supp(\hat{\nu}\_{n}))+\delta^{\frac{1}{p}}+\|r\_{\cP}-\Id\|\_{L^{p}(% \mu)}+\Wp(\nu,\hat{\nu}\_{n}), |  |
+
+where the last inequality follows by 7 and our choice of \bar{\kappa}\_{n}. Applying this bound for the regular cube partition and taking expectations, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E[\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu)] | \displaystyle\lesssim D\E\left[\|(r\_{\cP})\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_{\tv}% \right]^{1/p}+\frac{1}{n}+\delta^{\frac{1}{p}}+\sqrt{d}r+\Wp(\nu,\hat{\nu}\_{n}) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\widetilde{O}\left(\frac{5^{d}r^{-d}}{n}\right)^{\frac{1}% {2p}}+\delta^{\frac{1}{p}}+\sqrt{d}r+\widetilde{O}\_{p}\left(n^{-\frac{1}{d\lor 2% p}}\right). |  | (8\crefmiddleconjunction9\creflastconjunction1) |
+
+Taking r=n^{-1/(d+2p)}, we obtain \E[\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu)]=\widetilde{O}\_{p,d}(n^{-1/(d+2p)})+%
+\delta^{1/p}. The same rate is obtained under bounded 2pth moments by using the alternative partition from 10. Thus, to achieve the desired rate, it suffices to solve the preliminary OT problem to accuracy \delta=n^{-p/(d+2p)}.

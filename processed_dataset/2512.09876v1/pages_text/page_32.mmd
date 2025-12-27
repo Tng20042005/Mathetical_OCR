@@ -1,0 +1,56 @@
+###### Proposition 3.4.3.
+
+Consider the setting of Definition 3.4.2.
+Then the fully faithful functor j\_{e}:\mathcal{C}[e^{-1}]\rightarrow\mathcal{C} (resp. i\_{e}:\mathcal{C}^{e=0}\rightarrow\mathcal{C}) admits a left adjoint
+L^{\prime}\_{e} (resp. Q^{\prime}\_{e}) defined by the formula:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle L^{\prime}\_{e}(\mathcal{M})=\mathcal{M}[e^{-1}]:=\operatorname{% colim}\big{(}\mathcal{M}\xrightarrow{\gamma\_{e}}\mathcal{M}\{n\}\xrightarrow{% \gamma\_{e}}\ldots\big{)} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | resp. | \displaystyle Q^{\prime}\_{e}(\mathcal{M})=\mathcal{M}/e:=\mathrm{coKer}\big{(}% \mathcal{M}\xrightarrow{\gamma\_{e}}\mathcal{M}\{n\}\big{)},, |  |
+
+and similarly for the MW-module M.
+We will put: L\_{e}=j\_{e}L^{\prime}\_{e} (resp. Q\_{e}=i\_{e}Q^{\prime}\_{e}) called the *e-localization* (*e-quotient*) functor.
+
+Finally, \mathcal{C}[e^{-1}] is a thick121212i.e. closed under subobjects, quotients and extensions abelian subcategory of \mathcal{C}, while \mathcal{C}^{e=0} is only an abelian subcategory of \mathcal{C}
+stable under direct factors.
+
+###### Example 3.4.4.
+
+Let S be a scheme which admits a pinning, and consider the notation of 3.3.6.
+
+1. (1)
+
+   According to the presentation of each rings, one gets for any (S-)field E
+   a canonical isomorphism: \operatorname{K}^{MW}\_{\*}(E)/\eta=\operatorname{K}^{M}\_{\*}(E).
+   In particular, one deduces the \eta-quotient:
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \operatorname{K}^{MW}\_{\*}\!/\eta=\operatorname{K}^{M}\_{\*}. |  |
+
+   Note that data (D\*) on the \eta-trivial MW-module \operatorname{K}^{M}\_{\*} are the well-known operations
+   on Milnor K-theory, and the theory does not depend on twists (see next subsection).
+2. (2)
+
+   According to [Mor12, Cor. 3.11], \operatorname{K}^{MW}\_{\*}(E)[\eta^{-1}]=\operatorname{W}(E)[\eta,\eta^{-1}],
+   the right hand-side being the Witt ring in all degree (\eta being seen as a formal invertible variable of degree -1).
+   One deduces that there exists a MW-module, simply denoted by \operatorname{W}, which in degree n and for an S-field E
+   associates the abelian group \operatorname{W}(E), and such that:
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \operatorname{K}^{MW}\_{\*}[\eta^{-1}]=\operatorname{W}. |  |
+
+   The notation indicates that the MW-module \operatorname{W} is periodic: \operatorname{W}\_{n}=\operatorname{W}\_{n+1}.
+   Finally, data (D\*) on the \eta-local MW-module \operatorname{W} are given by the classical operations on Witt rings of fields.
+3. (3)
+
+   Consider the element h=2+\eta\rho in the ring \operatorname{K}^{MW}\_{0}(\mathbf{Z}) (the avatar of the hyperbolic form).
+   Another result of Morel (see [Dég25, 2.3.5] for the statement and references) states
+   that for any integer n\in\mathbf{Z} and any (S-)field E,
+   there exists a canonical isomorphism of abelian groups: \operatorname{K}^{MW}\_{n}(E)/(h)=\operatorname{I}^{n}(E)
+   where \operatorname{I}(E)=\operatorname{Ker}(\operatorname{rk}:\operatorname{W}(E)%
+   \rightarrow\mathbf{Z}/2) is the fundamental ideal of \operatorname{W}(E).131313Accord

@@ -1,0 +1,77 @@
+ed balls are compact. An isometric group action G\curvearrowright X is properly discontinuous if for all compact K\subseteq X the set \left\{{g\in G:g\cdot K\cap K\neq\emptyset}\right\} is finite, and cocompact if G\backslash X is compact. The action is geometric if it is properly discontinuous and cocompact.
+
+###### Lemma 4 (Milnor-Schwarz).
+
+If a group G acts geometrically on a proper geodesic metric space X, then G is finitely generated and quasi-isometric to X. A quasi-isometry G\mapsto X is given by g\mapsto g\cdot x\_{0}, where x\_{0}\in X is any basepoint.
+
+For example, if M is a compact Riemannian manifold with Riemannian universal cover \widetilde{M}, then \pi\_{1}(M) acts geometrically on \widetilde{M} and therefore \pi\_{1}(M) is quasi-isometric to \widetilde{M}.
+
+A more general version of the Milnor-Schwarz lemma exists for quasi-actions, which we now define. Let (X,d) be a geodesic metric space, and let QI(X) be the set of quasi-isometries X\to X (in contrast to our use, QI(X) is sometimes used to denote the quasi-isometry group of X whose elements are equivalence classes of quasi-isometries). For k\geq 1, a k-quasi-action of a group G on X is a map h:G\to\text{QI}(X) such that
+
+1. (1)
+
+   For all g\in G, h(g) is a (k,k)-quasi-isometry with k-dense image,
+2. (2)
+
+   d(h(1),\text{id}\_{X})\leq k;
+3. (3)
+
+   For all g\_{1},g\_{2}\in G, d(h(g\_{1}g\_{2}),h(g\_{1})h(g\_{2}))\leq k,
+
+where h(g\_{1})h(g\_{2}) means h(g\_{1})\circ h(g\_{2}). A k-quasi-action h is k’-cobounded if every G-orbit is k^{\prime}-dense in X. A (cobounded) quasi-action is a map which is a (k^{\prime}-cobounded) k-quasi-action for some k\geq 1\ (k^{\prime}\geq 1). Now we can state a stronger version of the Milnor-Schwarz lemma.
+
+###### Lemma 5 ([FLS15] Lemma 1.4).
+
+Let X be a geodesic metric space with basepoint x\_{0}, and let G be a group. Let h:G\to\textup{QI}(X) be a cobounded quasi-action of G on X, and suppose that for each r>0, the set \left\{{g\in G:h(g)B(x\_{0},r)\cap B(x\_{0},r)\neq\emptyset}\right\} is finite. Then G is finitely generated and quasi-isometric to X. A quasi-isometry G\to X is given by g\mapsto h(g)(x\_{0}).
+
+Here are two more lemmas related to quasi-actions that will be useful later.
+
+###### Lemma 6.
+
+If a quasi-action has at least one dense orbit, then it is cobounded.
+
+###### Proof.
+
+Suppose h:G\to\text{QI}(X) is a k-quasi-action such that the G-orbit of x\in X is k^{\prime}-dense in X. Let y,p\in X be arbitrary, and take g\_{1},g\_{2}\in G such that d(y,h(g\_{1})(x))\leq k^{\prime} and d(p,h(g\_{2})(x))\leq k^{\prime}. Then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle d(p,h(g\_{2}g\_{1}^{-1})(y)) | \displaystyle\leq d(p,h(g\_{2})(x))+d(h(g\_{2})(x),h(g\_{2}g\_{1}^{-1})(y)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+d(h(g\_{2})(x),h(g\_{2})h(g\_{1}^{-1})(y))+d(h(g\_{2}% )h(g\_{1}^{-1})(y),h(g\_{2}g\_{1}^{-1})(y)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+kd(x,h(g\_{1}^{-1})(y))+k+k |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+2k+k^{2}d(h(g\_{1})(x),h(g\_{1})h(g\_{1}^{-1})(y))+k% ^{3} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+2k+k^{3}+k^{2}d(h(g\_{1})(x),h(1)(y))+k^{2}d(h(1)(% y),h(g\_{1})h(g\_{1}^{-1})(y)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+2k+k^{3}+k^{2}d(h(g\_{1})(x),y)+k^{2}d(y,h(1)(y))+% k^{3} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq k^{\prime}+2k+3k^{3}+k^{2}k^{\prime}. |  |
+
+So h is (k^{\prime}+2k+3k^{3}+k^{2}k^{\prime})-cobounded.
+∎
+
+###### Lemma 7.
+
+A quasi-isometry between a finitely generated group G and the fundamental group \pi\_{1}(M) of a geodesic metric space induces a cobounded quasi-action of G on the metric universal cover \widetilde{M}.
+
+###### Proof.
+
+Indeed, since \pi\_{1}(M) is quasi-isometric to \widetilde{M}, we get a quasi-isometry \varphi:G\to\widetilde{M}. Let \psi:\widetilde{M}\to G be a quasi-inverse of \varphi. For each g\in G, define h(g):\widetilde{M}\to\widetilde{M} by
+
+|  |  |  |
+| --- | --- | --- |
+|  | h(g)(x)=\varphi(g\psi(x)),\qquad x\in\widetilde{M}. |  |
+
+Then h(g) is the composition of three quasi-isometries with fixed constants. So h(g) is a quasi-isometry with constants that are independent of g. Moreover, h(1)=\varphi\circ\psi has finite distance from \text{id}\_{\widetilde{M}}. It is also easily checked that h(g\_{1}g\_{2}) has finite distance (bounded independently of g\_{1},g\_{2}) from h(g\_{1})\circ h(g\_{2}). So h is a quasi-action, and since \varphi is coarsely surjective and the left multiplication action of G on itself is transitive, h is cobounded.
+∎
+
+Finally, we recall some facts about non-uniform rank one lattices and their associated neutered spaces. Details may be found in [SCH95] and [DK18]. Let X be a negatively curved symmetric space with distance function d\_{X

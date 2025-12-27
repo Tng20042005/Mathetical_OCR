@@ -1,0 +1,77 @@
+ac{\Delta\_{3i}}{D}\right)^{p}+\sum\_{i=0}^% {M-1}\left(\frac{\Delta\_{3i+1}}{D}\right)^{p}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\eps D^{p}\left(\left(\sum\_{i=0}^{M-1}\frac{\Delta\_{3i-1}}{D}% \right)^{p}+\left(\sum\_{i=0}^{M-1}\frac{\Delta\_{3i}}{D}\right)^{p}+\left(\sum\_% {i=0}^{M-1}\frac{\Delta\_{3i+1}}{D}\right)^{p}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=O(D\eps^{1/p})^{p}. |  |
+
+Thus, we have \cE\_{p}(G^{-1}\circ F;\mu^{\prime},\nu)\lesssim\|G^{-1}\circ F-G^{-1}\circ F^{%
+\prime}\|\_{L^{p}(\mu^{\prime})}\leq D\eps^{1/p}, as desired.
+∎
+
+Together, the three results stated above yield our desired risk bound.
+
+###### Proposition 2.
+
+Let X\_{1},\dots,X\_{n}\stackrel{{\scriptstyle\text{i.i.d.}}}{{\sim}}\mu\in\cP(\R) and Y\_{1},\dots,Y\_{n}\stackrel{{\scriptstyle\text{i.i.d.}}}{{\sim}}\nu\in\cP([0,1]). Then the estimator \hat{\kappa}\_{n} which, given \hat{\mu}\_{n} and \hat{\nu}\_{n}, returns the optimal kernel for \Wp(\hat{\mu}\_{n},\hat{\nu}\_{n}) given by 12, achieves risk \E[\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu)]\lesssim n^{-1/(2p)}.
+
+###### Proof.
+
+By Fact 2, we have that \E[\|\mu-\hat{\mu}\_{n}\|\_{\KS}]\leq n^{-1/2}. Consequently, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu) | \displaystyle\leq\cE\_{p}(\hat{\kappa}\_{n};\mu,\hat{\nu}\_{n})+\Wp(\nu,\hat{\nu}% \_{n}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\|\mu-\hat{\mu}\_{n}\|\_{\mathrm{KS}}^{1/p}+\Wp(\nu,\hat{\nu}\_{% n}). |  |
+
+Taking expectations and applying 2 and 1 gives the desired rate.
+∎
+
+Unfortunately, we are unaware of any multivariate extension of the KS distance that obeys a useful comparison inequality with \Wp (like Fact 11) while maintaining strong empirical convergence guarantees (like Fact 2), inhibiting the further development of this approach.
+
+## Appendix C Additional Details for 4
+
+We note that the minimax lower bounds in 1\crefpairconjunction2 follow by combining the reduction to distribution estimation from B.2 with existing lower bounds for distribution estimation under \Wp from Singh and Póczos [2018] and Weed and Berthet [2019], respectively.
+
+## Appendix D Proofs for 5
+
+We first recall some basic facts used throughout.
+
+###### Fact 3 (TV contraction under Markov kernels).
+
+For \mu,\nu\in\cP(\cX) and kernel \kappa\in\cK(\cX,\cY), we have \|\kappa\_{\sharp}\mu-\kappa\_{\sharp}\nu\|\_{\tv}\leq\|\mu-\nu\|\_{\tv}.
+
+This follows by the data processing inequality.
+
+###### Fact 4 (\Wp contraction under convolution).
+
+For \mu,\nu,\alpha\in\cP(\cX), we have \Wp(\mu\*\alpha,\nu\*\alpha)\leq\Wp(\mu,\nu), where \* denotes convolution between probability measures.
+
+This follows by considering the couplings (X+Z,Y+Z^{\prime}) of \mu\*\alpha and \nu\*\alpha which set Z=Z^{\prime}.
+
+###### Fact 5 (TV discrete empirical convergence).
+
+For a finite set S with |S|=k, any distribution \mu\in\Delta(S) exhibits empirical convergence in TV at rate
+\E[\|\hat{\mu}\_{n}-\mu\|\_{\tv}]\lesssim\sqrt{k/n}.
+
+To simplify discussion of our corruption model, we employ the *\eps-outlier-robust p-Wasserstein distance*
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \RWp(\mu,\nu)\defeq\min\_{\begin{subarray}{c}\mu^{\prime}\in\cP(\R^{d})\\ \|\mu^{\prime}-\mu\|\_{\tv}\leq\eps\end{subarray}}\Wp(\mu^{\prime},\nu)=\min\_{% \begin{subarray}{c}\nu^{\prime}\in\cP(\R^{d})\\ \|\nu^{\prime}-\nu\|\_{\tv}\leq\eps\end{subarray}}\Wp(\mu,\nu^{\prime}). |  | (9) |
+
+The second equality follows from the observation that, if \E[\|X^{\prime}-Y\|^{p}]\leq c and X=X^{\prime} with probability at least 1-\eps, then the random variable Y^{\prime}=Y\mathds{1}\{X=X^{\prime}\}+X\mathds{1}\{X\neq X^{\prime}\} satisfies \E[\|X-Y^{\prime}\|^{p}]\leq c. See Nietert et al. [2023a] for a thorough examination of \RWp in the context of robust statistics. Under the setting of 5, our corruption model can be equivalently stated as follows: given the standard empirical measures \hat{\mu}\_{n}\in\cP(\cX) and \hat{\nu}\_{n}\in\cP(\cY), we observe corrupted versions \tilde{\mu}\_{n}\in\cP(\cX) and \tilde{\mu}\_{n}\in\cP(\cY) such that \RWp(\tilde{\mu}\_{n},\hat{\mu}\_{n})\lor\RWp(\tilde{\nu}\_{n},\hat{\nu}\_{n})\leq\rho.
+
+For this setting, we handle sampling error using the following lemma, which mirrors 9.
+
+###### Lemma 13 (Prop. 2 of Goldfeld et al., 2020).
+
+Fix \sigma>0 and 1-sub-Gaussian \mu\in\cP(\R^{d}). Then, the n-sample empirical measure \hat{\mu}\_{n} satisfies \E\bigl{[}\|N^{\sigma}\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_{\tv}\bigr{]}\leq\sqrt{3^%
+{d}(1\lor\sigma^{-d})/n}.
+
+In order to apply our \Wp stability result, 4, we use that any kernel become continuous if one first applies Gaussian convolution.
+
+###### Lemma 14.

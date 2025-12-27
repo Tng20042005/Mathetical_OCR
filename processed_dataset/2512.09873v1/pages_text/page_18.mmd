@@ -1,0 +1,46 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathcal{U}\_{\ell}\cap\mathcal{U}\_{\ell^{\prime}}=\emptyset\mbox{% for }\ell\neq\ell^{\prime},\quad\mbox{meas}\_{\mathbb{R}}(\mathcal{U}\_{\ell})>% 0\mbox{ for }\ell\in I,\quad{\mathbb{T}}=\cup\_{\ell\in I}\mathcal{U}\_{\ell} |  | (3.12) |
+
+and \partial\_{\xi}u|\_{\{t=0\}} is a constant on each \mathcal{U}\_{\ell}.
+One can show that, under the restrictions (3.12), the index set I is at most countable, thus, after relabeling if necessary, \{\mathcal{U}\_{\ell},\ell\geq 1\} is a weak decomposition of {\mathbb{T}}. Moreover, there exists a sequence of different numbers \{s\_{\ell}\} such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\xi}u|\_{\{t=0\}}=s\_{\ell}\mbox{ on }\mathcal{U}\_{\ell}. |  |
+
+Note that \partial\_{\xi}u|\_{\{t=0\}}\in L^{2}({\mathbb{T}}), and \mathcal{U}\_{\ell} are disjoint for different \ell, we find
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|\partial\_{\xi}u|\_{\{t=0\}}\|\_{L^{2}({\mathbb{T}})}^{2}=\sum\_{\ell}|s\_{\ell}|% ^{2}\mbox{meas}\_{\mathbb{R}}(\mathcal{U}\_{\ell})<\infty. |  |
+
+Thus we obtain
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\xi}u|\_{\{t=0\}}=\sum\_{\ell\geq 1}s\_{\ell}\chi\_{\mathcal{U}\_{\ell}}% \quad\mbox{ in }L^{2}({\mathbb{T}}). |  |
+
+Similarly, we can find a weak decomposition \mathcal{V}\_{\ell}(\ell\geq 1) such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\eta}u|\_{\{t=0\}}=\sum\_{\ell\geq 1}s\_{\ell}\chi\_{\mathcal{V}\_{\ell}}% \quad\mbox{ in }L^{2}({\mathbb{T}}). |  |
+
+In summary, we find that (\partial\_{\xi}u|\_{\{t=0\}},\partial\_{\eta}u|\_{\{t=0\}})\in\mathcal{S}^{2}.
+∎
+
+With Proposition 3.6 in hand, the following result follows the same way as the proof of Corollary 3.5.
+
+###### Corollary 3.7 (OSC and weak GCC imply UCP).
+
+Assume that G satisfies the (weak GCC) and does not obey the ({\rm OSC}) for any non-trivial pair (A,B).
+If u solves the wave equation (1.1) and u\_{t}=0 on G, then u\equiv 0.
+
+## 4. Sharp observability and controllability condition
+
+This section is devoted to proving our Theorem 1.5. Inspired by the standard compactness-uniqueness approach, we prove a weak observability up to a compact term in Section 4.1. Then, based on the unique continuation property that we established in the preceding section, we complete the proof of Theorem 1.5. For the necessity of ({\rm GCC}), it is a direct consequence of the transport equations; we include this part in the Appendix A.3.
+
+### 4.1. Observability of wave equation up to a compact term
+
+In this section, we show that (GCC) is sufficient for the observability for the wave equation at high frequencies. The proof uses the observability inequality for transport equations.

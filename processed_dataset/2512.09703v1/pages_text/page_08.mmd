@@ -1,0 +1,70 @@
+###### Proposition 4.11.
+
+A height function \mu induces a strong matroidal subdivision of 2\_{21} if and only if \mu\in\operatorname{Dr}(E\_{6},P\_{1}).
+
+* Proof.
+
+  One direction follows from affine invariance. For the other, let f\_{\Diamond} correspond to a D\_{5} cross polytope \Diamond in the 5-skeleton of 2\_{21}, and consider the restriction of the subdivision induced by \mu to \Diamond. If the minimum on f\_{\Diamond} were unique, Proposition 4.6 tells us that there is a maximal cell of the restriction with peerless antipodes (A,B). Since all possible peers for (A,B) in 2\_{21} correspond to entries of f\_{\Diamond}, (A,B) form peerless antipodes of some maximal cell in the global subdivision. The result follows from the contrapositive.
+  ∎
+
+### 4.6. Type E\_{7}
+
+In type E\_{7} we only have a single minuscule parabolic P\_{1}, and the polytope is commonly known as 3\_{21}=\Delta(E\_{7}/P\_{1}) [8]. The polytope is 7 dimensional, with 56 vertices with maximum edge distance 3 between pairs. Each vertex has 27 neighbors. Each distance 2 pair induces a \Diamond\_{6} facet, and distance 3 pairs are of the form (v,-v). Since each element A has a unique distance 3 counterpart B, we just write B=-A. The strong exchange equations come in two forms. we have an equation for each \Diamond\_{6} facet, one supported on all pairs of antipodes of 3\_{21}
+
+|  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| (7) |  | \displaystyle f^{E\_{7}}\_{A,B} | \displaystyle=x\_{A}\odot x\_{B}\;\bigoplus\_{i=1}^{5}x\_{C\_{i}}\odot x\_{C^{\prime% }\_{i}} |  | \displaystyle\text{when }d(A,B)=2, |  |
+|  | \displaystyle f^{E\_{7}} | \displaystyle=\bigoplus\_{A\in W/P}x\_{A}\odot x\_{-A}. |  | | |
+
+###### Proposition 4.12.
+
+The type E\_{7} strong exchange equations 7 are affinely invariant.
+
+* Proof.
+
+  Since the equations f^{E\_{7}}\_{A,B} are the exact equations 4 on cross polytopes, the corresponding statement follows from Proposition 4.4. Consider f^{E\_{7}}, and \mu\in\mathbb{T}^{V(3\_{21})}. For \varphi:\mathbb{R}^{8}\to\mathbb{R} affine linear, we have that x\_{A}\odot x\_{-A} evaluated at \mu+\varphi|\_{V(3\_{21})} yields \mu\_{A}+\mu\_{-A}+2\varphi(0). Therefore, \mu attains the minimum at least twice if and only if \mu+\varphi does.
+  ∎
+
+Over the Krasner hyperfield, the strong exchange equations (7) are equivalent to the symmetric exchange axiom of Borovik, Gelfand, and White [4], which they conjectured to be equivalent to the Coxeter matroid axioms (e.g. the maximality property) in all minuscule types [3, Section 6.16]. By means of an exhaustive search, we prove that this conjecture holds in E\_{7}.
+
+###### Theorem 4.13.
+
+All Coxeter matroids of type (E\_{7},P\_{7}) satisfy the strong exchange condition.
+
+In combination with known results in the other types we conclude that in all types except B\_{n}, all minuscule Coxeter matroids satisfy the strong exchange axiom. Moreover, Theorem 4.13 implies that the relations on the proper faces of 3\_{21} are already sufficient to guarantee a subdivision consists of strong Coxeter matroid polytopes.
+
+###### Theorem 4.14.
+
+A height function \mu induces a strong matroidal subdivision of 3\_{21} if and only if it is contained in \bigcap\_{(A,B)}V^{\text{Trop}}(f^{E\_{7}}\_{A,B}), where (A,B) runs over all pairs of elements of W(E\_{7})/P\_{7} with d(A,B)=2.
+
+However, it is still open whether all \mu satisfying the equivalent conditions of Theorem 4.14 are in the Dressian.
+
+###### Conjecture 1.
+
+The support of \operatorname{Dr}(E\_{7},P\_{7}) is equal to the support of \bigcap V^{\text{Trop}}(f^{E\_{7}}\_{A,B}).
+
+## References
+
+* [1]
+  M. Baker and N. Bowler (2016)
+  Matroids over hyperfields.
+  Note: arXiv:1601.01204 [math]
+  Cited by: §2.3.
+* [2]
+  M. Baker and N. Bowler (2019)
+  Matroids over partial hyperstructures.
+  Advances in Mathematics 343,  pp. 821–863.
+  Cited by: §2.3.
+* [3]
+  A. V. Borovik, I. M. Gelfand, and N. White (2003)
+  Coxeter matroids.
+  Progress in Mathematics, Vol. 216, Boston, MA: Birkhäuser.
+  External Links: MathReview (Joseph Kung)
+  Cited by: §1,
+  §2.1,
+  §2,
+  §4.6.
+* [4]
+  A. V. Borovik, I. Gelfand, and N. White (1998)
+  On exchange properties for Coxeter matroids and oriented matroids.
+  Discrete Math. 179 (1-3),  pp. 59–72 (English).

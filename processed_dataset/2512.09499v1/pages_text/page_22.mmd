@@ -1,0 +1,42 @@
+Fix \bar{\kappa}\in\cK(\cX,\cY), \sigma>0, and let \kappa=\bar{\kappa}\circ N^{\sigma}. Then, for all x,x^{\prime}\in\cX, we have \Wp((\kappa\_{x},\kappa\_{x^{\prime}})\leq\diam(\cY)[\|x-x^{\prime}\|/(2\sigma)]%
+^{1/p}.
+
+###### Proof.
+
+We simply compute
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\Wp(\kappa\_{x},\kappa\_{x^{\prime}}) | \displaystyle\leq\diam(\cY)\|\kappa\_{\sharp}(N^{\sigma}\_{x}-N^{\sigma}\_{x^{% \prime}})\|\_{\tv}^{1/p} |  | (1) |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq\diam(\cY)\|N^{\sigma}\_{x}-N^{\sigma}\_{x^{\prime}}\|\_{\tv}^{1% /p} |  | (data processing ineq.) |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\diam(\cY)\|\cN(x,\sigma^{2}I\_{d})-\cN(x^{\prime},\sigma^{2}I% \_{d})\|\_{\tv}^{1/p} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\diam(\cY)\|x-x^{\prime}\|^{1/p}(2\sigma)^{-1/p}, |  |
+
+where the final inequality follows by the closed form of KL divergence between Gaussians, combined with Pinsker’s inequality.
+∎
+
+We split the proof of 4 into the upper bound (D.1) and lower bound (D.2).
+
+### D.1 Proof of 4 (Upper Bound)
+
+To start, we decompose N^{\sigma}=N^{\sigma\_{1}+\sigma\_{2}}=N^{\sigma\_{1}}\circ N^{\sigma\_{2}}, for \sigma\_{1},\sigma\_{2} to be tuned later. By our corruption model, there exists an intermediate measure \mu^{\prime}\_{n}\in\cP(\R^{d}) such that \|\hat{\mu}\_{n}-\mu^{\prime}\_{n}\|\_{\tv}\leq\eps and \Wp(\mu^{\prime}\_{n},\tilde{\mu}\_{n})\leq\rho. By Facts 3 and 4, these bounds are preserved under convolution, so \|N^{\sigma\_{1}}\_{\sharp}(\hat{\mu}\_{n}-\mu^{\prime}\_{n})\|\_{\tv}\leq\eps and \Wp(N^{\sigma\_{1}}\_{\sharp}\mu^{\prime}\_{n},N^{\sigma\_{1}}\_{\sharp}\tilde{\mu}%
+\_{n})\leq\rho. By the TV triangle inequality, we have \|N^{\sigma\_{1}}\_{\sharp}(\mu-\mu^{\prime}\_{n})\|\_{\tv}\leq\tau\defeq\eps+\|N^%
+{\sigma\_{1}}\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_{\tv}. We conclude that \Wp^{\tau}(N^{\sigma\_{1}}\_{\sharp}\tilde{\mu}\_{n},N^{\sigma\_{1}}\_{\sharp}\mu)\leq\rho. By the symmetric nature of \Wp^{\tau}, there must also exist \alpha\in\cP(\R^{d}) such that \Wp(N^{\sigma\_{1}}\_{\sharp}\mu,\alpha)\leq\rho and \|\alpha-N^{\sigma\_{1}}\_{\sharp}\tilde{\mu}\_{n}\|\_{\tv}\leq\tau.
+
+Now set \bar{\kappa}=\kappa^{\star}\_{p}[N^{\sigma}\_{\sharp}\tilde{\mu}\_{n}\to\tilde{%
+\nu}\_{n}], so that \cE\_{p}(\bar{\kappa};N^{\sigma}\_{\sharp}\tilde{\mu}\_{n},\tilde{\nu}\_{n})=0. Using this, the TV bound above, and the fact that N^{\sigma}\_{\sharp}\tilde{\mu}\_{n}=N^{\sigma\_{2}}\_{\sharp}(N^{\sigma\_{1}}\_{%
+\sharp}\tilde{\mu}\_{n}), we have \cE\_{p}(\bar{\kappa};N^{\sigma\_{2}}\_{\sharp}\alpha,\tilde{\nu}\_{n})\lesssim%
+\diam(\cY)\tau^{1/p}\leq\sqrt{d}\tau^{1/p}.
+Applying 6, this gives
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\bar{\kappa}\circ N^{\sigma\_{2}};\alpha,\tilde{\nu}\_{n}) | \displaystyle\lesssim\sqrt{d}\tau^{\frac{1}{p}}+\E\_{Z\sim\cN(0,\sigma\_{2}^{2}I% \_{d})}[\|Z\|^{p}]^{\frac{1}{p}}\lesssim\sqrt{d}\tau^{\frac{1}{p}}+\sqrt{d+p}\,% \sigma\_{2}. |  |
+
+Consequently, by 4 and 14, we have that

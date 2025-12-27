@@ -1,0 +1,36 @@
+###### Remark 23.
+
+It is natural to wonder whether the short exact sequence (1) splits, perhaps after passing to further finite-index subgroups. Indeed, a conclusion such as this would strengthen even further the connection between the algebraic structure of \Gamma and that of \Lambda\times L. However, it was shown in [FLS15] that the sequence does not in general virtually split when \Lambda is the fundamental group of a complete finite-volume real hyperbolic m-manifold, m\geq 3, and N=\mathbb{Z}^{d}.
+
+In the setting of Theorem 3 where L^{\prime}=\mathbb{Z}^{d}, \Gamma^{\prime} may be chosen so that the group extension (1) is a central extension. In our more general setting where L^{\prime} is not necessarily abelian, it does not make sense to ask whether (1) is a central extension. Despite this, we are still able to derive some extra structure for the group extension (1), analogous to centrality, when we focus our attention to the case when X is either quaternionic hyperbolic space or the Cayley hyperbolic plane. Our argument works for these specific symmetric spaces because we rely on a superrigidity theorem that applies when \text{Isom}(X) has Kazhdan’s property (T). Indeed, for those symmetric spaces, \textup{Isom}({X}) is either \text{Sp}(n,1) or \text{F}\_{4(-20)}, both of which are known to have property (T) by Kostant [KOS69] (see also [BdV08]). On the other hand, if X is real or complex hyperbolic space, then \textup{Isom}({X}) is \text{SO}(n,1) or \text{SU}(n,1) and does not have property (T).
+
+To state the superrigidity theorem, we first give a definition. Let V be a finite-dimensional vector space over \mathbb{R} or \mathbb{C}. Given a lattice \Lambda in a locally compact group G and a representation \pi:\Lambda\to\text{GL}(V), we say that \pi almost extends to a continuous representation of G if there exist representations \pi\_{1}:G\to\text{GL}(V) and \pi\_{2}:\Lambda\to\text{GL}(V) such that: \pi\_{2} has bounded image, the images of \pi\_{1} and \pi\_{2} commute, and \pi(\gamma)=\pi\_{1}(\gamma)\pi\_{2}(\gamma) for all \gamma\in G.
+
+###### Theorem 24.
+
+[FH12, Theorem 3.7]
+Let G be a semisimple Lie group with no compact factors and Kazhdan’s property (T). Let \Lambda be a lattice in G and \pi:\Lambda\to\textup{GL}(V) a finite-dimensional representation. Then \pi almost extends to a continuous representation of G.
+
+We now give a precise definition of the extra structure we alluded to above. Let G be a group with a nilpotent normal subgroup N. The upper central series of N is
+
+|  |  |  |
+| --- | --- | --- |
+|  | 1=Z\_{0}\lhd Z\_{1}\lhd\dots\lhd Z\_{n}=N |  |
+
+where Z\_{1}=Z(N) and Z\_{i+1}/Z\_{i}=Z(N/Z\_{i}). Recall that the Z\_{i} are characteristic subgroups of N, so in particular they are normal in G. We say that N is a nilcentral subgroup of G if Z(N/Z\_{i})\subseteq Z(G/Z\_{i}) for each i=0,\dots,n. Observe that N is nilcentral in G if and only if Z(N)\subseteq Z(G) and N/Z(N) is nilcentral in G/Z(N). An abelian subgroup is nilcentral if and only if it is central, and a nilpotent group N is nilcentral in N\times G for every group G. We now give an example of a group with a normal subgroup which is nilpotent but not nilcentral.
+
+###### Example 25.
+
+Let N be the discrete Heisenberg group with group presentation
+
+|  |  |  |
+| --- | --- | --- |
+|  | N=\left\langle{a,b,c\ |\ [a,c],[b,c],[a,b]c^{-1}}\right\rangle. |  |
+
+Let H=\mathbb{Z}\_{2}=\left\{{\pm 1}\right\} act on N via the action \varphi:H\to\text{Aut}(N) defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \varphi\_{-1}(a)=a,\quad\varphi\_{-1}(b)=b,\quad\varphi\_{-1}(c)=c^{-1}. |  |
+
+Let G=N\rtimes\_{\varphi}H. Then N is a nilpotent normal subgroup of G but it is not nilcentral because Z(N)\not\subseteq Z(G). Indeed,

@@ -1,0 +1,38 @@
+))\leq d\_{B}(b,\psi(\gamma)(x))\leq K. Let \alpha=\theta(\gamma). Then d\_{X}(b,\alpha(x))\leq K+\beta by (2). By Lemma 13, there is a horosphere O^{\prime}\in\Omega such that the Hausdorff distance between \alpha(O) and O^{\prime} is at most \beta^{\prime}. In particular, there exists x^{\prime}\in O^{\prime} such that d\_{X}(\alpha(x),x^{\prime})\leq\beta^{\prime}. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle d\_{X}(b,x^{\prime})\leq d\_{X}(b,\alpha(x))+d\_{X}(\alpha(x),x^{% \prime})\leq K+\beta+\beta^{\prime}. |  |
+
+So O^{\prime}\in A and its basepoint p^{\prime} is in P\_{0}. By definition of the action of \Lambda\_{\Gamma} on P, we have \alpha\cdot p=p^{\prime}. Hence p=\alpha^{-1}\cdot p^{\prime}, so p is in the orbit of a point in P\_{0}. This proves the first part of the statement.
+
+Now let p\in P be the basepoint of O\in\Omega and suppose \alpha\in\Lambda\_{\Gamma} fixes p. Since \alpha\cdot p=p, the horosphere \alpha(O) is also based at p. If \alpha(O)\neq O then \delta=\text{dist}\_{\text{H}}\left({{O},{\alpha(O)}}\right)>0. Moreover, \alpha must be a hyperbolic isometry whose axis has p as an endpoint. So \text{dist}\_{\text{H}}\left({{O},{\alpha^{n}(O)}}\right)=n\delta. Then for large n, the Hausdorff distance between O and \alpha^{n}(O) would exceed \beta^{\prime}, contradicting Lemma 13. Thus \alpha(O)=O.
+∎
+
+Let P\_{0}=\left\{{p\_{1},\dots,p\_{k}}\right\}\subset P be a finite set of representatives for the action of \Lambda\_{\Gamma} on P, given by Lemma 14. By removing elements from P\_{0} as necessary, we may assume that no two elements in P\_{0} represent the same orbit. So the orbits of the points in P\_{0} form a partition of P. For each i=1,\dots,k, let O\_{i}\in\Omega be the horosphere based at p\_{i}, and let \widehat{O}\_{i} be the horosphere contained in the horoball bounded by O\_{i} such that \text{dist}\_{\text{H}}\left({{\widehat{O}\_{i}},{O\_{i}}}\right)=\beta^{\prime}. Let \widehat{\Omega} be the set of horospheres obtained by translating \widehat{O}\_{1},\dots,\widehat{O}\_{k} by the elements of \Lambda\_{\Gamma}. The second part of Lemma 14 guarantees that no two distinct horospheres of \widehat{\Omega} share the same basepoint. Let \widehat{B} denote the complement in X of the union U of the open horoballs bounded by the horospheres in \widehat{\Omega}, and endow \widehat{B} with the path-metric induced by d\_{X}. Note that U is \Lambda\_{\Gamma}-invariant by construction, and so \widehat{B} is \Lambda\_{\Gamma}-invariant. It follows that \Lambda\_{\Gamma} acts isometrically on \widehat{B}. We observe in the next lemma that \widehat{B} is a thickening of B.
+
+###### Lemma 15.
+
+The following containments hold:
+
+|  |  |  |
+| --- | --- | --- |
+|  | B\subseteq\widehat{B}\subseteq N\_{2\beta^{\prime}}(B), |  |
+
+where N\_{r}(B)=\left\{{x\in X:d\_{X}(x,B)\leq r}\right\} for r>0. In particular, B and \widehat{B} are quasi-isometric.
+
+###### Proof.
+
+Let \widehat{O}\in\widehat{\Omega}. Then \widehat{O} is based at some p\in P, and we let O be the horosphere in \Omega that is based at p. By definition, \widehat{O}=\alpha(\widehat{O}\_{i}) for some i\in\left\{{1,\dots,k}\right\} and \alpha\in\Lambda\_{\Gamma}. Recall that \widehat{O}\_{i} is the horosphere contained in the horoball bounded by O\_{i} such that \text{dist}\_{\text{H}}\left({{\widehat{O}\_{i}},{O\_{i}}}\right)=\beta^{\prime}. Since \alpha is an isometry, \alpha(\widehat{O}\_{i}) must be the horosphere contained in the horoball bounded by \alpha(O\_{i}) such that \text{dist}\_{\text{H}}\left({{\alpha(\widehat{O}\_{i})},{\alpha(O\_{i})}}\right)%
+=\beta^{\prime}. By Lemma 13, \text{dist}\_{\text{H}}\left({{\alpha(O\_{i})},{O}}\right)\leq\beta^{\prime}. Altogether, \widehat{O} must be contained in the horoball bounded by O, and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\text{dist}\_{\text{H}}\left({{O},{\widehat{O}}}\right)\leq\text{% dist}\_{\text{H}}\left({{O},{\alpha(O\_{i})}}\right)+\text{dist}\_{\text{H}}\left% ({{\alpha(O\_{i})},{\alpha(\widehat{O}\_{i})}}\right)\leq 2\beta^{\prime}. |  |
+
+The first part of the lemma follows, and so the inclusion B\hookrightarrow\widehat{B} is a quasi-isometry.
+∎
+
+Since B/\Lambda has finitely many boundary components which lift to the peripheral horospheres, there is an R>0 such that the d\_{X}-distance between distinct horospheres of B is at least R. Then B\subseteq\widehat{B} implies that the d\_{X}-distance between distinct elements of \widehat{\Omega} is also at least R. We are now equipped to show that \Lambda\_{\Gamma} is a non-uniform lattice.
+
+###### Proposition 16.

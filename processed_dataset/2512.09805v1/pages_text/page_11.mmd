@@ -1,0 +1,74 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathcal{P} | \displaystyle=\sum\_{\nu}\omega\_{\nu\_{1,1}\cdots\nu\_{1,k}\,\cdots\,\nu\_{n,1}% \cdots\nu\_{n,k}}\;\bigg{(}\frac{dz\_{1}}{z\_{1}}\bigg{)}^{\nu\_{1,1}}\cdots\bigg{% (}\frac{d^{k}z\_{1}}{z\_{1}}\bigg{)}^{\nu\_{1,k}}\cdots\bigg{(}\frac{dz\_{r}}{z\_{r% }}\bigg{)}^{\nu\_{r,1}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\quad\cdots\bigg{(}\frac{d^{k}z\_{r}}{z\_{r}}\bigg{)}^{\nu\_{r,k}}(% dz\_{r+1})^{\nu\_{r+1,1}}\cdots(d^{k}z\_{r+1})^{\nu\_{r+1,k}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\quad\cdots(dz\_{n})^{\nu\_{n,1}}\cdots(d^{k}z\_{n})^{\nu\_{n,k}}, |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \nu=(\nu\_{1,1},\dots,\nu\_{1,k},\dots,\nu\_{n,1},\dots,\nu\_{n,k}) |  |
+
+is a kn-tuple of non-negative integers with
+
+|  |  |  |
+| --- | --- | --- |
+|  | (\nu\_{1,1}+2\nu\_{1,2}+\cdots+k\nu\_{1,k})+\cdots+(\nu\_{n,1}+2\nu\_{n,2}+\cdots+k% \nu\_{n,k})=m, |  |
+
+and
+\omega\_{\nu\_{1,1}\cdots\nu\_{1,k}\,\cdots\,\nu\_{n,1}\cdots\nu\_{n,k}}
+is a locally defined holomorphic function.
+
+###### Proposition 3.1.
+
+Let X be a complex projective manifold of dimension n, and let D be a reduced effective divisor on X.
+Let L be a line bundle on X with a Hermitian metric h.
+Let \mathcal{P}\in H^{0}(X,E^{GG}\_{k,m}(T\_{X}^{\*}(\log D))\otimes L) be a twisted logarithmic k–jet differential. Let f:\mathbb{C}^{p}\to X be a holomorphic map such that f(\mathbb{C}^{p})\not\subset D.
+Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{S^{2p-1}(1)}\int^{2\pi}\_{0}\log^{+}\|\mathcal{P}(j\_{k}(f\_{\vec{a}}))(re^% {i\theta})\|\_{h}\frac{d\theta}{2\pi}\sigma(\vec{a})\leq S\_{f}(r,E) |  |
+
+where E is an (arbitrarily) ample divisor on X.
+
+###### Proof.
+
+Our proof is partly based on Lemma 4.7.1 in [13]. By virtue of the Hironaka desingularization, we may assume that D is of normal crossing type. We take an affine covering \{U\_{\alpha}\} of M and rational holomorphic functions
+(x\_{\alpha 1},\dots,x\_{\alpha n}) on U\_{\alpha} such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | dx\_{\alpha 1}\wedge\cdots\wedge dx\_{\alpha n}(x)\neq 0,\qquad\forall x\in U\_{% \alpha}, |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | D\cap U\_{\alpha}=\{x\_{\alpha 1}\cdots x\_{\alpha s\_{\alpha}}=0\}. |  |
+
+On every U\_{\alpha} one gets
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{P}|\_{U\_{\alpha}}=P\_{\alpha}\!\left(\frac{d^{i}x\_{\alpha j}}{x\_{\alpha j% }},\,d^{h}x\_{\alpha l}\right),\qquad 1\leq i,h\leq k,\ 1\leq j\leq s\_{\alpha},% \ s\_{\alpha}+1\leq l\leq n, |  |
+
+where P\_{\alpha} is a polynomial in the variables described above whose coefficients
+are rational holomorphic functions on U\_{\alpha}.
+
+Let f(z\_{1},\dots,z\_{p})=(f\_{\alpha 1}(z\_{1},\dots,z\_{p}),\dots,f\_{\alpha n}(z\_{1}%
+,\dots,z\_{p})).
+Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{P}(j\_{k}(f\_{\vec{a}}))(z)=P\_{\alpha}\!\left(\frac{\frac{\partial^{i}f% \_{\alpha j,\vec{a}}}{\partial z^{i}}}{f\_{\alpha j,\vec{a}}},\,\frac{\partial^{% h}f\_{\alpha l,\vec{a}}}{\partial z^{h}}\right). |  |
+
+We have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\frac{\partial f\_{\alpha t,\vec{a}}}{\partial z}(z)=\sum\_{i=1}^{p% }a\_{i}\frac{\partial f\_{\alpha t}}{\partial z\_{i}}(\vec{a}z),\qquad\frac{% \partial^{2}f

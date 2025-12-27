@@ -1,0 +1,51 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.1) |  | \displaystyle d(x,g(y))=d(gf(x),g(y))\geq L^{-1}d(f(x),y)-A>L^{-1}r^{\prime}-A% =r+L+A. |  |
+
+That is, g maps the complement of B^{\prime} into the complement of B(x,r+L+A). Let C\in U(X^{\prime},B^{\prime}), and pick any y\in C. Since y\notin B^{\prime}, we know that g(y)\notin B. So g(y) must be contained in some connected component D of X\setminus B. We now show that g(C)\subset D. Let z\in C be adjacent to y. Then g(z)\notin B by the inequality 2.1, and
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(g(y),g(z))\leq Ld(y,z)+A=L+A. |  |
+
+Let \gamma be a shortest path in X between g(y) and g(z). If g(z)\notin D, then g(z) is contained in a different component of X\setminus B. Hence \gamma must intersect B at some point, call it w, and we get
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(x,g(y))\leq d(x,w)+d(w,g(y))\leq r+d(g(z),g(y))\leq r+L+A, |  |
+
+contrary to the inequality 2.1. So g(z)\in D, and since C is connected, it follows that g(C)\subset D. Since C is unbounded and g is a quasi-isometry, D must be unbounded. Therefore D\in U(X,B) and we put \Phi(C)=D. Thus we have a well-defined map \Phi:U(X^{\prime},B^{\prime})\to U(X,B) which we will show is surjective.
+
+Let D\in U(X,B) be arbitrary. Like before, we may take a ball B\_{1}=B(x,R) of sufficiently large radius R such that whenever y\notin B\_{1}, we have d(x^{\prime},f(y))>r^{\prime}+L+A. Then by similar reasoning used before, f maps each element of U(X,B\_{1}) into an element of U(X^{\prime},B^{\prime}). Since D is an unbounded component of X\setminus B, and B\_{1} is just a bounded neighborhood of B, there must be a D^{\prime}\in U(X,B\_{1}) with D^{\prime}\subset D. Then like before, f(D^{\prime})\subset C for some C\in U(X^{\prime},B^{\prime}). Since f and g are quasi-inverse, and D^{\prime} is unbounded, there is a point in C that g maps into D^{\prime}\subset D. Hence g(C)\subset D, and therefore \Phi(C)=D. Thus \Phi is surjective, and \left|{U(X^{\prime},B^{\prime})}\right|\geq\left|{U(X,B)}\right|.
+∎
+
+###### Proposition 2.3.
+
+If X and X^{\prime} are connected graphs that are quasi-isometric, then e(X)=e(X^{\prime}).
+
+###### Proof.
+
+By Lemma 2.2, for any ball B in X there is a ball B^{\prime} in X^{\prime} such that \left|{U(X^{\prime},B^{\prime})}\right|\geq\left|{U(X,B)}\right|. It follows that e(X^{\prime})\geq e(X). Replacing the roles of X and X^{\prime} yields the reverse inequality.
+∎
+
+Lastly, we establish a practical lemma.
+
+###### Lemma 2.4.
+
+Let X be a connected, unbounded, transitive graph, and fix a vertex o. Let f:\mathbb{N}\to\mathbb{N} be any function with f(n)>n. Then e(X)=1 if the following holds for each integer R>0: Any x\_{1},x\_{2}\in X with d(x\_{1},o)=d(x\_{2},o)=f(R) can be connected by a path which is disjoint from B(o,R).
+
+###### Proof.
+
+We prove the contrapositive statement. If e(X)>1, then there exists an integer R>0 such that B=B(o,R) satisfies \left|{U(X,B)}\right|\geq 2. Let C\_{1} and C\_{2} be different unbounded components of X\setminus B. Since these are unbounded, one may choose for i=1,2, a vertex x\_{i}\in C\_{i} with d(x\_{i},o)=f(R). Since B separates C\_{1} and C\_{2}, all paths between x\_{1} and x\_{2} must intersect B.
+∎
+
+### 2.3. Surfaces and the mapping class group
+
+A *surface* is a connected, orientable, 2-dimensional topological manifold without boundary. A surface \Sigma is of *finite type* if its fundamental group is finitely generated; otherwise \Sigma is of infinite type. A *subsurface* S of a surface \Sigma is a closed, connected subset of \Sigma which is itself a surface with boundary. Assume the boundary of a subsurface consists of a finite number of pairwise disjoint simple closed curves, and that none of these boundary curves bounds a disk or a punctured disk in \Sigma.
+
+Denote by \operatorname{Homeo}^{+}(\Sigma) the group of orientation-preserving homeomorphisms of \Sigma with the compact-open topology, and denote by \operatorname{Homeo}\_{0}(\Sigma) the connected component of the identity in \operatorname{Homeo}^{+}(\Sigma). The *mapping class group* of \Sigma is defined as the group \operatorname{Map}(\Sigma)=\operatorname{Homeo}^{+}(\Sigma)/\operatorname{%
+Homeo}\_{0}(\Sigma) of all isotopy classes of orientation-preserving homeomorphisms of \Sigma, and \operatorname{Map}(\Sigma) is endowed with the quotient topology. When \Sigma is of infinite type, \operatorname{Map}(\Sigma) is a Polish group which is not locally compact.
+
+### 2.4. The space of ends of a surface
+
+The space of ends {\mathrm{End}}(\Sigma) of a surface \Sigma is the inverse limit of the system of components of complements of compact subsets of \Sigma. Intuitively, each end corresponds to a way of leaving every compact subset of \Sigma (see [RIC63] for details). Denote by {\mathrm{End}}^{g}(\Sigma)\subseteq{\mathrm{End}}(\Sigma) the subspace of ends which are accumulated by genus, and denote by \operatorname{genus}(\Sigma) the (possibly infinite) genus of \Sigma. By a theorem of Richards [RIC63], connected, orientable surfaces \Sigma are classified up to homeomorphism by the triple (\operatorname{genus}(\Sigma),{\mathrm{End}}(\Sigma),{\mathrm{End}}^{g}(\Sigma)). For a subsurface S\subseteq\Sigma, the space of ends of S is defined similarly and is denoted by {\mathrm{End}}(S). The embedding of S in \Sigma gives a natural embedding of {\mathrm{End}}(S) into {\mathrm{End}}(\Sigma).

@@ -1,0 +1,1339 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs</title>
+<!--Generated on Thu Dec 11 22:18:37 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_font_bold ltx_title_document">Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Monther R. Alfuraidan
+</span><span class="ltx_author_notes"><span></span></span></span>
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Suliman Khan
+</span><span class="ltx_author_notes"><span></span></span></span>
+</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+<p class="ltx_p">The study of eigenvalue multiplicities plays a central role in the spectral theory of signed graphs, extending several classical results from the unsigned setting. While most existing work focuses on the nullity of a signed graph (the multiplicity of the eigenvalue <span id="m1" class="ltx_Math">0</span>), much less is known for arbitrary eigenvalues. In this paper we establish a sharp upper bound for the multiplicity <span id="m2" class="ltx_Math">m(G_{\sigma},\lambda)</span> of any real eigenvalue <span id="m3" class="ltx_Math">\lambda</span> of a connected signed graph <span id="m4" class="ltx_Math">G_{\sigma}</span> in terms of its girth.</p>
+<p class="ltx_p">Our main result shows that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S0.Ex1.m1" class="ltx_Math">m(G_{\sigma},\lambda)\leq n-g(G_{\sigma})+2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="m5" class="ltx_Math">n</span> is the number of vertices and <span id="m6" class="ltx_Math">g(G_{\sigma})</span> is the girth. We prove that equality holds if and only if <span id="m7" class="ltx_Math">G_{\sigma}</span> is switching equivalent to one of the following extremal families:
+(i) a balanced complete graph and <span id="m8" class="ltx_Math">\lambda=-1</span>;
+(ii) an antibalanced complete graph and <span id="m9" class="ltx_Math">\lambda=1</span>; or
+(iii) a balanced complete bipartite graph and <span id="m10" class="ltx_Math">\lambda=0</span>.
+This completely extends and generalizes the known result for the nullity case (<span id="m11" class="ltx_Math">\lambda=0</span>), originally due to Wu et al. (2022), to the full eigenvalue spectrum.</p>
+<p class="ltx_p">Our approach combines Cauchy interlacing, switching equivalence, and a structural analysis of induced cycles in signed graphs. We also provide a detailed characterization of eigenvalues with multiplicity <span id="m12" class="ltx_Math">1</span> and <span id="m13" class="ltx_Math">2</span> for signed cycles. Several examples are included to illustrate the sharpness and the spectral behavior of the extremal families.</p>
+</div>
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>
+<div id="p1" class="ltx_para">
+<p class="ltx_p">positioning
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic" style="font-size:90%;">Keywords:<span class="ltx_text ltx_font_upright"> Eigenvalue multiplicity; signed graph; girth;
+switching equivalence; spectral graph theory.</span></span></p>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Mathematics Subject Classification (2020).</span>
+05C50, 05C22, 05C20, 05C12, 15A18.
+</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Throughout this paper, we assume that all graphs are simple and undirected, containing neither loops nor multiple edges. Let <span id="S1.p2.m1" class="ltx_Math">G=(V,E)</span> be a simple graph of order <span id="S1.p2.m2" class="ltx_Math">|V|=n</span>. We write <span id="S1.p2.m3" class="ltx_Math">v_{i}\sim v_{j}</span> to indicate that the vertices <span id="S1.p2.m4" class="ltx_Math">v_{i}</span> and <span id="S1.p2.m5" class="ltx_Math">v_{j}</span> in <span id="S1.p2.m6" class="ltx_Math">G</span> are adjacent. The neighborhood of a vertex <span id="S1.p2.m7" class="ltx_Math">v_{i}</span> in <span id="S1.p2.m8" class="ltx_Math">G</span> is defined as <span id="S1.p2.m9" class="ltx_Math">N_{G}(v_{i})=\{\,v_{j}\in V(G):v_{j}\sim v_{i}\}</span>. A graph <span id="S1.p2.m10" class="ltx_Math">H</span> is called a <em class="ltx_emph ltx_font_italic">subgraph</em> of <span id="S1.p2.m11" class="ltx_Math">G</span> if <span id="S1.p2.m12" class="ltx_Math">V(H)\subseteq V(G)</span> and <span id="S1.p2.m13" class="ltx_Math">E(H)\subseteq E(G)</span>. Furthermore, <span id="S1.p2.m14" class="ltx_Math">H</span> is an <em class="ltx_emph ltx_font_italic">induced subgraph</em> of <span id="S1.p2.m15" class="ltx_Math">G</span> if for each <span id="S1.p2.m16" class="ltx_Math">v\in V(H)</span>, we have <span id="S1.p2.m17" class="ltx_Math">N_{H}(v)=N_{G}(v)\cap V(H)</span>. Equivalently, <span id="S1.p2.m18" class="ltx_Math">v_{i}</span> and <span id="S1.p2.m19" class="ltx_Math">v_{j}</span> are adjacent in <span id="S1.p2.m20" class="ltx_Math">H</span> if and only if they are adjacent in <span id="S1.p2.m21" class="ltx_Math">G</span>. The <em class="ltx_emph ltx_font_italic">adjacency matrix</em> <span id="S1.p2.m22" class="ltx_Math">A(G)=[a_{ij}]</span> of <span id="S1.p2.m23" class="ltx_Math">G</span> is defined by <span id="S1.p2.m24" class="ltx_Math">a_{ij}=1</span> whenever <span id="S1.p2.m25" class="ltx_Math">v_{i}\sim v_{j}</span> and <span id="S1.p2.m26" class="ltx_Math">0</span> otherwise. Since <span id="S1.p2.m27" class="ltx_Math">A(G)</span> is real symmetric, all eigenvalues are real and can be ordered as <span id="S1.p2.m28" class="ltx_Math">\lambda_{1}\geq\lambda_{2}\geq\dots\geq\lambda_{n}</span>. The <em class="ltx_emph ltx_font_italic">spectrum</em> of <span id="S1.p2.m29" class="ltx_Math">G</span>, denoted <span id="S1.p2.m30" class="ltx_Math">\mathrm{Spec}_{A}(G)</span>, is the multiset of eigenvalues of <span id="S1.p2.m31" class="ltx_Math">A(G)</span>. The <em class="ltx_emph ltx_font_italic">rank</em> of <span id="S1.p2.m32" class="ltx_Math">G</span>, denoted <span id="S1.p2.m33" class="ltx_Math">\operatorname{rk}(G)</span>, is the rank of <span id="S1.p2.m34" class="ltx_Math">A(G)</span>. For an eigenvalue <span id="S1.p2.m35" class="ltx_Math">\lambda</span> of <span id="S1.p2.m36" class="ltx_Math">A(G)</span>, its <em class="ltx_emph ltx_font_italic">multiplicity</em> is denoted by <span id="S1.p2.m37" class="ltx_Math">m(G,\lambda)</span>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">signed graph</em> is a natural extension of an ordinary graph in which each edge carries a positive or negative sign. Formally, a signed graph <span id="S1.p3.m1" class="ltx_Math">G^{\sigma}=(G,\sigma)</span> consists of an underlying graph <span id="S1.p3.m2" class="ltx_Math">G=(V,E)</span> together with a sign function <span id="S1.p3.m3" class="ltx_Math">\sigma:E\to\{+1,-1\}</span>, where edges with <span id="S1.p3.m4" class="ltx_Math">\sigma(e)=+1</span> are positive and those with <span id="S1.p3.m5" class="ltx_Math">\sigma(e)=-1</span> are negative. When all edges are positive (resp. negative), we write <span id="S1.p3.m6" class="ltx_Math">(G,+)</span> (resp. <span id="S1.p3.m7" class="ltx_Math">(G,-)</span>). Signed graphs capture systems where interactions may be cooperative or antagonistic, and they naturally incorporate notions such as balance, switching equivalence, and parity of cycles.</p>
+</div>
+<div id="S1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Background and classical results.</span>
+The multiplicities of eigenvalues of Hermitian and real symmetric matrices associated with graphs have been studied extensively. Parter–Wiener theory, developed in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="" class="ltx_ref">23</a>, <a href="#bib.bib35" title="" class="ltx_ref">35</a>]</cite> and later extended in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="" class="ltx_ref">17</a>, <a href="#bib.bib18" title="" class="ltx_ref">18</a>]</cite>, provides important tools for understanding how graph structure influences eigenvalue multiplicity. Star complement techniques have been fruitfully applied to obtain upper bounds on eigenvalue multiplicities <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite>. Multiplicities of adjacency eigenvalues also carry structural meaning. For example, the nullity (multiplicity of <span id="S1.p4.m1" class="ltx_Math">0</span>) plays a central role in chemical graph theory <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>. Among connected graphs of order <span id="S1.p4.m2" class="ltx_Math">n\geq 2</span>, the eigenvalue <span id="S1.p4.m3" class="ltx_Math">0</span> attains its maximum multiplicity <span id="S1.p4.m4" class="ltx_Math">n-2</span> in complete bipartite graphs <span id="S1.p4.m5" class="ltx_Math">K_{n_{1},n_{2}}</span>, while the eigenvalue <span id="S1.p4.m6" class="ltx_Math">-1</span> attains multiplicity <span id="S1.p4.m7" class="ltx_Math">n-1</span> in the complete graph <span id="S1.p4.m8" class="ltx_Math">K_{n}</span>. Motivated by these extremal cases, several works—including <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="" class="ltx_ref">24</a>, <a href="#bib.bib38" title="" class="ltx_ref">38</a>, <a href="#bib.bib19" title="" class="ltx_ref">19</a>, <a href="#bib.bib27" title="" class="ltx_ref">27</a>, <a href="#bib.bib28" title="" class="ltx_ref">28</a>, <a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>—have investigated graphs with large multiplicities of specific eigenvalues.</p>
+</div>
+<div id="S1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Structural parameters and eigenvalue multiplicities.</span>
+A parallel line of research relates eigenvalue multiplicities to structural parameters such as girth, matching number, cyclomatic number, diameter, and pendant vertices. Cámara and Haemers <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> showed that multiplicity patterns characterize almost complete graphs. Cioabă et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite> investigated sparse graphs with all but two eigenvalues equal to <span id="S1.p5.m1" class="ltx_Math">\pm 1</span>. Wang <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib34" title="" class="ltx_ref">34</a>]</cite> obtained multiplicity bounds in terms of diameter. Ma et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>]</cite> and Tam and Huang <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="" class="ltx_ref">30</a>]</cite> linked nullity to pendant vertices and the cycle space, while Wang et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib31" title="" class="ltx_ref">31</a>]</cite> extended these ideas to arbitrary eigenvalues. In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib32" title="" class="ltx_ref">32</a>]</cite>, the multiplicity of <span id="S1.p5.m2" class="ltx_Math">-1</span> was related to pendant vertices in trees. Further results related to girth, extremal multiplicity, and eigenvalue structure appear in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib39" title="" class="ltx_ref">39</a>, <a href="#bib.bib26" title="" class="ltx_ref">26</a>, <a href="#bib.bib7" title="" class="ltx_ref">7</a>, <a href="#bib.bib13" title="" class="ltx_ref">13</a>, <a href="#bib.bib16" title="" class="ltx_ref">16</a>, <a href="#bib.bib33" title="" class="ltx_ref">33</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>, <a href="#bib.bib21" title="" class="ltx_ref">21</a>, <a href="#bib.bib14" title="" class="ltx_ref">14</a>, <a href="#bib.bib15" title="" class="ltx_ref">15</a>, <a href="#bib.bib36" title="" class="ltx_ref">36</a>, <a href="#bib.bib8" title="" class="ltx_ref">8</a>]</cite>.</p>
+</div>
+<div id="S1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Signed graphs and spectral multiplicities.</span>
+Since signed graphs generalize ordinary graphs, it is natural to examine how switching equivalence, balance, and signed cycle structure affect eigenvalue multiplicities. Recent studies such as <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>, <a href="#bib.bib25" title="" class="ltx_ref">25</a>, <a href="#bib.bib20" title="" class="ltx_ref">20</a>, <a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite> have developed spectral characterizations for signed graphs, including results on nullity, balance, and extremal configurations. Extending multiplicity bounds from unsigned graphs to signed graphs introduces additional challenges: cycle signs interact with eigenvectors, switching can alter the adjacency matrix without changing the spectrum, and balance imposes structural constraints not present in the unsigned setting.</p>
+</div>
+<div id="S1.p7" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Motivation and gap in the literature.</span>
+While the nullity of signed graphs (the case <span id="S1.p7.m1" class="ltx_Math">\lambda=0</span>) has been thoroughly studied, far less is known about the multiplicity of an <em class="ltx_emph ltx_font_italic">arbitrary</em> eigenvalue <span id="S1.p7.m2" class="ltx_Math">\lambda</span>. A major recent advance is due to Wu et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib37" title="" class="ltx_ref">37</a>]</cite>, who proved a sharp bound for <span id="S1.p7.m3" class="ltx_Math">m(G^{\sigma},0)</span> in terms of girth and characterized all cases of equality. However, their result applies only to the eigenvalue <span id="S1.p7.m4" class="ltx_Math">0</span>. Extending the same bound to all eigenvalues is nontrivial: general eigenvalues lack direct combinatorial interpretations, interact differently with signed cycles, and require a deeper analysis of switching classes and induced substructures.
+</p>
+</div>
+<div id="S1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Contributions of this paper.</span>
+In this work, we establish a sharp upper bound on the multiplicity <span id="S1.p8.m1" class="ltx_Math">m(G^{\sigma},\lambda)</span> of <em class="ltx_emph ltx_font_italic">any</em> real eigenvalue <span id="S1.p8.m2" class="ltx_Math">\lambda</span> of a connected signed graph <span id="S1.p8.m3" class="ltx_Math">G^{\sigma}</span> of order <span id="S1.p8.m4" class="ltx_Math">n</span> and girth <span id="S1.p8.m5" class="ltx_Math">g(G^{\sigma})</span>:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We completely determine all signed graphs achieving equality. Equality holds if and only if <span id="S1.p8.m6" class="ltx_Math">G^{\sigma}</span> is:</p>
+<ul id="S1.I1" class="ltx_itemize">
+<li id="S1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">a balanced complete signed graph <span id="S1.I1.i1.p1.m1" class="ltx_Math">K_{n}^{\sigma}</span> with <span id="S1.I1.i1.p1.m2" class="ltx_Math">\lambda=-1</span>,</p>
+</div>
+</li>
+<li id="S1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">an antibalanced complete signed graph <span id="S1.I1.i2.p1.m1" class="ltx_Math">K_{n}^{\sigma}</span> with <span id="S1.I1.i2.p1.m2" class="ltx_Math">\lambda=1</span>, or</p>
+</div>
+</li>
+<li id="S1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">a balanced complete bipartite signed graph <span id="S1.I1.i3.p1.m1" class="ltx_Math">K_{n_{1},n_{2}}^{\sigma}</span> (with <span id="S1.I1.i3.p1.m2" class="ltx_Math">n_{1},n_{2}\geq 2</span>) with <span id="S1.I1.i3.p1.m3" class="ltx_Math">\lambda=0</span>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">We also fully characterize signed cycles satisfying <span id="S1.p8.m7" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q</span> for <span id="S1.p8.m8" class="ltx_Math">q\in\{1,2\}</span>. Our results extend and generalize those of Wu et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib37" title="" class="ltx_ref">37</a>]</cite>, whose theorem applies only to <span id="S1.p8.m9" class="ltx_Math">\lambda=0</span>.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">For convenience, we restate their result here:</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite"><span class="ltx_text ltx_font_italic">[</span><a href="#bib.bib37" title="" class="ltx_ref">37</a><span class="ltx_text ltx_font_italic">]</span></cite><span class="ltx_text ltx_font_italic">
+Let <span id="Thmtheorem1.p1.m1" class="ltx_Math">G^{\sigma}</span> be a connected signed graph of order <span id="Thmtheorem1.p1.m2" class="ltx_Math">n</span> and girth <span id="Thmtheorem1.p1.m3" class="ltx_Math">g(G^{\sigma})</span>. Then
+<span id="Thmtheorem1.p1.m4" class="ltx_Math">m(G^{\sigma},0)\leq n-g(G^{\sigma})+2</span>, with equality if and only if <span id="Thmtheorem1.p1.m5" class="ltx_Math">G^{\sigma}</span> is one of the following:
+(i) a balanced complete bipartite signed graph with <span id="Thmtheorem1.p1.m6" class="ltx_Math">g(G^{\sigma})=4</span>;
+(ii) a positive (resp., negative) signed cycle <span id="Thmtheorem1.p1.m7" class="ltx_Math">(C_{g},\sigma)</span> with <span id="Thmtheorem1.p1.m8" class="ltx_Math">g(G^{\sigma})\equiv 0\pmod{4}</span> (resp., <span id="Thmtheorem1.p1.m9" class="ltx_Math">g(G^{\sigma})\equiv 2\pmod{4}</span>).</span></p>
+</div>
+</div>
+<div id="S1.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Structure of the paper.</span>
+Section 2 provides essential definitions and preliminaries.
+Section 3 establishes the main multiplicity bound and the equality characterization.
+Section 4 fully characterizes signed cycles with <span id="S1.p10.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q</span> for <span id="S1.p10.m2" class="ltx_Math">q=1,2</span>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Preliminaries</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">In this section we recall fundamental concepts and results from spectral graph theory and the theory of signed graphs that will be used throughout the paper. We begin with basic notions of signed cycles, balance, and switching equivalence.</p>
+</div>
+<div id="S2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Signed cycles and balance.</span>
+Let <span id="S2.p2.m1" class="ltx_Math">C^{\sigma}</span> be a signed cycle. Its <em class="ltx_emph ltx_font_italic">signature</em> (or sign) is defined as the product of the signs of its edges:</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex3.m1" class="ltx_Math">\operatorname{sgn}(C^{\sigma})=\prod_{e\in E(C^{\sigma})}\sigma(e).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A cycle is called <em class="ltx_emph ltx_font_italic">balanced</em> if <span id="S2.p2.m2" class="ltx_Math">\operatorname{sgn}(C^{\sigma})=+1</span> and <em class="ltx_emph ltx_font_italic">unbalanced</em> otherwise.
+A signed graph <span id="S2.p2.m3" class="ltx_Math">G^{\sigma}</span> is <em class="ltx_emph ltx_font_italic">balanced</em> if every cycle in <span id="S2.p2.m4" class="ltx_Math">G^{\sigma}</span> is balanced; otherwise it is <em class="ltx_emph ltx_font_italic">unbalanced</em>.
+A signed graph is <em class="ltx_emph ltx_font_italic">antibalanced</em> if every even cycle is positive and every odd cycle is negative.</p>
+</div>
+<div id="S2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Switching equivalence.</span>
+Given a signed graph <span id="S2.p3.m1" class="ltx_Math">G^{\sigma}=(G,\sigma)</span> and a <em class="ltx_emph ltx_font_italic">switching function</em> <span id="S2.p3.m2" class="ltx_Math">\zeta:V\to\{\pm 1\}</span>, the signed graph <span id="S2.p3.m3" class="ltx_Math">G^{\sigma^{\zeta}}=(G,\sigma^{\zeta})</span> is obtained by switching at the vertices according to</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex4.m1" class="ltx_Math">\sigma^{\zeta}(uv)=\zeta(u)\,\sigma(uv)\,\zeta(v).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Switching preserves the sign of every cycle, and two signed graphs <span id="S2.p3.m4" class="ltx_Math">G^{\sigma_{1}}</span> and <span id="S2.p3.m5" class="ltx_Math">G^{\sigma_{2}}</span> on the same underlying graph are <em class="ltx_emph ltx_font_italic">switching equivalent</em>, written <span id="S2.p3.m6" class="ltx_Math">G^{\sigma_{1}}\sim G^{\sigma_{2}}</span>, if one can be obtained from the other via switching at a set of vertices.
+Switching equivalence plays a role analogous to isomorphism for simple graphs. An illustration of switching equivalent graphs is shown in Figure <a href="#S2.F1" title="Figure 1 ‣ 2 Preliminaries ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>.</p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><img src="" id="S2.F1.g1" class="ltx_graphics ltx_centering" alt="An example of switching equivalent graphs switched on ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>An example of switching equivalent graphs switched on <span id="S2.F1.m2" class="ltx_Math">U=\{v_{1},v_{3},v_{5}\}</span>.</figcaption>
+</figure>
+<div id="S2.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Adjacency matrix of a signed graph.</span>
+For a signed graph <span id="S2.p4.m1" class="ltx_Math">G^{\sigma}</span> of order <span id="S2.p4.m2" class="ltx_Math">n</span>, the adjacency matrix <span id="S2.p4.m3" class="ltx_Math">A(G^{\sigma})=[a^{\sigma}_{ij}]</span> is defined by</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex5.m1" class="ltx_Math">a^{\sigma}_{ij}=\begin{cases}\sigma(v_{i}v_{j}),&amp;\text{if }v_{i}\sim v_{j},\\[%
+4.0pt]
+0,&amp;\text{otherwise}.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the sign pattern of <span id="S2.p4.m4" class="ltx_Math">G^{\sigma}</span> is encoded directly in the entries of <span id="S2.p4.m5" class="ltx_Math">A(G^{\sigma})</span>.
+Since <span id="S2.p4.m6" class="ltx_Math">A(G^{\sigma})</span> is real and symmetric, all eigenvalues are real and may be ordered as</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex6.m1" class="ltx_Math">\lambda_{1}\geq\lambda_{2}\geq\cdots\geq\lambda_{n}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The adjacency spectrum of <span id="S2.p4.m7" class="ltx_Math">G^{\sigma}</span>, denoted <span id="S2.p4.m8" class="ltx_Math">\mathrm{Spec}_{A}(G,\sigma)</span>, is the multiset of eigenvalues of <span id="S2.p4.m9" class="ltx_Math">A(G^{\sigma})</span> counted with algebraic multiplicity.
+For an eigenvalue <span id="S2.p4.m10" class="ltx_Math">\lambda</span>, its multiplicity is denoted <span id="S2.p4.m11" class="ltx_Math">m(G^{\sigma},\lambda)</span>.
+Because <span id="S2.p4.m12" class="ltx_Math">A(G^{\sigma})</span> is diagonalizable, the algebraic and geometric multiplicities coincide.
+The rank of a signed graph is <span id="S2.p4.m13" class="ltx_Math">\operatorname{rank}(G^{\sigma})=\operatorname{rank}(A(G^{\sigma}))</span>, and for any eigenvalue <span id="S2.p4.m14" class="ltx_Math">\lambda\in\mathbb{R}</span>,</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex7.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-\operatorname{rank}(\lambda I-A(G^{\sigma})).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Balance via switching.</span>
+A classical result of Harary, restated by Zaslavsky in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite>, characterizes balance in terms of switching:</p>
+</div>
+<div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmlemma1.p1.m1" class="ltx_Math">G^{\sigma}=(G,\sigma)</span> be a signed graph.
+Then <span id="Thmlemma1.p1.m2" class="ltx_Math">G^{\sigma}</span> is balanced if and only if <span id="Thmlemma1.p1.m3" class="ltx_Math">(G,\sigma)\sim(G,+)</span>, where <span id="Thmlemma1.p1.m4" class="ltx_Math">(G,+)</span> is the all-positive signing of <span id="Thmlemma1.p1.m5" class="ltx_Math">G</span>.</span></p>
+</div>
+</div>
+<div id="S2.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Interlacing.</span>
+We recall the classical Cauchy interlacing theorem (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite>), which will be used repeatedly to bound eigenvalue multiplicities.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span><span class="ltx_text ltx_font_bold"> </span>(Cauchy’s Interlacing Theorem)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem2.p1.m1" class="ltx_Math">C</span> be a real symmetric <span id="Thmtheorem2.p1.m2" class="ltx_Math">n\times n</span> matrix and let <span id="Thmtheorem2.p1.m3" class="ltx_Math">D</span> be an <span id="Thmtheorem2.p1.m4" class="ltx_Math">(n-1)\times(n-1)</span> principal submatrix of <span id="Thmtheorem2.p1.m5" class="ltx_Math">C</span>.
+If <span id="Thmtheorem2.p1.m6" class="ltx_Math">\lambda_{1}\geq\cdots\geq\lambda_{n}</span> and <span id="Thmtheorem2.p1.m7" class="ltx_Math">\mu_{1}\geq\cdots\geq\mu_{n-1}</span> are the eigenvalues of <span id="Thmtheorem2.p1.m8" class="ltx_Math">C</span> and <span id="Thmtheorem2.p1.m9" class="ltx_Math">D</span> respectively, then
+</span></p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex8.m1" class="ltx_Math">\lambda_{j}\geq\mu_{j}\geq\lambda_{j+1},\qquad j=1,\dots,n-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Since the adjacency matrix of an induced subgraph is a principal submatrix of the adjacency matrix of the full graph, we immediately obtain the interlacing theorem for signed graphs:</p>
+</div>
+<div id="Thmlemma2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 2</span></span><span class="ltx_text ltx_font_bold"> </span>(Interlacing Theorem for signed graphs)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmlemma2.p1.m1" class="ltx_Math">G^{\sigma}</span> be a signed graph of order <span id="Thmlemma2.p1.m2" class="ltx_Math">n</span> with eigenvalues <span id="Thmlemma2.p1.m3" class="ltx_Math">\lambda_{1}\geq\dots\geq\lambda_{n}</span>, and let <span id="Thmlemma2.p1.m4" class="ltx_Math">H^{\sigma}</span> be an induced subgraph of <span id="Thmlemma2.p1.m5" class="ltx_Math">G^{\sigma}</span> with <span id="Thmlemma2.p1.m6" class="ltx_Math">m</span> vertices and eigenvalues <span id="Thmlemma2.p1.m7" class="ltx_Math">\mu_{1}\geq\dots\geq\mu_{m}</span>. Then</span></p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex9.m1" class="ltx_Math">\lambda_{j}\geq\mu_{j}\geq\lambda_{n-m+j},\qquad j=1,2,\dots,m.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">This lemma implies that the eigenvalues of any induced subgraph “interlace” those of the original signed graph, and it will be a key tool for deriving upper bounds on eigenvalue multiplicities in the sequel.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Bounds on eigenvalue multiplicities of signed graphs</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Throughout this section we assume that <span id="S3.p1.m1" class="ltx_Math">g(G^{\sigma})&lt;n</span>, thereby excluding the case in which
+<span id="S3.p1.m2" class="ltx_Math">G^{\sigma}</span> itself is a <span id="S3.p1.m3" class="ltx_Math">g(G^{\sigma})</span>-cycle. That case will be treated separately in Section 4.</p>
+</div>
+<div id="Thmlemma3" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmlemma3.p1.m1" class="ltx_Math">G</span> be a connected graph of order <span id="Thmlemma3.p1.m2" class="ltx_Math">n</span> and girth <span id="Thmlemma3.p1.m3" class="ltx_Math">g(G)</span>. Then</span></p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex10.m1" class="ltx_Math">m(G,\lambda)=n-g(G)+2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some <span id="Thmlemma3.p1.m4" class="ltx_Math">\lambda\in\mathbb{R}</span> if and only if <span id="Thmlemma3.p1.m5" class="ltx_Math">G\cong K_{n}</span> <span id="Thmlemma3.p1.m6" class="ltx_Math">(n\geq 3)</span> and <span id="Thmlemma3.p1.m7" class="ltx_Math">\lambda=-1</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">For <span id="S3.p2.m1" class="ltx_Math">K_{n}</span> we have <span id="S3.p2.m2" class="ltx_Math">A(K_{n})=J-I_{n}</span>, where <span id="S3.p2.m3" class="ltx_Math">J</span> is the all-ones matrix.
+Since <span id="S3.p2.m4" class="ltx_Math">\mathrm{Spec}(J)=\{0^{(n-1)},n^{(1)}\}</span> and <span id="S3.p2.m5" class="ltx_Math">J</span> commutes with <span id="S3.p2.m6" class="ltx_Math">I_{n}</span>, it follows that</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex11.m1" class="ltx_Math">\mathrm{Spec}(K_{n})=\{(n-1)^{(1)},\,(-1)^{(n-1)}\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <span id="S3.p2.m7" class="ltx_Math">m(K_{n},-1)=n-1</span>.
+Because <span id="S3.p2.m8" class="ltx_Math">g(K_{n})=3</span>, we obtain</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex12.m1" class="ltx_Math">m(K_{n},-1)=n-1=n-3+2=n-g(K_{n})+2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Conversely, assume <span id="S3.p3.m1" class="ltx_Math">m(G,\lambda)=n-g(G)+2</span>.
+For <span id="S3.p3.m2" class="ltx_Math">\lambda</span> to have multiplicity <span id="S3.p3.m3" class="ltx_Math">n-1</span>, the only connected graphs with an eigenvalue of multiplicity <span id="S3.p3.m4" class="ltx_Math">n-1</span> are <span id="S3.p3.m5" class="ltx_Math">K_{n}</span> and the star <span id="S3.p3.m6" class="ltx_Math">K_{1,n-1}</span>.
+Since <span id="S3.p3.m7" class="ltx_Math">K_{1,n-1}</span> has no cycles (girth undefined), it cannot satisfy <span id="S3.p3.m8" class="ltx_Math">g(G)=3</span>.
+Hence <span id="S3.p3.m9" class="ltx_Math">G\cong K_{n}</span>, and the eigenvalue of multiplicity <span id="S3.p3.m10" class="ltx_Math">n-1</span> is <span id="S3.p3.m11" class="ltx_Math">\lambda=-1</span>.
+∎</p>
+</div>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">It is well known (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib29" title="" class="ltx_ref">29</a>, <a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>) that the connected graphs of rank <span id="S3.p4.m1" class="ltx_Math">2</span> are exactly complete bipartite graphs:</p>
+</div>
+<div id="Thmlemma4" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma4.p1" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite"><span class="ltx_text ltx_font_italic">[</span><a href="#bib.bib29" title="" class="ltx_ref">29</a>, <a href="#bib.bib10" title="" class="ltx_ref">10</a><span class="ltx_text ltx_font_italic">]</span></cite><span class="ltx_text ltx_font_italic">
+Let <span id="Thmlemma4.p1.m1" class="ltx_Math">G</span> be a connected graph of order <span id="Thmlemma4.p1.m2" class="ltx_Math">n</span>.
+Then <span id="Thmlemma4.p1.m3" class="ltx_Math">\operatorname{rk}(G)=2</span> if and only if <span id="Thmlemma4.p1.m4" class="ltx_Math">G\cong K_{n_{1},n_{2}}</span> with <span id="Thmlemma4.p1.m5" class="ltx_Math">n_{1},n_{2}\geq 1</span>.</span></p>
+</div>
+</div>
+<div id="Thmlemma5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmlemma5.p1.m1" class="ltx_Math">G</span> be a connected graph of order <span id="Thmlemma5.p1.m2" class="ltx_Math">n</span> and girth <span id="Thmlemma5.p1.m3" class="ltx_Math">g(G)</span>.
+Then</span></p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex13.m1" class="ltx_Math">m(G,\lambda)=n-g(G)+2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some <span id="Thmlemma5.p1.m4" class="ltx_Math">\lambda\in\mathbb{R}</span> if and only if <span id="Thmlemma5.p1.m5" class="ltx_Math">G\cong K_{n_{1},n_{2}}</span> with <span id="Thmlemma5.p1.m6" class="ltx_Math">n_{1},n_{2}&gt;1</span> and <span id="Thmlemma5.p1.m7" class="ltx_Math">\lambda=0</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Sufficiency.</span>
+If <span id="S3.p5.m1" class="ltx_Math">G\cong K_{n_{1},n_{2}}</span> with <span id="S3.p5.m2" class="ltx_Math">n_{1},n_{2}&gt;1</span>, then <span id="S3.p5.m3" class="ltx_Math">g(G)=4</span> and</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex14.m1" class="ltx_Math">\mathrm{Spec}(G)=\{\sqrt{n_{1}n_{2}},\,-\sqrt{n_{1}n_{2}},\,0^{(n-2)}\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <span id="S3.p5.m4" class="ltx_Math">m(G,0)=n-2=n-4+2=n-g(G)+2</span>.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Necessity.</span>
+Assume <span id="S3.p6.m1" class="ltx_Math">m(G,\lambda)=n-g+2</span>. Then</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex15.m1" class="ltx_Math">\operatorname{rank}(\lambda I-A(G))=g-2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <span id="S3.p6.m2" class="ltx_Math">C</span> be a shortest cycle of <span id="S3.p6.m3" class="ltx_Math">G</span>.
+Since <span id="S3.p6.m4" class="ltx_Math">A(C)</span> is a principal submatrix of <span id="S3.p6.m5" class="ltx_Math">A(G)</span>, interlacing implies</p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex16.m1" class="ltx_Math">\operatorname{rank}(\lambda I-A(C))\leq g-2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The only cycle for which <span id="S3.p6.m6" class="ltx_Math">\operatorname{rank}(\lambda I-A(C))\leq g-2</span> is a <span id="S3.p6.m7" class="ltx_Math">4</span>-cycle, because for <span id="S3.p6.m8" class="ltx_Math">g\geq 5</span> the matrix
+<span id="S3.p6.m9" class="ltx_Math">\lambda I-A(C)</span> has rank at least <span id="S3.p6.m10" class="ltx_Math">g-1</span>.
+Hence <span id="S3.p6.m11" class="ltx_Math">g=4</span>, so</p>
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex17.m1" class="ltx_Math">\operatorname{rank}(\lambda I-A(G))=2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <span id="S3.p6.m12" class="ltx_Math">\operatorname{rank}(A(G))=2</span>, and by Lemma <a href="#Thmlemma4" title="Lemma 4. ‣ 3 Bounds on eigenvalue multiplicities of signed graphs ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, <span id="S3.p6.m13" class="ltx_Math">G\cong K_{n_{1},n_{2}}</span>.
+Since both parts must contain at least two vertices to have girth <span id="S3.p6.m14" class="ltx_Math">4</span>, we obtain <span id="S3.p6.m15" class="ltx_Math">n_{1},n_{2}&gt;1</span>.
+Finally, because the only eigenvalue of multiplicity <span id="S3.p6.m16" class="ltx_Math">n-2</span> in <span id="S3.p6.m17" class="ltx_Math">\mathrm{Spec}(K_{n_{1},n_{2}})</span> is <span id="S3.p6.m18" class="ltx_Math">0</span>, we conclude <span id="S3.p6.m19" class="ltx_Math">\lambda=0</span>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem3.p1.m1" class="ltx_Math">G^{\sigma}</span> be a connected signed graph of order <span id="Thmtheorem3.p1.m2" class="ltx_Math">n\geq 3</span> and girth <span id="Thmtheorem3.p1.m3" class="ltx_Math">g(G^{\sigma})</span>.
+Then for any real eigenvalue <span id="Thmtheorem3.p1.m4" class="ltx_Math">\lambda</span>,</span></p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex18.m1" class="ltx_Math">m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">and equality holds if and only if</span></p>
+<ol id="S3.I1" class="ltx_enumerate">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span id="S3.I1.i1.p1.m1" class="ltx_Math">G^{\sigma}</span><span class="ltx_text ltx_font_italic"> is a balanced complete signed graph </span><span id="S3.I1.i1.p1.m2" class="ltx_Math">K_{n}^{\sigma}</span><span class="ltx_text ltx_font_italic"> with </span><span id="S3.I1.i1.p1.m3" class="ltx_Math">\lambda=-1</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S3.I1.i2.p1.m1" class="ltx_Math">G^{\sigma}</span><span class="ltx_text ltx_font_italic"> is an antibalanced complete signed graph </span><span id="S3.I1.i2.p1.m2" class="ltx_Math">K_{n}^{\sigma}</span><span class="ltx_text ltx_font_italic"> with </span><span id="S3.I1.i2.p1.m3" class="ltx_Math">\lambda=1</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="S3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="S3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span id="S3.I1.i3.p1.m1" class="ltx_Math">G^{\sigma}</span><span class="ltx_text ltx_font_italic"> is a balanced complete bipartite signed graph </span><span id="S3.I1.i3.p1.m2" class="ltx_Math">K_{n_{1},n_{2}}^{\sigma}</span><span class="ltx_text ltx_font_italic"> with </span><span id="S3.I1.i3.p1.m3" class="ltx_Math">n_{1},n_{2}\geq 2</span><span class="ltx_text ltx_font_italic"> and </span><span id="S3.I1.i3.p1.m4" class="ltx_Math">\lambda=0</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p7.m1" class="ltx_Math">\lambda</span> be an eigenvalue of <span id="S3.p7.m2" class="ltx_Math">A(G^{\sigma})</span>.
+By interlacing (Lemma <a href="#Thmlemma2" title="Lemma 2 (Interlacing Theorem for signed graphs). ‣ 2 Preliminaries ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) applied to any induced <span id="S3.p7.m3" class="ltx_Math">g(G^{\sigma})</span>-cycle,
+</p>
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex19.m1" class="ltx_Math">m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Assume equality holds.
+We distinguish cases according to the switching class of <span id="S3.p8.m1" class="ltx_Math">G^{\sigma}</span>.</p>
+</div>
+<div id="S3.p9" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1: <span id="S3.p9.m1" class="ltx_Math">G^{\sigma}</span> is balanced.</span>
+By Lemma <a href="#Thmlemma1" title="Lemma 1. ‣ 2 Preliminaries ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>, <span id="S3.p9.m2" class="ltx_Math">G^{\sigma}</span> is switching-equivalent to <span id="S3.p9.m3" class="ltx_Math">(G,+)</span>, so
+<span id="S3.p9.m4" class="ltx_Math">m(G^{\sigma},\lambda)=m(G,\lambda)</span>.
+Applying Lemma <a href="#Thmlemma3" title="Lemma 3. ‣ 3 Bounds on eigenvalue multiplicities of signed graphs ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, the only connected graph achieving the bound is <span id="S3.p9.m5" class="ltx_Math">K_{n}</span> with <span id="S3.p9.m6" class="ltx_Math">\lambda=-1</span>.
+Thus <span id="S3.p9.m7" class="ltx_Math">G^{\sigma}</span> is a balanced complete signed graph <span id="S3.p9.m8" class="ltx_Math">K_{n}^{\sigma}</span>.</p>
+</div>
+<div id="S3.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2: <span id="S3.p10.m1" class="ltx_Math">G^{\sigma}</span> is antibalanced.</span>
+Switching equivalence yields <span id="S3.p10.m2" class="ltx_Math">G^{\sigma}\sim(G,-)</span>, where every edge is negative.
+Then</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex20.m1" class="ltx_Math">A(G^{\sigma})=-A(G),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence <span id="S3.p10.m3" class="ltx_Math">\lambda</span> has multiplicity <span id="S3.p10.m4" class="ltx_Math">n-1</span> if and only if <span id="S3.p10.m5" class="ltx_Math">-\lambda</span> has multiplicity <span id="S3.p10.m6" class="ltx_Math">n-1</span> in <span id="S3.p10.m7" class="ltx_Math">G</span>.
+By Lemma <a href="#Thmlemma3" title="Lemma 3. ‣ 3 Bounds on eigenvalue multiplicities of signed graphs ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, this occurs exactly when <span id="S3.p10.m8" class="ltx_Math">G\cong K_{n}</span> and <span id="S3.p10.m9" class="ltx_Math">-\lambda=-1</span>, i.e. <span id="S3.p10.m10" class="ltx_Math">\lambda=1</span>.
+Thus <span id="S3.p10.m11" class="ltx_Math">G^{\sigma}</span> is an antibalanced complete signed graph.</p>
+</div>
+<div id="S3.p11" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 3: <span id="S3.p11.m1" class="ltx_Math">G^{\sigma}</span> contains no triangles (so <span id="S3.p11.m2" class="ltx_Math">g(G^{\sigma})=4</span>).</span>
+If <span id="S3.p11.m3" class="ltx_Math">G^{\sigma}</span> is balanced, we may switch to <span id="S3.p11.m4" class="ltx_Math">(G,+)</span>.
+Applying Lemma <a href="#Thmlemma5" title="Lemma 5. ‣ 3 Bounds on eigenvalue multiplicities of signed graphs ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> to <span id="S3.p11.m5" class="ltx_Math">G</span>, it follows that <span id="S3.p11.m6" class="ltx_Math">G\cong K_{n_{1},n_{2}}</span> with <span id="S3.p11.m7" class="ltx_Math">n_{1},n_{2}\geq 2</span> and <span id="S3.p11.m8" class="ltx_Math">\lambda=0</span>.
+Thus <span id="S3.p11.m9" class="ltx_Math">G^{\sigma}</span> is a balanced complete bipartite signed graph.</p>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">These three cases exhaust all possibilities, completing the proof.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Characterization of Signed Cycles with <span id="S4.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q</span> for <span id="S4.m2" class="ltx_Math">q=1,2</span>
+</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">In this section we characterize the eigenvalues of signed cycles whose multiplicities satisfy</p>
+<table id="S4.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex21.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q,\qquad q\in\{1,2\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since a cycle <span id="S4.p1.m1" class="ltx_Math">C_{n}^{\sigma}</span> has <span id="S4.p1.m2" class="ltx_Math">g(C_{n}^{\sigma})=n</span>, the condition simplifies to</p>
+<table id="S4.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex22.m1" class="ltx_Math">m(C_{n}^{\sigma},\lambda)=q.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we determine all eigenvalues of signed cycles with multiplicity <span id="S4.p1.m3" class="ltx_Math">1</span> and <span id="S4.p1.m4" class="ltx_Math">2</span>.
+The analysis follows directly from the explicit eigenvalue formulas for signed cycles.</p>
+</div>
+<div id="S4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">We recall the well–known spectral formulas (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite>):</p>
+</div>
+<div id="Thmlemma6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmlemma6.p1" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite"><span class="ltx_text ltx_font_italic">[</span><a href="#bib.bib4" title="" class="ltx_ref">4</a><span class="ltx_text ltx_font_italic">]</span></cite><span class="ltx_text ltx_font_italic">
+Let <span id="Thmlemma6.p1.m1" class="ltx_Math">C_{n}^{\sigma}</span> and <span id="Thmlemma6.p1.m2" class="ltx_Math">P_{n}^{\sigma}</span> denote a signed cycle and a signed path on <span id="Thmlemma6.p1.m3" class="ltx_Math">n</span> vertices, respectively. Then:</span></p>
+<ol id="S4.I1" class="ltx_enumerate">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span id="S4.I1.i1.p1.m1" class="ltx_Math">\displaystyle\mathrm{Spec}_{A}(C_{n},+)=\bigl{\{}\,2\cos(2\pi j/n)\,\big{|}\,j%
+=0,1,\dots,n-1\,\bigr{\}}</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S4.I1.i2.p1.m1" class="ltx_Math">\displaystyle\mathrm{Spec}_{A}(C_{n},\bar{\sigma})=\bigl{\{}\,2\cos((2j+1)\pi/%
+n)\,\big{|}\,j=0,1,\dots,n-1\,\bigr{\}}</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="S4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="S4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span id="S4.I1.i3.p1.m1" class="ltx_Math">\displaystyle\mathrm{Spec}_{A}(P_{n},\sigma)=\bigl{\{}\,2\cos(j\pi/(n+1))\,%
+\big{|}\,j=1,2,\dots,n\,\bigr{\}}</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">These formulas allow a complete characterization of multiplicity-one and multiplicity-two eigenvalues of signed cycles.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem4.p1.m1" class="ltx_Math">G^{\sigma}</span> be a connected signed graph of order <span id="Thmtheorem4.p1.m2" class="ltx_Math">n</span> and girth <span id="Thmtheorem4.p1.m3" class="ltx_Math">g(G^{\sigma})</span>.
+Then</span></p>
+<table id="S4.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex23.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some real <span id="Thmtheorem4.p1.m4" class="ltx_Math">\lambda</span> if and only if <span id="Thmtheorem4.p1.m5" class="ltx_Math">G^{\sigma}</span> is one of the following:</span></p>
+<ol id="S4.I2" class="ltx_enumerate">
+<li id="S4.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S4.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">a balanced cycle with </span><span id="S4.I2.i1.p1.m1" class="ltx_Math">\lambda=2</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="S4.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S4.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">a balanced cycle of even order with </span><span id="S4.I2.i2.p1.m1" class="ltx_Math">\lambda=-2</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="S4.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="S4.I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">an unbalanced cycle of odd order with </span><span id="S4.I2.i3.p1.m1" class="ltx_Math">\lambda=-2</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">Since <span id="S4.p4.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+1</span>, and a cycle satisfies <span id="S4.p4.m2" class="ltx_Math">g(C_{n}^{\sigma})=n</span>, we obtain</p>
+<table id="S4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex24.m1" class="ltx_Math">m(C_{n}^{\sigma},\lambda)=1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <span id="S4.p4.m3" class="ltx_Math">\lambda</span> must be a simple (multiplicity-one) eigenvalue of <span id="S4.p4.m4" class="ltx_Math">C_{n}^{\sigma}</span>.</p>
+</div>
+<div id="S4.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Balanced cycle.</span>
+From Lemma <a href="#Thmlemma6" title="Lemma 6. ‣ 4 Characterization of Signed Cycles with =⁢m(Gσ,λ)+-n⁢g(Gσ)q for =q1,2 ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>(i),</p>
+<table id="S4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex25.m1" class="ltx_Math">\lambda_{j}=2\cos(2\pi j/n).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The symmetry <span id="S4.p5.m1" class="ltx_Math">\lambda_{j}=\lambda_{n-j}</span> implies that all eigenvalues occur in pairs except when</p>
+<table id="S4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex26.m1" class="ltx_Math">j=n-j\pmod{n}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This occurs for:</p>
+<table id="S4.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex27.m1" class="ltx_Math">j=0\quad\Rightarrow\quad\lambda=2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and for <span id="S4.p5.m2" class="ltx_Math">j=n/2</span> when <span id="S4.p5.m3" class="ltx_Math">n</span> is even, giving</p>
+<table id="S4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex28.m1" class="ltx_Math">\lambda=-2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the balanced cycle has simple eigenvalues</p>
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex29.m1" class="ltx_Math">\lambda=2,\qquad\text{and }\lambda=-2\text{ for even }n.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Unbalanced cycle.</span>
+From Lemma <a href="#Thmlemma6" title="Lemma 6. ‣ 4 Characterization of Signed Cycles with =⁢m(Gσ,λ)+-n⁢g(Gσ)q for =q1,2 ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>(ii),</p>
+<table id="S4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex30.m1" class="ltx_Math">\lambda_{j}=2\cos\bigl{(}(2j+1)\pi/n\bigr{)}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Again, <span id="S4.p6.m1" class="ltx_Math">\lambda_{j}=\lambda_{n-1-j}</span>, so multiplicity one occurs exactly when</p>
+<table id="S4.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex31.m1" class="ltx_Math">j=n-1-j\quad\Longleftrightarrow\quad 2j=n-1,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which requires <span id="S4.p6.m2" class="ltx_Math">n</span> odd.
+The corresponding eigenvalue is</p>
+<table id="S4.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex32.m1" class="ltx_Math">\lambda=2\cos(\pi)=-2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Combining the two cases yields the three families listed in the statement.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem5.p1.m1" class="ltx_Math">G^{\sigma}</span> be a connected signed graph of order <span id="Thmtheorem5.p1.m2" class="ltx_Math">n</span> and girth <span id="Thmtheorem5.p1.m3" class="ltx_Math">g(G^{\sigma})</span>.
+Then</span></p>
+<table id="S4.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex33.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+2</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some real <span id="Thmtheorem5.p1.m4" class="ltx_Math">\lambda</span> if and only if <span id="Thmtheorem5.p1.m5" class="ltx_Math">G^{\sigma}</span> is one of the following:</span></p>
+<ol id="S4.I3" class="ltx_enumerate">
+<li id="S4.I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="S4.I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">a balanced cycle with</span></p>
+<table id="S4.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex34.m1" class="ltx_Math">\lambda=2\cos\Bigl{(}\frac{2\pi j}{g}\Bigr{)},\qquad j=1,2,\dots,\Bigl{\lceil}%
+\frac{g}{2}\Bigr{\rceil}-1;</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S4.I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="S4.I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">an unbalanced cycle with</span></p>
+<table id="S4.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex35.m1" class="ltx_Math">\lambda=2\cos\Bigl{(}\frac{(2j+1)\pi}{g}\Bigr{)},\qquad j=0,1,\dots,\Bigl{%
+\lceil}\frac{g-1}{2}\Bigr{\rceil}-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">Since <span id="S4.p8.m1" class="ltx_Math">g(C_{n}^{\sigma})=n</span>, the condition becomes</p>
+<table id="S4.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex36.m1" class="ltx_Math">m(C_{n}^{\sigma},\lambda)=2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We use the explicit eigenvalues of signed cycles.</p>
+</div>
+<div id="S4.p9" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Balanced cycle.</span>
+Balanced cycle eigenvalues (Lemma <a href="#Thmlemma6" title="Lemma 6. ‣ 4 Characterization of Signed Cycles with =⁢m(Gσ,λ)+-n⁢g(Gσ)q for =q1,2 ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>(i)) satisfy</p>
+<table id="S4.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex37.m1" class="ltx_Math">\lambda_{j}=2\cos\Bigl{(}\frac{2\pi j}{n}\Bigr{)},\qquad\lambda_{j}=\lambda_{n%
+-j}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus every eigenvalue has multiplicity <span id="S4.p9.m1" class="ltx_Math">2</span> except:</p>
+<table id="S4.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex38.m1" class="ltx_Math">j=0\quad(\lambda=2),\qquad j=n/2\text{ when $n$ is even }(\lambda=-2).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence the multiplicity-two eigenvalues are</p>
+<table id="S4.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex39.m1" class="ltx_Math">\lambda_{j}=2\cos\Bigl{(}\frac{2\pi j}{n}\Bigr{)},\qquad j=1,\dots,\Bigl{%
+\lceil}\frac{n}{2}\Bigr{\rceil}-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Unbalanced cycle.</span>
+Unbalanced cycle eigenvalues (Lemma <a href="#Thmlemma6" title="Lemma 6. ‣ 4 Characterization of Signed Cycles with =⁢m(Gσ,λ)+-n⁢g(Gσ)q for =q1,2 ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>(ii)) satisfy</p>
+<table id="S4.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex40.m1" class="ltx_Math">\lambda_{j}=2\cos\Bigl{(}\frac{(2j+1)\pi}{n}\Bigr{)},\qquad\lambda_{j}=\lambda%
+_{n-1-j}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus every eigenvalue has multiplicity <span id="S4.p10.m1" class="ltx_Math">2</span> except the possible simple eigenvalue <span id="S4.p10.m2" class="ltx_Math">-2</span> when <span id="S4.p10.m3" class="ltx_Math">n</span> is odd.
+Hence the multiplicity-two eigenvalues are</p>
+<table id="S4.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex41.m1" class="ltx_Math">\lambda_{j}=2\cos\Bigl{(}\frac{(2j+1)\pi}{n}\Bigr{)},\qquad j=0,\dots,\Bigl{%
+\lceil}\frac{n-1}{2}\Bigr{\rceil}-1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p">Replacing <span id="S4.p11.m1" class="ltx_Math">n</span> by <span id="S4.p11.m2" class="ltx_Math">g</span> in both cases yields the statements (i) and (ii).
+The converse is immediate from Lemma <a href="#Thmlemma6" title="Lemma 6. ‣ 4 Characterization of Signed Cycles with =⁢m(Gσ,λ)+-n⁢g(Gσ)q for =q1,2 ‣ Multiplicity Bounds for Arbitrary Eigenvalues of Connected Signed Graphs" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Conclusion and Future Directions</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">In this paper we established a sharp upper bound for the multiplicity of any real eigenvalue
+<span id="S5.p1.m1" class="ltx_Math">\lambda</span> of a connected signed graph <span id="S5.p1.m2" class="ltx_Math">G^{\sigma}</span> in terms of its girth. Specifically, we showed that</p>
+<table id="S5.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex42.m1" class="ltx_Math">m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we completely characterized all signed graphs attaining equality.
+The extremal cases are precisely the balanced and antibalanced complete signed graphs, as well as
+the balanced complete bipartite signed graphs, corresponding to the eigenvalues <span id="S5.p1.m3" class="ltx_Math">-1</span>, <span id="S5.p1.m4" class="ltx_Math">1</span>, and <span id="S5.p1.m5" class="ltx_Math">0</span>,
+respectively. These results fully generalize the theorem of Wu et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib37" title="" class="ltx_ref">37</a>]</cite>, which treated
+only the special case <span id="S5.p1.m6" class="ltx_Math">\lambda=0</span>, and they reveal a unified structural principle: equality holds
+exactly when the adjacency matrix exhibits minimal possible rank compatible with the girth.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">We further analyzed signed cycles in detail and determined all eigenvalues that occur with
+multiplicity <span id="S5.p2.m1" class="ltx_Math">1</span> or <span id="S5.p2.m2" class="ltx_Math">2</span>. Using explicit spectral formulas, we obtained complete characterizations of
+balanced and unbalanced cycles realizing</p>
+<table id="S5.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex43.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+q,\qquad q\in\{1,2\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These results illustrate how the interplay between cycle parity, balance, and switching equivalence
+governs the spectrum of signed cycles.</p>
+</div>
+<div id="S5.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Future work.</span>
+The results presented here suggest several natural directions for further research:
+</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<ul id="S5.I1" class="ltx_itemize">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Laplacian eigenvalue multiplicities.</span>
+Extending our girth-based multiplicity bounds to the signed Laplacian or the <span id="S5.I1.i1.p1.m1" class="ltx_Math">A_{\alpha}</span>-matrix
+may reveal new relationships between structural balance and spectral extremality.</p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Beyond girth: cycle rank and cyclomatic number.</span>
+Since the cyclomatic number measures the complexity of cycle space, it would be interesting to
+derive multiplicity bounds involving both girth and cyclomatic number, generalizing results such
+as those of Ma et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>]</cite> and Tam–Huang <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="" class="ltx_ref">30</a>]</cite>.</p>
+</div>
+</li>
+<li id="S5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Higher multiplicity phenomena.</span>
+The extremal patterns identified for complete and complete bipartite signed graphs raise the
+question of whether similar structural characterizations exist for multiplicities of the form
+<span id="S5.I1.i3.p1.m1" class="ltx_Math">m(G^{\sigma},\lambda)=n-g(G^{\sigma})+k</span> for <span id="S5.I1.i3.p1.m2" class="ltx_Math">k&gt;2</span>.</p>
+</div>
+</li>
+<li id="S5.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Random and sparse signed graphs.</span>
+Investigating typical multiplicity behavior in random signed graphs or sparse models may provide
+probabilistic analogues of our extremal results.</p>
+</div>
+</li>
+<li id="S5.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Algorithmic detection of extremal switching classes.</span>
+Since the extremal graphs are defined up to switching, developing efficient algorithms to detect
+whether a signed graph lies in one of the extremal switching classes would have practical
+applications in network analysis.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Overall, the results of this paper highlight how cycle structure, balance, and switching equivalence
+interact to control eigenvalue multiplicities in signed graphs. We hope that the techniques
+developed here will serve as a foundation for further investigations in signed spectral graph theory.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock">
+P.W. Atkins, J. de Paula,
+Physical Chemistry, 8th ed.,
+Oxford Univ. Press, 2006.
+
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock">
+S. Bang, J.H. Koolen,
+Distance-regular graphs of diameter <span id="bib.bib2.m1" class="ltx_Math">3</span> having eigenvalue <span id="bib.bib2.m2" class="ltx_Math">-1</span>,
+Linear Algebra Appl. 531 (2017) 38–53,
+doi:<a href="https://doi.org/10.1016/j.laa.2017.05.009" title="" class="ltx_ref ltx_href">10.1016/j.laa.2017.05.009</a>.
+
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock">
+F. Belardo, M. Brunetti, A. Ciampella,
+On the multiplicity of <span id="bib.bib3.m1" class="ltx_Math">\alpha</span> as an <span id="bib.bib3.m2" class="ltx_Math">A_{\alpha}(\Gamma)</span>-eigenvalue of signed graphs with pendant vertices,
+Discrete Math. 342 (2019) 2223–2233,
+doi:<a href="https://doi.org/10.1016/j.disc.2019.04.034" title="" class="ltx_ref ltx_href">10.1016/j.disc.2019.04.034</a>.
+
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock">
+F. Belardo, P. Petecki,
+Spectral characterizations of signed lollipop graphs,
+Linear Algebra Appl. 480 (2015) 144–167,
+doi:<a href="https://doi.org/10.1016/j.laa.2015.05.001" title="" class="ltx_ref ltx_href">10.1016/j.laa.2015.05.001</a>.
+
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock">
+F.K. Bell, P. Rowlinson,
+On the multiplicities of graph eigenvalues,
+Bull. Lond. Math. Soc. 35 (2003) 401–408,
+doi:<a href="https://doi.org/10.1112/S0024609303002083" title="" class="ltx_ref ltx_href">S0024609303002083</a>.
+
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock">
+M. Cámara, W.H. Haemers,
+Spectral characterizations of almost complete graphs,
+Discrete Appl. Math. 176 (2014) 19–23,
+doi:<a href="https://doi.org/10.1016/j.dam.2014.04.007" title="" class="ltx_ref ltx_href">10.1016/j.dam.2014.04.007</a>.
+
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock">
+S. Chang, A. Chang, Y. Zheng,
+The leaf-free graphs with nullity <span id="bib.bib7.m1" class="ltx_Math">2\theta(G)-1</span>,
+Discrete Appl. Math. 277 (2020) 44–54,
+doi:<a href="https://doi.org/10.1016/j.dam.2019.06.015" title="" class="ltx_ref ltx_href">10.1016/j.dam.2019.06.015</a>.
+
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock">
+S. Chang, J. Li,
+Graphs <span id="bib.bib8.m1" class="ltx_Math">G</span> with nullity <span id="bib.bib8.m2" class="ltx_Math">n(G)-g(G)-1</span>,
+Linear Algebra Appl. 642 (2022) 251–263,
+doi:<a href="https://doi.org/10.1016/j.laa.2022.01.026" title="" class="ltx_ref ltx_href">10.1016/j.laa.2022.01.026</a>.
+
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock">
+S. Chang, B.S. Tam, J. Li, Y. Zheng,
+Graphs <span id="bib.bib9.m1" class="ltx_Math">G</span> with nullity <span id="bib.bib9.m2" class="ltx_Math">2c(G)+p(G)-1</span>,
+Discrete Appl. Math. 311 (2022) 38–58,
+doi:<a href="https://doi.org/10.1016/j.dam.2022.01.004" title="" class="ltx_ref ltx_href">10.1016/j.dam.2022.01.004</a>.
+
+</span>
+</li>
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock">
+B. Cheng, B. Liu,
+On the nullity of graphs,
+Electron. J. Linear Algebra 16 (2007) 60–67.
+
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock">
+A. Ciampella, S. Khan,
+On the nullity of cycle-spliced <span id="bib.bib11.m1" class="ltx_Math">\mathbb{T}</span>-gain graphs,
+Commun. Comb. Optim. 10 (2) (2025) 381–403.
+
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock">
+S.M. Cioabă, W.H. Haemers, J.R. Vermette, W. Wong,
+The graphs with all but two eigenvalues equal to <span id="bib.bib12.m1" class="ltx_Math">\pm 1</span>,
+J. Algebraic Combin. 41 (2015) 887–897,
+doi:<a href="https://doi.org/10.1007/s10801-014-0559-1" title="" class="ltx_ref ltx_href">10.1007/s10801-014-0559-1</a>.
+
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock">
+D. Cvetković, S. Simić,
+On graphs whose second largest eigenvalue does not exceed <span id="bib.bib13.m1" class="ltx_Math">(\sqrt{5}-1)/2</span>,
+Discrete Math. 138 (1995) 213–227,
+doi:<a href="https://doi.org/10.1016/0012-365X(94)00279-J" title="" class="ltx_ref ltx_href">0012-365X(94)00279-J</a>.
+
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock">
+Y.Z. Fan, Y. Wang, Y. Wang,
+A note on the nullity of unicyclic signed graphs,
+Linear Algebra Appl. 438 (2013) 1193–1200,
+doi:<a href="https://doi.org/10.1016/j.laa.2012.10.019" title="" class="ltx_ref ltx_href">10.1016/j.laa.2012.10.019</a>.
+
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock">
+Y.Z. Fan, W.X. Du, C.L. Dong,
+The nullity of bicyclic signed graphs,
+Linear Multilinear Algebra 62 (2014) 242–251,
+doi:<a href="https://doi.org/10.1080/03081087.2012.758208" title="" class="ltx_ref ltx_href">10.1080/03081087.2012.758208</a>.
+
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock">
+R.A. Horn, C.R. Johnson,
+Matrix Analysis,
+Cambridge Univ. Press, 1985.
+
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock">
+C.R. Johnson, A. Leal-Duarte, C.M. Saiago,
+The Parter–Wiener theorem: refinement and generalization,
+SIAM J. Matrix Anal. Appl. 25 (2003) 352–361,
+doi:<a href="https://doi.org/10.1137/S0895479802404923" title="" class="ltx_ref ltx_href">S0895479802404923</a>.
+
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock">
+C.R. Johnson, A. Leal-Duarte,
+Converse to the Parter–Wiener theorem: the case of non-trees,
+Discrete Math. 306 (2006) 3125–3129,
+doi:<a href="https://doi.org/10.1016/j.disc.2005.12.021" title="" class="ltx_ref ltx_href">10.1016/j.disc.2005.12.021</a>.
+
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock">
+C.R. Johnson, R. Loewy, P.A. Smith,
+The graphs for which the maximum multiplicity of an eigenvalue is two,
+Linear Multilinear Algebra 57 (2009) 713–736,
+doi:<a href="https://doi.org/10.1080/03081080802197653" title="" class="ltx_ref ltx_href">10.1080/03081080802197653</a>.
+
+</span>
+</li>
+<li id="bib.bib20" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock">
+S. Khan,
+Signed graphs <span id="bib.bib20.m1" class="ltx_Math">G^{\sigma}</span> with nullity <span id="bib.bib20.m2" class="ltx_Math">n(G^{\sigma})-g(G^{\sigma})-1</span>,
+Linear Algebra Appl. 728 (2026) 47–62.
+
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock">
+Y. Lu, J. Wu,
+No signed graph with nullity <span id="bib.bib21.m1" class="ltx_Math">\eta(G,\sigma)=|V(G)|-2m(G)+2c(G)-1</span>,
+Linear Algebra Appl. 615 (2021) 175–193,
+doi:<a href="https://doi.org/10.1016/j.laa.2020.11.020" title="" class="ltx_ref ltx_href">10.1016/j.laa.2020.11.020</a>.
+
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock">
+X. Ma, D. Wong, F. Tian,
+Nullity of a graph in terms of the dimension of cycle space and the number of pendant vertices,
+Discrete Appl. Math. 215 (2016) 171–176,
+doi:<a href="https://doi.org/10.1016/j.dam.2016.07.011" title="" class="ltx_ref ltx_href">10.1016/j.dam.2016.07.011</a>.
+
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock">
+S. Parter,
+On the eigenvalues and eigenvectors of a class of matrices,
+J. Soc. Ind. Appl. Math. 8 (1960) 376–388,
+doi:<a href="https://doi.org/10.1137/0108039" title="" class="ltx_ref ltx_href">0108039</a>.
+
+</span>
+</li>
+<li id="bib.bib24" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock">
+M. Petrović,
+On graphs with exactly one eigenvalue less than <span id="bib.bib24.m1" class="ltx_Math">-1</span>,
+J. Combin. Theory Ser. B 52 (1991) 102–112,
+doi:<a href="https://doi.org/10.1016/0095-8956(91)90054-Z" title="" class="ltx_ref ltx_href">0095-8956(91)90054-Z</a>.
+
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock">
+F. Ramezani, P. Rowlinson, Z. Stanić,
+On eigenvalue multiplicity in signed graphs,
+Discrete Math. 343 (2020) 111982,
+doi:<a href="https://doi.org/10.1016/j.disc.2020.111982" title="" class="ltx_ref ltx_href">10.1016/j.disc.2020.111982</a>.
+
+</span>
+</li>
+<li id="bib.bib26" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock">
+P. Rowlinson,
+On eigenvalue multiplicity and the girth of a graph,
+Linear Algebra Appl. 435 (2011) 2375–2381,
+doi:<a href="https://doi.org/10.1016/j.laa.2011.06.018" title="" class="ltx_ref ltx_href">10.1016/j.laa.2011.06.018</a>.
+
+</span>
+</li>
+<li id="bib.bib27" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock">
+P. Rowlinson,
+On graphs with an eigenvalue of maximal multiplicity,
+Discrete Math. 313 (2013) 1162–1166,
+doi:<a href="https://doi.org/10.1016/j.disc.2013.02.014" title="" class="ltx_ref ltx_href">10.1016/j.disc.2013.02.014</a>.
+
+</span>
+</li>
+<li id="bib.bib28" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock">
+P. Rowlinson,
+Eigenvalue multiplicity in cubic graphs,
+Linear Algebra Appl. 444 (2014) 211–218,
+doi:<a href="https://doi.org/10.1016/j.laa.2013.11.036" title="" class="ltx_ref ltx_href">10.1016/j.laa.2013.11.036</a>.
+
+</span>
+</li>
+<li id="bib.bib29" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock">
+I. Sciriha,
+On the rank of graphs,
+in: Y. Alavi, D.R. Lick, A. Schwenk (Eds.),
+Combinatorics, Graph Theory, and Algorithms, Vol. II,
+New Issue Press, Western Michigan Univ., Kalamazoo, 1999, 769–778.
+
+</span>
+</li>
+<li id="bib.bib30" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[30]</span>
+<span class="ltx_bibblock">
+B.S. Tam, T. Huang,
+Nullities of graphs with given order, matching number and cyclomatic number revisited,
+Linear Algebra Appl. 535 (2017) 105–140,
+doi:<a href="https://doi.org/10.1016/j.laa.2017.02.006" title="" class="ltx_ref ltx_href">10.1016/j.laa.2017.02.006</a>.
+
+</span>
+</li>
+<li id="bib.bib31" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[31]</span>
+<span class="ltx_bibblock">
+L. Wang, L. Wei, Y. Jin, The multiplicity of an arbitrary eigenvalue of a graph in terms of cyclomatic number and number of pendant vertices, Linear Algebra Appl. 584 (2020) 257–266, doi: <a href="https://doi.org/10.1016/j.laa.2019.09.013" title="" class="ltx_ref ltx_href">10.1016/j.laa.2019.09.013</a>.
+
+</span>
+</li>
+<li id="bib.bib32" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[32]</span>
+<span class="ltx_bibblock">
+X. Wang, D. Wong, L. Wei, F. Tian,
+On the multiplicity of <span id="bib.bib32.m1" class="ltx_Math">-1</span> as an eigenvalue of a tree with given number of pendant vertices,
+Linear Multilinear Algebra 70 (2020) 3345–3353,
+doi:<a href="https://doi.org/10.1080/03081087.2020.1835244" title="" class="ltx_ref ltx_href">10.1080/03081087.2020.1835244</a>.
+
+</span>
+</li>
+<li id="bib.bib33" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[33]</span>
+<span class="ltx_bibblock">
+L. Wang, X. Fang, X. Geng,
+Graphs with nullity <span id="bib.bib33.m1" class="ltx_Math">2c(G)+p(G)-1</span>,
+Discrete Math. 345 (2022) 112786,
+doi:<a href="https://doi.org/10.1016/j.disc.2021.112786" title="" class="ltx_ref ltx_href">10.1016/j.disc.2021.112786</a>.
+
+</span>
+</li>
+<li id="bib.bib34" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[34]</span>
+<span class="ltx_bibblock">
+Z. Wang,
+The multiplicities of eigenvalues of a graph,
+Appl. Math. Comput. 421 (2022) 126957,
+doi:<a href="https://doi.org/10.1016/j.amc.2022.126957" title="" class="ltx_ref ltx_href">10.1016/j.amc.2022.126957</a>.
+
+</span>
+</li>
+<li id="bib.bib35" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[35]</span>
+<span class="ltx_bibblock">
+G. Wiener,
+Spectral multiplicity and splitting results for a class of qualitative matrices,
+Linear Algebra Appl. 61 (1984) 15–29,
+doi:<a href="https://doi.org/10.1016/0024-3795(84)90106-5" title="" class="ltx_ref ltx_href">0024-3795(84)90106-5</a>.
+
+</span>
+</li>
+<li id="bib.bib36" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[36]</span>
+<span class="ltx_bibblock">
+D. Wong, Q. Zhou, F. Tian,
+Nullity and singularity of a graph in which every block is a cycle,
+Discrete Math. 345 (2022) 112851,
+doi:<a href="https://doi.org/10.1016/j.disc.2022.112851" title="" class="ltx_ref ltx_href">10.1016/j.disc.2022.112851</a>.
+
+</span>
+</li>
+<li id="bib.bib37" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[37]</span>
+<span class="ltx_bibblock">
+Q. Wu, Y. Lu, B.S. Tam,
+On connected signed graphs with rank equal to girth,
+Linear Algebra Appl. 651 (2022) 90–115,
+doi:<a href="https://doi.org/10.1016/j.laa.2022.07.014" title="" class="ltx_ref ltx_href">10.1016/j.laa.2022.07.014</a>.
+
+</span>
+</li>
+<li id="bib.bib38" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[38]</span>
+<span class="ltx_bibblock">
+Y. Yang, Q. Huang,
+The characterization of graphs with eigenvalue <span id="bib.bib38.m1" class="ltx_Math">-1</span> of multiplicity <span id="bib.bib38.m2" class="ltx_Math">n-4</span> or <span id="bib.bib38.m3" class="ltx_Math">n-5</span>,
+Filomat 33 (2019) 5919–5933,
+doi:<a href="https://doi.org/10.2298/FIL1918919Y" title="" class="ltx_ref ltx_href">10.2298/FIL1918919Y</a>.
+
+</span>
+</li>
+<li id="bib.bib39" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[39]</span>
+<span class="ltx_bibblock">
+Q. Zhou, D. Wong, B.S. Tam,
+On connected graphs of order <span id="bib.bib39.m1" class="ltx_Math">n</span> with girth <span id="bib.bib39.m2" class="ltx_Math">g</span> and nullity <span id="bib.bib39.m3" class="ltx_Math">n-g</span>,
+Linear Algebra Appl. 630 (2021) 56–68,
+doi:<a href="https://doi.org/10.1016/j.laa.2021.01.005" title="" class="ltx_ref ltx_href">10.1016/j.laa.2021.01.005</a>.
+
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:18:37 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

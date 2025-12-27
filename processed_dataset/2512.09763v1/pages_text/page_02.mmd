@@ -1,0 +1,26 @@
+We feel the need to insist upon the fact that, despite the maybe poor use of the differential geometry vocabulary in what follows (tangent space, parallel transport,…), we do not claim that the Wasserstein space is a smooth Riemannian manifold onto which such concepts are well defined. Nonetheless, we claim that adopting such a geometric point of view leads to the definition of tools that are useful in the analysis of several problems.
+
+More detailed bibliographical comments are given in the core of the paper, but we now present briefly the context. Since the seminal work of Otto [20] and the influential book of Ambrosio, Gigli and Savaré [2], Wasserstein spaces are often thought of equipped with a formal Riemannian structure. The tangent space to the Wasserstein space \mathcal{P}(X) is widely taken as the closure of gradients of smooth functions over the metric space X, closure which is taken for some metric which depends on the probability measure at which we are taking the tangent space. This point of view is mostly induced by an Eulerian description of flows on \mathcal{P}(X). It has been extremely fruitful. It also allowed to define parallel transports along flows which can be written in an Eulerian way with sufficient regularity [1, 18]. We provide here a more Lagrangian point of view which allows us to define parallel transport quite generally, along Lagrangian flows. We then present some natural consequences of this (Lagrangian) notion of parallel transport. Our point of view is clearly in line with the lift of Lions on the space of random variables introduced in [19], which we generalize to more involved settings, see Section 4.
+
+## 1. Notation and standard results
+
+Let d\geq 1 be an integer. For a topological space O, \mathcal{P}(O) stands for the set of Borel probability measures on O. For p\in[1,\infty), we consider the space \mathcal{P}\_{p}(\mathbb{R}^{d}):=\{m\in\mathcal{P}(\mathbb{R}^{d})|\int\_{%
+\mathbb{R}^{d}}|x|^{p}m(dx)<\infty\} equipped with the p-Wasserstein distance W\_{p} defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | W\_{p}(\mu,\nu)=\left(\inf\_{\gamma\in\Pi(\mu,\nu)}\int\_{\mathbb{R}^{2d}}|x-y|^{% p}\gamma(dx,dy)\right)^{\frac{1}{p}}, |  |
+
+where \Pi(\mu,\nu) is the set of couplings between \mu and \nu, i.e. the set of measures \gamma\in\mathcal{P}(\mathbb{R}^{2d}) such that (\pi\_{1})\_{\#}\gamma=\mu and (\pi\_{2})\_{\#}\gamma=\nu, where, for x,y\in\mathbb{R}^{d}, \pi\_{1}(x,y)=x and \pi\_{2}(x,y)=y, and f\_{\#}m denotes the image of the measure m by the map f. The maps \pi\_{1} and \pi\_{2} shall be used more generally on any couple as the natural projection maps. The set (\mathcal{P}\_{p}(\mathbb{R}^{d}),W\_{p}) is a complete separable metric space.
+
+Below, \mathcal{O} shall be the closure of a smooth open bounded subset of \mathbb{R}^{d}. For p\in[1,\infty), (\mathcal{P}(O),W\_{p}) is a complete separable compact metric space.
+
+For p\in(1,\infty), we denote p^{\prime}=p/(p-1). We then define \mathcal{P}\_{pp^{\prime}}(\mathbb{R}^{d}\times\mathbb{R}^{d})=\{\mu\in\mathcal%
+{P}(\mathbb{R}^{2d})|(\pi\_{1})\_{\#}\mu\in\mathcal{P}\_{p}(\mathbb{R}^{d}),(\pi\_%
+{2})\_{\#}\mu\in\mathcal{P}\_{p^{\prime}}(\mathbb{R}^{d})\}. This set can be equipped with a sort of (p,p^{\prime})-Wasserstein distance (see Section 10.3 in [2]), that we do not detail here.
+
+Below, M shall denote a smooth bounded manifold without boundary. Given x\in M, T\_{x}M is the tangent space to M at x and TM:=\cup\_{x\in M}\{x\}\times T\_{x}M is the tangent bundle of M, which shall also be identified sometimes with \cup\_{x\in M}T\_{x}M. Given a smooth curve \theta:[0,1]\to M, and p\_{0}\in T\_{\theta(0)}M, the parallel transport of p\_{0} along \theta is characterized as the unique curve p:[0,1]\to TM such that \nabla\_{\theta^{\prime}(t)}p(t)=0 together with p(0)=p\_{0}. The set (\mathcal{P}(M),W\_{p}) is a complete separable compact metric space for any p\in[1,\infty), where W\_{p} is defined by replacing |x-y| by the geodesic distance between x and y in the definition above.
+
+## 2. Tangent space to \mathcal{P}\_{p}(\mathbb{R}^{d})
+
+### 2.1. Main definitions

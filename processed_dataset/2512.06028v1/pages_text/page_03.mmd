@@ -1,0 +1,65 @@
+### 2.6 Gamma Function
+
+The Gamma Function was first introduced by the Swiss mathematician Leonhard Euler in his endeavor to generalize the factorial function to non-integer values. Useful details on the origin and evolution of the Gamma function can be found in [5]. Euler introduced the following analytic function during the years 1729 and 1730:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(n)=\int\_{0}^{1}(-\ln(t))^{n-1}dt,\quad(n>0) |  |
+
+which, by an elementary change of variable, leads to the following equation [5]:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(n)=\int\_{0}^{\infty}t^{n-1}e^{-t}dt,\quad(n>0) |  |
+
+Connection with the factorial function [5]:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(n+1)=n\Gamma(n)=n! |  |
+
+Some specific values [5]:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(1)=1,\quad\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi},\quad\Gamma\left(% \frac{3}{2}\right)=\frac{\sqrt{\pi}}{2} |  |
+
+Efforts have been made and formulas have been provided that describe the Gamma function. One such formula for \text{Re}(x)>-\frac{1}{2} in article [6], page 12, is as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \Gamma(x+1)=\frac{\left(x+\frac{1}{2}\right)^{x+\frac{1}{2}}\sqrt{2\pi}}{e^{x+% \frac{1}{2}}}\times e^{-\sum\_{j=1}^{\infty}\frac{\zeta(2j,x+1)}{(2j+4j^{2})2^{% 2j}}} |  | (1) |
+
+In addition to the Gamma function itself, its logarithmic derivative, the Digamma function, is also very important. To compute this derivative, we proceed as follows.
+
+|  |  |  |
+| --- | --- | --- |
+|  | H\_{x}^{2j}=\zeta(2j)-\zeta(2j,x+1); |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(x+1)=\frac{\left(x+\frac{1}{2}\right)^{x+\frac{1}{2}}\sqrt{2\pi}}{e^{x+% \frac{1}{2}}}\times e^{\sum\_{j=1}^{\infty}\frac{H\_{x}^{2j}-\zeta(2j)}{(2j+4j^{% 2})2^{2j}}}; |  |
+
+From article [9], page 50, we know:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sum\_{j=1}^{\infty}\frac{\zeta(2j)}{(2j+4j^{2})2^{2j}}=\ln\sqrt{\frac{\pi}{e}} |  | (2) |
+
+Therefore:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(x+1)=\frac{\left(x+\frac{1}{2}\right)^{x+\frac{1}{2}}\sqrt{2}}{e^{x}}% \times e^{\sum\_{j=1}^{\infty}\frac{H\_{x}^{2j}}{(2j+4j^{2})2^{2j}}}; |  |
+
+We define the function A to simplify the differentiation of the Gamma function as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | A=\sum\_{j=1}^{\infty}\frac{H\_{x}^{2j}}{(2j+4j^{2})2^{2j}} |  | (3) |
+
+Therefore:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \Gamma(x+1)=\frac{\left(x+\frac{1}{2}\right)^{x+\frac{1}{2}}\sqrt{2}}{e^{x-A}}; |  | (4) |

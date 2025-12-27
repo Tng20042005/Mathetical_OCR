@@ -1,0 +1,67 @@
+--- | --- | --- |
+|  | \displaystyle I\_{4} | \displaystyle=\int\_{G}|\sum\_{|k|>N}(\mathrm{i}k\widehat{u\_{0}}(k)-\widehat{u\_{% 1}}(k))\mathrm{e}^{-\mathrm{i}k(t-x)}|^{2}{\,\rm d}x{\,\rm d}t. |  |
+
+We first note that the dominating terms are I\_{1} and I\_{4}. Using the estimate (A.9) and (A.10), we obtain
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{1}>2\pi c\sum\_{|k|>N}|\mathrm{i}k\widehat{u\_{0}}(k)+\widehat{u\_{1}}(k)|^{2}% ,\;\;I\_{4}>2\pi c\sum\_{|k|>N}|\mathrm{i}k\widehat{u\_{0}}(k)-\widehat{u\_{1}}(k)% |^{2}. |  |
+
+It follows that I\_{1}+I\_{4}>4\pi c\sum\_{|k|>N\_{0}}(|k|^{2}\widehat{u\_{0}}(k)|^{2}+|\widehat{u\_%
+{1}}(k)|^{2}). Next we turn to the mixed terms I\_{2} and I\_{3}. For I\_{2}, we rewrite
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle I\_{2}=-\sum\_{|k|,|l|>N}(\mathrm{i}k\widehat{u\_{0}}(k)-\widehat{u% \_{1}}(k))\overline{(\mathrm{i}l\widehat{u\_{0}}(l)+\widehat{u\_{1}}(l))}\widehat% {\mathbf{1}\_{G}}(l+k,l-k). |  |
+
+By Cauchy–Schwarz inequality, we obtain
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle|I\_{2}|\leq | \displaystyle\left(\sum\_{|k|,|l|>N}|(\mathrm{i}k\widehat{u\_{0}}(k)-\widehat{u\_% {1}}(k))\overline{(\mathrm{i}l\widehat{u\_{0}}(l)+\widehat{u\_{1}}(l))}|^{2}% \right)^{\frac{1}{2}}\left(\sum\_{|k|,|l|>N}|\widehat{\mathbf{1}\_{G}}(l+k,l-k)|% ^{2}\right)^{\frac{1}{2}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\leq | \displaystyle 2\sum\_{|k|>N}(|k|^{2}|\widehat{u\_{0}}(k)|^{2}+|\widehat{u\_{1}}(k% )|^{2})\left(\sum\_{|k|,|l|>N}|\widehat{\mathbf{1}\_{G}}(l+k,l-k)|^{2}\right)^{% \frac{1}{2}}. |  |
+
+Let k+l=\alpha\_{1}, l-k=\alpha\_{2}, then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \{(\alpha\_{1},\alpha\_{2})\in\mathbb{Z}^{2}:|\alpha\_{1}+\alpha\_{2}|>2N,|\alpha\_% {1}-\alpha\_{2}|>2N\}\subset\{(\alpha\_{1},\alpha\_{2})\in\mathbb{Z}^{2}:\alpha\_{% 1}^{2}+\alpha\_{2}^{2}>2N^{2}\}. |  |
+
+Using the Plancherel theorem, we know that \left(\sum\_{\alpha\in\mathbb{Z}^{2}}|\widehat{\mathbf{1}\_{G}}(\alpha)|^{2}%
+\right)^{\frac{1}{2}}=\|\mathbf{1}\_{G}\|\_{L^{2}({\mathbb{T}})}=|G|^{\frac{1}{2%
+}}<\infty. Thus, there exists a constant N>0 depending only on G such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\sum\_{|\alpha|^{2}>2N,\alpha\in\mathbb{Z}^{2}}|\widehat{\mathbf{1}\_{G}}(% \alpha)|^{2}\right)^{\frac{1}{2}}\leq\frac{c}{10}. |  |
+
+With this choice of N, we can bound I\_{2} as
+|I\_{2}|\leq\frac{c}{5}\sum\_{|k|>N}(|k|^{2}|\widehat{u\_{0}}(k)|^{2}+|\widehat{u%
+\_{1}}(k)|^{2}).
+Similarly, we have the same estimate for I\_{3},
+|I\_{3}|\leq\frac{c}{5}\sum\_{|k|>N}(|k|^{2}|\widehat{u\_{0}}(k)|^{2}+|\widehat{u%
+\_{1}}(k)|^{2}). Combining the above bounds together, we infer the high-frequency estimate
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\int\_{G}|\sum\_{|k|>N}\left((\mathrm{i}k\widehat{u\_{0}}(k)+% \widehat{u\_{1}}(k))\mathrm{e}^{\mathrm{i}k(t+x)}-(\mathrm{i}k\widehat{u\_{0}}(k% )-\widehat{u\_{1}}(k))\mathrm{e}^{-\mathrm{i}k(t-x)}\right)|^{2}{\,\rm d}x{\,% \rm d}t |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\geq I\_{1}+I\_{4}-|I\_{2}|-|I\_{3}|\geq(4\pi c-\frac{2c}{4})\left(|k% |^{2}|\widehat{u\_{0}}(k)|^{2}+|\widehat{u\_{1}}(k)|^{2}\right). |  | (4.2) |
+
+By the Plancherel theorem, we compute the left-hand side of (4.1) as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\|u\_{0}\|^{2}\_{\dot{H}^{1}({\mathbb{T}})}+\|u\_{1}\|^{2}\_{L^{2}({% \mathbb{T}})}=\sum\_{|k|>N}\left(|k|^{2}|\widehat{u\_{0}}(k)|^{2}+|\widehat{u\_{1% }}(k)|^{2}\right). |  |
+
+This, together with (LABEL:eq:\_high-est-wave-Fourier), gives the desired conclusion.
+∎
+
+Based on the high-frequency estimates in Proposition 4.1, we can obtain an observability inequality in G up to a compact term.
+
+###### Corollary 4.2.
+
+There exists a constant C>0 such that,

@@ -1,0 +1,48 @@
+### 3.9 Proof
+
+We begin with the following known relation for the Gamma function from [6]:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \Gamma(x+1)=\frac{\left(x+\frac{1}{2}\right)^{x+\frac{1}{2}}\sqrt{2\pi}}{e^{x+% \frac{1}{2}}}\times\exp\left(-\sum\_{n=1}^{\infty}\frac{\zeta(2n,x+1)}{(2n+4n^{% 2})\,2^{2n}}\right) |  | (1) |
+
+Let:
+
+|  |  |  |
+| --- | --- | --- |
+|  | U=\sum\_{m\_{0}=1}^{\infty}\frac{\zeta\left(2m\_{0},x+1\right)}{\left(2m\_{0}+4m\_{% 0}^{2}\right)\,2^{2m\_{0}}} |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | h\left(m\_{0}\right)=\zeta\left(2m\_{0},x+1\right) |  |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | f\left(m\_{0}\right)=\frac{1}{\left(2m\_{0}+4m\_{0}^{2}\right)\,2^{2m\_{0}}} |  | (7) |
+
+Thus, we can write:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | U=\sum\_{m\_{0}=1}^{\infty}f\left(m\_{0}\right)\,h\left(m\_{0}\right) |  | (25) |
+
+As demonstrated in the previous section of the paper, the function h\left(m\_{0}\right) can be expanded in terms of the functions p as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | h\left(m\_{0}\right)=p\left(m\_{0}\right)+\sum\_{z=1}^{\infty}g\left(z+m\_{0},m\_{0% }\right)\,p\left(z+m\_{0}\right) |  | (19) |
+
+|  |  |  |
+| --- | --- | --- |
+|  | h\left(m\_{0}\right)=p\left(m\_{0}\right)+g\left(1+m\_{0},m\_{0}\right)\,p\left(1+% m\_{0}\right)+g\left(2+m\_{0},m\_{0}\right)\,p\left(2+m\_{0}\right)+\ldots |  |
+
+This expansion possesses the following properties:
+
+* •
+
+  For n=m\_{0}, the coefficient of p(n) in the expansion of h\left(m\_{0}\right) is equal to 1.
+* •
+
+  For n=m\_{0}+c, where c\in\mathbb{N}, the coefficient of p(n) in the expansion of h\left(m\_{0}\right) is equal to g\left(n,m\_{0}\right).
+
+In the following, we will use these properties of the expansion of h to extract the coefficients of p(n) from the function U. For this purpose, we first need to determine which h functions, upon expansion, yield p(n).

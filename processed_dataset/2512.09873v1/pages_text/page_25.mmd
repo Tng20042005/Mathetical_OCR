@@ -1,0 +1,77 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{t}u\pm\partial\_{x}u=0,\quad u|\_{t=0}=f(x) |  |
+
+is given by
+
+|  |  |  |
+| --- | --- | --- |
+|  | u(t,x)=f(x\mp t).\quad\mbox{ for a.e. }(t,x)\in\mathbb{R}\times{\mathbb{T}}. |  |
+
+###### Proof.
+
+We only consider the equation \partial\_{t}u+\partial\_{x}u=0. The other case is similar. Assume that f has the Fourier expansion in L^{2}({\mathbb{T}}) sense, namely
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle f(x)=\sum\_{k}a\_{k}e^{ikx}\quad\mbox{ in }L^{2}({\mathbb{T}}). |  | (A.4) |
+
+Then the unique solution is given by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle u(t,x)=\sum\_{k}a\_{k}e^{ik(x-t)}\quad\mbox{ in }L^{2}({\mathbb{T}}) |  | (A.5) |
+
+for every t\in\mathbb{R}. It is easy to see that it is the unique solution and u\in C(\mathbb{R},L^{2}({\mathbb{T}})). Since f\in L^{2}({\mathbb{T}}), by a famous theorem of Carleson, the L^{2}({\mathbb{T}})-norm convergency in (A.4) can be strengthened to pointwise convergence, namely
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle f(x)=\sum\_{k}a\_{k}e^{ikx}\quad\mbox{ a.e. }x\in{\mathbb{T}}. |  | (A.6) |
+
+Combining (A.5) and (A.6), we find
+
+|  |  |  |
+| --- | --- | --- |
+|  | u(t,x)=f(x-t)\quad\mbox{ for a.e. }(t,x)\in\mathbb{R}\times{\mathbb{T}} |  |
+
+as required.
+∎
+
+Now we prove Lemma 3.1.
+
+###### Proof of Lemma 3.1.
+
+We only prove the result for W:=\partial\_{\eta}U. According to the wave equation, we know \partial\_{\xi}W=0, or equivalently
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{t}W+\partial\_{x}W=0,\quad W|\_{t=0}=f(x) |  |
+
+where f(x)=\partial\_{\eta}W|\_{t=0}=(\partial\_{t}-\partial\_{x})u|\_{t=0}=u\_{1}-u\_{0}%
+\in L^{2}({\mathbb{T}}). Thanks to Lemma A.3, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | W(t,x)=f(x-t)\quad\mbox{ for a.e. }(t,x)\in\mathbb{R}\times{\mathbb{T}}. |  |
+
+In other words, the set
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Sigma=\{(t,x)\in\mathbb{R}\times{\mathbb{T}}:u(t,x)\neq f(x-t)\} |  |
+
+satisfies \mbox{meas}\_{\mathbb{R}^{2}}(\Sigma)=0. For fixed \eta\in{\mathbb{T}}, the \eta-characteristic line L\_{\eta} can be parameterized by t\in\mathbb{R} as
+
+|  |  |  |
+| --- | --- | --- |
+|  | (t,x)=(t,t+\eta). |  |
+
+Define the slice of \Sigma along L\_{\eta} as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Sigma\_{\eta}=\{t\in\mathbb{R}:(t,t+\eta)\in\Sigma\}. |  |
+
+Then, for (t,x)\in L\_{\eta}, we have u(t,x)=f(\eta) if and only if t\notin\Sigma\_{\eta}.
+
+Let \chi\_{\Sigma} be the characteristic function of \Sigma. Then we have

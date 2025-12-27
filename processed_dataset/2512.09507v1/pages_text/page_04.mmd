@@ -1,0 +1,39 @@
+Let \Gamma be a group, and let (Y,\nu) be a \sigma-finite measure space equipped with a right action \Gamma\curvearrowright(Y,\nu) by measure-preserving transformations. For p\in[1,\infty] and \gamma\in\Gamma, we define a bounded linear operator \alpha\_{p}(\gamma)\in\mathbb{B}(L^{p}(Y,\nu)) by
+
+|  |  |  |
+| --- | --- | --- |
+|  | (\alpha\_{p}(\gamma)f)(x)=f(x\gamma)\qquad\text{for }f\in L^{p}(Y,\nu),\ x\in Y\,. |  |
+
+By abuse of notation, we will usually suppress the parameter p and simply write \alpha:=\alpha\_{p}.
+
+A functional m\in L^{\infty}(Y,\nu)^{\*} is called a *mean* on Y if m(1)=1 and m(f)\geq 0 whenever f\geq 0. Since the set of all means on Y is a weak{}^{\*}-closed subset of the unit ball of L^{\infty}(Y,\nu)^{\*}, it is weak{}^{\*}-compact. A mean m\in L^{\infty}(Y,\nu)^{\*} is called *\Gamma-invariant* if m(\alpha(\gamma)f)=m(f) for all f\in L^{\infty}(Y,\nu), \gamma\in\Gamma.
+
+In the next section, we will use several standard characterizations of the existence of almost invariant vectors and the connection with invariant means found in [Ha24, Theorem 2.6, Theorem 2.7, Theorem 2.8].
+
+### 2.4. Measured groupoids
+
+For a groupoid \mathcal{G} we denote its *unit space* by \mathcal{G}^{(0)}, and we write s and t for the *source* and *target* maps, respectively. The set of *composable pairs* of \mathcal{G} is denoted by \mathcal{G}^{(2)}:=\{(g,h)\in\mathcal{G}\times\mathcal{G}\mid s(g)=t(h)\}, while g^{-1} denotes the inverse of an element g\in\mathcal{G}.
+
+For any subset E\subseteq\mathcal{G}^{(0)} we set
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathcal{G}\_{E}:=s^{-1}(E),\quad\mathcal{G}^{E}:=t^{-1}(E),\quad\mathcal{G}\_{E% }^{E}:=\mathcal{G}\_{E}\cap\mathcal{G}^{E}\,, |  |
+
+and for x\in\mathcal{G}^{(0)} we abbreviate \mathcal{G}\_{x}:=\mathcal{G}\_{\{x\}}, \mathcal{G}^{x}:=\mathcal{G}^{\{x\}}, and \mathcal{G}\_{x}^{x}:=\mathcal{G}\_{\{x\}}^{\{x\}}. Furthermore, for subsets A,B\subseteq\mathcal{G} we define AB to be the set of products ab with a\in A and b\in B for which s(a)=t(b), which may be empty.
+
+A *discrete Borel groupoid* is a groupoid \mathcal{G} endowed with the structure of a standard Borel space such that the unit space \mathcal{G}^{(0)} is a Borel subset of \mathcal{G}, the maps s, t, multiplication, and inversion are Borel measurable functions, and all source and target fibres are at most countable (i.e. s and t are countable-to-one). Given such a groupoid and a Borel probability measure \mu on \mathcal{G}^{(0)}, we define measures \mu\_{s} and \mu\_{t} on \mathcal{G} by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mu\_{s}(A):=\int\_{\mathcal{G}^{(0)}}\#(\mathcal{G}\_{x}\cap A)\,d\mu(x)\,,% \qquad\mu\_{t}(A):=\int\_{\mathcal{G}^{(0)}}\#(\mathcal{G}^{x}\cap A)\,d\mu(x)\,, |  |
+
+for every Borel set A\subseteq\mathcal{G}.
+We say that the pair (\mathcal{G},\mu) is a *discrete probability measure-preserving* (*discrete p.m.p.*) groupoid if \mu\_{s}=\mu\_{t}; in this case we also say that \mathcal{G} *preserves* the measure \mu.
+
+Let (\mathcal{G},\mu) be a discrete p.m.p. groupoid. A Borel subset E\subseteq\mathcal{G}^{(0)} is called *invariant* if \mu(t(\mathcal{G}E)\triangle E)=0.
+The pair (\mathcal{G},\mu) is called *ergodic* if every invariant Borel set E\subseteq\mathcal{G}^{(0)} satisfies \mu(E)\in\{0,1\}.
+
+A Borel subset \gamma\subseteq\mathcal{G} is a (Borel) *bisection* if for every x\in\mathcal{G}^{(0)} both sets \gamma\{x\} and \{x\}\gamma contain at most one element. The collection of all Borel bisections forms an inverse semigroup under the product (\gamma,\gamma^{\prime})\mapsto\gamma\gamma^{\prime}.
+The *full group* [\mathcal{G}] of \mathcal{G} consists of all Borel bisections \gamma satisfying \gamma\gamma^{-1}=\gamma^{-1}\gamma=\mathcal{G}^{(0)}.
+For \gamma\in[\mathcal{G}] and x\in\mathcal{G}^{(0)} we identify the singleton sets \gamma x

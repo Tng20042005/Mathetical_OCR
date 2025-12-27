@@ -1,0 +1,36 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathbb{H}(x;\bm{\theta}):=\int\_{0}^{x}y^{\theta\_{6}}\exp\left(-\theta\_{1}y-(% \theta\_{2}y^{\theta\_{3}}+\theta\_{4})^{\theta\_{5}}\right){\rm d}y,\leavevmode% \nobreak\ x>0. |  | (5) |
+
+Observe that h\_{y}(\bm{\theta})=c(\bm{\theta})g(y;\bm{\theta}). Then, the CDF corresponding to g(y;\bm{\theta}) is given by
+
+|  |  |  |
+| --- | --- | --- |
+|  | G(x;\bm{\theta})=\frac{1}{c(\bm{\theta})}\int\_{0}^{x}h\_{y}(\bm{\theta}){\rm d}% y,\leavevmode\nobreak\ x>0. |  |
+
+When \theta\_{5}=m\in\mathbb{N}, it follows from Eq.(16) in [22] that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathbb{H}(\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},m,\theta\_{6})=\sum\_{n=0% }^{\infty}\frac{(-1)^{n}\theta\_{4}^{mn}}{n!}\sum\_{k=0}^{mn}\left(\begin{array}% []{c}mn\\ k\end{array}\right)\left(\frac{\theta\_{2}}{\theta\_{4}}\right)^{k}\frac{\Gamma(% \theta\_{6}+\theta\_{3}k+1)}{\theta\_{1}^{\theta\_{6}+\theta\_{3}k+1}}. |  | (6) |
+
+thus, we can write (5) in terms of series as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathbb{H}(x;\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},m,\theta\_{6})=\sum\_{n% =0}^{\infty}\frac{(-1)^{n}\theta\_{4}^{mn}}{n!}\sum\_{k=0}^{mn}\left(\begin{% array}[]{c}mn\\ k\end{array}\right)\left(\frac{\theta\_{2}}{\theta\_{4}}\right)^{k}\frac{\gamma(% \theta\_{6}+\theta\_{3}k+1,x)}{\theta\_{1}^{\theta\_{6}+\theta\_{3}k+1}},% \leavevmode\nobreak\ x>0, |  | (7) |
+
+where \gamma(p,x) is the incomplete gamma function \gamma(p,x)=\int\_{0}^{x}w^{p-1}{\rm e}^{-w}{\rm d}w.
+Note that by taking x\to\infty in (7) we get (6).
+
+Another important function is \int\_{x}^{\infty}h\_{y}(\bm{\theta}){\rm d}y. It can be used, for example, to define the survival function and the Hazard function. Thus,
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\int\_{x}^{\infty}h\_{y}(\bm{\theta}){\rm d}y | \displaystyle= | \displaystyle\mathbb{H}(\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},m,\theta\_{% 6})-\mathbb{H}(x;\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},m,\theta\_{6}), |  |
+
+which can be further manipulated, by considering (6) and (7), to obtain
+
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | \displaystyle\int\_{x}^{\infty}h\_{y}(\bm{\theta}){\rm d}y | \displaystyle= | \displaystyle\sum\_{n=0}^{\infty}\frac{(-1)^{n}\theta\_{4}^{mn}}{n!}\sum\_{k=0}^{% mn}\left(\begin{array}[]{c}\hidden@noalign{}\hfil mn\\ \hidden@noalign{}\hfil k\end{arr

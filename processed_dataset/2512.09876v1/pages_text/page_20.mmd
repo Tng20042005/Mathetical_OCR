@@ -1,0 +1,88 @@
+where we have used the canonical isomorphism \pi^{-1}(\omega\_{Z/X})=\omega\_{N\_{Z}X/Z} of line bundles.
+Denote by r\_{Z/X}=(\pi^{!})^{-1} its inverse.
+
+###### Definition 2.2.3.
+
+With the previous notations, we define the map
+
+i^{!}:A\_{\*}(X,\mathcal{M}\_{q},\*)\to A\_{\*-n}(Z,\mathcal{M}\_{q},\omega\_{i}%
+\otimes\*)
+
+by putting i^{!}=r\_{Z/X}\circ J\_{Z/X} and call it the Gysin morphism of i.
+
+###### 2.2.4.
+
+Let X and Y be two S-schemes and let f:Y\to X be an slci morphism. Consider a factorization
+\xymatrix{Y\ar[r]^{i}&P\ar[r]^{p}X} of f into a regular closed immersion
+followed by a smooth morphism. As in [Fel20, Section 10], we see that the composition i^{!}p^{!} does not depend on the chosen factorization.
+
+###### Definition 2.2.5.
+
+Keeping the previous notations and let d be the relative dimension of f.
+We define the Gysin morphism associated to f as the morphism
+(where we have made twists explicit)
+
+|  |  |  |
+| --- | --- | --- |
+|  | f^{!}=i^{!}\circ p^{!}:A\_{\*}(X,\mathcal{M},\mathcal{L})\to A\_{\*+d}(Y,\mathcal{% M},\omega\_{f}\otimes f^{-1}\mathcal{L}). |  |
+
+###### Proposition 2.2.6.
+
+Consider slci morphisms \xymatrix{Z\ar[r]^{g}&Y\ar[r]^{f}X} such that
+g\circ f is smoothable, thus slci.
+Then
+
+g^{!}\circ f^{!}=(f\circ g)^{!}.
+
+###### Proof.
+
+As in [Fel20, Prop. 10.12]. ∎
+
+###### 2.2.7.
+
+The drawback of working with slci (recall: smoothable lci) morphisms is that they
+are not necessarily stable under composition.
+If one wants an appropriate site \mathscr{S}\_{S} of S-schemes
+and such that every morphism is slci, one can consider the following ones:
+
+1. (1)
+
+   the site of smoothable separate (e.g. quasi-projective in the sense of
+   Hartshorne) S-schemes with slci morphisms;
+2. (2)
+
+   the site of separated (or affine) smooth S-schemes.
+
+In any of those cases, morphisms in the underlying site admit a canonical factorization
+into a regular closed immersion followed by a smooth morphism,
+using the S-graph construction.
+
+###### Proposition 2.2.8 (Base change for slci morphisms).
+
+Consider a cartesian square of S-schemes
+
+\xymatrix@=10pt{Y^{\prime}\ar[r]^{g}\ar[d]\_{q}&X^{\prime}\ar[d]^{p}\\
+Y\ar[r]\_{f}X}
+
+with p proper and f slci.
+Assume that the square is transversal in the sense that the morphism g is slci and
+the canonical map p^{!}\omega\_{f}\to\omega\_{g} is an isomorphism.
+We have (up to the canonical isomorphism induced by the previous isomorphism):
+
+f^{!}\circ p\_{\*}=q\_{\*}\circ g^{!}
+
+which is compatible with horizontal and vertical compositions of transversal squares.
+
+###### Proof.
+
+As in [Fel20, Prop. 10.13].
+∎
+
+Applying the above proposition to the case p=i is a closed immersion, one gets:
+
+###### Corollary 2.2.9.
+
+The localization long exact sequence (1.5.8.a) associated with a closed immersion i
+is functorial with respect to pullbacks along slci morphism transversal to i.
+
+### 2.3. Excess intersection

@@ -1,0 +1,32 @@
+When trying to equip (\mathcal{P}\_{2}(\mathbb{R}^{d}),W\_{2}) with the tangent space of (1), it is clear that we are quite far from obtaining the structure of a tangent bundle. Indeed, the nature of the candidate tangent space varies too much with \mu and makes any sort of local trivialization impossible.
+
+However, the identification of T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})) with a subset of \mathcal{P}(\mathbb{R}^{2d}) that we proposed hints a sheaf structure for this tangent space, that we establish in the next proposition.
+
+###### Proposition 2.2.
+
+The functor \mathcal{F} which associates to any open set U\subset(\mathcal{P}\_{2}(\mathbb{R}^{d}),W\_{2}) \mathcal{F}(U):=\{\varphi:U\to\mathcal{P}\_{2}(\mathbb{R}^{2d})|\varphi\text{ %
+is continuous },(\pi\_{1})\_{\#}\circ\varphi=Id\} defines a sheaf on \mathcal{P}\_{2}(\mathbb{R}^{d}) when associated to the standard restriction morphisms. Furthermore, the stalk \mathcal{F}\_{\mu} of \mathcal{F} over some \mu\in\mathcal{P}\_{2}(\mathbb{R}^{d}) is given by \{\gamma\in\mathcal{P}\_{2}(\mathbb{R}^{2d})|(\pi\_{1})\_{\#}\gamma=\mu\}, that is by T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})).
+
+###### Proof.
+
+The result is trivial as all the properties of a sheaf are automatically verified. Furthermore, the map (\pi\_{1})\_{\#}\cdot is continuous on \mathcal{P}\_{2}(\mathbb{R}^{2d}), which naturally yields the structure of the stalk.
+∎
+
+#### 2.2.4. Lagrangian vs Eulerian dynamics
+
+In finite dimension, the tangent space to a manifold M at a point x\in M can be thought of as being the set of speeds \dot{\theta}(0) of smooth curves \theta such that \theta(0)=x. In \mathcal{P}\_{p}(\mathbb{R}^{d}), restricting our attention to geodesics and having in mind the Benamou-Brenier dynamic reformulation of optimal transport [4], we know that, formally geodesics (m\_{t})\_{t\in[-1,1]} are given as solution of continuity equations
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{t}m+\text{div}\_{x}(\nabla\_{x}\phi(t,x)m)=0\text{ in }(-1,1)\times% \mathbb{R}^{d}, |  |
+
+for some real valued function \phi:[-1,1]\times\mathbb{R}^{d}\to\mathbb{R}. Hence, the space (1), which thus inherits the Eulerian formulation of geodesics on \mathcal{P}\_{p}(\mathbb{R}^{d}), is the closure of possible speeds \nabla\_{x}\phi(0,\cdot).
+
+A more Lagrangian approach consists in looking at dynamics (m\_{t})\_{t\in[-1,1]} expressed as the law of processes (X\_{t})\_{t\in[-1,1]}, on a standard probabilistic space (\Omega,\mathcal{A},\mathbb{P}). At a Lagrangian level, smoothness implies that X\_{t}(\omega) is a smooth function of t, for almost every \omega. In this context, the speed of the curve is the collection (\dot{X}\_{t}(\omega))\_{\omega\in\Omega}. Keeping track of all the speeds then amounts to being interested in the set of pairs (X\_{0}(\omega),\dot{X}\_{0}(\omega))\_{\omega\in\Omega}, and the fact that we are only interested in the law of such objects leads us to consider \gamma:=\mathcal{L}(X\_{0},\dot{X}\_{0})\in\mathcal{P}(\mathbb{R}^{2d}). We expand on this in Sections 4 and 7.1 below.
+
+#### 2.2.5. Particles approximation
+
+In order to tackle problems on \mathcal{P}\_{p}(\mathbb{R}^{d}), approximations of measures by combinations of N Dirac masses can be considered before passing to the limit N\to\infty. At the level N<\infty, we want to approximate \mathcal{P}\_{p}(\mathbb{R}^{d}) with (\mathbb{R}^{d})^{N} equipped with an appropriate \ell^{p} topology. For x\in(\mathbb{R}^{d})^{N}, the tangent space T\_{x}((\mathbb{R}^{d})^{N}) is simply given by (\mathbb{R}^{d})^{N}. Let (x\_{N})\_{N\geq 1} be a sequence such that x\_{N}\in(\mathbb{R}^{d})^{N} and \lim\_{N\to\infty}\frac{1}{N}\delta\_{x\_{N}^{i}}=\mu\in\mathcal{P}\_{p}(\mathbb{R%
+}^{d}) and (y\_{N})\_{N\geq 1} be such that y\_{N}\in T\_{x\_{N}}(\mathbb{R}^{d})^{N} for all N\geq 1. We then say that (y\_{N}) is going to approximate an element \psi\in T\_{\mu}(\mathcal{P}\_{p}(\mathbb{R}^{d})) if \lim\_{N\to\infty}\frac{1}{N}\delta\_{(x\_{N}^{i},y\_{N}^{i})}=\mu(dx)\psi\_{x}(dz). We then observe the difference with eventual deterministic tangent spaces such as (1) as the fact that there is no restriction of the type x\_{N}^{i}=x\_{N}^{j}\Rightarrow y\_{N}^{i}=y\_{N}^{j}.
+
+## 3. Parallel transport on \mathcal{P}\_{2}(\mathbb{R}^{d})

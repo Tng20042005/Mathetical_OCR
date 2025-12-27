@@ -1,0 +1,65 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}(T)\geqslant n\left(\frac{m(n+1)-\Delta(n-\Delta)+\left% \lfloor\dfrac{2(m-\Delta)^{3}}{n-2}\right\rfloor}{\lambda^{3}}\right). |  | (36) |
+
+###### Proof.
+
+Assume the maximum degree \Delta=\Delta(T) satisfies \Delta>16, and the minimum degree \delta>4. Then, for the degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) where d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right\rfloor<(n+1)m-\Delta(n-% \Delta). |  | (37) |
+
+From (37), considering the terms m(n+1)-\Delta(n-\Delta) and \delta\lambda^{2}, we observe that n\beta\operatorname{irr}+(m\Delta)\geqslant m\beta(n+1)-\Delta\beta(n-\Delta). By assuming \Delta(n-\Delta)\geqslant\delta\lambda^{2}, it follows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right\rfloor-m(n+1)-\Delta(n-% \Delta)\leqslant\delta\lambda^{2}. |  | (38) |
+
+Hence, considering the values of \Delta and \delta leads to (37) and (38). Thus, equation (39) provides an upper bound on the normalized quantity
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\frac{1}{\lambda^{2}}\left(\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right% \rfloor-m(n+1)-\Delta(n-\Delta)\right)\leqslant\frac{2n-2}{2\delta}. |  | (39) |
+
+Moreover, for the term m(n+1) we have m(n+1)=n^{2}-1, and for the term \Delta(n-\Delta), the inequality holds when 2\Delta\leqslant n and \lambda<\Delta. Then, since 2n-2>2\delta and 2n>\lambda^{2}, we observe that \Delta(n-\Delta)>\lambda^{2}. According to (39), for \lambda^{3} it follows that 0<\frac{n}{\lambda^{3}}<1. By considering \lambda>\delta, we obtain
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}(T)\geqslant\frac{n-1}{2\delta}\left(m(n+1)-\Delta(n-% \Delta)+\left\lfloor\dfrac{2(m-\Delta)^{3}}{n-2}\right\rfloor\right). |  | (40) |
+
+Therefore, from (37)–(40) we conclude that (36) holds.
+∎
+
+Theorem 5.2 establishes a fundamental lower bound on the Albertson irregularity index \operatorname{irr}(T) of a tree T by consider the average degree \lambda of its degree sequence. The theorem is significant for extremal graph theory as it facilitates comparisons among trees and supports bounding the Albertson index when exact calculation is difficult. Moreover, it has practical implications in chemical graph theory and network analysis, where the Albertson index correlates with molecular stability and network heterogeneity. This bound enriches the theoretical understanding and broadens applications of degree-based topological indices in graph theory.
+Through Theorem 5.2, we present in Corollary 5.1 the lower bound of the Albertson index.
+
+###### Corollary 5.1.
+
+Let T be a tree with n vertices and m edges, according to Theorem 5.2. Then,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\operatorname{irr}(T)\geqslant\frac{4m^{2}}{n}+\left\lfloor\frac{2n}{3}% \right\rfloor+\left\lceil\frac{2n+1}{3}\right\rceil. |  | (41) |
+
+Theorem 5.3 consider \lambda\_{\max} and \lambda\_{\min} denote the maximum and minimum values of \lambda, where \lambda is the average degree in the degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) with d\_{n}\geq d\_{n-1}\geq\cdots\geq d\_{1}.
+
+###### Theorem 5.3.
+
+Let T be a tree with n vertices and m edges, and let \lambda\_{\max}, \lambda\_{\min} be the maximum and minimum values of \lambda. Then,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}\frac{4m^{2}-2m((\Delta+\lambda\_{\min})(n-1))}{3\Delta+n}\leq\operatorname{% irr}(T)\leq\frac{m\alpha^{3}+\lambda\_{\max}(n-1)}{n+4\lambda\delta^{2}}. |  | (42) |
+
+###### Proof.
+
+Assume \lambda is the average of the degrees in the degree sequence \mathscr{D}=(d\_{1},d\_{2},\dots,d\_{n}) where d\_{n}\geqslant d\_{n-1}\geqslant\dots\geqslant d\_{2}\geqslant d\_{1}. Then for \lambda\_{\max} and \lambda\_{\min} as the maximum and minimum values of \lambda, we have 3\delta<\lambda\_{\min}\leqslant\lambda\_{\max}<\Delta.
+
+According to Theorem 5.2, we find that \operatorname{irr}(T)<m(n+1)-\Delta(n-\Delta) and clearly \operatorname{irr}(T)<4m^{2}. Then,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | ~{}4m^{2}\operatorname{irr}(T)>2m((\Delta+\lambda\_{\min})(n-1)), |  | (43) |
+
+where 2m((\Delta+\lambda\_{\min})(n-1))>4m^{2}. Thus, from (43) we observe that the left-hand side of the inequality (42) holds, considering that the value 3\Delta+n satisfies Albertson index \operatorname{irr}(T)>3\Delta+n.

@@ -1,0 +1,43 @@
+Random walks on cocompact Fuchsian and Kleinian groups
+
+# Random walks on cocompact Fuchsian and Kleinian groups
+
+Nikolay Bogachev
+Department of Computer and Mathematical Sciences, University of Toronto Scarborough, 1095 Military Trail, Toronto, ON M1C 1A3, Canada
+n.bogachev@utoronto.ca
+, 
+Petr Kosenko
+Department of Mathematics, University of British Columbia, Canada
+pkosenko@math.ubc.ca
+ and 
+Giulio Tiozzo
+Department of Mathematics, University of Toronto, 40 St George Street, Toronto ON, M5S 2E4, Canada
+tiozzo@math.utoronto.ca
+
+###### Abstract.
+
+The question of the singularity at infinity of the hitting measure of random walks has a long history, originating from the work of Furstenberg in the 1960s. In 2011, Kaimanovich and Le Prince conjectured that the hitting measure of any finitely supported random walk on a discrete subgroup \Gamma of \mathrm{SL}\_{N}(\mathbb{R}) is singular at infinity with respect to the Lebesgue measure. Using algebraic and geometric convergence and hyperbolic Dehn filling, we prove the singularity conjecture for certain measures on “most” cocompact Fuchsian and Kleinian groups.
+
+###### 2020 Mathematics Subject Classification:
+
+\usetikzlibrary
+
+shapes,arrows
+\usetikzlibraryfit,positioning
+\usetikzlibrarypatterns,decorations.pathreplacing
+\usetikzlibrarydecorations.pathmorphing,arrows.meta
+\usepgfmoduleshapes,plot,decorations
+
+## 1. Introduction
+
+This paper concerns hitting measures of finitely supported random walks on finitely generated discrete subgroups of isometries of hyperbolic spaces \mathbb{H}^{d}. This subject is currently of growing interest due to the rich interplay between geometric group theory, geometric topology, probability and dynamics. One of the central questions in this field is the singularity conjecture of Kaimanovich and Le Prince [19], which can be broadly formulated for discrete subgroups \Gamma<\mathrm{SL}\_{N}(\mathbb{R}) as follows.
+
+###### Conjecture 1.1 (Kaimanovich and Le Prince [19]).
+
+The hitting measure of any random walk finitely supported on a discrete subgroup \Gamma<\mathrm{SL}\_{N}(\mathbb{R}) is singular at infinity with respect to the Lebesgue measure.
+
+This conjecture has, in fact, a very long history originating from the work of Furstenberg [11, 12] who proved that for any lattice \Gamma in a semisimple Lie group, there exists an infinitely-supported random walk on \Gamma with finite first moment in the hyperbolic metric such that the hitting measure is absolutely continuous on the boundary.
+
+The singularity conjecture remains widely open even for lattices in Lie groups, including \mathrm{PSL}\_{2}(\mathbb{R}), \mathrm{PSL}\_{2}(\mathbb{C}), and \mathrm{PO}\_{d,1}(\mathbb{R}). We are primarily interested in hyperbolic lattices \Gamma<\mathrm{Isom}(\mathbb{H}^{d})\cong\mathrm{PO}\_{d,1}(\mathbb{R}). The orientation-preserving isometry group \mathrm{Isom}^{+}(\mathbb{H}^{d}) of \mathbb{H}^{d} can be identified with \mathrm{PO}^{\circ}\_{d,1}(\mathbb{R}), and in low dimensions we have \mathrm{Isom}^{+}(\mathbb{H}^{2})\cong\mathrm{PSL}\_{2}(\mathbb{R}) and \mathrm{Isom}^{+}(\mathbb{H}^{3})\cong\mathrm{PSL}\_{2}(\mathbb{C}). Discrete subgroups of the latter two Lie groups are called Fuchsian and Kleinian, respectively.
+
+As mentioned above, even in the special case of hyperbolic lattices, Conjecture 1.1 is still open; however, some progress was obtained. The singularity conjecture is proven for non-uniform lattices in \mathrm{PSL}\_{2}(\mathbb{R}), see Guivarc’h–Le Jan [16], Deroin–Kleptsyn–Navas [9], and Blachère–Haïssinsky–Mathieu [5]. Recently, Randecker–Tiozzo [29] proved this conjecture for random walks on all non-uniform hyperbolic lattices \Gamma<\mathrm{PO}\_{d,1}(\mathbb{R}). A similar result for cocompact Fuchsian groups with centrally symmetric fundamental domains was obtained by Kosenko–Tiozzo [24]. Not that much is known in higher

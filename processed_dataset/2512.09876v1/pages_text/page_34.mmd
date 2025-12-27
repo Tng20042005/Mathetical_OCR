@@ -1,0 +1,49 @@
+Then the two remaining exact sequences follow from this isomorphism
+and from the following cartesian square of abelian groups:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.4.5.f) |  | \xymatrix@=10pt{\operatorname{K}^{MW}\_{n}(E)\ar^{F}[r]\ar[d]\ar@/\_{4}8pt/\_{P}[% dd]&\operatorname{K}^{M}\_{n}(E)\ar[d]\\ \operatorname{K}^{MW}\_{n}(E)/h\ar\_{-}{\wr}^{\eqref{eq:KMWhI}}[d]\operatorname{% K}^{M}\_{n}(E)/2\ar^{-}{\wr}\_{(2)}[d]\\ \operatorname{I}^{n}(E)\ar[r]\operatorname{I}^{n}(E)/\operatorname{I}^{n+1}(E)} |  |
+
+The remaining of the statement is now obvious.
+∎
+
+To state the main corollary of the previous theorem we will use the notation from 3.3.7,
+and anticipate the next section by using that of 3.5.11. One then deduces the
+following important computation tool.
+
+###### Corollary 3.4.6.
+
+Let (S,\delta,\lambda) be a scheme equipped with a dimension function and a pinning.
+Let X be an S-scheme essentially of finite type and \mathcal{L} a line bundle over S.
+Then one gets long exact sequences:
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.4.6.a) |  | \displaystyle\ldots\rightarrow A\_{p}(X,\operatorname{I}^{q+1},\mathcal{L})% \xrightarrow{\nu} | \displaystyle A\_{p}(X,\operatorname{I}^{q},\mathcal{L})\rightarrow A\_{p}(X,% \operatorname{K}^{M}\_{q}/2)\rightarrow A\_{p-1}(X,\operatorname{I}^{q-1},% \mathcal{L})\rightarrow\ldots |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.4.6.b) |  | \displaystyle\ldots\rightarrow A\_{p}(X,\operatorname{I}^{q+1},\mathcal{L})\rightarrow | \displaystyle A\_{p}(X,\operatorname{K}^{MW}\_{q},\mathcal{L})\xrightarrow{F}A\_{% p}(X,\operatorname{K}^{M}\_{q})\rightarrow A\_{p-1}(X,\operatorname{I}^{q+1},% \mathcal{L})\rightarrow... |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.4.6.c) |  | \displaystyle\ldots\rightarrow A\_{p}(X,2\operatorname{K}^{M}\_{q})\xrightarrow{H} | \displaystyle A\_{p}(X,\operatorname{K}^{MW}\_{q},\mathcal{L})\xrightarrow{P}A\_{% p}(X,\operatorname{I}^{q},\mathcal{L})\rightarrow A\_{p-1}(X,2\operatorname{K}^% {M}\_{q})\rightarrow\ldots |  |
+
+which are functorial with respect to smoothable slci pullbacks, proper pushforwards, multiplication by Euler and Thom classes.
+Moreover, both exact sequence become split after inverting 2: up to identifying 2\operatorname{K}^{M}\_{\*} and \operatorname{K}^{M}\_{\*}, one has the relation
+F\circ H=2.\operatorname{Id}.
+
+###### Remark 3.4.7.
+
+Absolute Chow-Witt homology.
+We indicate to the reader another possible notation for the complexes and their homology defined in 3.3.7,
+when it comes to the MW-module M=\operatorname{K}^{MW}\_{\*}, or another variant obtained by localization or quotient as above (see 3.3.6).
+We fix a scheme X. To simplify the notation, we consider a pair \hat{\lambda}=(\lambda,\delta) made by a pinning \lambda and a dimension function \delta on S
+— such a pair could be called a *dimensional pinning*, and corresponds to a section of the
+Picard category of graded line bundles [Del87, 4.14].
+Then one can put:
+
+|  |  |  |
+| --- | --- | --- |
+|  | C\_{p}(X,M\_{q},\hat{\lambda})=C\_{p}(X,\mathcal{D}\_{\lambda}(M)\_{q},\mathcal{L})% =\bigoplus\_{x\in X\_{(\delta=p)}}M\_{q+p}(x,\lambda\_{x}\otimes\mathcal{L}\_{x}), |  |
+
+where we have make the dimension function explicit. Let A\_{p}(X,M\_{q},\hat{\lambda}) be its homology.

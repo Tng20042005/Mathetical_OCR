@@ -1,0 +1,54 @@
+ends, but [\alpha,\beta] has genus 1 and no ends. Then F\_{0}(\alpha,\beta)=1, but d(\alpha,\beta)\neq 1 because [\alpha,\beta] is not homeomorphic to T\_{n+1}. However, next we give a sufficient condition on [\alpha,\beta] to guarantee that d(\alpha,\beta)=F(\alpha,\beta).
+
+### 4.2. Full subsurfaces
+
+Recall from Section 2.7 the fixed set \mathcal{R}=\left\{{f\_{1},\dots,f\_{N},c\_{1},\dots,c\_{M}}\right\} of representatives of the equivalence classes of maximal ends of S used to define the translatable curve graph.
+
+###### Definition 4.4.
+
+A subsurface T\subset\Sigma is full if {\mathrm{End}}(T) contains an element of E(f\_{i}) for each i=1,\dots,N and an element of E(c\_{j}) for each j=1,\dots,M. If N=0, then S has finite positive genus and we further require T to have positive genus.
+
+Note that the condition above is readily satisfied. For example, suppose \alpha and \beta are separating curves such that \beta lies on the right side of \alpha. Even if [\alpha,\beta] is not itself full, [\alpha,h(\beta)] must be full because it contains a subsurface homeomorphic to S. The proof of the next lemma resembles the proof that \Gamma is connected [SCH24, Lemma 4.7].
+
+###### Lemma 4.5.
+
+Let \alpha and \beta be disjoint separating curves. If [\alpha,\beta] is full, then there exists a straight path from \alpha to \beta of length F(\alpha,\beta). In particular, d(\alpha,\beta)=F(\alpha,\beta).
+
+###### Proof.
+
+Assume without loss of generality that \beta lies on the right side of \alpha. By [SCH24, Lemma 4.5], the end space of [\alpha,\beta] can be expressed as a disjoint union \bigsqcup\_{i=1}^{k}U\_{i} where each U\_{i} is a stable neighborhood of a maximal end equivalent to one of the representatives in \mathcal{R}=\left\{{f\_{1},\dots,f\_{N},c\_{1},\dots,c\_{M}}\right\} chosen above. Moreover, it follows from stability and maximality that each U\_{i} intersects E(r) for exactly one r\in R. On the other hand, for each representative r\in R, at least one of the U\_{i} intersects E(r) because [\alpha,\beta] is full. In particular, k\geq N+M. Put p=p(\alpha,\beta), and note that N\leq p\leq k. Denote by \left\{{V\_{i}}\right\}\_{i=1}^{p} the set of U\_{i} which are stable neighborhoods of discrete-type ends. The remaining U\_{i} (if any exist) are stable neighborhoods of Cantor-type ends. Note that if U\_{i} and U\_{i^{\prime}} both intersect some E(c\_{j}), then the disjoint union U\_{i}\sqcup U\_{i^{\prime}} is again a stable neighborhood which intersects E(c\_{j}). So the remaining U\_{i} may be combined to form a set \left\{{W\_{i}}\right\}\_{i=1}^{M} where for each i=1,\dots,M, W\_{i} is a stable neighborhood of an end equivalent to c\_{i}. In summary, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \bigsqcup\_{i=1}^{k}U\_{i}=\left({\bigsqcup\_{i=1}^{\ell}V\_{i}}\right)\sqcup\left% ({\bigsqcup\_{i=1}^{M}W\_{i}}\right). |  |
+
+Put F=F\_{0}(\alpha,\beta) and g=g\_{0}(\alpha,\beta). Since [\alpha,\beta] is full, F=p+g>0. For each 1\leq i\leq M, E(c\_{i})\cap W\_{i} is a Cantor set. So W\_{i} can be expressed as \bigsqcup\_{j=1}^{F}W\_{i,j} where each W\_{i,j} is a stable neighborhood of an end in E(c\_{i}), and is thus homeomorphic to W\_{i}. For 1\leq j\leq p, put Z\_{j}=V\_{j}\sqcup\bigsqcup\_{i=1}^{M}W\_{i,j}, and for p+1\leq j\leq F, put Z\_{j}=\bigsqcup\_{i=1}^{M}W\_{i,j}. Then the end space of [\alpha,\beta] is equal to \bigsqcup\_{j=1}^{F}Z\_{j} and each Z\_{j} is homeomorphic to {\mathrm{End}}(T) for some T\in\mathcal{S}.
+
+Put \alpha\_{0}=\alpha. For j=1,\dots,p, inductively define \alpha\_{j} to be the lasso curve \alpha\_{j-1}(\eta\_{j},\lambda\_{j}), where the lasso \eta\_{j}\cup\lambda\_{j} is contained in [\alpha\_{j-1},\beta], the end space of C\_{\eta\_{j}} is equal to Z\_{j}, and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{genus}(C\_{\eta\_{j}})=\begin{cases}0\text{ or }\infty,\quad&1\leq j% \leq p,\\ 1,\quad&p<j\leq F.\end{cases} |  |
+
+By construction, for 1\leq j\leq p, [\alpha\_{j-1},\alpha] is homeomorphic to T\_{i}\in\mathcal{S} for some i=1,\dots,n, and for p<j\leq F, [\alpha\_{j-1},\alpha\_{j}] is homeomorphic to T\_{n+1}. Hence, \alpha\_{j-1} and \alpha\_{j} are neighbors in \Gamma for all j=1,\dots,F. Moreover, each \alpha\_{j} lies on the right side of \alpha\_{j-1} by construction, and \alpha\_{F} is isotopic to \beta because [\alpha\_{F},\beta] is an annulus. Therefore, (\alpha\_{0}=\alpha,\dots,\alpha\_{F}=\beta) is a straight path from \alpha to \beta of length F(\alpha,\beta). Since straight paths are geodesic, d(\alpha,\beta)=F(\alpha,\beta).
+∎
+
+In fact, if [\alpha,\beta] is full, then every geodesic in \Gamma from \alpha to \beta must be a straight path.
+
+###### Lemma 4.6.
+
+Let \alpha and \beta be disjoint separating curves such that \beta lies on the right side of \alpha and [\alpha,\beta] is full. If (\gamma\_{0}=\alpha,\gamma\_{1},\dots,\gamma\_{n}=\beta) is any geodesic path in \Gamma between \alpha and \beta, then for each i=1,\dots,n, \gamma\_{i} lies on the right side of \gamma\_{i-1}. In particular, \gamma\_{i} lies in [\alpha,\beta] for all i=0,\dots,n.
+
+###### Proof.
+
+Suppose for contradiction that the conclusion fails, and let j be the smallest index for which \gamma\_{j+1} lies on the left side of \gamma\_{j}. Since \gamma\_{i} lies on the right side of \gamma\_{i-1} for each i=1,\dots,j, it follows from an inductive argument that F(\alpha,\gamma\_{j})=j. Let \eta be a separating curve in \alpha\_{-}\cap{\gamma\_{j+1}}\_{-}. Then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle F\_{0}(\eta,\beta) | \displaystyle=F\_{0}(\eta,\alpha)+F\_{0}(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle F\_{0}(\eta,\gamma\_{j}) | \displaystyle=F\_{0}(\eta,\alpha)+F\_{0}(\alpha,\gamma\_{j}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle F\_{0}(\eta,\gamma\_{j}) | \displaystyle=F\_{0}(\eta,\gamma\_{j+1})+F\_{0}(\gamma\_{j+1},\gamma\_{j}). |  |

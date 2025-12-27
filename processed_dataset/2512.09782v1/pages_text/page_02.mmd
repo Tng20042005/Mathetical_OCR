@@ -1,0 +1,41 @@
+In the case of X=\mathbb{H}^{2}, non-uniform lattices in \textup{Isom}({\mathbb{H}^{2}})=\text{PSL}(2,\mathbb{R}) are virtually the fundamental groups of complete hyperbolic surfaces with finitely many punctures, and hence are virtually free. Any group quasi-isometric to a virtually free group is also virtually free, and every free group can be realized as a non-uniform lattice in \text{PSL}(2,\mathbb{R}), so quasi-isometric rigidity does hold in this case. However, the additional conclusion of commensurability fails. One reason for this failure is that commensurability preserves arithmeticity, and \text{PSL}(2,\mathbb{R}) contains both arithmetic and non-arithmetic non-uniform lattices. But since these lattices are virtually free, they are quasi-isometric to each other.
+
+Following Schwartz, lattices such as \Lambda and \Lambda^{\prime} shall from now on be called non-uniform rank one lattices. Then an informal summary might be: any group quasi-isometric to a non-uniform rank one lattice is almost a commensurable non-uniform rank one lattice.
+
+In an extensive study on high-dimensional graph manifolds [FLS15], Frigerio–Lafont–Sisto prove, among many other things, a quasi-isometric rigidity result for products of the form \pi\_{1}(M)\times\mathbb{Z}^{d}, where M is a complete non-compact finite-volume hyperbolic m-manifold, m\geq 3.
+
+###### Theorem 3 (Frigerio–Lafont–Sisto).
+
+If \Gamma is a finitely generated group quasi-isometric to \pi\_{1}(M)\times\mathbb{Z}^{d}, then there exist short exact sequences
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd 1\rightarrow[r]&\mathbb{Z}^{d}\rightarrow[r,"j"]\Gamma^{\prime}% \rightarrow[r]\Delta\rightarrow[r]1 |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd 1\rightarrow[r]&F\rightarrow[r]\Delta\rightarrow[r]\pi\_{1}(M^{\prime})% \rightarrow[r]1 |  |
+
+where \Gamma^{\prime}\leq\Gamma has finite index, M^{\prime} is a finite-sheeted covering of M, \Delta is a group, and F is a finite group. Moreover, j(\mathbb{Z}^{d}) is contained in the center of \Gamma^{\prime}. In other words, \Gamma is virtually a central extension by \mathbb{Z}^{d} of a finite extension of \pi\_{1}(M^{\prime}).
+
+Observe that the case d=0 is covered by Schwartz’ theorem, and indeed, the proof of this theorem applies many of the ideas and results from [SCH95].
+
+### 1.2. Main results
+
+Our main contribution is a generalization of Theorem 3 to products \Lambda\times L, where \Lambda is a non-uniform rank one lattice and L is a lattice in a simply connected nilpotent Lie group. From now on, a lattice such as L is called a nilpotent lattice. Our first theorem says that up to finite noise, any group quasi-isometric to \Lambda\times L is an extension of a non-uniform rank one lattice commensurable to \Lambda by a nilpotent lattice quasi-isometric to L.
+
+###### Theorem A.
+
+Let X\neq\mathbb{H}^{2} be a negatively curved symmetric space. Let \Lambda be a non-uniform lattice in \textup{Isom}(X) and L be a nilpotent lattice. If \Gamma is a finitely generated group quasi-isometric to \Lambda\times L, then there exist short exact sequences
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1) |  | \tikzcd 1\rightarrow[r]&L^{\prime}\rightarrow[r]\Gamma^{\prime}\rightarrow[r]% \Delta\rightarrow[r]1, |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd 1\rightarrow[r]&F\rightarrow[r]\Delta\rightarrow[r]\Lambda^{\prime}% \rightarrow[r]1. |  |
+
+where \Gamma^{\prime}\leq\Gamma and \Lambda^{\prime}\leq\Lambda have finite index, L^{\prime} is a nilpotent lattice quasi-isometric to L, \Delta is a group, and F is a finite group.
+
+The general outline of the proof is similar to that of the proof of Theorem 3. First, the quasi-isometry between \Gamma and \Lambda\times L induces a quasi-action of \Gamma on B\times N, where B\subset X is the neutered space associated to \Lambda, and N is the simply connected nilpotent Lie group in which L is a lattice. A theorem of Kapovich–Kleiner–Leeb [KKL98] guarantees that quasi-isometries B\times N\to B\times N project to quasi-isometries B\to B, up to bounded error. Thus the quasi-action of \Gamma on B\times N induces a quasi-action of \Gamma on B. A key result in [

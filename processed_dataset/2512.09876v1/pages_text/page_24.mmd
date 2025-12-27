@@ -1,0 +1,52 @@
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.1.2.a) |  | \displaystyle\begin{split}f^{!}:\mathscr{L}(X)&\to\mathscr{L}(Y)\\ v&\mapsto f^{\*}v\otimes\omega\_{f}.\end{split} | |  |
+
+We obtain an extension of the previous pseudo-functor
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.1.2.b) |  | \displaystyle\begin{split}\mathscr{L}^{!}:(\mathcal{G}\_{S})^{op}&\to% \operatorname{Spaces}\\ X&\mapsto\mathscr{L}(X).\end{split} | |  |
+
+###### Definition 3.1.3.
+
+A pinning (or épinglage) on a scheme S is a Cartesian section of \mathscr{L}^{!}. In other words, a pinning on S is a natural transformation of pseudo-functors
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.1.3.a) |  | \displaystyle\lambda:\*\to\mathscr{L}^{!} |  |
+
+where \* denotes the constant functor (\mathcal{G}\_{S})^{op}\to\operatorname{Spaces} sending every object in \mathcal{G}\_{S} to the one-point space.
+
+###### 3.1.4.
+
+Concretely, a pinning \lambda is the following data:999We abuse notation writing A for an object \operatorname{Spec}(A) of \mathcal{G}\_{S}.
+
+1. (1)
+
+   for an S-field E, a line bundle \lambda\_{E} on E;
+2. (2)
+
+   for a morphism of S-fields \phi:F\to E, an isomorphism \phi^{\*}\lambda\_{E}\otimes\omega\_{F/E}\simeq\lambda\_{F};
+3. (3)
+
+   for an S-DVR A, a line bundle \lambda\_{A} on A, together with isomorphisms j^{\*}\lambda\_{A}\simeq\lambda\_{\eta} and i^{\*}\lambda\_{A}\otimes(\mathfrak{m}/\mathfrak{m}^{2})\simeq\lambda\_{s}, where \mathfrak{m} is the maximal ideal of A and i:s\to A and j:\eta\to A are the inclusions of the closed point and the generic point;
+4. (4)
+
+   for a morphism \phi:A\to E where A is an S-DVR and E is an S-field, an isomorphism \phi^{\*}\lambda\_{E}\otimes\omega\_{A/E}\simeq\lambda\_{A};
+5. (5)
+
+   for an extension \phi:B\to A of S-DVRs, an isomorphism \phi^{\*}\lambda\_{A}\otimes\omega\_{B/A}\simeq\lambda\_{B}.
+
+There are natural compatibilities with the isomorphisms above, which we do not write down.
+
+###### Example 3.1.5.
+
+Let \mathcal{K} be a (coherent) dualizing complex on S (see [Har66, Chapter V, Proposition 2.1]). For every object f:X\to S in \mathcal{G}\_{S}, the object f^{!}\mathcal{K} is a dualizing complex on S, and since X is a regular scheme, there is a line bundle K\_{(X)} on X and an integer \mu\_{K}(X) such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.1.5.a) |  | \displaystyle f^{!}\mathcal{K}=K\_{(X)}[-\mu\_{K}(X)]. |  |
+
+Then there is a pinning \lambda on S such that \lambda\_{X}=K\_{(X)}.
+Note also that when X is a point of S, the map X\mapsto-\mu\_{K}(X) defines a dimension function on S (see [Har66, Chapter V, §7]).

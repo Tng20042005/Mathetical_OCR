@@ -1,0 +1,50 @@
+| --- | --- | --- | --- |
+|  | a\_{n}=-B(2n,2n^{\prime})g(n+n^{\prime},n^{\prime}) |  | (31) |
+
+Therefore, the n-th coefficient can be computed by having the previous coefficients:
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{n-m}=-B(2n-2m,2n^{\prime})g(n-m+n^{\prime},n^{\prime})\overset{m=n^{\prime}% }{\rightarrow} |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{n-n^{\prime}}=-B(2n-2n^{\prime},2n^{\prime})g(n,n^{\prime}); |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | g(n,n^{\prime})=-\frac{a\_{n-n^{\prime}}}{B(2n-2n^{\prime},2n^{\prime})}=-a\_{n-% n^{\prime}}\frac{\Gamma(2n)}{\Gamma(2n-2n^{\prime})\Gamma(2n^{\prime})}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | g(n,n^{\prime})=-a\_{n-n^{\prime}}\frac{(2n-1)!}{(2n-2n^{\prime}-1)!(2n^{\prime% }-1)!}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | g(n,n^{\prime})=-(2n^{\prime})\binom{2n-1}{2n^{\prime}}a\_{n-n^{\prime}}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{n}=f(n)-\sum\_{n^{\prime}=1}^{n-1}f(n^{\prime})(2n^{\prime})\binom{2n-1}{2n^% {\prime}}a\_{n-n^{\prime}} |  |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \mathbf{a\_{n}}=\frac{\mathbf{1}}{\mathbf{2}^{2n}(2n+4n^{2})}-\sum\_{n^{\prime}=% 1}^{n-1}\frac{\binom{2n-1}{2n^{\prime}}}{2^{2n^{\prime}}(2n^{\prime}+1)}% \mathbf{a\_{n-n^{\prime}}} |  | (29) |
+
+In the following, from the combination of relation number (22) and (27), we obtain:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | a\_{n}=\frac{-(2n-1)!}{2^{2n}}K\_{b}(n); |  | (32) |
+
+Finally, by substituting the above relation into relation (29), a simpler and more optimized method for computing K\_{b}(n) is obtained:
+
+|  |  |  |
+| --- | --- | --- |
+|  | K\_{b}(n)=-\frac{1}{(2n+1)!}-\sum\_{n^{\prime}=1}^{n-1}\frac{K\_{b}(n^{\prime})}{% (2(n-n^{\prime})+1)!},\quad n\geq 1 |  |
+
+Now, given that K\_{b}(1)=-\frac{1}{6}, we can modify the equation as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | K\_{b}(n)=\begin{cases}1&n=0\\ -\sum\_{n^{\prime}=0}^{n-1}\frac{K\_{b}(n^{\prime})}{(2(n-n^{\prime})+1)!}&n\geq 1% \end{cases} |  | (13) |

@@ -1,0 +1,75 @@
+It is well known (see [29, 10]) that the connected graphs of rank 2 are exactly complete bipartite graphs:
+
+###### Lemma 4.
+
+[29, 10]
+Let G be a connected graph of order n.
+Then \operatorname{rk}(G)=2 if and only if G\cong K\_{n\_{1},n\_{2}} with n\_{1},n\_{2}\geq 1.
+
+###### Lemma 5.
+
+Let G be a connected graph of order n and girth g(G).
+Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | m(G,\lambda)=n-g(G)+2 |  |
+
+for some \lambda\in\mathbb{R} if and only if G\cong K\_{n\_{1},n\_{2}} with n\_{1},n\_{2}>1 and \lambda=0.
+
+###### Proof.
+
+Sufficiency.
+If G\cong K\_{n\_{1},n\_{2}} with n\_{1},n\_{2}>1, then g(G)=4 and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathrm{Spec}(G)=\{\sqrt{n\_{1}n\_{2}},\,-\sqrt{n\_{1}n\_{2}},\,0^{(n-2)}\}. |  |
+
+Thus m(G,0)=n-2=n-4+2=n-g(G)+2.
+
+Necessity.
+Assume m(G,\lambda)=n-g+2. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{rank}(\lambda I-A(G))=g-2. |  |
+
+Let C be a shortest cycle of G.
+Since A(C) is a principal submatrix of A(G), interlacing implies
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{rank}(\lambda I-A(C))\leq g-2. |  |
+
+The only cycle for which \operatorname{rank}(\lambda I-A(C))\leq g-2 is a 4-cycle, because for g\geq 5 the matrix
+\lambda I-A(C) has rank at least g-1.
+Hence g=4, so
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{rank}(\lambda I-A(G))=2. |  |
+
+Thus \operatorname{rank}(A(G))=2, and by Lemma 4, G\cong K\_{n\_{1},n\_{2}}.
+Since both parts must contain at least two vertices to have girth 4, we obtain n\_{1},n\_{2}>1.
+Finally, because the only eigenvalue of multiplicity n-2 in \mathrm{Spec}(K\_{n\_{1},n\_{2}}) is 0, we conclude \lambda=0.
+∎
+
+###### Theorem 3.
+
+Let G^{\sigma} be a connected signed graph of order n\geq 3 and girth g(G^{\sigma}).
+Then for any real eigenvalue \lambda,
+
+|  |  |  |
+| --- | --- | --- |
+|  | m(G^{\sigma},\lambda)\leq n-g(G^{\sigma})+2, |  |
+
+and equality holds if and only if
+
+1. (i)
+
+   G^{\sigma} is a balanced complete signed graph K\_{n}^{\sigma} with \lambda=-1;
+2. (ii)
+
+   G^{\sigma} is an antibalanced complete signed graph K\_{n}^{\sigma} with \lambda=1;
+3. (iii)

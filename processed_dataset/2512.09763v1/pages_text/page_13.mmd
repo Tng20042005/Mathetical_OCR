@@ -1,0 +1,37 @@
+Before comparing two elements in different tangent spaces, we need to be able to do so for elements in the same one. Let \mu\in\mathcal{P}\_{2}(\mathbb{R}^{d}). Recall that there is an equivalence between choosing \psi\in T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})) and choosing \gamma\in\mathcal{P}(\mathbb{R}^{2d}) such that (\pi\_{1})\_{\#}\gamma=\mu, where \gamma(dx,dz)=\mu(dx)\psi\_{x}(dz). This could argue in favor of using a simple Wasserstein distance between \mu(dx)\psi\_{x}(dz) and \mu(dx)\psi^{\prime}\_{x}(dz), for \psi,\psi^{\prime}\in T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})), however this does not work and we refer to the proof of Proposition 6.4 below for a convincing argument. The distance we shall use requires a bit more rigidity. It was already considered by Gigli and it is given by either a probabilistic reformulation or a coupling one.
+
+For \psi,\psi^{\prime}\in T\_{\mu}(\mathcal{P}\_{2}(\mathbb{R}^{d})), define d\_{\mu}(\psi,\psi^{\prime}) by
+
+|  |  |  |
+| --- | --- | --- |
+|  | d^{2}\_{\mu}(\psi,\psi^{\prime}):=\inf\_{\gamma}\int\_{\mathbb{R}^{d}\times% \mathbb{R}^{d}\times\mathbb{R}^{d}}|z-z^{\prime}|^{2}\gamma(dx,dz,dz^{\prime}), |  |
+
+where the infimum is taken over probability measures \gamma\in\mathcal{P}(\mathbb{R}^{d}\times\mathbb{R}^{d}\times\mathbb{R}^{d}) such that (\pi\_{1},\pi\_{2})\_{\#}\gamma=\mu(dx)\psi\_{x}(dz) and (\pi\_{1},\pi\_{3})\_{\#}\gamma=\mu(dx)\psi^{\prime}\_{x}(dz). Equivalently, this quantity can be defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | d^{2}\_{\mu}(\psi,\psi^{\prime}):=\inf\_{(X,Z,Z^{\prime})}\mathbb{E}[|Z-Z^{% \prime}|^{2}], |  |
+
+where the infimum is taken over triplets of random variables (X,Z,Z^{\prime}) such that \mathcal{L}(X,Z)=\mu(dx)\psi\_{x}(dz) and \mathcal{L}(X,Z^{\prime})=\mu(dx)\psi^{\prime}\_{x}(dz).
+
+Note that if \psi and \psi^{\prime} are deterministic, represented by respectively \alpha,\alpha^{\prime}\in L^{2}\_{\mu}(\mathbb{R}^{d},\mathbb{R}^{d}), then
+
+|  |  |  |
+| --- | --- | --- |
+|  | d^{2}\_{\mu}(\psi,\psi^{\prime})=\|\alpha-\alpha^{\prime}\|^{2}\_{L^{2}\_{\mu}}. |  |
+
+This distance has already been been introduced in [17], and it can also defined a sort of metric on T\_{\mu}\mathcal{P}\_{2}(\mathbb{R}^{d}) through the relation \langle\psi,\psi^{\prime}\rangle\_{\mu}:=d^{2}\_{\mu}(\psi,\delta\_{0})+d^{2}\_{%
+\mu}(\delta\_{0},\psi^{\prime})-d^{2}\_{\mu}(\psi,\psi^{\prime}).
+
+### 6.2. Comparing elements in different tangent spaces
+
+Building on this distance, there is a natural way to compare two elements in different tangent spaces T\_{\mu}\mathcal{P}\_{2}(\mathbb{R}^{d}) and T\_{\nu}\mathcal{P}\_{2}(\mathbb{R}^{d}): parallel transport one along a path connecting \mu and \nu and use the previous distance. Note that there is a choice to make, as there are several paths connecting \mu and \nu and there are no reason that they should give the same result. Furthermore, there is no uniqueness of the parallel transport either, even if the path is fixed, as we saw earlier. Quite naturally, we focus on geodesics here, but we shall see later that looking at more paths can also be natural. In any case, we are interested in the following quantity.
+
+###### Definition/Proposition 6.1.
+
+We note \mathcal{E}:T\mathcal{P}\_{2}(\mathbb{R}^{d})\times T\mathcal{P}\_{2}(\mathbb{R}%
+^{d})\to\mathbb{R}\_{+} the map defined by either
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (5) |  | \mathcal{E}((\mu,\phi),(\nu,\psi))=\inf\_{\Psi}d^{2}\_{\nu}(\phi^{\prime},\psi)=% \inf\_{\Psi^{\prime}}d^{2}\_{\mu}(\phi,\psi^{\prime}), |  |

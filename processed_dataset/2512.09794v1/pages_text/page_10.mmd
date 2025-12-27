@@ -1,0 +1,40 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.24) |  | (iii)\leq C\int\_{|x|\geq 1/\varepsilon}|x|^{\beta}|x|^{\alpha-\beta}|u\_{n}|^{p% }\left(|x|^{(1-N)/p}\|u\_{n}\|\_{s,p,\beta}\right)^{q-p}\,dx\leq CM^{p-q}\int\_{|% x|\geq 1/\varepsilon}|x|^{\delta}|x|^{\beta}|u\_{n}|^{p}\,dx, |  |
+
+where \delta:=\alpha-\beta-(p-q)\frac{N-1}{p}<0 by assumption. Hence
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.25) |  | (iii)\leq CM^{2p-q}\varepsilon^{-\delta}. |  |
+
+Finally, the conclusion follows combining (3.22), (3.23) and (3.25).
+
+## 4. Existence of solutions
+
+###### Proof of Theorem 1.1.
+
+Let us check the conditions of the Brezis-Niremberg lemma given in Lemma 6.1.
+
+(i) Case \gamma=0. By (2.3), the underlying space is W^{s,p}\_{rad,\beta}(\mathbb{R}^{N}). Let u such that \|u\|\_{s,p,\beta}\ll 1. Then, by Theorem 3.7,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathcal{J}(u) | \displaystyle=\frac{1}{p}[u]\_{s,p}^{p}+\frac{1}{p}\|u\|\_{p,\beta}^{p}-\frac{1}% {q}\|u\|\_{q,\alpha}^{q} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\frac{1}{p}\left([u]\_{s,p}^{p}+\|u\|\_{p,\beta}^{p}\right)-C\|% u\|\_{s,p,\beta}^{q} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\frac{1}{p2^{p}}\left([u]\_{s,p}+\|u\|\_{p,\beta}\right)^{p}-C% \|u\|\_{s,p,\beta}^{q}=\frac{1}{p2^{p}}\|u\|\_{s,p,\beta}^{p}-C\|u\|\_{s,p,\beta}% ^{q} |  |
+
+where we have used that a^{p}+b^{p}\geq\max\{a^{p},b^{p}\}\geq(\frac{a+b}{2})^{p}. Since p<q, we have that \mathcal{J}(u)>0 for \|u\|\_{s,p,\beta}=r small enough.
+
+Similarly, when \gamma\in(0,1], by (2.3), the underlying space is now W^{1,p}\_{rad,\beta}(\mathbb{R}^{N}). Hence, using Theorem 3.7 yields
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathcal{J}(u) | \displaystyle=\frac{\gamma}{p}\|\nabla u\|\_{p}^{p}+\frac{1-\gamma}{p}[u]\_{s,p}% ^{p}+\frac{1}{p}\|u\|\_{p,\beta}^{p}-\frac{1}{q}\|u\|\_{\alpha,q}^{q} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\frac{\gamma}{p}\left(\|\nabla u\|\_{p}^{p}+\|u\|\_{p,\beta}^{p% }\right)-C\|

@@ -1,0 +1,55 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | a\_{n}=-B(2n,2m\_{0})g(n+m\_{0},m\_{0}) |  | (27) |
+
+### 3.11 Proof
+
+We take the derivative from equation (23):
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi(x+1)=\ln\left(x+\frac{1}{2}\right)+\sum\_{n=1}^{\infty}\frac{a\_{n}}{\left(% x+\frac{1}{2}\right)^{2n}}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi^{y}(x+1)=(-1)^{y-1}\left(\frac{(y-1)!}{\left(x+\frac{1}{2}\right)^{y}}-% \sum\_{n=1}^{\infty}\frac{(2n+y-1)!a\_{n}}{(2n-1)!\left(x+\frac{1}{2}\right)^{2n% +y}}\right); |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \zeta(y+1,x+1)=\frac{1}{y\left(x+\frac{1}{2}\right)^{y}}-\sum\_{n=1}^{\infty}% \frac{(2n+y-1)!a\_{n}}{(2n-1)!y!\left(x+\frac{1}{2}\right)^{2n+y}}; |  |
+
+Let:
+
+|  |  |  |
+| --- | --- | --- |
+|  | y=2m\_{0}-1 |  |
+
+Then:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \zeta(2m\_{0},x+1)=\frac{1}{(2m\_{0}-1)\left(x+\frac{1}{2}\right)^{2m\_{0}-1}}-% \sum\_{n=1}^{\infty}\frac{\frac{a\_{n}}{B(2n,2m\_{0})}}{(2m\_{0}+2n-1)\left(x+% \frac{1}{2}\right)^{2m\_{0}+2n-1}} |  | (28) |
+
+Therefore, by comparing the two equations (19) and (28), we obtain:
+
+|  |  |  |
+| --- | --- | --- |
+|  | a\_{n}=-B(2n,2m\_{0}).g(n+m\_{0},m\_{0}) |  |
+
+In the following, we obtain a recursive relation for a\_{n} through this equation.
+
+### 3.12 Lemma 5
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | a\_{n}=\frac{1}{2^{2n}(2n+4n^{2})}-\sum\_{n^{\prime}=1}^{n-1}\frac{\binom{2n-1}{% 2n^{\prime}}}{2^{2n^{\prime}}(2n^{\prime}+1)}a\_{n-n^{\prime}} |  | (29) |
+
+### 3.13 Proof
+
+We previously showed:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | a\_{n}=f(n)+\sum\_{n^{\prime}=1}^{n-1}g(n,n^{\prime})f(n^{\prime}) |  | (30) |
+
+|  |  |  |  |

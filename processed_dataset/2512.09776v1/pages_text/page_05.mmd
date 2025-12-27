@@ -1,0 +1,48 @@
+Assume that \Sigma is a surface of infinite type. One of the key tools used in [MR23] was a partial pre-order \preceq on {\mathrm{End}}(\Sigma). By definition, y\preceq x if, for every clopen neighborhood U of x, there exists a clopen neighborhood V of y which is homeomorphic to a subset of U. This induces an equivalence relation on {\mathrm{End}}(\Sigma), where x and y are equivalent ends if x\preceq y and y\preceq x, and we denote by E(x) the equivalence class of x. Denote by \mathcal{M}({\mathrm{End}}(\Sigma)) the subset of {\mathrm{End}}(\Sigma) of ends which are maximal with respect to \preceq, that is, the set of ends x\in{\mathrm{End}}(\Sigma) such that x\preceq y implies y\in E(x). The elements of \mathcal{M}({\mathrm{End}}(\Sigma)) are called *maximal ends*.
+
+For an end x\in{\mathrm{End}}(\Sigma), a clopen neighborhood U of x is *stable* if for any smaller neighborhood U^{\prime}\subset U of x, there is a homeomorphic copy of U contained in U^{\prime}. (see [4, Proposition 3.2] for equivalent definitions of a stable neighborhood). The surface \Sigma is stable if every end x\in{\mathrm{End}}(\Sigma) has a stable neighborhood.
+
+### 2.5. Geometry of big mapping class groups
+
+Let G be a Polish group. A subset A\subset G is coarsely bounded, abbreviated CB, if it has finite diameter with respect to every compatible left-invariant metric on G. A group is locally CB if it has a CB neighborhood of the identity, and it is CB generated if it has a CB generating set. It is a fact that a CB generated group is necessarily locally CB [ROS22, Theorem 1.2]. From the point of view of large-scale geometry, CB sets in Polish groups are analogous to finite sets in discrete groups. In particular, a CB generated group admits a metric that is well-defined up to quasi-isometry.
+
+###### Theorem 2.5.
+
+[ROS22]. Let G be a CB generated Polish group. Then the identity map on G is a quasi-isometry between the word metrics associated to any two symmetric, CB generating sets.
+
+Thus, we can reasonably define the number of ends of CB generated Polish groups, and hence, CB generated big mapping class groups.
+
+###### Definition 2.6.
+
+Let G be a CB generated Polish group, and fix a symmetric CB generating set S. The number of ends of G is the number of ends of the Cayley graph of G with respect to S.
+
+By Theorem 2.5, any other choice of S yields a quasi-isometric Cayley graph which has the same number of ends by Proposition 2.3.
+
+### 2.6. Avenue surfaces and translatable surfaces
+
+Next we recall the definition of an avenue surface and a translatable surface. These notions were introduced in [HQR22] and [SCH24], respectively, and we explain their precise relationship.
+
+###### Definition 2.7 (Avenue surface).
+
+An avenue surface is a connected orientable surface \Sigma which does not contain any non-displaceable subsurface of finite type, whose end space is tame, and whose mapping class group \operatorname{Map}(\Sigma) is CB-generated but not CB.
+
+The condition of tameness only requires that certain ends of \Sigma admit a stable neighborhood. Since we will eventually only consider stable surfaces, where every end admits a stable neighborhood, we refer the interested reader to [MR23] for a precise definition of tame and omit writing it here.
+
+###### Definition 2.8 (Translatable surface).
+
+Given a surface \Sigma, an end e of \Sigma, and a sequence \alpha\_{n} of simple closed curves on \Sigma, we write \lim\_{n\to\infty}\alpha\_{n}=e if for each neighborhood V of e, all but finitely many \alpha\_{n} are contained in V (after isotopy). A homeomorphism h\in\operatorname{Homeo}(\Sigma) is a translation if there are two distinct ends e\_{+} and e\_{-} of \Sigma such that for any simple closed curve \alpha on \Sigma, \lim\_{n\to\infty}h^{n}(\alpha)=e\_{+} and \lim\_{n\to\infty}h^{-n}(\alpha)=e\_{-}. A surface \Sigma is translatable if it admits a translation.
+
+By [SCH24, Theorem 5.3], if a surface \Sigma has tame end space and \operatorname{Map}(\Sigma) is CB generated and not CB, then \Sigma is an avenue surface if and only if it is translatable. In particular, every stable avenue surface is translatable.
+
+In a translatable surface \Sigma, a simple closed curve \alpha is separating if \Sigma\setminus\alpha is disconnected and e\_{+} and e\_{-} are ends of different components. (Note that this condition is stronger than the usual notion of separating which only requires \Sigma\setminus\alpha to be disconnected.) If \alpha is a separating curve, then the component of \Sigma\setminus\alpha with e\_{+} (resp. e\_{-}) as one of its ends is called the right (resp. left) side of \alpha, and it is denoted by \alpha\_{+} (resp. \alpha\_{-}). If \beta is a separating curve that lies on the right side of \alpha, denote by [\alpha,\beta] the subsurface (\alpha\_{+}\cap\beta\_{-})\cup\alpha\cup\beta of \Sigma with boundary components \alpha and \beta. If \beta lies on the left side of \alpha instead, then by an abuse of notation, still use [\alpha,\beta] to denote [\beta,\alpha].
+
+Next we recall a characterization of translatable surfaces from [SCH24]. Let S be any surface with exactly two boundary components, and denote by S^{\natural\mathbb{Z}} the surface obtained by arranging countably many copies of S like \mathbb{Z} and then gluing consecutive boundary components together in the natural way. By construction, this surface is translatable. Conversely, every translatable surface admits such a decomposition.
+
+###### Proposition 2.9.
+
+[SCH24, Proposition 3.5]
+If \Sigma is a translatable surface with translation h, and \alpha is any separating curve, then there is a subsurface S=[\alpha,h^{n}(\alpha)] for some n such that \Sigma is homeomorphic to S^{\natural\mathbb{Z}}.
+
+### 2.7. The translatable curve graph
+
+We now recall the definition of the translatable curve graph from [SCH24]. Let \Sigma=S^{\natural\mathbb{Z}} be a translatable surface and assume that \Sigma is tame. By [SCH24, Lemma 4.4] and [MR23, Proposition 4.7], the end space {\mathrm{End}}(S) has a finite, positive number of equivale

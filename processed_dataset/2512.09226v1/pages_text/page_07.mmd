@@ -1,0 +1,53 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \leq|\pi|\_{S}\leq\min\_{l\in\mathbb{Z}/n}\left(6\sum\_{k\in\mathbb{Z}/n}d\_{% \mathbb{Z}/n}(k,\pi(k)+l)+2diam\_{\mathbb{Z}/n}(\{0,l\}\cup\{p:\pi(p)\neq p-l\}% )\right). |  |
+
+###### Proof.
+
+Upper bound (construction)
+We will show the upper bound for l=0.
+For any l\in\mathbb{Z}/n, the bound follows by applying the formula to c^{l}\pi.
+Write \pi as the product of disjoint cyclic permutations, say
+
+|  |  |  |
+| --- | --- | --- |
+|  | \pi=\prod\_{j=1}^{s}c^{l\_{j}}\gamma\_{j}c^{-l\_{j}} |  |
+
+where for each j=1,...,s, l\_{j}\in\mathbb{Z}/n and \gamma\_{j}=(0k^{(j)}\_{2}k^{(j)}\_{3}...k^{(j)}\_{m\_{j}}) for some m\_{j}\in\mathbb{N} and k^{(j)}\_{2},...,k^{(j)}\_{m\_{j}}\in\mathbb{Z}/n all distinct and different from 0.
+After relabeling the indices, we may assume that the path 0\mapsto l\_{1}\mapsto l\_{2}\mapsto...\mapsto l\_{s} is a path of length at most twice the diameter:
+
+|  |  |  |
+| --- | --- | --- |
+|  | d\_{\mathbb{Z}/n}(0,l\_{1})+\sum\_{j=2}^{s}d\_{\mathbb{Z}/n}(l\_{j-1},l\_{j})\leq 2% diam\_{\mathbb{Z}/n}(\{0\}\cup\{k:\pi(k+l)\neq k\}). |  |
+
+(Why twice? It would be the case that 0 sits at the middle of the cloud of points \{l\_{1},...,l\_{s}\}.)
+  
+We now write:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \pi=\prod\_{j=1}^{s}c^{l\_{j}}\gamma\_{j}c^{-l\_{j}}=c^{l\_{1}}\gamma\_{1}\prod\_{j=2% }^{s}c^{-l\_{j-1}+l\_{j}}\gamma\_{j} |  |
+
+and the upper bound follows from the triangle inequality and the estimate on the word length of a cycle.
+  
+Lower bound
+We show that the right hand side (RHS in short) does not change much when we apply a generator:
+  
+When we multiply \pi by the cyclic permutation, the RHS changes by at most 1 unit.
+  
+When we multiply \pi by a transposition, the RHS can change by at most 3 units.
+  
+For the identity permutation, RHS=0. Moving across the shortest path from \pi to 1, the sum drops to zero, and hence the number of steps to reach the identity is at least
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\pi|\_{S}\geq\dfrac{1}{3}\min\_{l\in\mathbb{Z}/n}\left(d\_{\mathbb{Z}/n}(0,l)+% \sum\_{k\in\mathbb{Z}/n}d\_{\mathbb{Z}/n}(k,\pi(k+l))+diam\_{\mathbb{Z}/n}(\{0\}% \cup\{k:\pi(k+l)\neq k\})\right), |  |
+
+so we get our estimate.
+∎
+
+Applying the formula to the permutation \tau\pi^{-1} we get:
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\tau\pi^{-1}|\asymp\min\_{l\in\mathbb{Z}/n}\left(\sum\_{k\in\mathbb{Z}/n}d\_{% \mathbb{Z}/n}(k,\tau\pi^{-1}(k)+l)+diam\_{\mathbb{Z}/n}(\{0,l\}\cup\{p:\tau\pi^% {-1}(p)\neq p-l\})\right) |  |

@@ -1,0 +1,41 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\frac{1}{1-c\_{b}\varepsilon^{2}}\sup\_{B\_{r}}\left|v\right| | \displaystyle\geq\sup\_{B\_{r}}\left|f\right|\geq\sup\_{B\_{\tilde{r}}\setminus% \bigcup 3\widetilde{D}\_{j}}\left|\tilde{h}\right|\geq\left(\frac{16{\tilde{r}}% }{\widetilde{R}}\right)^{\tilde{\kappa}}\sup\_{B\_{\widetilde{T}}\setminus% \bigcup 3\widetilde{D}\_{j}}\left|\tilde{h}\right|\geq\left(\frac{r}{R}\right)^% {2\tilde{\kappa}}\frac{e^{-L}}{1+c\_{b}\varepsilon^{2}}. |  |
+
+Since C\_{1}=\frac{a}{32}\sqrt{\frac{2C\_{K}}{\ln 2}}, \displaystyle\frac{1-c\_{b}\varepsilon^{2}}{1+c\_{b}\varepsilon^{2}}\geq e^{-%
+\frac{c\_{d}}{\log R}}, and e<4\leq\left(2^{10}\right)^{\frac{1}{5}}\leq\left(\frac{R}{r}\right)^{\frac{1}%
+{5}}, then (3.3) follows, as required.
+∎
+
+## 4. Transformation maps
+
+In this section, we introduce the transformation maps that serve as real-valued versions of the conformal maps z\mapsto z^{\alpha}.
+Once the maps are defined, we show how they transform solutions to elliptic PDEs and how they transform balls.
+These results will be used at the beginning and at the end of the proof of Theorem 1.
+
+Given z=(x,y)\in\mathbb{R}^{2} in Cartesian coordinates, the polar coordinates for z are (r,\theta)\in\mathbb{R}\_{+}\times(-\pi,\pi], where r=\sqrt{x^{2}+y^{2}} and \theta=\operatorname{sgn}(y)\arccos\left(\frac{x}{r}\right).
+Let \mathbb{R}^{2}\_{+}=\left\{z=(r,\theta):r>0,\theta\in(-\frac{\pi}{2},\frac{\pi}%
+{2})\right\} denote the right half-plane.
+For \alpha\in(1,\infty), we define T\_{\alpha}:\mathbb{R}^{2}\to\mathbb{R}^{2} to be the map associated to the conformal transformation on \mathbb{C} given by z\mapsto z^{\alpha}.
+In polar coordinates, T\_{\alpha} is described as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.1) |  | T\_{\alpha}(r,\theta)=(r^{\alpha},\alpha\theta). |  |
+
+To avoid continuity issues at \theta=\pi, we restrict the domain and only consider T\_{\alpha}:\mathbb{R}^{2}\_{+}\to\mathbb{R}^{2}.
+
+###### Lemma 2 (Transformation of PDEs).
+
+If u:\mathbb{R}^{2}\to\mathbb{R} is a solution to (1.4), then with v:\mathbb{R}^{2}\_{+}\to\mathbb{R} and W:\mathbb{R}^{2}\_{+}\to\mathbb{R} defined by v(z)=u(T\_{\alpha}(z)) and W(z)=\alpha^{2}\left|z\right|^{2\alpha-2}V(T\_{\alpha}(z)), it holds that
+
+|  |  |  |
+| --- | --- | --- |
+|  | -\Delta v+Wv=0\;\text{ in }\mathbb{R}^{2}\_{+}. |  |
+
+###### Proof.
+
+Let w:=T\_{\alpha}(z) be given in polar coordinates by \left(\rho,\varphi\right).
+Since u is defined on \mathbb{R}^{2}, then in polar coordinates, u(\rho,\varphi) can be defined for all \rho\in\mathbb{R}^{+} and all \varphi\in\mathbb{R} using periodicity.
+We then see that v(z)=v(r,\theta)=u(r^{\alpha},\alpha\theta)=u(T\_{\alpha}(z)) is well-defined on \mathbb{R}^{2}\_{+}.
+Since

@@ -1,0 +1,27 @@
+In this section, we apply the previously derived results from Section 2 and 3 to two specific distribution of the mixing parameter \tau, each leading to a special and widely used model. First, we assume that the mixing parameter \tau follows a Gamma distribution \Gamma(b,1). Then the joint density of X\_{1},X\_{2},\dots,X\_{p\_{1}} in (1) is
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | f\_{1}(x\_{1},x\_{2},\dots,x\_{p\_{1}};\mu\_{1},\sigma\_{1})=\frac{\Gamma(p\_{1}+b)}{% \Gamma(b)\sigma\_{1}^{p\_{1}}}\frac{1}{\left(1+\frac{1}{\sigma\_{1}}\sum\_{i=1}^{p% \_{1}}(x\_{i}-\mu\_{1})\right)^{p\_{1}+b}}I\_{(\mu\_{1},\infty)}(x\_{(1)}) |  | (28) |
+
+Under this assumption, the model (1) reduces to a multivariate Lomax distribution. The Lomax distribution, also known as the Pareto Type II distribution, has the probability density function. This distribution has been extensively applied across various domains, including socioeconomics, reliability analysis, and life testing, biological and medical sciences, modeling business failure data etc.There are some important contributions in this directions are [25], [11], [24], [14], [12]. Secondly, when the mixing parameter \tau follows an Inverse Gaussian distribution IG(m,n), then (1) becomes
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \begin{split}f\_{2}(x\_{1},x\_{2},\dots,x\_{p\_{1}};\mu\_{1},\sigma\_{1})=&\frac{\exp% \left\{\frac{n}{m}-n\sqrt{\frac{1}{m^{2}}+\frac{2}{\sigma\_{1}n}\sum\_{i=1}^{p\_{% 1}}(x\_{i}-\mu\_{1})}\right\}}{\sigma\_{1}^{p\_{1}}\left(\frac{1}{m^{2}}+\frac{2}{% \sigma\_{1}n}\sum\_{i=1}^{p\_{1}}(x\_{i}-\mu\_{1})\right)^{p\_{1}/2}}\times\\ &\sum\_{i=1}^{p\_{1}-1}\frac{(p\_{1}-1+i)!}{i!(p\_{1}-1-i)!}\left[2n\sqrt{\left(% \frac{1}{m^{2}}+\frac{2}{\sigma\_{1}n}\sum\_{i=1}^{p\_{1}}(x\_{i}-\mu\_{1})\right)}% \right]^{-i}I\_{(0,\infty)}(x\_{(1)})\end{split} |  | (29) |
+
+With this assumption, the model (1) reduces to an exponential-Inverse Gaussian (E–IG) distribution. This distribution was used by [31] in studying quantile estimation within a mixture of exponential distribution having unknown location and scale parameters. The E-IG distribution has been applied in various domains, including reliability, actuarial science and survival analysis. There are some work in this direction, we refer to [3], [13], [10].
+
+### 4.1 Multivariate Lomax distribution
+
+In this subsection, we will derive the improved estimator of the parameters \sigma\_{1} and \sigma\_{2} for multivariate Lomax distribution under the loss functions L\_{1}(\cdot) and L\_{2}(\cdot). In this case, we have E^{\tau}(\tau^{n})=\frac{\Gamma(n+b)}{\Gamma(b)} for any n\in\mathbb{Z}. So that the BAEE of \sigma\_{i} under the loss function L\_{1}(\cdot) is \delta\_{{1i}}=c\_{i}S\_{i}, where
+
+|  |  |  |
+| --- | --- | --- |
+|  | c\_{i}=\left(\frac{b(b-1)}{(p\_{i}-1)(p\_{i}-2)}\right)^{1/2} |  |
+
+for i=1,2 and for the loss function L\_{2}(\cdot) we have the BAEE of \sigma\_{i} is \delta\_{{2i}}=d\_{i}S\_{i} with
+
+|  |  |  |
+| --- | --- | --- |
+|  | d\_{i}=\frac{b-1}{p\_{i}-1}. |  |

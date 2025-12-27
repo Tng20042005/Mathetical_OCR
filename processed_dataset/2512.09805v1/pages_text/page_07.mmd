@@ -1,0 +1,59 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\int\_{s}^{r}\frac{dt}{t^{2p-1}}\int\_{B\_{p}(t)}(\iota\circ f)^{\*}% \omega\_{FS}\wedge\nu\_{p}^{p-1} |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\frac{1}{2}\int\_{S\_{p}(r)}\log\|\iota\circ f\|\,\sigma\_{p}\;-% \frac{1}{2}\;\int\_{S\_{p}(s)}\log\|\iota\circ f\|\,\sigma\_{p} |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\int\_{S\_{p}(1)}\frac{1}{2}\Biggl{(}\int\_{S\_{1}(r)}\log\|\iota% \circ f\_{\vec{a}}\|\,\sigma\_{1}\;-\;\int\_{S\_{1}(s)}\log\|\iota\circ f\_{\vec{a}% }\|\,\sigma\_{1}\Biggr{)}\sigma\_{p}(\vec{a}) |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\int\_{S\_{p}(1)}\Biggl{(}\int\_{s}^{r}\frac{dt}{t}\int\_{B\_{1}(t)}% \,(\iota\circ f\_{\vec{a}})^{\*}\omega\_{FS}\Biggr{)}\sigma\_{p}(\vec{a}) |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\int\_{S\_{p}(1)}\Biggl{(}\int\_{s}^{r}\frac{dt}{t}\int\_{B\_{1}(t)}% \,f\_{\vec{a}}^{\*}c\_{1}[D]\Biggr{)}\sigma\_{p}(\vec{a})=\int\_{S\_{p}(1)}T\_{f\_{% \vec{a}}}(r,s,D)\,\sigma\_{p}(\vec{a})+O(1).\qquad |  |
+
+Hence
+
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{f}(r,s,D)=\int\_{S\_{p}(1)}T\_{f\_{\vec{a}}}(r,s,D)\,\sigma\_{p}(\vec{a})+O(1). |  |
+
+By the First Main Theorem, it follows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1) |  | \displaystyle\int\_{S\_{p}(1)}N\_{f\_{\vec{a}}}(r,s,D)\,\sigma\_{p}(\vec{a})=N\_{f}(% r,s,D)+O(1). |  |
+
+We now prove the third identity.
+Since f^{\*}D is an effective divisor on \mathbb{C}^{p} with the irreducible decomposition
+f^{\*}D=\sum\_{\lambda\in I}k\_{\lambda}D\_{\lambda} and \sum\_{\lambda\in I}\min\{k,k\_{\lambda}\}D\_{\lambda} is a principal divisor on \mathbb{C}^{p}, there is a holomorphic function g:\mathbb{C}^{p}\to\mathbb{P}^{1}(\mathbb{C}) such that g^{\*}(0)=\sum\_{\lambda\in I}\min\{k,k\_{\lambda}\}D\_{\lambda},
+by (1) we have,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{S\_{p}(1)}N\_{g\_{\vec{a}}}(r,s,(0))\,\sigma\_{p}(\vec{a})=N\_{g}(r,s,(0))+O(% 1)=N\_{f}^{(k)}(r,s,D)+O(1). |  |
+
+For almost all \vec{a}\in S\_{p}(1),
+the punctured complex line \mathbb{C}^{\*}\vec{a} intersects with \operatorname{Supp}D\_{\lambda} transversally.
+There are only finitely many \lambda\in I such that 0\in D\_{\lambda}, denote them by D\_{1},D\_{2},\dots,D\_{n}.
+
+For almost all \vec{a}\in S\_{p}(1),
+
+|  |  |  |
+| --- | --- | --- |
+|  | (\mathbb{C}\vec{a})\cap\sum\_{\lambda\in I}\min\{k,k\_{\lambda}\}D\_{\lambda}=% \sum\_{i=1}^{n}\operatorname{ord}\_{0}(D\_{i})\,\min\{k,k\_{i}\}[0]+\sum\_{\lambda}% \min\{k,k\_{\lambda}\}(P\_{\lambda,1}^{\vec{a}}+P\_{\lambda,2}^{\vec{a}}+\cdots) |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\big{(}(\mathbb{C}\vec{a})\cap\sum\_{\lambda\in I}k\_{\lambda}D\_{% \lambda}\big{)}^{(k)}:=\Big{(}\sum\_{i=1}^{n}\operatorname{ord}\_{0}(D\_{i})\,k\_{% i}[0]+\sum\_{\lambda}k\_{\lambda}(P\_{\lambda,1}^{\vec{a}}+P\_{\lambda,2}^{\vec{a}% }+\cdots)\Big{)}^{(k)} |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\min\ \Biggl{\{}\sum\_{i=1}^{n}\operatorname{ord}\_{0}(D\_{i})k\_{i}% ,\,k\Biggr{\}}[0]+\sum\_{\lambda}\min\{k\_{\lambda},k\}(P\_{\lambda,1}^{\vec{a}}+% P\_{\lambda,2}^{\vec{a}}+\cdots) |  |
+
+where \mathbb{C}^{\*}\vec{a} intersects with \text{Supp}D\_{\lambda} at P\_{\lambda,1}^{\vec{a}},P\_{\lambda,2}^{\vec{a}},\dots
+
+Then we have

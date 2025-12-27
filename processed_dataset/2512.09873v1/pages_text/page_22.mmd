@@ -1,0 +1,92 @@
+As a consequence, we obtain the weak observability up to a compact term:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|u\_{0}\|^{2}\_{\dot{H}^{1}({\mathbb{T}})}+\|u\_{1}\|^{2}\_{L^{2}({\mathbb{T}})}% \leq(4\pi C+1)N^{2}\left(\int\_{G}|\partial\_{t}u(t,x)|^{2}{\,\rm d}x{\,\rm d}t+% \|u\_{0,N}\|^{2}\_{L^{2}({\mathbb{T}})}+\|u\_{1,N}\|^{2}\_{\dot{H}^{-1}({\mathbb{T% }})}\right). |  |
+
+∎
+
+### 4.2. Sufficient part of Theorem 1.5
+
+Now we prove that ({\rm OSC}) and (GCC) are sufficient to establish the observability inequality (1.2). We argue by contradiction.
+
+Assume that (1.2) fails. Then there exists a sequence of initial data
+(u\_{0,n},u\_{1,n})\in\dot{H}^{1}(\mathbb{T})\times L^{2}(\mathbb{T}) for n=1,2,\dots, such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|\partial\_{x}u\_{0,n}\|\_{L^{2}}^{2}+\|u\_{1,n}\|\_{L^{2}}^{2}=1, |  |
+
+and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \int\_{G}|\partial\_{t}u\_{n}(t,x)|^{2}{\,\rm d}x{\,\rm d}t\to 0\quad\text{as }n% \to\infty, |  | (4.4) |
+
+where u\_{n} is the solution of (1.1) with initial data (u\_{0,n},u\_{1,n}). Therefore, we may extract a subsequence, still denoted by (u\_{0,n},u\_{1,n}), that converges weakly in \dot{H}^{1}(\mathbb{T})\times L^{2}(\mathbb{T}) to some (u\_{0},u\_{1}). Correspondingly, (u\_{n},\partial\_{t}u\_{n}) converges weakly in \dot{H}^{1}(\mathbb{T})\times L^{2}(\mathbb{T}) to a solution (u,\partial\_{t}u) of (1.1).
+
+On one hand, from (4.4) we obtain for the limit
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{G}|\partial\_{t}u|^{2}{\,\rm d}x{\,\rm d}t=0, |  |
+
+which implies \partial\_{t}u=0 almost everywhere in G. Then, the unique continuation property, Corollary 3.5 yields u\equiv 0.
+
+On the other hand, since u\_{n} solves (1.1), Corollary 4.2 gives the weak observability estimate
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | 1=\|\partial\_{x}u\_{0,n}\|\_{L^{2}}^{2}+\|u\_{1,n}\|\_{L^{2}}^{2}\leq C\Bigl{(}% \int\_{G}|\partial\_{t}u\_{n}(t,x)|^{2}{\,\rm d}x{\,\rm d}t+\|u\_{0,n}\|\_{L^{2}(% \mathbb{T})}^{2}+\|u\_{1,n}\|\_{\dot{H}^{-1}(\mathbb{T})}^{2}\Bigr{)}. |  | (4.5) |
+
+Because the embedding \dot{H}^{1}\times L^{2}\hookrightarrow L^{2}\times\dot{H}^{-1} is compact, the convergence (u\_{0,n},u\_{1,n})\to(u\_{0},u\_{1}) holds strongly in L^{2}(\mathbb{T})\times\dot{H}^{-1}(\mathbb{T}). Passing to the limit n\to\infty in (4.5) yields
+
+|  |  |  |
+| --- | --- | --- |
+|  | 1\leq C\bigl{(}\|u\_{0}\|\_{L^{2}(\mathbb{T})}^{2}+\|u\_{1}\|\_{\dot{H}^{-1}(% \mathbb{T})}^{2}\bigr{)}, |  |
+
+which contradicts the fact that u\equiv 0 (and hence u\_{0}=0, u\_{1}=0 in the relevant spaces). Consequently, the observability inequality (1.2) must hold.
+
+## 5. Other important geometric configurations
+
+In this work, we have provided a necessary and sufficient condition on a spacetime measurable observable region for the wave equation. In the literature, many other important geometric configurations are considered, such as measurable Cartesian products E\_{t}\times F\_{x}, general spacetime open sets, and especially [0,T]\times\omega with open set \omega. In this section, we comment on our condition in these cases.
+
+### 5.1. Cylinder observable region [0,T]\times\omega
+
+This is the most classical setting. Let us now restrict the geometric region G to the following class: for a given T>0, consider
+
+|  |  |  |
+| --- | --- | --- |
+|  | G\in\mathcal{D}\_{1}(T):=\{[0,T]\times\omega:\omega\in{\mathbb{T}}\textrm{ open% }\}. |  |
+
+Our criterion clearly provides a sufficient condition for the observability on such regions. However, the observable symmetry condition automatically fails for “many” non-trivial pairs (A,B)\in[0,2\pi]. This is evident from the geometry illustrated in Fig. 7. Therefore, there is no need to consider ({\rm OSC}) in this setting.
+
+\tikzset
+
+every picture/.style=line width=0.75pt
+
+{tikzpicture}
+
+[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+
+\draw
+
+(104,92) – (272,92) – (272,220) – (104,220) – cycle ;
+\draw[fill=blue!30 ,fill opacity=0.8 ] (227,92) – (194,92) – (194,220) – (227,220) – cycle ;
+
+\draw
+
+(82,85.4) node [anchor=north west][inner sep=0.75pt] T;
+\draw(279,212.4) node [anchor=north west][inner sep=0.75pt] 2\pi;
+\draw(83,211.4) node [anchor=north west][inner sep=0.75pt] 0;
+\draw(202,223.4) node [anchor=north west][inner sep=0.75pt] \omega;
+
+Figure 7. Observation on G=[0,T]\times\omega
+
+### 5.2. Measurable Cartesian products E\_{t}\times F\_{x}
+
+Next, we restrict G to the following class: for a given T>0, consider (see Fig. 8)
+
+|  |  |  |
+| --- | --- | --- |
+|  | G\in\mathcal{D}\_{2}(T):=\{E\_{t}\times F\_{x}:E\_{t}\in{\mathbb{T}},F\_{x}\in{% \mathbb{T}}\textrm{ are measurable sets}\}. |  |

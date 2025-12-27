@@ -1,0 +1,47 @@
+where i\_{\*}:H\_{d-1}(F)\to H\_{d-1}(X) is the map induced by the inclusion i:F\hookrightarrow X. By assumption, i\_{\*}[F]=0 in H\_{d-1}(X), so
+
+|  |  |  |
+| --- | --- | --- |
+|  | j\_{\*}[F]=(i\_{\*}[F],-i\_{\*}[F])=(0,0). |  |
+
+Thus [F]\in\ker(j\_{\*}). By exactness, \ker(j\_{\*}) is the image of \delta, whence [F]\in\mathrm{im}(\delta). On the other hand, [F]\neq 0 in H\_{d-1}(F) and thus H\_{d}(DX)\neq 0.
+
+Now DX is a connected d-manifold without boundary and has nonzero
+top-dimensional homology H\_{d}(DX). It is a standard fact that a connected noncompact d-manifold without boundary has H\_{d}=0 (see, for example, Hatcher [17, Proposition 3.29]). Therefore DX must be compact.
+\scriptstyle\blacksquare
+
+(b) F^{\prime}\_{i} is \pi\_{1}-injective in C\_{i}. Then it is also \pi\_{1}-injective for the entire M\_{n} and we conclude as in the case (b) for d=3 by showing the component C\_{i} is a finite-volume truncated cusp of M\_{n}.
+
+This proves part (1).
+
+Part (2) follows from [4, Prop. E.2.3] and [4, Prop. E.3.1].
+
+Part (3) follows from [4, Theorem E.4.8] which states the following. Recall that \mathcal{F} is the set of all complete finite-volume hyperbolic 3-manifolds with the topology of geometric convergence. Let \mathscr{F}\_{3}(c)\subset\mathcal{F} be the subset of manifolds M with \operatorname{Vol}M\leq c. Then there exists a finite collection of finite-volume manifolds X\_{1},\ldots,X\_{k} with cusps such that X\in\mathscr{F}\_{3}(c) is obtained from some X\_{i} by hyperbolic Dehn surgery.
+
+In our case, we have M\_{n}=\mathbb{H}^{3}/\Gamma\_{n} geometrically converge to M=\mathbb{H}^{3}/\Gamma, whence, for n large enough, the volumes \operatorname{Vol}M\_{n} are bounded from above and thus we can apply [4, Theorem E.4.8].
+\scriptstyle\blacksquare
+
+### 3.3. Compatible measures on convergent sequences of lattices
+
+###### Definition 3.5.
+
+Assume that \Gamma\_{n}=\rho\_{n}(\Gamma) algebraically converge to \Gamma=\rho\_{\infty}(\Gamma). Measures \mu\_{n} on \Gamma\_{n} are said to be compatible if, for all n, we have \mu\_{n}=(\rho\_{n})\_{\*}\mu of some measure \mu on \Gamma.
+
+###### Lemma 3.6.
+
+Let \{\Gamma\_{n}\}\_{n=1}^{\infty} be a sequence of pairwise non-conjugate lattices in \mathrm{Isom}(\mathbb{H}^{3}) geometrically converging to a lattice \Gamma. Then there is N>0 such that for any measure \mu on \Gamma, the remaining tail \{\Gamma\_{n}\}^{\infty}\_{n=N+1} of this sequence can be equipped with compatible measures \mu\_{n}. Moreover, if for some m>N, the lattice \Gamma\_{m} is equipped with a measure \mu\_{m} compatible with some measure \mu on \Gamma, then we can equip all the other members of the subsequence \{\Gamma\_{n}\}^{\infty}\_{n=N+1} with measures \mu\_{n} compatible with \mu\_{m}.
+
+###### Proof.
+
+First of all, note that Theorem 3.2 shows that there is N>0 such that for n>N each \Gamma\_{n} is obtained from \Gamma by hyperbolic Dehn surgery and therefore \Gamma\_{n}=\rho\_{n}(\Gamma) converge algebraically to the representation \rho\_{\infty}(\Gamma)=\Gamma. Then we set \mu\_{n}:=(\rho\_{n})\_{\*}\mu, which proves the first part. For the second part, we note that \mu=(\rho\_{m})^{\*}\mu\_{m} on \Gamma, and then the first part applies.
+\scriptstyle\blacksquare
+
+## 4. Proof of main theorems
+
+### 4.1. Kleinian groups and proof of Theorem 1.2
+
+Let \Gamma\_{n}<\mathrm{Isom}(\mathbb{H}^{3}) be an infinite sequence of lattices, geometrically converging to a lattice \Gamma. The assumption of \Gamma\_{n} being pairwise non-conjugate implies, by Theorem 3.2, that \Gamma is non-uniform and all but finitely many \Gamma\_{n} are obtained from \Gamma by hyperbolic Dehn surgery. Hence, removing finitely many exceptions, we may assume that \Gamma\_{n}=\rho\_{n}(\Gamma) algebraically converge to \Gamma=\rho\_{\infty}(\Gamma). Lemma 3.6 shows that we can equip our subsequence by compatible measures, and this can be done for an arbitrary given measure \mu\_{m} on any \Gamma\_{m}.
+
+From now on, we assume that the entire sequence \Gamma\_{n} is equipped with compatible measures \mu\_{n} obtained via pushforward from some measure \mu on \Gamma. Let us denote by h\_{n} the entropy h(\mu\_{n}), and set \ell\_{n}=\ell(\mu\_{n}), \ell=\ell(\mu). The hitting measures driven by \mu\_{n} and \mu will be denoted by \nu\_{n} and \nu, respectively.
+
+Using Proposition 3.1 and the fact that \Gamma\_{n}=\rho\_{n}(\Gamma)=\Gamma/\ker\rho\_{n}, we obtain that h\_{n}\leq h. From Theorem 2.13 we know that \nu\_{n}\perp\lambda if and only if h\_{n}<\ell\_{n}v\_{n}. Here v\_{n}=v=2 for all n. The drift is continuous for random walks on subgroups of \mathrm{GL}\_{2}(\mathbb{C}) (that is, the continuity of the drift applies to finitely subgroups of both \mathrm{PSL}\_{2}(\mathbb{C}) and \mathrm{PSL}\_{2}(\mathbb{R})), as shown by the recent result of Bocker-Neto and Viana [6], whence we have that \ell\_{n}\to\ell as n\to\infty. Finally, Theorem 2.13 (see also Corollary 2.13.1 and the discussion after it) implies that h<2\ell, since the lattice \Gamma<\mathrm{Isom}(\mathbb{H}^{3}) is non-uniform.

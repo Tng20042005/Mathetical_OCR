@@ -1,0 +1,138 @@
+Given \lambda and an integer m\geq 1, the *orbifold Dehn filling of slope \lambda and cone order m* is, at the level of orbifold fundamental groups, the quotient
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma(\lambda;m):=\Gamma\big{/}\langle\!\langle\lambda^{m}\rangle\!\rangle, |  |
+
+where \langle\!\langle\cdot\rangle\!\rangle denotes normal closure in \Gamma. When \mathcal{F}=\mathbb{T}^{2} and m=1, this recovers the usual manifold Dehn filling, and for general m it corresponds to turning the core curve of the attached solid torus into a cone geodesic of order m. When \mathcal{F}=S^{2}(2,2,2,2) this describes the case of gluing a solid pillow whose core circle has cone order m.
+
+The analytic and geometric theory of Dehn filling extends to orbifolds almost verbatim from the manifold case. Fix a finite-volume orientable hyperbolic 3-orbifold \mathcal{O} with at least one non-rigid cusp. By the hyperbolic Dehn surgery theorem (see Dunbar–Meyerhoff [10, Theorem 5.3]) there exists a finite set of slopes \mathcal{E} on the non-rigid cusps of \mathcal{O} such that the following holds. For each choice of slopes \lambda\_{i} on the non-rigid cusps of \mathcal{O} with \lambda\_{i}\notin\mathcal{E}, and each choice of sufficiently large cone orders m\_{i}\in\mathbb{N}, the orbifold \mathcal{O}\_{\lambda\_{i};m\_{i}} obtained by topological orbifold Dehn filling along the (\lambda\_{i};m\_{i}) admits a unique complete hyperbolic orbifold structure. Moreover, its orbifold fundamental group is naturally isomorphic to the quotient of \Gamma obtained by adding the relations \lambda\_{i}^{m\_{i}}=1, and as the lengths of the filling slopes (and the cone orders m\_{i}) tend to infinity, the resulting hyperbolic orbifolds \mathcal{O}\_{\lambda\_{i};m\_{i}} converge geometrically to \mathcal{O}, see Dunbar–Meyerhoff [10, Theorems 5.4 and 6.4].
+
+In particular, every closed orientable hyperbolic 3-orbifold arises from a cusped orientable hyperbolic 3-orbifold by a (possibly multi-cusped) orbifold Dehn filling on non-rigid cusps, exactly mirroring the manifold setting; see [10, Theorem 5.5].
+
+{tikzpicture}
+
+[scale=0.9,¿=latex]
+
+\draw
+
+(0,0) circle (2.2);
+\draw(0,0) circle (1.0);
+
+\draw
+
+[very thick] (0,-2.2) arc (-90:90:2.2);
+\draw[very thick] (0,-1.0) arc (-90:90:1.0);
+
+\draw
+
+[dash pattern=on 8pt off 4pt] (0,-3) – (0,3);
+
+(0,2.2) circle (0.065);
+(0,1.0) circle (0.065);
+(0,-1.0) circle (0.065);
+(0,-2.2) circle (0.065);
+
+\node
+
+[right] at (0.05,2.2+0.3) \tilde{a};
+\node[left] at (-0.05,1.0-0.3) \tilde{b};
+\node[right] at (0.05,-1.0+0.3) \tilde{c};
+\node[left] at (-0.05,-2.2-0.3) \tilde{d};
+
+\pgfmathsetmacro\ymer
+
+0.5\*(2.2+1.0)
+\pgfmathsetmacro\bmer0.5\*(2.2-1.0)
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(-3,-3) rectangle (0,3);
+\draw[dashed, very thick] (0,\ymer) ellipse (0.35 and \bmer);
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(0,-3) rectangle (3,3);
+\draw[very thick] (0,\ymer) ellipse (0.35 and \bmer);
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(-3,-3) rectangle (0,3);
+\draw[dashed, very thick] (0,-\ymer) ellipse (0.35 and \bmer);
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(0,-3) rectangle (3,3);
+\draw[very thick] (0,-\ymer) ellipse (0.35 and \bmer);
+
+\pgfmathsetmacro\ael
+
+0.5\*(2.2-1.0) \pgfmathsetmacro\bel0.25\*(2.2-1.0)
+
+{scope}\clip
+
+(0,0) circle (2.2); \clip(-3,0) rectangle (3,3); \draw[dashed] (\ymer,0) ellipse [x radius=\ael, y radius=\bel];
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(-3,-3) rectangle (3,0); \draw(\ymer,0) ellipse [x radius=\ael, y radius=\bel];
+
+{scope}\clip
+
+(0,0) circle (2.2); \clip(-3,0) rectangle (3,3);
+\draw[dashed] (-\ymer,0) ellipse [x radius=\ael, y radius=\bel];
+
+{scope}\clip
+
+(0,0) circle (2.2);
+\clip(-3,-3) rectangle (3,0); \draw(-\ymer,0) ellipse [x radius=\ael, y radius=\bel];
+
+\coordinate
+
+(C) at (0,-2.9);
+
+\draw
+
+[-¿]
+(C) ++(160:0.5 and 0.2)
+arc[start angle=160,end angle=410,
+x radius=0.5,y radius=0.2];
+\node[below] at (-0.9,3) \mathbb{T}^{2};
+\node[right] at (0.6,-2.95) \mathbb{Z}\_{2};
+
+\draw
+
+[-¿,thick] (3,0) – (4.5,0);
+
+\coordinate
+
+(P) at (5, 1);
+\coordinate(Q) at (7, 1);
+\coordinate(R) at (7, -1);
+\coordinate(S) at (5, -1);
+
+\draw
+
+[very thick] (P) .. controls (6, 0.75) .. (Q);
+\draw[very thick] (Q) .. controls (6.75, 0.0) .. (R);
+\draw[very thick] (R) .. controls (6, -0.75) .. (S);
+\draw[very thick] (S) .. controls (5.25, 0.0) .. (P);
+
+(P) circle (0.065);
+(Q) circle (0.065);
+(R) circle (0.065);
+(S) circle (0.065);
+
+\node
+
+[above left] at (P) a;
+\node[above right] at (Q) b;
+\node[below right] at (R) c;
+\node[below left] at (S) d;
+
+\pgfmathsetmacro\aH

@@ -1,0 +1,50 @@
+which hold even in the infinite-sample population limit, and even when only the source measure is corrupted. Here, an estimator can be viewed as a map \hat{\kappa} from \cP(\cX)\times\cP(\cY)\to\cK(\cX,\cY), mapping the corrupted source measure \mu, guaranteed to satisfy \RWp(\tilde{\mu},\mu)\leq\rho, and the clean target measure \nu to a kernel estimate \hat{\kappa}[\tilde{\mu},\nu]. For \cX=\unitball (which, in particular, forces each \mu\in\cP(\cX) to be 1-sub-Gaussian) and \cY=[-1,1]^{d}, we prove that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\sup\_{\begin{subarray}{c}\hidden@noalign{}\hfil\scriptsize\mu\in% \cP(\cX)\\ \hidden@noalign{}\hfil\scriptsize\nu\in\cP(\cY)\end{subarray}}\sup\_{\begin{% subarray}{c}\hidden@noalign{}\hfil\scriptsize\tilde{\mu}\in\cP(\cX)\\ \hidden@noalign{}\hfil\scriptsize\RWp(\tilde{\mu},\mu)\leq\rho\end{subarray}}% \cE\_{p}(\hat{\kappa}[\tilde{\mu},\nu];\mu,\nu)\gtrsim\sqrt{d}\eps^{\frac{1}{p}% }+\rho^{\frac{1}{2}}d^{\frac{1}{4}}\land\sqrt{d}. |  |
+
+The choice of \cY=[-1,1]^{d} rather than [0,1]^{d} is solely to simplify notation in one of our constructions and can be reverted without loss. Finally, it suffices to lower bound the supremum by \sqrt{d}\eps^{1/p} when \rho=0 and \sqrt{d\rho}\land\sqrt{d} when \eps=0, separately, which we do presently.
+
+#### TV lower bound.
+
+Fix target measure \nu=(1-\eps)\delta\_{0}+\eps\delta\_{y}, where y=(1,\dots,1)\in\R^{d}. Consider the candidate clean measures \mu\_{1}=\nu and \mu\_{2}=\delta\_{0}. Because they are within TV distance \eps, the observation \tilde{\mu}=\nu is compatible with both candidates. Abbreviating \kappa=\hat{\kappa}[\tilde{\mu},\nu], we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\kappa;\mu\_{1},\nu)+\cE\_{p}(\kappa;\mu\_{2},\nu) | \displaystyle\geq\left[\left(\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\mu\_{1}(x)\right)% ^{\frac{1}{p}}-\Wp(\mu\_{1},\nu)\right]\_{+}+\Wp(\kappa\_{\sharp}\mu\_{2},\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left(\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\nu(x)\right)^{\frac{1}{p}% }+\Wp(\kappa\_{\sharp}\delta\_{0},\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq(1-\eps)^{\frac{1}{p}}\left(\int\|y\|^{p}\dd\kappa\_{0}(y)% \right)^{\frac{1}{p}}+\Wp(\kappa\_{\sharp}\delta\_{0},\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq(1-\eps)^{\frac{1}{p}}\Wp(\kappa\_{\sharp}\delta\_{0},\delta\_{0% })+(1-\eps)^{\frac{1}{p}}\Wp(\kappa\_{\sharp}\delta\_{0},\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq(1-\eps)^{\frac{1}{p}}\Wp(\delta\_{0},\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq(1-\eps)^{\frac{1}{p}}\eps^{\frac{1}{p}}\sqrt{d} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\geq\frac{1}{2}\eps^{\frac{1}{p}}\sqrt{d}. |  |
+
+Thus, we must have \cE\_{p}(\kappa;\mu\_{1},\nu)\lor\cE\_{p}(\kappa;\mu\_{2},\nu)\gtrsim\sqrt{d}\eps^%
+{1/p}, as desired.
+
+#### \bm{\Wp} lower bound.
+
+For the remaining bound, we first argue that, for any kernel \kappa, its performance for the \Wp(\mu,\nu) problem cannot suffer to much if we compose it with the Euclidean projection onto \supp(\nu), denoted by \proj\_{\supp(\nu)}.
+
+###### Lemma 15.
+
+For \mu\in\cP(\cX), \nu\in\cP(\cY), and \kappa\in\cK(\cX,\cY), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\proj\_{\supp(\nu)}\circ\kappa;\mu,\nu)\leq 4\cE\_{p}(% \kappa;\mu,\nu). |  |
+
+###### Proof.

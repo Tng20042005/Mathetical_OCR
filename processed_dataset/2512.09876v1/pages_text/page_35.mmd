@@ -1,0 +1,72 @@
+One can always twist these groups by a line bundle \mathcal{L} over X:
+C\_{p}(X,M\_{q},\hat{\lambda}\otimes\mathcal{L}), where \hat{\lambda}\otimes\mathcal{L}=(\mathcal{L}\otimes\lambda,\delta) with the notation of 3.1.7.
+One can also describe the functoriality of these complexes or their homology as follows,
+for \pi:X^{\prime}\rightarrow X proper and f:Y\rightarrow X essentially slci:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\pi\_{\*}: | \displaystyle A\_{p}(X^{\prime},M\_{q},\pi^{\*}\hat{\lambda})\rightarrow A\_{p}(X,% M\_{q},\hat{\lambda}), |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle f^{!}: | \displaystyle A\_{p}(X,M\_{\*},\hat{\lambda})\rightarrow A\_{p}(Y,M\_{\*},f^{!}\hat{% \lambda}), |  |
+
+where: \pi^{\*}\hat{\lambda}=(\pi^{\*}\lambda,\delta|\_{X^{\prime}}), f^{!}\hat{\lambda}=(f^{!}\lambda,d(f)+\delta|\_{Y}),
+with the notation of 3.1.7, and d(f) is the Zariski local function on Y given by the dimension of the fibers.
+
+### 3.5. Oriented Milnor-Witt cycle modules
+
+The particular case of 3.4.2 of \eta-trivial objects is fundamental.
+The following lemma is obvious, as the symbols \langle u\rangle\in\operatorname{K}^{MW}\_{0}(E) becomes equal to 1 in \operatorname{K}^{M}\_{0}(E).
+
+###### Lemma 3.5.1.
+
+We have that a MW-premodule M (resp. MW-prehomodule \mathcal{M})
+is \eta-trivial if and only if for any field E, the action of \operatorname{K}^{MW}\_{\*}(E) on M(E) (resp. \mathcal{M}(E))
+factors through \operatorname{K}^{M}\_{\*}(E).
+
+If these conditions hold, for any line bundle \mathcal{L} over E, one gets a canonical identification:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.5.1.a) |  | M(E,\mathcal{L})=M(E)\text{ resp. }\mathcal{M}(E,\mathcal{L})=\mathcal{M}(E). |  |
+
+###### Definition 3.5.2.
+
+If the equivalent conditions of the first sentence of the previous lemma holds,
+we will say that M (resp. \mathcal{M}) is *orientable*.
+We also use the terminology *Milnor cycle pre(ho)module*,
+of simply M-module (resp. M-homodule).
+
+###### 3.5.3.
+
+Thanks to 3.5.1, the axioms defining a M-premodule M are simpler
+than those defining a MW-premodule. They are in fact a simplification (but essentially equivalent) of Rost’s axioms
+for cycle modules.
+First, the lemma shows that the data (D3) is equivalent of \mathbf{Z}-graded \operatorname{K}^{M}\_{\*}(E)-module structure on M(E).
+Second, given the canonical trivialization of twists one can rewrite some of the functorialities of M
+as follows:
+
+(d2):
+:   For a finite morphism of S-fields \phi:E\to F, we have a map of degree 0
+
+    |  |  |  |  |
+    | --- | --- | --- | --- |
+    | (3.5.3.a) |  | \displaystyle\phi^{!}:M(F)\to M(E); |  |
+
+(d4):
+:   For an S-field \operatorname{Spec}E and an S-valuation v on E, we have a map of degree -1
+
+    |  |  |  |  |
+    | --- | --- | --- | --- |
+    | (3.5.3.b) |  | \displaystyle\partial\_{v}:M(E)\to M(\kappa(v)). |  |
+
+One can check that all the relations 3.2.1 though 3.2.1 continue to hold with the new functorialities 3.5.3.a and 3.5.3.b.
+
+###### 3.5.4.
+
+With the previous simplification of the axioms for an orientable MW-premodule M,
+is it possible to extend the definition of 3.3 over a base scheme S,
+without requiring the existence of a pinning.
+Indeed, under this hypothesis we can define general residue maps as follows:
+
+1. (1)

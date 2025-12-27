@@ -1,0 +1,94 @@
+###### Example 2.3.
+
+Let G\_{0},G\_{1} be the blue and red part of the square [0,2\pi]^{2}, and let G=G\_{0}\cup G\_{1}, see Fig. 5. The set G is constructed similarly as that in Fig. 2. Then G satisfies the (GCC), but the observability fails on G.
+
+{tikzpicture}
+
+[scale=1.0]
+
+\draw
+
+[-¿] (-0.3,0) – (6.3,0) node[right] x;
+\draw[-¿] (0,-0.3) – (0,6.3) node[above] t;
+
+\draw
+
+(2,0) node[below] \frac{2\pi}{3} – (2,0.1);
+\draw(4,0) node[below] \frac{4\pi}{3} – (4,0.1);
+\draw(6,0) node[below] 2\pi – (6,0.1);
+\draw(0,2) node[left] \frac{2\pi}{3} – (0.1,2);
+\draw(0,4) node[left] \frac{4\pi}{3} – (0.1,4);
+\draw(0,6) node[left] 2\pi – (0.1,6);
+
+\draw
+
+(0,0) – (6,0) – (6,6) – (0,6) – cycle;
+
+\draw
+
+[dashed] (-0.5,2.5) – (2.5,-0.5); \draw[dashed] (-0.5,4.5) – (4.5,-0.5); \draw[dashed] (1.5,6.5) – (6.5,1.5);
+\draw[dashed] (3.5,6.5) – (6.5,3.5);
+
+\draw
+
+[dashed] (1.5,-0.5) – (6.5,4.5); \draw[dashed] (3.5,-0.5) – (6.5,2.5); \draw[dashed] (-0.5,1.5) – (4.5,6.5); \draw[dashed] (-0.5,3.5) – (2.5,6.5);
+
+[red!30] (0,0) coordinate (A1) – (2,0) coordinate (B1) – (0,2) coordinate (C1)– cycle;
+
+\node
+
+at (barycentric cs:A1=1,B1=1,C1=1) 1;
+
+[blue!30] (2,0) coordinate (A2) – (4,0) coordinate (B2) – (3,1) coordinate (C2)– cycle;
+
+\node
+
+at (barycentric cs:A2=1,B2=1,C2=1) -2;
+
+[red!30] (4,0) coordinate (A3) – (6,0) coordinate (B3) – (6,2) coordinate (C3)– cycle;
+
+\node
+
+at (barycentric cs:A3=1,B3=1,C3=1) 1;
+
+[blue!30] (0,2) coordinate (A4) – (1,3) coordinate (B4) – (0,4) coordinate (C4)– cycle;
+
+\node
+
+at (barycentric cs:A4=1,B4=1,C4=1) -2;
+
+[red!30] (1,3) coordinate (A5) – (3,1) coordinate (B5) – (5,3) coordinate (C5)– (3,5) coordinate (D5) –cycle;
+
+\node
+
+at (barycentric cs:A5=1,B5=1,C5=1,D5=1) 1;
+
+[blue!30] (5,3) coordinate (A6) – (6,2) coordinate (B6) – (6,4) coordinate (C6) –cycle;
+
+\node
+
+at (barycentric cs:A6=1,B6=1,C6=1) -2;
+
+[red!30] (0,4) coordinate (A7) – (2,6) coordinate (B7) – (0,6) coordinate (C7) –cycle;
+
+\node
+
+at (barycentric cs:A7=1,B7=1,C7=1) 1;
+
+[blue!30] (2,6) coordinate (A8) – (3,5) coordinate (B8) – (4,6) coordinate (C8) –cycle;
+
+\node
+
+at (barycentric cs:A8=1,B8=1,C8=1) -2;
+
+[red!30] (4,6) coordinate (A9) – (6,4) coordinate (B9) – (6,6) coordinate (C9) –cycle;
+
+\node
+
+at (barycentric cs:A9=1,B9=1,C9=1) 1;
+
+\node
+
+at (10,4) G=G\_{0}\cup G\_{1};
+
+\node

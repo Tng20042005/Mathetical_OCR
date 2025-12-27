@@ -1,0 +1,27 @@
+Recall that a quasi-isometry of the neutered space B coarsely permutes the peripheral horospheres [SCH95]. The inequality (2) says that the isometry \theta(\gamma) is at finite distance (on B) from the quasi-isometry \psi(\gamma). So it follows that \theta(\gamma) also coarsely permutes the peripheral horospheres of B. We make this precise in the following lemma. Let \Omega denote the set of peripheral horospheres of B.
+
+###### Lemma 13.
+
+There exists a \beta^{\prime}>0 such that the following holds. For each \alpha\in\Lambda\_{\Gamma} and horosphere O\in\Omega, there is a unique horosphere O^{\prime}\in\Omega such that \text{dist}\_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)\leq\beta^{\prime}.
+
+###### Proof.
+
+Let \alpha and O be given. Then \alpha=\theta(\gamma) for some \gamma\in\Gamma. The quasi-isometry \psi(\gamma) permutes the peripheral horospheres of B up to a constant error which depends only on the quasi-isometry constants of \psi(\gamma). Since \psi is a K-quasi-action, this means there is a constant C=C(K) and a unique O^{\prime}\in\Omega such that \text{dist}\_{\text{H}}\left({{\psi(\gamma)(O)},{O^{\prime}}}\right)\leq C. From (2) we also have \text{dist}\_{\text{H}}\left({{\psi(\gamma)(O)},{\theta(\gamma)(O)}}\right)\leq\beta. Set \beta^{\prime}=\beta+C. Then \beta^{\prime} is independent of \alpha and O, and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \text{dist}\_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)\leq\text{dist}\_{% \text{H}}\left({{\theta(\gamma)(O)},{\psi(\gamma)(O)}}\right)+\text{dist}\_{% \text{H}}\left({{\psi(\gamma)(O)},{O^{\prime}}}\right)=\beta+C=\beta^{\prime}. |  |
+
+∎
+
+Let P\subset\partial X denote the set of basepoints of the peripheral horospheres of B. Since each element of \Lambda\_{\Gamma} coarsely permutes these horospheres, we obtain an action of \Lambda\_{\Gamma} on P.
+
+###### Lemma 14.
+
+The group \Lambda\_{\Gamma} acts on the set P with finitely many orbits, and given p\in P, every element of \Lambda\_{\Gamma} that fixes p under this action also preserves the peripheral horosphere in \Omega based at p.
+
+###### Proof.
+
+Let \alpha\in\Lambda\_{\Gamma} and p\in P. Let O\in\Omega be the horosphere based at p. By Lemma 13, there is a unique O^{\prime}\in\Omega such that \text{dist}\_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)<\infty. Let p^{\prime}\in P be the basepoint of O^{\prime}. Since the Hausdorff distance between \alpha(O) and O^{\prime} is finite, the horosphere \alpha(O) is also based at p^{\prime}. So in the extension of \alpha to \partial X, we in fact have \alpha(p)=p^{\prime}. Thus \alpha\cdot p=p^{\prime} defines an action of \Lambda\_{\Gamma} on P.
+
+Next we show that this action has finitely many orbits. Fix a point b\in B. For any r>0, \overline{B\_{X}(b,r)} is compact, and since there is a lower bound on the d\_{X}-distance between horospheres of B, only finitely many of them may intersect B\_{X}(b,r). Hence, we denote by A\subset\Omega the finite subset of horospheres whose d\_{X}-distance from b is at most K+\beta+\beta^{\prime}, and let P\_{0}\subset P be the finite set of basepoints of horospheres in A. We show that every orbit in P has a representative in P\_{0}. Fix p\in P. Let O\in\Omega be the horosphere based at p, and let x\in O. Since the quasi-action of \Gamma on B is K-cobounded, there is a \gamma\in\Gamma such that d\_{X}(b,\psi(\gamma)(x

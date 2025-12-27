@@ -1,0 +1,59 @@
+where \leq\_{exc} stands for the validity of the inequality except for r in exceptional intervals with finite measure.
+
+If X=\mathbb{P}^{n}(\mathbb{C}) and H\subset\mathbb{P}^{n}(\mathbb{C}) is a hyperplane, we write
+T\_{f}(r,H)=T\_{f}(r),~{}~{}S\_{f}(r,H)=S\_{f}(r)
+for simplicity. When n=1, we also denote N\_{f}(r,a) by N(f,r,a) for a\in\mathbb{P}(\mathbb{C}).
+
+With the above notation, we state the following theorem which is one of the fundamental theorems in Nevanlinna theory.
+
+###### Theorem 2.1 (First Main Theorem).
+
+Let X be a complex projective variety, and let D be an effective Cartier divisor.
+Let f:\mathbb{C}^{p}\to X be meromorphic such that f(\mathbb{C}^{p})\not\subset\operatorname{Supp}(D).
+Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | T\_{f}(r,s,D)=m\_{f}(r,s,D)+N\_{f}(r,s,D). |  |
+
+Let \vec{a}\in\mathbb{C}^{p} with |\vec{a}|=1 and define the map \iota\_{\vec{a}}:\mathbb{C}\to\mathbb{C}^{p} by
+\iota\_{\vec{a}}(z)=z\vec{a}.
+It is easy to see that for almost all \vec{a}\in S\_{p}(1), f\_{\vec{a}}:=f\circ\iota\_{\vec{a}}:\mathbb{C}\to X is holomorphic.
+
+###### Lemma 2.2.
+
+Let X be a smooth projective variety of dimension n, and let D be an effective Cartier divisor on X.
+Suppose that f:\mathbb{C}^{p}\to X is a meromorphic map such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | f(\mathbb{C}^{p})\not\subset\operatorname{Supp}(D). |  |
+
+Then, for almost all \vec{a}\in S\_{p}(1), the restriction map f\_{\vec{a}}:\mathbb{C}\to X
+also satisfies
+
+|  |  |  |
+| --- | --- | --- |
+|  | f\_{\vec{a}}(\mathbb{C})\not\subset\operatorname{Supp}(D). |  |
+
+###### Proof.
+
+Consider the meromorphic map
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tilde{f}:\mathbb{C}^{p}\times\mathbb{C}\to X,\quad\tilde{f}(v,z)=f(zv). |  |
+
+Then \tilde{f}(\mathbb{C}^{p}\times\mathbb{C})\not\subset\operatorname{Supp}(D) and \tilde{f}^{-1}(\operatorname{Supp}(D)) is a proper analytic subvariety of a Zariski open subset of \mathbb{C}^{p}\times\mathbb{C}.
+Let
+K\;=\;\Bigl{\{}\,\vec{a}\in S\_{p}(1)\;\Big{|}\;f\_{\vec{a}}:\mathbb{C}\to X,\;f%
+\_{\vec{a}}(\mathbb{C})\subseteq\operatorname{Supp}(D)\Bigr{\}}\;\subseteq\;S\_{%
+p}(1). We claim that m\_{S\_{p}(1)}(K)=0, where m\_{S\_{p}(1)} is the induced Lebesgue measure from the standard Lebesgue measure m of \mathbb{C}^{p}.
+Indeed, assume m\_{S\_{p}(1)}(K)>0 and denote by \mathbb{C}K the set \left\{av:a\in\mathbb{C},\ v\in K\right\}, then
+m\_{\mathbb{C}^{p}\times\mathbb{C}}(\mathbb{C}K\times\mathbb{C})=+\infty. On the other hand, since
+\mathbb{C}K\times\mathbb{C}\subset\tilde{f}^{-1}(\text{Supp}D),
+we get
+m\_{\mathbb{C}^{p}\times\mathbb{C}}(\mathbb{C}K\times\mathbb{C})\leq m\_{\mathbb%
+{C}^{p}\times\mathbb{C}}(\tilde{f}^{-1}(\text{Supp}D))=0.
+This is a contradiction.
+∎

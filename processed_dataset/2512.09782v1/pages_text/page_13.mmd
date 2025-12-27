@@ -1,0 +1,60 @@
+By an Arzelà-Ascoli theorem, the isometries of X which move b\_{0} by a distance at most \beta+D+k lie in a compact subset C of the compact-open topology on \text{Isom}(X). Since \Lambda\_{\Gamma}\subset\text{Isom}(X) is discrete, the intersection A=\Lambda\_{\Gamma}\cap C is finite. In summary, h(\gamma)(x\_{0})\in N\_{k}(F\_{0}) implies \theta(\gamma)\in A. For each a\in A, pick \gamma\_{a}\in\theta^{-1}(\left\{{a}\right\}) and set M=\max\_{a\in A}d(x\_{0},h(\gamma\_{a}^{-1})(x\_{0})).
+
+Now, let y\in F\_{0} be arbitrary. Since the quasi-action h of \Gamma on B\times N is k-cobounded, there is a \gamma\in\Gamma such that d(y,h(\gamma)(x\_{0}))\leq k. Then h(\gamma)(x\_{0})\in N\_{k}(F\_{0}), so \theta(\gamma) is equal to some a\in A. Then \gamma\gamma\_{a}^{-1}\in\ker\theta and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle d(y,h(\gamma\gamma\_{a}^{-1})(x\_{0})) | \displaystyle\leq d(y,h(\gamma)h(\gamma\_{a}^{-1})(x\_{0}))+k |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq d(y,h(\gamma)(x\_{0}))+d(h(\gamma)(x\_{0}),h(\gamma)h(\gamma\_{% a}^{-1})(x\_{0}))+k |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq kd(x\_{0},h(\gamma\_{a}^{-1})(x\_{0}))+3k |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq kM+3k. |  |
+
+Hence, d(y,f(\gamma\gamma\_{a}^{-1})(x\_{0}))\leq kM+3k+\delta, and so the (\ker\theta)-orbit of x\_{0} is (kM+3k+\delta)-dense in F\_{0}.
+
+∎
+
+###### Proposition 20.
+
+The group \ker\theta is finitely generated and quasi-isometric to N.
+
+###### Proof.
+
+Set x\_{0}=(b\_{0},e)\in F\_{0}. Since f is a cobounded quasi-action of \ker\theta on F\_{0}, and F\_{0} is isometric to N, the proposition follows from the stronger version of the Milnor-Schwarz lemma once we show that for r>0, the set \left\{{\gamma\in\ker\theta:f(\gamma)B\_{F\_{0}}(x\_{0},r)\cap B\_{F\_{0}}(x\_{0},r)%
+\neq\emptyset}\right\} is finite. By definition, d(f(\gamma)(x),h(\gamma)(x))\leq\delta for \gamma\in\ker\theta and x\in F\_{0}. So it suffices to show that for r>0, the set \left\{{\gamma\in\Gamma:h(\gamma)B(x\_{0},r)\cap B(x\_{0},r)\neq\emptyset}\right\} is finite, where B(x\_{0},r)=B\_{B\times N}(x\_{0},r). Recall that h is defined by h(\gamma)(x)=\varphi(\gamma\varphi^{-1}(x)) for \gamma\in\Gamma and x\in B\times N, where \varphi:\Gamma\to B\times N is a quasi-isometry and \varphi^{-1} is a quasi-inverse. Since \varphi is a quasi-isometry, the set \left\{{\gamma^{\prime}\in\Gamma:\varphi(\gamma^{\prime})\in B(x\_{0},r)}\right\} is finite. Since \varphi^{-1} is a quasi-isometry, \varphi^{-1}(B(x\_{0},r)) is also finite. It follows that the set \left\{{\gamma\in\Gamma:\varphi(\gamma\varphi^{-1}(B(x\_{0},r)))\cap B(x\_{0},r)%
+\neq\emptyset}\right\} must be finite, as desired.
+∎
+
+## 6. Quasi-isometric rigidity and nilcentral extensions
+
+We are now ready to prove our main result which is quasi-isometric rigidity for products of the form \Lambda\times L, where \Lambda is a non-uniform rank one lattice and L is a nilpotent lattice.
+
+###### Theorem 21.
+
+Let X\neq\mathbb{H}^{2} be a negatively curved symmetric space. Let \Lambda be a non-uniform lattice in \textup{Isom}(X) and L be a nilpotent lattice. If \Gamma is a finitely generated group quasi-isometric to \Lambda\times L, then there exist short exact sequences
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1) |  | \tikzcd 1\rightarrow[r]&L^{\prime}\rightarrow[r]\Gamma^{\prime}\rightarrow[r]% \Delta\rightarrow[r]1, |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd 1\rightarrow[r]&F\rightarrow[r]\Delta\rightarrow[r]\Lambda^{\prime}% \rightarrow[r]1. |  |
+
+where \Gamma^{\prime}\leq\Gamma and \Lambda^{\prime}\leq\Lambda have finite index, L^{\prime} is a nilpotent lattice quasi-isometric to L, \Delta is a group, and F is a finite group.
+
+###### Proof.
+
+By Proposition 20, \ker\theta is quasi-isometric to N, where N is the simply connected nilpotent Lie group in which L is a lattice. In particular \ker\theta has polynomial growth. Then by Gromov’s polynomial growth theorem, \ker\theta is virtually nilpotent. So \ker\theta has a finite-index, hence finitely generated, nilpotent subgroup K. Such groups are virtually torsion-free, so take a finite-index torsion-free subgroup K^{\prime}\leq K. Since \ker\theta is finitely generated, it has only finitely many subgroups with the same index as K^{\prime}. Let L^{\prime} denote their intersection. Then L^{\prime} is a finite-index characteristic subgroup of \ker\theta. Moreover, L^{\prime} is finitely generated, nilpotent, and torsion-free. A theorem of Malcev [MAL51] then says that L^{\prime} embeds as a lattice in a simply connected nilpotent Lie group N^{\prime}, known as the (real) Malcev completion of L^{\prime} (see also [RAG72, Theorem 2.18]). Since L^{\prime} is characteristic in \ker\theta, it is normal in \Gamma. By construction, \Gamma/L^{\prime} is an extension of \Lambda\_{\Gamma}=\Gamma/\ker\theta by the finite group F=\ker\theta/L^{\prime}. By Corollary 17, \Lambda\_{\Gamma} is virtually a finite-index subgroup \Lambda^{\prime}\leq\Lambda which is also a non-uniform lattice in \text{Isom}(X). Let \Gamma^{\prime}=\theta^{-1}(\Lambda^{\prime}) and \Delta=\Gamma^{\prime}/L^{\prime}. Then we obtain the desired short exact sequences.
+
+Since lattices in simply connected nilpotent Lie groups are uniform, L,N,\ker\theta, and L^{\prime} are all quasi-isometric to each other. The quotient \Gamma^{\prime}/L^{\prime} is a finite extension of a finite-index subgroup of \Lambda, so \Gamma^{\prime}/L^{\prime} and \Lambda are virtually isomorphic, hence quasi-isometric, to each other.
+∎
+
+###### Remark 22.
+
+One may wonder whether the fact that N and N^{\prime} are quasi-isometric determines any algebraic relation between them or between L and L^{\prime}. However, it is an open problem whether quasi-isometric simply connected nilpotent Lie groups are necessarily isomorphic.

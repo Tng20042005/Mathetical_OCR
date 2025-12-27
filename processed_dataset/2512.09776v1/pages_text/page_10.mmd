@@ -1,0 +1,71 @@
+\beta is flux-right of \alpha if and only if F(\alpha,\gamma)>F(\alpha,\beta) holds for every separating curve \gamma\subset\beta\_{+} not isotopic to \beta, and \beta is flux-left of \alpha if and only if the inequality holds for every separating curve \gamma\subset\beta\_{-} not isotopic to \beta.
+
+###### Proof.
+
+(1) For any separating curve \eta in \alpha\_{+}\cap\beta\_{+}=\beta\_{+},
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}(\alpha,\eta)=F\_{0}(\alpha,\beta)+F\_{0}(\beta,\eta)\geq F\_{0}(\beta,\eta). |  |
+
+Hence, \beta is flux-right of \alpha, and similarly, \alpha is flux-left of \beta.
+
+(2) Suppose \beta is not flux-left of \alpha, and let \gamma be a separating curve in \alpha\_{-}\cap\beta\_{-} such that F\_{0}(\alpha,\gamma)<F\_{0}(\beta,\gamma). Let \eta be any separating curve in \alpha\_{+}\cap\beta\_{+}. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}(\gamma,\alpha)+F\_{0}(\alpha,\eta)=F\_{0}(\gamma,\eta)=F\_{0}(\gamma,\beta)% +F\_{0}(\beta,\eta). |  |
+
+Since F\_{0}(\alpha,\gamma)<F\_{0}(\beta,\gamma), it follows that F\_{0}(\alpha,\eta)>F\_{0}(\beta,\eta). Hence, \beta is flux-right of \alpha.
+
+(3) Suppose \beta is flux-right of \alpha, and let \eta be a separating curve in \alpha\_{+}\cap\beta\_{+}. Then F\_{0}(\alpha,\eta)\geq F\_{0}(\beta,\eta). Let \gamma be any separating curve in \alpha\_{-}\cap\beta\_{-}. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}(\gamma,\alpha)+F\_{0}(\alpha,\eta)=F\_{0}(\gamma,\eta)=F\_{0}(\gamma,\beta)% +F\_{0}(\beta,\eta) |  |
+
+Since F\_{0}(\alpha,\eta)\geq F\_{0}(\beta,\eta), it follows that F\_{0}(\gamma,\alpha)\leq F\_{0}(\gamma,\beta). Hence, \alpha is flux-left of \beta. The reverse implication is proved similarly.
+
+(4) Let \eta be any separating curve in \alpha\_{+}\cap\gamma\_{+}, and let \eta^{\prime} be a separating curve in \beta\_{+}\cap\eta\_{+}. By the definition of flux-right, F\_{0}(\alpha,\eta^{\prime})\geq F\_{0}(\beta,\eta^{\prime})\geq F\_{0}(\gamma,%
+\eta^{\prime}). Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}(\alpha,\eta)=F\_{0}(\alpha,\eta^{\prime})-F\_{0}(\eta,\eta^{\prime})\geq F% \_{0}(\gamma,\eta^{\prime})-F\_{0}(\eta,\eta^{\prime})=F\_{0}(\gamma,\eta). |  |
+
+Hence, \gamma is flux-right of \alpha.
+
+(5) Suppose F(\alpha,\beta)=0, and let \eta be any separating curve in \alpha\_{+}\cap\beta\_{+}. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | 0=F(\alpha,\beta)=\left|{F\_{0}(\alpha,\eta)-F\_{0}(\beta,\eta)}\right|. |  |
+
+Hence, F\_{0}(\alpha,\eta)=F\_{0}(\beta,\eta). So \beta is flux-right of \alpha, and similarly, \beta is shown to be flux-left of \alpha.
+
+Conversely, suppose that \beta is both flux-right and flux-left of \alpha. By statement (3), \alpha is flux-right of \beta. Let \eta be a separating curve in \alpha\_{+}\cap\beta\_{+}. Then F\_{0}(\alpha,\eta)\geq F\_{0}(\beta,\eta) and F\_{0}(\beta,\eta)\geq F\_{0}(\alpha,\eta). Hence,
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(\alpha,\beta)=\left|{F\_{0}(\alpha,\eta)-F\_{0}(\beta,\eta)}\right|=0. |  |
+
+(6) Suppose \beta is flux-right of \alpha. Let \gamma be any separating curve in \beta\_{+} not isotopic to \beta, and let \eta be a separating curve in \alpha\_{+}\cap\gamma\_{+}. Then F\_{0}(\alpha,\eta)\geq F\_{0}(\beta,\eta). Since \gamma is not isotopic to \beta, F\_{0}(\beta,\gamma)>0. So,
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\_{0}(\beta,\eta)=F\_{0}(\beta,\gamma)+F\_{0}(\gamma,\eta)>F\_{0}(\gamma,\eta). |  |
+
+Hence,
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(\alpha,\gamma)=F\_{0}(\alpha,\eta)-F\_{0}(\gamma,\eta)>F\_{0}(\alpha,\eta)-F\_{0% }(\beta,\eta)=F(\alpha,\beta). |  |
+
+Conversely, suppose there exists a separating curve \eta in \alpha\_{+}\cap\beta\_{+} such that F\_{0}(\alpha,\eta)<F\_{0}(\beta,\eta). Then [\beta,\eta] contains at least one puncture p. Let \ell be an arc in [\beta,\eta] from \beta to p, and put \gamma=\beta(\ell). Then \gamma is a separating curve in \beta\_{+} not isotopic to \beta, and F\_{0}(\beta,\eta)=F\_{0}(\gamma,\eta)+1. Since F\_{0}(\alpha,\eta)<F\_{0}(\beta,\eta),
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(\alpha,\gamma)=\left|{F\_{0}(\alpha,\eta)-F\_{0}(\gamma,\eta)}\right|=\left|{F% \_{0}(\alpha,\eta)-F\_{0}(\beta,\eta)+1}\right|=F(\alpha,\beta)-1. |  |
+
+The second statement is proved similarly.
+∎

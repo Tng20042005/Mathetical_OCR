@@ -1,0 +1,41 @@
+Our definition of U is a sort of randomization of the controls allowed in V, it can be analyzed in regards of what is called relaxed controls, or mixed strategies in game theory. It could have been formulated in terms of random variables, similarly to problem of optimal control of Mc-Kean Vlasov dynamics, namely by defining U as
+
+|  |  |  |
+| --- | --- | --- |
+|  | U(t,m):=\inf\_{(X,Z)}\left\{\int\_{t}^{T}\mathbb{E}[L(s,X\_{s},Z\_{s},\mathcal{L}(% X\_{s}))]ds+G(\mathcal{L}(X\_{T}))\right\}, |  |
+
+where the infimum is taken over (X\_{s},Z\_{s})\_{s\in[t,T]} such that \mathcal{L}(X\_{t})=m and, almost surely, X\_{s}=X\_{t}+\int\_{t}^{s}Z\_{u}du. Thanks to Proposition 7.2, the two definitions are equivalent. We preferred the definition (14) as it makes transparent the fact that K is chosen by the controller. In the case of two players extensions of such problems, this has an importance, as the players can both randomize their strategies, but not on the same probabilistic space [7].
+
+### 7.4. Extensions
+
+We comment on several extensions of the previous method, namely to highlight that even if our formulation with stochastic processes is helpful, it does not rely by any mean on the Hilbertian structure of L^{2}(\Omega,\mathbb{R}^{d}).
+
+#### 7.4.1. More general controls than directly the speed
+
+In several practical situations, the control \alpha does not affect directly the continuity equation as in (8), but rather intervene through another function \beta as in
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{t}m+\text{div}\_{x}(\beta(x,\alpha)m)=0\text{ in }(0,1)\times\mathbb{% R}^{d}. |  |
+
+This does not play a strong role in the previous. Using our method our translation on the process (X\_{s},Z\_{s}) where this time z does not represent the speed directly but rather the control, we are still able to transport the control to another initial condition. Note that such a transport is then not the one of parallel transport on T\mathcal{P}\_{2}(\mathbb{R}^{d}), but rather a similar transport on a sheaf (see Section 2.2.3) which is not the tangent one. Under standard smoothness assumption on \beta (globally Lipschitz for instance), we are then able to recover similar estimates.
+
+#### 7.4.2. Other integrability conditions than \mathcal{P}\_{2}(\mathbb{R}^{d})
+
+The restriction to 2nd order moments plays no fundamental role in the previous, and similar results could be obtained for \mathcal{P}\_{p}(\mathbb{R}^{d}) with p\neq 2.
+
+#### 7.4.3. Other cases than \mathcal{P}\_{2}(\mathbb{R}^{d})
+
+Cases in which we are interested in probability measures over a subdomain of \mathbb{R}^{d} works exactly in the same way, formally, except for the technical treatment of the boundary of the domain.
+
+When dealing with a smooth manifold, a similar approach can also yield some results, although several difficulties may appear. In this case, the construction of translated curves is more involved, and we need to use the appropriate notion of parallel transport on the manifold. We briefly explain the main challenge at the level of stochastic processes, restricting also our attention to optimal couplings for the sake of clarity. Consider thus a smooth bounded manifold M of dimension d, a M-valued stochastic process (X\_{t})\_{t\in[0,1]} and a \mathbb{R}^{d} valued process (Z\_{t})\_{t\in[0,1]} which is interpreted as the being in T\_{X\_{t}}M for almost every t,\omega and such that, almost surely,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{dX\_{t}}{dt}=Z\_{t}. |  |
+
+Let Y\_{0} be a M-valued random variable, and consider \eta\in\mathcal{P}(C([0,1],M)), concentrated on geodesics of M, such that (e\_{0})\_{\#}\eta=\mathcal{L}(X\_{0}) and (e\_{1})\_{\#}\eta=\mathcal{L}(Y\_{0}). A translation of (\mathcal{L}(X\_{t}))\_{(t\in[0,1]} along \eta should then naturally be given by (Y\_{t})\_{t\in[0,1]}, defined as being almost surely a solution of
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (15) |  | \frac{dY\_{t}}{dt}=\mathcal{T}^{\vartheta\_{t}}(Z\_{t}), |  |

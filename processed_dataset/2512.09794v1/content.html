@@ -1,0 +1,1922 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A mixed local-nonlocal Hénon problem in \mathbb{R}^{N}</title>
+<!--Generated on Thu Dec 11 22:21:01 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="ltx-amsart.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="en" content="Hénon’s equation,  Symmetry of solutions,  p-Laplacian,  fractional p-Laplacian,  Variational Method ">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line ltx_leqno">
+<h1 class="ltx_title ltx_title_document">A mixed local-nonlocal Hénon problem in <span id="m1" class="ltx_Math">\mathbb{R}^{N}</span>
+</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Pablo Ochoa
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">P. Ochoa. 
+<br class="ltx_break">Universidad Nacional de Cuyo, Fac. de Ingeniería. CONICET. Universidad J. A. Maza
+<br class="ltx_break">Parque Gral. San Martín 5500
+<br class="ltx_break">Mendoza, Argentina.
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:pablo.ochoa@ingenieria.uncuyo.edu.ar">pablo.ochoa@ingenieria.uncuyo.edu.ar</a>
+</span></span></span></span>
+<span class="ltx_author_before"> and </span><span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Ariel Salort
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">A. Salort 
+<br class="ltx_break">Departamento de Matemáticas y Ciencia de Datos, Universidad San Pablo-CEU, CEU Universities, Urbanización Montepríncipe, 28660 Boadilla del Monte, Madrid, Spain. 
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:"><span class="ltx_text ltx_font_typewriter">ariel.salort@ceu.es</span></a>
+</span></span></span></span>
+</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+<p class="ltx_p">In this article, we study a Hénon-type equation in <span id="m2" class="ltx_Math">\mathbb{R}^{N}</span> driven by a nonlinear operator given by the combination of a local and a nonlocal term. This equation was originally proposed to model spherically symmetric stellar clusters. Here, we prove that, under a suitable relation among the parameters, there exists a threshold separating the existence and non-existence of solutions. Moreover, we establish regularity properties of the solutions.</p>
+</div>
+<div class="ltx_keywords">
+<h6 class="ltx_title ltx_title_keywords">Key words and phrases: </h6>Hénon’s equation, Symmetry of solutions, p-Laplacian, fractional p-Laplacian, Variational Method 
+</div>
+<div class="ltx_classification">
+<h6 class="ltx_title ltx_title_classification">2020 Mathematics Subject Classification: </h6>35A15, 35A01, 35b06, 35R11, 35D30
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1. </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The classical Hénon problem, introduced in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="" class="ltx_ref">13</a>]</cite>, consists of the following problem</p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E1.m1" class="ltx_Math">-\Delta u=|x|^{\alpha}u^{q-1}\text{ in }B\subset\mathbb{R}^{N},\qquad u&gt;0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with Dirichlet boundary conditions, where <span id="S1.p1.m1" class="ltx_Math">B</span> denotes the unit ball in <span id="S1.p1.m2" class="ltx_Math">\mathbb{R}^{N}</span>. The motivation in Hénon’s original paper <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="" class="ltx_ref">13</a>]</cite> was a model of stationary solutions of the nonlinear Poisson equation describing cluster density under gravitational interaction with inhomogeneous distribution. In this direction, the seminal work of Ni <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib18" title="" class="ltx_ref">18</a>]</cite> established that the weight <span id="S1.p1.m3" class="ltx_Math">|x|^{\alpha}</span> allows for a wider admissible range of exponents <span id="S1.p1.m4" class="ltx_Math">2&lt;q&lt;2^{*}_{\alpha}:=\frac{2(N+\alpha)}{N-2}</span> for which solutions exist. This problem started a huge research on elliptic equations with nonlinear right-hand sides. The literature on the subject is now vast, and providing an exhaustive list of contributions lies beyond the scope of this work. In what follows, we restrict ourselves to highlighting a selection of results that extend the Hénon equation to nonlocal operators or in unbounded domains.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">A generalization of (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a>), involving a mixed local–nonlocal operator, was introduced in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>]</cite>, where existence (and nonexistence) results for positive solutions of</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex1.m1" class="ltx_Math">\gamma(-\Delta)_{p}u+(1-\gamma)(-\Delta)_{p}^{s}u=|x|^{\alpha}u^{q-1}\text{ in%
+ }B\subset\mathbb{R}^{N},\qquad u&gt;0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">under exterior Dirichlet boundary conditions were established for an appropriate range of parameters <span id="S1.p2.m1" class="ltx_Math">p&lt;N</span> and <span id="S1.p2.m2" class="ltx_Math">p&lt;q&lt;p^{*}_{\alpha}:=\frac{p(N+\alpha)}{N-sp}</span>. Here, for <span id="S1.p2.m3" class="ltx_Math">p&gt;1</span>, for a function <span id="S1.p2.m4" class="ltx_Math">u</span> smooth enough, <span id="S1.p2.m5" class="ltx_Math">\Delta_{p}u:=\text{div}(|\nabla u|^{p-2}u)</span> denotes the usual <span id="S1.p2.m6" class="ltx_Math">p-</span>Laplacian of <span id="S1.p2.m7" class="ltx_Math">u</span>, and given <span id="S1.p2.m8" class="ltx_Math">s\in(0,1)</span>, the fractional <span id="S1.p2.m9" class="ltx_Math">p-</span>Laplacian of <span id="S1.p2.m10" class="ltx_Math">u</span> is defined, up to a normalization constant, as</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">(-\Delta_{p})^{s}u(x):=\text{p.v.}\int_{\mathbb{R}^{N}}\frac{|u(x)-u(y)|^{p-2}%
+(u(x)-u(y))}{|x-y|^{N+sp}}\,dy.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Further generalizations of (<a href="#S1.E1" title="(1.1) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a>) to the fractional Laplacian have been obtained in the unbounded setting, where the ball is replaced by the whole space <span id="S1.p3.m1" class="ltx_Math">\mathbb{R}^{N}</span>. In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> it was shown that, in contrast to the case of a bounded domain, the equation</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex3.m1" class="ltx_Math">(-\Delta)^{s}u=|x|^{\alpha}u^{q-1}\text{ in }\mathbb{R}^{N},\qquad u&gt;0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">admits no positive solutions in the range <span id="S1.p3.m2" class="ltx_Math">1&lt;q&lt;2^{*}_{\alpha}:=\frac{2(N+\alpha)}{N-2s}</span>, where <span id="S1.p3.m3" class="ltx_Math">\alpha&gt;-2s</span>, due to the loss of mass at infinity. Similar nonexistence results for the spectral fractional Laplacian were obtained in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="" class="ltx_ref">24</a>]</cite>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">In order to obtain existence of solutions in <span id="S1.p4.m1" class="ltx_Math">\mathbb{R}^{N}</span>, a confining potential can be added to prevent the loss of mass at infinity. In the linear local case, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="" class="ltx_ref">23</a>]</cite> studied the Hénon-type equation</p>
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E2.m1" class="ltx_Math">-\Delta u+|x|^{\beta}u^{p-1}=|x|^{\alpha}u^{q-1}\text{ in }\mathbb{R}^{N},%
+\qquad u&gt;0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and proved the existence of a positive radial solution for <span id="S1.p4.m2" class="ltx_Math">N\geq 3</span> and <span id="S1.p4.m3" class="ltx_Math">p&gt;1</span>, under the assumptions <span id="S1.p4.m4" class="ltx_Math">\max\{2,p\}&lt;q&lt;p^{*}_{\alpha}:=\frac{p(N+\alpha)}{N-2}</span> and <span id="S1.p4.m5" class="ltx_Math">\alpha-\beta&lt;\frac{\beta+2(N-1)}{p+2}(q-p)</span>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A nonlocal version of (<a href="#S1.E2" title="(1.2) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>) was studied in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> for the fractional Laplacian with <span id="S1.p5.m1" class="ltx_Math">\beta=2</span>, namely,</p>
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E3.m1" class="ltx_Math">(-\Delta)^{s}u+|x|^{2}u=|x|^{\alpha}u^{q-1}\text{ in }\mathbb{R}^{N},\qquad u&gt;0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In that work, it was shown that for <span id="S1.p5.m2" class="ltx_Math">\frac{1}{2}&lt;s&lt;\frac{N}{2}</span> and <span id="S1.p5.m3" class="ltx_Math">q&gt;1</span>, under the condition <span id="S1.p5.m4" class="ltx_Math">-N+(\frac{N}{2}-s)q&lt;\alpha&lt;2+(q-2)(\frac{N}{2}-s)</span>, there exists a positive radially symmetric solution to (<a href="#S1.E2" title="(1.2) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>) that decays to zero at infinity. We note, however, that the technique used in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> requires
+<span id="S1.p5.m5" class="ltx_Math">\beta=2</span>, and moreover, the resulting range for <span id="S1.p5.m6" class="ltx_Math">\alpha</span> does not coincide with the corresponding formula in the local case.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">A similar result was proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>, Corollary 5.5]</cite>, where existence of a radial weak solution of (<a href="#S1.E3" title="(1.3) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.3</span></a>) is guaranteed when <span id="S1.p6.m1" class="ltx_Math">\frac{N}{2}&lt;s</span>, <span id="S1.p6.m2" class="ltx_Math">q&lt;\frac{2(N+\alpha)}{N-2s}</span> and <span id="S1.p6.m3" class="ltx_Math">\alpha+\frac{q(1-2s)-2}{2s}&lt;\frac{s}{2}(q-2)(N-1)</span>. Moreover, the author in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> gives a condition for the existence of solution when the right hand side <span id="S1.p6.m4" class="ltx_Math">|x|^{2}u</span> is replaced by <span id="S1.p6.m5" class="ltx_Math">|x|^{\beta}u^{p-1}</span>, namely, <span id="S1.p6.m6" class="ltx_Math">\beta(q-2-2sq)+\alpha(2sp-p+2)&lt;2s(p-q)(N-1)</span> for <span id="S1.p6.m7" class="ltx_Math">\max\{2,p\}&lt;q&lt;\frac{2(N+\alpha)}{N-2s}</span>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">The goal of this article is to extend existence results for Hénon-type equations in <span id="S1.p7.m1" class="ltx_Math">\mathbb{R}^{N}</span> to operators exhibiting both local and nonlocal behavior, namely,</p>
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E4.m1" class="ltx_Math">\begin{cases}\mathcal{L}_{s,p,\gamma}\,u+|x|^{\beta}|u|^{p-2}u=|x|^{\alpha}|u|%
+^{q-2}u\quad\text{in }\mathbb{R}^{N},\\
+u&gt;0,\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S1.p7.m2" class="ltx_Math">u</span> belongs to a suitable functional space of radial functions <span id="S1.p7.m3" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> defined in Section <a href="#S2" title="2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> (see (<a href="#S2.E3" title="(2.3) ‣ 2.1. Functional framework ‣ 2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.3</span></a>)). For <span id="S1.p7.m4" class="ltx_Math">s\in(0,1]</span> and <span id="S1.p7.m5" class="ltx_Math">\gamma\in[0,1]</span>, for a function <span id="S1.p7.m6" class="ltx_Math">u</span> smooth enough, the operator <span id="S1.p7.m7" class="ltx_Math">\mathcal{L}_{s,p,\gamma}</span> is given by</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex4.m1" class="ltx_Math">\mathcal{L}_{s,p,\gamma}\,u:=\gamma(-\Delta)_{p}u+(1-\gamma)(-\Delta)_{p}^{s}u.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">This operator is a mixed local–nonlocal operator, reducing to the classical
+<span id="S1.p8.m1" class="ltx_Math">p-</span>Laplacian when <span id="S1.p8.m2" class="ltx_Math">\gamma=1</span>, and to the fractional <span id="S1.p8.m3" class="ltx_Math">p-</span>Laplacian when <span id="S1.p8.m4" class="ltx_Math">\gamma=0</span>. In the linear case (that is, <span id="S1.p8.m5" class="ltx_Math">p=2</span>) it admits a probabilistic interpretation: the local component corresponds to the continuous part of the dynamics, while the nonlocal component models jump behavior.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">The existence and qualitative properties of solutions for mixed local–nonlocal operators with nonlinear terms is an active area of research. Related results on bounded domains can be found, for instance, in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="" class="ltx_ref">21</a>, <a href="#bib.bib4" title="" class="ltx_ref">4</a>, <a href="#bib.bib5" title="" class="ltx_ref">5</a>, <a href="#bib.bib14" title="" class="ltx_ref">14</a>, <a href="#bib.bib17" title="" class="ltx_ref">17</a>, <a href="#bib.bib12" title="" class="ltx_ref">12</a>, <a href="#bib.bib25" title="" class="ltx_ref">25</a>]</cite>.</p>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">Our primary goal is to study the existence of weak solutions to (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>), defined variationally via the corresponding energy functional.</p>
+<table id="S1.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.5)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E5.m1" class="ltx_Math">\mathcal{J}(u)=\frac{\gamma}{p}\|\nabla u\|_{p}^{p}+\frac{1-\gamma}{p}[u]_{s,p%
+}^{p}+\frac{1}{p}\|u\|_{p,\beta}^{p}-\frac{1}{q}\|u\|_{q,\alpha}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined on a suitable space <span id="S1.p10.m1" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>, where <span id="S1.p10.m2" class="ltx_Math">\|u\|_{\beta,p}^{p}</span> denotes the integral <span id="S1.p10.m3" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx</span>, and <span id="S1.p10.m4" class="ltx_Math">[u]_{s,p}</span> is the so-called Gagliardo seminorm (see Section <a href="#S2" title="2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> for precise definitions). Indeed, <span id="S1.p10.m5" class="ltx_Math">\mathcal{J}</span> is a <span id="S1.p10.m6" class="ltx_Math">C^{1}</span> functional whose Frechét derivative is given by</p>
+<table id="Sx1.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S1.Ex5.m1" class="ltx_Math">\displaystyle\langle\mathcal{J}^{\prime}(u),v\rangle</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S1.Ex5.m2" class="ltx_Math">\displaystyle=\gamma\int_{\mathbb{R}^{N}}\Phi_{p}(\nabla u)\cdot\nabla v\,dx+(%
+1-\gamma)\iint_{\mathbb{R}^{N}\times\mathbb{R}^{N}}\frac{\Phi_{p}(u(x)-u(y))(v%
+(x)-v(y))}{|x-y|^{N+sp}}\,dxdy</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S1.Ex6.m1" class="ltx_Math">\displaystyle\quad+\int_{\mathbb{R}^{N}}|x|^{\beta}\Phi_{p}(u)v\,dx-\int_{%
+\mathbb{R}^{N}}|x|^{\alpha}\Phi_{q}(u)v\,dx\qquad\forall u,v\in\mathcal{W}^{s,%
+p}_{\beta}(\mathbb{R}^{N}),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <span id="S1.p10.m7" class="ltx_Math">\Phi_{p}(t):=|t|^{p-2}t</span>. Therefore, any critical point of <span id="S1.p10.m8" class="ltx_Math">\mathcal{J}</span> is a weak solution of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>).</p>
+</div>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">Our first result establishes a range of parameters for which a weak solution of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) exists. For further reference, we let for <span id="S1.p11.m1" class="ltx_Math">\gamma\in[0,1]</span>,</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex7.m1" class="ltx_Math">p^{*}_{\gamma,s,\alpha}:=\begin{cases}\frac{p(N+\alpha)}{N-sp},\quad\text{if }%
+\gamma=0,\\
+\frac{p(N+\alpha)}{N-p},\quad\text{if }\gamma\in(0,1].\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">Precisely, we have:</p>
+</div>
+<div id="S1.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S1.Thmtheorem1.p1.m1" class="ltx_Math">s\in(0,1]</span> such that <span id="S1.Thmtheorem1.p1.m2" class="ltx_Math">1/p&lt;s&lt;N/p</span>, <span id="S1.Thmtheorem1.p1.m3" class="ltx_Math">\alpha&gt;-sp</span> and <span id="S1.Thmtheorem1.p1.m4" class="ltx_Math">p&lt;q&lt;p^{*}_{\gamma,s,\alpha}</span>. Moreover, assume that</span></p>
+<table id="S1.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1.6)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E6.m1" class="ltx_Math">\alpha-\beta+(q-p)\left(\dfrac{1-N}{p}\right)&lt;0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then, problem (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) admits a radial weak solution.</span></p>
+</div>
+</div>
+<div id="S1.p13" class="ltx_para">
+<p class="ltx_p">The proof of Theorem <a href="#S1.Thmtheorem1" title="Theorem 1.1. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a> relies mainly on establishing a suitable compact embedding of the fractional Sobolev space of weighted radial functions into an appropriate weighted Lebesgue space (see Theorem <a href="#S3.Thmtheorem7" title="Theorem 3.7. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.7</span></a>). This compactness result is the key ingredient that enables the application of a Mountain Pass–type existence theorem (see Lemma <a href="#Sx1.Thmtheorem1" title="Lemma 6.1 (Brezis–Nirenberg). ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>).</p>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">We note that our result extends the existence obtained in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>, <a href="#bib.bib23" title="" class="ltx_ref">23</a>, <a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> to the setting of local-nonlocal nonlinear operators on unbounded domains. Furthermore, the range of parameters given in (<a href="#S1.E6" title="(1.6) ‣ Theorem 1.1. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.6</span></a>) improves upon that obtained in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> in the particular case <span id="S1.p14.m1" class="ltx_Math">p=2</span> and <span id="S1.p14.m2" class="ltx_Math">\beta=2</span>.</p>
+</div>
+<div id="S1.p15" class="ltx_para">
+<p class="ltx_p">Regarding regularity, in the following result, by employing a De Giorgi’s iteration scheme, we find that radial weak solutions of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) are indeed bounded.</p>
+</div>
+<div id="S1.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S1.Thmtheorem2.p1.m1" class="ltx_Math">s\in(0,1]</span> be such that <span id="S1.Thmtheorem2.p1.m2" class="ltx_Math">1/p&lt;s&lt;N/p</span>, <span id="S1.Thmtheorem2.p1.m3" class="ltx_Math">\alpha&gt;-sp</span> and <span id="S1.Thmtheorem2.p1.m4" class="ltx_Math">p&lt;q&lt;p^{*}_{\gamma,s,\alpha}</span>. Moreover, assume condition (<a href="#S1.E6" title="(1.6) ‣ Theorem 1.1. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.6</span></a>). Then, for any radial weak solution <span id="S1.Thmtheorem2.p1.m5" class="ltx_Math">u</span> to (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>), there is a constant <span id="S1.Thmtheorem2.p1.m6" class="ltx_Math">C&gt;0</span> such that</span></p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex8.m1" class="ltx_Math">\|u\|_{L^{\infty}(\mathbb{R}^{N})}\leq C.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.p16" class="ltx_para">
+<p class="ltx_p">Finally, by applying a generalization of Pohozaev’s existence result established in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>]</cite>, we show that the value <span id="S1.p16.m1" class="ltx_Math">\frac{p(N+\alpha)}{N-sp}</span> serves as a threshold for the existence of bounded solutions with a weighted control of the gradient.</p>
+</div>
+<div id="S1.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S1.Thmtheorem3.p1.m1" class="ltx_Math">s\in(0,1]</span> be such that <span id="S1.Thmtheorem3.p1.m2" class="ltx_Math">1/p&lt;s&lt;N/p</span>, <span id="S1.Thmtheorem3.p1.m3" class="ltx_Math">\alpha&gt;-sp</span> and <span id="S1.Thmtheorem3.p1.m4" class="ltx_Math">\beta&gt;p(1-s)</span>. Then, for all <span id="S1.Thmtheorem3.p1.m5" class="ltx_Math">q&gt;p^{*}_{\gamma,s,\alpha}</span>, problem (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) has no solutions <span id="S1.Thmtheorem3.p1.m6" class="ltx_Math">u\in\mathcal{\tilde{X}}(\mathbb{R}^{N})</span>, being</span></p>
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex9.m1" class="ltx_Math">\mathcal{\tilde{X}}(\mathbb{R}^{N})=\{u\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}%
+^{N})\cap L^{\infty}(\mathbb{R}^{N})\text{ such that }|\nabla u(x)||x|\in L^{r%
+}(\mathbb{R}^{N})\text{ for some }r&gt;1\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.p17" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="S1.p18" class="ltx_para">
+<p class="ltx_p">The paper is organized as follows. In Section <a href="#S2" title="2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> we provide the functional framework and preliminary definitions. In the next Section <a href="#S3" title="3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, we quote the main properties of radial functions related to our problem, specially, Strauss’ type lemmas, generalized Rother’s Lemma and compactness of embeddings between fractional Sobolev spaces of radial functions and appropriate Lebesgue weighted spaces. In Section <a href="#S4" title="4. Existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, we state the existence of solutions to problem (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) through variational methods, and in Section <a href="#S5" title="5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> we prove the boundedness of radial solutions. Finally, Section <a href="#S6" title="6. Non-existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> is devoted to prove our non-existence result. For convenience of the reader, we add an Appendix with the Brezis-Nirenberg version of the Mountain Pass Theorem and some monotonicity properties of operators that we employ in the paper.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2. </span>Preliminaries</h2>
+
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1. </span>Functional framework</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Given <span id="S2.SS1.p1.m1" class="ltx_Math">p&gt;1</span>, <span id="S2.SS1.p1.m2" class="ltx_Math">\beta&gt;0</span> and <span id="S2.SS1.p1.m3" class="ltx_Math">s\in(0,1]</span> we consider the weighted fractional Sobolev space</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex1.m1" class="ltx_Math">W_{\beta}^{s,p}(\mathbb{R}^{N})=\{u\in L^{p}_{\beta}(\mathbb{R}^{N})\colon[u]_%
+{s,p}&lt;\infty\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">endowed with the norm</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex2.m1" class="ltx_Math">\|u\|_{s,p,\beta}:=\|u\|_{p,\beta}+[u]_{s,p},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S2.SS1.p1.m4" class="ltx_Math">\|u\|_{p}:=\left(\int_{\mathbb{R}^{N}}|u|^{p}\,dx\right)^{1/p}</span> and the seminorm is given by</p>
+<table id="Sx1.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex5.m1" class="ltx_Math">\displaystyle[u]_{s,p}=\begin{cases}\hidden@noalign{}\textstyle\displaystyle%
+\left(\int_{\mathbb{R}^{N}}\int_{\mathbb{R}^{N}}\dfrac{|u(x)-u(y)|^{p}}{|x-y|^%
+{sp+N}}\,dx\,dy\right)^{1/p}&amp;\text{ if }s\in(0,1)\\
+\hidden@noalign{}\textstyle\displaystyle\left(\int_{\mathbb{R}^{N}}|\nabla u|^%
+{p}\,dx\right)^{1/p}&amp;\text{ if }s=1.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Here, the following weighted Lebesgue spaces are used</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex6.m1" class="ltx_Math">L^{p}_{\beta}(\mathbb{R}^{N}):=\left\{u:\mathbb{R}^{N}\to\mathbb{R}:\int_{%
+\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx&lt;\infty\right\}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with the corresponding norm</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex7.m1" class="ltx_Math">\|u\|_{p,\beta}=\left(\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\right)^{1/p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When <span id="S2.SS1.p1.m5" class="ltx_Math">\beta=0</span> we just write <span id="S2.SS1.p1.m6" class="ltx_Math">\|u\|_{s,p}</span> and <span id="S2.SS1.p1.m7" class="ltx_Math">\|u\|_{p}</span> instead of <span id="S2.SS1.p1.m8" class="ltx_Math">\|u\|_{s,p,0}</span> and <span id="S2.SS1.p1.m9" class="ltx_Math">\|u\|_{p,0}</span>, respectively. Moreover, we write <span id="S2.SS1.p1.m10" class="ltx_Math">W^{s,p}(\mathbb{R}^{N})</span> in place of <span id="S2.SS1.p1.m11" class="ltx_Math">W^{s,p}_{0}(\mathbb{R}^{N})</span>.
+
+<br class="ltx_break">The corresponding subset of radial functions is defined as</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex8.m1" class="ltx_Math">W_{rad,\beta}^{s,p}(\mathbb{R}^{N})=\left\{u\in W_{\beta}^{s,p}(\mathbb{R}^{N}%
+):\text{ $u$ is radial}\right\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">With the aforementioned definitions, the natural framework for introducing weak solutions of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) is the space</p>
+<table id="Sx1.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(2.3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.E3.m1" class="ltx_Math">\displaystyle\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})=\begin{cases}%
+\hidden@noalign{}\textstyle W^{s,p}_{rad,\beta}(\mathbb{R}^{N})&amp;\text{ if }%
+\gamma=0\\
+\hidden@noalign{}\textstyle W^{1,p}_{rad,\beta}(\mathbb{R}^{N})&amp;\text{ if }%
+\gamma\in(0,1].\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">Once the functional spaces have been introduced, the relation between the parameter <span id="S2.SS1.p3.m1" class="ltx_Math">\gamma\in[0,1]</span> in the Hénon equation (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) and the fractional parameter <span id="S2.SS1.p3.m2" class="ltx_Math">s\in(0,1]</span> becomes clear: we have
+<span id="S2.SS1.p3.m3" class="ltx_Math">s=1</span> whenever <span id="S2.SS1.p3.m4" class="ltx_Math">\gamma\in[0,1)</span>, whereas <span id="S2.SS1.p3.m5" class="ltx_Math">s\in(0,1)</span> when <span id="S2.SS1.p3.m6" class="ltx_Math">\gamma=0</span>.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2. </span>The operator <span id="S2.SS2.m1" class="ltx_Math">\mathcal{L}_{s,p,\gamma}</span>
+</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">Given <span id="S2.SS2.p1.m1" class="ltx_Math">\gamma\in[0,1]</span>, <span id="S2.SS2.p1.m2" class="ltx_Math">s\in(0,1)</span> and <span id="S2.SS2.p1.m3" class="ltx_Math">1&lt;p&lt;q</span>, we define the mixed local-nonlocal operator</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex9.m1" class="ltx_Math">\mathcal{L}_{s,p,\gamma}\,u:=\gamma(-\Delta)_{p}u+(1-\gamma)(-\Delta)_{p}^{s}u</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <span id="S2.SS2.p1.m4" class="ltx_Math">u\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>. Here, we denote the fractional <span id="S2.SS2.p1.m5" class="ltx_Math">p-</span>Laplacian of order <span id="S2.SS2.p1.m6" class="ltx_Math">s\in(0,1]</span> as</p>
+<table id="Sx1.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex12.m1" class="ltx_Math">\displaystyle(-\Delta_{p})^{s}u(x):=\begin{cases}\hidden@noalign{}\textstyle%
+\text{p.v.}\displaystyle\int_{\mathbb{R}^{N}}\frac{|u(x)-u(y)|^{p-2}(u(x)-u(y)%
+)}{|x-y|^{N+sp}}\,dy&amp;\text{ if }s\in(0,1)\\[15.0pt]
+\hidden@noalign{}\textstyle-\text{div}\,(|\nabla u(x)|^{p-2}\nabla u(x))&amp;\text%
+{ if }s=1.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus, <span id="S2.SS2.p1.m7" class="ltx_Math">(-\Delta_{p})^{1}u</span> stands for <span id="S2.SS2.p1.m8" class="ltx_Math">-\Delta_{p}u</span>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">The operator <span id="S2.SS2.p2.m1" class="ltx_Math">\mathcal{L}_{s,p,\gamma}</span> is well defined between <span id="S2.SS2.p2.m2" class="ltx_Math">W^{s,p}(\mathbb{R}^{N})</span> and its dual space, and the following representation formula holds: given <span id="S2.SS2.p2.m3" class="ltx_Math">u\in W^{s,p}(\mathbb{R}^{N})</span></p>
+<table id="Sx1.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex13.m1" class="ltx_Math">\displaystyle\langle\mathcal{L}_{s,p,\gamma}\,u,v\rangle</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex13.m2" class="ltx_Math">\displaystyle=\gamma\int_{\mathbb{R}^{N}}\Phi_{p}(\nabla u)\cdot\nabla v\,dx+(%
+1-\gamma)\iint_{\mathbb{R}^{N}\times\mathbb{R}^{N}}\frac{\Phi_{p}(u(x)-u(y))(v%
+(x)-v(y))}{|x-y|^{N+sp}}\,dxdy</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <span id="S2.SS2.p2.m4" class="ltx_Math">v\in W^{s,p}(\mathbb{R}^{N})</span>, being <span id="S2.SS2.p2.m5" class="ltx_Math">\Phi_{p}(t):=|t|^{p-2}t</span> for <span id="S2.SS2.p2.m6" class="ltx_Math">t\in\mathbb{R}</span>. Therefore, we say that <span id="S2.SS2.p2.m7" class="ltx_Math">u\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> is a <em class="ltx_emph ltx_font_italic">weak solution</em> of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) if</p>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex14.m1" class="ltx_Math">\langle\mathcal{L}_{s,p,\gamma}u,v\rangle+\int_{\mathbb{R}^{N}}|x|^{\beta}\Phi%
+_{p}(u)v\,dx=\int_{\mathbb{R}^{N}}|x|^{\alpha}\Phi_{q}(u)v\,dx\qquad\forall v%
+\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that weak solutions are critical points of the functional</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex15.m1" class="ltx_Math">\mathcal{J}(u):=\frac{\gamma}{p}\|\nabla u\|_{p}^{p}+\frac{1-\gamma}{p}[u]_{s,%
+p}+\frac{1}{p}\|u\|_{p,\beta}-\frac{1}{q}\|u\|_{q,\alpha}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defined on <span id="S2.SS2.p2.m8" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>, whose Frechét derivative is given by</p>
+<table id="Sx1.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex16.m1" class="ltx_Math">\displaystyle\langle\mathcal{J}^{\prime}(u),v\rangle</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex16.m2" class="ltx_Math">\displaystyle=\langle\mathcal{L}u,v\rangle+\int_{\mathbb{R}^{N}}|x|^{\beta}%
+\Phi_{p}(u)v\,dx-\int_{\mathbb{R}^{N}}|x|^{\alpha}\Phi_{q}(u)v\,dx\qquad%
+\forall v\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3. </span>Behavior of functions in <span id="S3.m1" class="ltx_Math">W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span>
+</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The Strauss Radial Lemma is a powerful tool that quantifies the decay of radial functions at infinity. The following version is derived from Theorems 10 and 13 in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="" class="ltx_ref">22</a>]</cite>.</p>
+</div>
+<div id="S3.Thmtheorem1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3.1</span></span><span class="ltx_text ltx_font_bold"> </span>(Strauss’ Lemma)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Assume <span id="S3.Thmtheorem1.p1.m1" class="ltx_Math">1/p&lt;s\leq 1</span> and <span id="S3.Thmtheorem1.p1.m2" class="ltx_Math">sp&lt;N</span>. Then, there is a constant <span id="S3.Thmtheorem1.p1.m3" class="ltx_Math">C&gt;0</span> such that for any <span id="S3.Thmtheorem1.p1.m4" class="ltx_Math">u\in W^{s,p}_{rad}(\mathbb{R}^{N})</span>,</span></p>
+<table id="S3.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E1.m1" class="ltx_Math">|u(x)|\leq C|x|^{(1-N)/p}\|u\|_{s,p},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all <span id="S3.Thmtheorem1.p1.m5" class="ltx_Math">x\in\mathbb{R}^{N}</span>.</span></p>
+</div>
+</div>
+<div id="S3.Thmtheorem2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">We observe that in the previous lemma, we may replace the norm <span id="S3.Thmtheorem2.p1.m1" class="ltx_Math">\|u\|_{s,p}</span> with the norm <span id="S3.Thmtheorem2.p1.m2" class="ltx_Math">\|u\|_{s,p,\beta}</span>. Indeed, for <span id="S3.Thmtheorem2.p1.m3" class="ltx_Math">u\in W_{\beta}^{s,p}(\mathbb{R}^{N})</span> with compact support,</span></p>
+<table id="S3.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E2.m1" class="ltx_Math">\begin{split}\|u\|^{p}_{p}&amp;=\int_{|x|&lt;1}|u|^{p}\,dx+\int_{|x|\geq 1}|u|^{p}\,%
+dx\\
+&amp;\leq\left(\int_{|x|&lt;1}|u|^{p^{*}}\right)^{p/p^{*}}\left(|B|\right)^{N/s}+\int%
+_{|x|\geq 1}|x|^{\beta}|u|^{p}\,dx\\
+&amp;\leq C(N,s)\|u\|^{p}_{L^{p^{*}}(\mathbb{R}^{N})}+\||x|^{\beta/p}u\|^{p}_{p}\\
+&amp;\leq C(N,s,p)[u]_{s,p}^{p}+\||x|^{\beta/p}u\|^{p}_{p}\leq C\|u\|^{p}_{s,p,%
+\beta},\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where we have used the inequality (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>, Theorem 6.5]</cite>)</span></p>
+<table id="S3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex1.m1" class="ltx_Math">\|u\|^{p}_{L^{p^{*}}(\mathbb{R}^{N})}\leq C(N,s,p)[u]_{s,p}^{p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">By density, this proves that <span id="S3.Thmtheorem2.p1.m4" class="ltx_Math">\|u\|_{s,p}\leq C\|u\|_{s,p,\beta}</span> in <span id="S3.Thmtheorem2.p1.m5" class="ltx_Math">W_{\beta}^{s,p}(\mathbb{R}^{N})</span> and the continuity of the embedding <span id="S3.Thmtheorem2.p1.m6" class="ltx_Math">W_{\beta}^{s,p}(\mathbb{R}^{N})\subset W^{s,p}(\mathbb{R}^{N})</span>.</span></p>
+</div>
+</div>
+<div id="S3.Thmtheorem3" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Recall that (see for instance <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="" class="ltx_ref">9</a>, Lemma 4.2]</cite>), for <span id="S3.Thmtheorem3.p1.m1" class="ltx_Math">u\in W^{1,p}(\mathbb{R}^{N})</span>, <span id="S3.Thmtheorem3.p1.m2" class="ltx_Math">1\leq p&lt;\infty</span> and <span id="S3.Thmtheorem3.p1.m3" class="ltx_Math">s\in(0,1)</span>, it holds that</span></p>
+<table id="S3.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E3.m1" class="ltx_Math">[u]_{s,p}^{p}\leq\frac{N\omega_{N}}{p}\left(\frac{2^{p}}{s}\|u\|_{p}^{p}+\frac%
+{1}{1-s}\|\nabla u\|_{p}^{p}\right).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then, by (<a href="#S3.E3" title="(3.3) ‣ Remark 3.3. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>) and Remark <a href="#S3.Thmtheorem2" title="Remark 3.2. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a>,</span></p>
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E4.m1" class="ltx_Math">[u]_{s,p}^{p}\leq C(\|u\|_{p}^{p}+\|\nabla u\|_{p}^{p})\leq C(\|u\|_{1,p,\beta%
+}^{p}+\|\nabla u\|_{p}^{p})\leq C\|u\|_{1,p,\beta}^{p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">We quote the following continuity embedding from <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>, Theorem 6.2]</cite>:</p>
+</div>
+<div id="S3.Thmtheorem4" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmtheorem4.p1.m1" class="ltx_Math">0&lt;s&lt;N/p</span>, <span id="S3.Thmtheorem4.p1.m2" class="ltx_Math">c&gt;-N</span>, <span id="S3.Thmtheorem4.p1.m3" class="ltx_Math">(1-sp)c\leq(N-1)ps</span> and let <span id="S3.Thmtheorem4.p1.m4" class="ltx_Math">q=\frac{p(N+c)}{N-sp}</span>. Then, there is <span id="S3.Thmtheorem4.p1.m5" class="ltx_Math">C&gt;0</span> such that</span></p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.5)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E5.m1" class="ltx_Math">\left(\int_{\mathbb{R}^{N}}|x|^{c}|u|^{q}\,dx\right)^{1/q}\leq C\|u\|_{H^{s,p}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all radial <span id="S3.Thmtheorem4.p1.m6" class="ltx_Math">u\in H^{s,p}(\mathbb{R}^{N})</span>.</span></p>
+</div>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Here <span id="S3.p3.m1" class="ltx_Math">\|u\|_{H^{s,p}}</span> denotes the norm of <span id="S3.p3.m2" class="ltx_Math">u</span> in the Bessel potential space <span id="S3.p3.m3" class="ltx_Math">H^{s,p}(\mathbb{R}^{N})</span> (see, for instance, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite> for a precise definition). We next show that we may replace <span id="S3.p3.m4" class="ltx_Math">\|u\|_{H^{s,p}}</span> in the previous lemma by the norm <span id="S3.p3.m5" class="ltx_Math">\|u\|_{s,p}</span>.</p>
+</div>
+<div id="S3.Thmtheorem5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmtheorem5.p1.m1" class="ltx_Math">s\in(0,1]</span> such that <span id="S3.Thmtheorem5.p1.m2" class="ltx_Math">0&lt;s&lt;N/p</span>. Let <span id="S3.Thmtheorem5.p1.m3" class="ltx_Math">\alpha\in\mathbb{R}</span> be such that <span id="S3.Thmtheorem5.p1.m4" class="ltx_Math">-sp&lt;\alpha</span>, <span id="S3.Thmtheorem5.p1.m5" class="ltx_Math">(1-sp)\alpha\leq(N-1)sp</span>, and <span id="S3.Thmtheorem5.p1.m6" class="ltx_Math">p&lt;q&lt;\frac{p(N+\alpha)}{N-sp}</span>. Then, there are <span id="S3.Thmtheorem5.p1.m7" class="ltx_Math">C&gt;0</span> and <span id="S3.Thmtheorem5.p1.m8" class="ltx_Math">c=(q,s)</span> with <span id="S3.Thmtheorem5.p1.m9" class="ltx_Math">-sp&lt;c&lt;\alpha</span>, such that</span></p>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.6)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E6.m1" class="ltx_Math">\left(\int_{\mathbb{R}^{N}}|x|^{c}|u|^{q}\,dx\right)^{1/q}\leq C\|u\|_{{s,p}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all <span id="S3.Thmtheorem5.p1.m10" class="ltx_Math">u\in W_{rad}^{s,p}(\mathbb{R}^{N})</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p4.m1" class="ltx_Math">s\in(0,1]</span> such that <span id="S3.p4.m2" class="ltx_Math">0&lt;s&lt;N/p</span>, and consider <span id="S3.p4.m3" class="ltx_Math">\alpha,q</span> such that <span id="S3.p4.m4" class="ltx_Math">-sp&lt;\alpha\leq\frac{(N-1)sp}{1-sp}</span> and <span id="S3.p4.m5" class="ltx_Math">p&lt;q&lt;\frac{p(N+\alpha)}{N-sp}</span>. Let <span id="S3.p4.m6" class="ltx_Math">u\in W^{s,p}_{rad}(\mathbb{R}^{N})</span>. We choose <span id="S3.p4.m7" class="ltx_Math">0&lt;s^{\prime}&lt;s</span> closed enough to <span id="S3.p4.m8" class="ltx_Math">s</span> so that it satisfies the following conditions. First, <span id="S3.p4.m9" class="ltx_Math">s^{\prime}</span> satisfies the relation</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex2.m1" class="ltx_Math">q&lt;\dfrac{p(N+\alpha)}{N-s^{\prime}p},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is true since the function
+</p>
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex3.m1" class="ltx_Math">g(r,t):=\frac{p(N+r)}{N-tp}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is increasing in <span id="S3.p4.m10" class="ltx_Math">r</span> and <span id="S3.p4.m11" class="ltx_Math">t</span>, and <span id="S3.p4.m12" class="ltx_Math">s^{\prime}</span> is close to <span id="S3.p4.m13" class="ltx_Math">s</span>. Moreover, letting</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<table id="S3.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex4.m1" class="ltx_Math">\delta:=sp-s^{\prime}p&gt;0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we require <span id="S3.p5.m1" class="ltx_Math">s^{\prime}</span> close enough to <span id="S3.p5.m2" class="ltx_Math">s</span> so that</p>
+<table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.7)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E7.m1" class="ltx_Math">\left(\dfrac{1-s^{\prime}p}{1-s^{\prime}p-\delta}\right)\left(Ns^{\prime}p-s^{%
+\prime}p+\delta N\right)&lt;(N-1)s^{\prime}p.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, by taking <span id="S3.p5.m3" class="ltx_Math">s^{\prime}</span> even closer to <span id="S3.p5.m4" class="ltx_Math">s</span>, there is <span id="S3.p5.m5" class="ltx_Math">c=c(q,s)&lt;\alpha</span> such that</p>
+<table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.8)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E8.m1" class="ltx_Math">q=\dfrac{p(N+c)}{N-s^{\prime}p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In order to apply Lemma <a href="#S3.Thmtheorem4" title="Lemma 3.4. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.4</span></a>, we need to check that</p>
+<table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.9)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E9.m1" class="ltx_Math">(1-s^{\prime}p)c\leq(N-1)s^{\prime}p.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that from (<a href="#S3.E8" title="(3.8) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.8</span></a>), we have</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex5.m1" class="ltx_Math">c=\dfrac{q(N-s^{\prime}p)}{p}-N,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so recalling the assumptions on <span id="S3.p5.m6" class="ltx_Math">q</span> and <span id="S3.p5.m7" class="ltx_Math">\alpha</span>, we have</p>
+<table id="S3.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.10)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E10.m1" class="ltx_Math">\begin{split}(1-s^{\prime}p)c&amp;=(1-s^{\prime}p)\left(\dfrac{q(N-s^{\prime}p)}{p%
+}-N\right)\\
+&amp;&lt;(1-s^{\prime}p)\left(\dfrac{(N-s^{\prime}p)}{p}.\frac{p(N+\alpha)}{N-sp}-N%
+\right)\\
+&amp;\leq(1-s^{\prime}p)\left(\dfrac{N-s^{\prime}p}{N-sp}\left(N+\dfrac{(N-1)sp}{1%
+-sp}\right)-N\right)\\
+&amp;=\dfrac{1-s^{\prime}p}{1-sp}(Nsp-s^{\prime}p)\\
+&amp;=\dfrac{1-s^{\prime}p}{1-s^{\prime}p-\delta}(Ns^{\prime}p-s^{\prime}p+\delta N%
+)&lt;(N-1)s^{\prime}p,\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we have used the assumption on <span id="S3.p5.m8" class="ltx_Math">\delta</span> given in (<a href="#S3.E7" title="(3.7) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.7</span></a>). This proves that <span id="S3.p5.m9" class="ltx_Math">c</span> satisfies (<a href="#S3.E9" title="(3.9) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a>).</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">Then, by Lemma <a href="#S3.Thmtheorem4" title="Lemma 3.4. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.4</span></a>, it follows that
+</p>
+<table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.11)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E11.m1" class="ltx_Math">\left(\int_{\mathbb{R}^{N}}|x|^{c}|v|^{q}\,dx\right)^{1/q}\leq C\|v\|_{H^{s^{%
+\prime},p}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all radial <span id="S3.p6.m1" class="ltx_Math">v\in H^{s^{\prime},p}(\mathbb{R}^{N})</span>. Recall that <span id="S3.p6.m2" class="ltx_Math">H^{s^{\prime},p}(\mathbb{R}^{N})</span> denotes the Bessel potential space. Since <span id="S3.p6.m3" class="ltx_Math">s^{\prime}&lt;s</span>, by Theorem 11.1 in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, the following inclusion holds:</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex6.m1" class="ltx_Math">W^{s,p}(\mathbb{R}^{N})\subset H^{s^{\prime},p}(\mathbb{R}^{N})\quad\text{with%
+ continuity}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, from (<a href="#S3.E11" title="(3.11) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.11</span></a>), we conclude (<a href="#S3.E6" title="(3.6) ‣ Lemma 3.5. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.6</span></a>). This ends the proof.
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span></p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Next, we prove a continuity embedding between the spaces <span id="S3.p7.m1" class="ltx_Math">W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span> and <span id="S3.p7.m2" class="ltx_Math">L^{q}_{\alpha}(\mathbb{R}^{N})</span>, for any <span id="S3.p7.m3" class="ltx_Math">p&lt;q&lt;\frac{p(N+\alpha)}{N-sp}</span>.</p>
+</div>
+<div id="S3.Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmtheorem6.p1.m1" class="ltx_Math">s\in(0,1]</span> such that <span id="S3.Thmtheorem6.p1.m2" class="ltx_Math">1/p&lt;s&lt;N/p</span>, <span id="S3.Thmtheorem6.p1.m3" class="ltx_Math">-sp&lt;\alpha</span> and <span id="S3.Thmtheorem6.p1.m4" class="ltx_Math">p&lt;q&lt;\frac{p(N+\alpha)}{N-sp}</span>. Moreover, assume that</span></p>
+<table id="S3.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.12)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E12.m1" class="ltx_Math">\alpha-\beta+(q-p)\left(\dfrac{1-N}{p}\right)&lt;0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then, for any <span id="S3.Thmtheorem6.p1.m5" class="ltx_Math">u\in W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span>, there holds</span></p>
+<table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.13)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E13.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|u|^{q}\,dx\leq C\|u\|_{s,p}^{\eta}\|u\|_{p,%
+\beta}^{\omega},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some <span id="S3.Thmtheorem6.p1.m6" class="ltx_Math">\eta,\omega&gt;0</span> depending on <span id="S3.Thmtheorem6.p1.m7" class="ltx_Math">N,p,q</span> and <span id="S3.Thmtheorem6.p1.m8" class="ltx_Math">s</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p8.m1" class="ltx_Math">\varepsilon&gt;0</span>. Since <span id="S3.p8.m2" class="ltx_Math">q&lt;\frac{p(N+\alpha)}{N-sp}</span>, by Lemma <a href="#S3.Thmtheorem5" title="Lemma 3.5. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.5</span></a>, there is <span id="S3.p8.m3" class="ltx_Math">c&lt;\alpha</span> such that</p>
+<table id="S3.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.14)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E14.m1" class="ltx_Math">\left(\int_{\mathbb{R}^{N}}|x|^{c}|u|^{q}\,dx\right)^{1/q}\leq C\|u\|_{{s,p}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now,</p>
+<table id="S3.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.15)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E15.m1" class="ltx_Math">\int_{|x|\leq\varepsilon}|x|^{\alpha}|u|^{q}\,dx=\int_{|x|\leq\varepsilon}|x|^%
+{\alpha-c}|x|^{c}|u|^{q}\,dx\leq C\varepsilon^{\alpha-c}\|u\|^{q}_{s,p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Next, by Strauss’ Lemma <a href="#S3.Thmtheorem1" title="Lemma 3.1 (Strauss’ Lemma). ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a> and Remark <a href="#S3.Thmtheorem2" title="Remark 3.2. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a>, we get that</p>
+<table id="S3.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.16)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E16.m1" class="ltx_Math">\begin{split}\int_{|x|&gt;\varepsilon}|x|^{\alpha}|u|^{q}\,dx&amp;=\int_{|x|&gt;%
+\varepsilon}|x|^{\alpha-\beta}|x|^{\beta}|u|^{q-p}|u|^{p}\,dx\\
+&amp;\leq C\int_{|x|&gt;\varepsilon}|x|^{\beta}|u|^{p}|x|^{\alpha-\beta}\left(|x|^{%
+\frac{1-N}{p}}\|u\|_{s,p}\right)^{q-p}\,dx\\
+&amp;=C\|u\|_{s,p}^{q-p}\int_{|x|&gt;\varepsilon}|x|^{\beta}|u|^{p}|x|^{\alpha-\beta+%
+(q-p)\frac{1-N}{p}}\,dx.\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Condition (<a href="#S3.E12" title="(3.12) ‣ Lemma 3.6. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.12</span></a>) yields that</p>
+<table id="S3.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.17)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E17.m1" class="ltx_Math">\int_{|x|&gt;\varepsilon}|x|^{\alpha}|u|^{q}\,dx\leq C\varepsilon^{\alpha-\beta+(%
+q-p)\frac{1-N}{p}}\|u\|^{p}_{L^{p}_{\beta}}\|u\|_{s,p}^{q-p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, combining (<a href="#S3.E15" title="(3.15) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.15</span></a>) and (<a href="#S3.E17" title="(3.17) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.17</span></a>),</p>
+<table id="S3.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.18)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E18.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|u|^{q}\,dx\leq C\left(\varepsilon^{\alpha-c}%
+\|u\|^{p}_{s,p}+C\varepsilon^{\alpha-\beta+(q-p)\frac{1-N}{p}}\|u\|^{p}_{L^{p}%
+_{\beta}}\|u\|_{s,p}^{q-p}\right).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Maximizing the auxiliary function</p>
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex7.m1" class="ltx_Math">g(\varepsilon):=C_{1}\varepsilon^{e_{1}}+C_{2}\varepsilon^{-e_{2}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex8.m1" class="ltx_Math">C_{1}=C\|u\|^{p}_{s,p},\,C_{2}=C\|u\|^{p}_{L^{p}_{\beta}}\|u\|_{s,p}^{q-p}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.19)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E19.m1" class="ltx_Math">e_{1}=\alpha-c,\quad-e_{2}=\alpha-\beta+(q-p)\frac{1-N}{p},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we finally get (<a href="#S3.E13" title="(3.13) ‣ Lemma 3.6. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.13</span></a>) with</p>
+<table id="S3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex9.m1" class="ltx_Math">\eta=\dfrac{pe_{2}+(q-p)e_{1}}{e_{1}+e_{2}}\quad\text{and}\quad\omega=\dfrac{%
+pe_{1}}{e_{1}+e_{2}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that <span id="S3.p8.m4" class="ltx_Math">\eta</span> is positive since by (<a href="#S3.E12" title="(3.12) ‣ Lemma 3.6. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.12</span></a>),</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex10.m1" class="ltx_Math">\eta=\frac{p(\beta-\alpha)+(q-p)(N-1)+(q-p)(\alpha-c)}{e_{1}+e_{2}}&gt;\dfrac{(q-%
+p)(\alpha-c)}{e_{1}+e_{2}}&gt;0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This concludes the proof.
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span></p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">We are now ready to prove the compactness of the embedding <span id="S3.p9.m1" class="ltx_Math">W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span> into <span id="S3.p9.m2" class="ltx_Math">L^{q}_{\alpha}(\mathbb{R}^{N})</span>.</p>
+</div>
+<div id="S3.Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmtheorem7.p1.m1" class="ltx_Math">s\in(0,1]</span> such that <span id="S3.Thmtheorem7.p1.m2" class="ltx_Math">1/p&lt;s&lt;N/p</span>, <span id="S3.Thmtheorem7.p1.m3" class="ltx_Math">\alpha&gt;-sp</span> and <span id="S3.Thmtheorem7.p1.m4" class="ltx_Math">p&lt;q&lt;\frac{p(N+\alpha)}{N-sp}</span>. Moreover, assume that</span></p>
+<table id="S3.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.20)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E20.m1" class="ltx_Math">\alpha-\beta+(q-p)\left(\dfrac{1-N}{p}\right)&lt;0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then, the following embedding is compact</span></p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex11.m1" class="ltx_Math">W^{s,p}_{rad,\beta}(\mathbb{R}^{N})\subset L^{q}_{\alpha}(\mathbb{R}^{N}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">Suppose that <span id="S3.p10.m1" class="ltx_Math">\{u_{n}\}_{n\in\mathbb{N}}\subset W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span> and <span id="S3.p10.m2" class="ltx_Math">u_{n}\rightharpoonup 0</span>. Let <span id="S3.p10.m3" class="ltx_Math">M&gt;0</span> such that <span id="S3.p10.m4" class="ltx_Math">\|u\|_{s,p,\beta}\leq M</span>. Given <span id="S3.p10.m5" class="ltx_Math">\varepsilon\in(0,1]</span>, we write</p>
+<table id="S3.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.21)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E21.m1" class="ltx_Math">\|u_{n}\|^{q}_{q,\alpha}=\int_{|x|&lt;\varepsilon}|u_{n}|^{q}|x|^{\alpha}\,dx+%
+\int_{\varepsilon\leq|x|&lt;1/\varepsilon}|u_{n}|^{q}|x|^{\alpha}\,dx+\int_{|x|%
+\geq 1/\varepsilon}|u_{n}|^{q}|x|^{\alpha}\,dx:=(i)+(ii)+(iii).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Regarding <span id="S3.p10.m6" class="ltx_Math">(i)</span>, we first observe that since <span id="S3.p10.m7" class="ltx_Math">q&lt;\frac{p(N+\alpha)}{N-sp}</span>, then by Lemma <a href="#S3.Thmtheorem5" title="Lemma 3.5. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.5</span></a> that there is <span id="S3.p10.m8" class="ltx_Math">c\in(-sp,\alpha)</span> such that</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex12.m1" class="ltx_Math">q=\frac{p(N+c)}{N-sp}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex13.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{c}|u_{n}|^{q}\,dx\leq C\|u_{n}\|^{q}_{s,p}\leq C\|u_%
+{n}\|_{s,p,\beta}^{q}\leq CM^{q},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we have appeal to Remark <a href="#S3.Thmtheorem2" title="Remark 3.2. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a>. Hence,</p>
+</div>
+<div id="S3.p11" class="ltx_para">
+<table id="S3.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.22)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E22.m1" class="ltx_Math">(i)=\int_{|x|&lt;\varepsilon}|x|^{\alpha-c}|x|^{c}|u_{n}|^{q}\,dx\leq C%
+\varepsilon^{\alpha-c}M^{q}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">To deal with (ii), we let <span id="S3.p12.m1" class="ltx_Math">\Omega_{\varepsilon}:=\left\{x\in\mathbb{R}^{N}:\varepsilon\leq|x|&lt;\varepsilon%
+^{-1}\right\}</span>. Observe that</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex14.m1" class="ltx_Math">\int_{\Omega_{\varepsilon}}|u_{n}|^{p}\,dx=\int_{\Omega_{\varepsilon}}|x|^{-%
+\beta}|x|^{\beta}|u_{n}|^{p}\,dx\leq\varepsilon^{-\beta}\int_{\Omega_{%
+\varepsilon}}|x|^{\beta}|u_{n}|^{p}\,dx\leq M^{p}\varepsilon^{-\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Remark <a href="#S3.Thmtheorem2" title="Remark 3.2. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a> and the compact embedding <span id="S3.p12.m2" class="ltx_Math">W^{s,p}\subset L^{p}</span> in bounded domains (see, for instance <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>, Theorem 7.1]</cite>), it follows, up to a subsequence that we do not relabel, that</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex15.m1" class="ltx_Math">u_{n}\to 0\quad\text{in }L^{p}(\Omega_{\varepsilon}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, by Lemma <a href="#S3.Thmtheorem1" title="Lemma 3.1 (Strauss’ Lemma). ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a></p>
+<table id="S3.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.23)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E23.m1" class="ltx_Math">(ii)\leq C(\varepsilon)\|u_{n}\|_{L^{\infty}(\Omega_{\varepsilon})}^{q-p}\int_%
+{\Omega_{\varepsilon}}|u_{n}|^{p}\,dx\leq C(\varepsilon,M)\int_{\Omega_{%
+\varepsilon}}|u_{n}|^{p}\,dx\to 0,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <span id="S3.p12.m3" class="ltx_Math">n\to\infty</span>.</p>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">Finally, we apply the Strauss’ Lemma <a href="#S3.Thmtheorem1" title="Lemma 3.1 (Strauss’ Lemma). ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a> to get</p>
+<table id="S3.E24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.24)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E24.m1" class="ltx_Math">(iii)\leq C\int_{|x|\geq 1/\varepsilon}|x|^{\beta}|x|^{\alpha-\beta}|u_{n}|^{p%
+}\left(|x|^{(1-N)/p}\|u_{n}\|_{s,p,\beta}\right)^{q-p}\,dx\leq CM^{p-q}\int_{|%
+x|\geq 1/\varepsilon}|x|^{\delta}|x|^{\beta}|u_{n}|^{p}\,dx,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S3.p13.m1" class="ltx_Math">\delta:=\alpha-\beta-(p-q)\frac{N-1}{p}&lt;0</span> by assumption. Hence</p>
+<table id="S3.E25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.25)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E25.m1" class="ltx_Math">(iii)\leq CM^{2p-q}\varepsilon^{-\delta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p14" class="ltx_para">
+<p class="ltx_p">Finally, the conclusion follows combining (<a href="#S3.E22" title="(3.22) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.22</span></a>), (<a href="#S3.E23" title="(3.23) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.23</span></a>) and (<a href="#S3.E25" title="(3.25) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.25</span></a>).
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4. </span>Existence of solutions</h2>
+
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of Theorem <a href="#S1.Thmtheorem1" title="Theorem 1.1. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.1</span></a>.</h6>
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Let us check the conditions of the Brezis-Niremberg lemma given in Lemma <a href="#Sx1.Thmtheorem1" title="Lemma 6.1 (Brezis–Nirenberg). ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">(i) Case <span id="S4.p2.m1" class="ltx_Math">\gamma=0</span>. By (<a href="#S2.E3" title="(2.3) ‣ 2.1. Functional framework ‣ 2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.3</span></a>), the underlying space is <span id="S4.p2.m2" class="ltx_Math">W^{s,p}_{rad,\beta}(\mathbb{R}^{N})</span>. Let <span id="S4.p2.m3" class="ltx_Math">u</span> such that <span id="S4.p2.m4" class="ltx_Math">\|u\|_{s,p,\beta}\ll 1</span>. Then, by Theorem <a href="#S3.Thmtheorem7" title="Theorem 3.7. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.7</span></a>,</p>
+<table id="Sx1.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex1.m1" class="ltx_Math">\displaystyle\mathcal{J}(u)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex1.m2" class="ltx_Math">\displaystyle=\frac{1}{p}[u]_{s,p}^{p}+\frac{1}{p}\|u\|_{p,\beta}^{p}-\frac{1}%
+{q}\|u\|_{q,\alpha}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex2.m1" class="ltx_Math">\displaystyle\geq\frac{1}{p}\left([u]_{s,p}^{p}+\|u\|_{p,\beta}^{p}\right)-C\|%
+u\|_{s,p,\beta}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex3.m1" class="ltx_Math">\displaystyle\geq\frac{1}{p2^{p}}\left([u]_{s,p}+\|u\|_{p,\beta}\right)^{p}-C%
+\|u\|_{s,p,\beta}^{q}=\frac{1}{p2^{p}}\|u\|_{s,p,\beta}^{p}-C\|u\|_{s,p,\beta}%
+^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where we have used that <span id="S4.p2.m5" class="ltx_Math">a^{p}+b^{p}\geq\max\{a^{p},b^{p}\}\geq(\frac{a+b}{2})^{p}</span>. Since <span id="S4.p2.m6" class="ltx_Math">p&lt;q</span>, we have that <span id="S4.p2.m7" class="ltx_Math">\mathcal{J}(u)&gt;0</span> for <span id="S4.p2.m8" class="ltx_Math">\|u\|_{s,p,\beta}=r</span> small enough.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Similarly, when <span id="S4.p3.m1" class="ltx_Math">\gamma\in(0,1]</span>, by (<a href="#S2.E3" title="(2.3) ‣ 2.1. Functional framework ‣ 2. Preliminaries ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.3</span></a>), the underlying space is now <span id="S4.p3.m2" class="ltx_Math">W^{1,p}_{rad,\beta}(\mathbb{R}^{N})</span>. Hence, using Theorem <a href="#S3.Thmtheorem7" title="Theorem 3.7. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.7</span></a> yields</p>
+<table id="Sx1.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex4.m1" class="ltx_Math">\displaystyle\mathcal{J}(u)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex4.m2" class="ltx_Math">\displaystyle=\frac{\gamma}{p}\|\nabla u\|_{p}^{p}+\frac{1-\gamma}{p}[u]_{s,p}%
+^{p}+\frac{1}{p}\|u\|_{p,\beta}^{p}-\frac{1}{q}\|u\|_{\alpha,q}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex5.m1" class="ltx_Math">\displaystyle\geq\frac{\gamma}{p}\left(\|\nabla u\|_{p}^{p}+\|u\|_{p,\beta}^{p%
+}\right)-C\|u\|_{1,p,\beta}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex6.m1" class="ltx_Math">\displaystyle\geq\frac{\gamma}{p2^{p}}\left(\|\nabla u\|_{p}+\|u\|_{p,\beta}%
+\right)^{p}-C\|u\|_{1,p,\beta}^{q}=\frac{\gamma}{p2^{p}}\|u\|_{1,p,\beta}^{p}-%
+C\|u\|_{1,p,\beta}^{q},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">obtaining the same conclusion than before.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">(ii) Let <span id="S4.p4.m1" class="ltx_Math">\gamma\in[0,1]</span>. Let <span id="S4.p4.m2" class="ltx_Math">w&gt;0</span> fixed, and define <span id="S4.p4.m3" class="ltx_Math">v:=tw</span>, <span id="S4.p4.m4" class="ltx_Math">t\in\mathbb{R}</span>. Then</p>
+<table id="Sx1.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex7.m1" class="ltx_Math">\displaystyle\mathcal{J}(v)=\frac{\gamma t^{p}}{p}\|\nabla w\|_{p}^{p}+\frac{(%
+1-\gamma)t^{p}}{p}[w]_{s,p}^{p}+\frac{t^{p}}{p}\|w\|_{p,\beta}^{p}-\frac{t^{q}%
+}{q}\|w\|_{q,\alpha}^{q}\leq C_{1}t^{p}-C_{2}t^{q}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since <span id="S4.p4.m5" class="ltx_Math">p&lt;q</span>, there exists <span id="S4.p4.m6" class="ltx_Math">t</span> such that <span id="S4.p4.m7" class="ltx_Math">\mathcal{J}(v)&lt;0</span> and <span id="S4.p4.m8" class="ltx_Math">\|v\|&gt;r</span>.</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">(iii) Let <span id="S4.p5.m1" class="ltx_Math">\gamma\in[0,1]</span>. Let <span id="S4.p5.m2" class="ltx_Math">\{u_{n}\}_{n\in\mathbb{N}}\subset\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> be such that <span id="S4.p5.m3" class="ltx_Math">\mathcal{J}^{\prime}(u_{n})\to 0</span> and <span id="S4.p5.m4" class="ltx_Math">\mathcal{J}(u_{n})\to c</span>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Since <span id="S4.p6.m1" class="ltx_Math">\mathcal{J}^{\prime}(u_{n})\to 0</span>, we get that</p>
+<table id="Sx1.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex8.m1" class="ltx_Math">\displaystyle\left|\langle\mathcal{J}^{\prime}(u_{n}),u_{n}\rangle\right|</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex8.m2" class="ltx_Math">\displaystyle=\left|\gamma\|\nabla u_{n}\|_{p}^{p}+(1-\gamma)[u_{n}]_{s,p}^{p}%
++\|u_{n}\|_{p,\beta}^{p}-\|u_{n}\|_{q,\alpha}^{q}\right|\leq\|u_{n}\|_{s,p,\beta}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for <span id="S4.p6.m2" class="ltx_Math">n</span> large enough. Since <span id="S4.p6.m3" class="ltx_Math">|\mathcal{J}(u_{n})|\leq C</span>, we have that</p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex9.m1" class="ltx_Math">\left|\frac{\gamma}{p}\|\nabla u_{n}\|_{p}^{p}+\frac{1-\gamma}{p}[u_{n}]_{s,p}%
+^{p}+\frac{1}{p}\|u_{n}\|_{p,\beta}^{p}-\frac{1}{q}\|u_{n}\|_{q,\alpha}^{q}%
+\right|\leq C.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The last two expression give that</p>
+<table id="Sx1.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex10.m1" class="ltx_Math">\displaystyle\gamma\|\nabla u_{n}\|_{p}^{p}+(1-\gamma)[u_{n}]_{s,p}^{p}</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex10.m2" class="ltx_Math">\displaystyle+\|u_{n}\|_{p,\beta}^{p}\leq pC+\frac{p}{q}\|u_{n}\|_{q,\alpha}^{q}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex11.m1" class="ltx_Math">\displaystyle\leq pC+\frac{p}{q}\gamma\|\nabla u_{n}\|_{p}^{p}+\frac{p}{q}(1-%
+\gamma)[u_{n}]_{s,p}^{p}+\frac{p}{q}\|u_{n}\|_{p,\beta}^{p}+\frac{p}{q}\|u_{n}%
+\|_{s,p,\beta}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">from where, since <span id="S4.p6.m4" class="ltx_Math">p&lt;q</span>,</p>
+<table id="S4.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex12.m1" class="ltx_Math">\left(1-\frac{p}{q}\right)\left(\gamma\|\nabla u_{n}\|_{p}^{p}+(1-\gamma)[u_{n%
+}]_{s,p}^{p}+\|u_{n}\|_{p,\beta}^{p}\right)\leq pC+\frac{p}{q}\|u_{n}\|_{s,p,%
+\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When <span id="S4.p6.m5" class="ltx_Math">\gamma=0</span>, this gives that</p>
+<table id="S4.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex13.m1" class="ltx_Math">\left(1-\frac{p}{q}\right)\left([u_{n}]_{s,p}^{p}+\|u_{n}\|_{p,\beta}^{p}%
+\right)\leq pC+\frac{p}{q}\|u_{n}\|_{s,p,\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When <span id="S4.p6.m6" class="ltx_Math">\gamma\in(0,1]</span>, we get</p>
+<table id="S4.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex14.m1" class="ltx_Math">\gamma\left(1-\frac{p}{q}\right)\left(\|\nabla u\|_{p}^{p}+\|u_{n}\|_{p,\beta}%
+^{p}\right)\leq pC+\frac{p}{q}\|u_{n}\|_{1,p,\beta},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that is, for any <span id="S4.p6.m7" class="ltx_Math">\gamma\in[0,1]</span> we have the following relation:</p>
+<table id="S4.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex15.m1" class="ltx_Math">\left(1-\frac{p}{q}\right)\|u_{n}\|_{s,p,\beta}^{p}\leq C^{\prime}(p+\|u_{n}\|%
+_{s,p,\beta}),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">since <span id="S4.p6.m8" class="ltx_Math">(a+b)^{p}\leq 2^{p-1}(a^{p}+b^{p})</span> holds for <span id="S4.p6.m9" class="ltx_Math">a,b&gt;0</span>. Hence, for <span id="S4.p6.m10" class="ltx_Math">\gamma\in[0,1]</span>, the sequence <span id="S4.p6.m11" class="ltx_Math">\{u_{n}\}_{n\in\mathbb{N}}</span> is bounded in <span id="S4.p6.m12" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>. Then, up to a subsequence, <span id="S4.p6.m13" class="ltx_Math">u_{n}\rightharpoonup u</span> weakly in <span id="S4.p6.m14" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>. From the compact embedding given in Theorem <a href="#S3.Thmtheorem7" title="Theorem 3.7. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.7</span></a>, we get that
+<span id="S4.p6.m15" class="ltx_Math">u_{n}\to u</span> strongly in <span id="S4.p6.m16" class="ltx_Math">L^{q}_{\alpha}(\mathbb{R}^{N})</span>, which implies</p>
+<table id="S4.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex16.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}-u|^{q}\,dx\to 0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore</p>
+<table id="Sx1.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex17.m1" class="ltx_Math">\displaystyle\Big{|}\langle\mathcal{L}_{s,p,\gamma}\,u_{n},u_{n}-u\rangle+\int%
+_{\mathbb{R}^{N}}|x|^{\beta}|u_{n}|^{p-2}</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex17.m2" class="ltx_Math">\displaystyle u_{n}(u_{n}-u)\,dx\Big{|}=\left|\langle\mathcal{J}^{\prime}(u_{n%
+}),u_{n}-u\rangle+\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}|^{q-2}u_{n}(u_{n}-u)%
+\,dx\right|</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex18.m1" class="ltx_Math">\displaystyle\leq\|\mathcal{J}^{\prime}(u_{n})\|_{\mathcal{W}^{s,p}_{\beta}(%
+\mathbb{R}^{N})^{\prime}}\|u_{n}-u\|_{s,p,\beta}+\int_{\mathbb{R}^{N}}|x|^{%
+\alpha}|u_{n}|^{q-1}|u_{n}-u|\,dx,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <span id="S4.p6.m17" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})^{\prime}</span> denotes the dual space of <span id="S4.p6.m18" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>. The first term goes to 0 since <span id="S4.p6.m19" class="ltx_Math">\mathcal{J}^{\prime}(u_{n})\to 0</span> and the sequence <span id="S4.p6.m20" class="ltx_Math">\{u_{n}\}_{n\in\mathbb{N}}</span> is bounded in <span id="S4.p6.m21" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>. For the second term, observe that by Hölder’s inequality and (<a href="#S3.E13" title="(3.13) ‣ Lemma 3.6. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.13</span></a>), it vanishes as <span id="S4.p6.m22" class="ltx_Math">n\to\infty</span>. Indeed,</p>
+<table id="Sx1.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex19.m1" class="ltx_Math">\displaystyle\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}|^{q-1}|u_{n}-u|\,dx</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex19.m2" class="ltx_Math">\displaystyle=\int_{\mathbb{R}^{N}}|x|^{\frac{\alpha(q-1)}{q}}|u_{n}|^{q-1}|x|%
+^{\frac{\alpha}{q}}|u_{n}-u|\,dx</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex20.m1" class="ltx_Math">\displaystyle\leq\left(\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}|^{q}\,dx\right)%
+^{\frac{q-1}{q}}\left(\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}-u|^{q}\,dx\right%
+)^{\frac{1}{q}}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex21.m1" class="ltx_Math">\displaystyle\leq C\|u_{n}\|_{s,p}^{\eta_{1}}\left(\int_{\mathbb{R}^{N}}|x|^{%
+\beta}|u_{n}|^{p}\,dx\right)^{\omega_{1}}\left(\int_{\mathbb{R}^{N}}|x|^{%
+\alpha}|u_{n}-u|^{q}\,dx\right)^{\frac{1}{q}}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex22.m1" class="ltx_Math">\displaystyle\leq C_{1}\|u_{n}\|_{s,p,\beta}^{\eta_{2}}\left(\int_{\mathbb{R}^%
+{N}}|x|^{\alpha}|u_{n}-u|^{q}\,dx\right)^{\frac{1}{q}}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex23.m1" class="ltx_Math">\displaystyle\leq C_{2}\left(\int_{\mathbb{R}^{N}}|x|^{\alpha}|u_{n}-u|^{q}\,%
+dx\right)^{\frac{1}{q}}\to 0\quad\text{ as }n\to\infty,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <span id="S4.p6.m23" class="ltx_Math">C</span>, <span id="S4.p6.m24" class="ltx_Math">C_{1}</span>, <span id="S4.p6.m25" class="ltx_Math">C_{2}</span>, <span id="S4.p6.m26" class="ltx_Math">\eta_{1}</span>, <span id="S4.p6.m27" class="ltx_Math">\eta_{2}</span> and <span id="S4.p6.m28" class="ltx_Math">\omega_{1}</span> are positive constants depending only of <span id="S4.p6.m29" class="ltx_Math">N,s,p,q</span>.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Therefore, since by Remark <a href="#S4.Thmtheorem1" title="Remark 4.1. ‣ 4. Existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> below, the operator <span id="S4.p7.m1" class="ltx_Math">\mathcal{\tilde{L}}</span> defined on <span id="S4.p7.m2" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})\times\mathcal{W}^{s,p}_{\beta}(%
+\mathbb{R}^{N})</span> as</p>
+<table id="S4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex24.m1" class="ltx_Math">\langle\mathcal{\tilde{L}}u,v\rangle:=\langle\mathcal{L}_{s,p,\gamma}\,u,v%
+\rangle+\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">fulfills the <span id="S4.p7.m3" class="ltx_Math">(S)-</span>property of compactness, due to Proposition <a href="#Sx1.Thmtheorem3" title="Proposition 6.3. ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.3</span></a> and the previous computations, we get that <span id="S4.p7.m4" class="ltx_Math">u_{n}\to u</span> strongly in <span id="S4.p7.m5" class="ltx_Math">\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>.</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">(iv)   To obtain a positive solution, we choose the mapping <span id="S4.p8.m1" class="ltx_Math">P</span> defined as <span id="S4.p8.m2" class="ltx_Math">P(u)=|u|</span>. This map is continuous, <span id="S4.p8.m3" class="ltx_Math">\mathcal{J}(P(u))=\mathcal{J}(u)</span> for all <span id="S4.p8.m4" class="ltx_Math">u\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>, <span id="S4.p8.m5" class="ltx_Math">P(0)=0</span> and, taking <span id="S4.p8.m6" class="ltx_Math">P(v)=v</span> when <span id="S4.p8.m7" class="ltx_Math">v\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> is positive.</p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">Therefore, the conclusion follow from Lemma <a href="#Sx1.Thmtheorem1" title="Lemma 6.1 (Brezis–Nirenberg). ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>. This concludes the proof.
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span>
+</p>
+</div>
+<div id="S4.Thmtheorem1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given <span id="S4.Thmtheorem1.p1.m1" class="ltx_Math">u,v\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span>, <span id="S4.Thmtheorem1.p1.m2" class="ltx_Math">s\in(0,1]</span>, by Hölder’s inequality</span></p>
+<table id="Sx1.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex25.m1" class="ltx_Math">\displaystyle\langle\mathcal{L}_{s,p,\gamma}\,u,v\rangle</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex25.m2" class="ltx_Math">\displaystyle\leq\gamma\left(\int_{\mathbb{R}^{N}}(|\nabla u|^{p-1})^{p^{%
+\prime}}\right)^{\frac{1}{p^{\prime}}}\left(\int_{\mathbb{R}^{N}}|\nabla v|^{p%
+}\right)^{\frac{1}{p}}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex26.m1" class="ltx_Math">\displaystyle+(1-\gamma)\left(\iint_{\mathbb{R}^{2N}}\left(\frac{|u(x)-u(y)|}{%
+|x-y|^{\frac{N+sp}{p^{\prime}}}}\right)^{p^{\prime}}dxdy\right)^{\frac{1}{p^{%
+\prime}}}\left(\iint_{\mathbb{R}^{2N}}\frac{|v(x)-v(y)|^{p}}{|x-y|^{N+sp}}\,%
+dxdy\right)^{\frac{1}{p}}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex27.m1" class="ltx_Math">\displaystyle=\gamma\|\nabla u\|_{p}^{p-1}\|\nabla v\|_{p}+(1-\gamma)[u]_{s,p}%
+^{p-1}[v]_{s,p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <span id="S4.Thmtheorem1.p1.m3" class="ltx_Math">\gamma=0</span>, and hence <span id="S4.Thmtheorem1.p1.m4" class="ltx_Math">s\in(0,1)</span>, then</span></p>
+<table id="Sx1.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(4.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E1.m1" class="ltx_Math">\displaystyle\langle\mathcal{L}_{s,p,\gamma}\,u,v\rangle\leq[u]_{s,p}^{p-1}[v]%
+_{s,p}\leq\|u\|_{s,p,\beta}^{p-1}\|v\|_{s,p,\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <span id="S4.Thmtheorem1.p1.m5" class="ltx_Math">\gamma\in(0,1]</span>, and hence <span id="S4.Thmtheorem1.p1.m6" class="ltx_Math">s=1</span>, using (<a href="#S3.E3" title="(3.3) ‣ Remark 3.3. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>), we get that</span></p>
+<table id="Sx1.EGx16" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(4.2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E2.m1" class="ltx_Math">\displaystyle\langle\mathcal{L}_{s,p,\gamma}\,u,v\rangle</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.E2.m2" class="ltx_Math">\displaystyle\leq\gamma\|\nabla u\|_{p}^{p-1}\|\nabla v\|_{p}+(1-\gamma)[u]_{s%
+,p}^{p-1}[v]_{s,p}\leq C\|u\|_{1,p,\beta}^{p-1}\|v\|_{1,p,\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Moreover,</span></p>
+<table id="S4.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(4.3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E3.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx\leq\int_{\mathbb{R}^{N}}|x|^{%
+\frac{\beta(p-1)}{p}}|u|^{p-1}|x|^{\frac{\beta}{p}}v\,dx\leq\left(\int_{%
+\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\right)^{\frac{p-1}{p}}\left(\int_{%
+\mathbb{R}^{N}}|x|^{\beta}|v|^{p}\right)^{\frac{1}{p}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Hence, from (<a href="#S4.E1" title="(4.1) ‣ Remark 4.1. ‣ 4. Existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>), (<a href="#S4.E2" title="(4.2) ‣ Remark 4.1. ‣ 4. Existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>) and (<a href="#S4.E3" title="(4.3) ‣ Remark 4.1. ‣ 4. Existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3</span></a>), we get that the operator <span id="S4.Thmtheorem1.p1.m7" class="ltx_Math">\mathcal{\tilde{L}}</span> defined as</span></p>
+<table id="S4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex28.m1" class="ltx_Math">\langle\mathcal{\tilde{L}}_{s,p,\gamma}u,v\rangle:=\langle\mathcal{L}_{s,p,%
+\gamma}\,u,v\rangle+\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-2}uv\,dx</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">fulfills the following relation
+</span></p>
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex29.m1" class="ltx_Math">\langle\mathcal{\tilde{L}}_{s,p,\gamma}u,v\rangle\leq C\|u\|_{s,p,\beta}^{p-1}%
+\|v\|_{s,p,\beta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Moreover, by definition</span></p>
+<table id="S4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex30.m1" class="ltx_Math">\langle\mathcal{\tilde{L}}_{s,p,\gamma}u,v\rangle=\langle\mathcal{L}_{s,p,%
+\gamma}\,u,u\rangle+\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p}\,dx\leq C\|u\|_{s,%
+p,\beta}^{p}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Therefore, in light of Proposition <a href="#Sx1.Thmtheorem3" title="Proposition 6.3. ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.3</span></a>, the operator <span id="S4.Thmtheorem1.p1.m8" class="ltx_Math">\mathcal{\tilde{L}}_{s,p,\gamma}</span> satisfies the (S)-property of compactness according to Definition <a href="#Sx1.Thmtheorem2" title="Definition 6.2. ‣ Appendix ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.2</span></a>.</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5. </span>Boundedness of solutions</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">In this section, we prove that any radial solution
+u of problem (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>) is bounded.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of Theorem <a href="#S1.Thmtheorem2" title="Theorem 1.2. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>.</h6>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">In what follows, we will apply a De Giorgi’s iteration scheme to control the level sets of a solution <span id="S5.p2.m1" class="ltx_Math">u</span> to problem (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>).</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">For a positive integer <span id="S5.p3.m1" class="ltx_Math">k</span>, define</p>
+<table id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex1.m1" class="ltx_Math">w_{k}:=(u-(1-2^{-k}))_{+}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, as in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite>, the following holds</p>
+<table id="S5.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E1.m1" class="ltx_Math">w_{k+1}\leq w_{k}\text{ in }\mathbb{R}^{N},\quad u(x)&lt;(2^{k+1}-1)w_{k}\text{ %
+in }\left\{w_{k+1}&gt;0\right\},\quad\text{and }\left\{w_{k+1}&gt;0\right\}\subset%
+\left\{w_{k}&gt;2^{-(k+1)}\right\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Also, <span id="S5.p3.m2" class="ltx_Math">0\leq w_{k}\leq|u|+1\in L^{1}(\mathbb{R}^{N})</span> and <span id="S5.p3.m3" class="ltx_Math">w_{k}(x)\to(u(x)-1)_{+}</span> a.e. in <span id="S5.p3.m4" class="ltx_Math">\mathbb{R}^{N}</span>, so by dominated convergence theorem,</p>
+<table id="S5.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E2.m1" class="ltx_Math">\lim_{k\to\infty}\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{k}|^{q}\,dx=\int_{%
+\mathbb{R}^{N}}|x|^{\alpha}|(u-1)_{+}|^{q}\,dx.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now,</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<table id="S5.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E3.m1" class="ltx_Math">\begin{split}\frac{1}{p}\|w_{k+1}\|_{s,p,\beta}&amp;\leq C(p,\gamma)\bigg{(}\gamma%
+\int_{\mathbb{R}^{N}}|\nabla w_{k+1}|^{p-2}\nabla w_{k+1}\cdot\nabla w_{k+1}\,%
+dx\\
+&amp;+(1-\gamma)\int_{\mathbb{R}^{N}}\int_{\mathbb{R}^{N}}\dfrac{|w_{k+1}(x)-w_{k+%
+1}(y)|^{p-2}(w_{k+1}(x)-w_{k+1}(y))(w_{k+1}(x)-w_{k+1}(y))}{|x-y|^{N+sp}}\,dx%
+\,dy\bigg{)}\\
+&amp;+\int_{\mathbb{R}^{N}}|x|^{\beta}|w_{k+1}|^{p-1}w_{k+1}\,dx\\
+&amp;\leq C(p,\gamma)\bigg{(}\gamma\int_{\mathbb{R}^{N}}|\nabla u|^{p-2}\nabla u%
+\cdot\nabla w_{k+1}\,dx\\
+&amp;+(1-\gamma)\int_{\mathbb{R}^{N}}\int_{\mathbb{R}^{N}}\dfrac{|u(x)-u(y)|^{p-2}%
+(u(x)-u(y))(w_{k+1}(x)-w_{k+1}(y))}{|x-y|^{N+sp}}\,dx\,dy\bigg{)}\\
+&amp;+\int_{\mathbb{R}^{N}}|x|^{\beta}|u|^{p-1}w_{k+1}\,dx\\
+&amp;=C(p,\gamma)\int_{\mathbb{R}^{N}}|x|^{\alpha}|u|^{q-1}w_{k+1}\,dx,\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we have used the fact that</p>
+<table id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex2.m1" class="ltx_Math">|v_{+}(x)-v_{+}(y)|^{p}\leq(v(x)-v(y))(v_{+}(x)-v_{+}(y))|v_{+}(x)-v_{+}(y)|^{%
+p-2}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and also that <span id="S5.p4.m1" class="ltx_Math">u</span> is a solution of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>). Now, by (<a href="#S5.E1" title="(5.1) ‣ 5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>), we get</p>
+<table id="S5.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E4.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|u|^{q-1}w_{k+1}\,dx\leq\int_{\mathbb{R}^{N}}%
+|x|^{\alpha}|(2^{k+1}-1)w_{k}|^{q-1}(2^{k+1}-1)w_{k}\,dx=C_{k+1}\int_{\mathbb{%
+R}^{N}}|x|^{\alpha}|w_{k}|^{q}\,dx,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <span id="S5.p4.m2" class="ltx_Math">C_{k+1}=(2^{k+1}-1)^{q}</span>. By Lemma <a href="#S3.Thmtheorem6" title="Lemma 3.6. ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.6</span></a> applied to <span id="S5.p4.m3" class="ltx_Math">w_{k+1}\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> (recall also the notation (<a href="#S3.E19" title="(3.19) ‣ 3. Behavior of functions in ⁢Ws,p⁢rad,β(RN) ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.19</span></a>)) and by (<a href="#S5.E3" title="(5.3) ‣ 5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a>) and (<a href="#S5.E4" title="(5.4) ‣ 5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.4</span></a>),</p>
+<table id="S5.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.5)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E5.m1" class="ltx_Math">\begin{split}\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{k+1}|^{q}\,dx\leq C\|w_{k+1}%
+\|_{s,p,\beta}^{\frac{pe_{2}+qe_{1}}{e_{1}+e_{2}}}\leq C_{k+1}\left(\int_{%
+\mathbb{R}^{N}}|x|^{\alpha}|w_{k}|^{q}\,dx\right)^{\frac{pe_{2}+qe_{1}}{pe_{1}%
++pe_{2}}}=C_{k+1}\left(\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{k}|^{q}\,dx\right)%
+^{1+\delta}\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <span id="S5.p4.m4" class="ltx_Math">\delta&gt;0</span> since <span id="S5.p4.m5" class="ltx_Math">q&gt;p</span>. Therefore, by the numerical lemma <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>, Lemma 13]</cite>, we obtain that there is <span id="S5.p4.m6" class="ltx_Math">\varepsilon\in(0,1)</span> such that if</p>
+<table id="S5.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.6)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E6.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{0}|^{q}\,dx&lt;\varepsilon</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex3.m1" class="ltx_Math">\lim_{k\to\infty}\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{k}|^{q}\,dx=0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, (<a href="#S5.E2" title="(5.2) ‣ 5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>) implies <span id="S5.p4.m7" class="ltx_Math">\|u\|_{L^{\infty}(\mathbb{R}^{N})}\leq 1</span>. Observe that</p>
+<table id="S5.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex4.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}|x|^{\alpha}|w_{0}|^{q}\,dx=\int_{\mathbb{R}^{N}}|x|^{%
+\alpha}u_{+}^{q}\,dx</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so the result is valid under the assumption</p>
+<table id="S5.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex5.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}u_{+}^{q}|x|^{\alpha}\,dx&lt;\varepsilon.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If now
+<span id="S5.p4.m8" class="ltx_Math">\xi=\int_{\mathbb{R}^{N}}u_{+}^{q}|x|^{\alpha}\,dx&gt;0</span> is arbitrary, then we choose <span id="S5.p4.m9" class="ltx_Math">C&gt;1</span> large enough so that
+</p>
+<table id="S5.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.7)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E7.m1" class="ltx_Math">\int_{\mathbb{R}^{N}}\left(\frac{u_{+}}{C}\right)^{q}|x|^{\alpha}\,dx&lt;\varepsilon.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Moreover, <span id="S5.p4.m10" class="ltx_Math">u/C</span> also satisfies (<a href="#S5.E3" title="(5.3) ‣ 5. Boundedness of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a>) with an extra constant at the end. Hence, from the above argument</p>
+<table id="S5.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex6.m1" class="ltx_Math">\|u/C\|_{L^{\infty}(\mathbb{R}^{N})}\leq 1\text{ or }\|u\|_{L^{\infty}(\mathbb%
+{R}^{N})}\leq C.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This ends the proof of the theorem.
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span></p>
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6. </span>Non-existence of solutions</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">We begin this section with the following computation, which justifies our use of the non-existence result <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>, Proposition 1.4]</cite>, originally stated for bounded domains. Given <span id="S6.p1.m1" class="ltx_Math">\lambda&gt;1</span>, we can write</p>
+<table id="S6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex1.m1" class="ltx_Math">u(\lambda x)-u(x)=\int_{1}^{\lambda}\frac{d}{dt}u(tx)\,dt=\int_{1}^{\lambda}%
+\nabla u(tx)\cdot x\,dt.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore,</p>
+<table id="S6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex2.m1" class="ltx_Math">\left|\frac{u(\lambda x)-u(x)}{\lambda-1}\right|^{r}\leq\frac{1}{(\lambda-1)^{%
+r}}\left(\int_{1}^{\lambda}|\nabla u(tx)||x|\,dt\right)^{r}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using Jensen’s inequality yields</p>
+<table id="S6.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex3.m1" class="ltx_Math">\left|\frac{u(\lambda x)-u(x)}{\lambda-1}\right|^{r}\leq\frac{1}{\lambda-1}%
+\int_{1}^{\lambda}|\nabla u(tx)|^{r}|x|^{r}\,dt.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, integrating on <span id="S6.p1.m2" class="ltx_Math">\mathbb{R}^{N}</span>, using Fubini’s Theorem and changing variables we get</p>
+<table id="Sx1.EGx17" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(6.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td colspan="2" class="ltx_td ltx_align_center ltx_eqn_cell"><span id="S6.E1.m1" class="ltx_Math">\displaystyle\begin{split}\int_{\mathbb{R}^{N}}\left|\frac{u(\lambda x)-u(x)}{%
+\lambda-1}\right|^{r}\,dx&amp;\leq\frac{1}{\lambda-1}\int_{1}^{\lambda}\frac{1}{t^%
+{N+r}}\int_{\mathbb{R}^{N}}|\nabla u(y)|^{r}|y|^{r}\,dydt\\
+&amp;=\frac{1}{N+r-1}\frac{1-\lambda^{-(N+r-1)}}{\lambda-1}\int_{\mathbb{R}^{N}}|%
+\nabla u(y)|^{r}|y|^{r}\,dy\\
+&amp;\leq C_{N,r}\int_{\mathbb{R}^{N}}|\nabla u(y)|^{r}|y|^{r}\,dy,\end{split}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">since <span id="S6.p1.m3" class="ltx_Math">\lambda&gt;1</span> and <span id="S6.p1.m4" class="ltx_Math">N+r-1&gt;0</span>. Therefore, if <span id="S6.p1.m5" class="ltx_Math">|\nabla u(x)||x|\in L^{r}(\mathbb{R}^{N})</span>, for some <span id="S6.p1.m6" class="ltx_Math">r&gt;1</span>, (<a href="#S6.E1" title="(6.1) ‣ 6. Non-existence of solutions ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a>) eneable us to apply <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>, Lemma 4.2]</cite>, and hence <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>, Proposition 1.4]</cite> holds with <span id="S6.p1.m7" class="ltx_Math">\Omega=\mathbb{R}^{N}</span>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of Theorem <a href="#S1.Thmtheorem3" title="Theorem 1.3. ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.3</span></a>.</h6>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Let <span id="S6.p2.m1" class="ltx_Math">s\in(0,1]</span> and <span id="S6.p2.m2" class="ltx_Math">\beta&gt;0</span>. Given <span id="S6.p2.m3" class="ltx_Math">u\in\mathcal{\tilde{X}}(\mathbb{R}^{N})</span> denote <span id="S6.p2.m4" class="ltx_Math">u_{\lambda}(x)=u(\lambda x)</span> for <span id="S6.p2.m5" class="ltx_Math">\lambda&gt;1</span>. An easy computation gives that, when <span id="S6.p2.m6" class="ltx_Math">\beta&gt;p(1-s)</span>,</p>
+<table id="S6.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex4.m1" class="ltx_Math">\|u_{\lambda}\|_{s,p,\beta}=\|u_{\lambda}\|_{p,\beta}+[u_{\lambda}]_{s,p}\leq%
+\lambda^{-\frac{N-sp}{p}}[u]_{s,p}+\lambda^{-\frac{N+\beta-p}{p}}\|u\|_{p,%
+\beta}\leq\lambda^{-\tau}\|u\|_{s,p,\beta},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S6.p2.m7" class="ltx_Math">\tau:=\frac{N-sp}{p}</span>.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Let <span id="S6.p3.m1" class="ltx_Math">f(x,t)=|x|^{\alpha}|t|^{q-2}t</span> and <span id="S6.p3.m2" class="ltx_Math">F(x,u)=\int_{0}^{u}f(x,t)\,dt=\frac{1}{q}|x|^{\alpha}|t|^{q}</span>, being <span id="S6.p3.m3" class="ltx_Math">u\in\mathcal{W}^{s,p}_{\beta}(\mathbb{R}^{N})</span> a weak solution of (<a href="#S1.E4" title="(1.4) ‣ 1. Introduction ‣ A mixed local-nonlocal Hénon problem in RN" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>). It is straightforward to see that</p>
+<table id="S6.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex5.m1" class="ltx_Math">\tau tf(x,t)&gt;nF(x,t)+x\cdot F_{x}(x,t)\quad\text{ for all }t\in\mathbb{R}^{N},%
+t\neq 0</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whenever <span id="S6.p3.m4" class="ltx_Math">q&gt;\frac{N+\alpha}{\tau}</span>, that is, when</p>
+<table id="Sx1.EGx18" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S6.Ex8.m1" class="ltx_Math">\displaystyle q&gt;\begin{cases}\hidden@noalign{}\textstyle\frac{p(N+\alpha)}{N-%
+sp}&amp;\text{ if }\gamma=0\\
+\hidden@noalign{}\textstyle\frac{p(N+\alpha)}{N-p}&amp;\text{ if }\gamma\in(0,1].%
+\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Moreover, recall that <span id="S6.p3.m5" class="ltx_Math">u\in L^{\infty}(\mathbb{R}^{N})</span> by definition of the space <span id="S6.p3.m6" class="ltx_Math">\mathcal{\tilde{X}}(\mathbb{R}^{N})</span>. So, by <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="" class="ltx_ref">20</a>, Proposition 1.4]</cite> we have that <span id="S6.p3.m7" class="ltx_Math">u\equiv 0</span>.
+ <span class="ltx_rule" style="width:7.2pt;height:7.2pt;background:black;display:inline-block;"> </span></p>
+</div>
+</div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Appendix</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">The following variant of the Mountain-Pass Theorem will be of use for our arguments. See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>, Theorem 10]</cite>.</p>
+</div>
+<div id="Sx1.Thmtheorem1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6.1</span></span><span class="ltx_text ltx_font_bold"> </span>(Brezis–Nirenberg)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Sx1.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Sx1.Thmtheorem1.p1.m1" class="ltx_Math">E</span> be a Banach space and <span id="Sx1.Thmtheorem1.p1.m2" class="ltx_Math">\Phi\in C^{1}(E,\mathbb{R})</span> satisfy <span id="Sx1.Thmtheorem1.p1.m3" class="ltx_Math">\Phi(0)=0</span> and the following conditions:</span></p>
+<ul id="Sx1.I1" class="ltx_itemize">
+<li id="Sx1.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="Sx1.I1.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">there exists </span><span id="Sx1.I1.ix1.p1.m1" class="ltx_Math">r&gt;0</span><span class="ltx_text ltx_font_italic"> such that </span><span id="Sx1.I1.ix1.p1.m2" class="ltx_Math">\displaystyle\inf_{\|u\|=r}\Phi(u)&gt;0</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="Sx1.I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="Sx1.I1.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">there exists </span><span id="Sx1.I1.ix2.p1.m1" class="ltx_Math">v</span><span class="ltx_text ltx_font_italic"> with </span><span id="Sx1.I1.ix2.p1.m2" class="ltx_Math">\|v\|&gt;r</span><span class="ltx_text ltx_font_italic"> such that </span><span id="Sx1.I1.ix2.p1.m3" class="ltx_Math">\Phi(v)&lt;0</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="Sx1.I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iii)</span> 
+<div id="Sx1.I1.ix3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">the Palais–Smale condition: if </span><span id="Sx1.I1.ix3.p1.m1" class="ltx_Math">\Phi^{\prime}(u_{n})\to 0</span><span class="ltx_text ltx_font_italic"> and </span><span id="Sx1.I1.ix3.p1.m2" class="ltx_Math">\Phi(u_{n})\to c</span><span class="ltx_text ltx_font_italic">,
+then </span><span id="Sx1.I1.ix3.p1.m3" class="ltx_Math">(u_{n})</span><span class="ltx_text ltx_font_italic"> has a subsequence converging to </span><span id="Sx1.I1.ix3.p1.m4" class="ltx_Math">u\in E</span><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="Sx1.I1.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(iv)</span> 
+<div id="Sx1.I1.ix4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">there exists a continuous mapping </span><span id="Sx1.I1.ix4.p1.m1" class="ltx_Math">P:E\to E</span><span class="ltx_text ltx_font_italic"> such that
+</span><span id="Sx1.I1.ix4.p1.m2" class="ltx_Math">P(0)=0</span><span class="ltx_text ltx_font_italic">, </span><span id="Sx1.I1.ix4.p1.m3" class="ltx_Math">P(v)=v</span><span class="ltx_text ltx_font_italic">, and </span><span id="Sx1.I1.ix4.p1.m4" class="ltx_Math">\Phi(P(u))\leq\Phi(u)</span><span class="ltx_text ltx_font_italic"> for every </span><span id="Sx1.I1.ix4.p1.m5" class="ltx_Math">u\in E</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then there exists a critical point <span id="Sx1.Thmtheorem1.p1.m4" class="ltx_Math">u^{*}\in\overline{P(E)}</span> such that</span></p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="Sx1.Ex1.m1" class="ltx_Math">\Phi(u^{*})\geq\inf_{\|u\|=r}\Phi(u).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Sx1.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 6.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Sx1.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The functional <span id="Sx1.Thmtheorem2.p1.m1" class="ltx_Math">\mathcal{J}</span> defined on <span id="Sx1.Thmtheorem2.p1.m2" class="ltx_Math">E</span> satisfies the <span id="Sx1.Thmtheorem2.p1.m3" class="ltx_Math">(S)-</span>property if <span id="Sx1.Thmtheorem2.p1.m4" class="ltx_Math">\{u_{n}\}_{n\in\mathbb{N}}</span>
+is a sequence in <span id="Sx1.Thmtheorem2.p1.m5" class="ltx_Math">E</span> such that <span id="Sx1.Thmtheorem2.p1.m6" class="ltx_Math">u_{n}\rightharpoonup u</span> weakly in <span id="Sx1.Thmtheorem2.p1.m7" class="ltx_Math">E</span> and <span id="Sx1.Thmtheorem2.p1.m8" class="ltx_Math">\langle\mathcal{J}^{\prime}(u_{n}),u_{n}-u\rangle\to 0</span>, then <span id="Sx1.Thmtheorem2.p1.m9" class="ltx_Math">u_{n}\to u</span> strongly in <span id="Sx1.Thmtheorem2.p1.m10" class="ltx_Math">E</span>.</span></p>
+</div>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">The following result characterizes the <span id="Sx1.p2.m1" class="ltx_Math">(S)-</span>property. See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib19" title="" class="ltx_ref">19</a>, Proposition 1.3]</cite>.</p>
+</div>
+<div id="Sx1.Thmtheorem3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 6.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Sx1.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Sx1.Thmtheorem3.p1.m1" class="ltx_Math">E</span> be a uniformly convex Banach space and let <span id="Sx1.Thmtheorem3.p1.m2" class="ltx_Math">A_{p}\in C^{1}(E,\mathbb{R})</span> be such that</span></p>
+<ul id="Sx1.I2" class="ltx_itemize">
+<li id="Sx1.I2.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(i)</span> 
+<div id="Sx1.I2.ix1.p1" class="ltx_para">
+<p class="ltx_p"><span id="Sx1.I2.ix1.p1.m1" class="ltx_Math">\langle A_{p}(u),v\rangle\leq r\|u\|_{E}^{p-1}\|v\|_{E}</span><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</li>
+<li id="Sx1.I2.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(ii)</span> 
+<div id="Sx1.I2.ix2.p1" class="ltx_para">
+<p class="ltx_p"><span id="Sx1.I2.ix2.p1.m1" class="ltx_Math">\langle A_{p}(u),u\rangle=r\|u\|^{p}_{E}</span><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for some <span id="Sx1.Thmtheorem3.p1.m3" class="ltx_Math">r&gt;0</span>, for all <span id="Sx1.Thmtheorem3.p1.m4" class="ltx_Math">u,v\in E</span>. Then <span id="Sx1.Thmtheorem3.p1.m5" class="ltx_Math">A_{p}</span> satisfies the <span id="Sx1.Thmtheorem3.p1.m6" class="ltx_Math">(S)-</span>property.</span></p>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"> Aronszajn, N., Mulla, F., Szeptycki, P., <em class="ltx_emph ltx_font_italic">On spaces of potential connected with <span id="bib.bib1.m1" class="ltx_Math">L^{p}</span> classes.</em> Ann. Inst. Fourier 13 (1963), 211–306.
+
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"> Barrios, B. , Quaas, A. , <em class="ltx_emph ltx_font_italic">The sharp exponent in the study of the nonlocal Hénon equation in <span id="bib.bib2.m1" class="ltx_Math">\mathbb{R}^{N}</span>: a Liouville theorem and an existence result. </em> Calc. Var. PDE 59 (2020), 114.
+
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"> Berestycki, H., Capuzzo-Dolcetta, I. and Nirenberg L., <em class="ltx_emph ltx_font_italic">Variational methods for indefinite superlinear homogeneous elliptic problems</em>. NoDEA 2 (1995), 553-572.
+
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"> Biagi, S., Dipierro, S., Valdinoci, E., Vecchi, E.,
+<em class="ltx_emph ltx_font_italic">A Brezis–Nirenberg type result for mixed local and nonlocal operators</em>.
+NoDEA 32 (2025), 62.
+
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"> da Silva, J. V., Fiscella, A., Viloria, V.,
+<em class="ltx_emph ltx_font_italic">Mixed local–nonlocal quasilinear problems with critical nonlinearities</em>.
+J. Differ. Equ. 408 (2024), 494–536.
+
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"> De Nápoli, P.,
+<em class="ltx_emph ltx_font_italic">Symmetry breaking for an elliptic equation involving the fractional Laplacian</em>.
+Differ. Integral Equ. 31 (2018), 75–94.
+
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"> De Nápoli, P. and Drelichman, I., <em class="ltx_emph ltx_font_italic">Elementary proofs of embedding theorems for potential spaces of radial functions.</em> Methods of Fourier analysis and approximation theory, Appl. Numer. Harmon. Anal. (2016), 115-138.
+
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"> Di Nezza, E., Palatucci, G. Valdinoci, E., <em class="ltx_emph ltx_font_italic">
+Hitchhiker’s guide to the fractional Sobolev spaces.</em>
+Bull. Sci. Math. 136 (2012), 521–573.
+
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"> Fernández Bonder, J., Salort, A.,
+<em class="ltx_emph ltx_font_italic">Fractional order Orlicz–Sobolev spaces</em>.
+J. Funct. Anal. 277 (2019), 333–367.
+
+</span>
+</li>
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"> Fernández Bonder, J., Salort, A., Vivas, H.,
+<em class="ltx_emph ltx_font_italic">Global Hölder regularity for eigenfunctions of the fractional <span id="bib.bib10.m1" class="ltx_Math">g</span>-Laplacian</em>.
+J. Math. Anal. Appl. 526 (2023), 127332.
+
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"> Franzina, G., Palatucci, G.
+<em class="ltx_emph ltx_font_italic">Fractional <span id="bib.bib11.m1" class="ltx_Math">p</span>-eigenvalues</em>.
+Riv. Mat. Univ. Parma 5 (2014), 373–386.
+
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"> Garain, P., Lindgren, E.,
+Higher Hölder regularity for mixed local and nonlocal degenerate elliptic equations.
+Calc. Var. PDE 62 (2023), 67.
+
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"> Hénon, M.,
+<em class="ltx_emph ltx_font_italic">Numerical experiments on the stability of spherical stellar systems</em>.
+Astron. Astrophys. 24 (1973), 229–238.
+
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"> Huang, S., Tian, Q., Zha, X.
+Uniform boundedness results of solutions to mixed local and nonlocal elliptic operator.
+AIMS Math. 8 (2023), 20665–20678.
+
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"> Le, P. ,
+<em class="ltx_emph ltx_font_italic">Liouville theorem for Hénon–Hardy systems in the unit ball</em>.
+Rev. Mat. Complut. 36 (2023), 827–840.
+
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"> Ma, L.,
+On nonlocal Hénon type problems with the fractional Laplacian.
+Nonlinear Anal. 203 (2021), 112190.
+
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"> Maione, A. , Mugnai, D. , Vecchi, E.,
+Variational methods for nonpositive mixed local–nonlocal operators.
+Fract. Calc. Appl. Anal. 26 (2023), 943–961.
+
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"> W.-M. Ni,
+<em class="ltx_emph ltx_font_italic">A nonlinear Dirichlet problem on the unit ball and its applications</em>.
+Indiana Univ. Math. J. 31 (1982), 801–807.
+
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"> Perera, K., Agarwal, R., O’Regan, D.,
+<em class="ltx_emph ltx_font_italic">Morse theoretic aspects of p-Laplacian type operators</em>.
+Amer. Math. Soc., Providence, RI, 2010.
+
+</span>
+</li>
+<li id="bib.bib20" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"> Ros-Oton, X. , Serra, J.,
+<em class="ltx_emph ltx_font_italic">Nonexistence results for nonlocal equations with critical and supercritical nonlinearities</em>.
+Commun. Partial Differ. Equ. 40 (2015), 115–133.
+
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"> Salort, A., Vecchi, E.
+<em class="ltx_emph ltx_font_italic">On the mixed local–nonlocal Hénon equation</em>.
+Differ. Integral Equ. 35 (2022), 795–818.
+
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"> Sickel, W., Skrzypczak, L., Vybiral, J.,
+<em class="ltx_emph ltx_font_italic">On the interplay of regularity and decay in case of radial functions I. Non-homogeneous spaces</em>.
+Commun. Contemp. Math. 14 (2012).
+
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"> Sintzoff, P.,
+<em class="ltx_emph ltx_font_italic">Symmetry of solutions of a semilinear elliptic equation with unbounded coefficients</em>.
+Differ. Integral Equ. 16 (2003), 769–786.
+
+</span>
+</li>
+<li id="bib.bib24" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"> Sire, Y., Wei, J.,
+<em class="ltx_emph ltx_font_italic">On a fractional Hénon equation and applications</em>.
+Math. Res. Lett. 22 (2015), 1791–1804.
+
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"> Su, X., Valdinoci, E., Wei, Y., Zhang, J.,
+Regularity results for solutions of mixed local and nonlocal elliptic equations.
+Math. Z. 302 (2022), 1855–1878.
+
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:21:01 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

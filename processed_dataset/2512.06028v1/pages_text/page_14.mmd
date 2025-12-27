@@ -1,0 +1,52 @@
+|  |  |  |
+| --- | --- | --- |
+|  | U=\sum\_{m\_{0}=1}^{\infty}f\left(m\_{0}\right)\,h\left(m\_{0}\right)=\sum\_{m\_{0}=% 1}^{n}f\left(m\_{0}\right)\,h\left(m\_{0}\right)+\sum\_{m\_{0}=n+1}^{\infty}f\left% (m\_{0}\right)\,h\left(m\_{0}\right) |  |
+
+According to equation (19), for m\_{0}>n, the function p(n) does not appear in the expansion of h\left(m\_{0}\right), therefore:
+
+|  |  |  |
+| --- | --- | --- |
+|  | U=\sum\_{m\_{0}=1}^{n}f\left(m\_{0}\right)\,h\left(m\_{0}\right)+\text{(sum of % other terms without }p(n)\text{)} |  |
+
+Consequently, to find the coefficient of p(n), we only examine the first part:
+
+|  |  |  |
+| --- | --- | --- |
+|  | U=\sum\_{m\_{0}=1}^{n}f\left(m\_{0}\right)\,h\left(m\_{0}\right)+\ldots |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | U=f(n)\,h(n)+\sum\_{m\_{0}=1}^{n-1}f\left(m\_{0}\right)\,h\left(m\_{0}\right)+\ldots |  |
+
+Based on the explanations provided earlier:
+
+1. 1.
+
+   The coefficient of p(n) in the expansion of h(n) is equal to one. Therefore, one of the coefficients of p(n) in the function U will be f(n).
+2. 2.
+
+   For every n>m\_{0}, the coefficient of p(n) in the expansion of h\left(m\_{0}\right) is equal to g\left(n,m\_{0}\right). Thus, the other coefficients of p(n) in the function U, for every m\_{0}\leq n-1, will be f\left(m\_{0}\right)\,g\left(n,m\_{0}\right).
+
+Therefore, the sum of the coefficients of p(n) in the expansion of U is equal to:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | a\_{n}=f(n)+\sum\_{m\_{0}=1}^{n-1}g\left(n,m\_{0}\right)\,f\left(m\_{0}\right) |  | (24) |
+
+Now, having the coefficients a\_{n}, we can expand U in terms of the functions p(n) as follows:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | U=\sum\_{n=1}^{\infty}a\_{n}\,p(n) |  | (26) |
+
+Substituting equation (26) into equation (1) yields the following relation for the Gamma function:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Gamma\left(x+\frac{1}{2}\right)=\left(\frac{x}{e}\right)^{x}\sqrt{2\pi}\,% \times\,\exp\left(-\sum\_{n=1}^{\infty}a\_{n}\,p(n)\right); |  |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \Gamma\left(x+\frac{1}{2}\right)=\left(\frac{x}{e}\right)^{x}\sqrt{2\pi}\,% \times\,\exp\left(-\sum\_{n=1}^{\infty}\frac{a\_{n}}{(2n-1)\left(x+\frac{1}{2}% \right)^{(2n-1)}}\right) |  | (23) |
+
+### 3.10 Lemma 4

@@ -1,0 +1,32 @@
+nce classes of maximal ends, and each such equivalence class intersects {\mathrm{End}}(S) at either a finite set or a Cantor set. So we may fix, once and for all, a set \mathcal{R}=\left\{{f\_{1},\dots,f\_{N},c\_{1},\dots,c\_{M}}\right\} of representatives of the equivalence classes of maximal ends of S such that each E(f\_{i})\cap{\mathrm{End}}(S) is finite and each E(c\_{i})\cap{\mathrm{End}}(S) is a Cantor set. Note that in the whole end space {\mathrm{End}}(\Sigma), since \Sigma=S^{\natural\mathbb{Z}}, each E(f\_{i}) is homeomorphic to \mathbb{Z} and each E(c\_{i}) is homeomorphic to the Cantor set with two points removed. We say an end of \Sigma is of discrete type if it is equivalent to some f\_{i}. Observe that \Sigma has at least one end of discrete type if and only if N>0.
+
+Pick mutually disjoint stable neighborhoods V\_{f\_{i}} and V\_{c\_{i}} of the elements of \left\{{f\_{1},\dots,f\_{N},c\_{1},\dots,c\_{M}}\right\}. By the definition of stable, each V\_{f\_{i}} contains exactly one discrete-type end. For each i=1,\dots,N, let T\_{i} be a subsurface of S with two boundary circles and end space homeomorphic to V\_{f\_{i}}\sqcup\bigsqcup\_{j=1}^{M}V\_{c\_{j}}. If f\_{i} or any of the c\_{j} is accumulated by genus, then T\_{i} necessarily has infinite genus; otherwise, we require T\_{i} to have genus 0. If S has finite positive genus, then let T\_{N+1} be a subsurface with two boundary circles, genus 1, and end space homeomorphic to \bigsqcup\_{j=1}^{M}V\_{c\_{j}}. Put \mathcal{S}=\left\{{T\_{1},\dots,T\_{N},T\_{N+1}}\right\} (including T\_{N+1} only if it is defined, of course). The translatable curve graph \mathcal{T}\mathcal{C}(\Sigma) of \Sigma is the graph whose vertices are the isotopy classes of separating curves on \Sigma, with an edge between two curves \alpha and \beta if they have disjoint representatives and [\alpha,\beta] is homeomorphic to a subsurface in \mathcal{S}. By [SCH24, Lemma 4.7], \mathcal{T}\mathcal{C}(\Sigma) is connected, and we denote its path metric by d. Observe that \operatorname{Map}(\Sigma) naturally acts by isometries on \mathcal{T}\mathcal{C}(\Sigma).
+
+There is an edge case: if N=0 and the genus of S is either 0 or infinite, then the above construction gives \mathcal{S}=\emptyset. This is not desirable, so in this case we put \mathcal{S}=\{S\}. In some sense this choice is consistent with the construction above because S is indeed a subsurface with two boundary circles and end space homeomorphic to \bigsqcup V\_{c\_{i}}. More importantly, in this case, \mathcal{T}\mathcal{C}(\Sigma) has diameter 2 and \operatorname{Map}(\Sigma) is CB, which means that both are quasi-isometric to a point (see [SCH24] for details). If \Sigma is a stable avenue surface, the \operatorname{Map}(\Sigma) is not CB, and so N=0 implies that S has finite positive genus.
+
+Since every stable avenue surface is a translatable surface with tame end space, the following result allows us to use the translatable curve graph to understand the large-scale geometry of their mapping class groups.
+
+###### Theorem 2.10.
+
+[SCH24, Theorem 4.9]
+If \Sigma is a stable avenue surface, then \operatorname{Map}(\Sigma) is quasi-isometric to \mathcal{T}\mathcal{C}(\Sigma).
+
+## 3. Example: bi-infinite flute
+
+In this section we illustrate the strategy of the proof of the main theorem with an example that captures many of the key ideas. Let \Sigma be the *bi-infinite flute*, i.e. the genus 0 surface with two maximal ends, e\_{+} and e\_{-}, such that the other ends, represented as punctures, form a single equivalence class which accumulates to both e\_{+} and e\_{-}. Equivalently, \Sigma=S^{\natural\mathbb{Z}}, where S is the annulus with one puncture. In this case, the translatable curve graph \mathcal{TC}(\Sigma) is the graph whose vertices are (isotopy classes of) separating curves, with an edge between two curves \alpha and \beta if they have disjoint representatives and [\alpha,\beta] is homeomorphic to an annulus with one puncture. From now on, denote the translatable curve graph simply by \Gamma. We first introduce two operations that induce maps on separating curves in \Sigma, or equivalently, vertices in \Gamma. These operations will be referred to as “forgetting a puncture” and “lassoing a puncture”.
+
+### 3.1. Forgetting a puncture
+
+Identify \Sigma with the space X which is defined to be the strip \mathbb{R}\times[0,1] modulo the equivalence relation (x,0)\sim(x,1), with marked points (n,0) for each n\in\mathbb{Z}. Suppose we erase the marking at a point (n,0) and call the new space X^{\prime}. As marked spaces, X^{\prime} is isomorphic to X, and one isomorphism is given by the homeomorphism X^{\prime}\to X which is the identity map on (-\infty,n-1]\times[0,1], a horizontal contraction on [n-1,n+1]\times[0,1], and the unit left shift on [n+1,\infty)\times[0,1]. Call this homeomorphism \phi\_{n} and denote by \iota:X\to X^{\prime} the map which forgets the marking at (n,0). Then \Phi\_{n}=\phi\_{n}\circ\iota:X\to X is a homeomorphism and it maps separating curves to separating curves. One can similarly define a homeomorphism \psi\_{n}:X^{\prime}\to X using the identity map on [n+1,\infty)\times[0,1] and the unit right shift on (-\infty,n-1]\times[0,1]. We freely allow \Phi\_{n} to mean either \phi\_{n}\circ\iota or \psi\_{n}\circ\iota depending on which is more appropriate for a given situation.
+
+###### Definition 3.1.
+
+The operation of forgetting the puncture at (n,0) is the map V(\Gamma)\to V(\Gamma) defined by sending each separating curve in \Sigma\cong X to its image under \Phi\_{n}.
+
+In the next lemma, we observe that forgetting a puncture maps each pair of adjacent vertices in \Gamma either to a pair of adjacent vertices or to the same vertex.
+
+###### Lemma 3.2.
+
+If \alpha and \beta are neighbors in \Gamma and \alpha^{\prime} and \beta^{\prime} are their images after forgetting a puncture, then either \alpha^{\prime}=\beta^{\prime} or \alpha^{\prime} and \beta^{\prime} are neighbors.
+
+###### Proof.

@@ -1,0 +1,62 @@
+Further, Gillet introduced the notion of homological descent for *hyperenvelopes*.
+We will refer to [Gei14] for this notion. As a corollary of the above proprosition
+and of Theorem 1 of *op. cit.*, one deduces the following result.
+
+###### Corollary 1.5.10.
+
+The Rost-Schmid complex C\_{\*}(-,\mathcal{M},\*) with coefficients in \mathcal{M}
+satisfies homological descent for hyperenvelopes of S-schemes essentially of finite type.
+
+## 2. Refined functoriality, duality and orientation
+
+Here we prove further properties of Chow groups with coefficients
+in a fixed MW-homodule \mathcal{M} over a base scheme S.
+We use the convention of 1 for schemes.
+
+### 2.1. Homotopy invariance
+
+As in [Fel20, Section 9], we define a coniveau spectral sequence that will help us reduce the homotopy invariance property to the known case 1.2.7.
+
+We start with a lemma, establishing a property
+usually called *continuity*.
+
+###### Lemma 2.1.1.
+
+Let (X\_{i})\_{i\in I} be a pro-object of S-schemes
+with essentially étale transition maps
+and which admits a projective limit X in the category of S-schemes (essentially of finite type).
+
+Then the canonical map of bigraded abelian groups
+
+|  |  |  |
+| --- | --- | --- |
+|  | A\_{p}(X,\mathcal{M},\*)\rightarrow\varprojlim\_{i\in I}A\_{p}(X\_{i},\mathcal{M},\*) |  |
+
+is an isomorphism.
+
+In fact, the same property is true for the cycle complex with coefficients
+in \mathcal{M} and we can use the fact that filtered colimits are exact.
+
+###### 2.1.2.
+
+A relative niveau spectral sequence.
+Let X be an S-scheme and \pi:V\to X an essentially smooth morphism of schemes.
+
+According to our conventions, we let \delta be the dimension function on X.
+Recall from [BD17, Def. 3.1.1] that a \delta-flag on X is a sequence (Z\_{p})\_{p\in\mathbf{Z}} of reduced closed subschemes of X such that, for all p, we have Z\_{p}\subset Z\_{p+1} and \delta(Z\_{p})\leq p; there is a unique morphism of \delta-flags (Z\_{p})\to(Z^{\prime}\_{p}) whenever we have termwise inclusions Z\_{p}\subset Z^{\prime}\_{p}. The category of \delta-flags \operatorname{Flag}\_{\delta}(X) on X is non-empty and filtered.
+
+Let \mathfrak{Z}=(Z\_{p})\_{p\in\mathbf{Z}} be a \delta-flag of X. Let {\pi^{\*}Z^{p}=V\times\_{X}Z^{p}}.
+For p,q\in\mathbf{Z}, define
+
+D^{\mathfrak{Z}}\_{p,q}=A\_{p+q}(\pi^{\*}Z\_{p},\mathcal{M},\*)
+
+E^{1,\mathfrak{Z}}\_{p,q}=A\_{p+q}(\pi^{\*}Z\_{p}-\pi^{\*}Z\_{p-1},\mathcal{M},\*)
+
+which are functorial on \mathfrak{Z}\in\operatorname{Flag}\_{\delta}(X). By Proposition 1.5.4, we have a functorial long exact sequence
+
+|  |  |  |
+| --- | --- | --- |
+|  | \xymatrix{\dots\ar[r]&D^{\mathfrak{Z}}\_{p-1,q+1}\ar[r]^{-}{i\_{p,\*}}D^{% \mathfrak{Z}}\_{p,q}\ar[r]^{j^{!}\_{p}}E^{1,\mathfrak{Z}}\_{p,q}\ar[r]^{\partial\_% {p}}D^{\mathfrak{Z}}\_{p-1,q}\ar[r]\dots} |  |
+
+so that (D\_{p,q}^{\mathfrak{Z}},E\_{p,q}^{1,\mathfrak{Z}})\_{p,q\in\mathbf{Z}} is an exact couple where j\_{p}^{\*} and i\_{p,\*} are induced by the canonical immersions. Since the dimension of X is bounded, this exact couple
+defines a convergent homological spectral sequence

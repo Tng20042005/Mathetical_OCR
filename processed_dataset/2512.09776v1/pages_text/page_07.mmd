@@ -1,0 +1,52 @@
+Assume that [\alpha,\beta] is an annulus with puncture p. If p is the forgotten puncture, then \alpha^{\prime} and \beta^{\prime} are isotopic and therefore equal as vertices in \Gamma. Otherwise, [\alpha^{\prime},\beta^{\prime}] is still an annulus with puncture p, and therefore \alpha^{\prime} and \beta^{\prime} are neighbors in \Gamma.
+∎
+
+This implies that forgetting a puncture maps paths to (possibly shorter) paths.
+
+###### Lemma 3.3.
+
+Forgetting a puncture sends the vertices on a given path to the vertices on a path which is not longer than the original path.
+
+###### Proof.
+
+Proceed by induction on the length n of the given path. The case n=1 follows from Lemma 3.2. So assume the statement holds when n=k-1, and consider a path (\alpha\_{0},\alpha\_{1},\dots,\alpha\_{k}) of length k. For each i=0,\dots,k, denote by \alpha\_{i}^{\prime} the image of \alpha\_{i} after forgetting a puncture. Since (\alpha\_{1},\dots,\alpha\_{k}) is a path of length k-1, the induction hypothesis implies that (\alpha\_{1}^{\prime},\dots,\alpha\_{k}^{\prime}) (after removing consecutive repeated vertices) is a path of length at most k-1. Moreover, Lemma 3.2 implies that either \alpha\_{0}^{\prime}=\alpha\_{1}^{\prime} or \alpha\_{0}^{\prime} and \alpha\_{1}^{\prime} are neighbors. Hence, (\alpha\_{0}^{\prime},\alpha\_{1}^{\prime},\dots,\alpha\_{k}^{\prime}) (after removing consecutive repeated vertices) is a path of length at most k.
+∎
+
+### 3.2. Lassoing a puncture
+
+Let \alpha be a separating curve, and let \ell be an arc in \Sigma which intersects \alpha and has only one endpoint equal to a puncture, where the puncture is viewed as a marked point. Denote by \ell^{\prime} the subarc of \ell obtained by traveling along \ell from the marked endpoint until the first intersection point with \alpha. In other words, \ell^{\prime} is the component of \ell\setminus\alpha containing the marked endpoint.
+
+###### Definition 3.4.
+
+Given \alpha and \ell as above, the lasso curve defined by \alpha and \ell, denoted by \alpha(\ell), is the simple closed curve obtained by tracing along \alpha and \ell^{\prime}. In this case, the arc \ell is called a lasso.
+
+To give a more precise definition, consider a small tubular neighborhood of \alpha\cup\ell^{\prime}. This subsurface has two boundary components, one of which is isotopic to \alpha. Then \alpha(\ell) is equal to the other boundary component.
+
+By construction, \alpha(\ell) is a separating curve, which is adjacent to \alpha in \Gamma. In fact, every neighbor of \alpha can be realized as a lasso curve. Indeed, if \alpha and \beta are neighbors, then [\alpha,\beta] is an annulus with one puncture p. So let \ell be an arc in [\alpha,\beta] from \alpha to p, and note that \alpha(\ell) is isotopic to \beta because [\alpha(\ell),\beta] is an annulus.
+
+###### Definition 3.5.
+
+Given a set of curves \alpha\_{i} in \Sigma, a connected subsurface K of \Sigma is a carrier of the \alpha\_{i} if K contains each \alpha\_{i} and has exactly two boundary components, each of which is a separating curve in \Sigma.
+
+For example, every finite set of closed curves admits a carrier which is a “finite flute”, that is, a union of finitely many consecutive copies of S in \Sigma=S^{\natural\mathbb{Z}}. The next lemma says that given two curves \alpha and \beta, taking a step in \Gamma from \alpha by lassoing a distant puncture is not a step towards \beta.
+
+###### Lemma 3.6.
+
+Let \alpha and \beta be distinct curves in a carrier K. Let \ell be a lasso from \alpha to a puncture p\notin K. Then in \Gamma, the vertex \alpha(\ell) does not lie on any geodesic path between \alpha and \beta. In particular, d(\alpha(\ell),\beta)\geq d(\alpha,\beta).
+
+###### Proof.
+
+Any path from \alpha to \beta which contains \alpha(\ell) can be made shorter by replacing the initial subpath from \alpha to \alpha(\ell) with just the edge between \alpha and \alpha(\ell). So let P be any path in \Gamma from \alpha to \beta which takes its first step at \alpha(\ell). We claim that P is not a geodesic between \alpha and \beta. By Lemma 3.3, forgetting the puncture p transforms P into another path P^{\prime} which is at most as long as P. Since \alpha,\beta\subset K and p\notin K, forgetting p maps \alpha to \alpha and \beta to \beta. So P is still a path from \alpha to \beta. On the other hand, forgetting p maps \alpha(\ell) to \alpha. So P^{\prime} is strictly shorter than P.
+
+If d(\alpha(\ell),\beta)<d(\alpha,\beta), then d(\alpha(\ell),\beta)=d(\alpha,\beta)-1 because \alpha and \alpha(\ell) are neighbors. In this case, a geodesic between \alpha(\ell) and \beta together with the edge between \alpha and \alpha(\ell) would give a geodesic path between \alpha and \beta containing \alpha(\ell). It was shown that no such geodesic exists; thus d(\alpha(\ell),\beta)\geq d(\alpha,\beta).
+∎
+
+### 3.3. Lasso paths
+
+Given a single curve \alpha and a lasso \ell, we defined the lasso curve \alpha(\ell). We now perform a similar construction given a set of mutually disjoint curves.
+
+###### Definition 3.7.
+
+A sequence of separating curves \alpha\_{0},\dots,\alpha\_{n} is straight if \alpha\_{i} lies on the right side of \alpha\_{i-1} for each i=1,\dots,n. It is a straight path if (\alpha\_{0},\dots,\alpha\_{n}) is a path in \Gamma.
+
+Let \alpha\_{0},\dots,\alpha\_{n} be a straight sequence of separating curves, and fix a carrier K. Let \ell be an arc from K\_{-} to a puncture p\in K\_{+} such that \ell intersects each \alpha\_{i} exactly once. Such an arc may be inductively constructed since [\alpha\_{i-1},\alpha\_{i}] is connected and its boundary components are \alpha\_{i-1} and \alpha\_{i}. Construct

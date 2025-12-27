@@ -1,0 +1,29 @@
+cal{G}^{(0)}}\sum\_{h\in\mathcal{G}\_{x}}\pi(h)\sum\_{g% \in\mathcal{G}\_{t(h)}}\xi(g)\overline{\eta(gh)}d\mu(x)=\int\_{\mathcal{G}^{(0)}% }\sum\_{g\in\mathcal{G}\_{x}}\xi(g)\sum\_{h\in\mathcal{G}^{x}}\overline{\eta(gh)}% \pi(h)d\mu(x) |  |
+|  |  | \displaystyle= | \displaystyle\int\_{\mathcal{G}^{(0)}}\sum\_{g\in\mathcal{G}\_{x}}\xi(g)\overline% {(P^{\pi}\eta)(g)}d\mu(x)=\langle\xi,P^{\pi}\eta\rangle\,. |  |
+
+Fix a Borel subset E\subseteq\mathcal{G}^{(0)} with \mu(E)>0 and define the unit vector \xi\_{E}:=\mu(E)^{-1/2}\chi\_{E}\in L^{2}(\mathcal{G},\mu\_{t}). By the spectral theorem for self-adjoint operators (together with the discussion in Subsection 2.2), there exists a probability measure \nu\_{E} on the spectrum \sigma(P^{\pi})\subseteq[-1,1] such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \langle f(P^{\pi})\xi\_{E},\xi\_{E}\rangle=\int\_{\sigma(P^{\pi})}f(t)\,d\nu\_{E}(t) |  | (3.3) |
+
+for every continuous function f\in C(\sigma(P^{\pi})). In particular, the limit in (3.2) exists and equals the L^{\infty}-norm of the function t\mapsto|t| on \sigma(P^{\pi}).
+
+Now assume that E=\mathcal{G}^{(0)}. Since P^{\pi} is self-adjoint, there exists \lambda\in\sigma(P^{\pi}) with \|P^{\pi}\|=|\lambda|. We claim that \lambda\in\operatorname{supp}(\nu\_{E}). Indeed, if we suppose otherwise, then some open neighborhood U of \lambda satisfies \nu\_{E}(U)=0. Choose a non-negative f\in C(\sigma(P^{\pi})) with f(\lambda)=1 and f\equiv 0 on U^{c}\cap\sigma(P^{\pi}). By (3.3),
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle f(P^{\pi})\xi\_{E},\xi\_{E}\rangle=\int\_{U\cap\sigma(P^{\pi})}f(t)\,d\nu% \_{E}(t)=0\,. |  |
+
+However, \sqrt{f(P^{\pi})} is a non-zero positive operator in the smallest norm closed, self-adjoint subalgebra of \mathbb{B}(L^{2}(\mathcal{G},\mu\_{t})) containing P^{\pi}, and hence can be approximated in norm by operators of the form P^{\pi\_{i}}, where the \pi\_{i} are Borel functions of finite I-norm. By Remark 3.9 (ii),
+
+|  |  |  |
+| --- | --- | --- |
+|  | \langle f(P^{\pi})\xi\_{E},\xi\_{E}\rangle=\|\sqrt{f(P^{\pi})}\xi\_{E}\|\_{2}^{2}% \neq 0\,, |  |
+
+a contradiction. Thus \lambda\in\operatorname{supp}(\nu\_{E}).
+
+Combining this with the previous paragraph yields \rho(\mathcal{G},\pi)=|\lambda|=\|P^{\pi}\|, as desired.
+∎
+
+## 4. Appendix: unbounded Markov operators

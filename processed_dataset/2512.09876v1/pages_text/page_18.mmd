@@ -1,0 +1,56 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.1.2.a) |  | \displaystyle E^{1}\_{p,q}=A\_{p+q}(\pi^{\*}Z\_{p}-\pi^{\*}Z\_{p-1},\mathcal{M},\*)% \Rightarrow A\_{p+q}(\pi^{\*}Z\_{\infty},\mathcal{M},\*) |  |
+
+where Z\_{\infty}=\cup\_{p\in\mathbf{Z}}Z\_{p} (see for example [McC01, Chapter 3]).
+
+For p,q\in\mathbf{Z}, denote by
+
+D\_{p,q}^{1,\pi}=\displaystyle\operatorname{colim}\_{\mathfrak{Z}\in%
+\operatorname{Flag}\_{\delta}(X)}D\_{p,q}^{\mathfrak{Z}},
+
+E\_{p,q}^{1,\pi}=\displaystyle\operatorname{colim}\_{\mathfrak{Z}\in%
+\operatorname{Flag}\_{\delta}(X)}E^{\mathfrak{Z}}\_{p,q}.
+
+Since filtered colimits are exact in the category of abelian groups, taking colimit over \mathfrak{Z}\in\operatorname{Flag}\_{\delta}(X) of the spectral sequence (2.1.2.a) yields a convergent spectral sequence
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.1.2.b) |  | \displaystyle E\_{p,q}^{1,\pi}=\operatorname{colim}\_{\mathfrak{Z}\in% \operatorname{Flag}\_{\delta}(X)}A\_{p+q}(\pi^{\*}Z\_{p}-\pi^{\*}Z\_{p-1},\mathcal{M% },\*)\Rightarrow A\_{p+q}(V,\mathcal{M},\*). |  |
+
+We need to compute the spectral sequence (2.1.2.b). This is done in the following theorem.
+
+###### Proposition 2.1.3.
+
+For p,q\in\mathbf{Z}, we have a canonical isomorphism
+
+|  |  |  |
+| --- | --- | --- |
+|  | E\_{p,q}^{1,\pi}\simeq\displaystyle\bigoplus\_{x\in X\_{(p)}}A\_{q}(V\_{x},\mathcal% {M},\*). |  |
+
+###### Proof.
+
+Denote by \mathcal{I}\_{p} the set of pairs (Z,Z^{\prime}) where Z is a reduced closed subscheme of X of \delta-dimension p and Z^{\prime}\subset Z is a closed subset containing the singular locus of Z. Notice that any such pair (Z,Z^{\prime}) can be (functorially) extended into a \delta-flag of X. Moreover, for any x in X, consider \overline{\{x\}} the reduced closure of x in X and \mathfrak{F}(x) be the set of closed subschemes Z^{\prime} of \overline{\{x\}} containing its singular locus. Then we get isomorphisms, where the last one follows from 2.1.1, and this concludes the proof:
+
+|  |  |  |
+| --- | --- | --- |
+| E\_{p,q}^{1,\pi} | \simeq | \displaystyle\lim\_{{\mathfrak{Z}}\in\operatorname{Flag}\_{\delta}(X)}A\_{q}(V% \times\_{X}(Z\_{p}-Z\_{p-1}),\mathcal{M},\*) |
+|  | \simeq | \displaystyle\lim\_{(Z,Z^{\prime})\in\mathcal{I}\_{p}}A\_{q}(V\times\_{X}(Z-Z^{% \prime}),\mathcal{M},\*) |
+|  | \simeq | \displaystyle\bigoplus\_{x\in X\_{(p)}}\displaystyle\lim\_{Z^{\prime}\in\mathfrak% {F}(x)}A\_{q}(V\times\_{X}(\overline{\{x\}}-Z^{\prime}),\mathcal{M},\*) |
+|  | \simeq | \displaystyle\bigoplus\_{x\in X\_{(p)}}A\_{q}(V\_{x},\mathcal{M},\*). |
+
+∎
+
+###### Theorem 2.1.4 (Homotopy Invariance).
+
+Let X be a scheme, V a vector bundle of rank n over X, \pi:V\to X the canonical projection. Then, for every q\in\mathbf{Z}, the canonical morphism
+
+\pi^{!}:A\_{q}(X,\mathcal{M},\*)\to A\_{q+n}(V,\mathcal{M},\*)
+
+is an isomorphism.
+
+###### Proof.
+
+From a noetherian induction and the localization sequence (1.5.8.a), we can reduce to the case where V=\mathbf{A}^{n}\_{X} is the affine trivial vector bundle of rank n. Moreover, we may assume n=1 by induction. The spectral sequence (2.1.2.b) gives the spectral sequence
+
+E\_{p,q}^{1,\pi}\Rightarrow A^{\delta}\_{p+q}(V,\mathcal{M},\*)

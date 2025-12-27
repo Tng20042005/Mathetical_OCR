@@ -1,0 +1,65 @@
+###### Question 1.6.
+
+Does there exist a big mapping class group with exactly two ends? If one exists, what can be said about its algebraic structure?
+
+### Acknowledgments
+
+We thank Kasra Rafi for suggesting the notion of flux to us, and we thank Anschel Schaffer-Cohen for helpful discussions. Xiaolei Wu is currently a member of LMNS and is supported by NSFC No. 12326601.
+
+## 2. Preliminaries and set-up
+
+### 2.1. Quasi-isometry
+
+Let f\colon(X,d\_{X})\to(Y,d\_{Y}) be a map on metric spaces. If L\geq 1 and A\geq 0, we say that f is an (L,A)-quasi-isometric embedding if for every a,b\in X,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{1}{L}d\_{X}(a,b)-A\leq d\_{Y}(f(a),f(b))\leq Ld\_{X}(a,b)+A. |  |
+
+An (L,A)-quasi-isometric embedding f is an (L,A)-quasi-isometry if there is an (L^{\prime},A^{\prime})-quasi-isometric embedding g:Y\to X such that d\_{X}(g\circ f,\text{Id}\_{X})<\infty and d\_{Y}(f\circ g,\text{Id}\_{Y})<\infty, and we call g a quasi-inverse of f. Equivalently, an (L,A)-quasi-isometric embedding f is an (L,A)-quasi-isometry if it is coarsely surjective, that is, if there is a C\geq 0 such that the image of f is C-dense in Y. A map f\colon X\to Y is a quasi-isometry between X and Y if it is an (L,A)-quasi-isometry for some L\geq 1,A\geq 0. Two metric spaces X and Y are quasi-isometric if there exists a quasi-isometry between them.
+
+### 2.2. Number of ends of a graph
+
+A graph X is a pair of sets (V,E) where E is a set of subsets of V containing exactly two elements. That is
+
+|  |  |  |
+| --- | --- | --- |
+|  | E\subset\{e\mid e\subset V,|e|=2\}. |  |
+
+We call V=V(X) the set of vertices and E=E(X) the set of edges. Given an edge \left\{{x,y}\right\}, we call x and y the endpoints of \left\{{x,y}\right\} and we say that x and y are adjacent or neighbors. A graph isomorphism between graphs X and Y is a bijection f:V(X)\to V(Y) such that x and y are adjacent if and only if f(x) and f(y) are adjacent. A graph automorphism of a graph X is a graph isomorphism from X to itself. A graph is vertex-transitive (or transitive) if its automorphism group acts transitively on its vertices. We emphasize that we do not assume our graphs are locally finite. In fact, every vertex in our graphs of interest will have uncountable degree.
+
+A path between two vertices x and y is a sequence (v\_{0},v\_{1},\dots,v\_{n}) of vertices such that v\_{0}=x, v\_{n}=y, and consecutive vertices are connected by an edge, i.e. \{v\_{i},v\_{i+1}\}\in E for i=0,\cdots,n-1. A graph is connected if any two vertices can be connected by a path. Any connected graph X is also a metric space via the path metric which defines the distance between two vertices to be the length of a shortest path between them. If S\subset V(X), then the subgraph of X induced by S is the graph whose vertex set is S and whose edge set is the subset of edges in E(X) that have both endpoints in S. We re-use the symbol S to denote this induced subgraph, and we denote by both X\setminus S and S^{\mathsf{c}} the subgraph of X induced by V(X)\setminus S.
+
+For a connected graph X and subset S\subset V(X), denote by U(X,S) (or \pi\_{0}^{u}(S^{\mathsf{c}})) the set of unbounded connected components of the subgraph X\setminus S. Define the number of ends of X, denoted by e(X), by
+
+|  |  |  |
+| --- | --- | --- |
+|  | e(X)=\sup\left\{{\left|{U(X,B)}\right|:B\text{ is a bounded subset of }X}% \right\}. |  |
+
+The number of ends turns out to be invariant under quasi-isometry. This statement is a well-known fact under conditions such as local finiteness, or local compactness for more general spaces, and proofs may be readily found in the literature (for example, [DK18, Lemma 9.5]). This is because finitely generated groups are usually the objects of interest, and their Cayley graphs are locally finite. To the authors’ knowledge, analogous statements without assuming conditions such as local compactness do not exist in the literature, so we include a proof here for the sake of completeness.
+
+Given a vertex x and radius r\geq 0, the ball of radius r centered at x is
+
+|  |  |  |
+| --- | --- | --- |
+|  | B(x,r)=\left\{{y\in V(X):d(x,y)\leq r}\right\}. |  |
+
+Note that if B\_{1} and B\_{2} are bounded subsets of V(X), and B\_{1}\subset B\_{2}, then \left|{U(X,B\_{1})}\right|\leq\left|{U(X,B\_{2})}\right|. Since balls are bounded, and bounded sets are contained in balls, we have the following lemma.
+
+###### Lemma 2.1.
+
+Let x\in V(X) be any vertex. Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | e(X)=\sup\_{r>0}\left|{U(X,B(x,r))}\right|=\sup\_{\begin{subarray}{c}r>0\\ y\in X\end{subarray}}\left|{U(X,B(y,r))}\right|. |  |
+
+The next lemma will be used to show that the number of ends is invariant under quasi-isometry.
+
+###### Lemma 2.2.
+
+Let X and X^{\prime} be connected graphs, and let B=B(x,r) be a ball in X. If f:X\to X^{\prime} is a quasi-isometry, then there is an R>0 such that the ball B^{\prime}=B(f(x),R) in Y satisfies \left|{U(X^{\prime},B^{\prime})}\right|\geq\left|{U(X,B)}\right|.
+
+###### Proof.
+
+Suppose f:X\to X^{\prime} and g:X^{\prime}\to X are (L,A)-quasi-isometries that are quasi-inverses of each other. Let x^{\prime}=f(x), and by possibly increasing A, we may assume without loss of generality that g(x^{\prime})=x. Put r^{\prime}=Lr+L^{2}+2LA and B^{\prime}=B(x^{\prime},r^{\prime}). The goal is to construct a surjection U(X^{\prime},B^{\prime})\to U(X,B). First observe that whenever y\notin B^{\prime},

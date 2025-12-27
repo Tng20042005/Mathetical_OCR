@@ -1,0 +1,106 @@
+The article has the following structure.
+Section 2 introduces the main definitions and notation. Section 3 presents the main results concerning fractional Riesz–Bessel equations with random initial conditions. The spectra of these initial conditions exhibit singularities both at zero frequency and at nonzero frequencies, corresponding to classical long-range dependence and cyclic long-range dependence, respectively. Section 4 establishes multiscaling limit theorems for the case of regularly varying asymptotics. The paper also includes a numerical example illustrating the obtained results. Future research directions are discussed in Section 5.
+
+All numerical computations and plotting in this paper were performed using the software Maple 2023. The corresponding Maple code is freely available in the folder
+”Research materials” from the website https://sites.google.com/site/olenkoandriy/.
+
+## 2. Definitions and notations
+
+This section provides the main notations and background material required in the following sections.
+
+Let u(t,x) be a real-valued function of the two arguments x\in\mathbb{R}^{d} and t>0. The time derivative of order \beta\in(0,1] is defined as follows:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{\partial^{\beta}u(t,x)}{\partial t^{\beta}}=\begin{cases}\dfrac{\partial u% }{\partial t}(t,x),&\text{if }\beta=1,\\[10.0pt] \left(\mathcal{D}\_{t}^{\beta}u\right)(t,x),&\text{if }\beta\in(0,1),\end{cases} |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\mathcal{D}\_{t}^{\beta}u\right)(t,x)=\frac{1}{\Gamma(1-\beta)}\left[% \frac{\partial}{\partial t}\int\_{0}^{t}(t-\tau)^{-\beta}u(\tau,x)\,d\tau-\frac% {u(0,x)}{t^{\beta}}\right],\qquad t>0, |  |
+
+is the regularized fractional derivative in the Caputo–Djrbashian sense, see, for example, [30, (2.138)].
+
+The publications [7, 8] considered fractional Riesz–Bessel equations (FRBE)
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.1) |  | \frac{\partial^{\beta}u(t,x)}{\partial t^{\beta}}=-\mu(I-\Delta)^{\gamma/2}(-% \Delta)^{\alpha/2}u(t,x),\quad t>0, |  |
+
+subject to random initial condition
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.2) |  | u(0,x)=\xi(x), |  |
+
+where \alpha\geq 0,\,\gamma>0,\,\mu>0, \xi(x), x\in\mathbb{R}^{d} is a measurable Gaussian random field on the probability space (\Omega,\mathcal{F},P) with mean zero, and \Delta is the d-dimensional Laplace operator. The operators -(I-\Delta)^{\gamma/2} and (-\Delta)^{\alpha/2} are interpreted as the inverse operators of Bessel and Riesz potentials, respectively, see, for example, [7, 8]. The random field u(t,x) is interpreted as a mean-square solution of the initial value problem (2.1)-(2.2).
+
+For the sake of simplicity, in this paper, we focus our attention on the one-dimensional case of d=1. Then, \Delta u(x)=\frac{\partial^{2}u(x)}{\partial x^{2}}.
+The covariance function of \xi(x) can be written as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.3) |  | r(x)=\mathrm{Cov}(\xi(0),\xi(x))=\int\_{\mathbb{R}}e^{ix\lambda}F(d\lambda), |  |
+
+where F(\cdot) is the spectral measure.
+
+If it can be represented as
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(\Delta)=\int\_{\Delta}f\_{\xi}(\lambda)d\lambda,\quad\Delta\in\mathcal{B}(% \mathbb{R}), |  |
+
+where \mathcal{B}(\mathbb{R}) is \sigma field of Borel sets of \mathbb{R}, then the function f\_{\xi}(\lambda),\lambda\in\mathbb{R}, which is integrable over \mathbb{R}, is called the spectral
+density function of the statioray process \xi(\cdot).
+Then, the following spectral representation of the random process \xi(x) holds true
+
+|  |  |  |
+| --- | --- | --- |
+|  | \xi(x)=\int\_{\mathbb{R}}e^{i\lambda x}Z(d\lambda)=\int\_{\mathbb{R}}e^{i\lambda x% }\sqrt{f\_{\xi}(\lambda)}W(d\lambda), |  |
+
+where Z(\cdot) and W(\cdot) denote the random measure and the white-noise random measure on \mathbb{R}, respectively. Note that, \mathbb{E}|Z(d\lambda)|^{2}=F(d\lambda).
+
+One can obtain the following spectral representation of the solution of the initial value problem (2.1)-(2.2), see [10],
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.4) |  | u(t,x)=\int\_{\mathbb{R}}e^{ix\lambda}E\_{\beta}(-\mu|\lambda|^{\alpha}(1+|% \lambda|^{2})^{\gamma/2}t^{\beta})Z(d\lambda), |  |
+
+where E\_{\beta}(\cdot) is the Mittag-Leffler function defined as
+
+|  |  |  |
+| --- | --- | --- |
+|  | E\_{\beta}(s):=\sum\_{k=0}^{\infty}\frac{s^{k}}{\Gamma(1+\beta k)},\qquad s\in% \mathbb{R},\ 0<\beta<1. |  |
+
+For the negative values of its argument, it satisfies the inequality
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.5) |  | \frac{1}{1+\Gamma(1-\beta)s}\leq E\_{\beta}(-s)\leq\frac{1}{1+\frac{s}{\Gamma(1% +\beta)}},\quad s\geq 0. |  |
+
+For more details about the Mittag-Leffler function and its properties, see [26, 32].
+
+The covariance function of the solution field u(t,x) is
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathrm{Cov}(u(t,x),u(t^{\prime},x^{\prime})) | \displaystyle=\int\_{\mathbb{R}}e^{i\lambda(x-x^{\prime})}E\_{\beta}(-\mu|% \lambda|^{\alpha}(1+|\lambda|^{2})^{\gamma/2}t^{\beta}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\times E\_{\beta}(-\mu|\lambda|^{\alpha}(1+|\lambda|^{2})^{\gamma/% 2}(t^{\prime})^{\beta})F(d\lambda). |  |
+
+To introduce the class of random processes \xi(x), x\in\mathbb{R}, used as the initial condition (2.2), the following assumption is used, see [3] for more details.
+
+###### Assumption 2.1.
+
+The covariance function (2.3) has the form
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (2.6) |  | \displaystyle r(x)=\sum\_{j=0}^{n}\frac{\cos(w\_{j}x)}{(1+x^{2})^{\kappa\_{j}/2}}% A\_{j},\quad x\in\mathbb{R}, |  |
+
+where \sum\_{j=0}^{n}A\_{j}=1,\,w\_{0}=0, w\_{j}>0,\,\kappa\_{j}\in(0,1),\,j=1,...,n.
+
+The covariance function in (LABEL:covariance\_of\_our\_problem11ch5) is non-integrable and has an oscillating behavior, which corresponds to the cyclic long-range dependence scenario.
+It follows from (LABEL:covariance\_of\_our\_problem11ch5) that the corresponding spectral density has the representation

@@ -1,0 +1,48 @@
+at (7,-3.6) M ;
+\nodeat (7,0) M^{\geq\varepsilon} ;
+
+\node
+
+at (0,-1.1)  F^{\prime}\_{4} ;
+\nodeat (0,1.1)  F^{\prime}\_{2} ;
+\nodeat (1.1,0)  F^{\prime}\_{3} ;
+\nodeat (-1.1,0)  F^{\prime}\_{1} ;
+
+\node
+
+at (7,-1.1)  F\_{4} ;
+\nodeat (7,1.1)  F\_{2} ;
+\nodeat (8.1,0)  F\_{3} ;
+\nodeat (7-1.1,0)  F\_{1} ;
+
+Figure 3. Geometric convergence of hyperbolic d-manifolds M\_{n} (left) to a finite-volume manifold M with cusps (right). The thick part M^{\geq\varepsilon} of M is a connected compact manifold with closed flat boundary components F\_{i}. The image of M^{\geq\varepsilon} under the diffeomorphism \phi\_{n} gives N\_{n}\subset M\_{n} (left) bounded by F^{\prime}\_{i}, and M\_{n}-N\_{n} is a disjoint union of C\_{i}.
+
+Case d>3. In this case, the flat boundary components of M^{\geq\varepsilon} are some closed (d-1)-manifolds F\_{i} that are finitely covered by flat tori T\_{i} of rank d-1. These flat manifolds F\_{i} are embedded \pi\_{1}-injectively in M, and, as in the case d=3, we again analyze their images F^{\prime}\_{i}=\phi\_{n}(F\_{i}) in M\_{n}.
+
+We again have two options.
+
+(a) F^{\prime}\_{i} is not \pi\_{1}-injective in C\_{i}. Then C\_{i} is compact as follows from the following two lemmas.
+
+{adjustwidth}
+
+0.7cm0.7cm
+
+###### Lemma 3.3.
+
+Let X be a connected aspherical d-manifold and F\subset X a closed, connected, embedded flat hypersurface. Assume that the inclusion i\colon F\hookrightarrow X is not \pi\_{1}-injective. Then i\_{\*}([F]) is a torsion element of H\_{d-1}(X;\mathbb{Z}). In particular, the image of [F] in H\_{d-1}(X;\mathbb{Q}) is zero.
+
+###### Proof.
+
+We write \Gamma=\pi\_{1}(X). Since X is aspherical, it is a K(\Gamma,1)-space and \Gamma is torsion-free. By the Bieberbach theorem, F is finitely covered by a torus \mathbb{T}^{d-1}.
+
+Case 1: F is a torus \mathbb{T}^{d-1}.
+Then
+i\_{\*}:\pi\_{1}(\mathbb{T}^{d-1})\cong\mathbb{Z}^{d-1}\to\Gamma has nontrivial kernel by assumption, so its image is a free abelian group \mathbb{Z}^{k} with k<d-1.
+
+Since \mathbb{T}^{d-1} and X are Eilenberg–MacLane spaces K(\mathbb{Z}^{d-1},1) and K(\Gamma,1), the map i is, up to homotopy, determined by i\_{\*} and factors through the classifying space K(\mathbb{Z}^{k},1)\cong\mathbb{T}^{k}. Thus there exist maps
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{T}^{d-1}\xrightarrow{g}\mathbb{T}^{k}\xrightarrow{f}X |  |
+
+inducing the homomorphisms \mathbb{Z}^{d-1}\twoheadrightarrow\mathbb{Z}^{k}\to\Gamma on \pi\_{1}, such that i is homotopic to f\circ g.

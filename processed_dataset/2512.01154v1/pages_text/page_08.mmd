@@ -1,0 +1,63 @@
+,\vartheta}(x,y)=\vartheta(\theta(x)+\theta(y)). Then for the respective functions h:[0,+\infty]\rightarrow[-\infty,+\infty] and g:\emph{Ran}(h\circ\theta)+\emph{Ran}(h\circ\theta)\rightarrow[0,+\infty], ({h}\circ\theta,\vartheta\circ{g}) is also an additive generator pair of O\_{\theta,\vartheta} if and only if h(x)=kx+b and g(x)=\frac{x-2b}{k} with certain constants k,b\in\mathbb{R} and k\neq 0.
+
+Proof. Note that from Theorem 3.1, both \theta and \vartheta are continuous and non-increasing because of (\theta,\vartheta) being an additive generator pair of the overlap function O\_{\theta,\vartheta}, \theta(1)=0 and \vartheta(0)=1.
+
+Assuming that ({h}\circ\theta,\vartheta\circ{g}) is an additive generator pair of O\_{\theta,\vartheta}, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(\theta(x)+\theta(y))=\vartheta\circ{g}({h}\circ\theta(x)+{h}\circ% \theta(y)). |  |
+
+Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \theta(x)+\theta(y)={g}({h}\circ\theta(x)+{h}\circ\theta(y)) |  |
+
+for each x,y\in[0,1] since \vartheta is continuous and strictly decreasing. Letting u=\theta(x) and v=\theta(y), we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | u+v=g(h(u)+h(v)) |  | (5) |
+
+for each u,v\in[0,+\infty].
+
+In complete analogy to the proof of Proposition 2.2, we can prove that either the following three statements
+
+* (1)
+
+  {h}\circ\theta is continuous and non-increasing;
+* (2)
+
+  {h}\circ\theta(x)=+\infty if and only if x=0, i.e., h(u)=+\infty if and only if u=+\infty;
+* (3)
+
+  {h}\circ\theta(1)\neq-\infty and for each x\in[0,1), {h}\circ\theta(1)<{h}\circ\theta(x).
+
+or the following three statements
+
+* (i)
+
+  {h}\circ\theta is continuous and non-decreasing;
+* (ii)
+
+  {h}\circ\theta(x)=-\infty if and only if x=0, i.e., h(u)=-\infty if and only if u=+\infty;
+* (iii)
+
+  {h}\circ\theta(1)\neq+\infty and for each x\in[0,1), {h}\circ\theta(1)>{h}\circ\theta(x).
+
+hold.
+
+Suppose the first three statements hold. Then {h}\circ\theta is continuous and non-increasing. This means that h is continuous and non-decreasing since \theta is continuous and non-increasing.
+
+Now we prove h is a bijection in [0,+\infty]. If h(a)=h(b) with a,b\in[0,+\infty) then from (5) we have a+v=g(h(a)+h(v))=g(h(b)+h(v))=b+v for any v\in[0,+\infty), which implies a=b, i.e., h is an injection in [0,+\infty). Thus from (2), h is an injection in [0,+\infty]. Consequently, h is a bijection in [0,+\infty] since h is continuous.
+
+Let t=h(u),s=h(v) and f:[h(0),+\infty]\rightarrow[0,+\infty] be defined by f(x)=h^{-1}(x). Then from (5) we get that
+
+|  |  |  |
+| --- | --- | --- |
+|  | f(t)+f(s)=g(t+s) |  |
+
+for each t,s\in[h(0),+\infty]. Then 2f(t)=g(2t) for each t\in[h(0),+\infty). Hence \frac{g(2t)}{2}+\frac{g(2s)}{2}=g(\frac{2t+2s}{2}) for each t,s\in[h(0),+\infty). Since f is continuous in [h(0),+\infty), we have that g is continuous in [2h(0),+\infty). It is easy to see that [2h(0),+\infty) is convex and \text{int }[2h(0),+\infty)\neq\emptyset. Then by Lemma 3.1, g(x)=cx+m for each x\in[2h(0),+\infty) with constants c,m\in\mathbb{R}. This follows that f(t)=\frac{g(2t)}{2}=ct+\frac{m}{2} for each t\in[h(0),+\infty). If c=0, then f(x)=\frac{m}{2}, contrary to the fact that f is a bijection. If c<0 then f is strictly decreasing, a contradiction to the fact that h is strictly increasing. Thus c>0. On the other hand, if t=+\infty then f(+\infty)=+\infty=c(+\infty)+\frac{m}{2} with c>0. Therefore, we finally have f(t)=ct+\frac{m}{2} for each t\in[h(0),+\infty] with a constant c>0.
+
+Thus h(x)=\frac{x-\frac{m}{2}}{c} since f(t)=h^{-1}(t) for any t\in[h(0),+\infty]. Let k=\frac{1}{c} and b=-\frac{m}{2c}. Then h(x)=kx+b for any x\in[0,+\infty] with k>0 and g(x)=\frac{x-2b}{k} for any x\in\mbox{Ran}(h\circ\theta)+\mbox{Ran}(h\circ\theta) with k>0.

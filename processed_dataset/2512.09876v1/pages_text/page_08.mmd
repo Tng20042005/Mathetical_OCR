@@ -1,0 +1,64 @@
+(R2’):
+:   Let \phi:E\to F be a field extension, let x be in \operatorname{K}^{MW}\_{n}(E) and y be in \operatorname{K}^{MW}\_{n^{\prime}}(F).
+
+(R2a’):
+:   We have \phi^{\*}\circ\gamma\_{x}=\gamma\_{\phi^{\*}(x)}\circ\phi^{\*}.
+
+(R2b’):
+:   Suppose \phi finite. We have \phi\_{!}\circ\gamma\_{\phi^{\*}(x)}=\gamma\_{x}\circ\phi\_{!}.
+
+(R2c’):
+:   Suppose \phi finite. We have \phi\_{!}\circ\gamma\_{y}\circ\phi^{\*}=\gamma\_{\phi\_{!}(y)}.
+
+(R3a’):
+:   Let \phi:E\to F be a field extension and w be a valuation on F which restricts to a non trivial valuation v on E. Assume that the extension \mathcal{O}\_{w}/\mathcal{O}\_{v} of DVRs is unramified.
+    Let \overline{\phi}:\kappa(v)\to\kappa(w) be the induced morphism. Then one has: \partial\_{w}\circ\phi\_{!}=\overline{\phi}\_{!}\circ\partial\_{v}.
+
+(R3b’):
+:   Let E\to F be a finite extension of fields over k, let v be a valuation on E. For each extension w of v, we denote by
+    \phi\_{w}:\kappa(v)\to\kappa(w) the morphism induced by \phi. We have
+
+    \partial\_{v}\circ\phi^{\*}=\sum\_{w}(\phi\_{w})^{\*}\circ\partial\_{w}.
+
+(R3c’):
+:   Let \phi:E\to F be a morphism of S-fields and let w be a valuation on F which restricts to the trivial valuation on E. Then
+    \partial\_{w}\circ\phi\_{!}=0.
+
+(R3d’):
+:   Let \phi and w be as in 1.1.1, and let \overline{\phi}:E\to\kappa(w) be the induced morphism. For any uniformizer \pi of v, we have:
+    \partial\_{w}\circ\gamma\_{[\pi]}\circ\phi\_{!}=\overline{\phi}\_{!}.
+
+(R3e’):
+:   Let E be an S-field, v be a valuation on E and u be a unit of v. Then
+
+    |  |  |  |  |
+    | --- | --- | --- | --- |
+    |  | \displaystyle\partial\_{v}\circ\gamma\_{[u]} | \displaystyle=\gamma\_{-[\overline{u}]}\circ\partial\_{v}; |  |
+    |  |  |  |  |
+    | --- | --- | --- | --- |
+    |  | \displaystyle\partial\_{v}\circ\gamma\_{\eta} | \displaystyle=\gamma\_{\eta}\circ\partial\_{v}. |  |
+
+###### Remark 1.1.2.
+
+Note that axiom 1.1.1 above is weaker than its counterpart in [Fel20, §2, Rule R3a] because
+we only consider the case without ramification. A stronger result with ramification will be proved later.
+
+###### Remark 1.1.3.
+
+In the original definition of Milnor-Witt cycle modules over a perfect base field [Fel20, §2], there is the added rule
+
+R4a:
+:   Let E be a field over the base, n an integer, \mathcal{L} a 1-dimensional vector space over E and let \Theta be an endomorphism of \mathcal{L}. Denote by \Delta the canonical map222See [Fel20, §2] for more details. from the group of automorphisms of \mathcal{L} to the group \operatorname{K}^{MW}\_{0}(E). Then the map
+
+    \Theta^{\*}:\mathcal{M}(E,\mathcal{L})\to\mathcal{M}(E,\mathcal{L}).
+
+    induced by 1.1.1
+    and the map
+
+    \gamma\_{\Delta(\Theta)}:\mathcal{M}(E,\mathcal{L})\to\mathcal{M}(E,\mathcal{L}).
+
+    induced by 1.1.1 coincide.
+
+Thanks to our convention in the definition of the twist by \mathcal{L} (which differs from [Fel20]), this rule is redundant according to our axioms (as it is now a consequence of the definition).
+
+###### Remark 1.1.4.

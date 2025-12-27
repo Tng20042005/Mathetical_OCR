@@ -1,0 +1,47 @@
+\bullet Jet bundle. Let X be a complex manifold of dimension n.
+Let x\in X and let J\_{k}(X)\_{x}
+be the set of equivalence classes of holomorphic maps f:(\bigtriangleup,0)\rightarrow(X,x),
+where \bigtriangleup is a disc of unspecified positive radius,
+with the equivalence relation f\sim g if and only if
+f^{(j)}(0)=g^{(j)}(0) for 0\leq j\leq k, when computed in some local coordinate
+system of X near x. The equivalence class of f is denoted by j\_{k}(f), which is called the k-jet of f. A k-jet j\_{k}(f) is said
+to be regular if f^{\prime}(0)\not=0.
+Set
+
+|  |  |  |
+| --- | --- | --- |
+|  | J\_{k}(X)=\cup\_{x\in X}J\_{k}(X)\_{x} |  |
+
+and consider the natural projection
+
+|  |  |  |
+| --- | --- | --- |
+|  | \pi\_{k}:J\_{k}(X)\rightarrow X. |  |
+
+Then J\_{k}(X) is a complex manifold which carries the structure of a holomorphic fiber bundle over X, which is called the k-jet bundle over X. When k=1, J\_{1}(X) is canonically isomorphic to the holomorphic tangent bundle TX of X.
+On J\_{k}X, there is a natural {\mathbb{C}}^{\*} action defined by, for any \lambda\in{\mathbb{C}}^{\*} and j\_{k}(f)\in J\_{k}X, set
+
+|  |  |  |
+| --- | --- | --- |
+|  | \lambda\cdot j\_{k}(f)=j\_{k}(f\_{\lambda}) |  |
+
+where f\_{\lambda} is given by t\mapsto f(\lambda t).
+
+\bullet Jet Differential. A jet differential of order k is a holomorphic map \omega:J\_{k}X\rightarrow{\mathbb{C}}, and
+a jet differential of order k and degree m is a holomorphic map \omega:J\_{k}X\rightarrow{\mathbb{C}}
+such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \omega(\lambda\cdot j\_{k}(f))=\lambda^{m}\omega(j\_{k}(f)). |  |
+
+The Green-Griffiths sheaf {\mathcal{E}}\_{k,m}^{GG} of order k and degree m
+is defined as follows: for any open set U\subset X,
+
+|  |  |  |
+| --- | --- | --- |
+|  | {\mathcal{E}}\_{k,m}^{GG}(U)=\{\mbox{jet differentials of order $k$ and degree % $m$ on}~{}U\}. |  |
+
+It is a locally free sheaf, we denote its vector bundle on X as E\_{k,m}^{GG}\Omega\_{X}.
+Let \omega\in{\mathcal{E}}\_{k,m}^{GG}(U), the differentiation
+d\omega\in{\mathcal{E}}\_{k+1,m+1}^{GG}(U) is defined by

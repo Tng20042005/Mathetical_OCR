@@ -1,0 +1,67 @@
+_{0}(X,\operatorname{K}^{W}\_{2},\mathcal{L}),
+and the isomorphism \underline{\operatorname{K}^{M}\_{1}/2}(R)\simeq\underline{\operatorname{K}}^{M%
+}\_{1}(R)/2. The latter follows from definitions
+and an easy application of the snake lemma. The exact sequence (4.4.17.d) finally follows
+from the definitions of the unramified sheaves \underline{\operatorname{I}}^{2}, \underline{\operatorname{K}}^{M} and another application of the
+snake lemma.
+
+Let us consider the computation (4.4.17.e).
+The identification (1) follows from the vanishing \operatorname{I}^{2}(k) for a finite field k.
+The identification (2) follows from he separation of I-adic filtration of the Witt ring \operatorname{W}(K,L),
+and the Milnor conjecture proved by Voevodsky:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{I}^{q}(K,\mathcal{L})/\operatorname{I}^{q+1}(K,\mathcal{L})=H^{q% }(K,\mu\_{2})=(\mathbf{Z}/2)^{r}. |  |
+
+See [CP84], Theorem I.2.5 and the discussion that follows.
+Finally, the vanishing when K is of the characteristic 2 case follows from the Milnor conjucture,
+this time due to Kato, and the vanishing of H^{q}(K,\mu\_{2}) for q>1.
+∎
+
+###### 4.4.18.
+
+The previous result yields an explicit computation of the unramified Witt group
+\underline{\operatorname{W}}(R,L) in terms of the units of R modulo square, the number of real places of K,
+and the group \underline{\operatorname{k}}^{M}\_{2}(R). Thanks to the purity theorem of Balmer and Walter,
+[BW02, Th. 10.1], this immediately yields the same computation for the symmetric Witt
+group \operatorname{W}(R,L) when R is a \mathbf{Z}[1/2]-algebra.
+In fact, one can obtain this computation without the restriction to characteristic
+not two.
+
+###### Theorem 4.4.19 (Purity for symmetric Witt groups).
+
+Let X be a regular scheme of dimension less or equal to one,
+and \mathcal{L} be a line bundle over X.
+
+Then the canonical map:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{W}(X,\mathcal{L})\rightarrow\underline{\operatorname{W}}(X,% \mathcal{L}) |  |
+
+where the left hand-side is the \mathcal{L}-twisted (symmetric)
+Witt group of X and the right hand-side was is the unramified Witt group
+(see 4.3.4 applied to the MW-homodule \operatorname{W}),
+is an isomorphism.
+
+In particular, the computations of the preceding proposition can be extended
+to the (symmetric) Witt group of an arbitrary regular scheme of dimension 1
+and of finite type over \mathbf{Z}. One can also avoid the regular assumption
+by using the coherent symmetric Witt group.
+
+###### Proof.
+
+The following proof is valid in arbitrary characteristic, contrary to [BW02].
+According to [CDH{}^{+}20, Ex. 1.3.7],
+one gets higher symmetric Witt groups W^{[i]}\_{n} — also known as L-groups according
+to *op. cit.* —
+for arbitrary schemes together satisfying the localization
+long exact sequence for regular schemes. Our bigraduation follows the convention of
+Schlichting’s higher (Grothendieck-)Witt groups. Note that with this notation,
+one gets a periodicity result: W^{[i]}\_{n}=W^{[i+1]}\_{n+1}.
+
+For a regular scheme X, one deduces from the devissage result of [CDH{}^{+}20, Th. 2.2.4]
+that the coniveau spectral sequence has the following E\_{1}-term: E\_{1}^{p,q}=\oplus\_{x\in X^{(p)}}\operatorname{W}^{[-p]}\_{-p-q}(\kappa(x),%
+\omega\_{x}\otimes\mathcal{L}\_{x}),
+and converges to \operatorname{W}\_{-p-q}(X,

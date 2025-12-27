@@ -1,0 +1,27 @@
+SCH95] is that quasi-isometries of the neutered space B have finite distance (with respect to the sup norm) from isometries of X. Thus we obtain a homomorphism \theta:\Gamma\to\text{Isom}(X), and we show that the image \text{im}\hskip 2.27622pt\theta is a non-uniform lattice commensurable to \Lambda. The action \theta:\Gamma\to\text{Isom}(X) came from a quasi-action on B, which itself was coarsely projected from a quasi-action on B\times N. Hence we are able to show that the kernel of \theta is quasi-isometric to N. Then \Gamma=\text{im}\hskip 2.27622pt\theta/\ker\theta, so we pass to finite-index subgroups as necessary to obtain the desired short exact sequences.
+
+Theorem 3 asserts that \mathbb{Z}^{d} can be made central in the group extension. In our more general setting, however, the extension is by a nilpotent group. So we define the notion of a nilcentral extension, analogous to that of a central extension, and find conditions which are sufficient to guarantee that (1) may be taken to be a nilcentral extension. Given a nilpotent group G with upper central series 1=Z\_{0}\lhd Z\_{1}\lhd\dots\lhd Z\_{n}=G, define
+
+|  |  |  |
+| --- | --- | --- |
+|  | \Sigma(G)\vcentcolon=\max\_{i}\text{rank}(Z\_{i+1}/Z\_{i}). |  |
+
+###### Theorem B.
+
+Assume the hypotheses of Theorem A and let L^{\prime} be the nilpotent lattice obtained from the conclusion of the theorem. If X is either quaternionic hyperbolic space or the Cayley hyperbolic plane, and \dim\textup{Isom}(X)>\Sigma(L^{\prime}), then the group extension (1) in the conclusion of Theorem A is virtually nilcentral.
+
+Our proof of this theorem relies on a form of Margulis–Corlette–Gromov–Schoen superrigidity for Lie groups with Kazhdan’s property (T). The precise statement we apply is in [FH12].
+
+## 2. Preliminaries
+
+Let (X,d\_{X}) and (Y,d\_{Y}) be metric spaces, and let k\geq 1 and c\geq 0 be real numbers. A map f:X\to Y is a (k,c)-quasi-isometric embedding if for all a,b\in X,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{1}{k}d\_{X}(a,b)-c\leq d\_{Y}(f(a),f(b))\leq kd\_{X}(a,b)+c. |  |
+
+A (k,c)-quasi-isometric embedding f is a (k,c)-quasi-isometry if there is a (k,c)-quasi-isometric embedding g:Y\to X such that d\_{X}(x,(g\circ f)(x))\leq c for all x\in X, and d\_{Y}(y,(f\circ g)(y))\leq c for all y\in Y. Such a map g is a quasi-inverse of f. For maps h\_{1},h\_{2}:X\to Y, let d\_{Y}(h\_{1},h\_{2}) denote \sup\_{x\in X}d\_{Y}(h\_{1}(x),h\_{2}(x)). If d\_{Y}(h\_{1},h\_{2})<\infty then we say that h\_{1} has finite distance from h\_{2}. With this notation, g is a quasi-inverse of f if and only if d\_{X}(\text{id}\_{X},g\circ f)\leq c and d\_{Y}(\text{id}\_{Y},f\circ g)\leq c. A (k,c)-quasi-isometric embedding is a (k^{\prime},c^{\prime})-quasi-isometry for some k^{\prime}\geq 1 and c^{\prime}\geq 0 if and only if it is coarsely surjective, that is, its image is r-dense for some r\geq 0. A map f\colon X\to Y is a quasi-isometry between X and Y if it is a (k,c)-quasi-isometry for some k\geq 1,c\geq 0. Two metric spaces X and Y are quasi-isometric if there exists a quasi-isometry between them. Observe that a composition of quasi-isometries is again a quasi-isometry.
+
+Let G be a group with a finite, symmetric generating set S. For g\in G, let \left|{g}\right|\_{S} denote the length of a shortest word representing g with letters in S. Then G is endowed with a word metric d\_{S} defined by d\_{S}(g,h)=\left|{g^{-1}h}\right|\_{S}. Note that left multiplication of G on itself is an isometric action. If S^{\prime} is another finite, symmetric generating set for G, then the identity map (G,d\_{S})\to(G,d\_{S^{\prime}}) is a quasi-isometry (in fact it is bi-Lipschitz). So the word metric on a finitely generated group is well-defined up to quasi-isometry. In other words, the quasi-isometry type of a finitely generated group is well-defined.
+
+Recall the fundamental observation in geometric group theory which equates the quasi-isometry type of a group with the quasi-isometry type of a metric space on which it acts geometrically. Let X be a geodesic metric space which is proper, i.e., clos

@@ -1,0 +1,44 @@
+One deduces a twisted Borel-Moore homology theory A\_{\*}(X,M,\*) and respectively a cohomology theory
+A^{\*}(X,M,\*) satisfying the expected axioms, as proved in the previous sections. Finally, it is possible
+to define a cohomology with support, Thom isomorphism, and deduce that these theories are \operatorname{SL}-oriented.
+See 2.4.
+
+### 3.4. Quotient and localization by universal Milnor-Witt elements
+
+###### 3.4.1.
+
+Let us denote by \operatorname{K}^{MW}\_{\*}(\mathbf{Z}) the \mathbf{Z}-graded ring obtained using Morel’s generators and relations [Mor12, Def. 3.1]
+applied to the ring \mathbf{Z}
+instead of a field. Explicitly, one gets the following \mathbf{Z}-graded ring:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{K}^{MW}\_{\*}(\mathbf{Z})=\mathbf{Z}[\rho,\eta]/(2\rho+\eta\rho^{2% },\eta\rho-\rho\eta,2\eta+\eta^{2}\rho) |  |
+
+where \rho=[-1] with Morel’s notation, has degree +1 and \eta has degree -1. It is an easy exercise to compute this ring, and one deduces:
+
+* •
+
+  \operatorname{K}^{MW}\_{0}(\mathbf{Z})=\mathbf{Z}[\epsilon]/(\epsilon^{2}-1), as a ring, where \epsilon=1+\eta\rho. Note that \operatorname{K}^{MW}\_{0}(\mathbf{Z})\simeq\operatorname{GW}(\mathbf{Z}).
+* •
+
+  for all n>0, \operatorname{K}^{MW}\_{n}(\mathbf{Z})=\mathbf{Z}.\rho^{n}, and \operatorname{K}^{MW}\_{-n}(\mathbf{Z})=\mathbf{Z}.\eta^{n}\simeq\operatorname{%
+  W}(\mathbf{Z}).
+
+Let us consider a MW-(pre)homodule \mathcal{M} and a MW-(pre)module M over the base scheme S,
+equipped with a pinning in the case of MW-modules.
+For any field, E, one gets a ring map: \operatorname{K}^{MW}\_{\*}(\mathbf{Z})\rightarrow\operatorname{K}^{MW}\_{\*}(E).
+Thus, according to 1.1.1 and 3.2.1, any element e\in\operatorname{K}^{MW}\_{n}(\mathbf{Z}) of degree n acts on
+\mathcal{M} and M, by maps \gamma\_{e}:\mathcal{M}\rightarrow\mathcal{M}\{n\} and \gamma\_{e}:M\rightarrow M\{n\},
+which are in fact morphisms of MW-(pre)homodule and MW-(pre)module respectively (recall the notation of 1.1.6).
+(This can de deduced from the axioms and the fact that the symbol e is globally defined.)
+
+###### Definition 3.4.2.
+
+Consider the setting of 3.4.1.
+We say that \mathcal{M} or M is *e-local* (resp. *e-trivial*) if \gamma\_{e} is an isomorphism
+(resp. the zero map). If \mathcal{C} is the category of MW-(pre)homodules, or that of MW-(pre)modules,
+one denotes by \mathcal{C}[e^{-1}] (resp. \mathcal{C}^{e=0})
+the full subcategory of \mathcal{C} made by the e-local (resp. e-trivial) objects.
+
+The following result is straightforward.

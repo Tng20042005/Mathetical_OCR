@@ -1,0 +1,57 @@
+Let G be a (connected) Lie group, and \Gamma an abstract group. Denote by \mathrm{Hom}(\Gamma,G) the set of homomorphisms of the group \Gamma to the group G with the pointwise convergence topology, that is, a sequence \rho\_{n}\in\mathrm{Hom}(\Gamma,G) is said to algebraically converge to a homomorphism \rho if \lim\_{n\to\infty}\rho\_{n}(\gamma)=\rho(\gamma) for every \gamma\in\Gamma.
+
+Let \Gamma\_{n} be a sequence of discrete subgroups of \mathrm{Isom}(\mathbb{H}^{d}). We say that \Gamma\_{n} *converge in the Chabauty topology* to \Gamma if the groups converge in the Chabauty topology on closed subsets of G. Convergence in this topology can be characterized as follows:
+
+* •
+
+  every \gamma\in\Gamma is the limit of some sequence \{\gamma\_{n}\} with \gamma\_{n}\in\Gamma\_{n};
+* •
+
+  if \gamma\_{n}\to\gamma is a convergent sequence with \gamma\_{n}\in\Gamma\_{n}, then \gamma\in\Gamma.
+
+Let \mathscr{H}\_{d} denote the set of complete hyperbolic manifolds \mathbb{H}^{d}/\Gamma, with \Gamma<\mathrm{Isom}(\mathbb{H}^{d}) a discrete subgroup, and \mathscr{F}\_{d}\subset\mathscr{H}\_{d} the subset of finite-volume manifolds (i.e. with \Gamma being a lattice). We equip \mathscr{H}\_{d} with the topology of geometric convergence defined as the Chabauty topology on \mathrm{Isom}(\mathbb{H}^{d}). That is, hyperbolic manifolds M\_{n}=\mathbb{H}^{d}/\Gamma\_{n} converge to M=\mathbb{H}^{d}/\Gamma geometrically if \Gamma\_{n}\to\Gamma in the Chabauty topology.
+
+We will need another notion of convergence which happens to be equivalent to the geometric one in the setting of hyperbolic manifolds. For a manifold X, let \mathcal{OF}(X) denote the orthogonal frame bundle of X. Let (M\_{1},v\_{1}) and (M\_{2},v\_{2}) be complete hyperbolic d–manifolds with orthonormal baseframes v\_{1}\in\mathcal{OF}(M\_{1}), v\_{2}\in\mathcal{OF}(M\_{2}) based at points x\_{1}\in M\_{1}, x\_{2}\in M\_{2}.
+We say that a map f:(X\_{1},v\_{1})\to(X\_{2},v\_{2}) is a *framed (K,r)–approximate isometry* between (M\_{1},v\_{1}) and (M\_{2},v\_{2}) if:
+
+* •
+
+  f:X\_{1}\to X\_{2} is a diffeomorphism of domains X\_{j}\subset M\_{j};
+* •
+
+  B\_{M\_{1}}(x\_{1},r)\subset(X\_{1},x\_{1})\subset(M\_{1},x\_{1}) and
+  B\_{M\_{2}}(x\_{2},r)\subset(X\_{2},x\_{2})\subset(M\_{2},x\_{2});
+* •
+
+  Df(v\_{1})=v\_{2} (the baseframe is preserved);
+* •
+
+  for all x,y\in X\_{1},
+
+  |  |  |  |
+  | --- | --- | --- |
+  |  | \frac{1}{K}\,d\_{M\_{1}}(x,y)\;\leq\;d\_{M\_{2}}\bigl{(}f(x),f(y)\bigr{)}\;\leq\;K% \,d\_{M\_{1}}(x,y). |  |
+
+Suppose now that M\_{i}=\mathbb{H}^{d}/\Gamma\_{i} is a sequence of hyperbolic manifolds with baseframes v\_{i}\in\mathcal{OF}(M\_{i}) based at points x\_{i}\in M\_{i}, and let M=\mathbb{H}^{d}/\Gamma be a hyperbolic manifold with baseframe v\in\mathcal{OF}(M) based at x\in M. The sequence (M\_{i},v\_{i}) converges to (M,v) in the induced refined Gromov–Hausdorff topology if if there exist (K\_{i},r\_{i})–approximate isometries f\_{i}:(M\_{i},v\_{i})\to(M,v) with K\_{i}\to 1 and r\_{i}\to\infty as i\to\infty.
+
+The following theorem (see Benedetti–Petronio [4, Theorem E.1.13 and Remark E.1.19] and Canary–Epstein–Green [8, Theorem 3.2.9 and Corollary 3.2.11]) shows that the geometric convergence is equivalent to the classical pointed Gromov–Hausdorff convergence and the stronger convergence in the refined Gromov–Hausdorff topology, as well as to the pointed Gromov–Hausdorff convergence of the corresponding Dirichlet fundamental polyhedra.
+
+###### Theorem 2.8.
+
+Let d\geq 2. The following are equivalent.
+
+1. (1)
+
+   A sequence of torsion-free discrete subgroups \Gamma\_{n}<\mathrm{Isom}(\mathbb{H}^{d}) geometrically converges to a torsion-free discrete subgroup \Gamma<\mathrm{Isom}(\mathbb{H}^{d}).
+2. (2)
+
+   The pointed hyperbolic manifolds (\mathbb{H}^{d}/\Gamma\_{n},v\_{n}) converge to (\mathbb{H}^{d}/\Gamma,v) in the refined Gromov–Hausdorff topology for some choice of orthonormal baseframes v\_{n}\in\mathcal{OF}(\mathbb{H}^{d}/\Gamma\_{n}) and v\in\mathcal{OF}(\mathbb{H}^{d}/\Gamma).
+3. (3)
+
+   For a fixed origin o\in\mathbb{H}^{d}, the Dirichlet fundamental polyhedra D\_{\Gamma\_{n}}(o) converge in the pointed Gromov–Hausdorff topology to the Dirichlet fundamental polyhedron D\_{\Gamma}(o). The corresponding side-pairing generators of \Gamma\_{n} also converge to that of \Gamma.
+
+###### Corollary 2.8.1.
+
+If \Gamma\_{n}\to\Gamma geometrically, then for any compact subset K\subset M=\mathbb{H}^{d}/\Gamma there is N>0 such that for any n>N there exists a (1+\varepsilon\_{n})-bi-Lipschitz embedding \phi\_{n}:K\hookrightarrow M\_{n}=\mathbb{H}^{d}/\Gamma\_{n}, which is a diffeomorphism onto its image \phi\_{n}(K).
+
+###### Proof.

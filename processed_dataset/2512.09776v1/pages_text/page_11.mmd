@@ -1,0 +1,33 @@
+### 3.5. Main theorem (special case)
+
+Now we are ready to prove the main theorem in the case of the bi-infinite flute.
+
+###### Theorem 3.21.
+
+The mapping class group of the bi-infinite flute is one-ended.
+
+###### Proof.
+
+By Theorem 2.10, it suffices to show that the translatable curve graph \Gamma is one-ended. Fix a vertex o of \Gamma and let R>0 be any integer. To prove that \Gamma is one-ended, it suffices by Lemma 2.4 to show that for any \alpha,\beta\in\Gamma with d(\alpha,o)=d(\beta,o)=3R, there exists a path from \alpha to \beta which is disjoint from B=B(o,R).
+
+For any separating curve \eta, there is a mapping class in \operatorname{Map}(\Sigma) which sends \beta to \eta [SCH24, Lemma 3.6]. Therefore, since \operatorname{Map}(\Sigma) acts isometrically on \Gamma, we may assume without loss of generality that \beta is a boundary curve of some copy of S in \Sigma=S^{\natural\mathbb{Z}}. By Lemma 3.20 (2), \beta is either flux-right or flux-left of o. Assume without loss of generality that \beta is flux-right of o. Recall that \Sigma admits a translation h such that h(\beta) lies on the right side of \beta. Then Lemma 3.20 (6) implies F(o,h(\beta))>F(o,\beta). Moreover, h(\beta) is flux-right of \beta by Lemma 3.20 (1), and so Lemma 3.20 (4) implies that h(\beta) is flux-right of o. It follows from induction that F(o,h^{k}(\beta))\geq F(o,\beta)+k for all k\in\mathbb{N}. Since h is a translation, we may fix a large enough k so that h^{k}(\beta) lies on the right side of \alpha. Put \beta^{\prime}=h^{k}(\beta). Then (\beta,h(\beta),\dots,h^{k}(\beta)) is a path from \beta to \beta^{\prime}. If this path has length at most R, then it must be disjoint from B because d(\beta,o)=3R. Otherwise if the length is greater than R, then the first R+1 vertices on the path lie outside of B for the same reason as before, and the remaining vertices also lie outside of B because for all R<i\leq k,
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(o,h^{i}(\beta))\geq F(o,h^{i}(\beta))\geq F(o,\beta)+i>R. |  |
+
+So \beta and \beta^{\prime} are connected by a path which is disjoint from B. If instead \beta is flux-left of o, then a similar argument gives a path (\beta,h^{-1}(\beta),\dots,h^{-k}(\beta)) from \beta to some h^{-k}(\beta) which is disjoint from \alpha. It now remains to construct a path from \alpha to \beta^{\prime} which disjoint from B.
+
+Since \beta^{\prime} lies on the right side of \alpha, Lemma 3.18 gives a straight path (\gamma\_{0}=\alpha,\gamma\_{1},\dots,\gamma\_{n}=\beta^{\prime}) from \alpha to \beta^{\prime}. We now describe a procedure to be iterated several times. Fix a carrier K of o and the \gamma\_{i}. Let \ell be an arc from K\_{-} to a puncture p\in K\_{+} such that \ell intersects each \gamma\_{i} exactly once, and construct the lasso path \gamma\_{0}(\ell),\dots,\gamma\_{n}(\ell). As lasso curves, each \gamma\_{i}(\ell\_{i}) is adjacent to \gamma\_{i} in \Gamma. In particular, \alpha and \alpha(\ell) are connected by an edge, and so are \beta^{\prime} and \beta^{\prime}(\ell). Since K is a carrier containing o,\alpha,\beta, Lemma 3.6 implies
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(\alpha(\ell),o)\geq d(\alpha,o)>R\qquad\text{and}\qquad d(\beta^{\prime}(% \ell),o)\geq d(\beta^{\prime},o)>R. |  |
+
+So \alpha(\ell),\beta^{\prime}(\ell)\notin B. Since the lasso path is again a straight path, the procedure described above may be iterated indefinitely. Indeed, after fixing a carrier K^{\prime} of o and the \gamma\_{i}(\ell), a puncture p^{\prime}\in K^{\prime}\_{+}, and an arc from K^{\prime}\_{-} to p^{\prime} which intersects each \gamma\_{i}(\ell) exactly once, a new lasso path may again be constructed, the endpoints of which are not in B and are adjacent to the endpoints of the previous path. Repeat the procedure for a total of D+2R iterations, where D=\max\_{i}F(o,\gamma\_{i}), and denote by (\gamma\_{0}^{\prime},\dots,\gamma\_{n}^{\prime}) the final path obtained after the last iteration. Now, observe that this process also yields a path from \alpha to \gamma\_{0}^{\prime} and a path from \beta^{\prime} to \gamma\_{n}^{\prime} consisting of the endpoints of the lasso paths constructed in each iteration. Applying Lemma 3.6 at each iteration shows that both of these paths are disjoint from B. Once it is shown that (\gamma\_{0}^{\prime},\dots,\gamma\_{n}^{\prime}) is disjoint from B, the concatenation of the three paths then gives a path from \alpha to \beta^{\prime} which is disjoint from B.
+
+Let i\in\left\{{0,\dots,n}\right\}. By construction, \gamma\_{i} and \gamma\_{i}^{\prime} are disjoint and [\gamma\_{i},\gamma^{\prime}\_{i}] is an annulus with D+2R punctures. In particular, F\_{0}(\gamma\_{i},\gamma^{\prime}\_{i})=D+2R. By definition, D\geq F(o,\gamma\_{i}). Then by Lemma 3.15,
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(o,\gamma^{\prime}\_{i})\geq F(\gamma\_{i},\gamma^{\prime}\_{i})-F(o,\gamma\_{i})% \geq(D+2R)-D=2R. |  |

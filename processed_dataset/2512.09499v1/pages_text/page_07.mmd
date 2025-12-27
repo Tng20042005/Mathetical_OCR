@@ -1,0 +1,44 @@
+Plugging in p=2, we recover the L^{2} rate of Balakrishnan and Manole (2025); however, this result holds under our significantly weaker assumption and for general p\geq 1.
+If further \mu and \nu are compactly supported with smooth densities, we can employ wavelet-based distribution estimators (see, e.g., Weed and Berthet (2019); Manole et al. (2024)) to attain faster rates.
+
+###### Corollary 2 (Wavelet estimators).
+
+Under Assumption 1 with \alpha=1 and L=O(1), suppose that \mu,\nu\in\cP([0,1]^{d}) admit Lebesgue densities f,g\in\cC^{s}([0,1]^{d}). Then taking \hat{\mu} and \hat{\nu} as appropriate wavelet-based estimators, one can tune \delta to achieve \cE\_{p}(\hat{\kappa};\mu,\nu)=\widetilde{O}\_{p,d}(n^{-[(1+s/p)/(d+s)\land 1/(2%
+p)]}) with probability 0.9, which is minimax optimal up to logarithmic factors.
+
+Balakrishnan and Manole (2025) also reduce map estimation to distribution estimation, so they prove a variety of similar guarantees. However, unlike our derivation, their analysis relies crucially on the structure of the Brenier map as the gradient of a sufficiently regular convex potential.
+
+###### Remark 4 (Lipschitz regularization).
+
+Wasserstein DRO is known to be closely related to Lipschitz regularization (see, e.g., Gao et al., 2024). So perhaps expectedly, one can show for p=\alpha=1 that the guarantees of \hat{\kappa}\_{\DRO} are matched by the estimator which minimizes the regularized empirical risk \kappa\mapsto\cE\_{1}(\kappa;\hat{\mu},\hat{\nu})+\lambda\Lip(x\mapsto\kappa\_{x%
+};\Wone). For deterministic map estimation, González-Sanz et al. (2022) considered related neural estimators that enforced Lipschitz constraints on the estimated map. In general, minimizing the unregularized empirical risk \cE\_{1}, or, by 2, the corresponding Monge gap objective, achieves good rates whenever the obtained minimizer has a small Lipschitz constant (whether this arises due to explicit constraints or implicit optimization bias). This gives a partial explanation for the empirical success of the Monge gap regularizer for neural map estimation.
+
+## 5 Robust Estimation with Adversarial Corruptions
+
+The previous sections allowed us to handle sampling error under \cE\_{p}. We now address local and global adversarial perturbations of the data points with minimal technical overhead, thanks to the strong stability properties of \cE\_{p} in both TV and \Wp.
+
+Formal corruption model and assumptions.
+As discussed in the introduction, TV and \Wp perturbations have historically been studied separately in robust statistics to model outliers and adversarial examples, respectively, with the former dating back to Huber (1964). Our work adopts a recent combined model permitting both local and global perturbations of the input data (Nietert et al., 2023b).
+Here, clean i.i.d. data from the unknown distributions \mu\in\cP(\cX) and \nu\in\cP(\cY) are first nudged by small local perturbations (namely, in Wasserstein distance with budget \rho\geq 0) and then partially overwritten by global outliers (in TV, with allowed fraction \eps\in[0,1]).
+More precisely, letting X\_{1},\dots,X\_{n}\stackrel{{\scriptstyle\text{i.i.d.}}}{{\sim}}\mu and Y\_{1},\dots,Y\_{n}\stackrel{{\scriptstyle\text{i.i.d.}}}{{\sim}}\nu denote the clean samples, we observe \smash{\tilde{X}\_{1},\dots,\tilde{X}\_{n}\in\cX} and \smash{\tilde{Y}\_{1},\dots,\tilde{Y}\_{n}\in\cY} such that \frac{1}{n}\sum\_{i\in S}\|\tilde{X}\_{i}-X\_{i}\|^{p}\lor\frac{1}{n}\sum\_{i\in T%
+}\|\tilde{X}\_{i}-X\_{i}\|^{p}\leq\rho^{p} for some S,T\subseteq[n] with |S|,|T|\geq(1-\eps)n.
+
+Write \hat{\mu}\_{n},\tilde{\mu}\_{n} and \hat{\nu}\_{n},\tilde{\nu}\_{n} for the clean and corrupted empirical measures for \mu and \nu, respectively. We further suppose that \mu is 1-sub-Gaussian and \cY\subseteq[0,1]^{d}. These assumptions can be relaxed at the cost of estimation complexity, as in 3. We impose them to focus on the new aspects of adversarial robustness without distractions.
+
+An initial idea is to combine the 3 approaches, since the entropic kernel used \Wp stability and the rounding estimator used TV stability. This is viable, however our entropic kernel analysis requires that \cX\cup\cY is bounded. To avoid this, we employ a similar approach to the rounding estimator, but replace deterministic rounding with Gaussian convolution. Defining the kernel N^{\sigma}\_{x}=\cN(x,\sigma^{2}I\_{d}) and letting \kappa^{\star}\_{p}[\alpha\to\beta] denote (any) optimal kernel for the \Wp(\alpha,\beta) problem, we consider
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\hat{\kappa}\_{\mathrm{conv}}^{\sigma}[\tilde{\mu}\_{n},\tilde{\nu}% \_{n}] | \displaystyle\defeq\kappa^{\star}\_{p}[N^{\sigma}\_{\sharp}\tilde{\mu}\_{n}\to% \tilde{\nu}\_{n}]\circ N^{\sigma}. |  |
+
+That is, we find an optimal kernel for the convolved \Wp(N^{\sigma}\_{\sharp}\tilde{\mu}\_{n},\tilde{\nu}\_{n}) problem and compose it with the convolution kernel. The initial convolution of \tilde{\mu}\_{n} ensures that the inner kernel is defined over all of \R^{d}, potentially outside the support of \tilde{\mu}\_{n}. The subsequent composition ensures that the outer kernel is sufficiently continuous, as needed to apply 4. We prove the following in D.
+
+###### Theorem 4 (Robust estimation guarantee).
+
+Under the setting above, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \E[\cE\_{p}(\hat{\kappa}\_{\mathrm{conv}}^{\sigma};\mu,\nu)]\lesssim\sqrt{d}\eps% ^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+\rho+O\_{p,d}(n^{-\frac{1}{d+2p}}), |  |
+
+for tuned \sigma=\sigma(\rho,d,p). Also, the naïve estimator (\hat{\kappa}\_{\mathrm{null}})\_{x}\equiv\delta\_{0} satisfies \cE\_{p}(\hat{\kappa}\_{\mathrm{null}};\mu,\nu)\leq\sqrt{d}. By selecting between the two estimators according to which bound is smaller, we achieve an error bound o

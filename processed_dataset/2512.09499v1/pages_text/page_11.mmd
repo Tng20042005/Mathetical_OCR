@@ -1,0 +1,86 @@
+\displaystyle\leq\sqrt{4L\eps\cdot\left(\Wtwo(\mu,\nu)+\eps\right)}+\eps |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{(L\lor 1)\cdot\eps\cdot\left(\Wtwo(\mu,\nu)+\eps% \right)}, |  |
+
+as desired.
+
+### A.3 Proof of 2
+
+First, we bound \cE\_{p} in terms of \cE^{\prime}\_{p}, computing
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\kappa;\mu,\nu) | \displaystyle=\left[\left(\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\dd\mu(x)\right)^{% \frac{1}{p}}-\Wp(\mu,\nu)\right]\_{+}+\Wp(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\left[\left(\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\dd\mu(x)\right)^% {\frac{1}{p}}-\Wp(\mu,T\_{\sharp}\mu)\right]\_{+}+2\Wp(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\left[\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\dd\mu(x)-\Wp(\mu,T\_{% \sharp}\mu)^{p}\right]\_{+}^{\frac{1}{p}}+2\Wp(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left[\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\dd\mu(x)-\Wp(\mu,T\_{% \sharp}\mu)^{p}\right]^{\frac{1}{p}}+2\Wp(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2^{2-\frac{1}{p}}\left(\iint\|y-x\|^{p}\dd\kappa\_{x}(y)\dd% \mu(x)-\Wp(\mu,T\_{\sharp}\mu)^{p}+\Wp(T\_{\sharp}\mu,\nu)^{p}\right)^{\frac{1}{% p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2^{2-\frac{1}{p}}\cE^{\prime}\_{p}(\kappa;\mu,\nu), |  |
+
+where the second inequality uses that [a^{1/p}-b^{1/p}]\_{+}\leq[a-b]\_{+}^{1/p} for all a,b\geq 0, and the penultimate inequality uses that \ell\_{1}\leq 2^{1-1/p}\ell\_{p} in \R^{2}. This implies the claimed bound of \cE\_{p}\leq 4\cE^{\prime}\_{p}. When p=1, the above gives \cE\_{1}\leq 2\cE^{\prime}\_{1}, and we similarly bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{1}^{\prime}(\kappa;\mu,\nu) | \displaystyle=\iint\|y-x\|\dd\kappa\_{x}(y)\dd\mu(x)-\Wone(\mu,T\_{\sharp}\mu)+% \Wone(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left[\iint\|y-x\|\dd\kappa\_{x}(y)\dd\mu(x)-\Wone(\mu,T\_{\sharp}% \mu)\right]\_{+}+\Wone(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\left[\iint\|y-x\|\dd\kappa\_{x}(y)\dd\mu(x)-\Wone(\mu,\nu)% \right]\_{+}+2\Wone(T\_{\sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\cE\_{1}(\kappa;\mu,\nu) |  |
+
+as desired.∎
+
+### A.4 Proof of 3
+
+We simply bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\bigl{|}\cE\_{p}(\kappa;\mu,\nu)-\cE\_{p}(\kappa;\mu,\nu^{\prime})% \bigr{|} | \displaystyle\leq|\Wp(\mu,\nu)-\Wp(\mu,\nu^{\prime})|+|\Wp(\kappa\_{\sharp}\mu,% \nu)-\Wp(\kappa\_{\sharp}\mu,\nu^{\prime})| |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\Wp(\nu,\nu^{\prime}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\diam(\cY)\|\nu-\nu^{\prime}\|\_{\tv}, |  |
+
+where the final inequality uses Fact 1.∎
+
+### A.5 Proof of 4
+
+While the key ideas of this proof are straightforward, measurability issues require some care (we encourage the reader to skip such details on an initial read). In what follows, we equip all spaces of distributions with the weak topology and always employ Borel measurability. By the definition of a Markov kernel, x\in\cX\mapsto\kappa\_{x}(A) is a measurable function for each measurable A\subseteq\cY. Thus, (x,x^{\prime})\in\cX^{2}\mapsto(\kappa\_{x}(A),\kappa\_{x^{\prime}}(B)) is measurable for fixed, measurable A,B\subseteq\cY, implying that (x,x^{\prime})\in\cX^{2}\mapsto(\kappa\_{x},\kappa\_{x^{\prime}})\in\cP(\cY)^{2} is measurable. Therefore, by Theorem 3.0.8 of Toneian [2019], there exists a measurable map (x,x^{\prime})\in\cX^{2}\mapsto\gamma\_{x,x^{\prime}}\in\Pi(\kappa\_{x},\kappa\_{%
+x^{\prime}}) such that \gamma\_{x,x^{\prime}} is an OT plan for \Wp(\kappa\_{x},\kappa\_{x^{\prime}}) for all x,x^{\prime}\in\cX.
+
+Now, let \pi\_{0}\in\Pi(\mu,\mu^{\prime}) be an OT plan for \Wp(\mu,\mu^{\prime}), and define the joint law \pi by \pi(A\times B\times C\times D)\defeq\iint\_{A\times B}\gamma\_{x,x^{\prime}}(C%
+\times D)\dd\pi\_{0}(x,x^{\prime}), which is well-defined due to the measurability argument above. Taking (X,X^{\prime},Y,Y^{\prime})\sim\pi, our construction ensures the following:
+
+* •
+
+  X\sim\mu and X^{\prime}\sim\mu^{\prime} such that \E[\|X-X^{\prime}\|^{p}]=\rho^{p},
+* •
+
+  Y\sim\kappa\_{X} and Y^{\prime}\sim\kappa\_{X^{\prime}} such that \E[\|Y-Y^{\prime}\|^{p}|X,X^{\prime}]=\Wp(\kappa\_{X},\kappa\_{X^{\prime}})^{p}.
+
+Consequently, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E[\|Y-Y^{\prime}\|^{p}] | \displaystyle=\E\left[\E\left[\|Y-Y^{\prime}\|^{p}\big{|}X,X^{\prime}\right]\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\E\left[\,\Wp(\kappa\_

@@ -1,0 +1,76 @@
+By the proof of Lemma 4.12, P(\alpha(\eta,\lambda))=P(\alpha)\setminus{\mathrm{End}}\_{d}(C\_{\eta}) if \eta lies on the right side of \alpha, and P(\alpha(\eta,\lambda))=P(\alpha)\sqcup{\mathrm{End}}\_{d}(C\_{\eta}) if \eta lies on the left side of \alpha. In either case, whether \eta\subset\alpha\_{+}\cap\beta\_{+} or \eta\subset\alpha\_{-}\cap\beta\_{-},
+
+|  |  |  |
+| --- | --- | --- |
+|  | P(\alpha(\eta,\lambda))\triangle P(\beta)=(P(\alpha)\triangle P(\beta))\sqcup{% \mathrm{End}}\_{d}(C\_{\eta}). |  |
+
+Altogether, we get
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle H(\alpha(\eta,\lambda),\beta) | \displaystyle=\left|{P(\alpha(\eta,\lambda))\triangle P(\beta)}\right|+g(% \alpha(\eta,\lambda),\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left|{P(\alpha)\triangle P(\beta)}\right|+\left|{{\mathrm{End}}% \_{d}(C\_{\eta})}\right|+g(\alpha,\beta) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=H(\alpha,\beta)+\left|{{\mathrm{End}}\_{d}(C\_{\eta})}\right|. |  |
+
+∎
+
+### 4.4. Main theorem
+
+Now we are ready to prove the main theorem.
+
+###### Theorem 4.14.
+
+If \Sigma is a stable avenue surface with at least one discrete-type end, then \operatorname{Map}(\Sigma) is one-ended.
+
+###### Proof.
+
+By Theorem 2.10, it suffices to prove that \Gamma is one-ended. Fix a vertex o\in\Gamma and let R>0 be any integer. To prove that \Gamma is one-ended, it suffices by Lemma 2.4 to show that for any \alpha,\beta\in\Gamma with d(\alpha,o)=d(\beta,o)=6R, there exists a path from \alpha to \beta which is disjoint from B=B(o,R).
+
+Like in the proof of Theorem 3.21, the action of \operatorname{Map}(\Sigma) on \Gamma allows us to assume that \beta is the boundary curve of some copy of S. Then we may use the translation h to push \beta as far towards e\_{+} as we want. In total, we may assume without loss of generality that \beta lies on the right side of \alpha such that [\alpha,\beta] is full and d(\beta,o)\geq 3R. Then Lemma 4.5 gives a straight path (\gamma\_{0}=\alpha,\gamma\_{1},\dots,\gamma\_{k}=\beta) from \alpha and \beta. Since \Sigma has at least one class of discrete-type ends, there exists a lasso (\eta,\lambda) such that \eta\subset\beta\_{+}\cap o\_{+}, C\_{\eta} is homeomorphic to \widehat{T}\_{i} for some 1\leq i\leq n, and \lambda intersects each \gamma\_{i} exactly once. Consider the lasso path (\gamma\_{0}(\eta,\lambda),\dots,\gamma\_{k}(\eta,\lambda)). Note that \alpha and \gamma\_{0}(\eta,\lambda) are neighbors in \Gamma, and so are \beta and \gamma\_{k}(\eta,\lambda). Also, for each i=0,\dots,k, Lemma 4.13 implies that H(\gamma\_{i}(\eta,\lambda),o)=H(\gamma\_{i},o)+1. Since the lasso path is again a straight path, this procedure may be iterated indefinitely, and each iteration produces a new lasso path whose vertices have a Hamming distance from o increased by 1. Repeat the procedure for a total of 2R iterations and denote by (\gamma\_{0}^{\prime},\dots,\gamma\_{k}^{\prime}) the final path obtained after the last iteration. Then for each i=0,\dots,k,
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(\gamma\_{i}^{\prime},o)\geq H(\gamma\_{i}^{\prime},o)=H(\gamma\_{i},o)+2R>R. |  |
+
+So (\gamma\_{0}^{\prime},\dots,\gamma\_{k}^{\prime}) is disjoint from B. Furthermore, the endpoints of the lasso paths constructed in each iteration forms a path from \alpha to \gamma\_{0}^{\prime} and a path from \beta to \gamma\_{k}^{\prime}. The first R+1 vertices along these paths have a distance of at least 2R from o because d(\alpha,o),d(\beta,o)\geq 3R. The remaining vertices along these paths have a distance greater than R from o because the Hamming distance is greater than R. So these two paths are also disjoint from B. The concatenation of all three paths then is a path from \alpha to \beta which is disjoint from B.
+∎
+
+## References
+
+* [BV23]
+  A. Bar-Natan and Y. Verberne (2023)
+  The grand arc graph.
+  Math. Z. 305 (2),  pp. Paper No. 20, 21.
+  External Links: ISSN 0025-5874,1432-1823,
+  Document,
+  Link,
+  MathReview (Nick Salter)
+  Cited by: §1.
+* [BW18]
+  J. Bavard and A. Walker (2018)
+  The Gromov boundary of the ray graph.
+  Trans. Amer. Math. Soc. 370 (11),  pp. 7647–7678.
+  External Links: ISSN 0002-9947,1088-6850,
+  Document,
+  Link,
+  MathReview (Gilbert Levitt)
+  Cited by: §1.
+* [BAV16]
+  J. Bavard (2016)
+  Hyperbolicité du graphe des rayons et quasi-morphismes sur un gros groupe modulaire.
+  Geom. Topol. 20 (1),  pp. 491–535.
+  External Links: ISSN 1465-3060,1364-0380,
+  Document,
+  Link,
+  MathReview (Balázs Strenner)
+  Cited by: §1,
+  §1,
+  §1.
+* [4]
+  M. Bestvina, G. Domat, and K. Rafi
+  Classification of stable surfaces with respect to automatic continuity.
+  Note: arXiv:2411.12927, 2024 (Accepted to Compositio Mathematica)

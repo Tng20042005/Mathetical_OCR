@@ -1,0 +1,84 @@
+Consider one of the twisted Borel-Moore homology H\_{\*} of 1.1.7.
+
+Then the MW-prehomodule \hat{H}\_{\*}^{\delta} is in fact a MW-homodule.
+This can be shown by identifying the complex E\_{1,c}^{\*,0} of the \delta-niveau spectral sequence associated with H\_{\*}
+(see [BD17] for the definition and conventions)
+with the complex constructed above for the MW-prehomodule \hat{H}\_{\*}^{\delta}.
+We refer the reader to [ADN20, §3.2.6] for this identification.
+
+###### 1.3.7.
+
+Cohomological conventions.
+For f:X\to S essentially lci and \mathcal{L} an invertible \mathcal{O}\_{X}-module, we define:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.3.7.a) |  | C^{p}(X,\mathcal{M}\_{q},\mathcal{L})=\bigoplus\_{x\in X^{(p)}}\mathcal{M}\_{q-p}% (\kappa(x),\omega\_{X,x}\otimes\mathcal{L}\_{x}^{\vee}) |  |
+
+so that if X/S is of relative dimension d
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.3.7.b) |  | C^{p}(X,\mathcal{M}\_{q},\mathcal{L})=C\_{d-p}(X,\mathcal{M}\_{q-d},\omega\_{X}% \otimes\mathcal{L}^{\vee}). |  |
+
+In this way, we have defined a cohomological complex C^{\*}(X,\mathcal{M}\_{q},\*),
+called the *cocycle complex of X with coefficients in \mathcal{M}\_{q}*.
+We deduce a cohomological complex of tri-graded abelian groups simply denoted by C^{\*}(X,\mathcal{M},\*).
+The corresponding cohomological groups in degree p are denoted by
+A^{p}(X,\mathcal{M}\_{q},\*), A^{p}(X,\mathcal{M},\*) respectively,
+and called the *cohomological Chow-Witt groups
+of X with coefficients* in \mathcal{M}.
+If we want to be precise about the dimension function \delta on S, we write A^{\*}\_{\delta}.
+
+One deduces a (tautological) *duality isomorphism*:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (1.3.7.c) |  | A^{\*}(X,\mathcal{M}\_{\*},\mathcal{L})\simeq A\_{d-\*}(X,\mathcal{M}\_{\*-d},\omega\_% {X}\otimes\mathcal{L}^{\vee}). |  |
+
+### 1.4. The four basic maps
+
+The purpose of this section is to introduce the four basic operations on cycle complexes.
+If we count the operation d defined in the previous subsection, this will give five “basic maps”
+which are analogous to those of Rost (see [Ros96, §3]); they are the basic foundations for the construction of more refined maps such as Gysin morphisms (see Section 2.2).
+
+In the following, we fix \mathcal{M} a MW-homodule, q an integer and \* a line bundle over an S-scheme X.
+
+###### 1.4.1.
+
+Pushforward
+Let f:Y\to X be a S-morphism of schemes. Define
+
+f\_{\*}:C\_{p}(Y,\mathcal{M}\_{q},\*)\to C\_{p}(X,\mathcal{M}\_{q},\*)
+
+as follows. If x=f(y) and if \kappa(y) is finite over \kappa(x), then (f\_{\*})^{y}\_{x}=\operatorname{cores}\_{\kappa(y)/\kappa(x)}. Otherwise, (f\_{\*})^{y}\_{x}=0.
+
+With cohomological conventions, if f has a relative dimension s, we have
+
+f\_{\*}:C^{p}(Y,\mathcal{M}\_{q},\*\otimes\omega\_{f})\to C^{p+s}(X,\mathcal{M}\_{q-%
+s},\*).
+
+###### 1.4.2.
+
+Pullback
+Let f:Y\to X be an essentially smooth morphism of schemes. Assume Y connected and denote by d the relative dimension of f. Define
+
+f^{!}:C\_{p}(X,\mathcal{M}\_{q},\*)\to C\_{p+d}(Y,\mathcal{M}\_{q-d},\*\otimes\omega%
+\_{f})
+
+as follows. If f(y)=x, then (f^{!})^{x}\_{y}=\operatorname{res}\_{\kappa(y)/\kappa(x)}. Otherwise, (f^{!})^{x}\_{y}=0. If Y is not connected, take the sum over each connected component.
+
+With cohomological convention, we obtain:
+
+f^{!}:C^{p}(X,\mathcal{M}\_{q},\*)\to C^{p}(Y,\mathcal{M}\_{q},\*).
+
+###### Remark 1.4.3.
+
+The fact that the morphism f is (essentially) smooth implies that there are no multiplicities to consider. The case where the morphism f is flat will be handled later.
+
+###### 1.4.4.
+
+Multiplication with units
+Let a\_{1},\dots,a\_{n} be global units in \mathcal{O}\_{X}^{\*}. Define
+
+[a\_{1},\dots,a\_{n}]:C\_{p}(X,\mathcal{M}\_{q},\*)\to C\_{p}(X,\mathcal{M}\_{q+n},\*)

@@ -1,0 +1,66 @@
+proposes a change of scale parameter \sigma to \sigma/\tau. Here \tau is an unknown quantity whose uncertainty is measured by the distribution function H(.). For improved estimation of scale parameter and function scale parameter of a scale mixture of exponential distribution, we refer to [34], [32], and [35]. If \tau is degenerate at 1 then we get X\_{1},\dots,X\_{n} are i.i.d. exponential distribution Exp(\mu,\sigma).
+
+Several authors have investigated estimating the ordered location and scale parameter of two or more exponential distributions. Improved estimation of the ordered location parameter of a two-exponential distribution under a squared error loss function has been investigated by [28]. They have proved the inadmissibility of standard estimators.
+[27] investigated component-wise estimation of the ordered location parameter of two exponential distributions with known scale parameters. They have proved that unrestricted minimum risk estimators are inadmissible. [41] studied the component-wise estimation of ordered scale and location parameters of several exponential distributions under a quadratic loss function. By proposing improved estimators, they proved that the unrestricted minimum risk equivariant estimator is inadmissible. They also proved that restricted MLE is inadmissible. Smooth improved estimators of the ordered scale parameter of the two gamma distributions are investigated by [26]. [8] discussed the estimation of the linear function of ordered scale parameters of two gamma distributions under the entropy loss function. They have given a necessary and sufficient condition under which MLE dominates the crude unbiased estimator. [16] dealt with estimating the ordered scale parameters of two exponential distributions with a common location parameter \mu. The authors obtained the UMVUE and showed that the restricted MLE dominates the usual MLE.
+Additionally, the authors proved an inadmissibility result as an application of the inadmissibility result they obtained in classes of scale and affine equivariant estimators. [33] investigated the estimation of ordered scale parameters of two multivariate Lomax distributions with unknown locations under a quadratic loss function. By proposing various improved estimators, the author showed that the best equivariant estimators are not admissible.
+[29] studied the component-wise estimation of the ordered scale parameter of two exponential distributions under a general scale-invariant loss function. They have proved the inadmissibility of the best affine equivariant estimators and restricted MLE by proposing several dominating estimators. For some more recent works on estimation of ordered parameters of exponential distributions, we refer to [6], [18], [17], and [1].
+
+In the literature attention has not been given to the estimation ordered scale parameter scale mixture of exponential distributions. In this work we study component wise estimation of ordered scale parameter two scale mixture exponential distribution. In this article, we consider model: for a given \tau>0, let X\_{1},X\_{2},\dots,X\_{p\_{1}} and Y\_{1},Y\_{2},\dots,Y\_{p\_{2}} be a random samples taken from the exponential distribution Exp\left(\mu\_{1},\frac{\sigma\_{1}}{\tau}\right) and Exp\left(\mu\_{2},\frac{\sigma\_{2}}{\tau}\right) respectively where -\infty<\mu\_{1},~{}\mu\_{2}<\infty and 0<\sigma\_{1}\leq\sigma\_{2} are unknown parameters. We assume that the mixing parameter \tau have a distribution function H(.).
+The complete and sufficient statistic is (S\_{1},X,S\_{2},Y) (see [23]), where S\_{1}=\sum\_{i=1}^{p\_{1}}(X\_{i}-X\_{(1)}), X\equiv X\_{(1)}=\min\left(X\_{1},X\_{2},\dots,X\_{p\_{1}}\right), S\_{2}=\sum\_{i=1}^{p\_{2}}(Y\_{i}-Y\_{(1)}) and Y\equiv Y\_{(1)}=\min\left(Y\_{1},Y\_{2},\dots,Y\_{p\_{2}}\right). Given \tau>0, the statistics S\_{1}, S\_{2}, X and Y are independent random variables distributed as,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle S\_{1}|\tau\sim Gamma(p\_{1}-1,\sigma\_{1}/\tau),\quad X|\tau\sim% \mathcal{E}\left(\mu\_{1},\sigma\_{1}/(p\_{1}\tau)\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle S\_{2}|\tau\sim Gamma(p\_{2}-1,\sigma\_{2}/\tau),\quad Y|\tau\sim% \mathcal{E}\left(\mu\_{2},\sigma\_{2}/(p\_{2}\tau)\right) |  | (2) |
+
+We consider the estimation of \sigma\_{1} and \sigma\_{2} with respect to the loss function
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | Symmetric loss: | \displaystyle L\_{1}(\delta\_{i},\sigma\_{i})=\frac{\delta\_{i}}{\sigma\_{i}}+\frac% {\sigma\_{i}}{\delta\_{i}}-2 |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | Stein’s loss: | \displaystyle L\_{2}(\delta\_{i},\sigma\_{i})=\frac{\delta\_{i}}{\sigma\_{i}}-\ln% \left(\frac{\delta\_{i}}{\sigma\_{i}}\right)-1 |  |
+
+where \delta\_{i} is an estimator of \sigma\_{i}.
+Our aim is to find various estimators of \sigma\_{i},~{}i=1,2 which dominants BAEE under the order restriction \sigma\_{1}\leq\sigma\_{2}. The main contribution of this article is as follows.
+
+* (i)
+
+  We obtain BAEE of \sigma\_{i},~{}i=1,2 with respect to the loss function L\_{1}(\cdot) and L\_{2}(\cdot). Our goal is to propose estimators that dominate BAEE when \sigma\_{1}\leq\sigma\_{2}. We have derived several estimators whose risk is uniformly smaller than BAEE. Further, we have obtained a class of improved estimators and also shown that the boundary estimator of this class is generalized Bayes.
+* (ii)
+
+  As an application, we study the estimation of ordered scale parameters of the multivariate Lomax distribution and the Exponential Inverse Gaussian distribution.
+* (iii)
+
+  To compare the risk performance of the proposed estimators, we have conducted a detailed simulation study. The relative risk improvement of the proposed estimators with respect to BAEE has been tabulated.
+
+At first, we will derive the best affine equivariant estimator of \sigma\_{i}. For this, we invoke the principle of invariance and consider the affine group of transformations
+G\_{a\_{i},b\_{i}}=\{g\_{a\_{i},b\_{i}}(x)=a\_{i}x+b\_{i},j=1,\dots,p\_{i}\},~{}i=1,2. After some simplification, the form of the affine equivariant estimator is obtained as cS\_{i}, where c is a positive constant.
+
+###### Lemma 1.
+
+1. (i)
+
+   Under the L\_{1}(\cdot) loss function, for i=1,2, the BAEE of \sigma\_{i} is \delta\_{{1i}}=c\_{i}S\_{i} with c\_{i}=\sqrt{\frac{E(\tau)}{(p\_{i}-1)(p\_{i}-2)E(1/\tau)}}.
+2. (ii)
+
+   Under the L\_{2}(\cdot) loss function and for i=1,2, the BAEE of \sigma\_{i} is \delta\_{{2i}}=d\_{i}S\_{i} with d\_{i}=\frac{1}{(p\_{i}-1)E(1/\tau)}.
+
+###### Remark 1.
+
+The class of estimators \mathcal{D}\_{1} includes the standard estimators of \sigma\_{i}, (for\,i=1,2), in particular the uniformly minimum variance estimator (UMVUE), \frac{E(1/\tau)}{p\_{i}-1}S\_{1} and the maximum likelihood estimation (MLE), \frac{E(\tau)}{p\_{i}-1}S\_{1}.
+
+###### Remark 2.
+
+If \tau=1 with probability one, then the BAEE of \sigma\_{i} under L\_{1}(\cdot) and L\_{2}(\cdot) is coincides with the BAEE of \sigma\_{i} which was derived [29] in Example 2.1.
+
+###### Remark 3.
+
+When \tau=1 with probability one, then the MLE of \sigma\_{1} is coincide with the BAEE and UMVUE of \sigma\_{1} under the entropy loss function which was previously obtained by [29] in Example 2.1 and Remark 2.2 respectively.
+
+We will use the following lemma of to prove our results. For the sake of completeness we state it bellow.
+
+###### Lemma 2 ([5]).

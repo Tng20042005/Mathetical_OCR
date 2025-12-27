@@ -1,0 +1,1703 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PrIncipal quiver Grassmannians: conjectures</title>
+<!--Generated on Thu Dec 11 22:16:20 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="ltx-amsart.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line ltx_leqno">
+<h1 class="ltx_title ltx_title_document">PrIncipal quiver Grassmannians: conjectures</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Stanislav Fedotov
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">Nebius, London, UK
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:st.n.fedotov@gmail.com">st.n.fedotov@gmail.com</a>
+</span></span></span></span>
+<span class="ltx_author_before"> and </span><span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Evgeny Feigin
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">School of Mathematical Sciences, Tel Aviv University, Tel Aviv, 69978, Israel
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:evgfeig@gmail.com">evgfeig@gmail.com</a>
+</span></span></span></span>
+</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+<p class="ltx_p">Let <span id="m1" class="ltx_Math">P</span> and <span id="m2" class="ltx_Math">I</span> be a projective and an injective representations of a Dynkin quiver.
+We consider quiver Grassmannians of subrepresentations of dimension <span id="m3" class="ltx_Math">\dim P</span> inside
+representations of dimension <span id="m4" class="ltx_Math">\dim P+\dim I</span>. Based on extensive computer experiments, we formulate several conjectures about the
+algebro-geometric properties of these quiver Grassmannians.</p>
+</div>
+<span class="ltx_ERROR undefined">\tikzcdset</span>
+<div id="p1" class="ltx_para">
+<p class="ltx_p">scale cd/.style=every label/.append style=scale=#1,
+cells=nodes=scale=#1</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1. </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S1.p1.m1" class="ltx_Math">Q</span> be a Dynkin quiver with an arbitrary orientation. Let <span id="S1.p1.m2" class="ltx_Math">P</span> and <span id="S1.p1.m3" class="ltx_Math">I</span> be a projective
+and an injective representations of <span id="S1.p1.m4" class="ltx_Math">Q</span>. Our main objects of study are the quiver Grassmannians
+<span id="S1.p1.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>, where <span id="S1.p1.m6" class="ltx_Math">M</span> are <span id="S1.p1.m7" class="ltx_Math">\dim P+\dim I</span> dimensional representations of <span id="S1.p1.m8" class="ltx_Math">Q</span>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Examples of such varieties naturally show up in various problems of algebraic geometry and representation theory
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx9" title="" class="ltx_ref">CI20</a>, <a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>, <a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>, <a href="#bib.bibx14" title="" class="ltx_ref">CFR12</a>]</cite>.
+In particular, classical flag varieties and their PBW degenerations can be realized in this way (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx17" title="" class="ltx_ref">CL15</a>, <a href="#bib.bibx19" title="" class="ltx_ref">Fe11</a>, <a href="#bib.bibx20" title="" class="ltx_ref">Fe12-1</a>, <a href="#bib.bibx23" title="" class="ltx_ref">FeFi13</a>, <a href="#bib.bibx25" title="" class="ltx_ref">FFR17</a>]</cite>).
+Our goal
+is twofold: first, we develop the software which allows to perform calculations with the
+quiver representations and quiver Grassmannians. Second, we use the software to check various
+conjectural properties of our quiver Grassmannians. In what follows, following the suggestion
+of Markus Reineke, we call quiver Grassmannians <span id="S1.p2.m1" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> with <span id="S1.p2.m2" class="ltx_Math">\dim M=\dim P+\dim I</span> principal (or PrIncipal), where
+Pr stands for projective and In for injective (we note that
+one can not study all possible quiver Grassmannians, since every projective variety can be realized in this way <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx29" title="" class="ltx_ref">Re13</a>, <a href="#bib.bibx30" title="" class="ltx_ref">Ri18</a>]</cite>).</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Let <span id="S1.p3.m1" class="ltx_Math">Q_{0}</span> and <span id="S1.p3.m2" class="ltx_Math">Q_{1}</span> be the sets of vertices and arrows of <span id="S1.p3.m3" class="ltx_Math">Q</span>. Let <span id="S1.p3.m4" class="ltx_Math">{\bf d}=\dim P+\dim I</span>
+be the dimension vector of a representations <span id="S1.p3.m5" class="ltx_Math">M</span> as above and
+let <span id="S1.p3.m6" class="ltx_Math">{\rm Rep}_{\bf d}</span> be the representation space of <span id="S1.p3.m7" class="ltx_Math">Q</span> of dimension <span id="S1.p3.m8" class="ltx_Math">{\bf d}</span>. A point of the
+universal quiver Grassmannian <span id="S1.p3.m9" class="ltx_Math">\mathrm{Gr}_{\dim P}({\bf d})</span> consists of a point
+<span id="S1.p3.m10" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> and a collection of <span id="S1.p3.m11" class="ltx_Math">(\dim P)_{i}</span>-dimensional subspaces of <span id="S1.p3.m12" class="ltx_Math">M_{i}</span>, <span id="S1.p3.m13" class="ltx_Math">i\in Q_{0}</span>
+compatible with the maps of <span id="S1.p3.m14" class="ltx_Math">M</span>. One has a natural projection map
+<span id="S1.p3.m15" class="ltx_Math">\pi:\mathrm{Gr}_{\dim P}({\bf d})\to{\rm Rep}_{\bf d}</span> whose fibers are the quiver Grassmannians.
+Our first goal is to describe the reduced scheme structure of these fibers.
+</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">By definition, <span id="S1.p4.m1" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> are embedded into the product of classical Grassmann varieties
+<span id="S1.p4.m2" class="ltx_Math">\mathrm{Gr}_{\dim P_{i}}(M_{i})</span>, <span id="S1.p4.m3" class="ltx_Math">i\in Q_{0}</span> and hence admit the Plücker embedding into the product of
+projectivized wedge powers.
+One knows <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx28" title="" class="ltx_ref">LW19</a>]</cite> that the quiver Grassmannians can be endowed with the scheme structure defined
+by quadratic relations labeled by the edges <span id="S1.p4.m4" class="ltx_Math">\alpha\in Q_{1}</span>. However, in most cases this scheme structure
+is not reduced. One can also naturally define quadratic relations for each path in <span id="S1.p4.m5" class="ltx_Math">Q</span>. Here is our first
+conjecture.</p>
+</div>
+<div id="ThmtheoremA1" class="ltx_theorem ltx_theorem_conjA">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture A</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="ThmtheoremA1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For every principal quiver Grassmannian the scheme structure defined by the quadratic relations
+corresponding to all paths in <span id="ThmtheoremA1.p1.m1" class="ltx_Math">Q</span> is reduced.</span></p>
+</div>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">The representation space <span id="S1.p5.m1" class="ltx_Math">{\rm Rep}_{\bf d}</span> is naturally acted upon by the group <span id="S1.p5.m2" class="ltx_Math">G_{\bf d}</span>, the product
+of <span id="S1.p5.m3" class="ltx_Math">GL_{d_{i}}</span> for all <span id="S1.p5.m4" class="ltx_Math">i\in Q_{0}</span>. Since <span id="S1.p5.m5" class="ltx_Math">Q</span> is Dynkin, there is a unique open orbit for this action;
+let <span id="S1.p5.m6" class="ltx_Math">M^{0}</span> be an element of this open orbit.
+Then <span id="S1.p5.m7" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{0})</span> is irreducible and of dimension
+<span id="S1.p5.m8" class="ltx_Math">\langle\dim P,\dim I\rangle</span>; hence for any <span id="S1.p5.m9" class="ltx_Math">{\bf d}</span>-dimensional <span id="S1.p5.m10" class="ltx_Math">M</span> the dimension of <span id="S1.p5.m11" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{0})</span>
+is at least <span id="S1.p5.m12" class="ltx_Math">\langle\dim P,\dim I\rangle</span>
+(see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx14" title="" class="ltx_ref">CFR12</a>]</cite>). We say that <span id="S1.p5.m13" class="ltx_Math">M</span> degenerates to <span id="S1.p5.m14" class="ltx_Math">N</span> (<span id="S1.p5.m15" class="ltx_Math">M,N\in{\rm Rep}_{\bf d}</span>),
+if <span id="S1.p5.m16" class="ltx_Math">N</span> is contained in the closure of the <span id="S1.p5.m17" class="ltx_Math">G_{\bf d}</span> orbit of <span id="S1.p5.m18" class="ltx_Math">M</span>.
+We put forward the following conjecture.</p>
+</div>
+<div id="ThmtheoremA2" class="ltx_theorem ltx_theorem_conjA">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture B</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="ThmtheoremA2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists a representation
+<span id="ThmtheoremA2.p1.m1" class="ltx_Math">M^{1}</span> of dimension <span id="ThmtheoremA2.p1.m2" class="ltx_Math">\dim P</span> such that a quiver Grassmannian
+<span id="ThmtheoremA2.p1.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(N)</span>, <span id="ThmtheoremA2.p1.m4" class="ltx_Math">N\in{\rm Rep}_{\bf d}</span> is irreducible of dimension <span id="ThmtheoremA2.p1.m5" class="ltx_Math">\langle\dim P,\dim I\rangle</span> if and only if <span id="ThmtheoremA2.p1.m6" class="ltx_Math">N</span> degenerates to <span id="ThmtheoremA2.p1.m7" class="ltx_Math">M^{1}</span>.
+If <span id="ThmtheoremA2.p1.m8" class="ltx_Math">\dim P</span> and <span id="ThmtheoremA2.p1.m9" class="ltx_Math">\dim Q</span> have no zero components, then <span id="ThmtheoremA2.p1.m10" class="ltx_Math">M^{1}=P\oplus I</span>.</span></p>
+</div>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">From <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx15" title="" class="ltx_ref">CFR13-1</a>]</cite>, we already know that any representation degenerating to <span id="S1.p6.m1" class="ltx_Math">P\oplus I</span> is of dimension <span id="S1.p6.m2" class="ltx_Math">\langle\dim P,\dim I\rangle</span>. Conjecture <a href="#ThmtheoremA2" title="Conjecture B. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">B</span></a> is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>, <a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>]</cite> for equioriented type <span id="S1.p6.m3" class="ltx_Math">A</span> quiver in certain special cases.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Another natural question to ask is for which representations <span id="S1.p7.m1" class="ltx_Math">N</span>
+the quiver Grassmannians <span id="S1.p7.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(N)</span> are of the expected (minimal possible)
+dimension <span id="S1.p7.m3" class="ltx_Math">\langle\dim P,\dim I\rangle</span>.
+Some special cases of this question were investigated in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>]</cite>, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>]</cite>. Here is our third conjecture.</p>
+</div>
+<div id="ThmtheoremA3" class="ltx_theorem ltx_theorem_conjA">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture C</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="ThmtheoremA3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="ThmtheoremA3.p1.m1" class="ltx_Math">Q</span> be of type <span id="ThmtheoremA3.p1.m2" class="ltx_Math">A</span> with arbitrary orientation. There exists a representation
+<span id="ThmtheoremA3.p1.m3" class="ltx_Math">M^{2}</span> of dimension <span id="ThmtheoremA3.p1.m4" class="ltx_Math">\dim P</span> such that a quiver Grassmannian
+<span id="ThmtheoremA3.p1.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(N)</span>, <span id="ThmtheoremA3.p1.m6" class="ltx_Math">N\in{\rm Rep}_{\bf d}</span> is of dimension <span id="ThmtheoremA3.p1.m7" class="ltx_Math">\langle\dim P,\dim I\rangle</span> if and only if <span id="ThmtheoremA3.p1.m8" class="ltx_Math">N</span> degenerates to <span id="ThmtheoremA3.p1.m9" class="ltx_Math">M^{2}</span>.</span></p>
+</div>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">In words, Conjecture <a href="#ThmtheoremA3" title="Conjecture C. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">C</span></a> states that there exists the deepest quiver
+Grassmannian of the minimal possible dimension. We give a conjectural description of <span id="S1.p8.m1" class="ltx_Math">M^{2}</span> in some special cases.
+We note that if Conjecture <a href="#ThmtheoremA3" title="Conjecture C. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">C</span></a> holds true then the subvariety of the
+universal quiver Grassmannian consisting of fibers over representations degenerating
+to <span id="S1.p8.m2" class="ltx_Math">M^{2}</span> is flat (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>, <a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>]</cite>).
+We also note that Conjecture <a href="#ThmtheoremA3" title="Conjecture C. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">C</span></a> does not hold in general: in type <span id="S1.p8.m3" class="ltx_Math">D_{4}</span> for certain
+representations <span id="S1.p8.m4" class="ltx_Math">P</span> and <span id="S1.p8.m5" class="ltx_Math">I</span> there exist
+three deepest quiver Grassmannians of the minimal possible dimension.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">A universal description of minimal dimension locus is conjecturally given, under quite lax restrictions, in terms of dimensions of homomorphism spaces. Here’s our next conjecture:</p>
+</div>
+<div id="ThmtheoremA4" class="ltx_theorem ltx_theorem_conjA">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture D</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="ThmtheoremA4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let either of the following two conditions holds:
+a) <span id="ThmtheoremA4.p1.m1" class="ltx_Math">Q</span> is of type <span id="ThmtheoremA4.p1.m2" class="ltx_Math">A</span> and neither <span id="ThmtheoremA4.p1.m3" class="ltx_Math">\dim P</span> nor <span id="ThmtheoremA4.p1.m4" class="ltx_Math">\dim I</span> have zero components,
+b) <span id="ThmtheoremA4.p1.m5" class="ltx_Math">Q</span> is of type <span id="ThmtheoremA4.p1.m6" class="ltx_Math">D</span> and <span id="ThmtheoremA4.p1.m7" class="ltx_Math">P\oplus I</span> contains every indecomposable projective and every indecomposable injective representation as a summand.
+Then <span id="ThmtheoremA4.p1.m8" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)=\langle\dim P,\dim I\rangle</span> if and only if</span></p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex1.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M,X)\leq\dim{\rm Hom}_{Q}(P,X)+1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for every non-injective indecomposable representation <span id="ThmtheoremA4.p1.m9" class="ltx_Math">X</span>.</span></p>
+</div>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">If Conjecture <a href="#ThmtheoremA4" title="Conjecture D. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">D</span></a> holds, <span id="S1.p10.m1" class="ltx_Math">M^{2}</span> is described as a representation with maximal possible values of <span id="S1.p10.m2" class="ltx_Math">\dim{\rm Hom}_{Q}(N,X)</span> not exceeding <span id="S1.p10.m3" class="ltx_Math">\dim{\rm Hom}_{Q}(P,X)+1</span>.</p>
+</div>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">Finally, we consider the Plücker algebras (the homogeneous coordinate rings)
+<span id="S1.p11.m1" class="ltx_Math">{\rm Pl}(M)</span>, <span id="S1.p11.m2" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> of the quiver Grassmannians <span id="S1.p11.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>.
+These algebras are defined as the quotients of the polynomial ring in all Plücker
+variables by the defining ideal <span id="S1.p11.m4" class="ltx_Math">{\mathcal{I}}(M)</span> responsible for the reduced
+scheme structure of our quiver Grassmannians. Let <span id="S1.p11.m5" class="ltx_Math">{\rm Pl}_{\bf m}(M)</span> be the homogeneous
+components of <span id="S1.p11.m6" class="ltx_Math">{\rm Pl}(M)</span>.</p>
+</div>
+<div id="ThmtheoremA5" class="ltx_theorem ltx_theorem_conjA">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture E</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="ThmtheoremA5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="ThmtheoremA5.p1.m1" class="ltx_Math">Q</span> be any Dynkin quiver with any orientation and let <span id="ThmtheoremA5.p1.m2" class="ltx_Math">P</span> and <span id="ThmtheoremA5.p1.m3" class="ltx_Math">I</span> be
+multiplicity free (i.e. each indecomposable summand shows up at most once).
+Then for <span id="ThmtheoremA5.p1.m4" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> one has</span></p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M)=\dim{\rm Pl}_{\bf m}(M^{0})\text{ for all }{\bf m}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">if and only if <span id="ThmtheoremA5.p1.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is of dimension <span id="ThmtheoremA5.p1.m6" class="ltx_Math">\langle\dim P,\dim I\rangle</span>.
+For arbitrary <span id="ThmtheoremA5.p1.m7" class="ltx_Math">M</span> one has <span id="ThmtheoremA5.p1.m8" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M)\geq\dim{\rm Pl}_{\bf m}(M^{0})</span>
+for all <span id="ThmtheoremA5.p1.m9" class="ltx_Math">{\bf m}</span>.</span></p>
+</div>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">We note that Conjecture <a href="#ThmtheoremA5" title="Conjecture E. ‣ 1. Introduction ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">E</span></a> does not hold for arbitrary projective <span id="S1.p12.m1" class="ltx_Math">P</span> and injective <span id="S1.p12.m2" class="ltx_Math">I</span> (even in type <span id="S1.p12.m3" class="ltx_Math">A</span>).
+At the same time, the conjectural flatness of the equi-dimensional (of minimal dimension) family of quiver Grassmannians
+<span id="S1.p12.m4" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> implies that the Euler characteristic of the natural line bundles
+induced by the natural maps to <span id="S1.p12.m5" class="ltx_Math">{\mathbb{P}}(\Lambda^{(\dim P)_{i}}M_{i})</span> are constant along the
+fibers. It is tempting to conjecture that for the multiplicity free <span id="S1.p12.m6" class="ltx_Math">P</span> and <span id="S1.p12.m7" class="ltx_Math">I</span>
+the components of the Plücker algebra are isomorphic to the zero cohomology groups
+of the corresponding line bundles and that the higher cohomology vanish. However,
+at the moment we do not have enough evidence to conjecture that this indeed holds true.</p>
+</div>
+<div id="S1.p13" class="ltx_para">
+<p class="ltx_p">Finally. let us outline couple of possible further directions. First, the principal quiver Grassmannians for equioriented type <span id="S1.p13.m1" class="ltx_Math">A</span> quivers enjoy many nice topological and combinatorial properties <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx5" title="" class="ltx_ref">Bi14</a>, <a href="#bib.bibx9" title="" class="ltx_ref">CI20</a>, <a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>, <a href="#bib.bibx15" title="" class="ltx_ref">CFR13-1</a>, <a href="#bib.bibx21" title="" class="ltx_ref">Fe12-2</a>]</cite>.
+It would be interesting to extend the study to the case of general quivers.
+Second, a quiver Grassmannian of subrepresentations of <span id="S1.p13.m2" class="ltx_Math">M</span> is naturally acted upon by the group of automorphisms of <span id="S1.p13.m3" class="ltx_Math">M</span>.
+The description of this action and of the induced action on the homogeneous coordinate rings will lead to a better understanding of
+geometric and algebraic properties of the quiver Grassmannians
+(see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx3" title="" class="ltx_ref">Ar11</a>, <a href="#bib.bibx16" title="" class="ltx_ref">CFR17</a>, <a href="#bib.bibx22" title="" class="ltx_ref">Fe23</a>, <a href="#bib.bibx24" title="" class="ltx_ref">FFL11</a>, <a href="#bib.bibx27" title="" class="ltx_ref">HT99</a>]</cite> for some partial results).</p>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">Our paper is organized as follows. In section <a href="#S2" title="2. The setup ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> we fix the notation and recall the basic definitions from the theory of quivers.
+In section <a href="#S3" title="3. Reduced scheme structure ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> we formulate the conjectural description of the reduced scheme structure of the principal quiver Grassmannians.
+In section <a href="#S4" title="4. Minimal dimension locus: irreducible Grassmannians ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> we formulate a conjecture on the locus of the irreducible principal quiver Grassmannians of the minimal possible dimension.
+Sections <a href="#S5" title="5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> and <a href="#S6" title="6. The homomorphism dimension criterion ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> treat the case of (possibly reducible)
+principal quiver Grassmannians of the minimal possible dimension.
+In Section <a href="#S7" title="7. Plücker algebras and line bundles ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a> we discuss the conjectural properties of the homogeneous coordinate rings.
+Section <a href="#S8" title="8. Software ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a> contains a brief description of the software used to compute examples supporting conjectures given
+in the paper.</p>
+</div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Acknowledgments</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">We are grateful to Markus Reineke for useful discussions.
+EF was partially supported by the ISF grant 493/24.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2. </span>The setup</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">In this section we recall main definitions from the theory of quiver representations and quiver Grassmannians <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx4" title="" class="ltx_ref">ASS06</a>, <a href="#bib.bibx7" title="" class="ltx_ref">CB92</a>, <a href="#bib.bibx8" title="" class="ltx_ref">CR00</a>, <a href="#bib.bibx31" title="" class="ltx_ref">Schi14</a>]</cite>.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1. </span>Generalities</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">We fix an algebraically closed field <span id="S2.SS1.p1.m1" class="ltx_Math">{\mathbf{k}}</span> of characteristic zero.
+Let <span id="S2.SS1.p1.m2" class="ltx_Math">Q</span> be a Dynkin quiver with the set of vertices <span id="S2.SS1.p1.m3" class="ltx_Math">Q_{0}</span> and the set of arrows <span id="S2.SS1.p1.m4" class="ltx_Math">Q_{1}</span>.
+For an arrow <span id="S2.SS1.p1.m5" class="ltx_Math">\alpha</span> we write <span id="S2.SS1.p1.m6" class="ltx_Math">s(\alpha)</span> for its source and <span id="S2.SS1.p1.m7" class="ltx_Math">t(\alpha)</span> for its target. A representation of <span id="S2.SS1.p1.m8" class="ltx_Math">Q</span> is a collection of vector spaces <span id="S2.SS1.p1.m9" class="ltx_Math">M_{i}</span>, <span id="S2.SS1.p1.m10" class="ltx_Math">i\in Q_{0}</span>
+and a collection of linear maps <span id="S2.SS1.p1.m11" class="ltx_Math">M_{\alpha}:M_{s(\alpha)}\to M_{t(\alpha)}</span>.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">The simple modules of <span id="S2.SS1.p2.m1" class="ltx_Math">Q</span> are labeled by the vertices of <span id="S2.SS1.p2.m2" class="ltx_Math">Q</span>. For <span id="S2.SS1.p2.m3" class="ltx_Math">i\in Q_{0}</span>
+we denote by <span id="S2.SS1.p2.m4" class="ltx_Math">S_{i}</span> the simple <span id="S2.SS1.p2.m5" class="ltx_Math">1</span>-dimensional module supported at the vertex <span id="S2.SS1.p2.m6" class="ltx_Math">i</span>.
+There are finitely many iso-classes of indecomposable representations of <span id="S2.SS1.p2.m7" class="ltx_Math">Q</span>;
+these iso-classes are in bijection with positive roots of the simple Lie algebra
+whose Dynkin diagram is <span id="S2.SS1.p2.m8" class="ltx_Math">Q</span>. In what follows for a vertex <span id="S2.SS1.p2.m9" class="ltx_Math">i</span> we denote by
+<span id="S2.SS1.p2.m10" class="ltx_Math">P_{i}</span> the corresponding indecomposable projective module and by <span id="S2.SS1.p2.m11" class="ltx_Math">I_{i}</span> the
+corresponding indecomposable injective module.
+In particular, one has
+the canonical embedding <span id="S2.SS1.p2.m12" class="ltx_Math">S_{i}\to I_{i}</span> and the canonical projection <span id="S2.SS1.p2.m13" class="ltx_Math">P_{i}\to S_{i}</span>.
+We note that <span id="S2.SS1.p2.m14" class="ltx_Math">(P_{i})_{j}</span>, <span id="S2.SS1.p2.m15" class="ltx_Math">i,j\in Q_{0}</span>
+is non-zero if and only if there exists a path from <span id="S2.SS1.p2.m16" class="ltx_Math">i</span> to <span id="S2.SS1.p2.m17" class="ltx_Math">j</span> in <span id="S2.SS1.p2.m18" class="ltx_Math">Q</span> and
+<span id="S2.SS1.p2.m19" class="ltx_Math">(I_{i})_{j}</span>, <span id="S2.SS1.p2.m20" class="ltx_Math">i,j\in Q_{0}</span>
+is non-zero if and only if there exists a path from <span id="S2.SS1.p2.m21" class="ltx_Math">j</span> to <span id="S2.SS1.p2.m22" class="ltx_Math">i</span>.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">For a dimension vector <span id="S2.SS1.p3.m1" class="ltx_Math">{\bf d}\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}</span> let <span id="S2.SS1.p3.m2" class="ltx_Math">{\rm Rep}_{\bf d}</span> be the representation
+space of <span id="S2.SS1.p3.m3" class="ltx_Math">Q</span> of dimension <span id="S2.SS1.p3.m4" class="ltx_Math">{\bf d}</span>:</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex1.m1" class="ltx_Math">{\rm Rep}_{\bf d}=\bigoplus_{\alpha\in Q_{1}}{\rm Hom}({\mathbf{k}}^{d_{s(%
+\alpha)}},{\mathbf{k}}^{d_{t(\alpha)}}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The space <span id="S2.SS1.p3.m5" class="ltx_Math">{\rm Rep}_{\bf d}</span> is naturally acted upon (via the base change) by the group <span id="S2.SS1.p3.m6" class="ltx_Math">G_{\bf d}</span>,
+which is the product of the general linear groups <span id="S2.SS1.p3.m7" class="ltx_Math">GL_{d_{i}}</span> for <span id="S2.SS1.p3.m8" class="ltx_Math">i\in Q_{0}</span>.
+The orbits of this action parametrize the isomorphism classes of the <span id="S2.SS1.p3.m9" class="ltx_Math">{\bf d}</span>-dimensional
+representations of <span id="S2.SS1.p3.m10" class="ltx_Math">Q</span>. We denote by <span id="S2.SS1.p3.m11" class="ltx_Math">{\rm Rep}(Q)</span> the set of all representations
+of the quiver <span id="S2.SS1.p3.m12" class="ltx_Math">Q</span>.</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">For a point <span id="S2.SS1.p4.m1" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> let <span id="S2.SS1.p4.m2" class="ltx_Math">\mathcal{O}(M)\subset{\rm Rep}_{\bf d}</span> be the orbit <span id="S2.SS1.p4.m3" class="ltx_Math">G_{\bf d}M</span>.
+The dimension and codimension of an orbit are computed by the following formulas:</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex2.m1" class="ltx_Math">\dim\mathcal{O}(M)=\dim G_{d}-\dim{\rm End}_{Q}(M),\ {\rm codim}_{{\rm Rep}_{%
+\bf d}}\mathcal{O}(M)=\dim{\rm Ext}^{1}_{Q}(M,M).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In particular, an orbit <span id="S2.SS1.p4.m4" class="ltx_Math">\mathcal{O}(M)</span> is dense in the representation space if and only if <span id="S2.SS1.p4.m5" class="ltx_Math">M</span>
+is rigid, i.e. <span id="S2.SS1.p4.m6" class="ltx_Math">{\rm Ext}^{1}_{Q}(M,M)=0</span>. For a Dynkin quiver <span id="S2.SS1.p4.m7" class="ltx_Math">Q</span> there is only finitely many
+isoclasses of <span id="S2.SS1.p4.m8" class="ltx_Math">Q</span> modules of a given dimension. Hence, there exists a unique open dense
+orbit.</p>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p">We say that <span id="S2.SS1.p5.m1" class="ltx_Math">M</span> degenerates to <span id="S2.SS1.p5.m2" class="ltx_Math">N</span>
+if <span id="S2.SS1.p5.m3" class="ltx_Math">\overline{\mathcal{O}(M)}\supset\mathcal{O}(N)</span>; we write <span id="S2.SS1.p5.m4" class="ltx_Math">M\leq N</span>. One has the following theorem of
+Bongartz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx6" title="" class="ltx_ref">Bo96</a>]</cite>: <span id="S2.SS1.p5.m5" class="ltx_Math">M\leq N</span> if and only if</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex3.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M,X)\leq\dim{\rm Hom}_{Q}(N,X)\quad\forall X\in{\rm Rep}(Q)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or, equivalently, if</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex4.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(X,M)\leq\dim{\rm Hom}_{Q}(X,N)\quad\forall X\in{\rm Rep}(Q).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The degeneration order induces the structure of a poset on the set of isoclasses of
+<span id="S2.SS1.p5.m6" class="ltx_Math">Q</span>-modules of a fixed dimension <span id="S2.SS1.p5.m7" class="ltx_Math">{\bf d}</span>: we say that the isoclass of <span id="S2.SS1.p5.m8" class="ltx_Math">M</span> is less than or
+equal to the isoclass of <span id="S2.SS1.p5.m9" class="ltx_Math">N</span> if <span id="S2.SS1.p5.m10" class="ltx_Math">M</span> degenerated to <span id="S2.SS1.p5.m11" class="ltx_Math">N</span>. We denote this poset by <span id="S2.SS1.p5.m12" class="ltx_Math">\Gamma_{\bf d}</span>.
+In particular, <span id="S2.SS1.p5.m13" class="ltx_Math">\Gamma_{\bf d}</span> has a unique minimal element corresponding to the open dense
+orbit.</p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><img src="processed_dataset/2512.09731v1/temp_source/a3_sink_full.png" id="S2.F1.g1" class="ltx_graphics ltx_centering" width="163" height="465" alt="Degeneration picture for ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1. </span>Degeneration picture for <span id="S2.F1.m3" class="ltx_Math">Q=\bullet\rightarrow\bullet\leftarrow\bullet</span>,
+<span id="S2.F1.m4" class="ltx_Math">{\bf d}=(3,4,3)</span>.
+</figcaption>
+</figure>
+<div id="S2.Thmthm1" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S2.Thmthm1.p1.m1" class="ltx_Math">Q</span> be the equioriented type <span id="S2.Thmthm1.p1.m2" class="ltx_Math">A</span> quiver. Then the Bongartz criterion can be
+explicitly formulated as follows: <span id="S2.Thmthm1.p1.m3" class="ltx_Math">M</span> degenerates to <span id="S2.Thmthm1.p1.m4" class="ltx_Math">N</span> if and only if, for any path in <span id="S2.Thmthm1.p1.m5" class="ltx_Math">Q</span>, the rank
+of the map in <span id="S2.Thmthm1.p1.m6" class="ltx_Math">M</span> corresponding this path is no smaller than the
+corresponding rank of the map in <span id="S2.Thmthm1.p1.m7" class="ltx_Math">N</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx1" title="" class="ltx_ref">AdF84</a>]</cite>.
+The general type <span id="S2.Thmthm1.p1.m8" class="ltx_Math">A</span> case is worked out on <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx2" title="" class="ltx_ref">AdF85</a>]</cite>.</span></p>
+</div>
+</div>
+<div id="S2.SS1.p6" class="ltx_para">
+<p class="ltx_p">For two vectors <span id="S2.SS1.p6.m1" class="ltx_Math">{\bf a},{\bf b}\in{\mathbb{Z}}^{Q_{0}}</span> we denote by <span id="S2.SS1.p6.m2" class="ltx_Math">\langle{\bf a},{\bf b}\rangle</span>
+the value of the Euler form on these vectors given by
+</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex5.m1" class="ltx_Math">\langle{\bf a},{\bf b}\rangle=\sum_{i\in Q_{0}}a_{i}b_{i}-\sum_{\alpha\in Q_{1%
+}}a_{s(\alpha)}b_{t(\alpha)}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For representations <span id="S2.SS1.p6.m3" class="ltx_Math">M\in{\rm Rep}_{\bf a}</span> and <span id="S2.SS1.p6.m4" class="ltx_Math">N\in{\rm Rep}_{\bf b}</span> one has</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex6.m1" class="ltx_Math">\langle{\bf a},{\bf b}\rangle=\dim\mathrm{Hom}_{Q}(M,N)-\dim{\rm Ext}^{1}_{Q}(%
+M,N).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2. </span>Quiver Grassmannians</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S2.SS2.p1.m1" class="ltx_Math">M</span> be a <span id="S2.SS2.p1.m2" class="ltx_Math">{\bf d}</span>-dimensional representation of <span id="S2.SS2.p1.m3" class="ltx_Math">Q</span> and let
+<span id="S2.SS2.p1.m4" class="ltx_Math">{\bf e}\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}</span>
+be a dimension vector such that <span id="S2.SS2.p1.m5" class="ltx_Math">e_{i}\leq d_{i}</span> for all <span id="S2.SS2.p1.m6" class="ltx_Math">i\in Q_{0}</span>. The universal quiver Grassmannian
+<span id="S2.SS2.p1.m7" class="ltx_Math">\mathrm{Gr}_{\bf e}({\bf d})</span> sits inside the product <span id="S2.SS2.p1.m8" class="ltx_Math">{\rm Rep}_{\bf d}\times\prod_{i\in Q_{0}}\mathrm{Gr}_{e_{i}}({\mathbf{k}}^{d_{%
+i}})</span>
+and consists of collections <span id="S2.SS2.p1.m9" class="ltx_Math">\{f_{\alpha}\}_{\alpha\in Q_{1}},(U_{i})_{i\in Q_{0}}</span> such that
+<span id="S2.SS2.p1.m10" class="ltx_Math">f_{\alpha}(U_{s(\alpha)})\subset U_{t(\alpha)}</span> for all <span id="S2.SS2.p1.m11" class="ltx_Math">\alpha\in Q_{1}</span>. One has two natural
+projections</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex7.m1" class="ltx_Math">{\rm Rep}_{\bf d}\longleftarrow\mathrm{Gr}_{\bf e}({\bf d})\longrightarrow%
+\prod_{i\in Q_{0}}\mathrm{Gr}_{e_{i}}({\mathbf{k}}^{d_{i}});</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for <span id="S2.SS2.p1.m12" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> we denote by <span id="S2.SS2.p1.m13" class="ltx_Math">\mathrm{Gr}_{\bf e}(M)</span> the fiber of the projection <span id="S2.SS2.p1.m14" class="ltx_Math">\mathrm{Gr}_{\bf e}\to{\rm Rep}_{\bf d}</span> over the point <span id="S2.SS2.p1.m15" class="ltx_Math">M</span>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<p class="ltx_p">Let us fix a projective representation <span id="S2.SS2.p2.m1" class="ltx_Math">P</span> and an injective representation <span id="S2.SS2.p2.m2" class="ltx_Math">I</span>;
+thus <span id="S2.SS2.p2.m3" class="ltx_Math">P</span> is a direct sum of the modules <span id="S2.SS2.p2.m4" class="ltx_Math">P_{i}</span> with certain multiplicities and
+<span id="S2.SS2.p2.m5" class="ltx_Math">I</span> is a direct sum of the modules <span id="S2.SS2.p2.m6" class="ltx_Math">I_{i}</span> with certain multiplicities. Let</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex8.m1" class="ltx_Math">{\bf d}=\dim P+\dim I.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We are interested in quiver Grassmannians <span id="S2.SS2.p2.m7" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> for <span id="S2.SS2.p2.m8" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span>
+being <span id="S2.SS2.p2.m9" class="ltx_Math">{\bf d}</span>-dimensional
+<span id="S2.SS2.p2.m10" class="ltx_Math">Q</span>-module. In other words, we want to study the fibers of the universal quiver Grassmannian
+<span id="S2.SS2.p2.m11" class="ltx_Math">\mathrm{Gr}_{\dim P}(P+I)</span> (over the representation space <span id="S2.SS2.p2.m12" class="ltx_Math">{\rm Rep}_{\bf d}</span>). Following
+suggestion of Markus Reineke we call these quiver Grassmannians PrIncipal (<span class="ltx_text ltx_font_italic">Pr</span> for projectives and <span class="ltx_text ltx_font_italic">In</span> for injectives).</p>
+</div>
+<div id="S2.SS2.p3" class="ltx_para">
+<p class="ltx_p">Since <span id="S2.SS2.p3.m1" class="ltx_Math">Q</span> is Dynkin, the group <span id="S2.SS2.p3.m2" class="ltx_Math">G_{\bf d}</span> has a finite number of orbits in <span id="S2.SS2.p3.m3" class="ltx_Math">{\rm Rep}_{\bf d}</span>.
+Hence there exists a unique open orbit <span id="S2.SS2.p3.m4" class="ltx_Math">\mathcal{O}(M^{0})</span> (for a rigid representation <span id="S2.SS2.p3.m5" class="ltx_Math">M^{0}</span>), which
+degenerates to any other orbit and a special fiber <span id="S2.SS2.p3.m6" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{0})</span> of <span id="S2.SS2.p3.m7" class="ltx_Math">\mathrm{Gr}_{\dim P}({\bf d})</span>.
+Yet another special fiber is given by <span id="S2.SS2.p3.m8" class="ltx_Math">\mathrm{Gr}_{\dim P}(P\oplus I)</span> (since
+<span id="S2.SS2.p3.m9" class="ltx_Math">{\bf d}=\dim P+\dim I</span>).</p>
+</div>
+<div id="S2.Thmthm2" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any <span id="S2.Thmthm2.p1.m1" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> the quiver Grassmannian <span id="S2.Thmthm2.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is non-empty.
+In fact, one knows <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx32" title="" class="ltx_ref">Scho92</a>]</cite> that this statement is implied by the inequalities
+<span id="S2.Thmthm2.p1.m3" class="ltx_Math">\langle{\bf a},\dim I\rangle\geq 0</span> for any dimension vector <span id="S2.Thmthm2.p1.m4" class="ltx_Math">{\bf a}</span>, which holds true because <span id="S2.Thmthm2.p1.m5" class="ltx_Math">I</span> is injective. Furthermore, if <span id="S2.Thmthm2.p1.m6" class="ltx_Math">Q</span> is of type <span id="S2.Thmthm2.p1.m7" class="ltx_Math">A</span>, then
+it follows from <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx11" title="" class="ltx_ref">CEFR21</a>, <a href="#bib.bibx10" title="" class="ltx_ref">CEFF22</a>]</cite>
+that for any <span id="S2.Thmthm2.p1.m8" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> the quiver Grassmannian
+<span id="S2.Thmthm2.p1.m9" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is connected.
+More precisely, one shows that all quiver Grassmannians for the type <span id="S2.Thmthm2.p1.m10" class="ltx_Math">A</span> quivers are connected. It is tempting to conjecture that
+the same holds true for other Dynkin quivers as well: all the type <span id="S2.Thmthm2.p1.m11" class="ltx_Math">D</span> quiver Grassmannians <span id="S2.Thmthm2.p1.m12" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> we’ve seen in our computations are indeed connected.</span></p>
+</div>
+</div>
+<div id="S2.SS2.p4" class="ltx_para">
+<p class="ltx_p">The following statements were proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx14" title="" class="ltx_ref">CFR12</a>]</cite>.</p>
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I1.i1.p1.m1" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{0})</span> and <span id="S2.I1.i1.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(P\oplus Q)</span> are irreducible,</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I1.i2.p1.m1" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M^{0})=\dim\mathrm{Gr}_{\dim P}(M^{0})=\langle\dim P,%
+\dim I\rangle</span>,</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I1.i3.p1.m1" class="ltx_Math">\mathrm{Gr}_{\dim P}(P\oplus Q)</span> is a flat degeneration of <span id="S2.I1.i3.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{0})</span>,</p>
+</div>
+</li>
+<li id="S2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">if <span id="S2.I1.i4.p1.m1" class="ltx_Math">M</span> degenerates to <span id="S2.I1.i4.p1.m2" class="ltx_Math">P\oplus Q</span>, then <span id="S2.I1.i4.p1.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is irreducible of dimension
+<span id="S2.I1.i4.p1.m4" class="ltx_Math">\langle\dim P,\dim I\rangle</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3. </span>Equioriented type A case</h3>
+
+<div id="S2.SS3.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S2.SS3.p1.m1" class="ltx_Math">Q</span> be the equioriented quiver of type <span id="S2.SS3.p1.m2" class="ltx_Math">A_{n}</span>. We denote the vertices of <span id="S2.SS3.p1.m3" class="ltx_Math">Q</span> by <span id="S2.SS3.p1.m4" class="ltx_Math">1,2,\dots,n</span> with arrows
+given by <span id="S2.SS3.p1.m5" class="ltx_Math">i\to i+1</span>. The indecomposable representations are labeled by pairs <span id="S2.SS3.p1.m6" class="ltx_Math">i,j</span> with
+<span id="S2.SS3.p1.m7" class="ltx_Math">1\leq i\leq j\leq n</span>; we denote the corresponding representation by <span id="S2.SS3.p1.m8" class="ltx_Math">U(i,j)</span>.
+In particular, all non-trivial components of <span id="S2.SS3.p1.m9" class="ltx_Math">U(i,j)</span> are one-dimensional and the
+support of <span id="S2.SS3.p1.m10" class="ltx_Math">U(i,j)</span> consists of vertices between <span id="S2.SS3.p1.m11" class="ltx_Math">i</span> and <span id="S2.SS3.p1.m12" class="ltx_Math">j</span>. One has <span id="S2.SS3.p1.m13" class="ltx_Math">S_{i}=U(i,i)</span>,
+<span id="S2.SS3.p1.m14" class="ltx_Math">P_{i}=U(i,n)</span>, <span id="S2.SS3.p1.m15" class="ltx_Math">I_{i}=U(1,i)</span>. The representation <span id="S2.SS3.p1.m16" class="ltx_Math">M^{0}</span> is equal to <span id="S2.SS3.p1.m17" class="ltx_Math">U(1,n)^{\oplus n+1}</span>.
+</p>
+</div>
+<div id="S2.SS3.p2" class="ltx_para">
+<p class="ltx_p">Let us consider the special case <span id="S2.SS3.p2.m1" class="ltx_Math">P=\bigoplus_{i=1}^{n}P_{i}</span>, <span id="S2.SS3.p2.m2" class="ltx_Math">I=\bigoplus_{i=1}^{n}I_{i}</span>.
+Then <span id="S2.SS3.p2.m3" class="ltx_Math">P</span> is isomorphic (as a <span id="S2.SS3.p2.m4" class="ltx_Math">Q</span>-module) to the path algebra and <span id="S2.SS3.p2.m5" class="ltx_Math">I</span> to its dual.
+One has (recall <span id="S2.SS3.p2.m6" class="ltx_Math">{\bf d}=\dim P+\dim I</span>)</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex9.m1" class="ltx_Math">\dim A=(1,\dots,n),\ \dim A^{*}=(n,\dots,1),\ {\bf d}=(n+1,\dots,n+1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The scalar product <span id="S2.SS3.p2.m7" class="ltx_Math">\langle\dim A,\dim A^{*}\rangle</span> is equal to <span id="S2.SS3.p2.m8" class="ltx_Math">n(n+1)/2</span>. One observes
+that <span id="S2.SS3.p2.m9" class="ltx_Math">\mathrm{Gr}_{\dim A}(M^{0})</span> is isomorphic to the classical full flag variety for the group
+<span id="S2.SS3.p2.m10" class="ltx_Math">SL_{n+1}</span> (see e.g. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx26" title="" class="ltx_ref">Fu97</a>]</cite>) and <span id="S2.SS3.p2.m11" class="ltx_Math">\mathrm{Gr}_{\dim A}(P\oplus Q)</span> is isomorphic to the PBW degenerate
+flag variety for the group <span id="S2.SS3.p2.m12" class="ltx_Math">SL_{n+1}</span> (see e.g. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx19" title="" class="ltx_ref">Fe11</a>, <a href="#bib.bibx20" title="" class="ltx_ref">Fe12-1</a>, <a href="#bib.bibx22" title="" class="ltx_ref">Fe23</a>]</cite>).</p>
+</div>
+<div id="S2.SS3.p3" class="ltx_para">
+<p class="ltx_p">We also introduce one more representation of dimension <span id="S2.SS3.p3.m1" class="ltx_Math">{\bf d}</span>:</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex10.m1" class="ltx_Math">M^{2}=\bigoplus_{i=1}^{n}U(i,n)\oplus\bigoplus_{i=1}^{n}U(i,i)\oplus\bigoplus_%
+{i=2}^{n}U(1,i-1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The following is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>]</cite> (see also <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>]</cite>).</p>
+<ul id="S2.I2" class="ltx_itemize">
+<li id="S2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I2.i1.p1.m1" class="ltx_Math">\mathrm{Gr}_{\dim A}(M)</span> is irreducible of dimension <span id="S2.I2.i1.p1.m2" class="ltx_Math">n(n+1)/2</span> if and only if <span id="S2.I2.i1.p1.m3" class="ltx_Math">M</span> degenerates to <span id="S2.I2.i1.p1.m4" class="ltx_Math">M^{1}</span>,</p>
+</div>
+</li>
+<li id="S2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I2.i2.p1.m1" class="ltx_Math">\mathrm{Gr}_{\dim A}(M)</span> is of dimension <span id="S2.I2.i2.p1.m2" class="ltx_Math">n(n+1)/2</span> if and only if <span id="S2.I2.i2.p1.m3" class="ltx_Math">M</span> degenerates to <span id="S2.I2.i2.p1.m4" class="ltx_Math">M^{2}</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S2.Thmthm3" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The results of <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>]</cite> have to do with flat and flat irreducible loci of the universal quiver Grassmannian <span id="S2.Thmthm3.p1.m1" class="ltx_Math">\mathrm{Gr}_{\dim A}({\bf d})</span>.</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3. </span>Reduced scheme structure</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">For a number <span id="S3.p1.m1" class="ltx_Math">n\in{\mathbb{Z}}_{&gt;0}</span> we write <span id="S3.p1.m2" class="ltx_Math">[n]</span> for the set <span id="S3.p1.m3" class="ltx_Math">\{1,\dots,n\}</span>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let us denote the components of the dimension vector <span id="S3.p2.m1" class="ltx_Math">\dim P</span> by <span id="S3.p2.m2" class="ltx_Math">(a_{i})_{i\in Q_{0}}</span>.
+A quiver Grassmannian <span id="S3.p2.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> sits inside the product of classical Grassmannians
+<span id="S3.p2.m4" class="ltx_Math">\mathrm{Gr}_{a_{i}}(M_{i})</span>, <span id="S3.p2.m5" class="ltx_Math">i\in Q_{0}</span>. Using the standard Plücker embeddings of the Grassmann
+varieties one arrives at the embedding</p>
+<table id="S3.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex1.m1" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)\subset\prod_{i\in Q_{0}}\mathrm{Gr}_{a_{i}}(M_{i})%
+\subset\prod_{i\in Q_{0}}{\mathbb{P}}(\Lambda^{a_{i}}(M_{i})).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We call the composition of these embedding the Plücker embedding for quiver Grassmannians.
+Let <span id="S3.p2.m6" class="ltx_Math">\Delta^{(i)}_{J}</span>, <span id="S3.p2.m7" class="ltx_Math">J\in\binom{[d_{i}]}{a_{i}}</span>, be the Plücker coordinates in the wedge space
+<span id="S3.p2.m8" class="ltx_Math">\Lambda^{a_{i}}(M_{i})</span>. We denote by the same symbols the homogeneous coordinates on the
+projective space <span id="S3.p2.m9" class="ltx_Math">{\mathbb{P}}(\Lambda^{a_{i}}(M_{i}))</span>. Let <span id="S3.p2.m10" class="ltx_Math">{\mathcal{I}}(M)</span> be the multi-homogeneous ideal in the
+polynomial ring in all the variables <span id="S3.p2.m11" class="ltx_Math">\Delta^{(i)}_{J}</span> (for all <span id="S3.p2.m12" class="ltx_Math">i\in Q_{0}</span>)
+consisting of all multi-homogeneous polynomials vanishing on <span id="S3.p2.m13" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>. In order to give a (conjectural)
+explicit description of <span id="S3.p2.m14" class="ltx_Math">{\mathcal{I}}(M)</span> we introduce some notation.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Let us fix a basis <span id="S3.p3.m1" class="ltx_Math">v^{(i)}_{p}</span>, <span id="S3.p3.m2" class="ltx_Math">1\leq p\leq d_{i}</span> in each component <span id="S3.p3.m3" class="ltx_Math">M_{i}</span> of the representation <span id="S3.p3.m4" class="ltx_Math">M</span>.
+For an arrow <span id="S3.p3.m5" class="ltx_Math">\alpha:i\to j</span>, <span id="S3.p3.m6" class="ltx_Math">\alpha\in Q_{1}</span> let <span id="S3.p3.m7" class="ltx_Math">m_{\alpha,p,q}</span> be the matrix of the map <span id="S3.p3.m8" class="ltx_Math">M_{\alpha}</span>
+written in the fixed bases. For a number <span id="S3.p3.m9" class="ltx_Math">p\in[d_{i}]</span> and a subset <span id="S3.p3.m10" class="ltx_Math">I\subset[d_{i}]</span> we write
+<span id="S3.p3.m11" class="ltx_Math">\epsilon(p,I)=\#\{p^{\prime}\in I:\ p^{\prime}\leq p\}</span>. The following relations are labeled by an arrow
+<span id="S3.p3.m12" class="ltx_Math">\alpha:i\to j</span>, a set <span id="S3.p3.m13" class="ltx_Math">I\subset[d_{i}]</span> of cardinality <span id="S3.p3.m14" class="ltx_Math">a_{i}-1</span> and a set <span id="S3.p3.m15" class="ltx_Math">J\subset[d_{j}]</span> of cardinality <span id="S3.p3.m16" class="ltx_Math">[d_{j}+1]</span>:
+</p>
+<table id="S3.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E1.m1" class="ltx_Math">R(\alpha,I,J)=\sum_{\begin{subarray}{c}p\in[d_{i}]\setminus I\\
+q\in J\end{subarray}}(-1)^{\epsilon(p,I)+\epsilon(q,J)}m_{\alpha,p,q}\Delta^{(%
+i)}_{I\cup p}\Delta^{(j)}_{J\setminus\{q\}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is shown in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx28" title="" class="ltx_ref">LW19</a>]</cite> that the relations above cut out <span id="S3.p3.m17" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> pointwise inside the product
+of projectivized wedge powers. Similarly to relations (<a href="#S3.E1" title="(3.1) ‣ 3. Reduced scheme structure ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>) one gets a relation
+<span id="S3.p3.m18" class="ltx_Math">R(\pi,I,J)</span>
+for any path <span id="S3.p3.m19" class="ltx_Math">\pi</span> in <span id="S3.p3.m20" class="ltx_Math">Q</span> with <span id="S3.p3.m21" class="ltx_Math">s(\pi)=i</span>, <span id="S3.p3.m22" class="ltx_Math">t(\pi)=j</span> and <span id="S3.p3.m23" class="ltx_Math">I\in\binom{[d_{i}]}{a_{i}-1}</span>,
+<span id="S3.p3.m24" class="ltx_Math">J\in\binom{[d_{j}]}{a_{j}+1}</span>:</p>
+<table id="S3.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3.2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E2.m1" class="ltx_Math">R(\pi,I,J)=\sum_{\begin{subarray}{c}p\in[d_{i}]\setminus I\\
+q\in J\end{subarray}}(-1)^{\epsilon(p,I)+\epsilon(q,J)}m_{\pi,p,q}\Delta^{(i)}%
+_{I\cup p}\Delta^{(j)}_{J\setminus\{q\}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <span id="S3.p3.m25" class="ltx_Math">m_{\pi,p,q}</span> being matrix coefficients of the map <span id="S3.p3.m26" class="ltx_Math">M_{\pi}</span> (the composition of maps corresponding
+to the arrows in <span id="S3.p3.m27" class="ltx_Math">\pi</span>).</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Recall the ideal <span id="S3.p4.m1" class="ltx_Math">{\mathcal{I}}(M)</span> defining the reduced scheme structure of
+<span id="S3.p4.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>.
+We put forward the following conjecture:</p>
+</div>
+<div id="S3.Thmthm1" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any <span id="S3.Thmthm1.p1.m1" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span>
+the ideal <span id="S3.Thmthm1.p1.m2" class="ltx_Math">{\mathcal{I}}(M)</span> is generated by the quadratic relations <span id="S3.Thmthm1.p1.m3" class="ltx_Math">R(\pi,I,J)</span> for all path <span id="S3.Thmthm1.p1.m4" class="ltx_Math">\pi</span> in <span id="S3.Thmthm1.p1.m5" class="ltx_Math">Q</span> and
+all <span id="S3.Thmthm1.p1.m6" class="ltx_Math">I\subset[d_{s(\pi)}]</span>, <span id="S3.Thmthm1.p1.m7" class="ltx_Math">\#I=a_{s(\pi)-1}</span> and <span id="S3.Thmthm1.p1.m8" class="ltx_Math">J\subset[d_{t(\pi)}]</span>, <span id="S3.Thmthm1.p1.m9" class="ltx_Math">\#J=a_{t(\pi)}+1</span>.</span></p>
+</div>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">In particular, the ideal generated by all the relations <span id="S3.p5.m1" class="ltx_Math">R(\pi,I,J)</span> is saturated (with respect to
+each group of Plücker variables <span id="S3.p5.m2" class="ltx_Math">\Delta^{(i)}_{\bullet}</span>) and is prime.
+We note that Conjecture <a href="#S3.Thmthm1" title="Conjecture 3.1. ‣ 3. Reduced scheme structure ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a> is far from being true for general quiver
+Grassmannians.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4. </span>Minimal dimension locus: irreducible Grassmannians</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Recall that <span id="S4.p1.m1" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M^{0})=\dim\mathrm{Gr}_{\dim P}(P\oplus Q)=\langle%
+\dim P,\dim I\rangle</span> and
+both varieties are irreducible. Moreover, if a representation <span id="S4.p1.m2" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> degenerates
+to <span id="S4.p1.m3" class="ltx_Math">P\oplus Q</span>, then the quiver Grassmannian <span id="S4.p1.m4" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is also irreducible and of the
+same dimension.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let’s denote by <span id="S4.p2.m1" class="ltx_Math">\Gamma_{\bf d}(1)</span> the subset of the degeneration poset <span id="S4.p2.m2" class="ltx_Math">\Gamma_{\bf d}</span> that consists of representations <span id="S4.p2.m3" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> whose Grassmanian <span id="S4.p2.m4" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is irreducible of dimension <span id="S4.p2.m5" class="ltx_Math">\langle\dim P,\dim I\rangle</span>.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Clearly, the lower ideal of <span id="S4.p3.m1" class="ltx_Math">\Gamma_{\bf d}</span> consisting of representations <span id="S4.p3.m2" class="ltx_Math">M</span> that degenerate to <span id="S4.p3.m3" class="ltx_Math">P\oplus Q</span> is contained in <span id="S4.p3.m4" class="ltx_Math">\Gamma_{\bf d}(1)</span>. It turns out that they often coincide.</p>
+</div>
+<div id="S4.Thmthm1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmthm1.p1.m1" class="ltx_Math">Q</span> be the <span id="S4.Thmthm1.p1.m2" class="ltx_Math">A_{3}</span> quiver of the form <span id="S4.Thmthm1.p1.m3" class="ltx_Math">\bullet\rightarrow\bullet\leftarrow\bullet</span>.
+Let <span id="S4.Thmthm1.p1.m4" class="ltx_Math">P</span> and <span id="S4.Thmthm1.p1.m5" class="ltx_Math">I</span> be the direct sums of all projective (resp., injective) indecomposable
+representations. Then the poset <span id="S4.Thmthm1.p1.m6" class="ltx_Math">\Gamma_{\bf d}(1)</span> is visualized at Figure <a href="#S4.F2" title="Figure 2 ‣ 4. Minimal dimension locus: irreducible Grassmannians ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> below. Its single sink is exactly <span id="S4.Thmthm1.p1.m7" class="ltx_Math">P\oplus Q</span>.</span></p>
+</div>
+</div>
+<figure id="S4.F2" class="ltx_figure"><img src="processed_dataset/2512.09731v1/temp_source/a3_sink_super_cool.png" id="S4.F2.g1" class="ltx_graphics ltx_centering" width="163" height="286" alt=" for ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2. </span><span id="S4.F2.m5" class="ltx_Math">\Gamma_{\bf d}(1)</span> for <span id="S4.F2.m6" class="ltx_Math">Q=\bullet\rightarrow\bullet\leftarrow\bullet</span>,
+<span id="S4.F2.m7" class="ltx_Math">P=P_{1}\oplus P_{2}\oplus P_{3}</span>, <span id="S4.F2.m8" class="ltx_Math">I=I_{1}\oplus I_{2}\oplus I_{3}</span>.
+</figcaption>
+</figure>
+<div id="S4.Thmthm2" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 4.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists a representation <span id="S4.Thmthm2.p1.m1" class="ltx_Math">M^{1}</span> such that for a representation <span id="S4.Thmthm2.p1.m2" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> the quiver Grassmannian <span id="S4.Thmthm2.p1.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is irreducible of
+dimension <span id="S4.Thmthm2.p1.m4" class="ltx_Math">\langle\dim P,\dim I\rangle</span> if and only if <span id="S4.Thmthm2.p1.m5" class="ltx_Math">M</span> degenerates to <span id="S4.Thmthm2.p1.m6" class="ltx_Math">M^{1}</span> (i.e.
+<span id="S4.Thmthm2.p1.m7" class="ltx_Math">M\in\Gamma_{\bf d}(1)</span> if and only if <span id="S4.Thmthm2.p1.m8" class="ltx_Math">M^{0}\leq M\leq M^{1}</span>).
+If, furthermore, no component of either <span id="S4.Thmthm2.p1.m9" class="ltx_Math">\dim P</span> and <span id="S4.Thmthm2.p1.m10" class="ltx_Math">\dim I</span> is zero, <span id="S4.Thmthm2.p1.m11" class="ltx_Math">M^{1}=P\oplus I</span>.</span></p>
+</div>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">The statement is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>, <a href="#bib.bibx13" title="" class="ltx_ref">CFFFR20</a>]</cite> for certain <span id="S4.p4.m1" class="ltx_Math">P</span> and <span id="S4.p4.m2" class="ltx_Math">I</span> for the equioriented type <span id="S4.p4.m3" class="ltx_Math">A</span> quivers.</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">The condition that <span id="S4.p5.m1" class="ltx_Math">\dim P</span> and <span id="S4.p5.m2" class="ltx_Math">\dim I</span> do not have zero components seems to be crucial. In all the cases we checked, where some of the components vanish
+(both for <span id="S4.p5.m3" class="ltx_Math">A_{n}</span> and <span id="S4.p5.m4" class="ltx_Math">D_{n}</span> quivers), <span id="S4.p5.m5" class="ltx_Math">M^{1}</span> was different from <span id="S4.p5.m6" class="ltx_Math">P\oplus I</span> and thus <span id="S4.p5.m7" class="ltx_Math">\{M:\ M^{0}\leq M\leq P\oplus I\}</span> was a strict subgraph of <span id="S4.p5.m8" class="ltx_Math">\Gamma_{\bf d}(1)</span>.</p>
+</div>
+<div id="S4.Thmthm3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmthm3.p1.m1" class="ltx_Math">Q</span> be the <span id="S4.Thmthm3.p1.m2" class="ltx_Math">A_{3}</span> quiver of the form <span id="S4.Thmthm3.p1.m3" class="ltx_Math">\bullet\rightarrow\bullet\leftarrow\bullet</span>.
+Let <span id="S4.Thmthm3.p1.m4" class="ltx_Math">P=P_{1}\oplus P_{2}\oplus P_{3}</span> and <span id="S4.Thmthm3.p1.m5" class="ltx_Math">I=I_{1}\oplus I_{3}</span>. Then <span id="S4.Thmthm3.p1.m6" class="ltx_Math">{\bf d}=(2,3,2)</span>, <span id="S4.Thmthm3.p1.m7" class="ltx_Math">\dim I=(1,0,1)</span>, and <span id="S4.Thmthm3.p1.m8" class="ltx_Math">\dim P=(1,3,1)</span>.</span></p>
+</div>
+<div id="S4.Thmthm3.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">In this case, whatever the representation <span id="S4.Thmthm3.p2.m1" class="ltx_Math">M</span> is, any one-dimensional subspace of <span id="S4.Thmthm3.p2.m2" class="ltx_Math">M_{1}</span> and any one-dimensional subspace of <span id="S4.Thmthm3.p2.m3" class="ltx_Math">M_{3}</span> define a subrepresentation of dimension <span id="S4.Thmthm3.p2.m4" class="ltx_Math">\dim P</span>. Thus, <span id="S4.Thmthm3.p2.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)\cong\mathbb{P}^{1}\times\mathbb{P}^{1}</span> for every <span id="S4.Thmthm3.p2.m6" class="ltx_Math">M</span>. So, <span id="S4.Thmthm3.p2.m7" class="ltx_Math">\Gamma_{\bf d}(1)=\Gamma_{\bf d}</span> and <span id="S4.Thmthm3.p2.m8" class="ltx_Math">M^{1}=2S_{1}\oplus 3S_{2}\oplus 2S_{3}</span> which is not <span id="S4.Thmthm3.p2.m9" class="ltx_Math">P\oplus I</span>.</span></p>
+</div>
+</div>
+<div id="S4.Thmthm4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmthm4.p1.m1" class="ltx_Math">Q</span> be the <span id="S4.Thmthm4.p1.m2" class="ltx_Math">A_{4}</span> quiver of the form <span id="S4.Thmthm4.p1.m3" class="ltx_Math">\bullet\rightarrow\bullet\leftarrow\bullet\leftarrow\bullet</span>.
+Let <span id="S4.Thmthm4.p1.m4" class="ltx_Math">P=\oplus_{i=1}^{4}P_{i}</span> and <span id="S4.Thmthm4.p1.m5" class="ltx_Math">I=I_{1}\oplus I_{3}\oplus I_{4}</span>. Then <span id="S4.Thmthm4.p1.m6" class="ltx_Math">{\bf d}=(2,4,3,3)</span>, <span id="S4.Thmthm4.p1.m7" class="ltx_Math">\dim I=(1,0,1,2)</span>, and <span id="S4.Thmthm4.p1.m8" class="ltx_Math">\dim P=(1,4,2,1)</span>.</span></p>
+</div>
+<div id="S4.Thmthm4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">In this case <span id="S4.Thmthm4.p2.m1" class="ltx_Math">\Gamma_{\bf d}(1)\neq\Gamma_{\bf d}</span>, but
+</span></p>
+<table id="S4.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex1.m1" class="ltx_Math">M^{1}=2U(1,1)+4U(2,2)+U(3,3)+2U(3,4)+U(4,4),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">which differs from</span></p>
+<table id="S4.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex2.m1" class="ltx_Math">P\oplus I=U(1,1)+U(1,2)+U(2,2)+U(2,3)+U(2,4)+U(3,4)+U(4,4).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">In the degenerate examples that we studied, the representation <span id="S4.p6.m1" class="ltx_Math">M^{1}</span> can be constructed from <span id="S4.p6.m2" class="ltx_Math">P\oplus I</span> in the following way. Let’s call a vertex <span id="S4.p6.m3" class="ltx_Math">k</span> <span class="ltx_text ltx_font_italic">deficient</span> if <span id="S4.p6.m4" class="ltx_Math">(\dim P)_{k}=0</span> or <span id="S4.p6.m5" class="ltx_Math">(\dim I)_{k}=0</span>. For every direct summand of <span id="S4.p6.m6" class="ltx_Math">P\oplus I</span>, “split” it at every deficient vertex by vanishing the maps incidental to this vertex. The resulting sum will be <span id="S4.p6.m7" class="ltx_Math">M^{1}</span>.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">In the previous <span id="S4.p7.m1" class="ltx_Math">A_{4}</span> example, the deficient vertex is <span id="S4.p7.m2" class="ltx_Math">2</span>, and we have four summands <span id="S4.p7.m3" class="ltx_Math">M</span> in <span id="S4.p7.m4" class="ltx_Math">P\oplus I</span> such that <span id="S4.p7.m5" class="ltx_Math">M_{2}\neq 0</span>. Let’s split those supported not only at <span id="S4.p7.m6" class="ltx_Math">2</span>:</p>
+<table id="S8.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex3.m1" class="ltx_Math">\displaystyle U(1,2)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex3.m2" class="ltx_Math">\displaystyle\mapsto U(1,1)+U(2,2),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex4.m1" class="ltx_Math">\displaystyle U(2,3)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex4.m2" class="ltx_Math">\displaystyle\mapsto U(2,2)+U(3,3),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex5.m1" class="ltx_Math">\displaystyle U(2,4)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex5.m2" class="ltx_Math">\displaystyle\mapsto U(2,2)+U(3,4).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The resulting sum
+</p>
+<table id="S8.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex6.m1" class="ltx_Math">\displaystyle U(1,1)+(U(1,1)+U(2,2))+U(2,2)+(U(2,2)+U(3,3))+</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S4.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.Ex7.m1" class="ltx_Math">\displaystyle(U(2,2)+U(3,4))+U(3,4)+U(4,4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is exactly <span id="S4.p7.m7" class="ltx_Math">M^{1}</span>.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5. </span>Minimal dimension locus</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">In this section we study the locus of representations <span id="S5.p1.m1" class="ltx_Math">M</span> such that the quiver Grassmannian
+<span id="S5.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is of the expected (minimal possible) dimension
+<span id="S5.p1.m3" class="ltx_Math">\langle\dim P,\dim I\rangle</span>, but may have more than one irreducible component.
+We denote by <span id="S5.p1.m4" class="ltx_Math">\Gamma_{\bf d}(2)</span> the poset of isoclasses of such representations <span id="S5.p1.m5" class="ltx_Math">M</span>.
+Clearly, if <span id="S5.p1.m6" class="ltx_Math">N\in\Gamma_{\bf d}(2)</span> and <span id="S5.p1.m7" class="ltx_Math">M\leq N</span>, then <span id="S5.p1.m8" class="ltx_Math">M\in\Gamma_{\bf d}(2)</span> and hence
+<span id="S5.p1.m9" class="ltx_Math">\Gamma_{\bf d}(2)\subset\Gamma_{\bf d}</span> is a lower ideal, which contains a subideal <span id="S5.p1.m10" class="ltx_Math">\Gamma_{\bf d}(1)</span>.</p>
+</div>
+<div id="S5.Thmthm1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm1.p1.m1" class="ltx_Math">Q</span> be the <span id="S5.Thmthm1.p1.m2" class="ltx_Math">A_{3}</span> quiver of the form <span id="S5.Thmthm1.p1.m3" class="ltx_Math">\bullet\rightarrow\bullet\leftarrow\bullet</span>.
+Let <span id="S5.Thmthm1.p1.m4" class="ltx_Math">P</span> and <span id="S5.Thmthm1.p1.m5" class="ltx_Math">I</span> be the direct sums of all projective (resp., injective) indecomposable
+representations. Then the poset <span id="S5.Thmthm1.p1.m6" class="ltx_Math">\Gamma_{\bf d}(2)</span> is visualized at Figure
+<a href="#S5.F3" title="Figure 3 ‣ 5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> below.</span></p>
+</div>
+</div>
+<figure id="S5.F3" class="ltx_figure"><img src="processed_dataset/2512.09731v1/temp_source/a3_sink_cool.png" id="S5.F3.g1" class="ltx_graphics ltx_centering" width="163" height="313" alt=" for ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 3. </span><span id="S5.F3.m5" class="ltx_Math">\Gamma_{\bf d}(2)</span> for <span id="S5.F3.m6" class="ltx_Math">Q=\bullet\rightarrow\bullet\leftarrow\bullet</span>,
+<span id="S5.F3.m7" class="ltx_Math">P=P_{1}\oplus P_{2}\oplus P_{3}</span>, <span id="S5.F3.m8" class="ltx_Math">I=I_{1}\oplus I_{2}\oplus I_{3}</span>.
+</figcaption>
+</figure>
+<section id="S5.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.1. </span>Type A</h3>
+
+<div id="S5.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S5.SS1.p1.m1" class="ltx_Math">Q</span> be a type <span id="S5.SS1.p1.m2" class="ltx_Math">A</span> quiver with arbitrary orientation. We put forward the following conjecture.</p>
+</div>
+<div id="S5.Thmthm2" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 5.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists a unique representation
+<span id="S5.Thmthm2.p1.m1" class="ltx_Math">M^{2}\in{\rm Rep}_{\bf d}</span> such that <span id="S5.Thmthm2.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is of dimension <span id="S5.Thmthm2.p1.m3" class="ltx_Math">\langle\dim P,\dim I\rangle</span>
+if and only if <span id="S5.Thmthm2.p1.m4" class="ltx_Math">M</span> degenerates to <span id="S5.Thmthm2.p1.m5" class="ltx_Math">M^{2}</span>. If <span id="S5.Thmthm2.p1.m6" class="ltx_Math">M</span> degenerates to <span id="S5.Thmthm2.p1.m7" class="ltx_Math">M^{2}</span>, then <span id="S5.Thmthm2.p1.m8" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>
+is equidimensional.</span></p>
+</div>
+</div>
+<div id="S5.SS1.p2" class="ltx_para">
+<p class="ltx_p">The conjecture above can be rephrased in the following way: the poset <span id="S5.SS1.p2.m1" class="ltx_Math">\Gamma_{\bf d}(2)</span> consists
+of elements <span id="S5.SS1.p2.m2" class="ltx_Math">M</span> such that <span id="S5.SS1.p2.m3" class="ltx_Math">M^{0}\leq M\leq M^{2}</span> for certain element <span id="S5.SS1.p2.m4" class="ltx_Math">M^{2}\in\Gamma_{\bf d}</span>.</p>
+</div>
+<div id="S5.SS1.p3" class="ltx_para">
+<p class="ltx_p">In general we expect that the following conjecture holds true.</p>
+</div>
+<div id="S5.Thmthm3" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 5.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <span id="S5.Thmthm3.p1.m1" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)=\langle\dim P,\dim I\rangle</span>, then <span id="S5.Thmthm3.p1.m2" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)</span>
+is equidimensional.</span></p>
+</div>
+</div>
+<div id="S5.SS1.p4" class="ltx_para">
+<p class="ltx_p">Recall (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx12" title="" class="ltx_ref">CFFFR17</a>]</cite>) that for the equioriented type <span id="S5.SS1.p4.m1" class="ltx_Math">A_{n}</span> quiver and <span id="S5.SS1.p4.m2" class="ltx_Math">P=\bigoplus_{i\in Q_{0}}P_{i}</span>,
+<span id="S5.SS1.p4.m3" class="ltx_Math">I=\bigoplus_{i\in Q_{0}}I_{i}</span>
+the representation <span id="S5.SS1.p4.m4" class="ltx_Math">M^{2}</span> as above does exist
+and is isomorphic to</p>
+<table id="S5.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5.1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E1.m1" class="ltx_Math">M^{2}=P\oplus S\oplus I/S,\quad S=\bigoplus_{i\in Q_{0}}S_{i}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The corresponding
+quiver Grassmannian <span id="S5.SS1.p4.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{2})</span> is equidimensional, of expected dimension <span id="S5.SS1.p4.m6" class="ltx_Math">n(n+1)/2</span> and has
+the Catalan number irreducible components.</p>
+</div>
+<div id="S5.SS1.p5" class="ltx_para">
+<p class="ltx_p">Let us adjust the description (<a href="#S5.E1" title="(5.1) ‣ 5.1. Type A ‣ 5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>) above to the conjectural answer in type <span id="S5.SS1.p5.m1" class="ltx_Math">A</span> for general orientation. We decompose
+<span id="S5.SS1.p5.m2" class="ltx_Math">Q</span> into the union of several equioriented type <span id="S5.SS1.p5.m3" class="ltx_Math">A</span> quivers
+<span id="S5.SS1.p5.m4" class="ltx_Math">Q=Q(1)\cup\dots\cup Q(r)</span> such that for each <span id="S5.SS1.p5.m5" class="ltx_Math">\ell</span> the quivers
+<span id="S5.SS1.p5.m6" class="ltx_Math">Q(\ell)</span> and <span id="S5.SS1.p5.m7" class="ltx_Math">Q(\ell+1)</span> have a unique common vertex <span id="S5.SS1.p5.m8" class="ltx_Math">i(\ell)\in Q_{0}</span>. Let <span id="S5.SS1.p5.m9" class="ltx_Math">M^{2}(\ell)</span> be the deepest representation
+(<a href="#S5.E1" title="(5.1) ‣ 5.1. Type A ‣ 5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>) corresponding to the equioriented quiver <span id="S5.SS1.p5.m10" class="ltx_Math">Q(\ell)</span>. In particular, each <span id="S5.SS1.p5.m11" class="ltx_Math">M^{2}(\ell)</span> contains summands of the form
+<span id="S5.SS1.p5.m12" class="ltx_Math">2S(i)</span> for <span id="S5.SS1.p5.m13" class="ltx_Math">i</span> being the leftmost and the rightmost vertices of <span id="S5.SS1.p5.m14" class="ltx_Math">Q(\ell)</span>.</p>
+</div>
+<div id="S5.SS1.p6" class="ltx_para">
+<p class="ltx_p">We put forward the following conjectures:</p>
+</div>
+<div id="S5.Thmthm4" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 5.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm4.p1.m1" class="ltx_Math">Q</span> be of type <span id="S5.Thmthm4.p1.m2" class="ltx_Math">A</span> with the decomposition <span id="S5.Thmthm4.p1.m3" class="ltx_Math">Q=\cup_{\ell=1}^{r}Q(\ell)</span>, <span id="S5.Thmthm4.p1.m4" class="ltx_Math">Q(\ell)\cap Q(\ell+1)=i_{\ell}</span>. Let also <span id="S5.Thmthm4.p1.m5" class="ltx_Math">P=\bigoplus_{j\in Q_{0}}P_{j}</span> and <span id="S5.Thmthm4.p1.m6" class="ltx_Math">I=\bigoplus_{j\in Q_{0}}I_{j}</span>. Then</span></p>
+<table id="S5.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex1.m1" class="ltx_Math">M^{2}=\bigoplus_{\ell=1}^{r}M^{2}(\ell)-2\bigoplus_{a=1}^{r-1}S_{i_{a}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where the subtraction means that we remove two summands of the form <span id="S5.Thmthm4.p1.m7" class="ltx_Math">S_{i_{a}}</span>, <span id="S5.Thmthm4.p1.m8" class="ltx_Math">1\leq a&lt;r</span> from the decomposition of
+<span id="S5.Thmthm4.p1.m9" class="ltx_Math">\bigoplus_{\ell=1}^{r}M^{2}(\ell)</span> into the direct sum of indecomposable representations.</span></p>
+</div>
+</div>
+<div id="S5.Thmthm5" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 5.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm5.p1.m1" class="ltx_Math">P=\bigoplus_{j}u_{j}^{P}P_{j}</span>, <span id="S5.Thmthm5.p1.m2" class="ltx_Math">I=\bigoplus_{j}u_{j}^{I}I_{j}</span> with all <span id="S5.Thmthm5.p1.m3" class="ltx_Math">u_{j}^{P},u_{j}^{I}\neq 0</span>. Let also <span id="S5.Thmthm5.p1.m4" class="ltx_Math">M^{2}(P,I)</span> be the corresponding deepest representation with minimal dimension Grassmannian. Then</span></p>
+<table id="S5.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex2.m1" class="ltx_Math">M^{2}(P\oplus P^{\prime},I\oplus I)=M^{2}(P,I)\oplus P^{\prime}\oplus I^{%
+\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S5.SS1.p7" class="ltx_para">
+<p class="ltx_p">In the case if some <span id="S5.SS1.p7.m1" class="ltx_Math">u_{j}^{P}</span> or <span id="S5.SS1.p7.m2" class="ltx_Math">u_{j}^{I}</span> are zero, the exact form of <span id="S5.SS1.p7.m3" class="ltx_Math">M^{2}</span> is not entirely clear for us yet. In some cases Conjecture <a href="#S5.Thmthm5" title="Conjecture 5.5. ‣ 5.1. Type A ‣ 5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.5</span></a> still holds, in some it doesn’t.</p>
+</div>
+<div id="S5.SS1.p8" class="ltx_para">
+<p class="ltx_p">We provide some concrete examples below.</p>
+</div>
+</section>
+<section id="S5.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2. </span>Zig-zag case</h3>
+
+<div id="S5.SS2.p1" class="ltx_para">
+<p class="ltx_p">We continue using the notation <span id="S5.SS2.p1.m1" class="ltx_Math">U(i,j)</span> for the indecomposable <span id="S5.SS2.p1.m2" class="ltx_Math">A_{n}</span> module
+supported on vertices between <span id="S5.SS2.p1.m3" class="ltx_Math">i</span> and <span id="S5.SS2.p1.m4" class="ltx_Math">j</span> (for arbitrary orientation).
+In the following Conjecture we consider quiver <span id="S5.SS2.p1.m5" class="ltx_Math">A_{n}</span> with alternating orientation.</p>
+</div>
+<div id="S5.Thmthm6" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 5.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm6.p1.m1" class="ltx_Math">Q</span> be of type <span id="S5.Thmthm6.p1.m2" class="ltx_Math">A_{n}</span> with alternating orientation (a “zig-zag quiver”). Then <span id="S5.Thmthm6.p1.m3" class="ltx_Math">M^{2}</span> is written as
+<span id="S5.Thmthm6.p1.m4" class="ltx_Math">\bigoplus_{i=1}^{n-1}U(i,i+1)\oplus 2\bigoplus_{i\in Q_{0}}S_{i}</span>. The quiver Grassmannian
+<span id="S5.Thmthm6.p1.m5" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{2})</span> has <span id="S5.Thmthm6.p1.m6" class="ltx_Math">2^{n-1}</span> irreducible components each of dimension <span id="S5.Thmthm6.p1.m7" class="ltx_Math">2n-1</span>.</span></p>
+</div>
+</div>
+</section>
+<section id="S5.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.3. </span><span id="S5.SS3.m1" class="ltx_Math">A_{5}</span> example</h3>
+
+<div id="S5.SS3.p1" class="ltx_para">
+<p class="ltx_p">Let us consider an <span id="S5.SS3.p1.m1" class="ltx_Math">n=5</span> example. Let <span id="S5.SS3.p1.m2" class="ltx_Math">Q</span> be as follows:
+<span id="S5.SS3.p1.m3" class="ltx_Math">1\rightarrow 2\leftarrow 3\leftarrow 4\leftarrow 5</span>. Then the representation <span id="S5.SS3.p1.m4" class="ltx_Math">M^{2}</span>
+is given by the following formula:</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS3.p1.m5" class="ltx_Math">M^{2}=2U(1,1)+U(1,2)+2U(2,2)+U(2,3)+U(3,3)+U(2,4)+\\
+U(4,4)+U(2,5)+U(3,5)+U(4,5)+2U(5,5).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We note that the right hand side can be rewritten as</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS3.p1.m6" class="ltx_Math">\Bigl{(}2U(1,1)+U(1,2)+2U(2,2)\Bigr{)}+\Bigl{(}2U(2,2)+U(2,3)+U(3,3)+U(2,4)+\\
+U(4,4)+U(2,5)+U(3,5)+U(4,5)+2U(5,5)\Bigr{)}-2U(2,2),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the sums in brackets correspond to the representations <span id="S5.SS3.p1.m7" class="ltx_Math">M^{2}</span> for the quivers
+<span id="S5.SS3.p1.m8" class="ltx_Math">1\rightarrow 2</span> and <span id="S5.SS3.p1.m9" class="ltx_Math">2\leftarrow 3\leftarrow 4\leftarrow 5</span> (with <span id="S5.SS3.p1.m10" class="ltx_Math">-2U(2,2)</span> coming as gluing at vertex <span id="S5.SS3.p1.m11" class="ltx_Math">2</span>).</p>
+</div>
+</section>
+<section id="S5.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4. </span>Type D</h3>
+
+<div id="S5.SS4.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S5.SS4.p1.m1" class="ltx_Math">Q</span> be the following <span id="S5.SS4.p1.m2" class="ltx_Math">D_{4}</span> quiver</p>
+</div>
+<div id="S5.SS4.p2" class="ltx_para">
+<svg version="1.1" fill="none" height="137.5" stroke="none" width="125" overflow="visible"><g transform="translate(0,137.5) scale(1,-1)"><g transform="translate(127.3,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">1</text></g><g transform="translate(138.37,74.72)"><path d="M 0,0 41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R0)"></path></g><g transform="translate(185.42,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">2</text></g><g transform="translate(196.49,80.25)"><path d="M 0,0 41.51,41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R1)"></path></g><g transform="translate(196.49,63.65)"><path d="M 0,0 41.51,-41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R2)"></path></g><g transform="translate(240.76,124.53)"><text x="0" y="0" transform="scale(1, -1)" fill="black">3</text></g><g transform="translate(240.76,13.84)"><text x="0" y="0" transform="scale(1, -1)" fill="black">4</text></g></g><defs><marker id="ARblack_R0" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R1" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R2" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker></defs></svg>
+</div>
+<div id="S5.SS4.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Computer experiments support the following proposition.</p>
+</div>
+<div id="S5.Thmthm7" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 5.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm7.p1.m1" class="ltx_Math">Q</span> the a quiver with vertices <span id="S5.Thmthm7.p1.m2" class="ltx_Math">1,2,3,4</span> and arrows <span id="S5.Thmthm7.p1.m3" class="ltx_Math">1\to 2</span>, <span id="S5.Thmthm7.p1.m4" class="ltx_Math">2\to 3</span> and <span id="S5.Thmthm7.p1.m5" class="ltx_Math">2\to 4</span>. Let <span id="S5.Thmthm7.p1.m6" class="ltx_Math">P=\bigoplus_{i\in Q_{0}}P_{i}</span>, <span id="S5.Thmthm7.p1.m7" class="ltx_Math">I=\bigoplus_{i\in Q_{0}}I_{i}</span>.
+Then there exist three representations <span id="S5.Thmthm7.p1.m8" class="ltx_Math">M^{2}(1)</span>, <span id="S5.Thmthm7.p1.m9" class="ltx_Math">M^{2}(2)</span>, <span id="S5.Thmthm7.p1.m10" class="ltx_Math">M^{2}(3)</span> in <span id="S5.Thmthm7.p1.m11" class="ltx_Math">{\rm Rep}_{\bf d}</span> such that
+<span id="S5.Thmthm7.p1.m12" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)=\langle\dim P,\dim I\rangle</span> if and only if <span id="S5.Thmthm7.p1.m13" class="ltx_Math">M</span> degenerates to one of
+<span id="S5.Thmthm7.p1.m14" class="ltx_Math">M^{2}(i)</span>, <span id="S5.Thmthm7.p1.m15" class="ltx_Math">i=1,2,3</span>. None of the representations <span id="S5.Thmthm7.p1.m16" class="ltx_Math">M^{2}(1)</span>, <span id="S5.Thmthm7.p1.m17" class="ltx_Math">M^{2}(2)</span>, <span id="S5.Thmthm7.p1.m18" class="ltx_Math">M^{2}(3)</span> degenerate one to another.</span></p>
+</div>
+</div>
+<div id="S5.SS4.p4" class="ltx_para">
+<p class="ltx_p">Let us provide more details. One has the following explicit formulas:</p>
+<table id="S5.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex3.m1" class="ltx_Math">{\bf d}=(5,5,4,4),\ \dim P=(1,2,3,3),\ \langle\dim P,\dim I\rangle=9.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In order to write down the representations <span id="S5.SS4.p4.m1" class="ltx_Math">M^{2}(i)</span> explicitly, we denote by <span id="S5.SS4.p4.m2" class="ltx_Math">V(x_{1},x_{2},x_{3},x_{4})</span>
+the indecomposable <span id="S5.SS4.p4.m3" class="ltx_Math">Q</span> module of dimension <span id="S5.SS4.p4.m4" class="ltx_Math">(x_{1},x_{2},x_{3},x_{4})</span>. Then one has</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS4.p4.m5" class="ltx_Math">M^{2}(1)=2V(1,0,0,0)\oplus V(1,1,0,0)\oplus V(0,1,0,0)\oplus V(1,1,1,0)\oplus%
+\\
+2V(0,0,1,0)\oplus V(0,1,0,1)\oplus 2V(0,0,0,1)\oplus V(1,1,1,1),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS4.p4.m6" class="ltx_Math">M^{2}(2)=2V(1,0,0,0)\oplus V(1,1,0,0)\oplus V(0,1,0,0)\oplus V(0,1,1,0)\oplus%
+\\
+2V(0,0,1,0)\oplus V(1,1,0,1)\oplus 2V(0,0,0,1)\oplus V(1,1,1,1),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS4.p4.m7" class="ltx_Math">M^{2}(3)=2V(1,0,0,0)\oplus V(1,1,0,0)\oplus V(1,1,1,0)\oplus V(0,1,1,0)\oplus%
+\\
+2V(0,0,1,0)\oplus V(1,1,0,1)\oplus V(0,1,0,1)\oplus 2V(0,0,0,1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">All three quiver Grassmannians <span id="S5.SS4.p4.m8" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{2}(i))</span> have <span id="S5.SS4.p4.m9" class="ltx_Math">13</span> irreducible components of dimension <span id="S5.SS4.p4.m10" class="ltx_Math">9</span>.</p>
+</div>
+<div id="S5.SS4.p5" class="ltx_para">
+<p class="ltx_p">Now let us consider the <span id="S5.SS4.p5.m1" class="ltx_Math">D_{4}</span> quiver with all vertices pointing to the central vertex</p>
+</div>
+<div id="S5.SS4.p6" class="ltx_para">
+<svg version="1.1" fill="none" height="137.5" stroke="none" width="125" overflow="visible"><g transform="translate(0,137.5) scale(1,-1)"><g transform="translate(127.3,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">1</text></g><g transform="translate(138.37,74.72)"><path d="M 0,0 41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R3)"></path></g><g transform="translate(185.42,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">2</text></g><g transform="translate(238,121.77)"><path d="M 0,0 -41.51,-41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R4)"></path></g><g transform="translate(238,24.91)"><path d="M 0,0 -41.51,41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R5)"></path></g><g transform="translate(240.76,124.53)"><text x="0" y="0" transform="scale(1, -1)" fill="black">3</text></g><g transform="translate(240.76,16.6)"><text x="0" y="0" transform="scale(1, -1)" fill="black">4</text></g></g><defs><marker id="ARblack_R3" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R4" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R5" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker></defs></svg>
+</div>
+<div id="S5.Thmthm8" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 5.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmthm8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmthm8.p1.m1" class="ltx_Math">Q</span> the a quiver with vertices <span id="S5.Thmthm8.p1.m2" class="ltx_Math">1,2,3,4</span> and arrows <span id="S5.Thmthm8.p1.m3" class="ltx_Math">1\to 2</span>, <span id="S5.Thmthm8.p1.m4" class="ltx_Math">3\to 2</span> and <span id="S5.Thmthm8.p1.m5" class="ltx_Math">4\to 2</span>. Let <span id="S5.Thmthm8.p1.m6" class="ltx_Math">P=\bigoplus_{i\in Q_{0}}P_{i}</span>, <span id="S5.Thmthm8.p1.m7" class="ltx_Math">I=\bigoplus_{i\in Q_{0}}I_{i}</span>.
+Then there exists a unique representations <span id="S5.Thmthm8.p1.m8" class="ltx_Math">M^{2}</span> in <span id="S5.Thmthm8.p1.m9" class="ltx_Math">{\rm Rep}_{\bf d}</span> such that
+<span id="S5.Thmthm8.p1.m10" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)=\langle\dim P,\dim I\rangle</span> if and only if <span id="S5.Thmthm8.p1.m11" class="ltx_Math">M</span> degenerates to <span id="S5.Thmthm8.p1.m12" class="ltx_Math">M^{2}</span>.</span></p>
+</div>
+</div>
+<div id="S5.SS4.p7" class="ltx_para">
+<p class="ltx_p">Let us provide the details in this case.
+One has</p>
+<table id="S5.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex4.m1" class="ltx_Math">{\bf d}=(3,5,3,3),\ \dim P=(1,4,1,1),\ \langle\dim P,\dim I\rangle=7</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.SS4.p7.m1" class="ltx_Math">M^{2}=2V(1,0,0,0)\oplus V(1,1,0,0)\oplus 2V(0,1,0,0)\oplus V(0,1,1,0)\oplus\\
+2V(0,0,1,0)\oplus V(0,1,0,1)\oplus 2V(0,0,0,1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The quiver Grassmannian <span id="S5.SS4.p7.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M^{2})</span> has <span id="S5.SS4.p7.m3" class="ltx_Math">8</span> irreducible components of dimension <span id="S5.SS4.p7.m4" class="ltx_Math">7</span>.</p>
+</div>
+<div id="S5.SS4.p8" class="ltx_para">
+<p class="ltx_p">Finally, let us mention that for <span id="S5.SS4.p8.m1" class="ltx_Math">Q</span> of type <span id="S5.SS4.p8.m2" class="ltx_Math">D_{5}</span> of the form</p>
+</div>
+<div id="S5.SS4.p9" class="ltx_para">
+<svg version="1.1" fill="none" height="137.5" stroke="none" width="125" overflow="visible"><g transform="translate(0,137.5) scale(1,-1)"><g transform="translate(138.37,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">1</text></g><g transform="translate(149.44,74.72)"><path d="M 0,0 41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R6)"></path></g><g transform="translate(196.49,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">2</text></g><g transform="translate(249.07,74.72)"><path d="M 0,0 -41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R7)"></path></g><g transform="translate(254.6,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">3</text></g><g transform="translate(307.18,121.77)"><path d="M 0,0 -41.51,-41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R8)"></path></g><g transform="translate(307.18,24.91)"><path d="M 0,0 -41.51,41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R9)"></path></g><g transform="translate(309.95,124.53)"><text x="0" y="0" transform="scale(1, -1)" fill="black">4</text></g><g transform="translate(309.95,16.6)"><text x="0" y="0" transform="scale(1, -1)" fill="black">5</text></g></g><defs><marker id="ARblack_R6" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R7" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R8" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R9" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker></defs></svg>
+</div>
+<div id="S5.SS4.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p">one also gets three deepest representations <span id="S5.SS4.p10.m1" class="ltx_Math">M^{2}</span> such that the corresponding quiver Grassmannian
+is of the expected (minimal possible) dimension.</p>
+</div>
+</section>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6. </span>The homomorphism dimension criterion</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">The goal of this section is to formulate a criterion for a representation <span id="S6.p1.m1" class="ltx_Math">N</span> to belong to <span id="S6.p1.m2" class="ltx_Math">\Gamma_{\bf d}(2)</span> in terms of dimensions of certain homomorphism spaces.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">We start with the following observation, which has to do with the description of <span id="S6.p2.m1" class="ltx_Math">\Gamma_{\bf d}(1)</span>:</p>
+<ul id="S6.I1" class="ltx_itemize">
+<li id="S6.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">for every indecomposable injective <span id="S6.I1.i1.p1.m1" class="ltx_Math">X=I_{j}</span>, <span id="S6.I1.i1.p1.m2" class="ltx_Math">\dim{\rm Hom}_{Q}(M^{1},X)={\bf d}_{j}</span>,</p>
+</div>
+</li>
+<li id="S6.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S6.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">for every indecomposable non-injective <span id="S6.I1.i2.p1.m1" class="ltx_Math">X</span>, <span id="S6.I1.i2.p1.m2" class="ltx_Math">\dim{\rm Hom}_{Q}(P\oplus I,X)=\dim{\rm Hom}_{Q}(P,X)</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">(the first equality follows from the general fact that
+<span id="S6.p2.m2" class="ltx_Math">\dim{\rm Hom}_{Q}(M,I_{j})={\bf d}_{j}</span> for every <span id="S6.p2.m3" class="ltx_Math">M\in{\rm Rep}_{\bf d}(Q)</span>, and the second holds true
+since there are no homomorphisms from <span id="S6.p2.m4" class="ltx_Math">I</span> to <span id="S6.p2.m5" class="ltx_Math">X</span>).
+Assume that the dimension vectors <span id="S6.p2.m6" class="ltx_Math">\dim P</span> and <span id="S6.p2.m7" class="ltx_Math">\dim I</span> never vanish. In this case we expect (see section <a href="#S4" title="4. Minimal dimension locus: irreducible Grassmannians ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) that <span id="S6.p2.m8" class="ltx_Math">M^{1}=P\oplus Q</span> and hence we can characterize
+<span id="S6.p2.m9" class="ltx_Math">\Gamma_{\bf d}(1)</span> as the set of all representations <span id="S6.p2.m10" class="ltx_Math">M</span> such that, for every non-injective indecomposable representation <span id="S6.p2.m11" class="ltx_Math">X</span>,</p>
+<table id="S6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex1.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M,X)\leq\dim{\rm Hom}_{Q}(P,X).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">It turns out that <span id="S6.p3.m1" class="ltx_Math">M^{2}</span> allows for a similar description.
+</p>
+</div>
+<div id="S6.Thmthm1" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 6.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S6.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S6.Thmthm1.p1.m1" class="ltx_Math">P\oplus I</span> contains every indecomposable projective and every indecomposable injective representation as a summand. Then a representation <span id="S6.Thmthm1.p1.m2" class="ltx_Math">M</span> lies in <span id="S6.Thmthm1.p1.m3" class="ltx_Math">\Gamma_{\bf d}(2)</span> if and only if, for every non-injective indecomposable representation <span id="S6.Thmthm1.p1.m4" class="ltx_Math">X</span>,</span></p>
+<table id="S6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex2.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M,X)\leq\dim{\rm Hom}_{Q}(P,X)+1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S6.Thmthm2" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 6.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S6.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Dually, this can be formulated as: a representation <span id="S6.Thmthm2.p1.m1" class="ltx_Math">M</span> lies in <span id="S6.Thmthm2.p1.m2" class="ltx_Math">\Gamma_{\bf d}(2)</span> if and only if, for every non-projective indecomposable representation <span id="S6.Thmthm2.p1.m3" class="ltx_Math">X</span>,</span></p>
+<table id="S6.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex3.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(X,M)\leq\dim{\rm Hom}_{Q}(X,I)+1/</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">This provides a general way of describing <span id="S6.p4.m1" class="ltx_Math">M^{2}</span> for both <span id="S6.p4.m2" class="ltx_Math">A</span> and <span id="S6.p4.m3" class="ltx_Math">D</span> types.
+For <span id="S6.p4.m4" class="ltx_Math">A</span> type quivers, there exists a representation <span id="S6.p4.m5" class="ltx_Math">M^{2}</span> satisfying, for all indecomposable non-injective representations <span id="S6.p4.m6" class="ltx_Math">X</span>,</p>
+<table id="S6.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex4.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M^{2},X)=\dim{\rm Hom}_{Q}(P,X)+1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For <span id="S6.p4.m7" class="ltx_Math">D</span> type quivers such a representation <span id="S6.p4.m8" class="ltx_Math">M^{2}</span> does not always exist. That’s why in some cases we have three sinks <span id="S6.p4.m9" class="ltx_Math">M^{2}(i)</span> in <span id="S6.p4.m10" class="ltx_Math">\Gamma_{\bf d}(2)</span>. However,</p>
+<table id="S6.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex5.m1" class="ltx_Math">\max_{i}\dim{\rm Hom}_{Q}(M^{2}(i),X)=\dim{\rm Hom}_{Q}(P,X)+1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all indecomposable non-injective <span id="S6.p4.m11" class="ltx_Math">X</span> (assuming the conditions of Conjecture <a href="#S6.Thmthm1" title="Conjecture 6.1. ‣ 6. The homomorphism dimension criterion ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a> are satisfied).
+Note that this perfectly aligns with Conjecture <a href="#S5.Thmthm5" title="Conjecture 5.5. ‣ 5.1. Type A ‣ 5. Minimal dimension locus ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.5</span></a>. Indeed, if the above equation holds, then</p>
+<table id="S6.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex6.m1" class="ltx_Math">\max_{i}\dim{\rm Hom}_{Q}(M^{2}(i)\oplus P^{\prime}\oplus I^{\prime},X)=\dim{%
+\rm Hom}_{Q}(P\oplus P^{\prime},X)+1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">If some of <span id="S6.p5.m1" class="ltx_Math">P_{j}</span> or <span id="S6.p5.m2" class="ltx_Math">I_{j}</span> are missing in <span id="S6.p5.m3" class="ltx_Math">P\oplus I</span>, then Conjecture <a href="#S6.Thmthm1" title="Conjecture 6.1. ‣ 6. The homomorphism dimension criterion ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.1</span></a> sometimes fails.
+For example, let <span id="S6.p5.m4" class="ltx_Math">Q=D_{4}</span> with the arrow orientation illustrated below, <span id="S6.p5.m5" class="ltx_Math">P=P_{1}\oplus P_{3}\oplus P_{4}</span>, <span id="S6.p5.m6" class="ltx_Math">I=I_{1}\oplus I_{2}\oplus I_{3}\oplus I_{4}</span>.
+</p>
+</div>
+<div id="S6.p6" class="ltx_para">
+<svg version="1.1" fill="none" height="137.5" stroke="none" width="125" overflow="visible"><g transform="translate(0,137.5) scale(1,-1)"><g transform="translate(127.3,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">1</text></g><g transform="translate(138.37,74.72)"><path d="M 0,0 41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R10)"></path></g><g transform="translate(185.42,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black">2</text></g><g transform="translate(196.49,80.25)"><path d="M 0,0 41.51,41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R11)"></path></g><g transform="translate(196.49,63.65)"><path d="M 0,0 41.51,-41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R12)"></path></g><g transform="translate(240.76,124.53)"><text x="0" y="0" transform="scale(1, -1)" fill="black">3</text></g><g transform="translate(240.76,13.84)"><text x="0" y="0" transform="scale(1, -1)" fill="black">4</text></g></g><defs><marker id="ARblack_R10" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R11" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R12" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker></defs></svg>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p">Then <span id="S6.p7.m1" class="ltx_Math">\Gamma_{\bf d}(2)</span> has a single sink</p>
+<table id="S8.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S6.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S6.Ex7.m1" class="ltx_Math">\displaystyle M^{2}=</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S6.Ex7.m2" class="ltx_Math">\displaystyle 2V(1,0,0,0)\oplus V(1,1,0,0)\oplus V(0,1,0,0)\oplus V(1,1,1,0)\oplus</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S6.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S6.Ex8.m1" class="ltx_Math">\displaystyle 2V(0,0,1,0)\oplus V(1,1,0,1)\oplus 2V(0,0,0,1),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">such that</p>
+<table id="S6.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex9.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(M^{2},V(0,1,1,1))=4=\dim{\rm Hom}_{Q}(P,V(0,1,1,1))+2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This case has one more peculiarity: the set of representations <span id="S6.p7.m2" class="ltx_Math">N</span> such that <span id="S6.p7.m3" class="ltx_Math">\dim{\rm Hom}_{Q}(N,X)\leq\dim{\rm Hom}_{Q}(P,X)+1</span>, for all non-injective indecomposable <span id="S6.p7.m4" class="ltx_Math">X</span>, has four sinks instead of one or three. At the same time, <span id="S6.p7.m5" class="ltx_Math">M^{1}</span> in this case coincides with <span id="S6.p7.m6" class="ltx_Math">P\oplus I</span>.</p>
+</div>
+<div id="S6.p8" class="ltx_para">
+<p class="ltx_p">On the other hand, if <span id="S6.p8.m1" class="ltx_Math">Q</span> and <span id="S6.p8.m2" class="ltx_Math">I</span> are the same and <span id="S6.p8.m3" class="ltx_Math">P=P_{1}\oplus P_{2}\oplus P_{4}</span>, the conjecture holds.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7. </span>Plücker algebras and line bundles</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">Recall the the notation <span id="S7.p1.m1" class="ltx_Math">a_{i}=\dim P_{i}</span> and the
+standard closed embedding <span id="S7.p1.m2" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)\hookrightarrow\prod_{i\in Q_{0}}\mathrm{Gr}_{a_{i}}(M_%
+{i})</span>. Each Grassmann
+variety admits the Plücker embedding into the projective space <span id="S7.p1.m3" class="ltx_Math">{\mathbb{P}}(\Lambda^{a_{i}})(M_{i})</span>.
+Let <span id="S7.p1.m4" class="ltx_Math">\mathcal{O}_{i}(m)</span> be the line bundle on <span id="S7.p1.m5" class="ltx_Math">\mathrm{Gr}_{a_{i}}(M_{i})</span> obtained as a pullback of <span id="S7.p1.m6" class="ltx_Math">\mathcal{O}(m)</span>
+on <span id="S7.p1.m7" class="ltx_Math">{\mathbb{P}}(\Lambda^{a_{i}}(M_{i}))</span>.
+For <span id="S7.p1.m8" class="ltx_Math">{\bf m}\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}</span> we denote by <span id="S7.p1.m9" class="ltx_Math">\mathcal{O}({\bf m})</span> the exterior tensor product
+<span id="S7.p1.m10" class="ltx_Math">\prod_{i\in Q_{0}}\mathcal{O}_{i}(m_{i})</span>, which is a line bundle on the product of Grassmannians. We use the
+same symbol <span id="S7.p1.m11" class="ltx_Math">\mathcal{O}({\bf m})</span> to denote the restriction to the quiver Grassmannian <span id="S7.p1.m12" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>.</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">Recall the multi-homogeneous ideals <span id="S7.p2.m1" class="ltx_Math">{\mathcal{I}}(M)</span> inside the polynomial ring in Plücker variables
+<span id="S7.p2.m2" class="ltx_Math">\Delta^{(i)}_{J}</span> which defines the reduced scheme structure of the quiver Grassmannians
+<span id="S7.p2.m3" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span>. The multi-graded Plücker algebra admits the decomposition</p>
+<table id="S7.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S7.Ex1.m1" class="ltx_Math">{\rm Pl}(M)={\mathbb{C}}[\Delta_{J}^{(i)}]/{\mathcal{I}}(M)=\bigoplus_{{\bf m}%
+\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}}{\rm Pl}_{\bf m}(M),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the homogeneous component <span id="S7.p2.m4" class="ltx_Math">{\rm Pl}_{\bf m}(M)</span> is spanned by all the monomials of the form</p>
+<table id="S7.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S7.Ex2.m1" class="ltx_Math">\prod_{i\in Q_{0}}\Delta^{(i)}_{J(1)}\dots\Delta^{(i)}_{J(m_{i})},\ J(r)%
+\subset[d_{i}],\ |J(r)|=a_{i}\ (r\in[m_{i}]).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">For example, for <span id="S7.p3.m1" class="ltx_Math">Q</span> being the equioriented type <span id="S7.p3.m2" class="ltx_Math">A</span> quiver the homogeneous components
+<span id="S7.p3.m3" class="ltx_Math">{\rm Pl}_{\bf m}(M^{0})</span>
+are identified with the dual irreducible highest weight <span id="S7.p3.m4" class="ltx_Math">{\mathfrak{sl}}_{n}</span> modules and <span id="S7.p3.m5" class="ltx_Math">{\rm Pl}_{\bf m}(M^{1})</span>
+are identified with dual PBW degenerate representations <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx22" title="" class="ltx_ref">Fe23</a>]</cite>. We put forward the following conjectures.</p>
+</div>
+<div id="S7.Thmthm1" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 7.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S7.Thmthm1.p1.m1" class="ltx_Math">P=\bigoplus_{i\in Q_{0}}</span>, <span id="S7.Thmthm1.p1.m2" class="ltx_Math">I=\bigoplus_{j\in Q^{0}}I_{j}</span>. For any <span id="S7.Thmthm1.p1.m3" class="ltx_Math">M\in{\rm Rep}_{\bf d}</span> and any <span id="S7.Thmthm1.p1.m4" class="ltx_Math">{\bf m}\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}</span> one has the inequality
+<span id="S7.Thmthm1.p1.m5" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M)\geq\dim{\rm Pl}_{\bf m}(M^{0})</span>. The equality
+<span id="S7.Thmthm1.p1.m6" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M)=\dim{\rm Pl}_{\bf m}(M^{0})</span> holds for all <span id="S7.Thmthm1.p1.m7" class="ltx_Math">{\bf m}</span> if and only if
+<span id="S7.Thmthm1.p1.m8" class="ltx_Math">\dim\mathrm{Gr}_{\dim P}(M)=\langle\dim P,\dim I\rangle</span>.</span></p>
+</div>
+</div>
+<div id="S7.Thmthm2" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 7.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Conjecture <a href="#S7.Thmthm1" title="Conjecture 7.1. ‣ 7. Plücker algebras and line bundles ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.1</span></a> does not hold for general <span id="S7.Thmthm2.p1.m1" class="ltx_Math">P</span> and <span id="S7.Thmthm2.p1.m2" class="ltx_Math">I</span> even for <span id="S7.Thmthm2.p1.m3" class="ltx_Math">Q</span> of type <span id="S7.Thmthm2.p1.m4" class="ltx_Math">A</span>.
+More precisely, if one allows arbitrary multiplicities of indecomposable projecive
+and injective modules in the decomposition of <span id="S7.Thmthm2.p1.m5" class="ltx_Math">P</span> and <span id="S7.Thmthm2.p1.m6" class="ltx_Math">I</span>, then the dimensions
+<span id="S7.Thmthm2.p1.m7" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M)</span> may be different from <span id="S7.Thmthm2.p1.m8" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M^{0})</span> even for <span id="S7.Thmthm2.p1.m9" class="ltx_Math">M</span> degenerating
+to <span id="S7.Thmthm2.p1.m10" class="ltx_Math">M^{1}</span>.</span></p>
+</div>
+</div>
+<div id="S7.Thmthm3" class="ltx_theorem ltx_theorem_conj">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 7.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S7.Thmthm3.p1.m1" class="ltx_Math">P=\bigoplus_{i\in Q_{0}}P_{i}</span>, <span id="S7.Thmthm3.p1.m2" class="ltx_Math">I=\bigoplus_{j\in Q^{0}}I_{j}</span>. Then for any <span id="S7.Thmthm3.p1.m3" class="ltx_Math">M</span> such that
+<span id="S7.Thmthm3.p1.m4" class="ltx_Math">\mathrm{Gr}_{\dim P}(M)</span> is of minimal dimension, one has for all <span id="S7.Thmthm3.p1.m5" class="ltx_Math">{\bf m}\in{\mathbb{Z}}_{\geq 0}^{Q_{0}}</span></span></p>
+<table id="S7.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S7.Ex3.m1" class="ltx_Math">\dim H^{0}(\mathrm{Gr}_{\dim P},\mathcal{O}({\bf m}))=\dim{\rm Pl}_{\bf m}(M),%
+\quad H^{&gt;0}(\mathrm{Gr}_{\dim P},\mathcal{O}({\bf m}))=0.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S7.Thmthm4" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 7.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Conjecture <a href="#S7.Thmthm3" title="Conjecture 7.3. ‣ 7. Plücker algebras and line bundles ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.3</span></a> is not expected to hold for general <span id="S7.Thmthm4.p1.m1" class="ltx_Math">P</span> and <span id="S7.Thmthm4.p1.m2" class="ltx_Math">I</span> (although we
+do not have a program computing the dimensions of the cohomology groups). The reason comes
+from Remark <a href="#S7.Thmthm2" title="Remark 7.2. ‣ 7. Plücker algebras and line bundles ‣ PrIncipal quiver Grassmannians: conjectures" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7.2</span></a>: over a flat family the Euler characteristic of <span id="S7.Thmthm4.p1.m3" class="ltx_Math">\mathcal{O}({\bf m})</span>
+is preserved, however the dimensions of the homogeneous components of the Plücker algebra
+vary. This might be an indicator that the higher cohomology groups do not vanish in general.</span></p>
+</div>
+</div>
+<div id="S7.Thmthm5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 7.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S7.Thmthm5.p1.m1" class="ltx_Math">Q</span> be of the form <span id="S7.Thmthm5.p1.m2" class="ltx_Math">1\rightarrow 2\leftarrow 3</span>. Then for <span id="S7.Thmthm5.p1.m3" class="ltx_Math">u_{i}=m_{i}+1</span>:</span></p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S7.Thmthm5.p1.m4" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M^{0})=\frac{1}{12}u_{1}u_{2}u_{3}(3u_{1}u_{2}+3u_{1}u_{3%
+}+3u_{2}u_{3}+2u_{2}^{2}+1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S7.Thmthm6" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 7.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S7.Thmthm6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S7.Thmthm6.p1.m1" class="ltx_Math">Q</span> be of the form</span></p>
+</div>
+<div id="S7.Thmthm6.p2" class="ltx_para">
+<svg version="1.1" fill="none" height="137.5" stroke="none" width="125" overflow="visible"><g transform="translate(0,137.5) scale(1,-1)"><g transform="translate(127.3,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black" font-style="typewriter italic">1</text></g><g transform="translate(138.37,74.72)"><path d="M 0,0 41.51,0" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R13)"></path></g><g transform="translate(185.42,69.19)"><text x="0" y="0" transform="scale(1, -1)" fill="black" font-style="typewriter italic">2</text></g><g transform="translate(238,121.77)"><path d="M 0,0 -41.51,-41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R14)"></path></g><g transform="translate(238,24.91)"><path d="M 0,0 -41.51,41.51" stroke="black" stroke-width="0.4" marker-end="url(#ARblack_R15)"></path></g><g transform="translate(240.76,124.53)"><text x="0" y="0" transform="scale(1, -1)" fill="black" font-style="typewriter italic">3</text></g><g transform="translate(240.76,16.6)"><text x="0" y="0" transform="scale(1, -1)" fill="black" font-style="typewriter italic">4</text></g></g><defs><marker id="ARblack_R13" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R14" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker><marker id="ARblack_R15" markerHeight="12" markerUnits="strokeWidth" markerWidth="20" orient="auto" refX="20" refY="10" viewBox="0 0 20 20"><path d="M 0 0 L 20 10 L 0 20 L 8 9 z" fill="black" stroke="none"></path></marker></defs></svg>
+</div>
+<div id="S7.Thmthm6.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then</span></p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S7.Thmthm6.p3.m1" class="ltx_Math">\dim{\rm Pl}_{\bf m}(M^{0})=\frac{1}{24}u_{1}u_{2}u_{3}u_{4}(3u_{1}u_{2}u_{3}+%
+3u_{1}u_{2}u_{4}+3u_{1}u_{3}u_{4}+3u_{2}u_{3}u_{4}+\\
+u_{2}^{3}+2u_{2}^{2}(u_{1}+u_{3}+u_{4})+2u_{2}+u_{1}+u_{3}+u_{4})</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">(as above, </span><span id="S7.Thmthm6.p3.m2" class="ltx_Math">u_{i}=m_{i}+1</span><span class="ltx_text ltx_font_italic">).</span></p>
+</div>
+</div>
+</section>
+<section id="S8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8. </span>Software</h2>
+
+<div id="S8.p1" class="ltx_para">
+<p class="ltx_p">Suggesting the above conjectures was made possible after extensive computer experiments with the <span class="ltx_text ltx_font_typewriter">quiver-representation</span> library we’ve developed. It’s open source and available on github <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx18" title="" class="ltx_ref">Fed25</a>]</cite>.</p>
+</div>
+<div id="S8.p2" class="ltx_para">
+<p class="ltx_p">The library’s main language is Python 3. It also relies on:</p>
+</div>
+<div id="S8.p3" class="ltx_para">
+<ul id="S8.I1" class="ltx_itemize">
+<li id="S8.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Macaulay 2 <a href="https://macaulay2.com/" title="" class="ltx_ref ltx_href">https://macaulay2.com/</a> to derive algebro-geometric properties of quiver Grassmannians from their equations.</p>
+</div>
+</li>
+<li id="S8.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">GNU Parallel for batch computations.</p>
+</div>
+</li>
+<li id="S8.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Graphviz <a href="https://graphviz.org/" title="" class="ltx_ref ltx_href">https://graphviz.org/</a> for visualization of <span id="S8.I1.i3.p1.m1" class="ltx_Math">\Gamma_{\bf d}</span>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S8.p4" class="ltx_para">
+<p class="ltx_p">The library allows to perform a wide range of module-theoretic computations for quiver representations over the field of complex numbers or over any finite field, including:</p>
+</div>
+<div id="S8.p5" class="ltx_para">
+<ul id="S8.I2" class="ltx_itemize">
+<li id="S8.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Inferring indecomposable simple, projective and injective representations.</p>
+</div>
+</li>
+<li id="S8.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Computing direct sums, kernels and cokernels of morphisms, radicals and socles, projective covers and injective hulls.</p>
+</div>
+</li>
+<li id="S8.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Finding a basis of <span id="S8.I2.i3.p1.m1" class="ltx_Math">{\rm Hom}_{Q}(M,N)</span> for given <span id="S8.I2.i3.p1.m2" class="ltx_Math">M</span> and <span id="S8.I2.i3.p1.m3" class="ltx_Math">N</span>.</p>
+</div>
+</li>
+<li id="S8.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S8.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Enumerating indecomposables of <span id="S8.I2.i4.p1.m1" class="ltx_Math">A_{n}</span> and <span id="S8.I2.i4.p1.m2" class="ltx_Math">D_{n}</span>; creating a representation for a bag of intervals.</p>
+</div>
+</li>
+</ul>
+</div>
+<figure id="S8.F4" class="ltx_figure"><img src="processed_dataset/2512.09731v1/temp_source/a4_sink_missing_I1.png" id="S8.F4.g1" class="ltx_graphics ltx_centering" width="486" height="723" alt=" for ">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4. </span><span id="S8.F4.m5" class="ltx_Math">\Gamma_{\bf d}(2)</span> for <span id="S8.F4.m6" class="ltx_Math">Q=\bullet\rightarrow\bullet\leftarrow\bullet\leftarrow\bullet</span>,
+<span id="S8.F4.m7" class="ltx_Math">P=P_{1}\oplus P_{2}\oplus P_{3}</span>, <span id="S8.F4.m8" class="ltx_Math">I=I_{1}\oplus I_{2}\oplus I_{3}</span>.</figcaption>
+</figure>
+<div id="S8.p6" class="ltx_para">
+<p class="ltx_p">The library also has the full pipeline of checking the hypotheses mentioned in this paper: from enumerating all Plücker and incidence relations for a given quiver Grassmannian to constructing the graph <span id="S8.p6.m1" class="ltx_Math">\Gamma_{\bf d}</span> and to computing dimensions of irreducible components and Hilbert functions with Macaulay 2.
+</p>
+</div>
+<div id="S8.p7" class="ltx_para">
+<p class="ltx_p">Despite the library supports module-theoretic computations over <span id="S8.p7.m1" class="ltx_Math">\mathbb{C}</span>, we advise you to use it with caution. Floating-point computations are unavoidably imprecise; for example, a tiny computational error might make any matrix full-rank, which would lead to incorrect kernels, cokernels, etc.</p>
+</div>
+<div id="S8.p8" class="ltx_para">
+<p class="ltx_p">Computations over finite fields lack this problem. So, in our experiments, the calculation of <span id="S8.p8.m1" class="ltx_Math">\dim{\rm Hom}_{Q}(\cdot,\cdot)</span> was done over <span id="S8.p8.m2" class="ltx_Math">\mathbb{F}_{107}</span>.
+The data needed to assess our hypotheses using the pipeline can be found in the <span class="ltx_text ltx_font_typewriter">examples</span> folder: <a href="https://github.com/st-fedotov/quiver/tree/main/examples" title="" class="ltx_ref ltx_href">https://github.com/st-fedotov/quiver/tree/main/examples</a>.</p>
+</div>
+<div id="S8.p9" class="ltx_para">
+<p class="ltx_p">The pipeline tends to suffer from memory exhaustion due to combinatorial explosion when a quiver contains paths of length <span id="S8.p9.m1" class="ltx_Math">\geqslant 5</span> or if the multiplicities of indecomposable projectives or injectives in <span id="S8.p9.m2" class="ltx_Math">P\oplus I</span> are greater than 1. This can be somewhat relieved by increasing the <span class="ltx_text ltx_font_typewriter">gc_heap_size</span> parameter in the experimental config provided you have enough RAM. Still, the computations might take some time.</p>
+</div>
+<div id="S8.p10" class="ltx_para">
+<p class="ltx_p">The bulk of our experiments were done on a Nebius’ virtual machine with 128 CPU and 512Gb RAM. Depending on the memory requirements, we used between 30 and 120 parallel computational streams.
+Please check the library’s readme for installation guidance and further details.</p>
+</div>
+<div id="S8.p11" class="ltx_para">
+<p class="ltx_p">The library was created with the help of coding agents: GPT-5 in chat mode <a href="https://chatgpt.com/" title="" class="ltx_ref ltx_href">https://chatgpt.com/</a>, Codex <a href="https://chatgpt.com/codex/" title="" class="ltx_ref ltx_href">https://chatgpt.com/codex/</a>, and Claude Code <a href="https://www.claude.com/product/claude-code" title="" class="ltx_ref ltx_href">https://www.claude.com/product/claude-code</a>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+<li id="bib.bibx1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[AdF84]</span>
+<span class="ltx_bibblock">
+S. Abeasis and A. Del Fra, Degenerations for the representations of an equioriented quiver of type <span id="bib.bibx1.m1" class="ltx_Math">A_{m}</span>. <em class="ltx_emph ltx_font_italic">Boll. Un. Mat. Ital. Suppl.</em> (1984), no. 2, 81–172.
+
+</span>
+</li>
+<li id="bib.bibx2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[AdF85]</span>
+<span class="ltx_bibblock">
+S. Abeasis and A. Del Fra, <em class="ltx_emph ltx_font_italic">Degenerations for the representations of quiver of type <span id="bib.bibx2.m1" class="ltx_Math">A_{m}</span></em>, J. Algebra, <span class="ltx_text ltx_font_bold">93</span> (1985), no. 2, 376–412.
+
+</span>
+</li>
+<li id="bib.bibx3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Ar11]</span>
+<span class="ltx_bibblock"> I. Arzhantsev, Flag varieties as equivariant compactifications of <span id="bib.bibx3.m1" class="ltx_Math">\mathbb{G}_{a}^{n}</span>.
+<em class="ltx_emph ltx_font_italic">Proceedings of the AMS</em> <span class="ltx_text ltx_font_bold">139</span> (2011), no. 3, 783–786.
+
+</span>
+</li>
+<li id="bib.bibx4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[ASS06]</span>
+<span class="ltx_bibblock">
+I. Assem, D. Simson, A. Skowronski, <em class="ltx_emph ltx_font_italic">
+Elements of the representation theory of associative algebras. Vol. 1.
+Techniques of representation theory.</em> London Mathematical Society Student Texts, 65. Cambridge University Press, Cambridge, 2006.
+
+</span>
+</li>
+<li id="bib.bibx5" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Bi14]</span>
+<span class="ltx_bibblock">
+A. Bigeni,
+Combinatorial study of Dellac configurations and q-extended normalized median Genocchi numbers. <em class="ltx_emph ltx_font_italic">Electron. J. Combin.</em> <span class="ltx_text ltx_font_bold">21</span> (2014), no. 2, Paper 2.32, 27 pp.
+
+</span>
+</li>
+<li id="bib.bibx6" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Bo96]</span>
+<span class="ltx_bibblock">
+K. Bongartz, On Degenerations and Extensions of Finite Dimensional Modules, Adv. Math.
+121 (1996), 245–287.
+
+</span>
+</li>
+<li id="bib.bibx7" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CB92]</span>
+<span class="ltx_bibblock"> W. Crawley-Boevey, <em class="ltx_emph ltx_font_italic">Lectures on representations of quivers</em>. Preprint 1992. Available at the author’s webpage.
+
+</span>
+</li>
+<li id="bib.bibx8" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CR00]</span>
+<span class="ltx_bibblock">
+P. Caldero and M. Reineke, On the quiver Grassmannian in the acyclic
+case. <em class="ltx_emph ltx_font_italic">J. Pure Appl. Algebra</em> <span class="ltx_text ltx_font_bold">212</span> (2008), no. 11, 2369–2380.
+
+</span>
+</li>
+<li id="bib.bibx9" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CI20]</span>
+<span class="ltx_bibblock">
+G Cerulli Irelli, <em class="ltx_emph ltx_font_italic">Three lectures on quiver Grassmannians</em>, Contemporary Mathematics <span class="ltx_text ltx_font_bold">758</span>, American mathematical Society, 2020.
+
+</span>
+</li>
+<li id="bib.bibx10" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CEFF22]</span>
+<span class="ltx_bibblock">
+G Cerulli Irelli, F. Esposito, X. Fang, G.. Fourier,
+Specialization map for quiver Grassmannians,
+arXiv:2206.10281.
+
+</span>
+</li>
+<li id="bib.bibx11" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CEFR21]</span>
+<span class="ltx_bibblock">
+G Cerulli Irelli, F. Esposito, H. Franzen, M. Reineke, Cellular decomposition and algebraicity of cohomology for quiver Grassmannians.
+<em class="ltx_emph ltx_font_italic">Adv. Math.</em> <span class="ltx_text ltx_font_bold">379</span> (2021), Paper No. 107544, 47 pp.
+
+</span>
+</li>
+<li id="bib.bibx12" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CFFFR17]</span>
+<span class="ltx_bibblock">
+G. Cerulli Irelli, X. Fang, E.  Feigin, G. Fourier, M. Reineke, Linear degeneration of flag varieties. <em class="ltx_emph ltx_font_italic">Math. Z.</em> <span class="ltx_text ltx_font_bold">287</span> (2017), no. 1-2, 615–654.
+
+</span>
+</li>
+<li id="bib.bibx13" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CFFFR20]</span>
+<span class="ltx_bibblock">
+G. Cerulli Irelli, X. Fang, E.  Feigin, G. Fourier, M. Reineke,
+Linear degenerations of flag varieties: partial flags, defining equations, and group actions.
+<em class="ltx_emph ltx_font_italic">Math. Z.</em> <span class="ltx_text ltx_font_bold">296</span> (2020), no. 1-2, 453–477.
+
+</span>
+</li>
+<li id="bib.bibx14" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CFR12]</span>
+<span class="ltx_bibblock"> G. Cerulli Irelli, E.  Feigin, M. Reineke, Quiver Grassmannians and degenerate flag varieties.
+<em class="ltx_emph ltx_font_italic">Algebra &amp; Number Theory</em> <span class="ltx_text ltx_font_bold">6</span> (2012), no. 1, 165–194.
+
+</span>
+</li>
+<li id="bib.bibx15" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CFR13-1]</span>
+<span class="ltx_bibblock"> G. Cerulli Irelli, E. Feigin, M. Reineke, Degenerate flag varieties: moment graphs
+and Schröder numbers, <em class="ltx_emph ltx_font_italic">J. Algebraic Combin.</em> <span class="ltx_text ltx_font_bold">38</span> (2013), no. 1.
+
+</span>
+</li>
+<li id="bib.bibx16" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CFR17]</span>
+<span class="ltx_bibblock"> G. Cerulli Irelli, E.  Feigin, M. Reineke,
+Schubert Quiver Grassmannians.
+<em class="ltx_emph ltx_font_italic">Algebras and Representation Theory</em>, <span class="ltx_text ltx_font_bold">20</span> (2017), no. 1, 147–161.
+
+</span>
+</li>
+<li id="bib.bibx17" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[CL15]</span>
+<span class="ltx_bibblock">
+G. Cerulli Irelli, M. Lanini, Degenerate flag varieties of type A and C are Schubert varieties.
+<em class="ltx_emph ltx_font_italic">Int. Math. Res. Not.</em> (2015), no. 15, 6353–6374.
+
+</span>
+</li>
+<li id="bib.bibx18" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fed25]</span>
+<span class="ltx_bibblock">
+S. Fedotov,
+Quiver representation library, <a href="https://github.com/st-fedotov/quiver" title="" class="ltx_ref ltx_href">https://github.com/st-fedotov/quiver</a>.
+
+</span>
+</li>
+<li id="bib.bibx19" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fe11]</span>
+<span class="ltx_bibblock">
+E. Feigin, Degenerate flag varieties and the median Genocchi numbers.
+<em class="ltx_emph ltx_font_italic">Mathematical Research Letters</em> <span class="ltx_text ltx_font_bold">18</span> (2011), no. 6, 1–16.
+
+</span>
+</li>
+<li id="bib.bibx20" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fe12-1]</span>
+<span class="ltx_bibblock">
+E. Feigin, <span id="bib.bibx20.m1" class="ltx_Math">{\mathbb{G}}_{a}^{M}</span> degeneration of flag varieties.
+<em class="ltx_emph ltx_font_italic">Selecta Mathematica</em> <span class="ltx_text ltx_font_bold">18</span>:3 (2012), 513–537.
+
+</span>
+</li>
+<li id="bib.bibx21" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fe12-2]</span>
+<span class="ltx_bibblock">
+E. Feigin, The median Genocchi numbers, Q-analogues and continued fractions.
+<em class="ltx_emph ltx_font_italic">European Journal of Combinatorics</em> <span class="ltx_text ltx_font_bold">33</span> (2012), 1913–1918.
+
+</span>
+</li>
+<li id="bib.bibx22" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fe23]</span>
+<span class="ltx_bibblock">
+E. Feigin,
+PBW degenerations, quiver Grassmannians, and toric varieties,
+2023, International Congress of Mathematicians (vol. 4), EMS Press, Berlin, p. 2930–2946.
+
+</span>
+</li>
+<li id="bib.bibx23" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[FeFi13]</span>
+<span class="ltx_bibblock">
+E. Feigin, M. Finkelberg,
+Degenerate flag varieties of type A: Frobenius splitting and BWB theorem.
+<em class="ltx_emph ltx_font_italic">Mathematische Zeitschrift</em> <span class="ltx_text ltx_font_bold">275</span> (2013), no. 1–2, 55–77.
+
+</span>
+</li>
+<li id="bib.bibx24" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[FFL11]</span>
+<span class="ltx_bibblock">
+E. Feigin, G. Fourier, P. Littelmann,
+PBW filtration and bases for irreducible modules in type <span id="bib.bibx24.m1" class="ltx_Math">A_{n}</span>.
+<em class="ltx_emph ltx_font_italic">Transform. Groups</em> <span class="ltx_text ltx_font_bold">16</span> (2011), no. 1, 71–89.
+
+</span>
+</li>
+<li id="bib.bibx25" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[FFR17]</span>
+<span class="ltx_bibblock">
+E. Feigin, M. Finkelberg, M. Reineke,
+Degenerate affine Grassmannians and loop quivers.
+<em class="ltx_emph ltx_font_italic">Kyoto J. Math.</em> <span class="ltx_text ltx_font_bold">57</span> (2017), no. 2, 445–474.
+
+</span>
+</li>
+<li id="bib.bibx26" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Fu97]</span>
+<span class="ltx_bibblock"> W. Fulton, <em class="ltx_emph ltx_font_italic">Young tableaux, with applications to representation theory and geometry.</em>
+Cambridge University Press, 1997.
+
+</span>
+</li>
+<li id="bib.bibx27" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[HT99]</span>
+<span class="ltx_bibblock">
+B. Hassett, Yu. Tschinkel, Geometry of equivariant compactifications of <span id="bib.bibx27.m1" class="ltx_Math">\mathbb{G}^{n}_{a}</span>.
+<em class="ltx_emph ltx_font_italic">Int. Math. Res. Notices</em> <span class="ltx_text ltx_font_bold">20</span> (1999), 1211–1230.
+
+</span>
+</li>
+<li id="bib.bibx28" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[LW19]</span>
+<span class="ltx_bibblock">
+O. Lorscheid, T. Weist, Plücker relations for quiver Grassmannians. <em class="ltx_emph ltx_font_italic">Algebr. Represent. Theory</em> <span class="ltx_text ltx_font_bold">22</span> (2019), no. 1, 211–218.
+
+</span>
+</li>
+<li id="bib.bibx29" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Re13]</span>
+<span class="ltx_bibblock">
+M. Reineke, Every projective variety is a quiver Grassmannian. <em class="ltx_emph ltx_font_italic">Algebr. Represent. Theory</em> <span class="ltx_text ltx_font_bold">16</span> (2013), 1313–1314.
+
+</span>
+</li>
+<li id="bib.bibx30" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Ri18]</span>
+<span class="ltx_bibblock">
+C. M. Ringel, Quiver Grassmannians for wild acyclic quivers. <em class="ltx_emph ltx_font_italic">Proc. AMS</em> <span class="ltx_text ltx_font_bold">146</span> (2018), no. 5, 1873–1877.
+
+</span>
+</li>
+<li id="bib.bibx31" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Schi14]</span>
+<span class="ltx_bibblock">
+R. Schiffler, Quiver Representations, CMS Books in Mathematics, Springer-Verlag,
+Switzerland, 2014.
+
+</span>
+</li>
+<li id="bib.bibx32" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[Scho92]</span>
+<span class="ltx_bibblock">
+A. Schofield, General representations of quivers. <em class="ltx_emph ltx_font_italic">Proc. London Math. Soc.</em> <span class="ltx_text ltx_font_bold">65</span> (1992),
+no. 1, 46–64.
+
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:16:20 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

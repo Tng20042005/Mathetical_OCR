@@ -1,0 +1,101 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle N\_{f}(r,D)\leq N\_{f}^{(k\_{0})}(r,D)+S\_{f}\bigl{(}r,\overline{D}). |  |
+
+Combining these together, it gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle T\_{f}(r,\overline{D})\leq N^{(k\_{0})}\_{f}(r,D)+S\_{f}(r,\overline% {D}). |  |
+
+∎
+
+## 5. Holomorphic maps from {\mathbb{C}}^{p} into projective varieties
+
+###### Proposition 5.1.
+
+Let c be a positive integer with c\geq 5n-1, and let
+D\subset\mathbb{P}^{n}(\mathbb{C}) be a generic smooth hypersurface of degree
+d\geq 15(c+2)n^{n}.
+Let f:\mathbb{C}^{p}\to\mathbb{P}^{n}(\mathbb{C}) be a meromorphic,
+algebraically nondegenerate map.
+Then, for jet order k=n and for weighted degrees m\gg d,
+there exist an integer 0\leq\ell\leq m and a global logarithmic jet differential
+
+|  |  |  |
+| --- | --- | --- |
+|  | {\mathcal{P}}\in H^{0}\!\left(\mathbb{P}^{n}(\mathbb{C}),E^{\mathrm{GG}}\_{n,m}% \,T^{\*}\_{\mathbb{P}^{n}(\mathbb{C})}(\log D)\otimes\mathcal{O}\_{\mathbb{P}^{n}% (\mathbb{C})}\big{(}-cm+\ell(5n-2)\big{)}\right) |  |
+
+such that
+{\mathcal{P}}\big{(}j\_{n}(f\_{\vec{a}})\big{)}\not\equiv 0 for almost every \vec{a}\in S\_{p}(1).
+
+###### Proof.
+
+Since f is algebraically nondegenerate, its radial derivative
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{\partial f}{\partial r}(z)=\sum\_{i=1}^{p}\frac{z\_{i}}{\|z\|}\,\frac{% \partial f}{\partial z\_{i}}(z),\qquad z=(z\_{1},\dots,z\_{p})\in\mathbb{C}^{p}% \setminus\{0\}, |  |
+
+does not vanish identically; hence the set
+\bigl{\{}z\in\mathbb{C}^{p}\setminus\{0\}:\tfrac{\partial f}{\partial r}(z)=0%
+\bigr{\}}
+has zero measure in \mathbb{C}^{p}.
+
+By Proposition 2.1 in [11], there exists a nonzero logarithmic jet differential
+
+|  |  |  |
+| --- | --- | --- |
+|  | {\mathcal{P}}\_{s}\in H^{0}\!\left(\mathbb{P}^{n}(\mathbb{C})\times\{s\},E^{% \mathrm{GG}}\_{n,m}\,T^{\*}\_{\mathbb{P}^{n}(\mathbb{C})}(\log D)\otimes\mathcal{% O}\_{\mathbb{P}^{n}(\mathbb{C})}(-cm)\right). |  |
+
+This implies that f^{-1}\!\big{(}\{{\mathcal{P}}\_{s}=0\}\cup D\big{)} has zero measure in \mathbb{C}^{p}.
+Consequently
+f^{-1}\!\big{(}\{{\mathcal{P}}\_{s}=0\}\cup D\big{)}\cup\bigl{\{}\tfrac{%
+\partial f}{\partial r}=0\bigr{\}}
+has zero measure in \mathbb{C}^{p}, and we may choose z\_{0}\in\mathbb{C}^{p}\setminus\{0\} with
+f(z\_{0})\notin\{{\mathcal{P}}\_{s}=0\}\cup D\text{~{}and}\ \frac{\partial f}{%
+\partial r}(z\_{0})\neq 0.
+
+Let \vec{a\_{0}}:=z\_{0}/\|z\_{0}\|\in S^{2p-1}(1) and consider the restriction
+f\_{\vec{a\_{0}}}:\mathbb{C}\to\mathbb{P}^{n}(\mathbb{C})\times\{s\}, f\_{\vec{a\_{0}}}(z)=f(z\vec{a\_{0}}). By the semi-continuity theorem, \mathcal{P}\_{s} extends to a holomorphic family \mathcal{P} of nonzero logarithmic jet differentials parametrized by points of a Zariski open neighborhood U\_{s} of s in S. Following the argument in [11] (p. 668), there exist global slanted vector fields
+v\_{1},\dots,v\_{\ell} (for some 0\leq\ell\leq m) such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \big{(}(v\_{1}\cdots v\_{\ell})\mathcal{P}\big{)}\big{(}j\_{n}(f\_{\vec{a\_{0}}})% \big{)}\not\equiv 0. |  |
+
+Hence
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tilde{\mathcal{P}}\_{s}:=(v\_{1}\cdots v\_{\ell})\,\mathcal{P}\big{|}\_{\mathbb{P% }^{n}(\mathbb{C})\times\{s\}}\in H^{0}\!\left(\mathbb{P}^{n}(\mathbb{C}),E^{% \mathrm{GG}}\_{n,m}T^{\*}\_{\mathbb{P}^{n}(\mathbb{C})}(\log D)\otimes\mathcal{O}% \_{\mathbb{P}^{n}(\mathbb{C})}\!\big{(}-cm+\ell(5n-2)\big{)}\right) |  |
+
+satisfies \tilde{\mathcal{P}}\_{s}\big{(}j\_{n}(f\_{\vec{a\_{0}}})\big{)}\not\equiv 0. Similar with the argument in the proof of the Theorem 1.2, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tilde{\mathcal{P}}\_{s}\big{(}j\_{n}(f\_{\vec{a}})\big{)}\not\equiv 0\quad\text{% for almost every }\vec{a}\in S\_{p}(1). |  |
+
+∎
+
+Proof of Theorem 1.3
+
+###### Proof.
+
+Since
+{\mathcal{P}}\big{(}j\_{k}(f\_{\vec{a}})\big{)}\not\equiv 0 for some \vec{a}\in S\_{p}(1),
+it follows that {\mathcal{P}}\big{(}j\_{k}(f\_{\vec{a}})\big{)}\not\equiv 0 for almost all
+\vec{a}\in S\_{p}(1).
+Choose an \vec{a} with
+f\_{\vec{a}}(\mathbb{C})\not\subset\operatorname{Supp}(D)
+and {\mathcal{P}}\big{(}j\_{k}(f\_{\vec{a}})\big{)}\not\equiv 0.
+Following the proof of Theorem 1.6 in [3], we obtain,
+in the sense of currents,
+
+|  |  |  |
+| --- | --- | --- |
+|  | dd^{c}\log\|P(j\_{k}(f\_{\vec{a}}))\|^{2}\_{h^{-1}}\geq\widetilde{m}\,f\_{\vec{a}}% ^{\*}c\_{1}(A)-m(f\_{\vec{a}}^{\*}D)^{(1)} |  |
+
+where h is a Hermitian metric on A^{\widetilde{m}}.
+Hence, by applying the Green–Jensen formula,
+we obtain

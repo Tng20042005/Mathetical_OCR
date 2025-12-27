@@ -1,0 +1,52 @@
+for some 0<\delta\_{4}\ll 1 to be chosen later,
+then we have \mathbb{P}(G\_{\epsilon})\leq e^{-\epsilon^{-1-\delta\_{1}}}. Further, for any \omega\in F\_{\epsilon}-G\_{\epsilon}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\sup\_{0\leq\tau\leq t}|w\_{k}(\tau)|\lesssim{\epsilon^{-1/2-\delta% \_{1}}}{\left\langle k\right\rangle^{-s}},k\in\mathbb{Z} |  | (5.21) |
+
+thanks to the bootstrap hypothesis (3.13).
+Next, we claim that we can reduce (5.18) to:
+
+For every n, there exists a set E\_{\epsilon,n} with probability measure e^{-\langle n\rangle^{\delta\_{5}}\epsilon^{-1-2\delta\_{1}}} and 0<\delta\_{5}<\theta to be chosen later such that for all \omega\in F\_{\epsilon}-G\_{\epsilon}-E\_{\epsilon,n}, one has
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sup\_{0\leq\tau\leq t}\left|\sum\_{R\_{n}(n\_{1},n\_{2},n\_{3})}w\_{n\_{1}}\overline{% w\_{n\_{2}}}w\_{n\_{3}}e^{-i\tau(n\_{1}^{2}-n\_{2}^{2}+n\_{3}^{2}-n^{2})}\right|% \lesssim\langle n\rangle^{-\theta+\delta\_{5}}\epsilon^{-3/2-3\delta\_{1}}. |  | (5.22) |
+
+Indeed, if (5.22) holds, then for all \omega\in F\_{\epsilon}-G\_{\epsilon}-\bigcup\_{n}E\_{\epsilon,n}, using (5.21), the LHS of (5.18) is bounded by
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sum\_{R\_{k}(k\_{1},k\_{2},k\_{3})}\frac{\epsilon^{-1/2-5% \delta\_{1}}}{|\Omega|\langle k\_{1}\rangle^{s}}\left(\frac{1}{\langle k\_{2}% \rangle^{s}\langle k\_{3}\rangle^{3s}}+\frac{1}{\langle k\_{2}\rangle^{s}\langle k% \_{3}\rangle^{\theta-\delta\_{5}}}+\frac{1}{\langle k\_{3}\rangle^{s}\langle k\_{2% }\rangle^{3s}}+\frac{1}{\langle k\_{3}\rangle^{s}\langle k\_{2}\rangle^{\theta-% \delta\_{5}}}\right) |  | (5.23) |
+|  |  | \displaystyle\lesssim\sum\_{R\_{k}(k\_{1},k\_{2},k\_{3})}\frac{\epsilon^{-1/2-5% \delta\_{1}}}{|\Omega|\langle k\_{1}\rangle^{s}\langle k\_{2}\rangle^{s}\langle k% \_{3}\rangle^{\theta-\delta\_{5}}}+\frac{\epsilon^{-1/2-5\delta\_{1}}}{|\Omega|% \langle k\_{1}\rangle^{s}\langle k\_{3}\rangle^{s}\langle k\_{2}\rangle^{\theta-% \delta\_{5}}}. |  |
+
+Now let E\_{\epsilon}=\bigcup\_{n}E\_{\epsilon,n}\bigcap G\_{\epsilon}. We have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mathbb{P}(E\_{\epsilon})\leq\mathbb{P}(G\_{\epsilon})+\sum\_{n}\mathbb{P}(E\_{% \epsilon,n})\leq e^{-\epsilon^{-1-\delta\_{1}}}+\sum\_{n}e^{-\langle n\rangle^{% \delta\_{5}}\epsilon^{-1-2\delta\_{1}}}\lesssim e^{-\epsilon^{-1-\delta\_{1}}}. |  |
+
+So if (5.22) holds and we take C\_{3}\geq 5, then we reduce (5.18) to showing following two inequalities:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sum\_{R\_{k}(k\_{1},k\_{2},k\_{3})}\frac{1}{|\Omega|\langle k\_{1}\rangle^{s}% \langle k\_{2}\rangle^{s}\langle k\_{3}\rangle^{\theta-\delta\_{5}}}\lesssim% \langle k\rangle^{-s-1/2-\delta\_{3}} |  | (5.24) |
+
+and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \sum\_{R\_{k}(k\_{1},k\_{2},k\_{3})}\frac{1}{|\Omega|\langle k\_{1}\rangle^{s}% \langle k\_{3}\rangle^{s}\langle k\_{2}\rangle^{\theta-\delta\_{5}}}\lesssim% \langle k\rangle^{-s-1/2-\delta\_{3}} |  | (5.25) |
+
+We rewrite LHS of (5.24) as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\sum\_{N\_{1},N\_{2},N\_{3}}\sum\_{S\_{k}(k\_{1},k\_{2},k\_{3})}\frac{1}{|% \Omega|\left\langle k\_{1}\right\rangle^{s}\left\langle k\_{2}\right\rangle^{s}% \langle k\_{3}\rangle^{\theta-\delta\_{5}}}, |  | (5.26) |
+
+where N\_{1},N\_{2},N\_{3} are dyadic numbers and for fixed k, we denote
+
+|  |  |  |
+| --- | --- | --- |
+|  | S\_{k}(k\_{1},k\_{2},k\_{3}):=\{(k\_{1},k\_{2},k\_{3})\in\mathbb{Z}^{3}:k=k\_{1}-k\_{2}% +k\_{3},k\_{2}\neq k\_{1},k\_{3},|k\_{i}|\sim N\_{i},i=1,2,3\}. |  |

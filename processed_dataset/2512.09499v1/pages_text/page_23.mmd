@@ -1,0 +1,71 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\bar{\kappa}\circ N^{\sigma\_{2}};N^{\sigma\_{1}}\_{\sharp}% \mu,\tilde{\nu}\_{n}) | \displaystyle\lesssim\cE\_{p}(\bar{\kappa}\circ N^{\sigma\_{2}};\alpha,\tilde{% \nu}\_{n})+\rho+(\sqrt{d}/\sigma\_{2})^{1/p}\rho^{1/p} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\cE\_{p}(\bar{\kappa}\circ N^{\sigma\_{2}};\alpha,\tilde{% \nu}\_{n})+\rho+(\sqrt{d}/\sigma\_{2})^{1/p}\rho^{1/p} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\sqrt{d}\tau^{\frac{1}{p}}+\rho+(\sqrt{d}/\sigma\_{2})^{1/p}% \rho^{1/p}+\sqrt{d+p}\,\sigma\_{2}. |  |
+
+Tuning \sigma\_{2} gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \cE\_{p}(\bar{\kappa}\circ N^{\sigma\_{2}};N^{\sigma\_{1}}\_{\sharp}\mu,\tilde{\nu% }\_{n})\lesssim\sqrt{d}\tau^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+\rho. |  |
+
+Apply 6 once more, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\tilde{\nu}\_{n}) | \displaystyle\lesssim\sqrt{d}\tau^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+% \rho+\sqrt{d+p}\,\sigma\_{1} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{d}\eps^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+% \rho+\sqrt{d+p}\,\sigma\_{1}+\sqrt{d}\,\|N^{\sigma\_{1}}\_{\sharp}(\mu-\hat{\mu}\_% {n})\|\_{\tv}^{1/p} |  |
+
+Taking expectations and applying 13 yields
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E[\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\tilde{\nu}\_{n})] | \displaystyle\lesssim\sqrt{d}\eps^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+% \rho+\sqrt{d+p}\,\sigma\_{1}+\E[\|N^{\sigma\_{1}}\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_% {\tv}]^{\frac{1}{p}} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{d}\eps^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+% \rho+\sqrt{d+p}\,\sigma\_{1}+\left(\frac{3^{d}(1\lor\sigma^{-d})}{n}\right)^{% \frac{1}{2p}}. |  |
+
+Tuning \sigma\_{1} then gives
+
+|  |  |  |
+| --- | --- | --- |
+|  | \E[\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\tilde{\nu}\_{n})]\lesssim\sqrt{d}% \eps^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+\rho+O\_{p,d}(n^{-\frac{1}{d+2p% }}). |  |
+
+Finally, we note that \Wp(\tilde{\nu}\_{n},\hat{\nu}\_{n})\leq\rho+\sqrt{d}\eps^{1/p} due to the support bound. Thus, 3 gives
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E[\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\nu)] | \displaystyle\leq\E[\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\tilde{\nu}\_{n})+% \Wp(\tilde{\nu}\_{n},\hat{\nu}\_{n})+\Wp(\hat{\nu}\_{n},\nu)] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\E[\cE\_{p}(\bar{\kappa}\circ N^{\sigma};\mu,\tilde{\nu}\_{n})]% +\rho+\sqrt{d}\eps^{\frac{1}{p}}+\E[\Wp(\hat{\nu}\_{n},\nu)] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{d}\eps^{\frac{1}{p}}+\sqrt{d}\rho^{\frac{1}{p+1}}+% \rho+O\_{p,d}(n^{-\frac{1}{d+2p}}), |  |
+
+as desired.
+
+For the null estimator, let \kappa^{\star} be an optimal kernel for the \Wp(\mu,\nu) problem and bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE(\hat{\kappa}\_{\mathrm{null}};\mu,\nu) | \displaystyle=\left[\left(\int\|x\|^{p}\dd\mu(x)\right)^{\frac{1}{p}}-\left(% \iint\|y-x\|^{p}\dd\kappa\_{x}^{\star}(y)\dd\mu(x)\right)^{\frac{1}{p}}\right]\_% {+}+\Wp(\delta\_{0},\nu) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq\left[\left(\iint\|y\|^{p}\dd\kappa\_{x}^{\star}(y)\dd\mu(x)% \right)^{\frac{1}{p}}\right]\_{+}+\Wp(\delta\_{0},\nu) |  | (Minkowski’s inequality) |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\sqrt{d}, |  | (\cY\subseteq[0,1]^{d}) |
+
+as desired.
+
+### D.2 Proof of 4 (Lower Bound)
+
+Since \sqrt{d}\eps^{1/p} and n^{-1/(d\lor 2p)} are less than \sqrt{d}, it suffices to prove a lower bound of \sqrt{d}\eps^{1/p}+d^{1/4}\rho^{1/2}\land\sqrt{d}+n^{-1/(d\lor 2p)}. We inherit the n^{-1/(d\lor 2p)} sampling error term of the lower bound from the Dirac mass construction described in B.2. For the remaining terms, we prove lower bounds

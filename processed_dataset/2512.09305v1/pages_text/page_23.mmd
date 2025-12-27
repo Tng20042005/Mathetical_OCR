@@ -1,0 +1,55 @@
+### 4.3 Exponential-Inverse Gaussian (E-IG) distribution
+
+In this subsection, we will derive the improved estimator of the parameter for Exponential-Inverse Gaussian distribution under the loss function L\_{1}(\cdot) and L\_{2}(\cdot). In this case, we have E(\tau)=m, E(\tau^{-1})=\frac{1}{m}+\frac{1}{n} (see [36]). We get the BAEE of \sigma\_{i} under the loss function L\_{1}(\cdot) is as \delta\_{1i}=c\_{i}S\_{i} with
+
+|  |  |  |
+| --- | --- | --- |
+|  | c\_{i}=\left(\frac{m}{(p\_{i}-1)(p\_{i}-2)\left(\frac{1}{m}+\frac{1}{n}\right)}% \right)^{1/2} |  |
+
+for i=1,2 and for the loss function L\_{2}(\cdot) we have the BAEE of \sigma\_{i} is \delta\_{{2i}}=d\_{i}S\_{i} with
+
+|  |  |  |
+| --- | --- | --- |
+|  | d\_{i}=\frac{1}{(p\_{i}-1)\left(\frac{1}{m}+\frac{1}{n}\right)}. |  |
+
+Estimation of a quantile in a mixture model of exponential distributions is
+considered by [34]. In particular, improved estimators for a quantile of an Exponential-Inverse Gaussian distribution and the multivariate Lomax distribution with unknown location and scale parameters are derived. Now we will applied the result Theorem 1, 4 and 5 for Exponential-Inverse Gaussian distribution to find the improved estimator of the parameter \sigma\_{1} under two scale invariant loss function L\_{1}(\cdot) and L\_{2}(\cdot).
+
+###### Theorem 16.
+
+1. (i)
+
+   Under the loss function L\_{1}(\cdot), we have \varphi\_{11}(W)=(1+W)\left(\frac{m}{(p\_{1}+p\_{2}-2)(p\_{1}+p\_{2}-3)\left(\frac{%
+   1}{m}+\frac{1}{n}\right)}\right)^{\frac{1}{2}}, \varphi\_{21}(W,W\_{1})=\frac{(1+W+p\_{1}W\_{1})m^{1/2}}{\left((p\_{1}+p\_{2}-1)(p\_{%
+   1}+p\_{2}-2)\left(\frac{1}{m}+\frac{1}{n}\right)\right)^{1/2}}. The improved estimator of \sigma\_{1} are obtained as follows
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta^{1}\_{11}(X,S)=\min\left\{\varphi\_{11}(W),c\_{1}\right\}S\_{1} |  |
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta\_{12}^{1}=\begin{cases}\min\left\{\varphi\_{21}(W,W\_{1}),c\_{1}\right\}S\_{% 1},&\ W\_{1}>0\\ c\_{1}S\_{1},&\text{otherwise}\end{cases} |  |
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \delta\_{13}^{1}=\begin{cases}\min\left\{\varphi\_{31}(W,W\_{2}),c\_{1}\right\}S\_{% 1},&\ W\_{2}>0\\ c\_{1}S\_{1},&\text{otherwise}\end{cases} |  | (30) |
+2. (ii)
+
+   For the loss function L\_{2}(\cdot), we have \varphi\_{21}(W)=\frac{(1+W)}{(p\_{1}+p\_{2}-2)\left(\frac{1}{m}+\frac{1}{n}%
+   \right)}, \varphi\_{22}(W,W\_{1})=\frac{(1+W+p\_{1}W\_{1})}{(p\_{1}+p\_{2}-1)\left(\frac{1}{m}%
+   +\frac{1}{n}\right)}, \varphi\_{32}(W,W\_{1})=\frac{(1+W+p\_{2}W\_{2})}{(p\_{1}+p\_{2}-1)(1/m+1/n)}. We have the improved estimator of \sigma\_{1} are as follows
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | \delta^{2}\_{11}(X,S)=\min\left\{\varphi\_{21}(W),d\_{1}\right\}S\_{1} |  |
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \delta\_{12}^{2}=\begin{cases}\min\left\{\varphi\_{22}(W,W\_{1}),d\_{1}\right\}S\_{% 1},&\ W\_{1}>0\\ d\_{1}S\_{1},&\text{otherwise}\end{cases} |  | (31) |
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   |  | \delta\_{13}^{2}=\begin{cases}\min\left\{\varphi\_{32}(W,W\_{2}),d\_{1}\right\}S\_{% 1},&\ W\_{2}>0\\ d\_{1}S\_{1},&\text{otherwise}\end{cases} |  | (32) |
+
+If we use the both information X and Y, analogous result to Theorem 4 can be derived, as described in the following theorem.

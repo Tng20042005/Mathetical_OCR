@@ -1,0 +1,1732 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>1 Introduction</title>
+<!--Generated on Thu Dec 11 22:09:50 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<div id="p1" class="ltx_para ltx_align_center">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="font-size:120%;">Bounds on the Albertson Index for Trees with Given Degree Sequences</span></p>
+</div>
+<div id="p2" class="ltx_para ltx_align_center">
+<p class="ltx_p">Jasem Hamoud<span id="p2.m1" class="ltx_Math">{}^{1}</span>    Duaa Abdullah<span id="p2.m2" class="ltx_Math">{}^{2}</span></p>
+<p class="ltx_p"><span id="p2.m3" class="ltx_Math">{}^{1,2}</span> Physics and Technology School of Applied Mathematics and Informatics</p>
+<p class="ltx_p">Moscow Institute of Physics and Technology, 141701, Moscow region, Russia</p>
+<p class="ltx_p">Email: <span id="p2.m4" class="ltx_Math">{}^{1}</span><span class="ltx_text ltx_font_typewriter">khamud@phystech.edu</span>,
+<span id="p2.m5" class="ltx_Math">{}^{2}</span><span class="ltx_text ltx_font_typewriter">abdulla.d@phystech.edu</span></p>
+</div>
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract</h6>
+<p class="ltx_p">In this paper, we presents novel and sharp bounds on the Albertson index of trees, revealing deep connections between degree sequences and graph irregularity where the Albertson index of Caterpillar tree satisfy</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S0.Ex1.m1" class="ltx_Math">\operatorname{irr}(G)=\left({{d_{n}}-1}\right)^{2}+\left({d_{1}-1}\right)^{2}+%
+\sum\limits_{i=2}^{n-1}{\left({{d_{i}}-1}\right)\left({{d_{i}}-2}\right)}+\sum%
+_{i=1}^{n-1}|d_{i}-d_{i+1}|.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We derive powerful inequalities that precisely characterize the minimum and maximum values of the Albertson index, incorporating intricate dependencies on vertex degrees, edge counts, and the average of elements in degree sequence <span id="m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="m2" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Our results not only improve existing extremal bounds but also uncover striking relationships between the structure of trees and their irregularity measurements. These advances open new avenues for the analysis of graph irregularity and contribute essential tools for the study of degree-based topological indices in combinatorial graph theory.</p>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">AMS Classification 2010:</span> 05C05, 05C12, 05C20, 05C25, 05C35, 05C76, 68R10.</p>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Keywords:</span> Degree sequence, Albertson index, Topological indices, Extremal, Irregularity.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Throughout this paper. Let <span id="S1.p1.m1" class="ltx_Math">G=(V,E)</span> be a simple, connected graph, where <span id="S1.p1.m2" class="ltx_Math">n=|V(G)|</span>, <span id="S1.p1.m3" class="ltx_Math">m=|E(G)|</span>. The study of structural irregularity in graphs has garnered increasing attention in both theoretical and applied contexts, particularly in mathematical chemistry, network analysis, and algorithmic graph theory. A graph is said to be regular if all of its vertices have equal degrees; otherwise, it exhibits some degree of irregularity. Accurately quantifying this irregularity is essential for modeling complex systems and understanding the behavior of real-world networks.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">One of the earliest and most influential measures of graph irregularity is the <em class="ltx_emph ltx_font_italic">Albertson index</em>, introduced in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>, <a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>, and defined for a simple graph <span id="S1.p2.m1" class="ltx_Math">G=(V,E)</span> as:</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">\mathrm{irr}(G)=\sum_{uv\in E(G)}|\deg_{G}(u)-\deg_{G}(v)|,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S1.p2.m2" class="ltx_Math">\deg_{G}(u)</span> denotes the degree of vertex <span id="S1.p2.m3" class="ltx_Math">u</span>. This index captures local disparities between adjacent vertex degrees and has inspired numerous variants and generalizations <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>, <a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. The extremal behavior <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite> of degree irregularities in trees is characterized by trees that either minimize or maximize irregularity indices based on their degree sequences. Greedy trees <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="" class="ltx_ref">7</a>]</cite> typically minimize irregularity measures like the <span id="S1.p2.m4" class="ltx_Math">\sigma</span>-irregularity by distributing degrees evenly, whereas adopting or similarly structured extremal trees maximize irregularity by creating larger degree differences between adjacent vertices. Among <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>, <a href="#bib.bib9" title="" class="ltx_ref">9</a>, <a href="#bib.bib15" title="" class="ltx_ref">15</a>]</cite> provides a comprehensive overview of spectral graph theory, including how irregularity affects eigenvalues like <span id="S1.p2.m5" class="ltx_Math">\lambda</span> where <span id="S1.p2.m6" class="ltx_Math">\lambda</span> considered as the spectral radius or algebraic connectivity and their role in network properties. In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite> covers extremal graph theory and discusses how irregularity influences graph properties like degree distributions and connectivity.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Two of the earliest established topological graph indices are the first and second Zagreb indices, introduced in 1972 by Gutman and Trinajstic <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="" class="ltx_ref">11</a>]</cite>. These indices are frequently cited because of their applications in QSAR and QSPR studies. Beyond general graphs, a growing body of literature has focused on trees with constrained degree sequences. Studies by Molloy and Reed <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="" class="ltx_ref">13</a>]</cite> and Broutin and Marckert <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="" class="ltx_ref">5</a>]</cite> explored their asymptotic behavior, while Zhang et al. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib18" title="" class="ltx_ref">18</a>]</cite> investigated realizability and enumeration under degree constraints. These results have proven instrumental in analyzing extremal irregularity measures in structured tree families.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Among such families, <em class="ltx_emph ltx_font_italic">caterpillar trees</em>—characterized by a linear backbone with attached pendant vertices—have emerged as key models in chemical graph theory <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="" class="ltx_ref">17</a>]</cite>. Their tractable structure allows the derivation of explicit analytical expressions. While prior work <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="" class="ltx_ref">8</a>, <a href="#bib.bib16" title="" class="ltx_ref">16</a>]</cite> has examined irregularity bounds in these trees, closed-form expressions for both the Albertson and Sigma indices remain scarce.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">The aim of this paper is to establish new bounds, inequalities, and refined estimates for the Albertson index of trees in terms of their order, size, and degree sequences. It focuses on deriving minimum and maximum values as well as lower and upper bounds for the Albertson index, often presenting these results through propositions, lemmas, theorems, and corollaries that relate the index to structural parameters like vertex degrees, maximum and minimum degrees, and combinatorial expressions.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">This paper is organized as follows. Through Section <a href="#S3" title="3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, we explore bounds on the minimum Albertson index, <span id="S1.p6.m1" class="ltx_Math">\operatorname{irr}_{\min}</span>, for a tree <span id="S1.p6.m2" class="ltx_Math">T</span> of order <span id="S1.p6.m3" class="ltx_Math">n</span> with degree sequence <span id="S1.p6.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>, where the degrees are ordered such that <span id="S1.p6.m5" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\cdots\geqslant d_{1}</span>. In Section <a href="#S5" title="5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>, we presented the upper bounds of the maximum value of Albertson index by considering the value of Albertson index. Section <a href="#S5" title="5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> provide a study of the effect bounds on Albertson index.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Preliminaries</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">In this section, we review the most important basic concepts that we will use in establishing this research. Yang J, Deng H., M., <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib19" title="" class="ltx_ref">19</a>]</cite> provide <span id="S2.p1.m1" class="ltx_Math">1\leq p\leq n-3</span>. Then: <span id="S2.p1.m2" class="ltx_Math">\Delta(G)=n-1</span>. Through <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite> consider For any connected simple graph <span id="S2.p1.m3" class="ltx_Math">G</span> has not satisfied with the null graphs and path graphs, the Albertson index satisfy <span id="S2.p1.m4" class="ltx_Math">\operatorname{irr}(G^{*})=\operatorname{irr}(G)+2</span>. For Caterpillar tree <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite> with path vertices with degrees <span id="S2.p1.m5" class="ltx_Math">d_{1},d_{2},\dots,d_{n}</span>, we have:</p>
+<table id="S2.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.E1.m1" class="ltx_Math">~{}\operatorname{irr}(G)=\left({{d_{n}}-1}\right)^{2}+\left({d_{1}-1}\right)^{%
+2}+\sum\limits_{i=2}^{n-1}{\left({{d_{i}}-1}\right)\left({{d_{i}}-2}\right)}+%
+\sum_{i=1}^{n-1}|d_{i}-d_{i+1}|.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">According to (<a href="#S2.E1" title="(1) ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), we consider the Albertson index had given by Proposition <a href="#S2.Thmproposition1" title="Proposition 2.1 ([10]). ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1</span></a>, where the graph <span id="S2.p1.m6" class="ltx_Math">G</span> be a regular graph.</p>
+</div>
+<div id="S2.Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 2.1</span></span><span class="ltx_text ltx_font_bold"> </span>(<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S2.Thmproposition1.p1.m1" class="ltx_Math">G</span> be a simple graph with vertices set <span id="S2.Thmproposition1.p1.m2" class="ltx_Math">V(G)=\{v_{1},v_{2},\dots,v_{n}\}</span>. Then, the Albertson index satisfy</span></p>
+<table id="S2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.E2.m1" class="ltx_Math">~{}\operatorname{irr}(G)=\sum_{\{u,v\}\subseteq V(G)}|\deg_{G}(u)-\deg_{G}(v)|%
+,\quad\operatorname{irr}(G)=n\sum_{i=1}^{n}\deg_{G}(v_{i})^{2}-4m^{2}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">By computing constraints on all degree sequences of <span id="S2.p2.m1" class="ltx_Math">n</span>-vertex graphs, the degree sequence that maximizes in (<a href="#S2.E3" title="(3) ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) by considering (<a href="#S2.E2" title="(2) ‣ Proposition 2.1 ([10]). ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) this bound corresponds to a graph <span id="S2.p2.m2" class="ltx_Math">G</span> with a maximum irregularity. Using variance, Mandal et al. in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="" class="ltx_ref">14</a>]</cite> showed:</p>
+<table id="S2.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.E3.m1" class="ltx_Math">~{}\operatorname{irr}(G)\leq\sqrt{m\left(\sum_{i=1}^{n}d_{i}^{2}\right)-4m^{2}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S2.p2.m3" class="ltx_Math">m</span> is the number of edges.
+Let <span id="S2.p2.m4" class="ltx_Math">T</span> be a tree with vertices set <span id="S2.p2.m5" class="ltx_Math">V(T)=\{v_{0},v_{1},\dots,v_{n}\}</span> where the degree of center vertex <span id="S2.p2.m6" class="ltx_Math">v_{0}</span> satisfy <span id="S2.p2.m7" class="ltx_Math">\deg_{T}(v_{0})=\deg_{T}(v_{i})_{i&gt;0}+1</span> as we show that by Figure <a href="#S2.F1" title="Figure 1 ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>. Then, the estimated Albertson index: 228 as we show that.</p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><span class="ltx_ERROR ltx_centering undefined">{tikzpicture}</span>
+<p class="ltx_p ltx_align_center">[scale=2.2]
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (8.5,5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (9.5,5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (10.5,4.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (8.5,4.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (10.5,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (9.5,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (10,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,4.5)– (9,4);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (8.228044041028733,5.504018652942894);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (7.998355909222116,5.216908488184627);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (8,5.5);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (8,5);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (8.5,5.5);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,5)– (8.07143849661513,4.80451388789548);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (8.415970694325054,3.7500365555105732);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (8.426411063952628,3.8753209910414537);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (8.426411063952628,3.6143117503521203);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (8.5,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (8.729181783152258,3.4733667603798803);
+<span class="ltx_ERROR undefined">\draw</span>(9,4)– (9,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (9,3);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (9.152016753068985,3.0035501271390803);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (9.261640634158505,3.0192106815804403);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (9.392145254503173,3.008770311952867);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (8.8701267731245,2.993109757511507);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,3.5)– (9.5,3);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (10.25869593359177,3.008770311952867);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (9.62183338630979,3.0035501271390803);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (9.726237082585524,3.008770311952867);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (9.851521518116407,2.9983299423252934);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (10,3);
+<span class="ltx_ERROR undefined">\draw</span>(10,3.5)– (10.122971128433315,3.008770311952867);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (10.655429979439564,3.029651051208013);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (10.8381364479221,3.087073084159666);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (10.942540144197833,3.1914767804353996);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (10.984301622708127,3.337641955221426);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (11,3.5);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,3.5)– (10.5,3);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (10.702411642763643,4.997660726005587);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (11,5);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (10.989521807521912,4.783633148640334);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (10.989521807521912,4.345137624282254);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (11,4);
+<span class="ltx_ERROR undefined">\draw</span>(10.5,4.5)– (10.728512566832576,4.00582561138612);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9.183337861951705,5.514459022570467);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9.329503036737734,5.504018652942894);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9.5,5.5);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9.726237082585524,5.52489939219804);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9.983934368306597,5.536462408713421);
+<span class="ltx_ERROR undefined">\draw</span>(9.5,5)– (9,5.5);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (8.02445683329105,4.611367049785374);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (7.9722549851531825,4.230293558378947);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (7.9722549851531825,4.386899102792547);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (8,4);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (8.316787182863107,3.99016505694476);
+<span class="ltx_ERROR undefined">\draw</span>(8.5,4.5)– (8.5,4);
+<span class="ltx_text" style="font-size:70%;">
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.5,4.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.5,5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.5,5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.5,4.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.5,4.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.5,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.5,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9,4) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.228044041028733,5.504018652942894) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (7.998355909222116,5.216908488184627) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8,5.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8,5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.5,5.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.07143849661513,4.80451388789548) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.415970694325054,3.7500365555105732) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.426411063952628,3.8753209910414537) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.426411063952628,3.6143117503521203) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.5,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.729181783152258,3.4733667603798803) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9,3) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.152016753068985,3.0035501271390803) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.261640634158505,3.0192106815804403) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.392145254503173,3.008770311952867) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.8701267731245,2.993109757511507) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.5,3) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.25869593359177,3.008770311952867) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.62183338630979,3.0035501271390803) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.726237082585524,3.008770311952867) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.851521518116407,2.9983299423252934) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10,3) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.122971128433315,3.008770311952867) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.655429979439564,3.029651051208013) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.8381364479221,3.087073084159666) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.942540144197833,3.1914767804353996) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.984301622708127,3.337641955221426) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (11,3.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.5,3) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.702411642763643,4.997660726005587) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (11,5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.989521807521912,4.783633148640334) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.989521807521912,4.345137624282254) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (11,4) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (10.728512566832576,4.00582561138612) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.183337861951705,5.514459022570467) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.329503036737734,5.504018652942894) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.5,5.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.726237082585524,5.52489939219804) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9.983934368306597,5.536462408713421) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (9,5.5) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.02445683329105,4.611367049785374) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (7.9722549851531825,4.230293558378947) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (7.9722549851531825,4.386899102792547) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8,4) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.316787182863107,3.99016505694476) circle (1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill=black] (8.5,4) circle (1.5pt);
+</span></p>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Star tree with determine condition</figcaption>
+</figure>
+<div id="S2.Thmtheorem1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 2.1</span></span><span class="ltx_text ltx_font_bold"> </span>(<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="" class="ltx_ref">12</a>]</cite>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let be <span id="S2.Thmtheorem1.p1.m1" class="ltx_Math">T</span> tree of order <span id="S2.Thmtheorem1.p1.m2" class="ltx_Math">n\geqslant 5</span>, a degree sequence <span id="S2.Thmtheorem1.p1.m3" class="ltx_Math">d=(d_{1},d_{2},d_{3},d_{4},d_{5})</span> where <span id="S2.Thmtheorem1.p1.m4" class="ltx_Math">d_{5}\geqslant d_{4}\geqslant d_{3}\geqslant d_{2}\geqslant d_{1}</span>, then Albertson index among tree <span id="S2.Thmtheorem1.p1.m5" class="ltx_Math">T</span> is:</span></p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex3.m1" class="ltx_Math">\operatorname{irr}(T)=d_{1}^{2}+d_{n}^{2}+\sum_{i=2}^{n-1}\lvert d_{i}-d_{i+1}%
+\rvert+\sum_{i=2}^{4}(d_{i}+2)(d_{i}-1)-2.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#S2.Thmtheorem2" title="Theorem 2.2 ([10]). ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2</span></a> gives an inequality that restricts the spread of degree differences in a connected nonregular graph, using the minimum degree <span id="S2.p3.m1" class="ltx_Math">\delta</span> and the maximum degree <span id="S2.p3.m2" class="ltx_Math">\Delta</span>.</p>
+</div>
+<div id="S2.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2.2</span></span><span class="ltx_text ltx_font_bold"> </span>(<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib10" title="" class="ltx_ref">10</a>]</cite>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S2.Thmtheorem2.p1.m1" class="ltx_Math">G</span> be a connected nonregular graph. Then, the Albertson index satisfy</span></p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex4.m1" class="ltx_Math">\sum_{uv\in E(G)}(\Delta-\delta)|d_{G}(u)-d_{G}(v)|=(\Delta-\delta)\mathrm{irr%
+}(G).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Statement of Problem</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">This work focuses on establishing new bounds and inequalities for the Albertson index <span id="S2.SS1.p1.m1" class="ltx_Math">\operatorname{irr}(T)</span> of trees <span id="S2.SS1.p1.m2" class="ltx_Math">T</span> of order <span id="S2.SS1.p1.m3" class="ltx_Math">n</span>, characterized by their degree sequences <span id="S2.SS1.p1.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>. The Albertson index, a topological graph index measuring the irregularity of a graph, plays a significant role in extremal graph theory and its applications.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">We investigate both the minimum and maximum values of <span id="S2.SS1.p2.m1" class="ltx_Math">\operatorname{irr}(T)</span> for such trees, aiming to improve existing estimates and to describe extremal structures that achieve these bounds. Specifically, we study:</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Lower bounds on the minimum Albertson index <span id="S2.I1.i1.p1.m1" class="ltx_Math">\operatorname{irr}_{\min}</span> involving the maximum degree <span id="S2.I1.i1.p1.m2" class="ltx_Math">\Delta</span> and sums of degree powers (Propositions <a href="#S3.Thmproposition1" title="Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>, <a href="#S3.Thmproposition2" title="Proposition 3.2. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a>, <a href="#S3.Thmproposition3" title="Proposition 3.3. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>).</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Upper and lower bounds on the maximum Albertson index <span id="S2.I1.i2.p1.m1" class="ltx_Math">\operatorname{irr}_{\max}</span>, including conditions depending on the degree sequence and maximum vertex degree (Propositions <a href="#S4.Thmproposition1" title="Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>, Lemma <a href="#S4.Thmtheorem1" title="Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>).</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Relationships between the minimum and maximum Albertson index values and their differences (Proposition <a href="#S4.Thmproposition2" title="Proposition 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>).</p>
+</div>
+</li>
+<li id="S2.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">New inequalities involving the Albertson index, vertex degrees, and other graph invariants expressed in Theorems <a href="#S5.Thmtheorem1" title="Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a> to <a href="#S5.Thmtheorem4" title="Theorem 5.4. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.4</span></a> and associated corollaries, which provide explicit algebraic lower and upper bounds on <span id="S2.I1.i4.p1.m1" class="ltx_Math">\operatorname{irr}(T)</span>.</p>
+</div>
+</li>
+<li id="S2.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Special cases and expressions for degree sequences with ordering <span id="S2.I1.i5.p1.m1" class="ltx_Math">d_{n}\geq d_{n-1}\geq\dots\geq d_{1}</span>, as well as asymptotic and trigonometric forms related to the index.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">The main goal is to contribute sharper estimates for <span id="S2.SS1.p4.m1" class="ltx_Math">\operatorname{irr}(T)</span> in terms of vertex degree parameters and to clarify how these bounds vary with structural properties of the tree, thereby enriching the theory of graph irregularity and its applications in network analysis.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Bounds on The Minimum Value of Albertson Index</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The study of irregularity measures in graphs provides valuable insights into their structural properties and embeddings. Among these, the Albertson index, which quantifies the minimum total imbalance across all possible planar embeddings of a graph, is particularly significant for understanding the combinatorial and geometric constraints of trees. In this section, we explore bounds on the minimum Albertson index, <span id="S3.p1.m1" class="ltx_Math">\operatorname{irr}_{\min}</span>, for a tree <span id="S3.p1.m2" class="ltx_Math">T</span> of order <span id="S3.p1.m3" class="ltx_Math">n</span> with degree sequence <span id="S3.p1.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>, where the degrees are ordered such that <span id="S3.p1.m5" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\cdots\geqslant d_{1}</span>. The maximum degree of the tree is denoted by <span id="S3.p1.m6" class="ltx_Math">\Delta=d_{n}</span>.
+</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">We present two key propositions that establish bounds on <span id="S3.p2.m1" class="ltx_Math">\operatorname{irr}_{\min}</span> in terms of the degree sequence. Proposition <a href="#S3.Thmproposition1" title="Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a> provides a normalized bound, demonstrating that the minimum Albertson index scales relative to <span id="S3.p2.m2" class="ltx_Math">\Delta(\Delta-1)^{2}</span>, yielding a value strictly between 0 and 1. Proposition <a href="#S3.Thmproposition2" title="Proposition 3.2. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a> offers a lower bound for <span id="S3.p2.m3" class="ltx_Math">\operatorname{irr}_{\min}</span>, expressing it in relation to the sum of squared degrees and specific terms involving the smallest and largest degrees in the sequence. Together, these propositions deepen our understanding of the interplay between a tree’s degree distribution and its embedding irregularity, paving the way for further exploration of graph-theoretic properties in combinatorial settings.</p>
+</div>
+<div id="S3.Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmproposition1.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S3.Thmproposition1.p1.m2" class="ltx_Math">n</span> with degree sequence <span id="S3.Thmproposition1.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>. Then the minimum value of the Albertson index satisfies</span></p>
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E4.m1" class="ltx_Math">~{}0&lt;\frac{2\operatorname{irr}_{\min}}{\Delta(\Delta-1)^{2}}&lt;1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Suppose the degree sequence <span id="S3.p3.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> is ordered such that <span id="S3.p3.m2" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Then, clearly <span id="S3.p3.m3" class="ltx_Math">\Delta=d_{n}</span> and <span id="S3.p3.m4" class="ltx_Math">\operatorname{irr}_{\min}&gt;0</span>. Thus,</p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E5.m1" class="ltx_Math">~{}\sqrt{\frac{n\Delta}{2}}&lt;\operatorname{irr}_{\min}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore,</p>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E6.m1" class="ltx_Math">~{}\operatorname{irr}_{\min}&lt;nd_{1}+\sum_{i=1,2,4}(d_{i}+2)(d_{i}-1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Note that since the degree sequence is increasing, inequality (<a href="#S3.E6" title="(6) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) holds for the two fundamental parameters <span id="S3.p3.m5" class="ltx_Math">n</span> and <span id="S3.p3.m6" class="ltx_Math">\Delta</span>. Therefore, when taking the difference between them, relation (<a href="#S3.E7" title="(7) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) is satisfied by considering relation (<a href="#S3.E5" title="(5) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>). Thus,</p>
+<table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E7.m1" class="ltx_Math">~{}3d_{n}^{2}-\frac{\Delta(\Delta-1)^{2}}{n}\leqslant 2\operatorname{irr}_{%
+\min}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From (<a href="#S3.E5" title="(5) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) and (<a href="#S3.E7" title="(7) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>), we conclude that (<a href="#S3.E4" title="(4) ‣ Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) holds.
+∎</p>
+</div>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Proposition <a href="#S3.Thmproposition2" title="Proposition 3.2. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a> holds for trees where the Albertson index is significantly larger than <span id="S3.p4.m1" class="ltx_Math">\sum d_{i}^{2},</span> possibly trees with high maximum degrees or specific structures.</p>
+</div>
+<div id="S3.Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmproposition2.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S3.Thmproposition2.p1.m2" class="ltx_Math">n</span> with degree sequence <span id="S3.Thmproposition2.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>. Then the minimum value of the Albertson index satisfies</span></p>
+<table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E8.m1" class="ltx_Math">~{}\operatorname{irr}_{\min}-\left(\sum_{i=1}^{n}d_{i}^{2}+2d_{1}+d_{2}-3d_{3}%
++2(d_{n-1}+d_{n})\right)\geqslant\frac{\Delta}{4}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p5.m1" class="ltx_Math">T</span> be a tree of order <span id="S3.p5.m2" class="ltx_Math">n</span> with degree sequence <span id="S3.p5.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> ordered such that <span id="S3.p5.m4" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Then</p>
+<table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E9.m1" class="ltx_Math">~{}\operatorname{irr}_{\min}\geqslant\sum_{i=1}^{n}d_{i}^{2}+c,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S3.p5.m5" class="ltx_Math">c</span> is a correction term depending on the degrees.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">For the degree sequence in non-increasing order <span id="S3.p6.m1" class="ltx_Math">\mathscr{D}=(\Delta,1,1,\dots,1)</span>, we have</p>
+<table id="S3.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex5.m1" class="ltx_Math">\sum_{i=1}^{n}d_{i}^{2}=\Delta^{2}+\Delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">Also,</p>
+<table id="S3.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E10.m1" class="ltx_Math">~{}\lambda=\sum_{i=1}^{n}d_{i}^{2}+2d_{1}+d_{2}-3d_{3}+2(d_{n-1}+d_{n})%
+\leqslant 4\Delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Since relation (<a href="#S3.E10" title="(10) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a>) involves the degree sequence with the terms <span id="S3.p8.m1" class="ltx_Math">2d_{1}+d_{2}-3d_{3}</span> and twice the sum of the last two degrees <span id="S3.p8.m2" class="ltx_Math">2(d_{n-1}+d_{n})</span>, we note that it is necessary that</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex6.m1" class="ltx_Math">2(d_{n-1}+d_{n})&gt;2d_{1}+d_{2}-3d_{3}\quad\text{and}\quad d_{n-1}+d_{n}&gt;\Delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">to satisfy the relation</p>
+<table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E11.m1" class="ltx_Math">~{}\frac{\operatorname{irr}_{\min}}{2d_{1}+d_{2}-3d_{3}+2(d_{n-1}+d_{n})}&lt;d_{n}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">Thus, from (<a href="#S3.E9" title="(9) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>), (<a href="#S3.E10" title="(10) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a>), and (<a href="#S3.E11" title="(11) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>), inequality (<a href="#S3.E8" title="(8) ‣ Proposition 3.2. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>) holds.
+∎</p>
+</div>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p10.m1" class="ltx_Math">\alpha=(d_{1}+d_{2})/2</span> and <span id="S3.p10.m2" class="ltx_Math">\beta=(d_{n-1}+d_{n})/2</span>,</p>
+</div>
+<div id="S3.Thmproposition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmproposition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmproposition3.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S3.Thmproposition3.p1.m2" class="ltx_Math">n</span> with degree sequence <span id="S3.Thmproposition3.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> and integers <span id="S3.Thmproposition3.p1.m4" class="ltx_Math">\alpha</span> and <span id="S3.Thmproposition3.p1.m5" class="ltx_Math">\beta</span>. Then</span></p>
+<table id="S3.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E12.m1" class="ltx_Math">~{}\frac{\beta m(m+1)}{\alpha}+\alpha\operatorname{irr}_{\min}(T)\geqslant\sum%
+_{i=1}^{n}d_{i}^{3}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p">Assume a degree sequence <span id="S3.p11.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> ordered such that <span id="S3.p11.m2" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Then, for <span id="S3.p11.m3" class="ltx_Math">T</span> a connected graph with <span id="S3.p11.m4" class="ltx_Math">n</span> vertices and <span id="S3.p11.m5" class="ltx_Math">m</span> edges, suppose it satisfies <span id="S3.p11.m6" class="ltx_Math">\operatorname{irr}_{\min}&lt;m(m+1)</span>. Thus, the minimum value of the Albertson index satisfies
+</p>
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex7.m1" class="ltx_Math">2^{\alpha}m(m+1)\leqslant\alpha^{4}\operatorname{irr}_{\min}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then,</p>
+<table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E13.m1" class="ltx_Math">~{}\alpha\operatorname{irr}_{\min}(T)\geqslant\sum_{i=1}^{n}d_{i}^{2}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, the relation (<a href="#S3.E13" title="(13) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>) grows by combining the term <span id="S3.p11.m7" class="ltx_Math">2^{\alpha}m(m+1)</span> where <span id="S3.p11.m8" class="ltx_Math">\beta&lt;2^{\alpha}</span>, considering <span id="S3.p11.m9" class="ltx_Math">\operatorname{irr}_{\min}&lt;m(m+1)</span>. Thus, from (<a href="#S3.E13" title="(13) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>) we find that</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex8.m1" class="ltx_Math">\operatorname{irr}_{\min}\leqslant n(2m-n+\Delta)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S3.p11.m10" class="ltx_Math">0&lt;\operatorname{irr}_{\min}/2^{\alpha}&lt;n</span>. This condition is used to restrict the values of <span id="S3.p11.m11" class="ltx_Math">\alpha</span> in order to reach Equation (<a href="#S3.E12" title="(12) ‣ Proposition 3.3. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12</span></a>). Therefore, we clearly observe the impact of this condition on Equation (<a href="#S3.E14" title="(14) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>), as it provides a clear path to reach the desired result. Then,</p>
+<table id="S3.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E14.m1" class="ltx_Math">~{}\frac{\beta m(m+1)}{\alpha}\geqslant\sum_{i=1}^{n}d_{i}^{2},\quad\frac{%
+\beta m(m+1)}{\alpha}+2^{\alpha}m(m+1)\geqslant\alpha^{4}\operatorname{irr}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, from (<a href="#S3.E14" title="(14) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>) we obtain</p>
+<table id="S3.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.E15.m1" class="ltx_Math">~{}\frac{\beta m(m+1)}{\alpha}+2^{\alpha}m(m+1)\geqslant\sum_{i=1}^{n}d_{i}^{3},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">by considering the term <span id="S3.p11.m12" class="ltx_Math">2^{-\alpha}\operatorname{irr}_{\min}&lt;n</span> which satisfies <span id="S3.p11.m13" class="ltx_Math">2^{\alpha}m(m+1)&gt;\alpha\operatorname{irr}_{\min}(T)</span>. Then, from (<a href="#S3.E15" title="(15) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">15</span></a>) and by considering (<a href="#S3.E14" title="(14) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>) and (<a href="#S3.E13" title="(13) ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>), we conclude that Equation (<a href="#S3.E12" title="(12) ‣ Proposition 3.3. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12</span></a>) holds as desired.
+∎</p>
+</div>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">Through the previously presented study through Propositions <a href="#S3.Thmproposition1" title="Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>, <a href="#S3.Thmproposition2" title="Proposition 3.2. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2</span></a> and <a href="#S3.Thmproposition3" title="Proposition 3.3. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>, we clarify these relationships and their impact using Table <a href="#S3.T1" title="Table 1 ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> in order to calculate the minimum values of the Peterson index by providing an increasing nested sequence. Denote to <span id="S3.p12.m1" class="ltx_Math">\frac{\beta m(m+1)}{\alpha}+\alpha\operatorname{irr}_{\min}(T)</span> by <span id="S3.p12.m2" class="ltx_Math">L_{3}</span>, <span id="S3.p12.m3" class="ltx_Math">\operatorname{irr}_{\min}-\left(\sum_{i=1}^{n}d_{i}^{2}+2d_{1}+d_{2}-3d_{3}+2(%
+d_{n-1}+d_{n})\right)</span> by <span id="S3.p12.m4" class="ltx_Math">L_{2}</span> and <span id="S3.p12.m5" class="ltx_Math">\frac{2\operatorname{irr}_{\min}}{\Delta(\Delta-1)^{2}}</span> by <span id="S3.p12.m6" class="ltx_Math">L_{1}</span>.</p>
+</div>
+<figure id="S3.T1" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_l ltx_border_r ltx_border_t">Degrees</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span id="S3.T1.m1" class="ltx_Math">L_{1}</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span id="S3.T1.m2" class="ltx_Math">L_{2}</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_rr ltx_border_t"><span id="S3.T1.m3" class="ltx_Math">L_{3}</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r ltx_border_t">Degrees</th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span id="S3.T1.m4" class="ltx_Math">L_{1}</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span id="S3.T1.m5" class="ltx_Math">L_{2}</span></th>
+<th class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_border_r ltx_border_t"><span id="S3.T1.m6" class="ltx_Math">L_{3}</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S3.T1.m7" class="ltx_Math">(2,4,5,7,9)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.6</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">2460</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S3.T1.m8" class="ltx_Math">(3,6,7,10,12)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.5</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">5</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">5092</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S3.T1.m9" class="ltx_Math">(4,8,9,13,15)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.4</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">6</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">9052</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S3.T1.m10" class="ltx_Math">(5,10,12,16,18)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.3</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15046</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S3.T1.m11" class="ltx_Math">(6,12,14,19,22)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">23528</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S3.T1.m12" class="ltx_Math">(7,14,16,22,25)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">0.2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">33265</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><span id="S3.T1.m13" class="ltx_Math">(8,16,18,25,28)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">0.2</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">3</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_rr ltx_border_t">45328</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><span id="S3.T1.m14" class="ltx_Math">(9,18,20,28,31)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">0.2</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">4</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">59961</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_table">Table 1: </span>Calculate the minimum values of Albertson index.</figcaption>
+</figure>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">This values should help understand extremal bounds and behavior of irregularity indices in trees (see Figure <a href="#S3.F2" title="Figure 2 ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), providing both numeric evidence and theoretical confirmation of the indices’ dependency on the degree structure. The indices help measure the degree irregularity of the graph, quantifying how far the graph’s degree distribution deviates from regularity.</p>
+</div>
+<figure id="S3.F2" class="ltx_figure"><span class="ltx_ERROR ltx_centering undefined">{tikzpicture}</span>
+<p class="ltx_p ltx_align_center">[scale=1]
+<span class="ltx_ERROR undefined">\draw</span>(3,8)– (2,7);
+<span class="ltx_ERROR undefined">\draw</span>(3,8)– (4,8);
+<span class="ltx_ERROR undefined">\draw</span>(4,8)– (3,7);
+<span class="ltx_ERROR undefined">\draw</span>(4,8)– (4,7);
+<span class="ltx_ERROR undefined">\draw</span>(4,8)– (5,8);
+<span class="ltx_ERROR undefined">\draw</span>(5,8)– (4.48,7);
+<span class="ltx_ERROR undefined">\draw</span>(5,8)– (5,7);
+<span class="ltx_ERROR undefined">\draw</span>(5,8)– (6,7);
+<span class="ltx_ERROR undefined">\draw</span>(5,8)– (7,8);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (6.5,7);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (7,7);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (7.5,7);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (8,7);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (9,7);
+<span class="ltx_ERROR undefined">\draw</span>(7,8)– (9,8);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (10,9);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (9.5,9);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (9.5,9.5);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (9,9.5);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (8.5,9.5);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (8,9.5);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (8,9);
+<span class="ltx_ERROR undefined">\draw</span>(9,8)– (10.42,8.62);
+<span class="ltx_ERROR undefined">\draw</span>(2,5)– (1,4);
+<span class="ltx_ERROR undefined">\draw</span>(2,5)– (2,4);
+<span class="ltx_ERROR undefined">\draw</span>(2,5)– (3,5);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (3,4);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (4,4);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (4,5);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (4,6);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (3,6);
+<span class="ltx_ERROR undefined">\draw</span>(3,5)– (2,6);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (3,3);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (4,3);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (5,3);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (5,4);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (5,5);
+<span class="ltx_ERROR undefined">\draw</span>(4,4)– (3.52,3.02);
+<span class="ltx_ERROR undefined">\draw</span>(5,4)– (6,5);
+<span class="ltx_ERROR undefined">\draw</span>(5,4)– (6,3);
+<span class="ltx_ERROR undefined">\draw</span>(6,3)– (7,4);
+<span class="ltx_ERROR undefined">\draw</span>(6,3)– (7,2);
+<span class="ltx_ERROR undefined">\draw</span>(-1.5,8.5) node[anchor=north west] <span id="S3.F2.m1" class="ltx_Math">\mathscr{D}=(2,4,5,7,9)</span>;
+<span class="ltx_ERROR undefined">\draw</span>(-1.5,5.5) node[anchor=north west] <span id="S3.F2.m2" class="ltx_Math">\mathscr{D}=(3,6,7,10,12)</span>;
+<span class="ltx_ERROR undefined">\draw</span>(5.886018366581596,4.472645160669947) node[anchor=north west] <span id="S3.F2.m3" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\draw</span>(6.899093356243413,3.4595701710081284) node[anchor=north west] <span id="S3.F2.m4" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\draw</span>(4.773622299501954,4.8) node[anchor=north west] <span id="S3.F2.m5" class="ltx_Math">10</span>;
+<span class="ltx_ERROR undefined">\draw</span>(5.4,3) node[anchor=north west] <span id="S3.F2.m6" class="ltx_Math">12</span>;
+<span class="ltx_text" style="font-size:70%;">
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,8) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (2,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,8) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (5,8) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4.48,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (5,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (6,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (7,8) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (6.5,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (7,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (7.5,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (8,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (9,7) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (9,8) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (10,9) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (9.5,9) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (9.5,9.5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (9,9.5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (8.5,9.5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (8,9.5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (8,9) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (10.42,8.62) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (2,5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (1,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (2,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,6) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,6) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (2,6) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3,3) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (4,3) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (5,3) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (5,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (5,5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (3.52,3.02) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (6,5) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (6,3) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (7,4) circle ( 1.5pt);
+<span class="ltx_ERROR undefined">\draw</span>[fill= black] (7,2) circle ( 1.5pt);
+</span></p>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Trees had discussed according to Table <a href="#S3.T1" title="Table 1 ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>.</figcaption>
+</figure>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Bounds on Albertson Index</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">According to Proposition <a href="#S3.Thmproposition1" title="Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>, we noticed that <span id="S4.p1.m1" class="ltx_Math">2\operatorname{irr}_{\max}&lt;\Delta(\Delta-1)^{2},</span> we presented Proposition <a href="#S4.Thmproposition1" title="Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> for given the upper bound of the maximum value of Albertson index.</p>
+</div>
+<div id="S4.Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmproposition1.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S4.Thmproposition1.p1.m2" class="ltx_Math">n</span> with degree sequence <span id="S4.Thmproposition1.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>. Then the maximum value of the Albertson index satisfies
+</span></p>
+<table id="S4.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E16.m1" class="ltx_Math">~{}\begin{cases}\operatorname{irr}_{\max}&gt;\left\lfloor\frac{2m}{n}\right%
+\rfloor+\left\lceil\frac{2n}{m}\right\rceil+2^{\alpha}&amp;\text{if }d_{n}%
+\leqslant 20,\\
+\operatorname{irr}_{\max}&lt;\left\lceil\frac{2n}{m}\right\rceil+2^{\beta}&amp;\text{%
+if }d_{n}&gt;3.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p2.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> be a degree sequence with <span id="S4.p2.m2" class="ltx_Math">d_{n}&gt;d_{n-1}&gt;\dots&gt;d_{2}&gt;d_{1}</span> and <span id="S4.p2.m3" class="ltx_Math">\Delta=d_{n}</span>. Assume <span id="S4.p2.m4" class="ltx_Math">\operatorname{irr}_{\max}&lt;\Delta(\Delta-1)^{2}</span> by considering <span id="S4.p2.m5" class="ltx_Math">\Delta(\Delta-1)^{2}&lt;m(m+1)</span>, and suppose <span id="S4.p2.m6" class="ltx_Math">\beta&gt;\alpha&gt;d_{1}</span>. Equation (<a href="#S4.E17" title="(17) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">17</span></a>) asserts that the sum of the greatest integer less than or equal to <span id="S4.p2.m7" class="ltx_Math">2m/n</span> and the smallest integer greater than or equal to <span id="S4.p2.m8" class="ltx_Math">2n/m</span> is</p>
+<table id="S4.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E17.m1" class="ltx_Math">~{}\left\lfloor\frac{2m}{n}\right\rfloor+\left\lceil\frac{2n}{m}\right\rceil=4.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Now, consider relation (<a href="#S4.E16" title="(16) ‣ Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">16</span></a>) in terms of the values of <span id="S4.p2.m9" class="ltx_Math">\alpha</span> and <span id="S4.p2.m10" class="ltx_Math">\beta</span>, taking into account the condition <span id="S4.p2.m11" class="ltx_Math">\beta&gt;\alpha&gt;d_{1}</span>. We find that the first two elements of <span id="S4.p2.m12" class="ltx_Math">\mathscr{D}</span> satisfy <span id="S4.p2.m13" class="ltx_Math">d_{1}+d_{2}=</span> [value missing], and from (<a href="#S4.E17" title="(17) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">17</span></a>), for the last two elements of <span id="S4.p2.m14" class="ltx_Math">\mathscr{D}</span>, the term <span id="S4.p2.m15" class="ltx_Math">\alpha d_{1}+\beta d_{2}</span> satisfies</p>
+<table id="S4.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E18.m1" class="ltx_Math">~{}\alpha d_{1}+\beta d_{2}&gt;\left\lfloor\frac{2n\Delta}{m}\right\rfloor+\left%
+\lceil\frac{2\Delta m}{n}\right\rceil.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, from (<a href="#S4.E17" title="(17) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">17</span></a>), we obtain rough bounds for the values of <span id="S4.p2.m16" class="ltx_Math">2m/n</span> and <span id="S4.p2.m17" class="ltx_Math">2n/m</span>. Therefore, from (<a href="#S4.E18" title="(18) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">18</span></a>) we deduce that for the term <span id="S4.p2.m18" class="ltx_Math">\alpha d_{1}+\beta d_{2}+\alpha d_{3}+\beta d_{4}+\dots+\alpha d_{n-1}+\beta d%
+_{n}</span>, where</p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex9.m1" class="ltx_Math">\alpha d_{1}&lt;\beta d_{2}&lt;\alpha d_{3}&lt;\dots&lt;\alpha d_{n-1}+\beta d_{n},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and according to <span id="S4.p2.m19" class="ltx_Math">2^{\alpha}m(m+1)\leqslant\alpha^{4}\operatorname{irr}_{\min}(T)</span>, it follows that</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex10.m1" class="ltx_Math">2m(m+1)\leqslant\alpha^{2}\operatorname{irr}_{\max}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, the upper bound of the maximum value of the Albertson index is given by
+</p>
+<table id="S4.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E19.m1" class="ltx_Math">~{}\operatorname{irr}_{\max}&lt;\alpha\sum_{i=1}^{n}d_{2i-1}+\beta\sum_{i=1}^{n}d%
+_{2i}+(\Delta-3)^{2}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, from (<a href="#S4.E19" title="(19) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">19</span></a>) for <span id="S4.p2.m20" class="ltx_Math">d_{1}\geqslant 10</span> and <span id="S4.p2.m21" class="ltx_Math">d_{n}\gg d_{1}</span> we notice that <span id="S4.p2.m22" class="ltx_Math">2^{\alpha}&gt;\operatorname{irr}_{\max}</span>. Thus, the relation (<a href="#S4.E16" title="(16) ‣ Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">16</span></a>) holds for <span id="S4.p2.m23" class="ltx_Math">\alpha</span>, and according to the term <span id="S4.p2.m24" class="ltx_Math">2^{\beta}&gt;2^{\alpha}</span> satisfying <span id="S4.p2.m25" class="ltx_Math">2^{\beta}&gt;\operatorname{irr}_{\max}</span>, the relation (<a href="#S4.E16" title="(16) ‣ Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">16</span></a>) also holds for <span id="S4.p2.m26" class="ltx_Math">\beta</span> when <span id="S4.p2.m27" class="ltx_Math">d_{1}&gt;3</span>. As desired.
+∎</p>
+</div>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">For each degree sequence <span id="S4.p3.m1" class="ltx_Math">\operatorname{irr}_{\max}</span> and <span id="S4.p3.m2" class="ltx_Math">\operatorname{irr}_{\min}</span> values are given and are relatively close, indicating that for these graphs. Through Table <a href="#S4.T2" title="Table 2 ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>, we noticed for a given the degree sequence, the maximum and minimum irredundance numbers indicate the variety and bounds of the irredundant vertex sets in terms of size.In fact, both <span id="S4.p3.m3" class="ltx_Math">\alpha</span> and <span id="S4.p3.m4" class="ltx_Math">\beta</span> represent theoretical bounds or empirical parameters to predict or estimate irredundance based on the degrees.</p>
+</div>
+<figure id="S4.T2" class="ltx_table">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t">Degree</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m1" class="ltx_Math">\operatorname{irr}_{\max}</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m2" class="ltx_Math">\operatorname{irr}_{\min}</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m3" class="ltx_Math">\alpha</span></td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t"><span id="S4.T2.m4" class="ltx_Math">\beta</span></td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Degree</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m5" class="ltx_Math">\operatorname{irr}_{\max}</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m6" class="ltx_Math">\operatorname{irr}_{\min}</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m7" class="ltx_Math">\alpha</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t"><span id="S4.T2.m8" class="ltx_Math">\beta</span></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S4.T2.m9" class="ltx_Math">(4,5,6,7,11)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">268</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">274</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">4.5</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">9</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S4.T2.m10" class="ltx_Math">(6,6,7,10,12)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">394</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">392</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">6</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S4.T2.m11" class="ltx_Math">(7,8,9,13,14)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">598</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">592</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">7.5</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">13.5</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S4.T2.m12" class="ltx_Math">(9,10,11,15,18)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">898</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">896</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">9.5</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">16.5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S4.T2.m13" class="ltx_Math">(10,12,13,17,22)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1242</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1244</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">11</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">19.5</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S4.T2.m14" class="ltx_Math">(12,14,15,19,26)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1666</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">1672</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">13</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">22.5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_r ltx_border_t"><span id="S4.T2.m15" class="ltx_Math">(14,16,17,21,30)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2154</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2164</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">15</td>
+<td class="ltx_td ltx_align_center ltx_border_rr ltx_border_t">25.5</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span id="S4.T2.m16" class="ltx_Math">(16,18,19,23,34)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2706</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">2720</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">17</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t">28.5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l ltx_border_r ltx_border_t"><span id="S4.T2.m17" class="ltx_Math">(18,20,21,25,38)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">3322</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">3340</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">19</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_rr ltx_border_t">31.5</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r ltx_border_t"><span id="S4.T2.m18" class="ltx_Math">(20,22,23,27,42)</span></td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">4002</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">4024</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">21</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r ltx_border_t">34.5</td>
+</tr>
+</tbody>
+</table>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_table">Table 2: </span>The maximum and minimum value of Albertson index with <span id="S4.T2.m20" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},d_{3},d_{4},d_{5})</span>.</figcaption>
+</figure>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">For a degree sequence <span id="S4.p4.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>, let <span id="S4.p4.m2" class="ltx_Math">\lambda</span> be the average of elements <span id="S4.p4.m3" class="ltx_Math">\mathscr{D}</span>. Then, we noticed that among (<a href="#S4.E20" title="(20) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20</span></a>) the relationship between the number of vertices and <span id="S4.p4.m4" class="ltx_Math">\lambda</span> had provided as</p>
+<table id="S4.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E20.m1" class="ltx_Math">~{}n=\sum_{i=1}^{n}(2d_{i}-\lambda).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(20)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Proposition <a href="#S4.Thmproposition2" title="Proposition 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a> establishes that for any tree <span id="S4.p4.m5" class="ltx_Math">T</span> of order <span id="S4.p4.m6" class="ltx_Math">n</span>,
+the difference between the minimum and maximum values of the Albertson index is bounded above by a constant <span id="S4.p4.m7" class="ltx_Math">\lambda</span>.
+Furthermore, Lemma <a href="#S4.Thmtheorem1" title="Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> refines this by showing that for a tree with degree sequence
+<span id="S4.p4.m8" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>, the maximum Albertson index satisfies the inequality (<a href="#S4.E21" title="(21) ‣ Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">21</span></a>), thus providing an explicit upper bound in terms of the maximum degree and parameters related to the structure of <span id="S4.p4.m9" class="ltx_Math">T</span>.</p>
+</div>
+<div id="S4.Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmproposition2.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S4.Thmproposition2.p1.m2" class="ltx_Math">n</span>, <span id="S4.Thmproposition2.p1.m3" class="ltx_Math">\operatorname{irr}_{\min}</span> be the minimum value (<span id="S4.Thmproposition2.p1.m4" class="ltx_Math">\operatorname{irr}_{\max}</span> be the maximum value, respectively) of the Albertson index. Then, the difference between <span id="S4.Thmproposition2.p1.m5" class="ltx_Math">\operatorname{irr}_{\min}</span> and <span id="S4.Thmproposition2.p1.m6" class="ltx_Math">\operatorname{irr}_{\max}</span> satisfy <span id="S4.Thmproposition2.p1.m7" class="ltx_Math">D(\operatorname{irr}_{\min},\operatorname{irr}_{\max})\leqslant\lambda</span>.</span></p>
+</div>
+</div>
+<div id="S4.Thmtheorem1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmtheorem1.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S4.Thmtheorem1.p1.m2" class="ltx_Math">n</span> given in (<a href="#S4.E20" title="(20) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20</span></a>) with degree sequence <span id="S4.Thmtheorem1.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span>. Then, the maximum value of the Albertson index satisfies</span></p>
+<table id="S4.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E21.m1" class="ltx_Math">~{}\frac{\sqrt{m(n-3)^{2}}\operatorname{irr}_{\max}}{(\Delta-1)^{4}}&lt;\lambda.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(21)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">Assume <span id="S4.p5.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> is a degree sequence with <span id="S4.p5.m2" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>, and the number of vertices is given in (<a href="#S4.E20" title="(20) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20</span></a>). We consider three terms: <span id="S4.p5.m3" class="ltx_Math">\sqrt{m(n-3)^{2}}</span>, <span id="S4.p5.m4" class="ltx_Math">\operatorname{irr}_{\max}</span>, and <span id="S4.p5.m5" class="ltx_Math">(\Delta-1)^{4}</span>, in relation to the value of <span id="S4.p5.m6" class="ltx_Math">\lambda</span>. We analyze their relationships to prove the validity of relation (<a href="#S4.E21" title="(21) ‣ Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">21</span></a>) connecting these terms.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Since clearly <span id="S4.p6.m1" class="ltx_Math">\operatorname{irr}_{\max}&gt;\lambda</span>, for the maximum value of the Albertson index, the relation
+</p>
+<table id="S4.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E22.m1" class="ltx_Math">~{}\sqrt{m(n-3)^{\lambda}}&gt;\lambda(\Delta-1)^{4}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">holds, where <span id="S4.p6.m2" class="ltx_Math">\lambda&gt;2</span>.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Because <span id="S4.p7.m1" class="ltx_Math">\lambda&gt;2</span> satisfies <span id="S4.p7.m2" class="ltx_Math">\lambda n^{2}&lt;n^{(\lambda+1)/2}</span>, and considering the value of <span id="S4.p7.m3" class="ltx_Math">\lambda</span> yields <span id="S4.p7.m4" class="ltx_Math">2^{\lambda/2}&gt;4(n-1)</span>, it follows that <span id="S4.p7.m5" class="ltx_Math">2^{\lambda}&gt;\Delta</span>. Thus, we observe that</p>
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex11.m1" class="ltx_Math">\sqrt{\lambda(n-3)}\operatorname{irr}_{\max}&gt;\lambda(\Delta-1)^{4},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S4.p7.m6" class="ltx_Math">(n-3)^{\lambda}&gt;m(n-3)^{2}</span>.</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">Then, from (<a href="#S4.E22" title="(22) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">22</span></a>) we find that</p>
+<table id="S4.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E23.m1" class="ltx_Math">~{}0\leqslant\frac{\sqrt{m(n-3)^{2}}}{(\Delta-1)^{4}}&lt;\frac{\lambda}{4}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(23)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">Inequality (<a href="#S4.E23" title="(23) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">23</span></a>) holds if <span id="S4.p9.m1" class="ltx_Math">m\geqslant 0</span>, <span id="S4.p9.m2" class="ltx_Math">\Delta\neq 1</span>, and <span id="S4.p9.m3" class="ltx_Math">\lambda&gt;0</span>. Hence, the upper bound is</p>
+<table id="S4.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex12.m1" class="ltx_Math">m\cdot(n-3)^{2}&lt;\frac{\lambda^{2}}{16}\cdot(\Delta-1)^{8}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, from (<a href="#S4.E23" title="(23) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">23</span></a>) the quantity associated with the maximum values of the Albertson index satisfies <span id="S4.p9.m4" class="ltx_Math">\operatorname{irr}_{\max}&gt;\lambda/4</span>, and thus equation (<a href="#S4.E21" title="(21) ‣ Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">21</span></a>) is satisfied.
+∎</p>
+</div>
+</div>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p">Through Figure <a href="#S4.F3" title="Figure 3 ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, we present a tree representing a practical application of the Albertson index (by considering Figure <a href="#S2.F1" title="Figure 1 ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) by providing the maximum value of the Albertson index.
+</p>
+</div>
+<figure id="S4.F3" class="ltx_figure"><span class="ltx_ERROR ltx_centering undefined">{tikzpicture}</span>
+<p class="ltx_p ltx_align_center">[scale=.8]
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A) at (0,0) ;
+<span class="ltx_ERROR undefined">\node</span>[circle,fill=black, draw, inner sep=0pt, minimum size=2pt] (B) at (-4,-2) ;
+<span class="ltx_ERROR undefined">\node</span>[circle,fill=black, draw, inner sep=0pt, minimum size=2pt] (C) at (0,-2) ;
+<span class="ltx_ERROR undefined">\node</span>[font=<span class="ltx_text" style="font-size:80%;">] at (5.7,-4.2) <span id="S4.F3.m1" class="ltx_Math">\iddots</span>;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (D) at (4,-2) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (4,-4.3) <span id="S4.F3.m2" class="ltx_Math">\vdots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (E) at (-6,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (2.3,-4.3) <span id="S4.F3.m3" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (F) at (-4,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (2,-4.3) <span id="S4.F3.m4" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (G) at (-2,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (0,-4.3) <span id="S4.F3.m5" class="ltx_Math">\vdots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (H) at (-1.6,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-1.6,-4.3) <span id="S4.F3.m6" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (I) at (0,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-5.7,-4.2) <span id="S4.F3.m7" class="ltx_Math">\ddots</span>;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (J) at (2,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-2,-4.3) <span id="S4.F3.m8" class="ltx_Math">\vdots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (K) at (2.3,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (L) at (4,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (M) at (6,-4) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-3.7,-4.2) <span id="S4.F3.m9" class="ltx_Math">\ddots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A1) at (-7,-6) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1) at (-5,-6) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1) at (7,-6) ;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-5.7,-4.2) <span id="S4.F3.m10" class="ltx_Math">\ddots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A1_1) at (-8,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A1_2) at (-7.5,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A1_3) at (-7,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (A1_4) at (-6.3,-8) ;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1_1) at (-6,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1_2) at (-5.5,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1_3) at (-4.5,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (B1_4) at (-4,-8) ;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1_1) at (6,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1_2) at (6.5,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1_3) at (7.5,-8) ;
+<span class="ltx_ERROR undefined">\node</span>[circle, fill=black, draw, inner sep=0pt, minimum size=2pt] (T1_4) at (8,-8) ;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[font=] at (-6,-8.3) <span id="S4.F3.m11" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-6.3,-8.3) <span id="S4.F3.m12" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-7,-8.3) <span id="S4.F3.m13" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-7.3,-8.3) <span id="S4.F3.m14" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-7.7,-8.3) <span id="S4.F3.m15" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-8,-8.3) <span id="S4.F3.m16" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-5.5,-8.3) <span id="S4.F3.m17" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-4.5,-8.3) <span id="S4.F3.m18" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (-4,-8.3) <span id="S4.F3.m19" class="ltx_Math">\vdots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[font=] at (6,-8.3) <span id="S4.F3.m20" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (6.5,-8.3) <span id="S4.F3.m21" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (7.5,-8.3) <span id="S4.F3.m22" class="ltx_Math">\vdots</span>;
+<span class="ltx_ERROR undefined">\node</span>[font=] at (8,-8.3) <span id="S4.F3.m23" class="ltx_Math">\vdots</span>;</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(A) – (B);
+<span class="ltx_ERROR undefined">\draw</span>(A) – (C);
+<span class="ltx_ERROR undefined">\draw</span>(A) – (D);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(B) – (E);
+<span class="ltx_ERROR undefined">\draw</span>(B) – (F);
+<span class="ltx_ERROR undefined">\draw</span>(B) – (G);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(C) – (H);
+<span class="ltx_ERROR undefined">\draw</span>(C) – (I);
+<span class="ltx_ERROR undefined">\draw</span>(C) – (J);
+</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(D) – (K);
+<span class="ltx_ERROR undefined">\draw</span>(D) – (L);
+<span class="ltx_ERROR undefined">\draw</span>(D) – (M);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(E) – (A1);
+<span class="ltx_ERROR undefined">\draw</span>(F) – (B1);
+<span class="ltx_ERROR undefined">\draw</span>(M) – (T1);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(A1) – (A1_1);
+<span class="ltx_ERROR undefined">\draw</span>(A1) – (A1_2);
+<span class="ltx_ERROR undefined">\draw</span>(A1) – (A1_3);
+<span class="ltx_ERROR undefined">\draw</span>(A1) – (A1_4);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(B1) – (B1_1);
+<span class="ltx_ERROR undefined">\draw</span>(B1) – (B1_2);
+<span class="ltx_ERROR undefined">\draw</span>(B1) – (B1_3);
+<span class="ltx_ERROR undefined">\draw</span>(B1) – (B1_4);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\draw</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">(T1) – (T1_1);
+<span class="ltx_ERROR undefined">\draw</span>(T1) – (T1_2);
+<span class="ltx_ERROR undefined">\draw</span>(T1) – (T1_3);
+<span class="ltx_ERROR undefined">\draw</span>(T1) – (T1_4);</span></p>
+<span class="ltx_ERROR ltx_centering undefined">\node</span>
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:80%;">[font=] at (0,-8) <span id="S4.F3.m24" class="ltx_Math">\dots</span>;
+</span></p>
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 3: </span>A practical application of the Albertson index.</figcaption>
+</figure>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p">In fact, through Lemma <a href="#S4.Thmtheorem2" title="Lemma 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a> establishes a lower bound on the Albertson index of a tree based on its degree sequence.</p>
+</div>
+<div id="S4.Thmtheorem2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmtheorem2.p1.m1" class="ltx_Math">T</span> be a tree of order <span id="S4.Thmtheorem2.p1.m2" class="ltx_Math">n</span> with degree sequence <span id="S4.Thmtheorem2.p1.m3" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S4.Thmtheorem2.p1.m4" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Then, the Albertson index satisfy</span></p>
+<table id="S4.E24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E24.m1" class="ltx_Math">~{}\frac{2n\sqrt{2n}}{4}&lt;\frac{(n^{2}-2m)\Delta\sqrt{2mn}}{2m\lambda\sqrt{2m}}%
+\leqslant\operatorname{irr}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(24)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p">Assume a degree sequence <span id="S4.p12.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S4.p12.m2" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Clearly, <span id="S4.p12.m3" class="ltx_Math">\Delta\leqslant\lambda\varphi</span> where we consider <span id="S4.p12.m4" class="ltx_Math">\varphi\approx 1.66,</span> notice that <span id="S4.p12.m5" class="ltx_Math">d_{n}-d_{n-1}&gt;d_{2}</span>, <span id="S4.p12.m6" class="ltx_Math">d_{n-1}-d_{n-2}&gt;d_{2}</span>,<span id="S4.p12.m7" class="ltx_Math">\dots,</span> which indicate sufficient irregularity in the degree sequence. Thus, by considering the constant term is <span id="S4.p12.m8" class="ltx_Math">d_{n}^{2}+d_{1}^{2}+d_{n}-d_{1}-2n+2</span>, which is used to form a lower bound on the Albertson index. Then, the Albertson index satisfy</p>
+<table id="S4.E25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E25.m1" class="ltx_Math">~{}2n\sqrt{2n}&lt;\lambda\operatorname{irr}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(25)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This relation leads us to, through the ratio achieved for the arithmetic mean of the elements of the given degree sequence <span id="S4.p12.m9" class="ltx_Math">\lambda</span> and the maximum degree <span id="S4.p12.m10" class="ltx_Math">\Delta</span> as <span id="S4.p12.m11" class="ltx_Math">n^{2}\leqslant\frac{3\Delta}{\lambda}</span>. It follows that an upper bound on <span id="S4.p12.m12" class="ltx_Math">\operatorname{irr}(T)</span> satisfy</p>
+<table id="S4.E26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E26.m1" class="ltx_Math">~{}\operatorname{irr}(T)\leqslant\frac{2\lambda mn^{2}-4\Delta n-n^{3}}{4m%
+\sqrt{2m}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(26)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, by combining the inequalities (<a href="#S4.E25" title="(25) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">25</span></a>) and (<a href="#S4.E26" title="(26) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">26</span></a>), we deduce
+<span id="S4.p12.m13" class="ltx_Math">\sqrt{2\lambda mn^{2}}&gt;\operatorname{irr}(T)</span>. Then,
+</p>
+<table id="S4.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex13.m1" class="ltx_Math">4\Delta(d_{n}-d_{n-1})&lt;(n^{2}-2m)\Delta,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where is satisfy the relationship <span id="S4.p12.m14" class="ltx_Math">(n^{2}-2m)\Delta\sqrt{2mn}&gt;\operatorname{irr}(T)+4\Delta(d_{n}-d_{n-1})</span>. Thus,</p>
+<table id="S4.E27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E27.m1" class="ltx_Math">~{}(n^{2}-2m)\Delta\sqrt{2mn}&gt;\operatorname{irr}(T)+4\Delta(d_{n-k}-d_{k}),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(27)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S4.p12.m15" class="ltx_Math">\Delta&lt;k&lt;n</span>. Then, we noticed that</p>
+<table id="S4.E28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E28.m1" class="ltx_Math">~{}\frac{(n^{2}-2m)\Delta\sqrt{2mn}}{2m\lambda\sqrt{2m}}\leqslant\operatorname%
+{irr}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(28)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Through this relation, the upper bound has been proven. From (<a href="#S4.E28" title="(28) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">28</span></a>) establishes a further lower bound for the Albertson index. Hence, for the left-hand side, by testing the ratio of the number of vertices to the number of edges, it satisfies <span id="S4.p12.m16" class="ltx_Math">2\Delta n&gt;m/n</span> and <span id="S4.p12.m17" class="ltx_Math">2n\sqrt{2n}&gt;2\Delta</span>. Then, according to (<a href="#S4.E27" title="(27) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">27</span></a>) and (<a href="#S4.E28" title="(28) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">28</span></a>) we find that</p>
+<table id="S4.E29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E29.m1" class="ltx_Math">~{}2n\sqrt{2n}&lt;(n^{2}-2m)\Delta\sqrt{2mn}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(29)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus,</p>
+<table id="S4.E30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.E30.m1" class="ltx_Math">~{}n\sqrt{2n}\leqslant 2\lambda mn^{2}-4\Delta n.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(30)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, Combining inequalities (<a href="#S4.E25" title="(25) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">25</span></a>)–(<a href="#S4.E30" title="(30) ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">30</span></a>) we find that it proves the main claim (<a href="#S4.E24" title="(24) ‣ Lemma 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">24</span></a>) holds. As desire.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>The Effect of Bounds on Albertson Index</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#S5.Thmtheorem1" title="Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a> establishes a lower bound for the Albertson index of a tree <span id="S5.p1.m1" class="ltx_Math">T</span> with <span id="S5.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.p1.m3" class="ltx_Math">m</span> edges, characterized by its degree sequence <span id="S5.p1.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> arranged in non-decreasing order. The average degree <span id="S5.p1.m5" class="ltx_Math">\lambda</span> multiplied by <span id="S5.p1.m6" class="ltx_Math">n</span>, and a term depending on the product of the minimum and maximum degrees <span id="S5.p1.m7" class="ltx_Math">\delta</span> and <span id="S5.p1.m8" class="ltx_Math">\Delta</span>.</p>
+</div>
+<div id="S5.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmtheorem1.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmtheorem1.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmtheorem1.p1.m3" class="ltx_Math">m</span> edges, having degree sequence <span id="S5.Thmtheorem1.p1.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S5.Thmtheorem1.p1.m5" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>, minimum degree <span id="S5.Thmtheorem1.p1.m6" class="ltx_Math">\delta(T)</span>, and maximum degree <span id="S5.Thmtheorem1.p1.m7" class="ltx_Math">\Delta(T)</span>. Then, the Albertson index satisfies</span></p>
+<table id="S5.E31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E31.m1" class="ltx_Math">~{}\operatorname{irr}(T)\geqslant\sum_{i=2}^{n}d_{i}^{2}-d_{1}+3mn-2\left%
+\lfloor\frac{3n^{2}-1}{2}\right\rfloor+\frac{3}{4}\lambda n-5\delta\Delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(31)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Assume a tree <span id="S5.p2.m1" class="ltx_Math">T</span> with degree sequence <span id="S5.p2.m2" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S5.p2.m3" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>, minimum degree <span id="S5.p2.m4" class="ltx_Math">\delta(T)</span>, and maximum degree <span id="S5.p2.m5" class="ltx_Math">\Delta(T)</span>. According to Lemma <a href="#S2.Thmtheorem1" title="Lemma 2.1 ([12]). ‣ 2 Preliminaries" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1</span></a>, we have</p>
+<table id="S5.E32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E32.m1" class="ltx_Math">~{}\operatorname{irr}(T)&gt;\sqrt{2mn+n\delta(n-1)}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(32)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, the term <span id="S5.p2.m6" class="ltx_Math">2mn&lt;n\delta(n-1)</span> satisfies <span id="S5.p2.m7" class="ltx_Math">2mn&lt;2\Delta(\Delta-1)^{2}&lt;n\delta(n-1)</span> where <span id="S5.p2.m8" class="ltx_Math">\delta&gt;2</span> and <span id="S5.p2.m9" class="ltx_Math">\lambda n&gt;\Delta</span>. Hence, from (<a href="#S5.E32" title="(32) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">32</span></a>) for <span id="S5.p2.m10" class="ltx_Math">n\geqslant 4</span>, indicating that stars with sufficiently many vertices satisfy the condition, possibly due to their high irregularity. Therefore, by considering the inequality <span id="S5.p2.m11" class="ltx_Math">2\Delta&lt;(n-1)^{2}</span>, we have</p>
+<table id="S5.E33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E33.m1" class="ltx_Math">~{}\left\lfloor\frac{3n^{2}-1}{2}\right\rfloor&lt;2\Delta(\Delta-1)^{2}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(33)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, we observe that <span id="S5.p2.m12" class="ltx_Math">\operatorname{irr}(T)&gt;\frac{3}{4}\lambda n-5\delta\Delta</span>. Then, by considering <span id="S5.p2.m13" class="ltx_Math">3mn</span> and the fact that <span id="S5.p2.m14" class="ltx_Math">m=n-1</span>, it follows that <span id="S5.p2.m15" class="ltx_Math">3mn=3n^{2}-3n</span>. Then,</p>
+<table id="S5.E34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E34.m1" class="ltx_Math">~{}\sum_{i=2}^{n}d_{i}^{2}-d_{1}+3mn-2\left\lfloor\frac{3n^{2}-1}{2}\right%
+\rfloor&gt;\frac{3}{4}\lambda n-5\delta\Delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(34)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, through the discussion presented in the relations (<a href="#S5.E33" title="(33) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">33</span></a>) and (<a href="#S5.E34" title="(34) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">34</span></a>), it follows from the comparison of the two quantities in (<a href="#S5.E33" title="(33) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">33</span></a>) that relation (<a href="#S5.E31" title="(31) ‣ Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">31</span></a>) holds. Thus, we find that
+</p>
+<table id="S5.E35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E35.m1" class="ltx_Math">~{}\operatorname{irr}(T)&gt;\sum_{i=2}^{n}d_{i}^{2}-d_{1}+3mn-2\left\lfloor\frac{%
+3n^{2}-1}{2}\right\rfloor.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(35)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, by considering <span id="S5.p2.m16" class="ltx_Math">\operatorname{irr}(T)&gt;\frac{3}{4}\lambda n-5\delta\Delta</span>, the inequalities (<a href="#S5.E32" title="(32) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">32</span></a>)–(<a href="#S5.E35" title="(35) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">35</span></a>) imply (<a href="#S5.E31" title="(31) ‣ Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">31</span></a>).
+∎</p>
+</div>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">According to Theorem <a href="#S5.Thmtheorem1" title="Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>, its significance stems from regulating the degree distribution and spectral characteristics of trees (especially through (<a href="#S5.E34" title="(34) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">34</span></a>)), probably to promote significant irregularity (e.g., a high Albertson or Sigma index) or to prioritize trees with elevated maximum degrees, such as star graphs. This concept is pertinent in fields like chemical graph theory, network optimization, and extremal graph theory. Providing more details about <span id="S5.p3.m1" class="ltx_Math">\lambda</span> or the specific tree type could enhance the analysis.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">To assess the influence of the Albertson index on graphs and trees based on the discussion presented in Table <a href="#S4.T2" title="Table 2 ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>, we illustrate in Figure <a href="#S5.F4" title="Figure 4 ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> the Albertson index applied to a connected graph, highlighting the extent of its effect.</p>
+</div>
+<figure id="S5.F4" class="ltx_figure"><img src="processed_dataset/2512.06023v1/temp_source/graphn2.png" id="S5.F4.g1" class="ltx_graphics ltx_centering" width="486" height="260" alt="Albertson index among a connected graph.">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 4: </span>Albertson index among a connected graph.</figcaption>
+</figure>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#S5.Thmtheorem2" title="Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a> establishes a lower bound for the Albertson index of a tree with degree sequence <span id="S5.p5.m1" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> arranged in non-increasing order, where <span id="S5.p5.m2" class="ltx_Math">\Delta(T)</span> denotes the maximum degree, the Albertson index <span id="S5.p5.m3" class="ltx_Math">\operatorname{irr}(T)</span> satisfies the inequality (<a href="#S5.E36" title="(36) ‣ Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">36</span></a>), where <span id="S5.p5.m4" class="ltx_Math">\lambda</span> is the average degree of the vertices in <span id="S5.p5.m5" class="ltx_Math">\mathscr{D}</span>. This result quantifies how the degree distribution and maximum degree constrain the irregularity measured by the Albertson index.</p>
+</div>
+<div id="S5.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmtheorem2.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmtheorem2.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmtheorem2.p1.m3" class="ltx_Math">m</span> edges, and degree sequence <span id="S5.Thmtheorem2.p1.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S5.Thmtheorem2.p1.m5" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>, and let <span id="S5.Thmtheorem2.p1.m6" class="ltx_Math">\Delta(T)</span> denote its maximum degree. Then, the Albertson index satisfies</span></p>
+<table id="S5.E36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E36.m1" class="ltx_Math">~{}\operatorname{irr}(T)\geqslant n\left(\frac{m(n+1)-\Delta(n-\Delta)+\left%
+\lfloor\dfrac{2(m-\Delta)^{3}}{n-2}\right\rfloor}{\lambda^{3}}\right).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(36)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Assume the maximum degree <span id="S5.p6.m1" class="ltx_Math">\Delta=\Delta(T)</span> satisfies <span id="S5.p6.m2" class="ltx_Math">\Delta&gt;16</span>, and the minimum degree <span id="S5.p6.m3" class="ltx_Math">\delta&gt;4</span>. Then, for the degree sequence <span id="S5.p6.m4" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S5.p6.m5" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>, we have
+</p>
+<table id="S5.E37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E37.m1" class="ltx_Math">~{}\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right\rfloor&lt;(n+1)m-\Delta(n-%
+\Delta).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(37)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From (<a href="#S5.E37" title="(37) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">37</span></a>), considering the terms <span id="S5.p6.m6" class="ltx_Math">m(n+1)-\Delta(n-\Delta)</span> and <span id="S5.p6.m7" class="ltx_Math">\delta\lambda^{2}</span>, we observe that <span id="S5.p6.m8" class="ltx_Math">n\beta\operatorname{irr}+(m\Delta)\geqslant m\beta(n+1)-\Delta\beta(n-\Delta)</span>. By assuming <span id="S5.p6.m9" class="ltx_Math">\Delta(n-\Delta)\geqslant\delta\lambda^{2}</span>, it follows that</p>
+<table id="S5.E38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E38.m1" class="ltx_Math">~{}\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right\rfloor-m(n+1)-\Delta(n-%
+\Delta)\leqslant\delta\lambda^{2}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(38)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, considering the values of <span id="S5.p6.m10" class="ltx_Math">\Delta</span> and <span id="S5.p6.m11" class="ltx_Math">\delta</span> leads to (<a href="#S5.E37" title="(37) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">37</span></a>) and (<a href="#S5.E38" title="(38) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">38</span></a>). Thus, equation (<a href="#S5.E39" title="(39) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">39</span></a>) provides an upper bound on the normalized quantity</p>
+<table id="S5.E39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E39.m1" class="ltx_Math">~{}\frac{1}{\lambda^{2}}\left(\left\lfloor\dfrac{2(m-\Delta)^{2}}{n-2}\right%
+\rfloor-m(n+1)-\Delta(n-\Delta)\right)\leqslant\frac{2n-2}{2\delta}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(39)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Moreover, for the term <span id="S5.p6.m12" class="ltx_Math">m(n+1)</span> we have <span id="S5.p6.m13" class="ltx_Math">m(n+1)=n^{2}-1</span>, and for the term <span id="S5.p6.m14" class="ltx_Math">\Delta(n-\Delta)</span>, the inequality holds when <span id="S5.p6.m15" class="ltx_Math">2\Delta\leqslant n</span> and <span id="S5.p6.m16" class="ltx_Math">\lambda&lt;\Delta</span>. Then, since <span id="S5.p6.m17" class="ltx_Math">2n-2&gt;2\delta</span> and <span id="S5.p6.m18" class="ltx_Math">2n&gt;\lambda^{2}</span>, we observe that <span id="S5.p6.m19" class="ltx_Math">\Delta(n-\Delta)&gt;\lambda^{2}</span>. According to (<a href="#S5.E39" title="(39) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">39</span></a>), for <span id="S5.p6.m20" class="ltx_Math">\lambda^{3}</span> it follows that <span id="S5.p6.m21" class="ltx_Math">0&lt;\frac{n}{\lambda^{3}}&lt;1</span>. By considering <span id="S5.p6.m22" class="ltx_Math">\lambda&gt;\delta</span>, we obtain</p>
+<table id="S5.E40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E40.m1" class="ltx_Math">~{}\operatorname{irr}(T)\geqslant\frac{n-1}{2\delta}\left(m(n+1)-\Delta(n-%
+\Delta)+\left\lfloor\dfrac{2(m-\Delta)^{3}}{n-2}\right\rfloor\right).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(40)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, from (<a href="#S5.E37" title="(37) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">37</span></a>)–(<a href="#S5.E40" title="(40) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">40</span></a>) we conclude that (<a href="#S5.E36" title="(36) ‣ Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">36</span></a>) holds.
+∎</p>
+</div>
+</div>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#S5.Thmtheorem2" title="Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a> establishes a fundamental lower bound on the Albertson irregularity index <span id="S5.p7.m1" class="ltx_Math">\operatorname{irr}(T)</span> of a tree <span id="S5.p7.m2" class="ltx_Math">T</span> by consider the average degree <span id="S5.p7.m3" class="ltx_Math">\lambda</span> of its degree sequence. The theorem is significant for extremal graph theory as it facilitates comparisons among trees and supports bounding the Albertson index when exact calculation is difficult. Moreover, it has practical implications in chemical graph theory and network analysis, where the Albertson index correlates with molecular stability and network heterogeneity. This bound enriches the theoretical understanding and broadens applications of degree-based topological indices in graph theory.
+Through Theorem <a href="#S5.Thmtheorem2" title="Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>, we present in Corollary <a href="#S5.Thmcorollary1" title="Corollary 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a> the lower bound of the Albertson index.</p>
+</div>
+<div id="S5.Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 5.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmcorollary1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmcorollary1.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmcorollary1.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmcorollary1.p1.m3" class="ltx_Math">m</span> edges, according to Theorem <a href="#S5.Thmtheorem2" title="Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>. Then,</span></p>
+<table id="S5.E41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E41.m1" class="ltx_Math">~{}\operatorname{irr}(T)\geqslant\frac{4m^{2}}{n}+\left\lfloor\frac{2n}{3}%
+\right\rfloor+\left\lceil\frac{2n+1}{3}\right\rceil.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(41)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S5.p8" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#S5.Thmtheorem3" title="Theorem 5.3. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a> consider <span id="S5.p8.m1" class="ltx_Math">\lambda_{\max}</span> and <span id="S5.p8.m2" class="ltx_Math">\lambda_{\min}</span> denote the maximum and minimum values of <span id="S5.p8.m3" class="ltx_Math">\lambda</span>, where <span id="S5.p8.m4" class="ltx_Math">\lambda</span> is the average degree in the degree sequence <span id="S5.p8.m5" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> with <span id="S5.p8.m6" class="ltx_Math">d_{n}\geq d_{n-1}\geq\cdots\geq d_{1}</span>.</p>
+</div>
+<div id="S5.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmtheorem3.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmtheorem3.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmtheorem3.p1.m3" class="ltx_Math">m</span> edges, and let <span id="S5.Thmtheorem3.p1.m4" class="ltx_Math">\lambda_{\max}</span>, <span id="S5.Thmtheorem3.p1.m5" class="ltx_Math">\lambda_{\min}</span> be the maximum and minimum values of <span id="S5.Thmtheorem3.p1.m6" class="ltx_Math">\lambda</span>. Then,</span></p>
+<table id="S5.E42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E42.m1" class="ltx_Math">~{}\frac{4m^{2}-2m((\Delta+\lambda_{\min})(n-1))}{3\Delta+n}\leq\operatorname{%
+irr}(T)\leq\frac{m\alpha^{3}+\lambda_{\max}(n-1)}{n+4\lambda\delta^{2}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(42)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p9" class="ltx_para">
+<p class="ltx_p">Assume <span id="S5.p9.m1" class="ltx_Math">\lambda</span> is the average of the degrees in the degree sequence <span id="S5.p9.m2" class="ltx_Math">\mathscr{D}=(d_{1},d_{2},\dots,d_{n})</span> where <span id="S5.p9.m3" class="ltx_Math">d_{n}\geqslant d_{n-1}\geqslant\dots\geqslant d_{2}\geqslant d_{1}</span>. Then for <span id="S5.p9.m4" class="ltx_Math">\lambda_{\max}</span> and <span id="S5.p9.m5" class="ltx_Math">\lambda_{\min}</span> as the maximum and minimum values of <span id="S5.p9.m6" class="ltx_Math">\lambda</span>, we have <span id="S5.p9.m7" class="ltx_Math">3\delta&lt;\lambda_{\min}\leqslant\lambda_{\max}&lt;\Delta</span>.</p>
+</div>
+<div id="S5.p10" class="ltx_para">
+<p class="ltx_p">According to Theorem <a href="#S5.Thmtheorem2" title="Theorem 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>, we find that <span id="S5.p10.m1" class="ltx_Math">\operatorname{irr}(T)&lt;m(n+1)-\Delta(n-\Delta)</span> and clearly <span id="S5.p10.m2" class="ltx_Math">\operatorname{irr}(T)&lt;4m^{2}</span>. Then,</p>
+<table id="S5.E43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E43.m1" class="ltx_Math">~{}4m^{2}\operatorname{irr}(T)&gt;2m((\Delta+\lambda_{\min})(n-1)),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(43)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S5.p10.m3" class="ltx_Math">2m((\Delta+\lambda_{\min})(n-1))&gt;4m^{2}</span>. Thus, from (<a href="#S5.E43" title="(43) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">43</span></a>) we observe that the left-hand side of the inequality (<a href="#S5.E42" title="(42) ‣ Theorem 5.3. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">42</span></a>) holds, considering that the value <span id="S5.p10.m4" class="ltx_Math">3\Delta+n</span> satisfies Albertson index <span id="S5.p10.m5" class="ltx_Math">\operatorname{irr}(T)&gt;3\Delta+n</span>.</p>
+</div>
+<div id="S5.p11" class="ltx_para">
+<p class="ltx_p">To prove the right-hand side of the inequality, consider that <span id="S5.p11.m1" class="ltx_Math">\alpha</span> is the average of both <span id="S5.p11.m2" class="ltx_Math">d_{1}</span> and <span id="S5.p11.m3" class="ltx_Math">d_{2}</span>. We find that this value increases as <span id="S5.p11.m4" class="ltx_Math">m</span> increases. Hence,</p>
+<table id="S5.E44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E44.m1" class="ltx_Math">~{}(\Delta-1)^{3}\operatorname{irr}(T)&gt;m\alpha^{3}+\lambda_{\max}(n-1).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(44)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From (<a href="#S5.E44" title="(44) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">44</span></a>), when <span id="S5.p11.m5" class="ltx_Math">\delta\geqslant 2</span> we note that <span id="S5.p11.m6" class="ltx_Math">\operatorname{irr}(T)&lt;n+\lambda\delta^{2}</span> and <span id="S5.p11.m7" class="ltx_Math">\operatorname{irr}(T)&lt;m\alpha^{3}+\lambda_{\max}(n-1)</span>. Then, assuming <span id="S5.p11.m8" class="ltx_Math">\lambda_{\max}\approx\lambda</span> satisfies</p>
+<table id="S5.E45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E45.m1" class="ltx_Math">~{}\operatorname{irr}(T)\leq\frac{m\alpha^{3}+\lambda_{\max}(n-1)}{n+4\lambda%
+\delta^{2}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(45)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, from (<a href="#S5.E45" title="(45) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">45</span></a>) we observe that the right-hand side of the inequality (<a href="#S5.E42" title="(42) ‣ Theorem 5.3. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">42</span></a>) holds.
+∎</p>
+</div>
+</div>
+<div id="S5.p12" class="ltx_para">
+<p class="ltx_p">Actually, Theorem <a href="#S5.Thmtheorem3" title="Theorem 5.3. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.3</span></a> establishes explicit lower and upper bounds for the irregularity <span id="S5.p12.m1" class="ltx_Math">\operatorname{irr}(T)</span> of a tree in terms of its number of vertices <span id="S5.p12.m2" class="ltx_Math">n</span>, edges <span id="S5.p12.m3" class="ltx_Math">m</span>, maximum degree <span id="S5.p12.m4" class="ltx_Math">\Delta</span>, it offers a deeper understanding of how a tree’s irregularity relates simultaneously to degree sequence. This insight facilitates the classification of trees based on spectral and combinatorial features.</p>
+</div>
+<div id="S5.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmtheorem4.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmtheorem4.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmtheorem4.p1.m3" class="ltx_Math">m</span> edges. Then, the upper bound for the Albertson index satisfies</span></p>
+<table id="S5.E46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E46.m1" class="ltx_Math">~{}\operatorname{irr}(T)\leqslant\alpha\left\lfloor\frac{2n}{3}\right\rfloor+%
+\beta\left\lceil\frac{2n+1}{3}\right\rceil.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(46)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p13" class="ltx_para">
+<p class="ltx_p">According to Corollary <a href="#S5.Thmcorollary1" title="Corollary 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>, the lower bound of the Albertson index is given in (<a href="#S5.E41" title="(41) ‣ Corollary 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">41</span></a>). Thus, we note that</p>
+<table id="S5.E47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E47.m1" class="ltx_Math">~{}\sqrt{\Delta(\Delta-1)^{2}}\leqslant\left\lfloor\frac{2n}{3}\right\rfloor+%
+\left\lceil\frac{2n+1}{3}\right\rceil&lt;\operatorname{irr}(T).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(47)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Then, from (<a href="#S5.E47" title="(47) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">47</span></a>) we have</p>
+<table id="S5.E48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E48.m1" class="ltx_Math">~{}\left\lceil\frac{2n+1}{3}\right\rceil=\begin{cases}m+1,&amp;\text{if }n&lt;1,\\
+m+2,&amp;\text{if }n\geqslant 1.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(48)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, if we want to treat it as a function, it can be generated by
+</p>
+<table id="S5.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex14.m1" class="ltx_Math">\left\lfloor\frac{2n}{3}\right\rfloor+\left\lceil\frac{2n+1}{3}\right\rceil=f(%
+x)=\frac{x^{2}(x+1)+x^{2}+1}{(x-1)^{2}(x^{2}+x+1)}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It holds for the sum in (<a href="#S5.E47" title="(47) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">47</span></a>) as</p>
+<table id="S5.E49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E49.m1" class="ltx_Math">~{}\left\lfloor\frac{2n}{3}\right\rfloor+\left\lceil\frac{2n+1}{3}\right\rceil%
+=m+\left\lceil\frac{2n+1}{3}\right\rceil=\begin{cases}2m+1,&amp;n&lt;1,\\
+2m+2,&amp;n\geqslant 1.\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(49)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, from (<a href="#S5.E48" title="(48) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">48</span></a>) and (<a href="#S5.E49" title="(49) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">49</span></a>) we find that according to (<a href="#S5.E47" title="(47) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">47</span></a>), it holds that <span id="S5.p13.m1" class="ltx_Math">\sqrt{\Delta(\Delta-1)^{2}}\leqslant n+1&lt;\operatorname{irr}(T).</span> Then,</p>
+<table id="S5.E50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E50.m1" class="ltx_Math">~{}\operatorname{irr}(T)\geqslant\alpha\left\lfloor\frac{2n}{3}\right\rfloor+%
+\sqrt{\Delta(\Delta-1)^{2}},\quad\operatorname{irr}(T)\geqslant\beta\left%
+\lceil\frac{2n+1}{3}\right\rceil+\sqrt{\Delta(\Delta-1)^{2}}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(50)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, from (<a href="#S5.E50" title="(50) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">50</span></a>) we conclude that (<a href="#S5.E47" title="(47) ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">47</span></a>) holds.
+∎</p>
+</div>
+</div>
+<div id="S5.Thmcorollary2" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 5.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S5.Thmcorollary2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S5.Thmcorollary2.p1.m1" class="ltx_Math">T</span> be a tree with <span id="S5.Thmcorollary2.p1.m2" class="ltx_Math">n</span> vertices and <span id="S5.Thmcorollary2.p1.m3" class="ltx_Math">m</span> edges, according to Theorem <a href="#S5.Thmtheorem4" title="Theorem 5.4. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.4</span></a> for <span id="S5.Thmcorollary2.p1.m4" class="ltx_Math">n\in\mathbb{R}</span> and <span id="S5.Thmcorollary2.p1.m5" class="ltx_Math">\frac{2n}{3}\notin\mathbb{Z}</span>. Then,</span></p>
+<table id="S5.E51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.E51.m1" class="ltx_Math">~{}\left\lfloor\frac{2n}{3}\right\rfloor+\left\lceil\frac{2n+1}{3}\right\rceil%
+=\frac{5}{6}+\frac{2n}{3}+\left\lfloor\frac{2n}{3}\right\rfloor+\frac{1}{\pi}%
+\sum_{k=1}\left(\frac{1}{k}\sin{\left(\frac{2\pi k+4\pi nk}{3}\right)}\right).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(51)</span></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Conclusion</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Through this paper, we provide significant new bounds and structural insights regarding the Albertson index for trees based on their degree sequences. We have derived explicit inequalities that tightly constrain both the minimum and maximum values of the Albertson index, connecting them to important graph parameters such as the maximum degree, number of edges, and degree sums and powers.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">In particular, Propositions <a href="#S3.Thmproposition1" title="Proposition 3.1. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.1</span></a>–<a href="#S3.Thmproposition3" title="Proposition 3.3. ‣ 3 Bounds on The Minimum Value of Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a> give lower bounds that relate the minimal Albertson index to degree cubics and quadratics, illustrating the influence of degree irregularity distribution in trees. Propositions <a href="#S4.Thmproposition1" title="Proposition 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> and <a href="#S4.Thmproposition2" title="Proposition 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>, together with Lemmas <a href="#S4.Thmtheorem1" title="Lemma 4.1. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> and <a href="#S4.Thmtheorem2" title="Lemma 4.2. ‣ 4 Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a>, further characterize upper bounds and the gap between minimal and maximal index values, highlighting how degree extrema and combinatorial parameters limit the Albertson index variability. The main Theorems <a href="#S5.Thmtheorem1" title="Theorem 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a>–<a href="#S5.Thmtheorem4" title="Theorem 5.4. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.4</span></a> consolidate these findings to provide comprehensive lower and upper bounds for the Albertson index in terms of degree sequences, maximum and minimum degrees, and auxiliary parameters <span id="S6.p2.m1" class="ltx_Math">\lambda,\alpha,\beta</span>. These bounds integrate various combinatorial components such as floor and ceiling functions, reinforcing the discrete nature of the problem. Corollaries <a href="#S5.Thmcorollary1" title="Corollary 5.1. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.1</span></a> and <a href="#S5.Thmcorollary2" title="Corollary 5.2. ‣ 5 The Effect of Bounds on Albertson Index" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a> offer refined numeric and analytic expressions that complement the theoretical results and enable practical computation of Albertson index estimates.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">This work advances the understanding of the Albertson index as a metric of graph irregularity by furnishing sharp, degree-sequence-dependent bounds for trees. These results are expected to facilitate further research on extremal problems in topological indices and to support applications where degree irregularity must be quantitatively controlled or estimated. Future extensions may consider more general graph classes or explore algorithmic approaches for exact index computation based on these theoretical foundations.</p>
+</div>
+</section>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Declarations</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ul id="Sx1.I1" class="ltx_itemize">
+<li id="Sx1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Funding: Not Funding.</p>
+</div>
+</li>
+<li id="Sx1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Conflict of interest/Competing interests: The author declare that there are no conflicts of interest or competing interests related to this study.</p>
+</div>
+</li>
+<li id="Sx1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Ethics approval and consent to participate: The author contributed equally to this work.</p>
+</div>
+</li>
+<li id="Sx1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="Sx1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Data availability statement: All data is included within the manuscript.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+<li id="bib.bib1" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"> H. Abdo, D. Dimitrov, I. Gutman, <em class="ltx_emph ltx_font_italic">Graph irregularity and its measures</em>, Applied Mathematics and Computation. 357 (2019), 317–324.
+
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"> H. Abdo, S. Brandt, D. Dimitrov, <em class="ltx_emph ltx_font_italic">The total irregularity of a graph</em>, Discrete Mathematics &amp; Theoretical Computer Science. 16(1) (2014), 201–206.
+
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"> M. O. Albertson, <em class="ltx_emph ltx_font_italic">The irregularity of a graph</em>, Ars Combinatoria. 46 (1997), 219–225.
+
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"> B. Bollobás, <em class="ltx_emph ltx_font_italic">Modern graph theory</em>, Springer Science &amp; Business Media. 184 (1998).
+
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"> N. Broutin, J.-F. Marckert,
+<em class="ltx_emph ltx_font_italic">Asymptotics of trees with a prescribed degree sequence and applications</em>, Random Structures &amp; Algorithms. 44(3) (2014), 290–316.
+
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"> D. M. Cvetković, P. Rowlinson, &amp; S. Simi,́ <em class="ltx_emph ltx_font_italic">An introduction to the theory of graph spectra</em>, Cambridge: Cambridge university press. 75 (2010).
+
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"> D. Dimitrov, W. Gao, W. Lin, &amp; J. Chen, <em class="ltx_emph ltx_font_italic">Extremal trees with fixed degree sequence for <span id="bib.bib7.m1" class="ltx_Math">\sigma</span>-irregularity</em>, Discrete Mathematics Letters. 12 (2023), 166-172, doi: 10.47443/dml.2023.106.
+
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"> S. Dorjsembe, L. Buyantogtokh, K. C. Das, B. Horoldagva, <em class="ltx_emph ltx_font_italic">Graphs with maximum irregularity</em>, Computational and Applied Mathematics. 41(6) (2022), Article 222.
+
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"> M. Fiedler, <em class="ltx_emph ltx_font_italic">Algebraic connectivity of graphs</em>, Czechoslovak Mathematical Journal. 23(2) (1973), 298-305.
+
+</span>
+</li>
+<li id="bib.bib10" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"> A. Ghalavand, I. Gutman, &amp; M. Tavakoli, <em class="ltx_emph ltx_font_italic">Irregularity measure of graphs</em>, Journal of Mathematics. 1 (2023), 4891183.
+
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"> I. Gutman, N. Trinajstic, <em class="ltx_emph ltx_font_italic">Graph theory and molecular orbitals III</em>, Total-electron energy of alternant hydrocarbons, Chem. Phys. Lett., 17 (1972), pp. 535-538.
+
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"> J. Hamoud, D. Abdullah, <em class="ltx_emph ltx_font_italic">Topological Indices with Degree Sequence <span id="bib.bib12.m1" class="ltx_Math">\mathscr{D}</span> of Tree</em>, Lobachevskii Journal of Mathematics. 46(8) (2025), pp. 4249–4264, doi: 10.1134/S1995080225606769.
+
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"> M. Molloy, B. Reed, <em class="ltx_emph ltx_font_italic">A critical point for random graphs with a given degree sequence</em>, Random Structures &amp; Algorithms.
+6(2–3) (1995), 161–180.
+
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock">
+Y. C. Mandal, M. Prvanovic, <em class="ltx_emph ltx_font_italic">Inverse problem for Albertson irregularity index</em>, Journal of Algebraic Engineering Mathematics. 12(3) (2022), 1-10.
+
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"> M. M. Munir, U. T. Wusqa, <em class="ltx_emph ltx_font_italic">Albertson (Alb) spectral radii and Albertson (Alb) energies of graph operation</em>, Frontiers in Chemistry. 11 (2023), 1267291.
+
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"> M. R. Oboudi, <em class="ltx_emph ltx_font_italic">On graphs with integer Sombor index</em>, Journal of Applied Mathematics and Computing. 69 (2023), 193–204.
+
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"> P. Zhang, X. Wang, <em class="ltx_emph ltx_font_italic">Several topological indices of random caterpillars</em>, Methodology and Computing in Applied Probability. 24 (2022), 1773–1789.
+
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"> X.-M. Zhang, X.-D. Zhang, D. Gray, H. Wang, <em class="ltx_emph ltx_font_italic">The number of subtrees of trees with given degree sequence</em>, Journal of Graph Theory. 73(3) (2013), 280–295.
+
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem">
+<span class="ltx_tag ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"> J. Yang and H. Deng,
+<em class="ltx_emph ltx_font_italic">The Extremal Sigma Index of Connected Graphs with Given Number of Pendant Vertices</em>, Research Square, 2023.
+
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:09:50 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

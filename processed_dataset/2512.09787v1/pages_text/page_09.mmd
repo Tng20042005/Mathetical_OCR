@@ -1,0 +1,58 @@
+|  |  |  |
+| --- | --- | --- |
+|  | h(Y)=-\int\_{0}^{\infty}\left[-\log c(\bm{\theta})+\theta\_{6}\log y-\theta\_{1}y% -(\theta\_{2}y^{\theta\_{3}}+\theta\_{4})^{\theta\_{5}}\right]g(y;\bm{\theta}){\rm d% }y, |  |
+
+which implies
+
+|  |  |  |
+| --- | --- | --- |
+|  | h(Y)=I\_{1}+I\_{2}+I\_{3}+I\_{4}, |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{1}=\log c(\bm{\theta}), |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{2}=-\frac{\theta\_{6}}{c(\bm{\theta})}\int\_{0}^{\infty}(\log y)y^{\theta\_{6}% }\exp\left(-\theta\_{1}y-(\theta\_{2}y^{\theta}\_{3}+\theta\_{4})^{\theta\_{5}}% \right){\rm d}y, |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{3}=\frac{\theta\_{1}}{c(\bm{\theta})}\int\_{0}^{\infty}y^{\theta\_{6}+1}\exp% \left(-\theta\_{1}y-(\theta\_{2}y^{\theta}\_{3}+\theta\_{4})^{\theta\_{5}}\right){% \rm d}y=\theta\_{1}\frac{\mathbb{H}(\theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4}% ,\theta\_{5},\theta\_{6}+1)}{\mathbb{H}(\theta\_{1},\theta\_{2},\theta\_{3},\theta\_% {4},\theta\_{5},\theta\_{6})} |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{4}=\frac{1}{c(\bm{\theta})}\int\_{0}^{\infty}(\theta\_{2}y^{\theta\_{3}}+% \theta\_{4})^{\theta\_{5}}y^{\theta\_{6}}\exp\left(-\theta\_{1}y-(\theta\_{2}y^{% \theta}\_{3}+\theta\_{4})^{\theta\_{5}}\right){\rm d}y. |  |
+
+It remains to find closed expressions for I\_{2} and I\_{4}. For this, consider the case \theta\_{5}=m\in\mathbb{N}. Firstly, observe that
+I\_{2}=-[{\theta\_{6}}/{c(\bm{\theta})}]\partial\_{\theta\_{6}}\mathbb{H}(\bm{%
+\theta}), where \partial\_{\theta\_{6}} denotes the partial derivative with respect to \theta\_{6}.
+It follows from Eq.(16) in [22] that
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\partial\_{\theta\_{6}}\mathbb{H}(\bm{\theta}) | \displaystyle= | \displaystyle\frac{1}{\theta\_{1}}\sum\_{n=0}^{\infty}\frac{(-\theta\_{4}^{m})^{n% }}{n!}\sum\_{k=0}^{mn}\frac{(mn)!}{(mn-k)!k!}\left(\frac{\theta\_{2}}{\theta\_{4}% \theta\_{1}^{\theta\_{3}}}\right)^{k}\partial\_{\theta\_{6}}\left\{\theta\_{1}^{-% \theta\_{6}}\Gamma(\theta\_{6}+1+\theta\_{3}k)\right\}. |  |
+
+Observe that, for \theta\_{1}>0,
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\partial\_{\theta\_{6}}\left\{\theta\_{1}^{-\theta\_{6}}\Gamma(\theta% \_{6}+1+\theta\_{3}k)\right\} | \displaystyle= | \displaystyle\theta\_{1}^{-\theta\_{6}}\Gamma(\theta\_{6}+1+\theta\_{3}k)\left[% \Psi(\theta\_{6}+1+\theta\_{3}k)-\log\theta\_{1}\right], |  |
+
+where \partial\_{z}\Gamma(z)=\Gamma(z)\Psi(z). Then,
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{2}=-\frac{\theta\_{6}\theta\_{1}^{-\theta\_{6}-1}}{c(\bm{\theta})}\sum\_{n=0}^{% \infty}\frac{(-\theta\_{4}^{m})^{n}}{n!}\sum\_{k=0}^{mn}\frac{(mn)!}{(mn-k)!k!}% \left(\frac{\theta\_{2}}{\theta\_{4}\theta\_{1}^{\theta\_{3}}}\right)^{k}\Gamma(% \theta\_{6}+1+\theta\_{3}k)\left[\Psi(\theta\_{6}+1+\theta\_{3}k)-\log\theta\_{1}% \right]. |  |
+
+Now, for I\_{4}, taking \theta\_{5}=m\in\mathbb{N}, it follows from Binomial expansion that
+
+|  |  |  |
+| --- | --- | --- |
+|  | I\_{4}=\frac{1}{c(\bm{\theta})}\theta\_{4}^{m}\sum\_{k=0}^{m}\left(\begin{array}[% ]{c}m\\ k\end{array}\right)\left(\frac{\theta\_{2}}{\theta\_{4}}\right)^{k}\mathbb{H}(% \theta\_{1},\theta\_{2},\theta\_{3},\theta\_{4},m,\theta\_{3}k+\theta\_{6}). |  |
+
+### 3.3 Kullback-Leibler Divergence

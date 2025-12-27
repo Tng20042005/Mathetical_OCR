@@ -1,0 +1,75 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle I(0)=\int\_{A}(u\_{0x}+u\_{1})(t,x){\,\rm d}x+\int\_{B}(u\_{0x}-u\_{1}% )(t,x){\,\rm d}x\neq 0. |  |
+
+In fact, we can choose (u\_{0},u\_{1})\in\dot{H}^{1}\times L^{2} such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle u\_{0x}+u\_{1}=\chi\_{A}+a\chi\_{{\mathbb{T}}\backslash A},\quad u\_{% 0x}-u\_{1}=\chi\_{B}+a\chi\_{{\mathbb{T}}\backslash B} |  | (2.5) |
+
+where a is chosen as
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle a=-\frac{\mbox{meas}\_{\mathbb{R}}(A)+\mbox{meas}\_{\mathbb{R}}(B)% }{4\pi-(\mbox{meas}\_{\mathbb{R}}(A)+\mbox{meas}\_{\mathbb{R}}(B))} |  | (2.6) |
+
+to ensure that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathbb{T}}u\_{0x}{\,\rm d}x=\mbox{meas}\_{\mathbb{R}}(A)+\mbox{meas}\_{% \mathbb{R}}(B)+a(2\pi-\mbox{meas}\_{\mathbb{R}}(A))+a(2\pi-\mbox{meas}\_{\mathbb% {R}}(B))=0. |  |
+
+This selection is legitimate since 4\pi-(\mbox{meas}\_{\mathbb{R}}(A)+\mbox{meas}\_{\mathbb{R}}(B))>0. Moreover, noting both A and B has positive measures, we find
+
+|  |  |  |
+| --- | --- | --- |
+|  | I(0)=\mbox{meas}\_{\mathbb{R}}(A)+\mbox{meas}\_{\mathbb{R}}(B)>0. |  |
+
+According to the conservation law, we must have I(T)\neq 0 no matter what control f is. So the solution can not be steered to 0 at time t=T. Thus, the system is not exactly controllable.
+∎
+
+###### Proof of the Counterexample in Fig. 2.
+
+Set
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\partial\_{\eta}u|\_{t=0,x\in(0,\pi)}=-1,\;\;\partial\_{\eta}u|\_{t=0% ,x\in(\pi,2\pi)}=1, |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\partial\_{\xi}u|\_{t=0,x\in(0,\pi)}=-1,\;\;\partial\_{\xi}u|\_{t=0,x% \in(\pi,2\pi)}=1. |  |
+
+This choice ensures that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathbb{T}}\partial\_{x}u(t=0,x){\,\rm d}x=\int\_{\mathbb{T}}(\partial\_{% \xi}u+\partial\_{\eta}u)(t=0,x){\,\rm d}x=0. |  |
+
+Thus, we can solve the wave equation \partial\_{\xi}\partial\_{\eta}u=0 on the domain (t,x)\in(0,2\pi)\times{\mathbb{T}}.
+Based on this special solution, we further define
+
+|  |  |  |
+| --- | --- | --- |
+|  | G:=\{(\xi,\eta);\partial\_{\eta}u=\partial\_{\xi}u=-1,\textrm{ or }\partial\_{\xi% }u=\partial\_{\eta}u=1\}. |  |
+
+This region is divided into two parts, G=G\_{0}\cup G\_{1} as shown in Fig. 2:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle G\_{0}:=\{(\xi,\eta);\partial\_{\eta}u=\partial\_{\xi}u=-1\},\;\;\;% G\_{1}:=\{(\xi,\eta);\partial\_{\eta}u=\partial\_{\xi}u=1\}. |  |
+
+Clearly, the set G satisfies (GCC) with c\_{0}=\sqrt{2}\pi. But
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{G}|\partial\_{t}u|^{2}{\,\rm d}x{\,\rm d}t=\int\_{G}|\partial\_{\eta}u-% \partial\_{\xi}u|^{2}{\,\rm d}\xi{\,\rm d}\eta=0 |  |
+
+and the corresponding initial data satisfies
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|\partial\_{x}u\_{0}\|^{2}\_{L^{2}({\mathbb{T}})}+\|u\_{1}\|^{2}\_{L^{2}({\mathbb{% T}})}=2\left(\|\partial\_{\eta}u|\_{t=0,x\in{\mathbb{T}}}\|^{2}\_{L^{2}({\mathbb{% T}})}+\|\partial\_{\xi}u|\_{t=0,x\in{\mathbb{T}}}\|^{2}\_{L^{2}({\mathbb{T}})}% \right)=8\pi>0. |  |
+
+Thus, the observability (1.2) does not hold.
+∎

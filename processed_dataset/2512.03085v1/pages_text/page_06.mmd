@@ -1,0 +1,63 @@
+|  |  |  |
+| --- | --- | --- |
+|  | |\widehat{g}(k)|^{2}=\Biggl{(}\frac{\sin(\pi rk/N)}{\sin(\pi k/N)}\Biggr{)}^{% \!2}. |  |
+
+Hence, for k\not\equiv 0,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widehat{F\_{r}}(k)=\frac{1}{r^{2}}|\widehat{g}(k)|^{2}=\Biggl{(}\frac{\sin(\pi rk% /N)}{r\,\sin(\pi k/N)}\Biggr{)}^{\!2}. |  |
+
+For k\equiv 0\pmod{N}, we have \widehat{g}(0)=r, so \widehat{F\_{r}}(0)=r^{2}/r^{2}=1, in agreement with the stated formula by continuity of the right-hand side as k\to 0.
+
+Nonnegativity \widehat{F\_{r}}(k)\geq 0 is evident from the expression as a squared modulus. The upper bound \widehat{F\_{r}}(k)\leq 1 follows from
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\widehat{g}(k)|\leq\sum\_{n=0}^{r-1}1=r, |  |
+
+so |\widehat{g}(k)|^{2}/r^{2}\leq 1 for all k.
+∎
+
+###### Remark 4.3.
+
+Thus f\mapsto f\*F\_{r} is a convolution operator with real, nonnegative, symmetric kernel and a nonnegative Fourier multiplier \widehat{F\_{r}}(k)\in[0,1]. In particular, it is a positive semidefinite contraction on \ell^{2}(\mathbb{Z}/N\mathbb{Z}), a property frequently exploited in harmonic analysis and analytic number theory; see, for example, [1, Ch. VII] or [3, Ch. 1].
+
+## 5 An L^{2}\to L^{\infty} bound and smoothed discrepancy
+
+We now record a simple L^{2}\to L^{\infty} bound for smoothing by F\_{r}, with an explicit constant coming from Lemma 3.3. The bound is elementary, but useful in applications where only an L^{2} control of the input function is available.
+
+###### Theorem 5.1 (L^{2}\to L^{\infty} estimate).
+
+Let N\geq 2 and 1\leq r\leq\lfloor N/2\rfloor. For any f\in\ell^{2}(\mathbb{Z}/N\mathbb{Z}),
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|f\*F\_{r}\|\_{\infty}\leq\|f\|\_{2}\|F\_{r}\|\_{2}\leq\sqrt{\frac{5}{3}}\,r^{-1/2}% \|f\|\_{2}. |  |
+
+###### Proof.
+
+The inequality \|f\*F\_{r}\|\_{\infty}\leq\|f\|\_{2}\,\|F\_{r}\|\_{2} is simply the Cauchy–Schwarz inequality. Indeed, for each n\in\mathbb{Z}/N\mathbb{Z},
+
+|  |  |  |
+| --- | --- | --- |
+|  | |(f\*F\_{r})(n)|=\Bigl{|}\sum\_{m\in\mathbb{Z}/N\mathbb{Z}}f(n-m)F\_{r}(m)\Bigr{|}% \leq\Bigl{(}\sum\_{m}|f(n-m)|^{2}\Bigr{)}^{1/2}\Bigl{(}\sum\_{m}|F\_{r}(m)|^{2}% \Bigr{)}^{1/2}=\|f\|\_{2}\|F\_{r}\|\_{2}. |  |
+
+Taking the maximum over n gives the first inequality. The second inequality follows from Lemma 3.3.
+∎
+
+A natural way to view Theorem 5.1 is as a smoothed discrepancy bound. Suppose A\subset\mathbb{Z}/N\mathbb{Z} is a subset, and consider the mean-zero function
+
+|  |  |  |
+| --- | --- | --- |
+|  | f\_{A}(n):=\mathbf{1}\_{A}(n)-\frac{|A|}{N},\qquad n\in\mathbb{Z}/N\mathbb{Z}. |  |
+
+Then \sum\_{n}f\_{A}(n)=0 and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \|f\_{A}\|\_{2}^{2}=\sum\_{n}\Bigl{|}\mathbf{1}\_{A}(n)-\frac{|A|}{N}\Bigr{|}^{2}=% |A|\Bigl{(}1-\frac{|A|}{N}\Bigr{)}^{2}+(N-|A|)\Bigl{(}\frac{|A|}{N}\Bigr{)}^{2% }=\frac{|A|(N-|A|)}{N}. |  |
+
+In particular, \|f\_{A}\|\_{2}\leq\frac{\sqrt{N}}{2} for all A.
+
+Convolution with F\_{r} then measures how the *local* density of A near a point n deviates from the global density |A|/N after smoothing on a scale of order r.

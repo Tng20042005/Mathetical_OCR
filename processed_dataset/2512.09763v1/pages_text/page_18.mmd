@@ -1,0 +1,42 @@
+The second point we want to insist upon is that, when \alpha\in(0,1) the choice to divide by C\_{2}(\gamma)^{\alpha} might not be the only natural one. Indeed, one could have also defined
+
+|  |  |  |
+| --- | --- | --- |
+|  | J\_{\alpha}(D\_{\mu}U):=\sup\_{\gamma,0<C\_{2}(\gamma)<1}\frac{d\_{\nu}(\mathcal{T}% ^{\gamma}(D\_{\mu}U(\mu)),D\_{\mu}U(\nu))}{C\_{2\alpha}(\gamma)^{\alpha}}. |  |
+
+Since, by Jensen’s inequality C\_{2\alpha}(\gamma)^{\alpha}\leq C\_{2}(\gamma)^{\alpha}, J\_{\alpha}(D\_{\mu}U)\geq I\_{\alpha}(D\_{\mu}U). Furthermore, the proof of Proposition 5.36, vol I in [11] can be carried out in a similar manner to obtain the following.
+
+###### Proposition 6.13.
+
+Let U:\mathcal{P}\_{2}(\mathbb{R}^{d})\to\mathbb{R} be such that J\_{\alpha}(D\_{\mu}U)<\infty. Then, for any \mu, there exists a \mathcal{C}^{\alpha}(\mathbb{R}^{d},\mathbb{R}^{d}) continuous function \phi\_{\mu}, such that \|\phi\_{\mu}\|\_{\mathcal{C}^{\alpha}}\leq J\_{\alpha}(D\_{\mu}U) and D\_{\mu}U=\phi\_{\mu} \mu almost everywhere.
+
+###### Proof.
+
+We do not reproduce this quite long and tedious proof. We mention that following the exact same argument as in [11], we arrive at the required result by, instead of doing the Taylor expansion around the element of interest z\_{0}\in\mathbb{R}^{d} (with the notation of [11]), we instead bound the quotient which appears in the expression of the \mathcal{C}^{\alpha} norm of D\_{\mu}U.
+∎
+
+Furthermore, we were not able to construct a function U:\mathcal{P}\_{2}(\mathbb{R}^{d})\to\mathbb{R} such that J\_{\alpha}(D\_{\mu}U)=\infty while I\_{\alpha}(D\_{\mu}U)<\infty, also not knowing if such a function exists. We also leave these questions for future research.
+
+### 6.7. Extensions to other cases than \mathcal{P}\_{2}(\mathbb{R}^{d})
+
+The results and definitions above translate immediately if, instead of working on \mathcal{P}\_{2}(\mathbb{R}^{d}), we are interested in either \mathcal{P}\_{p}(\mathbb{R}^{d}) or \mathcal{P}(\mathcal{O}) for a smooth bounded domain \mathcal{O}\subset\mathbb{R}^{d}. The case of probability measures over a smooth manifold requires a bit more care, as we constantly made use of Proposition 3.6 in the previous, which of course has no reason to be true in this setting. Thus, when defining the equivalent of I\_{\alpha} in this setting, one has to be careful with the fact that the supremum has to be taken over all Lagrangian path \eta as follows.
+
+|  |  |  |
+| --- | --- | --- |
+|  | \sup\_{\eta\in LP(\mu,\nu)}\frac{d\_{\nu}(\mathcal{T}^{\eta}(D\_{\mu}U(\mu)),D\_{% \mu}U(\nu))}{C\_{2}(\eta)^{\alpha}}, |  |
+
+where
+
+|  |  |  |
+| --- | --- | --- |
+|  | LP(\mu,\nu):=\{\eta\in\mathcal{P}(\mathcal{C}([0,1],M)),(e\_{0})\_{\#}\eta=\mu,(% e\_{1})\_{\#}\eta=\nu,\eta\text{ is concentrated on }C^{1}([0,1],M)\}, |  |
+
+and, for \eta\in LP(\mu,\nu),
+
+|  |  |  |
+| --- | --- | --- |
+|  | C\_{2}(\eta):=\left(\int\_{\mathcal{C}([0,1],M)}\int\_{0}^{1}|y^{\prime}(t)|\_{y(t% )}^{2}dt\eta(dy)\right)^{\frac{1}{2}}. |  |
+
+Except for this change, the previous sections can be extended quite straightforwardly.
+
+## 7. Translated curves and application in optimal control problems

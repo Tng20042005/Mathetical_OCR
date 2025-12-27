@@ -1,0 +1,71 @@
+|  |  |  |
+| --- | --- | --- |
+|  | x:=\operatorname\*{arg\,max}\_{x\in S}d\_{\mathbb{Z}/n}(x,0),\;and\;\;\;y:=% \operatorname\*{arg\,max}\_{y\in\mathbb{Z}/n-S}d\_{\mathbb{Z}/n}(y,0). |  |
+
+CASE A: d(0,x)\neq n/2=diam(\mathbb{Z}/n).
+  
+Without loss of generality suppose that 0<x<n/2 (so x in the ”right” side of the clock).
+By definition x+1\notin S.
+Any interval J=[a,b]\in\mathcal{J} with
+0\leq a\leq x<x+1\leq b\leq 0
+will satisfy \emptyset\neq J\cap S\neq J and 0\notin J^{oo}.
+In total, the number of such intervals is
+
+|  |  |  |
+| --- | --- | --- |
+|  | \geq(n-d\_{\mathbb{Z}/n}(x,0))d\_{\mathbb{Z}/n}(x,0)\geq(n/2)d\_{\mathbb{Z}/n}(x,% 0)\geq(n/4)diam\_{\mathbb{Z}/n}(\{0\}\cup S). |  |
+
+CASE B: x=n/2.
+  
+Without loss of generality, suppose that 0<y<n/2. By definition y+1\in S.
+Also, since |S|\leq n/3, we have d\_{\mathbb{Z}/n}(y,0)\geq n/3.
+Any interval J=[a,b]\in\mathcal{J} with
+0\leq a\leq y<y+1\leq b\leq 0
+will satisfy \emptyset\neq J\cap S\neq J and 0\notin J^{oo}.
+In total, the number of such intervals is
+
+|  |  |  |
+| --- | --- | --- |
+|  | \geq(n-d\_{\mathbb{Z}/n}(y,0))d\_{\mathbb{Z}/n}(y,0)\geq(n/2)(n/3)=(n/3)diam\_{% \mathbb{Z}/n}(\{0\}\cup S) |  |
+
+∎
+
+Now fix \pi,\tau\in Sym\_{n}
+with \min\_{l}\sum\_{k}d(\pi(k),\tau(k)+l)<n/3,
+so there exists an ”obvious pointer” l\in\mathbb{Z}/n such that
+|\{p:\pi^{-1}(p)\neq\tau^{-1}(p-l)\}|<n/3.
+We denote the set of ”positions of different tiles” by
+
+|  |  |  |
+| --- | --- | --- |
+|  | D:=\{p:\pi^{-1}(p)\neq\tau^{-1}(p-l)\}. |  |
+
+It is obvious that if an interval J\in\mathcal{J} is disjoint from this set, J\cap D=\emptyset, then we get identical coordinates v\_{|J|,list(\pi^{-1},J)}=v\_{|J|,list(\tau^{-1},J+l)}.
+We also have a partial converse:
+
+{obs}
+
+[some important coordinates have not been collapsed]
+.
+  
+If \emptyset\neq J\cap D\neq J
+then v\_{|J|,list(\pi^{-1},J)}\neq v\_{|J^{\prime}|,list(\tau^{-1},J^{\prime})}
+for all J^{\prime}\in\mathcal{J}.
+
+###### Proof.
+
+Pick p\in J-D and observe that \pi^{-1}(k)=\tau^{-1}(k-l) so the only way we could have v\_{|J|,list(\pi^{-1},J)}=v\_{|J^{\prime}|,list(\tau^{-1},J^{\prime})} was if J^{\prime}=J+l. (This is because in a permutation, each element appears only once.)
+Picking any other point p^{\prime}\in J\cap D, we see that
+v\_{|J|,list(\pi^{-1},J)}\neq v\_{|J|,list(\tau^{-1},J+l)}
+showing the claim.
+∎
+
+We use Observations 5 and 5 to each of the summands in the definition of \Phi\_{2}(\pi) and \Phi\_{2}(\tau).
+
+|  |  |  |
+| --- | --- | --- |
+|  | ||\Phi\_{2}(\pi)-\Phi\_{2}(\tau)||\_{1}\geq\dfrac{1}{n}|\{J|\emptyset\neq J\cap D% \neq J\;and\;0\notin J^{oo}\}|+\dfrac{1}{n}|\{J|\emptyset\neq(J+l)\cap D\neq(J% +l)\;and\;0\notin J^{oo}+l\}| |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \geq\dfrac{1}{4}\left(diam(\{0\}\cup D)+diam(\{-l\}\cup D)\right)\geq\dfrac{1}% {8}diam(\{0,l\}\cup D) |  |

@@ -1,0 +1,79 @@
+###### Proof.
+
+Fix i\in\left\{{0,\dots,n}\right\}. By Proposition 26 it suffices to show that \Gamma/Z\_{i} has a finite-index subgroup K\_{i} containing N/Z\_{i} in which Z(N/Z\_{i}) is central. Since N/Z\_{i} is normal in \Gamma/Z\_{i} and Z(N/Z\_{i}) is characteristic in N/Z\_{i}, we have Z(N/Z\_{i})\lhd\Gamma/Z\_{i}. So \Gamma/Z\_{i} acts by conjugation on Z(N/Z\_{i}), and we call this action \rho\_{1}. If \rho\_{1}:\Gamma/Z\_{i}\to\text{Aut}(Z(N/Z\_{i})) has finite image, then we may take K\_{i}=\ker\rho\_{1} to finish. Since N/Z\_{i}\leq\ker\rho\_{1}, we may project \rho\_{1} to an action \rho\_{2} of \Delta=(\Gamma/Z\_{i})/(N/Z\_{i}) on Z(N/Z\_{i}). Then it suffices to show that \rho\_{2}:\Delta\to\text{Aut}(Z(N/Z\_{i})) has finite image because \text{im }\rho\_{2}=\text{im }\rho\_{1}.
+
+Recall that Z(N/Z\_{i})=\mathbb{Z}^{d} for some d\leq r. So \text{Aut}(Z(N/Z\_{i}))=\text{GL}(d,\mathbb{Z}), and the latter group naturally embeds into \text{GL}(d,\mathbb{R}). Composing \rho\_{2} with this inclusion yields a homomorphism \rho\_{3}:\Delta\to\text{GL}(d,\mathbb{R}), and it suffices to show that \rho\_{3} has bounded image. From (5), \Delta is finitely generated because F is finite and the lattice \Lambda is finitely generated. Thus by Selberg’s lemma, \rho\_{3}(\Delta) has a finite-index subgroup which is torsion-free. This subgroup has pre-image \Delta^{\prime}\leq\Delta which also has finite index. Let \rho\_{4}:\Delta^{\prime}\to\text{GL}(d,\mathbb{R}) be the restriction \rho\_{3}|\_{\Delta^{\prime}}, and note that since [\Delta:\Delta^{\prime}]<\infty, it suffices to show that \rho\_{4} has bounded image. Since \rho\_{4}(\Delta^{\prime}) is torsion-free and F is finite, we have that \Delta^{\prime}\cap F\subset\ker\rho\_{4}. So \rho\_{4} projects to a homomorphism \rho\_{5}:\Delta^{\prime}/(\Delta^{\prime}\cap F)\to\text{GL}(d,\mathbb{R}). Since \text{im}\ \rho\_{5}=\text{im}\ \rho\_{4}, it suffices to show that \rho\_{5} has bounded image.
+
+Now, \Delta^{\prime}/(\Delta^{\prime}\cap F) is isomorphic to (\Delta^{\prime}F)/F, and since \Delta^{\prime} has finite index in \Delta, (\Delta^{\prime}F)/F has finite index in \Delta/F=\Lambda. Thus, \Delta^{\prime}/(\Delta^{\prime}\cap F) is a lattice in \text{Isom}(X). The hypothesis on X implies \text{Isom}(X) has property (T). Hence, we may apply Theorem 24 to \rho\_{5} to obtain representations \pi\_{1}:\text{Isom}(X)\to\text{GL}(d,\mathbb{R}) and \pi\_{2}:\Delta^{\prime}/(\Delta^{\prime}\cap F)\to\text{GL}(d,\mathbb{R}), where \pi\_{2} has bounded image, such that \rho\_{5}(\gamma)=\pi\_{1}(\gamma)\pi\_{2}(\gamma) for \gamma\in\Delta^{\prime}/(\Delta^{\prime}\cap F). If \dim\text{Isom}(X)>\Sigma(N)\geq d, so that the simple group \text{Isom}(X) has larger dimension than \text{GL}(d,\mathbb{R}), then \pi\_{1} must be trivial, in which case \rho\_{5}=\pi\_{2} has bounded image.
+∎
+
+###### Remark 28.
+
+\dim\text{Sp}(n,1)=2n^{2}+5n+3 and \dim\text{F}\_{4(-20)}=52.
+
+## References
+
+* [BdV08]
+  B. Bekka, P. de la Harpe, and A. Valette (2008)
+  Kazhdan’s property (t).
+   Cambridge University Press.
+  Cited by: §6.
+* [DK18]
+  C. Druţu and M. Kapovich (2018)
+  Geometric group theory.
+   American Mathematical Society.
+  Cited by: §2,
+  Lemma 8.
+* [FAR97]
+  B. Farb (1997)
+  The quasi-isometry classification of lattices in semisimple lie groups.
+  Mathematical Research Letters 4,  pp. 705–717.
+  Cited by: §1.1.
+* [FH12]
+  D. Fisher and T. Hitchman (2012)
+  Strengthening Kazhdan’s property (T) by Bochner methods.
+  Geometriae Dedicata 160 (1),  pp. 333–364.
+  Cited by: §1.2,
+  Theorem 24.
+* [FLS15]
+  R. Frigerio, J. Lafont, and A. Sisto (2015)
+  Rigidity of high dimensional graph manifolds.
+  Astérisque.
+  Cited by: §1.1,
+  §4,
+  Remark 23,
+  Lemma 5.
+* [GRO81]
+  M. Gromov (1981)
+  Groups of polynomial growth and expanding maps (with an appendix by Jacques Tits).
+  Inst. Hautes Études Sci. Publ. Math. 53,  pp. 53–73.
+  External Links: ISSN 0073-8301,1618-1913,
+  Link,
+  MathReview (J. A. Wolf)
+  Cited by: §1.1.
+* [GRO83]
+  M. Gromov (1983)
+  Infinite groups as geometric objects.
+  In Proceedings of the ICM Warsaw,
+  Cited by: §1.1.
+* [KKL98]
+  M. Kapovich, B. Kleiner, and B. Leeb (1998)
+  Quasi-isometries and the de Rham decomposition.
+  Topology 37 (6),  pp. 1193–1211.
+  Cited by: §1.2,
+  §3,
+  Proposition 9.
+* [KOS69]
+  B. Kostant (1969)
+  On the existence and irreducibility of certain series of representations.
+  Bull. Amer. Math. Soc. 75,  pp. 627–642.
+  Cited by: §6.
+* [MAL51]
+  A. I. Malcev (1951)
+  On a class of homogeneous spaces.
+  Amer. Math. Soc. Translation.
+  Cited by: §6.
+* [RAG72]
+  M. S. Raghunathan (1972)
+  Discrete subgroups of lie groups.
+  Vol. 3, Springer.

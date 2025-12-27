@@ -1,0 +1,67 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle>(k-1)|S|\quad\mbox{(since $k\geq 5$)}, |  |
+
+a contradiction. This completes the proof of Claim 2.
+
+By Claim 2, we have |V(G)-V(C\_{1})|\leq k-1.
+
+Suppose that \sum\_{i=3}^{q}|V(C\_{i})|\geq 1. For any x\in V(\cup\_{i=2}^{q}C\_{i}), it follows that d\_{G-f}(x)\leq k-3. Recall that G contains exactly one vertex of degree k-2. This implies that \sum\_{i=2}^{q}|V(C\_{i})|\leq 2, which further yields q=3 and |V(C\_{2})|=1.
+Then for x\in V(C\_{2}\cup C\_{3}),
+
+|  |  |  |
+| --- | --- | --- |
+|  | d\_{G}(x)\leq|S|+1\leq 3, |  |
+
+which contradicts the fact that G contains exactly one vertex of degree k-2.
+
+We proceed by considering the case where \sum\_{i=3}^{q}|V(C\_{i})|=0. This immediately implies that q=2 and |S|=1.
+By Claim 1, G is 2-connected. Hence f\in E\_{G}(V(C\_{1}),V(C\_{2})).
+If |V(C\_{2})|\geq 3, then there exist two vertices, say x\_{1},x\_{2}\in V(C\_{2})-V(f) such that d\_{G}(x\_{i})\leq k-2, which contradicts the fact that G contains exactly one vertex of degree k-2. We thus conclude that |V(C\_{2})|=1. Then for x\in V(C\_{2}),
+d\_{G}(x)\leq 2, which once again contradicts the condition that \delta(G)\geq 3.
+This completes the proof. \Box
+
+###### Lemma 11
+
+Let G be a simple graph with |V(G)|=6 and degree sequence (3,3,3,3,2,2). Then G has a Hamiltonian cycle.
+
+Proof. Let V(G)=\{w\_{1},w\_{2},w\_{3},w\_{4},u,v\}, where d\_{G}(u)=d\_{G}(v)=2 and d\_{G}(w\_{i})=3 for i\in[4].
+Without loss of generality, assume that uw\_{1},vw\_{2}\in E(G).
+
+Firstly, we consider the case where uv\in E(G).
+The subgraph G\_{1}=G-\{u,v\} has a degree sequence of (3,3,2,2). Then G\_{1} has a path P of length three that connects w\_{1} and w\_{2}. The edge-set (E(P)\cup\{uw\_{1},vw\_{2},uv\} forms a Hamiltonian cycle of G.
+
+Next, we consider the case where uv\notin E(G). If G-\{u,v\} is a 4-cycle, denoted as w\_{1}w\_{2}w\_{3}w\_{4}, then by symmetry, we may assume that either N\_{G}(u)=\{w\_{1},w\_{3}\} or N\_{G}(u)=\{w\_{1},w\_{4}\}. In either of these two cases, G has a Hamiltonian cycle.
+Otherwise, G-\{u,v\} is a not 4-cycle, which implies that N\_{G}(u)\cap N\_{G}(v)\neq\emptyset. Note that N\_{G}(u)\neq N\_{G}(v). So, we can assume that w\_{3}\in N\_{G}(u)\cap N\_{G}(v). Without loss of generality, suppose that N\_{G}(u)=\{w\_{1},w\_{3}\} and N\_{G}(v)=\{w\_{2},w\_{3}\}. It follows that the edge set E(G)-\{w\_{4}w\_{3},w\_{1}w\_{2}\} induces a Hamiltonian cycle of G.
+This completes the proof. \Box
+
+## 3 Proof of Theorem 5
+
+By (1), we have ar\_{3}(n,\mathcal{F}\_{k+1})\geq f(n,k)+2. Therefore the lower bound is followed. Next we assume k\geq 3. Let c(n,k):=f(n,k)+2.
+
+For the upper bound, we prove it by contradiction. Suppose that the result does not hold. Then there exists an edge-coloring c:E(K^{3}\_{n})\rightarrow[c(n,k)] such that c is surjective and the colored hypergraph denoted by \mathcal{G} contains no rainbow \mathcal{F}\_{k+1}. By Lemma 9, we can denote a set of 2k+6 disjoint good pairs in \mathcal{G} by Q=\{\{u\_{1},v\_{1}\},\ldots,\{u\_{2k+6},v\_{2k+6}\}\}, that is z\_{c}(u\_{i},v\_{i})\leq 3k for 1\leq i\leq 2k+6.
+Define a color set
+
+|  |  |  |
+| --- | --- | --- |
+|  | C\_{Q}=\cup\_{p\in Q}\{c(T)\ |\ T\subseteq\mathcal{G},p\subseteq T\} |  |
+
+and let q=|C\_{Q}|. Then by Lemma 9, we have the following inequality
+
+|  |  |  |
+| --- | --- | --- |
+|  | q\leq 6k^{2}+18k. |  |
+
+Let G be a rainbow subgraph of \mathcal{G} with c(n,k)-q edges and vertex set [n] such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \{c(e)\ |\ e\in E(G)\}\cap C\_{Q}=\emptyset. |  |
+
+Claim 1. G is \mathcal{F}\_{k}-free.
+
+Otherwise, suppose that G contains a copy of \mathcal{F}\_{k} denoted by \mathcal{F} with center u. Since |Q|\geq 2k+6 and |V(\mathcal{F})|=2k+1, there exists \{u\_{i},v\_{i}\}\in Q such that \{u\_{i},v\_{i}\}\cap V(\mathcal{F})=\emptyset. By the definition of G, E(\mathcal{F})\cup\{u,u\_{i},v\_{i}\} induces a rainbow copy of \mathcal{F}\_{k+1}, contradicting the hypothesis. This completes the proof of Claim 1.
+
+Let w:G\times P\rightarrow R be a weighted function defined as in Section 2. And we denote W\_{v}=\sum\_{p\in N(v)}w(v\cup p,p). Next we discuss two cases.
+
+Case 1. k is odd.

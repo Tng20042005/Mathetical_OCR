@@ -1,0 +1,56 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle{g}\circ\vartheta(\theta\circ{h}(x)+\theta\circ{h}(y)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle{g}\circ\vartheta(k(\theta(x)+\theta(y))+2b) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta\circ{(h+b)^{-1}}\circ\vartheta^{-1}\circ\vartheta(k(% \theta(x)+\theta(y))+2b) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\frac{k(\theta(x)+\theta(y))+2b-2b}{k}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\theta(x)+\theta(y)). |  |
+
+###### Proposition 3.2.
+
+Let \theta:[0,1]\rightarrow[0,+\infty] be a function with both \theta(x^{-}) and \theta(x^{+}) existing for every x\in[0,1] and \vartheta:[0,+\infty]\rightarrow[0,1] be a function. If (\theta,\vartheta) is an additive generator pair of the overlap function O\_{\theta,\vartheta}:[0,1]^{2}\rightarrow[0,1] given by O\_{\theta,\vartheta}(x,y)=\vartheta(\theta(x)+\theta(y)), then (\theta\circ{h},\vartheta\circ{g}) is also an additive generator pair of O\_{\theta,\vartheta} when the function h:[0,1]\rightarrow[0,1] satisfies \theta\circ{h}(x)=c\theta(x)+m with certain constants c,m\in\mathbb{R}, c>0 and m\geq 0 and, g:[2m,+\infty]\rightarrow[0,+\infty] is defined by g(x)=\frac{x-2m}{c} with certain constants c,m\in\mathbb{R}, c>0 and m\geq 0.
+
+Proof.
+It suffices to check that \vartheta\circ{g}(\theta\circ{h}(x)+\theta\circ{h}(y))=\vartheta(\theta(x)+%
+\theta(y)). In fact,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\vartheta\circ{g}(\theta\circ{h}(x)+\theta\circ{h}(y)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta\circ{g}(c(\theta(x)+\theta(y))+2m) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\frac{c(\theta(x)+\theta(y))+2m-2m}{c}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle= | \displaystyle\vartheta(\theta(x)+\theta(y)), |  |
+
+i.e., (\theta\circ{h},\vartheta\circ{g}) is an additive generator pair of O\_{\theta,\vartheta}.
+
+Generally, the analytical expression of \theta\circ{h} in Proposition 3.2 should be \theta\circ{h}(x)=c\theta(x)+m for any x\in[0,1].
+
+###### Example 3.2.
+
+*Consider the functions \theta:[0,1]\rightarrow[0,+\infty] and \vartheta:[0,+\infty]\rightarrow[0,1] defined by*
+
+|  |  |  |
+| --- | --- | --- |
+|  | \theta(x)=\begin{cases}-\mbox{ln}x&\mbox{if}\ x\neq 0,\\ +\infty&\mbox{if}\ x=0\end{cases} |  |
+
+*and*
+
+|  |  |  |
+| --- | --- | --- |
+|  | \vartheta(x)=\begin{cases}0&\mbox{if}\ x=+\infty,\\ e^{-x}&\mbox{if}\ x\in[0,+\infty),\end{cases} |  |
+
+*respectively. It is easy to check that (\theta,\vartheta) is an additive generator pair of the overlap function O\_{\theta\,\vartheta}(x,y)=xy.*

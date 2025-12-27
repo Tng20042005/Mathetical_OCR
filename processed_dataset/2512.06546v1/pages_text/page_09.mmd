@@ -1,0 +1,37 @@
+Assume that there is an edge from \frac{r}{s} to \frac{x}{y} in F\_{u,L}. We have to find an element of \Gamma\_{0}\left(L,M\right), transferring from \left(\begin{array}[]{ccc}1&u\\
+0&L\end{array}\right) to \left(\begin{array}[]{ccc}r&x\\
+s&y\end{array}\right). Therefore, matrix T\_{0}=\left(\begin{array}[]{ccc}1+aL&b\\
+c&1+dM\end{array}\right) can be selected as an element of \Gamma\_{0}\left(L,M\right). Thus, the transform is defined as
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\begin{array}[]{ccc}1+aL&b\\ c&1+dM\end{array}\right)\left(\begin{array}[]{ccc}1&u\\ 0&L\end{array}\right)=\left(\begin{array}[]{ccc}r&x\\ s&y\end{array}\right). |  |
+
+At the same time, T\_{0}\left(\frac{1}{0}\right)=\frac{r}{s} and T\_{0}\left(\frac{u}{L}\right)=\frac{x}{y} is provided. Hence, r\equiv 1\left(\mod L\right) and s\equiv 0\left(\mod L\right) are reached. Moreover, the matrix multiplication
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\begin{array}[]{ccc}1+aL&u(1+aL)+bL\\ c&uc+(1+dM)L\end{array}\right)=\left(\begin{array}[]{ccc}r&x\\ s&y\end{array}\right) |  |
+
+is obtained. r=1+aL and s=c can be directly seen. Moreover,
+x\equiv\mp ur\left(modL\right) is obtained for equation x=u\left(1+aL\right)+bL=ur+bL and y\equiv\mp us\left(modL\right) is obtained for equation y=uc+\left(1+dM\right)L=us+\left(1+dM\right)L. ry-sx=L can be easily seen.
+
+By contrast, assume that r\equiv 1\left(\mod L\right), s\equiv 0\left(\mod L\right), x\equiv\mp ur\left(\mod L\right) and y\equiv\mp us\left(\mod L\right) are provided. We have to demonstrate that there is an edge. Hence, x=ur+aL is obtained from x\equiv\mp ur\left(\mod L\right) and y=us+cL is obtained from y\equiv\mp us\left(\mod L\right), for a,c\in\mathbb{Z}. Moreover, we can write the following equation:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left(\begin{array}[]{ccc}r&a\\ s&c\end{array}\right)\left(\begin{array}[]{ccc}1&u\\ 0&L\end{array}\right)=\left(\begin{array}[]{ccc}r&ur+aL\\ s&us+cL\end{array}\right) |  |
+
+Since r\equiv 1\left(\mod L\right) and s\equiv 0\left(\mod L\right), c\equiv 1\left(\mod L\right) is obtained from rc-sa=1.
+Consequently, \left(\begin{array}[]{ccc}r&a\\
+s&c\end{array}\right) is an element of \Gamma\_{0}\left(L,M\right).
+∎
+
+###### Theorem 5.
+
+\Gamma\_{0}\left(L,M\right) transitively permutes the vertices and the edges on F\_{u,L}.
+
+###### Proof.
+
+At first, let us present that \Gamma\_{0}\left(L,M\right) permutes the vertices. Here, assume that the vertices \frac{u\_{1}}{L} and \frac{u\_{2}}{L} are on orbit \left(\begin{array}[]{ccc}1\\
+0\end{array}\right) and \approx is an invariant equivalence relation. Due to transitive action, there is an T\_{0}\in\Gamma\_{0}\left(L,M\right) providing T\_{0}\left(\frac{u\_{1}}{L}\right)=\frac{u\_{2}}{L}. Then, T\_{0}\left(\frac{u\_{1}}{L}\right)\approx T\_{0}\left(\infty\right) is provided for \frac{u\_{1}}{L}\approx\infty. Moreover, \frac{u\_{2}}{L}\approx T\_{0}\left(\infty\right) is obtained.

@@ -1,0 +1,1107 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Minuscule Coxeter Dressians</title>
+<!--Generated on Thu Dec 11 22:15:54 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="ltx-amsart.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line ltx_leqno">
+<h1 class="ltx_title ltx_title_document">Minuscule Coxeter Dressians</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Andreas Gross
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">Institut für Mathematik, Goethe–Universität Frankfurt,
+60325 Frankfurt am Main, Germany
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:gross@math.uni-frankfurt.de">gross@math.uni-frankfurt.de</a>
+</span></span></span></span>
+<span class="ltx_author_before">, </span><span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Kevin Kühn
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">Technische Universität Berlin,
+10587 Berlin, Germany
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:kuehn@math.tu-berlin.de">kuehn@math.tu-berlin.de</a>
+</span></span></span></span>
+<span class="ltx_author_before"> and </span><span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Dante Luber
+</span><span class="ltx_author_notes"><span>
+<span class="ltx_contact ltx_role_address">Universität Paderborn,
+33098 Paderborn, Germany &amp; Queen Mary University of London,
+E14NS London, United Kingdom
+</span>
+<span class="ltx_contact ltx_role_email"><a href="mailto:dluber@math.uni-paderborn.de">dluber@math.uni-paderborn.de</a>
+</span></span></span></span>
+</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+<p class="ltx_p">In this extended abstract, we study special tropical prevarieties which we call Coxeter Dressians. They arise from equations capturing a generalization of valuated symmetric basis exchange for Coxeter matroids. In particular, we study subdivisions of the associated Coxeter matroid polytopes. We show that the subdivisions induced by points of the Coxeter Dressian consist of cells which are strong Coxeter matroidal. This generalizes well-known results in type <span id="m1" class="ltx_Math">A</span> to other Lie types. Finally, we implement explicit computations of Coxeter Dressians in <span class="ltx_text ltx_font_typewriter">OSCAR</span>.</p>
+</div>
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>
+<div id="p1" class="ltx_para">
+<p class="ltx_p">matrix
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>patterns
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>matrix
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>positioning
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>decorations.pathmorphing
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>cd
+<span class="ltx_ERROR undefined">\usetikzlibrary</span>trees
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1. </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Tropicalization is a process that famously translates algebro-geometric objects into combinatorial ones. Importantly, it is sensitive to chosen coordinates and embeddings of given varieties. Systems of polynomial equations are ubiquitous throughout the disciplines of algebra, geometry, and adjacent fields. In this project, we are interested in tropicalizing so-called <em class="ltx_emph ltx_font_italic">strong exchange equations</em>, which appear naturally in representation theory. The spaces they cut out are known as <em class="ltx_emph ltx_font_italic">generalized flag varieties</em>.</p>
+</div>
+<div id="S1.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">One such instance is the Grassmann–Plücker equations. It is well-known, that these equations cut out the Grassmannian, which parametrizes subspaces of a given vector space. Its tropical counterpart, the Dressian, parametrizes tropical linear spaces, and is obtained by explicitly tropicalizing the equations. The study of tropical linear spaces, going back to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Tropical linear spaces" class="ltx_ref">18</a>]</cite>, has been proven to be one of the most fruitful endeavors in tropical geometry, with numerous connections to combinatorics, algebra, and biology.</p>
+</div>
+<div id="S1.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">When one studies tropical linear spaces, or valuated matroids, in the background of the theory one always finds the root system <span id="S1.p3.m1" class="ltx_Math">A_{n}</span>. An example is the Gel’fand–Serganova theorem, or Speyer’s characterization of valuated matroids <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Tropical linear spaces" class="ltx_ref">18</a>]</cite> of valuations inducing matroidal subdivision of the hypersimplex. The goal of this paper is to go beyond the type <span id="S1.p3.m2" class="ltx_Math">A_{n}</span> case, and introduce valuated matroids as well as Dressians for different root systems.</p>
+</div>
+<div id="S1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Coxeter matroids are generalizations of matroids which arise as collections of cosets in <span id="S1.p4.m1" class="ltx_Math">W/P</span>, where <span id="S1.p4.m2" class="ltx_Math">W</span> is a reflection group of any Lie type, and <span id="S1.p4.m3" class="ltx_Math">P</span> is a standard parabolic subgroup. We study Coxeter matroids which possess the <em class="ltx_emph ltx_font_italic">strong exchange property</em>, which captures the symmetric exchange property of usual matroids. We further restrict to a special subclass, those Coxeter matroids which are said to be <em class="ltx_emph ltx_font_italic">minuscule</em>. Minuscule strong exchange Coxeter matroids are the most faithful incarnation of usual matroids outside Lie type <span id="S1.p4.m4" class="ltx_Math">A</span>.</p>
+</div>
+<div id="S1.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">For us, the relevant tropical prevarieties are defined by the equations which recently appeared in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Quadratic exchange equations for coxeter matroids" class="ltx_ref">6</a>]</cite>. We call the prevarieties of interest <em class="ltx_emph ltx_font_italic">Coxeter Dressians</em>.
+Let <span id="S1.p5.m1" class="ltx_Math">\mathbb{T}\coloneqq\mathbb{R}\cup\{\infty\}</span> be the semifield of tropical numbers with <span id="S1.p5.m2" class="ltx_Math">\min</span>-notation. For minuscule <span id="S1.p5.m3" class="ltx_Math">W/P</span>, the Coxeter Dressian is denoted <span id="S1.p5.m4" class="ltx_Math">\operatorname{Dr}(W,P)\subseteq\mathbb{T}^{W/P}</span>. For each <span id="S1.p5.m5" class="ltx_Math">W/P</span>, these defining equations are obtained by tropicalizing polynomials which generate the ideal of the related generalized flag variety <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Quadratic exchange equations for coxeter matroids" class="ltx_ref">6</a>]</cite>. When feasible, we compute and study concrete examples of these prevarieties. Every Coxeter matroid admits an encoding as a polytope. We study the tropical geometry associated with regular polyhedral subdivisions into cells which are again Coxeter matroidal. Our main theorem is as follows.
+</p>
+</div>
+<div id="S1.Thmmaintheorem1" class="ltx_theorem ltx_theorem_maintheorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem A</span></span><span class="ltx_text ltx_font_bold"> </span>(Theorem <a href="#S3.Thmtheorem3" title="Theorem 3.3. ‣ 3. The Coxeter Dressian ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S1.Thmmaintheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S1.Thmmaintheorem1.p1.m1" class="ltx_Math">(W,P)</span> be minuscule, and <span id="S1.Thmmaintheorem1.p1.m2" class="ltx_Math">\mu\in\operatorname{Dr}(W,P)</span> be a point in the corresponding Coxeter Dressian. Then <span id="S1.Thmmaintheorem1.p1.m3" class="ltx_Math">\mu</span> induces a subdivision of its matroid polytope into strong Coxeter matroid polytopes.</span></p>
+</div>
+</div>
+<div id="S1.p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">Theorem <a href="#S1.Thmmaintheorem1" title="Theorem A (Theorem 3.3). ‣ 1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a> holds for all Lie types admitting minuscule matroids. That is, for types <span id="S1.p6.m1" class="ltx_Math">A,B,C,D,E_{6},E_{7}</span>. We show that, in previously unknown cases for types <span id="S1.p6.m2" class="ltx_Math">D</span> and <span id="S1.p6.m3" class="ltx_Math">E_{6}</span>, the converse holds. We give a counter example to the converse for type <span id="S1.p6.m4" class="ltx_Math">B</span>. For <span id="S1.p6.m5" class="ltx_Math">E_{7}</span>, we show that a proper subset of the strong exchange equations is sufficient to detect strong matroidal subdivisions.</p>
+</div>
+<div id="S1.p7" class="ltx_para ltx_noindent">
+<p class="ltx_p">Simplifying systems equations can be crucial for explicit computations. In the <span id="S1.p7.m1" class="ltx_Math">A_{n}</span> case, it is well-known that the <span id="S1.p7.m2" class="ltx_Math">3</span>-term Grassmann–Plücker relations imply the other relations <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="Valuated matroids" class="ltx_ref">10</a>, <a href="#bib.bib5" title="Tropical linear spaces" class="ltx_ref">18</a>]</cite>. A similar statement is known in the type <span id="S1.p7.m3" class="ltx_Math">D_{n}</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Isotropical linear spaces and valuated Delta-matroids" class="ltx_ref">16</a>]</cite>. We prove the type <span id="S1.p7.m4" class="ltx_Math">B_{n}</span> analog.</p>
+</div>
+<div id="S1.Thmmaintheorem2" class="ltx_theorem ltx_theorem_maintheorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem B</span></span><span class="ltx_text ltx_font_bold"> </span>(Theorem <a href="#S4.Thmtheorem9" title="Theorem 4.9. ‣ 4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.9</span></a>)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S1.Thmmaintheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S1.Thmmaintheorem2.p1.m1" class="ltx_Math">\mu\in\mathbb{T}^{2^{[n]}}</span>, such that <span id="S1.Thmmaintheorem2.p1.m2" class="ltx_Math">\operatorname{supp}(\mu)</span> is a strong Coxeter matroid of type <span id="S1.Thmmaintheorem2.p1.m3" class="ltx_Math">B_{n}</span>. Then <span id="S1.Thmmaintheorem2.p1.m4" class="ltx_Math">\mu</span> belongs to the Coxeter Dressian if and only if <span id="S1.Thmmaintheorem2.p1.m5" class="ltx_Math">\mu</span> satisfies the <em class="ltx_emph ltx_font_upright"><span id="S1.Thmmaintheorem2.p1.m6" class="ltx_Math">4</span>-term strong exchange equations</em>.</span></p>
+</div>
+</div>
+<div id="S1.p8" class="ltx_para ltx_noindent">
+<p class="ltx_p">As the strong exchange equations reflect the structure of the associated Coxeter matroid polytopes, it is natural to study Coxeter Dressians and valuations via direct computation. Using <span class="ltx_text ltx_font_typewriter">OSCAR</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib28" title="OSCAR – Open Source Computer Algebra Research system, Version 1.6.0" class="ltx_ref">14</a>]</cite>, we implement code to compute the polytopes and equations, test if a height function is contained in the Coxeter Dressian, and determine if a subdivision is Coxeter matroidal. We directly compute special cases of Coxeter Dressians in type <span id="S1.p8.m1" class="ltx_Math">B_{n}</span> for <span id="S1.p8.m2" class="ltx_Math">n\in\{3,4\}</span>, and type <span id="S1.p8.m3" class="ltx_Math">D_{n}</span> for <span id="S1.p8.m4" class="ltx_Math">n\in\{5,6\}</span>. Furthermore, we compare these prevarieties to the secondary fans of the relevant polytopes, and compute the <span id="S1.p8.m5" class="ltx_Math">f</span>-vectors. Finally, we perform an exhaustive computation to verify that strong exchange holds for all <span id="S1.p8.m6" class="ltx_Math">E_{7}</span> minuscule Coxeter matroids. Our computations can be found at the following <span class="ltx_text ltx_font_typewriter">github</span> repository:</p>
+</div>
+<div id="S1.p9" class="ltx_para ltx_align_center">
+<p class="ltx_p"><a href="https://github.com/danteluber/strong_coxeter_dressians" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://github.com/danteluber/strong_coxeter_dressians</a></p>
+</div>
+<div id="S1.p10" class="ltx_para ltx_noindent">
+<p class="ltx_p">For this extended abstract, we assume some knowledge of regular subdivisions and secondary fans. The standard reference is <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="Triangulations" class="ltx_ref">9</a>]</cite>. For all aspects of tropical geometry, we point to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="Essentials of tropical combinatorics" class="ltx_ref">12</a>, <a href="#bib.bib21" title="Introduction to tropical geometry" class="ltx_ref">13</a>]</cite>. Our reference for (Coxeter) matroid theory is <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Coxeter matroids" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<section id="S1.SSx1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">Acknowledgments</h3>
+
+<div id="S1.SSx1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The authors would like to thank Kieran Calvert, Aram Derenjian, Alex Fink, Michael Joswig, Igor Makhlin, Lars Kastner, Ben Smith, and Martin Ulirsch for helpful discussions at various stages of the project.
+Andreas Gross has received funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) TRR 326 <em class="ltx_emph ltx_font_italic">Geometry and Arithmetic of Uniformized Structures</em>, project number 444845124 and from the Marie-Skłodowska-Curie-Stipendium Hessen (as part of the HESSEN HORIZON initiative).
+Kevin Kühn received support by Deutsche Forschungsgemeinschaft (DFG) through "Symbolic Tools in Mathematics and their Application" (TRR 195, project ID 286237555).
+Dante Luber is supported by the DFG Sachbeihilfe "Rethinking tropical linear algebra: Buildings, bimatroids, and applications", (SPP 2458, project ID 539867663), within Combinatorial Synergies, and also received support from the Engineering and Physical Sciences Research Council (grant number EP/X001229/1).
+</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2. </span>Coxeter Matroids and their polytopes</h2>
+
+<div id="S2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We defer to Chapter 5 of <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Coxeter matroids" class="ltx_ref">3</a>]</cite> for the formal definitions concerning (classifications of) root systems, reflection groups, and general cryptomorphisms for Coxeter matroids. However, we remind the reader that <em class="ltx_emph ltx_font_italic">root system</em> are special collections of vectors corresponding to mirrors over hyperplanes in <span id="S2.p1.m1" class="ltx_Math">\mathbb{R}^{n}</span> with deep connections to representation theory. Any root system <span id="S2.p1.m2" class="ltx_Math">\Phi</span> gives rise to a <em class="ltx_emph ltx_font_italic">Weyl group</em> <span id="S2.p1.m3" class="ltx_Math">W</span>, acting on Euclidean space as a finite reflection group. Any choice of <em class="ltx_emph ltx_font_italic">simple roots</em> <span id="S2.p1.m4" class="ltx_Math">\Phi^{s}=\{s_{1},\dots,s_{n}\}</span> then yields generators of <span id="S2.p1.m5" class="ltx_Math">W</span>, i.e., <span id="S2.p1.m6" class="ltx_Math">W=\langle s_{1},\dots,s_{n}\rangle</span>. When we refer to a Weyl group, we implicitly assume the datum of its root system is known.
+Finally, every irreducible root system is uniquely classified by type <span id="S2.p1.m7" class="ltx_Math">A_{n},B_{n},C_{n},\dots</span> (etc). So when we say (for example) <span id="S2.p1.m8" class="ltx_Math">W=W(B_{n})</span>, we mean that <span id="S2.p1.m9" class="ltx_Math">W</span> is a reflection group associated with the type <span id="S2.p1.m10" class="ltx_Math">B_{n}</span> root system, and that <span id="S2.p1.m11" class="ltx_Math">W</span> is generated by <span id="S2.p1.m12" class="ltx_Math">n</span> simple reflections within <span id="S2.p1.m13" class="ltx_Math">\Phi^{s}</span>.</p>
+</div>
+<div id="S2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Now, let <span id="S2.p2.m1" class="ltx_Math">W=\langle s_{1},\dots,s_{n}\mid s_{i}\in\Phi^{s}\rangle</span>, and consider <span id="S2.p2.m2" class="ltx_Math">P=\langle s_{i_{1}},\dots,s_{i_{k}}\rangle</span>. Let <span id="S2.p2.m3" class="ltx_Math">v\in V\setminus\{0\}</span> be such that <span id="S2.p2.m4" class="ltx_Math">\operatorname{stab}_{W}(v)=P</span>. That is, <span id="S2.p2.m5" class="ltx_Math">\sigma\cdot v=v</span> if and only if <span id="S2.p2.m6" class="ltx_Math">\sigma\in P</span>. Then we identify every element of the orbit <span id="S2.p2.m7" class="ltx_Math">W\cdot v</span> with a unique coset in <span id="S2.p2.m8" class="ltx_Math">W/P</span>. For any <span id="S2.p2.m9" class="ltx_Math">\mathcal{M}\subseteq W/P</span>, we generate the polytope</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex1.m1" class="ltx_Math">\Delta(\mathcal{M})=\mathrm{conv}(\{\sigma\cdot v\mid\sigma P\in\mathcal{M}\}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The vertices of <span id="S2.p2.m10" class="ltx_Math">\Delta(W/P)</span> are identified with the cosets, and every edge of <span id="S2.p2.m11" class="ltx_Math">\Delta(W/P)</span> is parallel to an element of <span id="S2.p2.m12" class="ltx_Math">\Phi</span>. More generally, <span id="S2.p2.m13" class="ltx_Math">\mathcal{M}\subseteq W/P</span> is a <em class="ltx_emph ltx_font_italic">Coxeter matroid</em> if every edge of <span id="S2.p2.m14" class="ltx_Math">\Delta(\mathcal{M})</span> is parallel to an element of <span id="S2.p2.m15" class="ltx_Math">\Phi</span>. Throughout this document, we may interchangeably think of an element <span id="S2.p2.m16" class="ltx_Math">A\in\mathcal{M}</span> as a coset or a vertex of the associated polytope. In line with usual matroid theory, when <span id="S2.p2.m17" class="ltx_Math">\mathcal{M}</span> is a Coxeter matroid, it’s elements will be referred to as <em class="ltx_emph ltx_font_italic">bases</em>.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1. </span>Minuscule Coxeter Matroids and the Strong Exchange Property</h3>
+
+<div id="S2.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <span id="S2.SS1.p1.m1" class="ltx_Math">W</span> be a Weyl group associated to the root system <span id="S2.SS1.p1.m2" class="ltx_Math">\Phi</span>, <span id="S2.SS1.p1.m3" class="ltx_Math">P\leq W</span> parabolic, and <span id="S2.SS1.p1.m4" class="ltx_Math">\mathcal{M}\subseteq W/P</span>. Then <span id="S2.SS1.p1.m5" class="ltx_Math">\mathcal{M}</span> possesses the <em class="ltx_emph ltx_font_italic">strong exchange property</em> if for all <span id="S2.SS1.p1.m6" class="ltx_Math">A,B\in\mathcal{M}</span>, there exists a reflection <span id="S2.SS1.p1.m7" class="ltx_Math">s\in\Phi</span> such that the mirror defined by <span id="S2.SS1.p1.m8" class="ltx_Math">s</span> separates <span id="S2.SS1.p1.m9" class="ltx_Math">A</span> and <span id="S2.SS1.p1.m10" class="ltx_Math">B</span>, and <span id="S2.SS1.p1.m11" class="ltx_Math">sA,sB\in\mathcal{M}</span>. Observe that this definition mimics the symmetric exchange property for usual matroids. Any collection of cosets with the strong exchange property is a Coxeter matroid <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Coxeter matroids" class="ltx_ref">3</a>, Theorem 6.1.2]</cite>, but the converse fails <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Coxeter matroids" class="ltx_ref">3</a>, 4.2.4]</cite>. Finally, the <em class="ltx_emph ltx_font_italic">Bruhat order</em> is a partial ordering on <span id="S2.SS1.p1.m12" class="ltx_Math">W</span> which extends to <span id="S2.SS1.p1.m13" class="ltx_Math">W/P</span>. When the resulting poset is a lattice, then <span id="S2.SS1.p1.m14" class="ltx_Math">P</span>, is said to be <em class="ltx_emph ltx_font_italic">minuscule</em> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="Bruhat lattices, plane partition generating functions, and minuscule representations" class="ltx_ref">15</a>]</cite>. In that case, <span id="S2.SS1.p1.m15" class="ltx_Math">P</span> is always maximal. That is, <span id="S2.SS1.p1.m16" class="ltx_Math">P=P_{r}\coloneqq\langle s_{1},\dots\hat{s}_{r},\dots,s_{n}\rangle</span>.</p>
+</div>
+<div id="S2.Thmtheorem1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S2.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Minuscule parabolic subgroups may also be defined in terms of fundamental weights coming from representation theory. The quotient <span id="S2.Thmtheorem1.p1.m1" class="ltx_Math">\mathbb{G}/\mathbb{P}</span> of a reductive group by a parabolic subgroup is naturally a projective variety. For minuscule representations, the ambient projective space of this variety naturally comes with a basis indexed by the cosets of the Weyl group. This allows one to concretely write equations in explicit coordinates that cut out <span id="S2.Thmtheorem1.p1.m2" class="ltx_Math">\mathbb{G}/\mathbb{P}</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Geometry of /GP. I. Theory of standard monomials for minuscule representations" class="ltx_ref">17</a>]</cite>.</p>
+</div>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2. </span>Set-theoretic Identification of Cosets</h3>
+
+<div id="S2.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In the types <span id="S2.SS2.p1.m1" class="ltx_Math">A_{n-1},B_{n},C_{n},</span> and <span id="S2.SS2.p1.m2" class="ltx_Math">D_{n}</span> with minuscule parabolic <span id="S2.SS2.p1.m3" class="ltx_Math">P</span> one can identify cosets in <span id="S2.SS2.p1.m4" class="ltx_Math">W/P</span> with subsets of <span id="S2.SS2.p1.m5" class="ltx_Math">[n]</span>. We may identify the Weyl group <span id="S2.SS2.p1.m6" class="ltx_Math">W(A_{n-1})</span> with the symmetric group <span id="S2.SS2.p1.m7" class="ltx_Math">S_{n}</span>. The generating set is that of neighbor transpositions <span id="S2.SS2.p1.m8" class="ltx_Math">s_{i}=(i,i+1)</span>, and all <span id="S2.SS2.p1.m9" class="ltx_Math">P_{r}=\langle s_{1},\dots,\hat{s}_{r},\dots,s_{n}\rangle=\operatorname{stab}_{%
+S_{n}}([r])</span> are minuscule. We then identify any coset <span id="S2.SS2.p1.m10" class="ltx_Math">wP_{r}</span> with <span id="S2.SS2.p1.m11" class="ltx_Math">w([r])\in 2^{[n]}</span> for <span id="S2.SS2.p1.m12" class="ltx_Math">w\in S_{n}</span>. Moreover, under this identification, the polytope <span id="S2.SS2.p1.m13" class="ltx_Math">\Delta(A_{n}/P_{r})</span> is identified with the <span id="S2.SS2.p1.m14" class="ltx_Math">(r,n)</span>-hypersimplex <span id="S2.SS2.p1.m15" class="ltx_Math">\Delta(r,n)=\mathrm{conv}\{e_{A}\mid A\in\binom{[n]}{r}\}</span>.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">The Weyl group of <span id="S2.SS2.p2.m1" class="ltx_Math">B_{n}</span> and <span id="S2.SS2.p2.m2" class="ltx_Math">C_{n}</span> is the hyperoctahedral group, i.e., the group of permutations of <span id="S2.SS2.p2.m3" class="ltx_Math">[n]\sqcup-[n]</span> commuting with the involution <span id="S2.SS2.p2.m4" class="ltx_Math">i\mapsto-i</span>. As generators we have <span id="S2.SS2.p2.m5" class="ltx_Math">s_{i}=(i,i+1)(-i,-(i+1))</span> for <span id="S2.SS2.p2.m6" class="ltx_Math">i=1,\dots,n-1</span>, and <span id="S2.SS2.p2.m7" class="ltx_Math">s_{n}=(n,-n)</span>. The only minuscule parabolic subgroup of <span id="S2.SS2.p2.m8" class="ltx_Math">B_{n}</span> is <span id="S2.SS2.p2.m9" class="ltx_Math">P_{n}=\langle s_{1},\dots,s_{n-1}\rangle=\operatorname{stab}_{W(B_{n})}(-[n])</span>. We now identify cosets in <span id="S2.SS2.p2.m10" class="ltx_Math">W(B_{n})/P</span> with subsets of <span id="S2.SS2.p2.m11" class="ltx_Math">[n]</span> via <span id="S2.SS2.p2.m12" class="ltx_Math">wP\mapsto w(-[n])\cap[n]</span>. Hence, the polytope <span id="S2.SS2.p2.m13" class="ltx_Math">\Delta(B_{n}/P_{n})=\mathrm{conv}\{e_{A}-(-\frac{1}{2},\dots,-\frac{1}{2})\mid
+A%
+\in 2^{[n]}\}</span> is exactly the shifted unit <span id="S2.SS2.p2.m14" class="ltx_Math">n</span>-cube.</p>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3. </span>Strong Exchange Equations</h3>
+
+<div id="S2.SS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <span id="S2.SS3.p1.m1" class="ltx_Math">(W,P)</span> be minuscule, and <span id="S2.SS3.p1.m2" class="ltx_Math">\mathcal{M}\subseteq W/P</span>. Let <span id="S2.SS3.p1.m3" class="ltx_Math">\mu_{\mathcal{M}}\in\{0,\infty\}^{W/P}</span> such that <span id="S2.SS3.p1.m4" class="ltx_Math">\mu_{\mathcal{M}}(A)=0</span> if <span id="S2.SS3.p1.m5" class="ltx_Math">A\in\mathcal{M}</span> and <span id="S2.SS3.p1.m6" class="ltx_Math">\mu_{\mathcal{M}}(A)=\infty</span> otherwise. Recently, in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Quadratic exchange equations for coxeter matroids" class="ltx_ref">6</a>]</cite> the authors introduced collections of tropical equations <span id="S2.SS3.p1.m7" class="ltx_Math">\mathcal{F}</span> such that the minimum of <span id="S2.SS3.p1.m8" class="ltx_Math">f\in\mathcal{F}</span> is attained at least twice when evaluated at <span id="S2.SS3.p1.m9" class="ltx_Math">\mu_{\mathcal{M}}</span> if and only if <span id="S2.SS3.p1.m10" class="ltx_Math">\mathcal{M}</span> is a strong Coxeter matroid. These equations are square-free, quadratic, and reflect the polyhedral structure of <span id="S2.SS3.p1.m11" class="ltx_Math">\Delta(W/P)</span>, where the (degree-2)-monomials correspond to pairs of antipodes on a face. These equations are similar in spirit to those studied in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="Matroids over hyperfields" class="ltx_ref">1</a>, <a href="#bib.bib19" title="Matroids over partial hyperstructures" class="ltx_ref">2</a>]</cite>, however the latter works only cover usual matroids, and consider different hyperfields to detect matroidal properties.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3. </span>The Coxeter Dressian</h2>
+
+<div id="S3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In this section, we will introduce valuated Coxeter matroids as well as the spaces parameterizing them. Recall that <span id="S3.p1.m1" class="ltx_Math">\mathbb{T}</span> denotes the tropical <span id="S3.p1.m2" class="ltx_Math">\min</span>-semifield with operations denoted by <span id="S3.p1.m3" class="ltx_Math">\oplus</span> and <span id="S3.p1.m4" class="ltx_Math">\odot</span>.</p>
+</div>
+<div id="S3.Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.Thmtheorem1.p1.m1" class="ltx_Math">W</span> be a Weyl group and <span id="S3.Thmtheorem1.p1.m2" class="ltx_Math">P</span> a minuscule parabolic subgroup. Let <span id="S3.Thmtheorem1.p1.m3" class="ltx_Math">\mathcal{F}</span> be the collection of associated strong exchange equations (see Equations
+<a href="#S4.E3" title="(3) ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>,
+<a href="#S4.E4" title="(4) ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>,
+<a href="#S4.E5" title="(5) ‣ 4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>,
+<a href="#S4.E6" title="(6) ‣ 4.5. Type E6 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>,
+<a href="#S4.E7" title="(7) ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>). The <em class="ltx_emph ltx_font_italic">(strong) Coxeter Dressian</em> of <span id="S3.Thmtheorem1.p1.m4" class="ltx_Math">W/P</span> is the tropical prevariety</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex2.m1" class="ltx_Math">\text{Dr}(W,P)=\bigcap_{f\in\mathcal{F}}V^{\operatorname{trop}}(f)\subseteq%
+\mathbb{T}^{W/P}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will call points <span id="S3.Thmtheorem1.p1.m5" class="ltx_Math">\mu\in\operatorname{Dr}(W,P)</span> <em class="ltx_emph ltx_font_italic">valuated Coxeter matroids</em>. Usually, to declutter notation, we will write the Coxeter Dressian, for example, as <span id="S3.Thmtheorem1.p1.m6" class="ltx_Math">\operatorname{Dr}(A_{n},P_{r})</span>.</p>
+</div>
+</div>
+<div id="S3.Thmtheorem2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.Thmtheorem2.p1.m1" class="ltx_Math">E\subset\mathbb{R}^{n}</span> be finite. We say that a set
+<span id="S3.Thmtheorem2.p1.m2" class="ltx_Math">\mathcal{F}\subseteq\mathbb{T}[x_{e}|e\in E]</span> of tropical polynomials with trivial coefficients is <em class="ltx_emph ltx_font_italic">affinely invariant</em> if for any function <span id="S3.Thmtheorem2.p1.m3" class="ltx_Math">\mu:E\to\mathbb{T}</span>
+and for for all affine linear functions <span id="S3.Thmtheorem2.p1.m4" class="ltx_Math">\varphi:\mathbb{R}^{n}\to\mathbb{R}</span> we have</p>
+<table id="S3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex3.m1" class="ltx_Math">\mu\in V^{\operatorname{trop}}(\mathcal{F})\text{ if and only if }\mu+\varphi|%
+_{E}\in V^{\operatorname{trop}}(\mathcal{F})\,.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S3.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S3.Thmtheorem3.p1.m1" class="ltx_Math">E\subset\mathbb{R}^{n}</span> be finite, and <span id="S3.Thmtheorem3.p1.m2" class="ltx_Math">\mu\colon E\to\mathbb{T}</span>, with induced subdivision <span id="S3.Thmtheorem3.p1.m3" class="ltx_Math">S(\mu)</span> of <span id="S3.Thmtheorem3.p1.m4" class="ltx_Math">\mathrm{conv}(\operatorname{supp}(\mu))</span>. Let <span id="S3.Thmtheorem3.p1.m5" class="ltx_Math">\mathcal{F}\subseteq\mathbb{T}[x_{e}|e\in E]</span> be an affinely invariant set of tropical polynomials with trivial coefficients. If <span id="S3.Thmtheorem3.p1.m6" class="ltx_Math">\mu\in V^{\operatorname{trop}}(\mathcal{F})\subseteq\mathbb{T}^{E}</span>, then for any cell <span id="S3.Thmtheorem3.p1.m7" class="ltx_Math">C\in S(\mu)</span>, the function</span></p>
+<table id="S4.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex6.m1" class="ltx_Math">\displaystyle\mu_{C}\colon E\to\mathbb{T},\quad e\mapsto\begin{cases}%
+\hidden@noalign{}\textstyle 0\ \ \ \text{ if }e\in C\\
+\hidden@noalign{}\textstyle\infty\,\text{ else}\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">satisfies all tropical equations in <span id="S3.Thmtheorem3.p1.m8" class="ltx_Math">\mathcal{F}</span>. In other words, <span id="S3.Thmtheorem3.p1.m9" class="ltx_Math">\mu_{C}\in V^{\operatorname{trop}}(\mathcal{F)}</span>.</span></p>
+</div>
+</div>
+<div id="S3.p2" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S3.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider a cell <span id="S3.p2.p1.m1" class="ltx_Math">C</span> of <span id="S3.p2.p1.m2" class="ltx_Math">S(\mu)</span>. Let <span id="S3.p2.p1.m3" class="ltx_Math">\tilde{\mu}=\mu+\varphi</span> for some affine linear function <span id="S3.p2.p1.m4" class="ltx_Math">\varphi</span> such that <span id="S3.p2.p1.m5" class="ltx_Math">\tilde{\mu}|_{C}=0</span> and <span id="S3.p2.p1.m6" class="ltx_Math">\tilde{\mu}|_{S\setminus C}&gt;0</span>.
+Since <span id="S3.p2.p1.m7" class="ltx_Math">\mathcal{F}</span> is affinely invariant, <span id="S3.p2.p1.m8" class="ltx_Math">\tilde{\mu}\in V^{\operatorname{trop}}(\mathcal{F})</span>. Since <span id="S3.p2.p1.m9" class="ltx_Math">\mu,\tilde{\mu}</span> only differ by an affine linear function, their induced subdivisions agree.
+Let <span id="S3.p2.p1.m10" class="ltx_Math">f\in\mathcal{F}</span>, then <span id="S3.p2.p1.m11" class="ltx_Math">f=\bigoplus_{\alpha}x^{\odot\alpha}</span> for finitely many <span id="S3.p2.p1.m12" class="ltx_Math">\alpha\in\mathbb{N}^{E}</span>. Since this minimum is attained at least twice, when plugging in <span id="S3.p2.p1.m13" class="ltx_Math">\tilde{\mu}</span>, there are two cases:</p>
+<ul id="S3.I1.i0.I1" class="ltx_itemize">
+<li id="S3.I1.i0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="S3.I1.i0.I1.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If the evaluation <span id="S3.I1.i0.I1.i1.p1.m1" class="ltx_Math">f(\tilde{\mu})=0</span>, then there are at least two monomials of <span id="S3.I1.i0.I1.i1.p1.m2" class="ltx_Math">f</span> supported on <span id="S3.I1.i0.I1.i1.p1.m3" class="ltx_Math">C</span>. In that case, surely <span id="S3.I1.i0.I1.i1.p1.m4" class="ltx_Math">f(\mu_{C})</span> = 0, and the minimum is attained at these monomials. Thus, <span id="S3.I1.i0.I1.i1.p1.m5" class="ltx_Math">\mu_{C}\in V^{\operatorname{trop}}(f)</span>.</p>
+</div>
+</li>
+<li id="S3.I1.i0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="S3.I1.i0.I1.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">If <span id="S3.I1.i0.I1.i2.p1.m1" class="ltx_Math">f(\tilde{\mu})&gt;0</span>, then all monomials of <span id="S3.I1.i0.I1.i2.p1.m2" class="ltx_Math">f</span> contain a variable in <span id="S3.I1.i0.I1.i2.p1.m3" class="ltx_Math">E\setminus C</span>. It follows, that <span id="S3.I1.i0.I1.i2.p1.m4" class="ltx_Math">f(\mu_{C})=\infty</span>, and hence trivially <span id="S3.I1.i0.I1.i2.p1.m5" class="ltx_Math">\mu_{C}</span> tropically satisfies <span id="S3.I1.i0.I1.i2.p1.m6" class="ltx_Math">f</span>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S3.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S3.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For all minuscule types <span id="S3.Thmtheorem4.p1.m1" class="ltx_Math">A_{n},B_{n},C_{n},D_{n},E_{6},E_{7}</span>, the set of strong exchange equations are affinely invariant. Thus, by Theorem <a href="#S3.Thmtheorem3" title="Theorem 3.3. ‣ 3. The Coxeter Dressian ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>, all height functions <span id="S3.Thmtheorem4.p1.m2" class="ltx_Math">V(\Delta(W/P))\to\mathbb{T}</span> satisfying the respective equations induce strong matroidal subdivisions.</span></p>
+</div>
+</div>
+<div id="S3.p3" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S3.p3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We prove affine invariance case by case in Section <a href="#S4" title="4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>. More specifically, we deal with cases where valuations are not already well studied. We do so via Propositions <a href="#S4.Thmtheorem1" title="Proposition 4.1. ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a> (type <span id="S3.p3.p1.m1" class="ltx_Math">(B_{n},P_{n})</span>), <a href="#S4.Thmtheorem4" title="Proposition 4.4. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a> (type <span id="S3.p3.p1.m2" class="ltx_Math">(D_{n},P_{1})</span>), <a href="#S4.Thmtheorem12" title="Proposition 4.12. ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.12</span></a> (type <span id="S3.p3.p1.m3" class="ltx_Math">(E_{7},P_{1})</span>). Proofs for the other cases can be done in a similar fashion, but are omitted here. From affine invariance, the indicator vectors of the cells satisfy respective strong exchange equations, hence by <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Quadratic exchange equations for coxeter matroids" class="ltx_ref">6</a>, Theorem 1.1]</cite>, the cells are strong matroid polytopes.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4. </span>The Minuscule Types</h2>
+
+<div id="S4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">In this section we will explicitly look at tropical strong exchange equations individually for each minuscule Lie type. These equations were systematically analyzed in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Quadratic exchange equations for coxeter matroids" class="ltx_ref">6</a>]</cite> over the Boolean semifield.
+</p>
+</div>
+<section id="S4.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1. </span>Type <span id="S4.SS1.m1" class="ltx_Math">A_{n}</span>
+</h3>
+
+<div id="S4.SS1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">As mentioned in the introduction, valuations of type <span id="S4.SS1.p1.m1" class="ltx_Math">A</span> Coxeter matroids have been extensively studied even outside the minuscule case <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Tropical linear spaces" class="ltx_ref">18</a>, <a href="#bib.bib13" title="Tropical flag varieties" class="ltx_ref">5</a>, <a href="#bib.bib14" title="Generalized permutahedra and positive flag dressians" class="ltx_ref">11</a>]</cite>. For the equations corresponding to usual matroids, we defer to <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="Introduction to tropical geometry" class="ltx_ref">13</a>, Chapter 4]</cite>. The type <span id="S4.SS1.p1.m2" class="ltx_Math">A</span> strong exchange equations are exactly the Grassmann–Plücker equations. They are affinely invariant, but we will omit a proof in this abstract.</p>
+</div>
+</section>
+<section id="S4.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2. </span>Type <span id="S4.SS2.m1" class="ltx_Math">B_{n}</span>
+</h3>
+
+<div id="S4.SS2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Recall that in type <span id="S4.SS2.p1.m1" class="ltx_Math">B_{n}</span>, the Weyl group is the hyperoctahedral group, and the only minuscule parabolic subgroup is <span id="S4.SS2.p1.m2" class="ltx_Math">P_{n}=\langle s_{1},\dots,s_{n-1}\rangle=\operatorname{stab}_{B_{n}}(-[n])</span>. We identify cosets <span id="S4.SS2.p1.m3" class="ltx_Math">wP_{n}\in B_{n}/P_{n}</span> with subsets of <span id="S4.SS2.p1.m4" class="ltx_Math">{[n]}</span> via <span id="S4.SS2.p1.m5" class="ltx_Math">wP_{n}\mapsto w(-[n])\cap[n]</span>. Fixing <span id="S4.SS2.p1.m6" class="ltx_Math">(B_{n},P_{n})</span>, the <em class="ltx_emph ltx_font_italic">strong exchange equations</em> are</p>
+<table id="S4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E3.m1" class="ltx_Math">\displaystyle f_{I,J}^{B}\coloneqq\begin{cases}\hidden@noalign{}\textstyle%
+\bigoplus_{i\in I\triangle J}x_{I\triangle i}\odot x_{J\triangle i}\hskip 56.0%
+51929pt\text{ if }|I\triangle J|\equiv 0\mod 2\\
+\hidden@noalign{}\textstyle x_{I}\odot x_{J}\oplus\bigoplus_{i\in I\triangle J%
+}x_{I\triangle i}\odot x_{J\triangle i}\quad\text{ if }|I\triangle J|\equiv 1%
+\mod 2,\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <span id="S4.SS2.p1.m7" class="ltx_Math">I,J\subseteq[n]</span> with <span id="S4.SS2.p1.m8" class="ltx_Math">|I\triangle J|\geq 3</span>.
+They are tropicalizations of quadratic algebraic equations cutting out the type <span id="S4.SS2.p1.m9" class="ltx_Math">B_{n}</span> minuscule flag variety.</p>
+</div>
+<div id="S4.Thmtheorem1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The type <span id="S4.Thmtheorem1.p1.m1" class="ltx_Math">B_{n}</span> strong exchange equations <a href="#S4.E3" title="(3) ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> are affinely invariant.</span></p>
+</div>
+</div>
+<div id="S4.SS2.p2" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS2.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <span id="S4.SS2.p2.p1.m1" class="ltx_Math">\mu:2^{[n]}\to\mathbb{T}</span> be arbitrary, and <span id="S4.SS2.p2.p1.m2" class="ltx_Math">\varphi:\mathbb{R}^{n}\to\mathbb{R}</span> be affine linear. We consider the variables as vertices of the <span id="S4.SS2.p2.p1.m3" class="ltx_Math">n</span>-cube <span id="S4.SS2.p2.p1.m4" class="ltx_Math">Q_{n}=[-\frac{1}{2},\frac{1}{2}]^{n}</span>. We fix <span id="S4.SS2.p2.p1.m5" class="ltx_Math">I,J\subseteq[n]</span> with <span id="S4.SS2.p2.p1.m6" class="ltx_Math">|I\triangle J|\geq 3</span>. For each monomial <span id="S4.SS2.p2.p1.m7" class="ltx_Math">x_{I\triangle i}\odot x_{J\triangle i}</span> in <span id="S4.SS2.p2.p1.m8" class="ltx_Math">f^{B}_{I,J}</span>, evaluating at <span id="S4.SS2.p2.p1.m9" class="ltx_Math">\mu+\varphi|_{V(Q_{n})}</span> yields <span id="S4.SS2.p2.p1.m10" class="ltx_Math">\mu_{I\setminus i}+\mu_{J\cup i}+(\varphi(e_{I})+\varphi(e_{J})-\varphi(0))</span>, the last term being independent of <span id="S4.SS2.p2.p1.m11" class="ltx_Math">i</span>. The same holds for <span id="S4.SS2.p2.p1.m12" class="ltx_Math">x_{I}\odot x_{J}</span>, in the case <span id="S4.SS2.p2.p1.m13" class="ltx_Math">|I\triangle J|\equiv 1\mod 2</span>. Thus <span id="S4.SS2.p2.p1.m14" class="ltx_Math">\mu</span> attains the minimum at least twice if and only if <span id="S4.SS2.p2.p1.m15" class="ltx_Math">\mu+\varphi|_{V(\Delta(r,n))}</span> does.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS2.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">It is now natural to ask, whether type <span id="S4.SS2.p3.m1" class="ltx_Math">B_{n}</span> behaves as nicely as type <span id="S4.SS2.p3.m2" class="ltx_Math">A_{n}</span>, and the converse of Theorem <a href="#S3.Thmtheorem4" title="Theorem 3.4. ‣ 3. The Coxeter Dressian ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.4</span></a> also holds. This turns out to be wrong already for <span id="S4.SS2.p3.m3" class="ltx_Math">n=3</span>, as the following example shows.</p>
+</div>
+<div id="S4.Thmtheorem2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We get a single strong exchange equation in type <span id="S4.Thmtheorem2.p1.m1" class="ltx_Math">B_{3}</span>, which is supported on the entire <span id="S4.Thmtheorem2.p1.m2" class="ltx_Math">3</span>-cube and given by</p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex7.m1" class="ltx_Math">f^{B}_{\emptyset,[3]}=x_{\emptyset}\odot x_{123}\oplus x_{1}\odot x_{23}\oplus
+x%
+_{2}\odot x_{13}\oplus x_{3}\odot x_{12}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.Thmtheorem2.p2" class="ltx_para">
+<p class="ltx_p">Some functions on the <span id="S4.Thmtheorem2.p2.m1" class="ltx_Math">3</span>-cube induce strong matroidal subdivisions, but are not in the Coxeter Dressian. One such example is:</p>
+<table id="S4.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex8.m1" class="ltx_Math">(\mu_{\emptyset},\mu_{1},\mu_{2},\mu_{3},\mu_{12},\mu_{13},\mu_{23},\mu_{123})%
+=(0,0,0,-1,2,1,1,0)\,.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">There are <span id="S4.Thmtheorem2.p2.m2" class="ltx_Math">5</span> maximal cells in the induced subdivision, each of which are tetrahedra. Notice that none of these cells contain any antipodes. We visualize the subdivision in Figure <a href="#S4.F1" title="Figure 1 ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>. However, by direct computation, we observe that there <em class="ltx_emph ltx_font_italic">is</em> an element of <span id="S4.Thmtheorem2.p2.m3" class="ltx_Math">\operatorname{Dr}(B_{3},P_{3})</span> that induces this subdivision.</p>
+</div>
+</div>
+<div id="S4.SS2.p5" class="ltx_para ltx_minipage ltx_align_middle" style="width:173.4pt;">
+<img src="processed_dataset/2512.09703v1/temp_source/cube_subdiv.png" id="S4.SS2.p5.g1" class="ltx_graphics ltx_centering" width="351" height="338" alt="">
+</div>
+<figure id="S4.F1" class="ltx_figure">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1. </span>A strong exchange triangulation of the <span id="S4.F1.m2" class="ltx_Math">3</span>-cube</figcaption>
+</figure>
+<div id="S4.Thmtheorem3" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmtheorem3.p1.m1" class="ltx_Math">\mu\in\mathbb{R}^{2^{[n]}}</span> satisfy the all strong exchange equations supported on the <span id="S4.Thmtheorem3.p1.m2" class="ltx_Math">3</span>-dimensional faces of the <span id="S4.Thmtheorem3.p1.m3" class="ltx_Math">4</span>-cube. Then <span id="S4.Thmtheorem3.p1.m4" class="ltx_Math">\mu</span> is already a strong valuated Coxeter matroid.</span></p>
+</div>
+</div>
+</section>
+<section id="S4.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.3. </span>Type <span id="S4.SS3.m1" class="ltx_Math">C_{n}</span>
+</h3>
+
+<div id="S4.SS3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The only minuscule parabolic of type <span id="S4.SS3.p1.m1" class="ltx_Math">C</span> is <span id="S4.SS3.p1.m2" class="ltx_Math">P_{1}</span>. Cosets <span id="S4.SS3.p1.m3" class="ltx_Math">wP_{1}\in W(C_{n})/P_{1}</span> are identified with <span id="S4.SS3.p1.m4" class="ltx_Math">[n]\sqcup-[n]</span> via <span id="S4.SS3.p1.m5" class="ltx_Math">wP_{1}\mapsto w(1)</span>. Hence, the polytope associated to <span id="S4.SS3.p1.m6" class="ltx_Math">(C_{n},P_{1})</span> is given by the <em class="ltx_emph ltx_font_italic">cross polytope</em>
+</p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex9.m1" class="ltx_Math">\Diamond_{n}=\mathrm{conv}(\pm e_{i}:i\in[n]).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">All pairs <span id="S4.SS3.p1.m7" class="ltx_Math">(\pm e_{i},\pm e_{j})</span> for <span id="S4.SS3.p1.m8" class="ltx_Math">i\neq j</span> form edges on <span id="S4.SS3.p1.m9" class="ltx_Math">\Diamond_{n}</span>. On the other hand, <span id="S4.SS3.p1.m10" class="ltx_Math">2e_{i}</span> is an element of the type <span id="S4.SS3.p1.m11" class="ltx_Math">C_{n}</span> root system. In other words, all possible subpolytopes of <span id="S4.SS3.p1.m12" class="ltx_Math">\Diamond_{n}</span> are strong matroids, and all subdivisions of <span id="S4.SS3.p1.m13" class="ltx_Math">\Diamond_{n}</span> are strong matroidal. In particular, there are no strong exchange type <span id="S4.SS3.p1.m14" class="ltx_Math">C_{n}</span> equations, and the Coxeter Dressian <span id="S4.SS3.p1.m15" class="ltx_Math">\operatorname{Dr}(C_{n},P_{1})</span> is exactly the secondary fan of <span id="S4.SS3.p1.m16" class="ltx_Math">\Diamond_{n}</span>.</p>
+</div>
+</section>
+<section id="S4.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.4. </span>Type <span id="S4.SS4.m1" class="ltx_Math">D_{n}</span>
+</h3>
+
+<div id="S4.SS4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Recall that in type <span id="S4.SS4.p1.m1" class="ltx_Math">D_{n}</span>, the Weyl group is the intersection of the alternating group with the hyperoctahedral group. There are three minuscule parabolic subgroups <span id="S4.SS4.p1.m2" class="ltx_Math">P_{1},P_{n-1},</span> and <span id="S4.SS4.p1.m3" class="ltx_Math">P_{n}</span>. Note that the last two are isomorphic as subgroups of <span id="S4.SS4.p1.m4" class="ltx_Math">D_{n}</span>, and they were studied in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Isotropical linear spaces and valuated Delta-matroids" class="ltx_ref">16</a>]</cite>.</p>
+</div>
+<section id="S4.SS4.SSS1" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.4.1. </span>Minuscule Parabolic <span id="S4.SS4.SSS1.m1" class="ltx_Math">P_{1}</span> in type <span id="S4.SS4.SSS1.m2" class="ltx_Math">D</span>
+</h4>
+
+<div id="S4.SS4.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Note that <span id="S4.SS4.SSS1.p1.m1" class="ltx_Math">W(D_{n})/P_{1}\cong W(C_{n})/P_{1}</span>, hence the polytope that arises in this situation is again the cross-polytope <span id="S4.SS4.SSS1.p1.m2" class="ltx_Math">\Diamond_{n}</span> of Section <a href="#S4.SS3" title="4.3. Type Cn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3</span></a>. However, <span id="S4.SS4.SSS1.p1.m3" class="ltx_Math">2e_{i}</span> is not an element of the <span id="S4.SS4.SSS1.p1.m4" class="ltx_Math">D_{n}</span> root system, so the segment connecting <span id="S4.SS4.SSS1.p1.m5" class="ltx_Math">e_{i},-e_{i}</span> is not an admissible edge of a type <span id="S4.SS4.SSS1.p1.m6" class="ltx_Math">D_{n}</span> matroidal subdivision of <span id="S4.SS4.SSS1.p1.m7" class="ltx_Math">\Diamond_{n}</span>. It follows in a straightforward way that any subdivision of <span id="S4.SS4.SSS1.p1.m8" class="ltx_Math">\Diamond_{n}</span> that is not a triangulation is strong matroidal. The singular strong exchange equation defining <span id="S4.SS4.SSS1.p1.m9" class="ltx_Math">\operatorname{Dr}(D_{n},P_{1})</span> is of the form:</p>
+<table id="S4.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E4.m1" class="ltx_Math">\displaystyle f^{D}_{\Diamond_{n}}=\bigoplus^{n}_{i=1}x_{i}\odot x_{-i}\,.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S4.Thmtheorem4" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The type <span id="S4.Thmtheorem4.p1.m1" class="ltx_Math">D_{n}</span> strong exchange equation <a href="#S4.E4" title="(4) ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> is affinely invariant.</span></p>
+</div>
+</div>
+<div id="S4.SS4.SSS1.p2" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS4.SSS1.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Consider <span id="S4.SS4.SSS1.p2.p1.m1" class="ltx_Math">f^{E_{7}}</span>, and <span id="S4.SS4.SSS1.p2.p1.m2" class="ltx_Math">\mu\in\mathbb{T}^{V(\Diamond_{n})}</span>. For <span id="S4.SS4.SSS1.p2.p1.m3" class="ltx_Math">\varphi:\mathbb{R}^{n}\to\mathbb{R}</span> affine linear, we have that <span id="S4.SS4.SSS1.p2.p1.m4" class="ltx_Math">x_{i}\odot x_{-i}</span> evaluated at <span id="S4.SS4.SSS1.p2.p1.m5" class="ltx_Math">\mu+\varphi|_{V(\Diamond_{n})}</span> yields <span id="S4.SS4.SSS1.p2.p1.m6" class="ltx_Math">\mu_{i}+\mu_{-i}+2\varphi(0)</span>. Therefore, <span id="S4.SS4.SSS1.p2.p1.m7" class="ltx_Math">\mu</span> attains the minimum at least twice if and only if <span id="S4.SS4.SSS1.p2.p1.m8" class="ltx_Math">\mu+\varphi</span> does.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.Thmtheorem5" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A height function <span id="S4.Thmtheorem5.p1.m1" class="ltx_Math">\mu</span> induces a type <span id="S4.Thmtheorem5.p1.m2" class="ltx_Math">D</span> strong matroidal subdivision of <span id="S4.Thmtheorem5.p1.m3" class="ltx_Math">\Diamond_{n}</span> if and only if <span id="S4.Thmtheorem5.p1.m4" class="ltx_Math">\mu\in\operatorname{Dr}(D_{n},P_{1})</span>.</span></p>
+</div>
+</div>
+<div id="S4.SS4.SSS1.p3" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS4.SSS1.p3.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">One direction follows immediately from Proposition <a href="#S4.Thmtheorem4" title="Proposition 4.4. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a>. For the other, suppose the <span id="S4.SS4.SSS1.p3.p1.m1" class="ltx_Math">\mu</span> induced subdivision is strong matroidal, and let <span id="S4.SS4.SSS1.p3.p1.m2" class="ltx_Math">\Delta(\mathcal{M})</span> be a maximal cell. Then <span id="S4.SS4.SSS1.p3.p1.m3" class="ltx_Math">\Delta(\mathcal{M})=C_{v}</span>,</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex10.m1" class="ltx_Math">C_{v}=\mathrm{conv}(e_{i}:\langle v,e_{i}\rangle)+\mu_{i}\leq\langle v,e_{k}%
+\rangle+\mu_{k}\text{ where }i,k\in[n]\cup[-n]).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, observe that for <span id="S4.SS4.SSS1.p3.p1.m4" class="ltx_Math">C_{v}</span> to be full dimensional, <span id="S4.SS4.SSS1.p3.p1.m5" class="ltx_Math">C_{v}</span> must use at least <span id="S4.SS4.SSS1.p3.p1.m6" class="ltx_Math">n+1</span> vertices of <span id="S4.SS4.SSS1.p3.p1.m7" class="ltx_Math">\Diamond_{n}</span>. As a consequence, we must have some some <span id="S4.SS4.SSS1.p3.p1.m8" class="ltx_Math">i\in[n]</span> where <span id="S4.SS4.SSS1.p3.p1.m9" class="ltx_Math">e_{i},e_{-i}\in C_{v}</span>. Furthermore, since <span id="S4.SS4.SSS1.p3.p1.m10" class="ltx_Math">\Delta(\mathcal{M})=C_{v}</span> is a strong matroid, we have at least one <span id="S4.SS4.SSS1.p3.p1.m11" class="ltx_Math">j</span> such that <span id="S4.SS4.SSS1.p3.p1.m12" class="ltx_Math">e_{j},e_{-j}\in C_{v}</span>. This leads to the following collection of relations:
+</p>
+<table id="S4.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex11.m1" class="ltx_Math">\displaystyle\langle v,e_{\pm i}\rangle+\mu_{\pm i}=\langle v,e_{\pm j}\rangle%
++\mu_{\pm j}\leq\langle v,e_{\pm k}\rangle+\mu_{\pm k}\text{ for any }k\in[n].</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">From these, one can deduce <span id="S4.SS4.SSS1.p3.p1.m13" class="ltx_Math">\mu_{i}+\mu_{-i}=\mu_{j}+\mu_{-j}\leq\mu_{k}+\mu_{-k}\text{ for any $k$}</span>.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.Thmtheorem6" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For <span id="S4.Thmtheorem6.p1.m1" class="ltx_Math">n\in\{5,6\}</span>, the Coxeter Dressian <span id="S4.Thmtheorem6.p1.m2" class="ltx_Math">\operatorname{Dr}(D_{n},P_{1})</span> is isomorphic to a proper subfan of the secondary fan of <span id="S4.Thmtheorem6.p1.m3" class="ltx_Math">\Diamond_{n}</span>. That is, the coarsest polyhedral structure of the former agrees with the fan structure of the latter, the Coxeter Dressian.</span></p>
+</div>
+</div>
+<div id="S4.SS4.SSS1.p4" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS4.SSS1.p4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We verify this computationally. See the related notebook on the <span class="ltx_text ltx_font_typewriter">github</span> repository.
+∎</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">It follows from Proposition <a href="#S4.Thmtheorem6" title="Proposition 4.6. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.6</span></a>, and the fact that any subdivision of <span id="S4.SS4.SSS1.p4.m1" class="ltx_Math">\Diamond_{n}</span> which isn’t a triangulation is strong matroidal, that <span id="S4.SS4.SSS1.p4.m2" class="ltx_Math">\operatorname{Dr}(D_{n},P_{1})</span> is isomorphic to the subfan of the secondary fan consisting of codimension-<span id="S4.SS4.SSS1.p4.m3" class="ltx_Math">1</span> cones.</p>
+</div>
+</section>
+<section id="S4.SS4.SSS2" class="ltx_subsubsection">
+<h4 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">4.4.2. </span>Minuscule Parabolic <span id="S4.SS4.SSS2.m1" class="ltx_Math">P_{n}</span>
+</h4>
+
+<div id="S4.SS4.SSS2.p1" class="ltx_para">
+<p class="ltx_p">We identify cosets <span id="S4.SS4.SSS2.p1.m1" class="ltx_Math">A\in W(D_{n})/P_{n}</span> with even subsets of <span id="S4.SS4.SSS2.p1.m2" class="ltx_Math">{[n]}</span> via <span id="S4.SS4.SSS2.p1.m3" class="ltx_Math">A\mapsto A(-[n])\cap[n]</span>. In analogy to the <span id="S4.SS4.SSS2.p1.m4" class="ltx_Math">B_{n}</span> case, the corresponding polytope is the <em class="ltx_emph ltx_font_italic">demicube</em>, the subpolytope of the cube with even vertices. We note that the parabolics <span id="S4.SS4.SSS2.p1.m5" class="ltx_Math">P_{n-1}</span> and <span id="S4.SS4.SSS2.p1.m6" class="ltx_Math">P_{n}</span> are isomorphic as subgroups of <span id="S4.SS4.SSS2.p1.m7" class="ltx_Math">W(D_{n})</span>, hence we only consider the latter case. The strong exchange equations are given by</p>
+<table id="S4.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E5.m1" class="ltx_Math">\displaystyle f_{I,J}^{D}\coloneqq\bigoplus_{i\in I\triangle J}x_{I\triangle i%
+}\odot x_{J\triangle i}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for <span id="S4.SS4.SSS2.p1.m8" class="ltx_Math">I,J\subseteq[n]</span> with <span id="S4.SS4.SSS2.p1.m9" class="ltx_Math">|I\triangle J|\geq 4</span> and <span id="S4.SS4.SSS2.p1.m10" class="ltx_Math">I,J</span> of odd cardinality. Affine invariance follows exactly like in <a href="#S4.Thmtheorem1" title="Proposition 4.1. ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>.
+There is a simple construction relating valuated strong Coxeter matroids of type <span id="S4.SS4.SSS2.p1.m11" class="ltx_Math">B_{n}</span> to those of type <span id="S4.SS4.SSS2.p1.m12" class="ltx_Math">D_{n+1}</span>, with minuscule parabolic <span id="S4.SS4.SSS2.p1.m13" class="ltx_Math">P_{n+1}</span>.</p>
+</div>
+<div id="S4.Thmtheorem7" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The embedding <span id="S4.Thmtheorem7.p1.m1" class="ltx_Math">\mathbb{T}^{2^{[n]}}\hookrightarrow\mathbb{T}^{2^{[n+1]}}</span> given by</span></p>
+<table id="S4.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex12.m1" class="ltx_Math">2^{[n]}\longrightarrow 2^{[n+1]}\quad A\mapsto\overline{A}=\begin{cases}A&amp;%
+\text{ if }|A|\text{ even}\\
+A\cup\{n+1\}&amp;\text{ if }|A|\text{ odd.}\\
+\end{cases}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">induces a linear isomorphism <span id="S4.Thmtheorem7.p1.m2" class="ltx_Math">\operatorname{Dr}(B_{n},P_{n})\cong\operatorname{Dr}(D_{n+1},P_{n+1})</span>.</span></p>
+</div>
+</div>
+<div id="S4.SS4.SSS2.p2" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS4.SSS2.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">We first show that type <span id="S4.SS4.SSS2.p2.p1.m1" class="ltx_Math">B_{n}</span> strong exchange equations are in bijection to type <span id="S4.SS4.SSS2.p2.p1.m2" class="ltx_Math">D_{n+1}</span> strong exchange equations via <span id="S4.SS4.SSS2.p2.p1.m3" class="ltx_Math">f_{I,J}^{B}\mapsto f_{I^{\prime},J^{\prime}}^{D}</span>. Here <span id="S4.SS4.SSS2.p2.p1.m4" class="ltx_Math">I^{\prime}=I\cup\{n+1\}</span> if <span id="S4.SS4.SSS2.p2.p1.m5" class="ltx_Math">|I|</span> even, and <span id="S4.SS4.SSS2.p2.p1.m6" class="ltx_Math">I^{\prime}=I</span> if <span id="S4.SS4.SSS2.p2.p1.m7" class="ltx_Math">|I|</span> odd, similarly, <span id="S4.SS4.SSS2.p2.p1.m8" class="ltx_Math">J^{\prime}</span>. Bijectivity follows from the fact that <span id="S4.SS4.SSS2.p2.p1.m9" class="ltx_Math">I^{\prime}</span>, <span id="S4.SS4.SSS2.p2.p1.m10" class="ltx_Math">J^{\prime}</span> are always of odd cardinality, and <span id="S4.SS4.SSS2.p2.p1.m11" class="ltx_Math">|I\triangle J|\geq 3</span> if and only if <span id="S4.SS4.SSS2.p2.p1.m12" class="ltx_Math">|I^{\prime}\triangle J^{\prime}|\geq 4</span>.</p>
+</div>
+<div id="S4.SS4.SSS2.p2.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let <span id="S4.SS4.SSS2.p2.p2.m1" class="ltx_Math">\mu\in\operatorname{Dr}(B_{n},P_{n})</span>, and <span id="S4.SS4.SSS2.p2.p2.m2" class="ltx_Math">\overline{\mu}\in\mathbb{T}^{2^{[n+1]}}</span> its corresponding image. We now show that <span id="S4.SS4.SSS2.p2.p2.m3" class="ltx_Math">\mu</span> satisfies <span id="S4.SS4.SSS2.p2.p2.m4" class="ltx_Math">f_{I,J}^{B}</span> if and only if <span id="S4.SS4.SSS2.p2.p2.m5" class="ltx_Math">\overline{\mu}</span> satisfies <span id="S4.SS4.SSS2.p2.p2.m6" class="ltx_Math">f_{I^{\prime},J^{\prime}}^{D}</span>. If both <span id="S4.SS4.SSS2.p2.p2.m7" class="ltx_Math">I,J</span> are of odd cardinality, then the respective equations are the same, and there is nothing to show. If <span id="S4.SS4.SSS2.p2.p2.m8" class="ltx_Math">I</span> is odd, and <span id="S4.SS4.SSS2.p2.p2.m9" class="ltx_Math">J</span> is even, then <span id="S4.SS4.SSS2.p2.p2.m10" class="ltx_Math">I^{\prime}=I</span>, and <span id="S4.SS4.SSS2.p2.p2.m11" class="ltx_Math">J^{\prime}=J\cup\{n+1\}</span>. In that case, <span id="S4.SS4.SSS2.p2.p2.m12" class="ltx_Math">I^{\prime}\triangle J^{\prime}=I\triangle J\cup\{n+1\}</span> is of odd cardinality. Hence, for all <span id="S4.SS4.SSS2.p2.p2.m13" class="ltx_Math">i\in I\triangle J</span>, we have <span id="S4.SS4.SSS2.p2.p2.m14" class="ltx_Math">I\triangle\{i\}</span> is even, and <span id="S4.SS4.SSS2.p2.p2.m15" class="ltx_Math">\overline{J\triangle i}=J^{\prime}\triangle i</span>. Finally, for <span id="S4.SS4.SSS2.p2.p2.m16" class="ltx_Math">i=\{n+1\}</span>, we have <span id="S4.SS4.SSS2.p2.p2.m17" class="ltx_Math">I\triangle i=I</span>, and <span id="S4.SS4.SSS2.p2.p2.m18" class="ltx_Math">J=J^{\prime}\triangle i</span>, finishing the proof for the case <span id="S4.SS4.SSS2.p2.p2.m19" class="ltx_Math">|I|</span> even, <span id="S4.SS4.SSS2.p2.p2.m20" class="ltx_Math">|J|</span> odd. Lastly, let <span id="S4.SS4.SSS2.p2.p2.m21" class="ltx_Math">I,J</span> both be even. Then <span id="S4.SS4.SSS2.p2.p2.m22" class="ltx_Math">I\triangle J=I^{\prime}\triangle J^{\prime}</span>, and for all <span id="S4.SS4.SSS2.p2.p2.m23" class="ltx_Math">i\in I\triangle J</span> we have <span id="S4.SS4.SSS2.p2.p2.m24" class="ltx_Math">\overline{I\triangle i}=I^{\prime}\triangle i</span>, finishing the proof.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS4.SSS2.p3" class="ltx_para">
+<p class="ltx_p">We note that the above is already true algebraically, as the same morphism over any field maps the minuscule type <span id="S4.SS4.SSS2.p3.m1" class="ltx_Math">B_{n}</span> flag variety isomorphically onto the even component of the spinor variety. There is also an equivalent map <span id="S4.SS4.SSS2.p3.m2" class="ltx_Math">\operatorname{Dr}(B_{n},P_{n})\cong\operatorname{Dr}(D_{n+1},P_{n})</span>, mapping subsets of <span id="S4.SS4.SSS2.p3.m3" class="ltx_Math">[n]</span> to odd subsets of <span id="S4.SS4.SSS2.p3.m4" class="ltx_Math">[n+1]</span>. As the even and odd components of the spinor variety are isomorphic, this is not surprising. The following can be deduced immediately from Proposition <a href="#S4.Thmtheorem7" title="Proposition 4.7. ‣ 4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.7</span></a> and <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Isotropical linear spaces and valuated Delta-matroids" class="ltx_ref">16</a>, Theorem 4.6]</cite>.</p>
+</div>
+<div id="S4.Thmtheorem8" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 4.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For <span id="S4.Thmtheorem8.p1.m1" class="ltx_Math">n\leq 4</span>, the Coxeter Dressian <span id="S4.Thmtheorem8.p1.m2" class="ltx_Math">\operatorname{Dr}(B_{n},P_{n})</span> is the tropicalization of the minuscule type <span id="S4.Thmtheorem8.p1.m3" class="ltx_Math">B_{n}</span> flag variety. For <span id="S4.Thmtheorem8.p1.m4" class="ltx_Math">n\geq 6</span>, it is strictly larger than the tropicalization. In particular, not every valuated Coxeter matroid of type <span id="S4.Thmtheorem8.p1.m5" class="ltx_Math">B_{n}</span> is realizable for <span id="S4.Thmtheorem8.p1.m6" class="ltx_Math">n\geq 6</span>.</span></p>
+</div>
+</div>
+<div id="S4.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.9</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="S4.Thmtheorem9.p1.m1" class="ltx_Math">\mu\in\mathbb{T}^{2^{[n]}}</span>, such that <span id="S4.Thmtheorem9.p1.m2" class="ltx_Math">\operatorname{supp}(\mu)</span> is a strong Coxeter matroid of type <span id="S4.Thmtheorem9.p1.m3" class="ltx_Math">B_{n}</span> . Then the following statements are equivalent:</span></p>
+<ol id="S4.I6" class="ltx_enumerate">
+<li id="S4.I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(a)</span> 
+<div id="S4.I6.i1.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span id="S4.I6.i1.p1.m1" class="ltx_Math">\mu</span><span class="ltx_text ltx_font_italic"> is in the Coxeter Dressian,</span></p>
+</div>
+</li>
+<li id="S4.I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(b)</span> 
+<div id="S4.I6.i2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span id="S4.I6.i2.p1.m1" class="ltx_Math">\mu</span><span class="ltx_text ltx_font_italic"> satisfies the </span><em class="ltx_emph">four term strong exchange equations</em><span class="ltx_text ltx_font_italic"> </span><span id="S4.I6.i2.p1.m2" class="ltx_Math">f_{I,J}^{B}</span><span class="ltx_text ltx_font_italic"> for </span><span id="S4.I6.i2.p1.m3" class="ltx_Math">|I\triangle J|\leq 4</span><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Moreover, if all entries of <span id="S4.Thmtheorem9.p1.m4" class="ltx_Math">\mu</span> are finite, in (b) it suffices to only consider the case <span id="S4.Thmtheorem9.p1.m5" class="ltx_Math">|I\triangle J|\leq 3</span>.</span></p>
+</div>
+</div>
+<div id="S4.SS4.SSS2.p4" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS4.SSS2.p4.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">The statement (a) <span id="S4.SS4.SSS2.p4.p1.m1" class="ltx_Math">\Rightarrow</span> (b) holds by definition. For the other direction, we need to show that <span id="S4.SS4.SSS2.p4.p1.m2" class="ltx_Math">\mu</span> satisfies all strong exchange equations <span id="S4.SS4.SSS2.p4.p1.m3" class="ltx_Math">f^{B}_{I,J}</span>. Consider the image <span id="S4.SS4.SSS2.p4.p1.m4" class="ltx_Math">\overline{\mu}</span> from Proposition <a href="#S4.Thmtheorem7" title="Proposition 4.7. ‣ 4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.7</span></a>. By <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="Isotropical linear spaces and valuated Delta-matroids" class="ltx_ref">16</a>, Theorem 5.1]</cite>, <span id="S4.SS4.SSS2.p4.p1.m5" class="ltx_Math">\overline{\mu}</span> satisfies the type <span id="S4.SS4.SSS2.p4.p1.m6" class="ltx_Math">D_{n+1}</span> strong exchange equations if and only if it satisfies the respective four-term strong exchange equations. Hence <span id="S4.SS4.SSS2.p4.p1.m7" class="ltx_Math">\overline{\mu}\in\operatorname{Dr}(D_{n+1},P_{n+1})</span>, and we conclude <span id="S4.SS4.SSS2.p4.p1.m8" class="ltx_Math">\mu\in\operatorname{Dr}(B_{n},P_{n})</span>.</p>
+</div>
+<div id="S4.SS4.SSS2.p4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Let additionally all entries of <span id="S4.SS4.SSS2.p4.p2.m1" class="ltx_Math">\mu</span> be finite. Restricting <span id="S4.SS4.SSS2.p4.p2.m2" class="ltx_Math">\mu</span> to the various <span id="S4.SS4.SSS2.p4.p2.m3" class="ltx_Math">4</span>-cubes and applying Lemma <a href="#S4.Thmtheorem3" title="Lemma 4.3. ‣ 4.2. Type Bn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3</span></a> we obtain that <span id="S4.SS4.SSS2.p4.p2.m4" class="ltx_Math">\mu</span> satisfies all equations <span id="S4.SS4.SSS2.p4.p2.m5" class="ltx_Math">f_{I,J}^{B}</span> with <span id="S4.SS4.SSS2.p4.p2.m6" class="ltx_Math">|I\triangle J|=4</span> if it does so for all <span id="S4.SS4.SSS2.p4.p2.m7" class="ltx_Math">|I\triangle J|=3</span>.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.Thmtheorem10" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.10</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p">The point <span id="S4.Thmtheorem10.p1.m1" class="ltx_Math">\mu\in\mathbb{T}^{2^{[4]}}</span> given by <span id="S4.Thmtheorem10.p1.m2" class="ltx_Math">\mu_{\emptyset}=\mu_{1234}=\mu_{12}=0</span>, <span id="S4.Thmtheorem10.p1.m3" class="ltx_Math">\mu_{34}=1</span>, and <span id="S4.Thmtheorem10.p1.m4" class="ltx_Math">\mu_{A}=\infty</span> for all other <span id="S4.Thmtheorem10.p1.m5" class="ltx_Math">A\in 2^{[n]}</span> does not satisfy <span id="S4.Thmtheorem10.p1.m6" class="ltx_Math">f^{B}_{1,234}</span>. Hence, it is not in the Coxeter Dressian However, it satisfies all equations supported on proper <span id="S4.Thmtheorem10.p1.m7" class="ltx_Math">3</span>-faces of the <span id="S4.Thmtheorem10.p1.m8" class="ltx_Math">4</span>-cube.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="S4.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.5. </span>Type <span id="S4.SS5.m1" class="ltx_Math">E_{6}</span>
+</h3>
+
+<div id="S4.SS5.p1" class="ltx_para">
+<p class="ltx_p">In type <span id="S4.SS5.p1.m1" class="ltx_Math">E_{6}</span>, the two minuscule parabolic subgroups are <span id="S4.SS5.p1.m2" class="ltx_Math">P_{1}</span> and <span id="S4.SS5.p1.m3" class="ltx_Math">P_{6}</span>. Since <span id="S4.SS5.p1.m4" class="ltx_Math">P_{1}\cong P_{6}\cong W(D_{5})</span>, we have <span id="S4.SS5.p1.m5" class="ltx_Math">W(E_{6})/P_{1}\cong W(E_{6})/P_{6}</span> as sets with <span id="S4.SS5.p1.m6" class="ltx_Math">W</span>-action. We thus consider both cases simultaneously. The polytope is commonly referred to as <span id="S4.SS5.p1.m7" class="ltx_Math">2_{21}=\Delta(E_{6}/P_{1})</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib27" title="The polytope 221, whose twenty-seven vertices correspond to the lines on the general cubic surface" class="ltx_ref">7</a>]</cite>. The face structure of <span id="S4.SS5.p1.m8" class="ltx_Math">2_{21}</span> is studied in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="Regular and semi-regular polytopes. III" class="ltx_ref">8</a>]</cite>. We recall the relevant facts. The polytope <span id="S4.SS5.p1.m9" class="ltx_Math">2_{21}</span> is <span id="S4.SS5.p1.m10" class="ltx_Math">6</span> dimensional and has <span id="S4.SS5.p1.m11" class="ltx_Math">27</span> vertices, each at most edge-distance 2 from each other. Each distance <span id="S4.SS5.p1.m12" class="ltx_Math">2</span> pair of vertices defines a <span id="S4.SS5.p1.m13" class="ltx_Math">\Diamond_{5}</span> cross polytope in the <span id="S4.SS5.p1.m14" class="ltx_Math">5</span>-skeleton of <span id="S4.SS5.p1.m15" class="ltx_Math">2_{21}</span>, of which there are <span id="S4.SS5.p1.m16" class="ltx_Math">27</span>. All other facets are simplices. For each distance-<span id="S4.SS5.p1.m17" class="ltx_Math">2</span> pair <span id="S4.SS5.p1.m18" class="ltx_Math">(A,B)</span>, we get a strong exchange equation</p>
+<table id="S4.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(6)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E6.m1" class="ltx_Math">\displaystyle f^{E_{6}}_{A,B}=x_{A}\odot x_{B}\oplus\bigoplus^{4}_{i=1}x_{C_{i%
+}}\odot x_{C^{\prime}_{i}},</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the pairs <span id="S4.SS5.p1.m19" class="ltx_Math">(A,B)</span> and <span id="S4.SS5.p1.m20" class="ltx_Math">(C_{i},C^{\prime}_{i})</span> for <span id="S4.SS5.p1.m21" class="ltx_Math">i\in[4]</span> are antipodes of the corresponding cross polytope. All strong exchange equations for minuscule <span id="S4.SS5.p1.m22" class="ltx_Math">E_{6}</span> arise in this way. By Proposition <a href="#S4.Thmtheorem4" title="Proposition 4.4. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a>, the respective equations are affinely invariant.</p>
+</div>
+<div id="S4.Thmtheorem11" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.11</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A height function <span id="S4.Thmtheorem11.p1.m1" class="ltx_Math">\mu</span> induces a strong matroidal subdivision of <span id="S4.Thmtheorem11.p1.m2" class="ltx_Math">2_{21}</span> if and only if <span id="S4.Thmtheorem11.p1.m3" class="ltx_Math">\mu\in\operatorname{Dr}(E_{6},P_{1})</span>.</span></p>
+</div>
+</div>
+<div id="S4.SS5.p2" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS5.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">One direction follows from affine invariance. For the other, let <span id="S4.SS5.p2.p1.m1" class="ltx_Math">f_{\Diamond}</span> correspond to a <span id="S4.SS5.p2.p1.m2" class="ltx_Math">D_{5}</span> cross polytope <span id="S4.SS5.p2.p1.m3" class="ltx_Math">\Diamond</span> in the <span id="S4.SS5.p2.p1.m4" class="ltx_Math">5</span>-skeleton of <span id="S4.SS5.p2.p1.m5" class="ltx_Math">2_{21}</span>, and consider the restriction of the subdivision induced by <span id="S4.SS5.p2.p1.m6" class="ltx_Math">\mu</span> to <span id="S4.SS5.p2.p1.m7" class="ltx_Math">\Diamond</span>. If the minimum on <span id="S4.SS5.p2.p1.m8" class="ltx_Math">f_{\Diamond}</span> were unique, Proposition <a href="#S4.Thmtheorem6" title="Proposition 4.6. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.6</span></a> tells us that there is a maximal cell of the restriction with peerless antipodes <span id="S4.SS5.p2.p1.m9" class="ltx_Math">(A,B)</span>. Since all possible peers for <span id="S4.SS5.p2.p1.m10" class="ltx_Math">(A,B)</span> in <span id="S4.SS5.p2.p1.m11" class="ltx_Math">2_{21}</span> correspond to entries of <span id="S4.SS5.p2.p1.m12" class="ltx_Math">f_{\Diamond}</span>, <span id="S4.SS5.p2.p1.m13" class="ltx_Math">(A,B)</span> form peerless antipodes of some maximal cell in the global subdivision. The result follows from the contrapositive.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4.SS6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.6. </span>Type <span id="S4.SS6.m1" class="ltx_Math">E_{7}</span>
+</h3>
+
+<div id="S4.SS6.p1" class="ltx_para">
+<p class="ltx_p">In type <span id="S4.SS6.p1.m1" class="ltx_Math">E_{7}</span> we only have a single minuscule parabolic <span id="S4.SS6.p1.m2" class="ltx_Math">P_{1}</span>, and the polytope is commonly known as <span id="S4.SS6.p1.m3" class="ltx_Math">3_{21}=\Delta(E_{7}/P_{1})</span> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="Regular and semi-regular polytopes. III" class="ltx_ref">8</a>]</cite>. The polytope is <span id="S4.SS6.p1.m4" class="ltx_Math">7</span> dimensional, with <span id="S4.SS6.p1.m5" class="ltx_Math">56</span> vertices with maximum edge distance <span id="S4.SS6.p1.m6" class="ltx_Math">3</span> between pairs. Each vertex has <span id="S4.SS6.p1.m7" class="ltx_Math">27</span> neighbors. Each distance 2 pair induces a <span id="S4.SS6.p1.m8" class="ltx_Math">\Diamond_{6}</span> facet, and distance <span id="S4.SS6.p1.m9" class="ltx_Math">3</span> pairs are of the form <span id="S4.SS6.p1.m10" class="ltx_Math">(v,-v)</span>. Since each element <span id="S4.SS6.p1.m11" class="ltx_Math">A</span> has a unique distance <span id="S4.SS6.p1.m12" class="ltx_Math">3</span> counterpart <span id="S4.SS6.p1.m13" class="ltx_Math">B</span>, we just write <span id="S4.SS6.p1.m14" class="ltx_Math">B=-A</span>. The strong exchange equations come in two forms. we have an equation for each <span id="S4.SS6.p1.m15" class="ltx_Math">\Diamond_{6}</span> facet, one supported on all pairs of antipodes of <span id="S4.SS6.p1.m16" class="ltx_Math">3_{21}</span></p>
+<table id="S4.E7" class="ltx_equationgroup ltx_eqn_table">
+
+<tr id="S4.E7X" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="2" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equationgroup ltx_align_left">(7)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E7X.m2" class="ltx_Math">\displaystyle f^{E_{7}}_{A,B}</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.E7X.m3" class="ltx_Math">\displaystyle=x_{A}\odot x_{B}\;\bigoplus_{i=1}^{5}x_{C_{i}}\odot x_{C^{\prime%
+}_{i}}</span></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.E7X.m5" class="ltx_Math">\displaystyle\text{when }d(A,B)=2,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S4.E7Xa" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.E7Xa.m2" class="ltx_Math">\displaystyle f^{E_{7}}</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S4.E7Xa.m3" class="ltx_Math">\displaystyle=\bigoplus_{A\in W/P}x_{A}\odot x_{-A}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright" colspan="3"></td>
+</tr>
+</table>
+</div>
+<div id="S4.Thmtheorem12" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4.12</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The type <span id="S4.Thmtheorem12.p1.m1" class="ltx_Math">E_{7}</span> strong exchange equations <a href="#S4.E7" title="(7) ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a> are affinely invariant.</span></p>
+</div>
+</div>
+<div id="S4.SS6.p2" class="ltx_para ltx_noindent">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">Proof.</span> 
+<div id="S4.SS6.p2.p1" class="ltx_para ltx_noindent">
+<p class="ltx_p">Since the equations <span id="S4.SS6.p2.p1.m1" class="ltx_Math">f^{E_{7}}_{A,B}</span> are the exact equations <a href="#S4.E4" title="(4) ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> on cross polytopes, the corresponding statement follows from Proposition <a href="#S4.Thmtheorem4" title="Proposition 4.4. ‣ 4.4.1. Minuscule Parabolic P1 in type D ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a>. Consider <span id="S4.SS6.p2.p1.m2" class="ltx_Math">f^{E_{7}}</span>, and <span id="S4.SS6.p2.p1.m3" class="ltx_Math">\mu\in\mathbb{T}^{V(3_{21})}</span>. For <span id="S4.SS6.p2.p1.m4" class="ltx_Math">\varphi:\mathbb{R}^{8}\to\mathbb{R}</span> affine linear, we have that <span id="S4.SS6.p2.p1.m5" class="ltx_Math">x_{A}\odot x_{-A}</span> evaluated at <span id="S4.SS6.p2.p1.m6" class="ltx_Math">\mu+\varphi|_{V(3_{21})}</span> yields <span id="S4.SS6.p2.p1.m7" class="ltx_Math">\mu_{A}+\mu_{-A}+2\varphi(0)</span>. Therefore, <span id="S4.SS6.p2.p1.m8" class="ltx_Math">\mu</span> attains the minimum at least twice if and only if <span id="S4.SS6.p2.p1.m9" class="ltx_Math">\mu+\varphi</span> does.
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S4.SS6.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Over the Krasner hyperfield, the strong exchange equations (<a href="#S4.E7" title="(7) ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>) are equivalent to the symmetric exchange axiom of Borovik, Gelfand, and White <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="On exchange properties for Coxeter matroids and oriented matroids" class="ltx_ref">4</a>]</cite>, which they conjectured to be equivalent to the Coxeter matroid axioms (e.g. the maximality property) in all minuscule types <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Coxeter matroids" class="ltx_ref">3</a>, Section 6.16]</cite>. By means of an exhaustive search, we prove that this conjecture holds in <span id="S4.SS6.p3.m1" class="ltx_Math">E_{7}</span>.</p>
+</div>
+<div id="S4.Thmtheorem13" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.13</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">All Coxeter matroids of type <span id="S4.Thmtheorem13.p1.m1" class="ltx_Math">(E_{7},P_{7})</span> satisfy the strong exchange condition.</span></p>
+</div>
+</div>
+<div id="S4.SS6.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">In combination with known results in the other types we conclude that in all types except <span id="S4.SS6.p4.m1" class="ltx_Math">B_{n}</span>, all minuscule Coxeter matroids satisfy the strong exchange axiom. Moreover, Theorem <a href="#S4.Thmtheorem13" title="Theorem 4.13. ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.13</span></a> implies that the relations on the proper faces of <span id="S4.SS6.p4.m2" class="ltx_Math">3_{21}</span> are already sufficient to guarantee a subdivision consists of strong Coxeter matroid polytopes.</p>
+</div>
+<div id="S4.Thmtheorem14" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.14</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="S4.Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A height function <span id="S4.Thmtheorem14.p1.m1" class="ltx_Math">\mu</span> induces a strong matroidal subdivision of <span id="S4.Thmtheorem14.p1.m2" class="ltx_Math">3_{21}</span> if and only if it is contained in <span id="S4.Thmtheorem14.p1.m3" class="ltx_Math">\bigcap_{(A,B)}V^{\text{Trop}}(f^{E_{7}}_{A,B})</span>, where <span id="S4.Thmtheorem14.p1.m4" class="ltx_Math">(A,B)</span> runs over all pairs of elements of <span id="S4.Thmtheorem14.p1.m5" class="ltx_Math">W(E_{7})/P_{7}</span> with <span id="S4.Thmtheorem14.p1.m6" class="ltx_Math">d(A,B)=2</span>.</span></p>
+</div>
+</div>
+<div id="S4.SS6.p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">However, it is still open whether all <span id="S4.SS6.p5.m1" class="ltx_Math">\mu</span> satisfying the equivalent conditions of Theorem <a href="#S4.Thmtheorem14" title="Theorem 4.14. ‣ 4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.14</span></a> are in the Dressian.</p>
+</div>
+<div id="Thmconjecture1" class="ltx_theorem ltx_theorem_conjecture">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Conjecture 1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmconjecture1.p1" class="ltx_para">
+<p class="ltx_p">The support of <span id="Thmconjecture1.p1.m1" class="ltx_Math">\operatorname{Dr}(E_{7},P_{7})</span> is equal to the support of <span id="Thmconjecture1.p1.m2" class="ltx_Math">\bigcap V^{\text{Trop}}(f^{E_{7}}_{A,B})</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib17" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Baker and N. Bowler</span><span class="ltx_text ltx_bib_year"> (2016)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Matroids over hyperfields</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">arXiv:1601.01204 [math]</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.SS3.p1" title="2.3. Strong Exchange Equations ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2.3</span></a>.
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Baker and N. Bowler</span><span class="ltx_text ltx_bib_year"> (2019)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Matroids over partial hyperstructures</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Advances in Mathematics</span> <span class="ltx_text ltx_bib_volume">343</span>, <span class="ltx_text ltx_bib_pages"> pp. 821–863</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.SS3.p1" title="2.3. Strong Exchange Equations ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2.3</span></a>.
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. V. Borovik, I. M. Gelfand, and N. White</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Coxeter matroids</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Progress in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">216</span>,  <span class="ltx_text ltx_bib_publisher">Boston, MA: Birkhäuser</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Joseph Kung)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p10" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S2.SS1.p1" title="2.1. Minuscule Coxeter Matroids and the Strong Exchange Property ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2.1</span></a>,
+<a href="#S2.p1" title="2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S4.SS6.p3" title="4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.6</span></a>.
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. V. Borovik, I. Gelfand, and N. White</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On exchange properties for Coxeter matroids and oriented matroids</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Discrete Math.</span> <span class="ltx_text ltx_bib_volume">179</span> (<span class="ltx_text ltx_bib_number">1-3</span>), <span class="ltx_text ltx_bib_pages"> pp. 59–72</span> (<span class="ltx_text ltx_bib_language">English</span>).
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0012-365X</span>,
+<a href="https://dx.doi.org/10.1016/S0012-365X%2896%2900027-1" title="" class="ltx_ref doi ltx_bib_external">Document</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.SS6.p3" title="4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.6</span></a>.
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Brandt, C. Eur, and L. Zhang</span><span class="ltx_text ltx_bib_year"> (2021)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Tropical flag varieties</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Adv. Math.</span> <span class="ltx_text ltx_bib_volume">384</span>, <span class="ltx_text ltx_bib_pages"> pp. Paper No. 107695, 41</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0001-8708,1090-2082</span>,
+<a href="https://dx.doi.org/10.1016/j.aim.2021.107695" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/j.aim.2021.107695" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Shu Kawaguchi)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.SS1.p1" title="4.1. Type An ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.1</span></a>.
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Calvert, A. Dermenjian, A. Fink, and B. Smith</span><span class="ltx_text ltx_bib_year"> (2025)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Quadratic exchange equations for coxeter matroids</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text ltx_bib_external">2511.13498</span>,
+<a href="https://arxiv.org/abs/2511.13498" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S2.SS3.p1" title="2.3. Strong Exchange Equations ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2.3</span></a>,
+<a href="#S3.p3.p1" title="3. The Coxeter Dressian ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>,
+<a href="#S4.p1" title="4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib27" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. S. M. Coxeter</span><span class="ltx_text ltx_bib_year"> (1940)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The polytope <span id="bib.bib27.m1a" class="ltx_Math">2_{21}</span>, whose twenty-seven vertices correspond to the lines on the general cubic surface</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. J. Math.</span> <span class="ltx_text ltx_bib_volume">62</span>, <span class="ltx_text ltx_bib_pages"> pp. 457–486</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0002-9327,1080-6377</span>,
+<a href="https://dx.doi.org/10.2307/2371466" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.2307/2371466" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (J. S. Frame)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.SS5.p1" title="4.5. Type E6 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.5</span></a>.
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. S. M. Coxeter</span><span class="ltx_text ltx_bib_year"> (1988)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Regular and semi-regular polytopes. III</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Math. Z.</span> <span class="ltx_text ltx_bib_volume">200</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 3–45</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0025-5874,1432-1823</span>,
+<a href="https://dx.doi.org/10.1007/BF01161745" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1007/BF01161745" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (J. S. Frame)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.SS5.p1" title="4.5. Type E6 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.5</span></a>,
+<a href="#S4.SS6.p1" title="4.6. Type E7 ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.6</span></a>.
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. A. De Loera, J. Rambau, and F. Santos</span><span class="ltx_text ltx_bib_year"> (2010)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Triangulations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Algorithms and Computation in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">25</span>,  <span class="ltx_text ltx_bib_publisher">Springer-Verlag, Berlin</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Structures for algorithms and applications</span>
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-3-642-12970-4</span>,
+<a href="https://dx.doi.org/10.1007/978-3-642-12971-1" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1007/978-3-642-12971-1" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p10" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib26" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. W. M. Dress and W. Wenzel</span><span class="ltx_text ltx_bib_year"> (1992)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Valuated matroids</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Adv. Math.</span> <span class="ltx_text ltx_bib_volume">93</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 214–250</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0001-8708</span>,
+<a href="https://dx.doi.org/10.1016/0001-8708%2892%2990028-J" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/0001-8708(92)90028-J" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Dragan M. Acketa)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p7" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Joswig, G. Loho, D. Luber, and J. A. Olarte</span><span class="ltx_text ltx_bib_year"> (2023)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Generalized permutahedra and positive flag dressians</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Int. Math. Res. Not. IMRN</span> (<span class="ltx_text ltx_bib_number">19</span>), <span class="ltx_text ltx_bib_pages"> pp. 16748–16777</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1073-7928,1687-0247</span>,
+<a href="https://dx.doi.org/10.1093/imrn/rnac349" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1093/imrn/rnac349" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Alex McDonough)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.SS1.p1" title="4.1. Type An ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.1</span></a>.
+</span>
+</li>
+<li id="bib.bib24" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Joswig</span><span class="ltx_text ltx_bib_year"> ([2021] ©2021)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Essentials of tropical combinatorics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Graduate Studies in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">219</span>,  <span class="ltx_text ltx_bib_publisher">American Mathematical Society, Providence, RI</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-1-4704-6653-4</span>,
+<a href="https://dx.doi.org/10.1090/gsm/219" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1090/gsm/219" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Christopher Eur)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p10" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Maclagan and B. Sturmfels</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Introduction to tropical geometry</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Graduate Studies in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">161</span>,  <span class="ltx_text ltx_bib_publisher">American Mathematical Society, Providence, RI</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-0-8218-5198-2</span>,
+<a href="https://dx.doi.org/10.1090/gsm/161" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1090/gsm/161" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Patrick Popescu-Pampu)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p10" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S4.SS1.p1" title="4.1. Type An ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.1</span></a>.
+</span>
+</li>
+<li id="bib.bib28" class="ltx_bibitem ltx_bib_misc">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_year"> (2025)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">OSCAR – Open Source Computer Algebra Research system, Version 1.6.0</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">The OSCAR Team</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="https://www.oscar-system.org" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p8" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. A. Proctor</span><span class="ltx_text ltx_bib_year"> (1984)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Bruhat lattices, plane partition generating functions, and minuscule representations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">European J. Combin.</span> <span class="ltx_text ltx_bib_volume">5</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 331–350</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0195-6698,1095-9971</span>,
+<a href="https://dx.doi.org/10.1016/S0195-6698%2884%2980037-2" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/S0195-6698(84)80037-2" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (S. Milne)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.SS1.p1" title="2.1. Minuscule Coxeter Matroids and the Strong Exchange Property ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2.1</span></a>.
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">F. Rincón</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Isotropical linear spaces and valuated Delta-matroids</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Combin. Theory Ser. A</span> <span class="ltx_text ltx_bib_volume">119</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 14–32</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0097-3165,1096-0899</span>,
+<a href="https://dx.doi.org/10.1016/j.jcta.2011.08.001" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1016/j.jcta.2011.08.001" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Hannah Markwig)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p7" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S4.SS4.SSS2.p3" title="4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.4.2</span></a>,
+<a href="#S4.SS4.SSS2.p4.p1" title="4.4.2. Minuscule Parabolic Pn ‣ 4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.4.2</span></a>,
+<a href="#S4.SS4.p1" title="4.4. Type Dn ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.4</span></a>.
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. S. Seshadri</span><span class="ltx_text ltx_bib_year"> (1978)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Geometry of <span id="bib.bib2.m1a" class="ltx_Math">G/P</span>. I. Theory of standard monomials for minuscule representations</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">C. P. Ramanujam—a tribute</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Tata Inst. Fundam. Res. Stud. Math.</span>, Vol. <span class="ltx_text ltx_bib_volume">8</span>, <span class="ltx_text ltx_bib_pages"> pp. 207–239</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 3-540-08770-2</span>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (H. H. Andersen)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.Thmtheorem1.p1" title="Remark 2.1. ‣ 2.1. Minuscule Coxeter Matroids and the Strong Exchange Property ‣ 2. Coxeter Matroids and their polytopes ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Remark 2.1</span></a>.
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. E. Speyer</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Tropical linear spaces</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">SIAM J. Discrete Math.</span> <span class="ltx_text ltx_bib_volume">22</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 1527–1558</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0895-4801,1095-7146</span>,
+<a href="https://dx.doi.org/10.1137/080716219" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="https://doi.org/10.1137/080716219" title="" class="ltx_ref ltx_bib_external">Link</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p2" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S1.p3" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S1.p7" title="1. Introduction ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S4.SS1.p1" title="4.1. Type An ‣ 4. The Minuscule Types ‣ Minuscule Coxeter Dressians" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4.1</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:15:54 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

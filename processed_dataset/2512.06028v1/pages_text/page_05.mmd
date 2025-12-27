@@ -1,0 +1,48 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \psi(x+1)=\ln\left(x+\frac{1}{2}\right)+\sum\_{n=1}^{\infty}\frac{\zeta(2n+1,x+% 1)}{(2n+1)2^{2n}} |  | (5) |
+
+### 2.8 Polygamma Functions
+
+Polygamma Functions are the logarithmic derivatives of the Gamma function, defined as follows:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{d^{m+1}}{dx^{m+1}}\ln\Gamma(x)=\psi^{m}(x); |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{d\psi(x+1)}{dx}=\psi^{1}(x+1); |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi^{1}(x+1)=\frac{1}{x+\frac{1}{2}}-\sum\_{n=1}^{\infty}\frac{\zeta(2n+2,x+1)% }{2^{2n}}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi^{2}(x+1)=\frac{-1}{\left(x+\frac{1}{2}\right)^{2}}+\sum\_{n=1}^{\infty}% \frac{(2n+2)\zeta(2n+3,x+1)}{2^{2n}}; |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi^{3}(x+1)=\frac{2}{\left(x+\frac{1}{2}\right)^{3}}-\sum\_{n=1}^{\infty}% \frac{(2n+2)(2n+3)\zeta(2n+4,x+1)}{2^{2n}}; |  |
+
+In general, based on differentiation rules, we have:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \psi^{y}(x+1)=(-1)^{y-1}\left(\frac{(y-1)!}{\left(x+\frac{1}{2}\right)^{y}}-% \sum\_{n=1}^{\infty}\frac{(2n+y)!\,\zeta(2n+y+1,x+1)}{2^{2n}(2n+1)!}\right) |  | (6) |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \psi^{y}(x+1)=(-1)^{y-1}\left(\frac{(y-1)!}{\left(x+\frac{1}{2}\right)^{y}}-% \sum\_{n=1}^{\infty}\frac{(2n+y)!\,\zeta(2n+y+1,x+1)}{2^{2n}(2n)(2n+1)(2n-1)!}\right) |  |
+
+Let:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | f(n)=\frac{1}{2^{2n}(2n)(2n+1)} |  | (7) |
+
+Then:
+
+|  |  |  |  |
+| --- | --- | --- | --- |

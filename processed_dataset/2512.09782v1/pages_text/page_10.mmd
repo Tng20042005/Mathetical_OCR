@@ -1,0 +1,35 @@
+The group \Lambda\_{\Gamma} is a non-uniform lattice in \textup{Isom}(X), and admits \widehat{B} as its associated neutered space.
+
+###### Proof.
+
+We first show that \Lambda\_{\Gamma} is a discrete subgroup. Recall that P\subset\partial X is a dense subset. So pick horospheres \widehat{O}\_{1},\dots,\widehat{O}\_{m+1} in \widehat{\Omega}, where m=\dim X, with basepoints p\_{1},\dots,p\_{m+1} such that \left\{{p\_{1},\dots,p\_{m+1}}\right\} is not contained in the ideal boundary of any hyperplane of X. Then the only isometry of X whose extension to \partial X fixes every p\_{i} is the identity map. For each i=1,\dots,m+1, pick some x\_{i}\in\widehat{O}\_{i}, and set
+
+|  |  |  |
+| --- | --- | --- |
+|  | U=\left\{{\alpha\in\text{Isom}(X):d\_{X}(\alpha(x\_{i}),x\_{i})<R\text{ for }i=1,% \dots,m+1}\right\}. |  |
+
+Then U\subset\text{Isom}(X) is an open neighborhood of the identity, with respect to the compact-open topology. Let \alpha\in\Lambda\_{\Gamma}\cap U. Since \alpha\in\Lambda\_{\Gamma}, \alpha permutes \widehat{\Omega}. Since \alpha\in U, d\_{X}(\alpha(\widehat{O}\_{i}),\widehat{O}\_{i})<R. Together, these imply that \alpha(\widehat{O}\_{i})=\widehat{O}\_{i}, and hence \alpha\cdot p\_{i}=p\_{i}, for each i=1,\dots,m+1. So \alpha=\text{id}\_{X} and \Lambda\_{\Gamma}\cap U=\left\{{\text{id}\_{X}}\right\}. Thus \Lambda\_{\Gamma} is a discrete subgroup.
+
+Next we show that X/\Lambda\_{\Gamma} has finite volume. Recall that the quasi-action of \Gamma on B is K-cobounded. It follows from the definition of \Lambda\_{\Gamma} and the containment \widehat{B}\subseteq N\_{2\beta^{\prime}}(B) that the \Lambda\_{\Gamma}-orbit of a (every) point in \widehat{B} is (K+3\beta^{\prime})-dense in \widehat{B}. Hence the quotient orbifold \widehat{B}/\Lambda\_{\Gamma} is compact, and by Lemma 14, it has finitely many boundary components V\_{1},\dots,V\_{j}. Suppose \widehat{O}\_{i}\in\widehat{\Omega} projects onto the boundary component V\_{i}. Note that \alpha(\widehat{O}\_{i})\cap\widehat{O}\_{i}\neq\emptyset if and only if \alpha(\widehat{O}\_{i})=\widehat{O}\_{i} if and only if \alpha is in the stabilizer {\Lambda\_{\Gamma}}\_{i} of the basepoint of \widehat{O}\_{i}. The subset V\_{i}=\widehat{O}\_{i}/{\Lambda\_{\Gamma}}\_{i} of the compact quotient \widehat{B}/\Lambda\_{\Gamma} is closed, and therefore, compact. Let W\_{i}\subset X be the horoball bounded by \widehat{O}\_{i}. Then W\_{i}/{\Lambda\_{\Gamma}}\_{i} has finite volume, and since \left({\bigcup\_{i=1}^{j}W\_{i}}\right)\cup\widehat{B} projects surjectively onto X/\Lambda\_{\Gamma}, we conclude that X/\Lambda\_{\Gamma} has finite volume. Thus \Lambda\_{\Gamma} is a non-uniform lattice.
+∎
+
+We are now in a position to use Schwartz’ rigidity theorem for non-uniform rank one lattices.
+
+###### Corollary 17.
+
+The group \Lambda\_{\Gamma} is commensurable with \Lambda.
+
+###### Proof.
+
+Recall that B and \widehat{B} are quasi-isometric by Lemma 15. Since \Lambda acts geometrically on B and \Lambda\_{\Gamma} acts geometrically on \widehat{B}, the Milnor-Schwarz lemma implies that the two non-uniform lattices \Lambda and \Lambda\_{\Gamma} are quasi-isometric. Then the corollary follows from Schwartz’ theorem.
+∎
+
+## 5. The kernel of \theta
+
+Next we analyze the kernel of \theta, and our goal is to show that \ker\theta is virtually a nilpotent lattice. To this end, we first show that via the quasi-action h of \Gamma on B\times N, each \gamma\in\ker\theta coarsely preserves the fibers \left\{{b}\right\}\times N\subset B\times N.
+
+###### Lemma 18.
+
+There is a \delta>0 such that for each \gamma\in\ker\theta the following holds. For every fiber F=\left\{{b}\right\}\times N\subset B\times N and every x\in F, we have h(\gamma)(x)\in N\_{\delta}(F)
+
+###### Proof.

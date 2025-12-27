@@ -1,0 +1,41 @@
+Suppose that there exists g\_{1}\in{[n]-U\_{k}-\{x\}\choose 2} such that |g\_{1}\cap V(F\_{0})|=1 and c(g\_{1}\cup\{x\})\neq c\_{1}. We choose h\in{[n]-V(F)-\{x\}\choose 2} such that h\cap V(g\_{1})=\emptyset. By Claim 8, we have c(h\cup\{x\})=c\_{1}. If c(g\_{1}\cup\{x\})\notin\mathcal{C}, we proceed as follows. Let M\_{3} be a matching M\_{3} of size k-1 in F-V(g\_{1}). Then, the collection \{p\cup\{x\}\ |\ p\in M\_{3}\cup\{g\_{1},h\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction.
+Hence we may infer that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle c(g\_{1}\cup\{x\})\in\mathcal{C}. |  | (9) |
+
+Let g\_{2}\in E(F) such that c(g\_{2}\cup\{x\})=c(g\_{1}\cup\{x\}).
+If F-V(g\_{1})-g\_{2} contains a matching M\_{4} of size k-1, \{p\cup\{x\}\ |\ p\in M\_{4}\cup\{g\_{1},h\}\} induces rainbow copy of \mathcal{F}\_{k+1}, a contradiction.
+Thus we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\nu(F-V(g\_{1})-g\_{2})<k-1. |  | (10) |
+
+Then by Lemma 10, we may infer that k=4.
+Let g\_{1}\cap V(F\_{0})=\{y\_{0}\}. Consider d\_{F}(y\_{0})=3.
+By the proof of Claim 5, \{x\}\cup g\_{1} may be extended into a rainbow copy denoted by \mathcal{M} of \mathcal{F}\_{4} such that for any e\in E(\mathcal{M}), c(e)\in\{c(f)\ |\ f\in E(G)\}.
+Now we select h\in Q such that h\cap V(\mathcal{M})=\emptyset. It follows that (\{\{y\_{0}\}\cup h\})\cup E(M) induces a rainbow copy of \mathcal{F}\_{5}, a contradiction.
+Next we may assume d\_{F}(y\_{0})=2. Recall that g\_{2}\in E(F) such that
+c(g\_{2}\cup\{x\})=c(g\_{1}\cup\{x\}). By Lemma 11, F-V(g\_{1}) contains a Hamilton cycle. So
+F-V(g\_{1})-g\_{2} contains a matching M\_{5} of size 3, which contradicts the inequality (10). This completes the proof of Claim 9.
+
+Claim 10. For any f\in\binom{[n]\setminus(U\_{k}\cup\{x\}\cup V(F\_{0}))}{2} satisfying |f\cap V\_{k}|=1, we have c(f\cup\{x\})=c\_{1}.
+
+We proceed by contradiction.
+Suppose to the contrary that there exists f\_{1}\in\binom{[n]\setminus\big{(}U\_{k}\cup\{x\}\cup V(F\_{0})\big{)}}{2} such that c(f\_{1}\cup\{x\})\neq c\_{1}.
+We choose h\in{[n]-V(F)-\{x\}\choose 2} such that h\cap V(f\_{1})=\emptyset. It follows that c(h\cup\{x\})=c\_{1} by Claim 8. If c(f\_{1}\cup\{x\})\in\mathcal{C}, let f\_{2}\in E(F) such that c(f\_{1}\cup\{x\})=c(f\_{2}\cup\{x\}); otherwise let f\_{2}=\emptyset. Since F\_{0} is a factor-critical graph, we know that F-V(f\_{1})-f\_{2} contains a matching M\_{2} of size k-1.
+Thus \{p\cup\{x\}\ |\ p\in M\_{2}\cup\{f\_{1},h\}\} induce a rainbow copy of \mathcal{F}\_{k+1}, a contradiction again. This completes the proof of Claim 10.
+
+Claim 11. For any T\in{V\_{k}\choose 2}, c(T\cup\{x\})\in\mathcal{C}^{\prime}.
+
+Suppose to the contrary that there exists T\_{1}\in{V\_{k}\choose 2} such that c(T\_{1}\cup\{x\})\notin\mathcal{C}^{\prime}. Since d\_{F}(w)=3 for w\in U\_{k} and k\geq 4, F-V(T\_{1}) has a matching M of size k-1. We may choose T\_{2}\in{[n]-(\{x\}\cup V(F)\cup T\_{1})\choose 2}. It follows that c(T\_{2}\cup\{x\})=c\_{1} by Claim 8. So \{p\cup\{x\}\ |\ p\in M\cup\{T\_{2},T\_{1}\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction. This completes the proof of Claim 11.
+
+Let z\in V(F\_{0}) such that d\_{F\_{0}}(z)=k-2.
+
+Claim 12.  For any T\in\left((U\_{k}\times V(F\_{0}-z))\cup{V(F\_{0})\choose 2}\right)\setminus E(F), c(T\cup\{x\})\in\mathcal{C}^{\prime}.
+
+Suppose to the contrary that there exists T\in\left((U\_{k}\times V(F\_{0}-z))\cup{V(F\_{0})\choose 2}\right)\setminus E(F) such that c(T\cup\{x\})\notin\mathcal{C}^{\prime}.
+Write T=\{y\_{1},y\_{2}\}. Without loss of generality, let y\_{1} be a vertex in F\_{0} with degree k-1. We choose w\in[n]-(V(F)\cup\{x\}). By Claim 9, we have c(\{x,w,y\_{1}\})=c\_{1}. So we have
+c(\{x,w,y\_{1}\})\neq c(\{x,y\_{1},y\_{2}\}). Recall that \{x,y\_{1}\},\{y\_{1},y\_{2}\}\notin E(F). Then by Claim 5,

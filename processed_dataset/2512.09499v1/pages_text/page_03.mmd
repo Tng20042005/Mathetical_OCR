@@ -1,0 +1,77 @@
+Two recent approaches for neural map estimation warrant further discussion. First is the Monge gap regularizer of Uscidda and Cuturi (2023). For the p-Wasserstein cost, this work proposes training a deterministic map estimator to minimize the objective \cJ\_{p}(T;\mu,\nu)=\cM\_{p}(T;\mu)+\mathsf{D}(T\_{\sharp}\mu,\nu), where \mathsf{D} is a statistical divergence and the *Monge gap* \cM\_{p} is defined by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \cM\_{p}(T;\mu)\defeq\int\|x-T(x)\|^{p}\,\dd\mu(x)-\Wp(\mu,T\_{\sharp}\mu)^{p}. |  | (3) |
+
+They show that \cM\_{p}\geq 0 with equality if and only if T is c-cyclically monotone over \supp(\mu). Consequently, \cJ\_{p} nullifies exactly when T is optimal for the \Wp(\mu,\nu) problem. The statistical analysis of that work accounts for consistency, under the assumption that a deterministic and continuous optimal map exists. In practice, they suggest taking \mathsf{D} as an EOT cost, estimating \Wp with EOT, and substituting \mu and \nu with their empirical measures. Parameterizing T via a multilayer perceptron, they achieve competitive empirical performance on a range of map estimation tasks. As we will show in 2, \cE\_{p} and \cJ\_{p} are very connected; in particular, they coincide up to constant factors when p=1 and \Delta=\Wone. We view \cE\_{p} as better suited for quantitative statistical analysis, enabling rates which seem difficult to prove under \cJ\_{p} for general p (and we are unaware of any existing rates proven under \cJ\_{p}). On the other hand, as discussed in 6, we find that \cJ\_{p} is better suited for neural implementation, since its gradients seem to carry a stronger signal when far from optimality.
+
+Lastly, there is an existing line of work on the design of neural estimators for stochastic OT maps (Korotin et al., 2023a, b). They show that any optimal kernel is the solution of a certain maximin problem, which they approximately solve via a neural net parameterization and stochastic gradient ascent-descent. However, this maximin problem sometimes admits spurious solutions associated with suboptimal maps. In general, these are more empirical works which do not address statistical rates.
+
+### 1.2 Preliminaries
+
+#### Notation.
+
+Let \|\cdot\| denote the Euclidean norm on \R^{d}, and \mathbb{B}^{d} be the d-dimensional unit ball. For measurable S\subseteq\R^{d}, write \cP(S) for the space of probability measures over S and \diam(S) for its diameter. Let \cP\_{q}(S) denote those with finite qth moments, and write \cN(x,\Sigma) for the multi-variate Gaussian distribution with mean x\in\R^{d} and covariance \Sigma\in\R^{d\times d}. We say that \mu\in\cP(\R^{d}) is \sigma^{2}-sub-Gaussian if \E\_{\mu}[\exp(\|X\|^{2}/\sigma^{2})]\leq 2. Write \cM(S) for the space of finite signed measures on S, equipped with the TV norm \|\nu\|\_{\tv}\defeq\frac{1}{2}|\nu|(S), and \cM^{+}(S) for those which are non-negative. Let \hat{\mu}\_{n}=\frac{1}{n}\sum\_{i=1}^{n}\delta\_{X\_{i}} be the empirical measure of n i.i.d. samples X\_{1},\dots,X\_{n} from \mu. We write a\lor b\defeq\max\{a,b\}, a\land b\defeq\min\{a,b\}, and \lesssim\_{x},\gtrsim\_{x},\asymp\_{x} for (in)equalities up to a constant depending only on x (omitting x for absolute constants).
+
+#### Kernels and their composition.
+
+Writing \cB(\cY) for the Borel subsets of \cY, we recall that a Markov kernel \kappa\in\cK(\cX,\cY) is a map (A,x):\cB(\cY)\times\cX\mapsto\kappa\_{x}(A)\in[0,1] which is measurable in x for fixed A and is a probability measure on \cY for fixed x. Consequently, given any \mu\in\cP(\cX), the pushforward measure \kappa\_{\sharp}\mu(\cdot)\defeq\int\kappa\_{x}(\cdot)\dd\mu(x) is well-defined probability measure on \cY. Moreover, fixing any intermediate space \cZ\subseteq\R^{d}, kernels \kappa\in\cK(\cZ,\cY) and \lambda\in\cK(\cX,\cZ) can be composed to obtain the composite kernel \kappa\circ\lambda\in\cK(\cX,\cY) defined by (\kappa\circ\lambda)(A|x)\defeq\int\kappa\_{z}(A)\dd\lambda\_{x}(z).
+
+#### Statistical distances and empirical convergence.
+
+We often use the following standard results.
+
+###### Fact 1 (\Wp-TV comparison).
+
+For \mu,\nu\in\cP(\cX), we have \Wp(\mu,\nu)\leq\diam(\cX)\|\mu-\nu\|\_{\tv}^{1/p}.
+
+###### Lemma 1 (\Wp empirical convergence, Lei, 2020).
+
+If q>p and \mu\in\cP\_{q}(\R^{d}), then \E[\Wp(\mu,\hat{\mu}\_{n})]\lesssim\_{p,q}\E\_{\mu}[\|X\|^{q}]^{\frac{1}{q}}n^{-\left[\frac{1}{(2p)\lor d}%
+\land\left(\frac{1}{p}-\frac{1}{q}\right)\right]}\log^{2}(n).
+If d>q>2p, then \E[\Wp(\mu,\hat{\mu}\_{n})]\lesssim\_{p,q}\E\_{\mu}[\|X\|^{q}]^{\frac{1}{q}}n^{-%
+\frac{1}{d}}.
+
+## 2 Basic Properties of the Error Functional
+
+Figure 2: Diagrams of 2 maps and a kernel for \Wp(\mu,\nu), where in each \mu is uniform over the blue line connecting (0,0) and (0,1) and, in orange, \nu=T^{\star}\_{\sharp}\mu for T^{\star}(x)=((-1)^{\lfloor x\_{2}/\delta\rfloor},x\_{2}). We depict T^{\star} on the left, \smash{T(x)=(-(-1)^{\lfloor x\_{2}/\delta\rfloor},x\_{2})} in the center, and kernel \kappa\_{x}=\Unif(\{(-1,x\_{2}),(1,x\_{2})\}) on the right. While T and \kappa are far from T^{\star} in an L^{p} sense, they achieve \cE\_{p}\leq\delta (indeed, both T and \kappa achieve zero optimality gap and at most \delta feasibility gap). Taking \delta\to 0, T^{\star} becomes impossible to recover from finite samples, whereas \kappa can be estimated effectively.
+
+Before turning to estimation, we establish some fundamental properties of our error functional
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \cE\_{p}(\kappa;\mu,\nu)\coloneqq\biggl{[}\!\left(\iint\!\|x\!-\!y\|^{p}\dd% \kappa\_{x}(y)\dd\mu(x)\!\right)^{\frac{1}{p}}\!\!-\,\Wp(\mu,\nu)\biggr{]}\_{+}% \!+\vphantom{\biggr{]}\_{+}}\Wp(\kappa\_{\sharp}\mu,\nu). |  | (4) |
+
+This metric is natural because it vanishes for any optimal kernel, namely, \cE\_{p}(\kappa;\mu,\nu)=0 if and only if \kappa minimizes (2). Further, it generalizes the existing L^{p} benchmark, which applies only when an optimal deterministic map T^{\star} exists.
+
+###### Proposition 1 (Relation to L^{p} loss).
+
+For any map T:\cX\to\cY and T^{\star}:\cX\to\cY minimizing (1), \cE\_{p}(T;\mu,\nu)\leq 2\|T-T^{\star}\|\_{L^{p}(\mu)}.
+
+See A.1 for the proof. In 2, we show how L^{p} can be arbitrarily large compared to \cE\_{p}, failing to recognize the performance of map estimates that deviate pointwise from T^{\star}.
+
+###### Remark 1 (Optimality vs. feasibility).
+
+An alternative version of \cE\_{p} weights the feasibility gap by a regularization strength \lambda. When \lambda=0, the identity map is optimal, and, as \lambda\to\infty, the constant kernel \kappa(\cdot|x)\defeq\nu becomes optimal. Our setting is a natural balance between these two extremes.
+
+###### Remark 2 (Reverse L^{2} comparison).
+
+If p=2 and T^{\star} is the gradient of an L-smooth convex potential, we show in A.2 that \|T-T\_{\star}\|\_{L^{2}(\mu)}^{2}\lesssim(L\lor 1)\,\cE\_{2}(T;\mu,\nu)\bigl{(}%
+\Wtwo(\mu,\nu)+\cE\_{2}(T;\mu,\nu)\bigr{)}.
+
+We also compare \cE\_{p} to the Monge gap objective discussed in 1. The proof in A.3 essentially follows by the \Wp triangle inequality.
+
+###### Lemma 2 (Comparison to Monge gap).
+
+For the alternative objective \cE^{\prime}\_{p} defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | \cE^{\prime}\_{p}(\kappa;\mu,\nu)^{p}\defeq\underbrace{\iint\|x-y\|^{p}\dd% \kappa\_{x}(y)\dd\mu(x)-\Wp(\mu,\kappa\_{\sharp}\mu)^{p}}\_{\text{Monge gap}}+\Wp% (T\_{\sharp}\mu,\nu)^{p}, |  |
+
+we have \cE\_{p}\leq 4\cE^{\prime}\_{p}. For p=1, we have \cE^{\prime}\_{1}/2\leq\cE\_{1}\leq 2\cE^{\prime}\_{1}.
+
+We now examine stability of \cE\_{p} with respect to perturbations of the source and target distributions. These stability results form the backbone for the estimation risk analysis of the estimators proposed in the subsequent sections. Their proofs in A generally follow via the L^{p} triangle inequality.
+
+###### Lemma 3 (Stability in \nu).

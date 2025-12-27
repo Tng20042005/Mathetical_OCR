@@ -1,0 +1,167 @@
+C. Meng, Y. Ke, J. Zhang, M. Zhang, W. Zhong, and P. Ma.
+  Large-scale optimal transport map estimation using projection pursuit.
+  *Advances in Neural Information Processing Systems (NeurIPS)*, 2019.
+* Mroueh [2020]
+
+  Y. Mroueh.
+  Wasserstein style transfer.
+  In *International Conference on Artificial Intelligence and Statistics (AISTATS)*, 2020.
+* Nietert et al. [2023a]
+
+  S. Nietert, R. Cummings, and Z. Goldfeld.
+  Robust estimation under the Wasserstein distance.
+  *arXiv preprint arXiv:2302.01237*, 2023a.
+* Nietert et al. [2023b]
+
+  S. Nietert, Z. Goldfeld, and S. Shafiee.
+  Outlier-robust Wasserstein DRO.
+  In *Advances in Neural Information Processing Systems (NeurIPS)*, 2023b.
+* Nietert et al. [2024]
+
+  S. Nietert, Z. Goldfeld, and S. Shafiee.
+  Robust distribution estimation with local and global adversarial corruptions.
+  In *Conference on Learning Theory (COLT)*, 2024.
+* Pittas and Pensia [2025]
+
+  T. Pittas and A. Pensia.
+  Optimal robust estimation under local and global corruptions: Stronger adversary and smaller error.
+  In *Conference on Learning Theory (COLT)*, 2025.
+* Pooladian and Niles-Weed [2021]
+
+  A.-A. Pooladian and J. Niles-Weed.
+  Entropic estimation of optimal transport maps.
+  *arXiv preprint arXiv:2109.12004*, 2021.
+* Pooladian et al. [2023]
+
+  A.-A. Pooladian, V. Divol, and J. Niles-Weed.
+  Minimax estimation of discontinuous optimal transport maps: The semi-discrete case.
+  In *International Conference on Machine Learning (ICML)*, 2023.
+* Redko et al. [2019]
+
+  A. Redko, N. Courty, R. Flamary, and D. Tuia.
+  Optimal transport for multi-source domain adaptation.
+  *International Journal of Computer Vision*, 127(8):1923–1953, 2019.
+* Rigollet [2015]
+
+  P. Rigollet.
+  18.s997: High dimensional statistics lecture notes.
+  https://ocw.mit.edu/courses/18-s997-high-dimensional-statistics-spring-2015/619e4ae252f1b26cbe0f7a29d5932978\_MIT18\_S997S15\_CourseNotes.pdf, 2015.
+  Lecture notes for MIT course 18.S997, Spring 2015.
+* Santambrogio [2015]
+
+  F. Santambrogio.
+  *Optimal Transport for Applied Mathematicians*.
+  Birkhäuser, 2015.
+* Schiebinger et al. [2019]
+
+  G. Schiebinger, J. Shu, B. T. Tabaka, J. Ashouri, D. J. Cleary, V. Subramanian, and et al.
+  Optimal-transport analysis of single-cell gene expression identifies developmental trajectories in reprogramming.
+  *Cell*, 176(4):928–943.e22, 2019.
+* Seguy et al. [2018]
+
+  V. Seguy, B. B. Damodaran, R. Flamary, N. Courty, A. Rolet, and M. Blondel.
+  Large scale optimal transport and mapping estimation.
+  In *International Conference on Learning Representations (ICLR)*, 2018.
+* Singh and Póczos [2018]
+
+  S. Singh and B. Póczos.
+  Minimax distribution estimation in Wasserstein distance.
+  *arXiv preprint arXiv:1802.08855*, 2018.
+* Toneian [2019]
+
+  D. Toneian.
+  *Measurable selection in optimal transport and Skorokhod embeddings*.
+  PhD thesis, Wien, 2019.
+* Uscidda and Cuturi [2023]
+
+  T. Uscidda and M. Cuturi.
+  The Monge gap: A regularizer to learn all transport maps.
+  In *International Conference on Machine Learning (ICML)*, 2023.
+* Vesseron et al. [2025]
+
+  N. Vesseron, L. Béthune, and M. Cuturi.
+  Sample and map from a single convex potential: Generation using conjugate moment measures.
+  *arXiv preprint arXiv:2503.10576*, 2025.
+* Villani [2003]
+
+  C. Villani.
+  *Topics in Optimal Transportation*.
+  Graduate Studies in Mathematics. American Mathematical Society, 2003.
+* Wang and Goldfeld [2024]
+
+  T. Wang and Z. Goldfeld.
+  Neural estimation of entropic optimal transport.
+  In *IEEE International Symposium on Information Theory (ISIT)*, 2024.
+* Weed and Berthet [2019]
+
+  J. Weed and Q. Berthet.
+  Estimation of smooth densities in Wasserstein distance.
+  In *Conference on Learning Theory (COLT)*, 2019.
+* Zhang et al. [2018]
+
+  L. Zhang, L. Wang, et al.
+  Monge-Ampère flow for generative modeling.
+  *arXiv preprint arXiv:1809.10188*, 2018.
+* Zhu et al. [2022]
+
+  B. Zhu, J. Jiao, and J. Steinhardt.
+  Generalized resilience and robust statistics.
+  *The Annals of Statistics*, 50(4):2256 – 2283, 2022.
+
+## Appendix A Proofs for 2
+
+### A.1 Proof of 1
+
+Clearly, \cE\_{p}(\kappa;\mu,\nu)=0 if \kappa minimizes (2). On the other hand, if \cE\_{p}(\kappa,\mu,\nu)=0, then \kappa\_{\sharp}\mu=\nu. Thus, \kappa is feasible for (2) with optimal objective value, i.e., it is a minimizer.
+
+Further, if T^{\star} is an optimal map, then \Wp(\mu,\nu)=\|T^{\star}-\Id\|\_{L^{p}(\mu)} and T^{\star}\_{\sharp}\mu=\nu. We thus bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(T;\mu,\nu) | \displaystyle=\left[\|T-\Id\|\_{L^{p}(\mu)}-\Wp(\mu,\nu)\right]\_{+}+\Wp(T\_{% \sharp}\mu,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\left[\|T-\Id\|\_{L^{p}(\mu)}-\|T^{\star}-\Id\|\_{L^{p}(\mu)}% \right]\_{+}+\Wp(T\_{\sharp}\mu,T^{\star}\_{\sharp}\mu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\|T-T^{\star}\|\_{L^{p}(\mu)}, |  |
+
+as desired.∎
+
+### A.2 Reverse L^{2} comparison (2)
+
+Suppose that there exists a unique Brenier map of the form T^{\star}=\nabla\varphi, where \varphi:\R^{d}\to\R is convex and twice differentiable such that H\varphi\preceq LI\_{d}. Fixing any map T:\cX\to\cY, we abbreviate \eps=\cE\_{2}(T;\mu,\nu). By the definition of \cE\_{2}, we have \Wtwo(T\_{\sharp}\mu,\nu)\leq\eps. Let \lambda\in\cK(\cY,\cY) be a kernel which achieves this bound, and take \kappa=\lambda\circ T. By construction, we have \kappa\_{\sharp}\mu=\nu and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left(\iint\|y-x\|^{2}\dd\kappa(y|x)\dd\mu(x)\right)^{\frac{1}{2}% }-\Wtwo(\mu,\nu) | \displaystyle\leq\left(\iint\|T(x)-x\|^{2}\dd\mu(x)\right)^{\frac{1}{2}}-\Wtwo% (\mu,\nu)+\eps |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\eps. |  |
+
+Consequently, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\iint\|y-x\|^{2}\dd\kappa(y|x)\dd\mu(x)-\Wtwo(\mu,\nu)^{2} | \displaystyle\leq 2\eps\left(\left(\iint\|y-x\|^{2}\dd\kappa(y|x)\dd\mu(x)% \right)^{\frac{1}{2}}+\Wtwo(\mu,\nu)\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 2\eps\cdot\left(2\Wtwo(\mu,\nu)+2\eps\right) |  |
+
+Thus, by Proposition 3.1 of Li and Nochetto [2021], we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\iint\|y-T^{\star}(x)\|^{2}\dd\kappa(y|x)\dd\mu(x) | \displaystyle\leq L\left(\iint\|y-x\|^{2}\dd\kappa(y|x)\dd\mu(x)-\Wtwo(\mu,\nu% )^{2}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 4L\eps\cdot\left(\Wtwo(\mu,\nu)+\eps\right). |  |
+
+Finally, we bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\|T-T\_{\star}\|\_{L^{2}(\mu)} | \displaystyle\leq\left(\iint\|y-T^{\star}(x)\|^{2}\dd\kappa(y|x)\dd\mu(x)% \right)^{\frac{1}{2}}+\eps |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  |

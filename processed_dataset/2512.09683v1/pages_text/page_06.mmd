@@ -1,0 +1,40 @@
+\mathbbm{S}^{1}, thus is a (\mathcal{G}\_{t})\_{t\geq 0}-stopping time. Therefore, the conditional law of (\widetilde{g}(Y\_{s\_{1}^{\prime}+u}))\_{u\geq 0} given \mathcal{G}\_{s\_{1}^{\prime}} is an independent Brownian excursion (up to a time change) in \mathbbm{D} from 1 to 0. By taking the time reversal of (Y\_{t})\_{t\geq 0}, we obtain the result.
+
+Then we prove (i).
+Let A\subset\overline{\mathbbm{D}} be relatively compact such that \mathbbm{D}\backslash A is simply connected and contains 0. Note that the law of (B\_{t})\_{t\in[0,\tau\_{\mathbbm{D}}]} conditioned on the event B[0,\tau\_{\mathbbm{D}}]\cap A=\emptyset is the same as the Brownian motion (up to a time change) in \mathbbm{D}\backslash A starting from 0 and conditioned on exiting \mathbbm{D}\backslash A at \mathbbm{S}^{1}\setminus A. Combined with the conformal invariance of the Brownian motion, it then implies that g(\widetilde{\ell}\_{1}) is independent of the event B[0,\tau\_{\mathbbm{D}}]\cap A=\emptyset. By varying A, we conclude that g(\widetilde{\ell}\_{1}) is independent of the outer boundary of B[0,\tau\_{\mathbbm{D}}], and hence \ell\_{1}.
+∎
+
+Now Proposition 3.2 follows by combining Lemma 3.5 and Lemmas 3.3 and 3.4 above.
+
+###### Proof of Proposition 3.2.
+
+By Lemma 3.5 and the definition of \nu\_{\mathbbm{D}}, we have
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\mathrm{CR}(\eta,0)^{\lambda}\nu\_{\mathbbm{D}}(d\eta) | \displaystyle=\sum\limits\_{n\geq 1}\mathbbm{E}[\mathrm{CR}(\ell\_{n},0)^{% \lambda}]=\sum\limits\_{n\geq 1}\mathbbm{E}\left[\left(\prod\limits\_{k=2}^{n}% \frac{\mathrm{CR}(\ell\_{k},0)}{\mathrm{CR}(\widetilde{\ell}\_{k-1},0)}\cdot% \frac{\mathrm{CR}(\widetilde{\ell}\_{k-1},0)}{\mathrm{CR}(\ell\_{k-1},0)}\right)% ^{\lambda}\mathrm{CR}(\ell\_{1},0)^{\lambda}\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\sum\limits\_{n\geq 1}\mathbbm{E}[\mathrm{CR}(\ell\_{1},0)^{% \lambda}]^{n}\mathbbm{E}[\mathrm{CR}(\rho,0)^{\lambda}]^{n-1}=\frac{\mathbbm{E% }[\mathrm{CR}(\ell\_{1},0)^{\lambda}]}{1-\mathbbm{E}[\mathrm{CR}(\ell\_{1},0)^{% \lambda}]\mathbbm{E}[\mathrm{CR}(\rho,0)^{\lambda}]}. |  |
+
+Thus, combined with Lemmas 3.3 and 3.4, we obtain
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mathbbm{E}[\mathrm{CR}(\rho,0)^{\lambda}] | \displaystyle=\frac{1}{\mathbbm{E}[\mathrm{CR}(\ell\_{1},0)^{\lambda}]}-\frac{1% }{\nu\_{\mathbbm{D}}[\mathrm{CR}(\eta,0)^{\lambda}]} |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle=\frac{\sinh(\frac{\pi}{2}\sqrt{12\lambda-1})}{\sqrt{12\lambda-1}% }-\frac{\sinh(\frac{\pi}{3}\sqrt{12\lambda-1})}{C\sqrt{12\lambda-1}\log\left(% \frac{(2+\sqrt{3})^{2}+\tanh^{2}\left(\frac{\pi}{12}\sqrt{12\lambda-1}\right)}% {1+(2+\sqrt{3})^{2}\tanh^{2}\left(\frac{\pi}{12}\sqrt{12\lambda-1}\right)}% \right)}. |  | (3.5) |
+
+Here the constant C is the same as the one in Lemma 3.4.
+Now, note that (3.5) becomes \frac{e^{\pi\sqrt{3\lambda}}}{4\sqrt{3\lambda}}(1-\frac{1}{2\sqrt{3}C})(1+o(1)) as \lambda\to\infty. Since we must have \mathbbm{E}[\mathrm{CR}(\rho,0)^{\lambda}]\to 0 as \lambda\to\infty, we find C=\frac{\sqrt{3}}{6}. Taking this into (3.5), we conclude.
+∎
+
+As a corollary of Proposition 3.2, by the following special case of Tauberian theorem, we can derive the tail probabilities of \mathrm{CR}(\rho,0) and \mathrm{CR}(\widetilde{\ell}\_{1},0), which will be used in Section 4.
+
+###### Lemma 3.6.
+
+Suppose \mathcal{X} is a positive random variable such that \mathbbm{E}[1-e^{-\lambda\mathcal{X}}]=\frac{C}{|\log\lambda|}(1+o(1)),\ %
+\lambda\downarrow 0 for some constant C>0. Then \mathbbm{P}[\mathcal{X}>t]=\frac{C}{\log t}(1+o(1)) as t\to\infty.
+
+###### Proof.

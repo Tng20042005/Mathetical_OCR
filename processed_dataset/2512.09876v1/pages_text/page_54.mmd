@@ -1,0 +1,76 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{SK}^{\prime}\_{1}(\widetilde{X})\;=\;\operatorname{SK}^{\prime}\_{% 1}(S)\oplus\operatorname{SK}^{\prime}\_{1}(S)\;=\;0. |  |
+
+Thus the hypothesis \operatorname{SK}\_{1}(\widetilde{X})=0 of Lemma 4.4.9 is
+satisfied, and that lemma yields an exact sequence
+
+|  |  |  |
+| --- | --- | --- |
+|  | \kappa(\mathfrak{p})^{\times}\oplus\kappa(\mathfrak{p})^{\times}\xrightarrow{% \ N\_{y\_{1}/x}+N\_{y\_{2}/x}\ }\kappa(\mathfrak{p})^{\times}\longrightarrow% \operatorname{SK}^{\prime}\_{1}(X)\longrightarrow 0, |  |
+
+and each norm map N\_{y\_{i}/x} is the identity on \kappa(\mathfrak{p})^{\times}.
+Hence the first arrow is the multiplication map
+
+|  |  |  |
+| --- | --- | --- |
+|  | \kappa(\mathfrak{p})^{\times}\times\kappa(\mathfrak{p})^{\times}% \longrightarrow\kappa(\mathfrak{p})^{\times},\quad(a,b)\mapsto ab, |  |
+
+which is surjective. It follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \operatorname{SK}^{\prime}\_{1}(X)=0, |  |
+
+so \operatorname{SK}^{\prime}\_{1}(X) is in particular 2-divisible. Together with the verification
+of (1) above, both hypotheses of Theorem 4.4.6 are satisfied by
+this X, and the forgetful map (4.4.4.b) is an isomorphism.
+
+This completes the proof in both cases.
+∎
+
+###### 4.4.13.
+
+In fact, in the case of an excellent scheme X of dimension 1,
+we can extend the previous techniques to get a complete computation of all the \mathbf{Z}-graded Chow-Witt
+groups with coefficients in the main MW-modules of 3.4.4.
+In practice, the localization long exact sequence allows us
+to reduce to the case where X=\operatorname{Spec}(R)
+is the spectrum of a Dedekind domain of finite type over \mathbf{Z},
+which we will adopt for the following next results. We start with the case M=\operatorname{K}^{M}\_{\*}.
+
+###### Proposition 4.4.14.
+
+Let X=\operatorname{Spec}(R) be the spectrum of a Dedekind domain of finite type222222More generally, this should work if X is the spectrum of a Dedekind domain with finite residue fields when q\leq 2. over \mathbf{Z},
+with function field K, and let r be the number of real places of K (so r=0 if \mathrm{char}(K)>0).
+Then one has:
+
+|  |  |
+| --- | --- |
+| A\_{0}(X,\operatorname{K}^{M}\_{q})=\begin{cases}\operatorname{Cl}(R)&q=0,\\ 0&\text{otherwise,}\end{cases} | A\_{1}(X,\operatorname{K}^{M}\_{q-1})=\begin{cases}\mathbf{Z}&q=0,\\ R^{\times}&q=1,\\ \underline{\operatorname{K}}^{M}\_{2}(R)&q=2,\\ (\mathbf{Z}/2)^{r}&q>2.\end{cases} |
+
+###### Proof.
+
+The computation stated in the first column
+follows by the very definition for q=0,
+4.4.3 for q=1, and the vanishing of \operatorname{K}^{M}\_{q}(k) for k a finite field and q>1.
+For the second column, the cases q=0,1 are obvious,
+q=2 is by definition while the case q>2 follows from [BT73, II, §2, Th. (2.1)].
+∎
+
+###### Remark 4.4.15.
+
+Note that the abelian group \underline{\operatorname{K}}^{M}\_{2}(R) appearing in the previous theorem was explicitly computed by Tate in most of the cases.
+We refer the reader to [BT73, Appendix].
+
+###### 4.4.16.
+
+Let us continue with the case of Witt K-theory. We first introduce a new abelian group used in the next proposition. Given an arbitrary 1-dimensional scheme X of finite type over \mathbf{Z}, we consider the map
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial:\bigoplus\_{\mathfrak{p},2\nmid\mathfrak{p}}\mathbf{Z}/2\rightarrow{% \underline{\operatorname{K}}^{M}\_{2}}(X)/2,(\epsilon\_{\mathfrak{p}})\_{% \mathfrak{p}}\mapsto\sum\_{\mathfrak{p},\epsilon\_{\mathfrak{p}}\neq 0}\{-\pi\_{% \mathfrak{p}},\pi\_{\mathfrak{p}}\}\text{ mod }2 |  |
+
+and denote by \underline{\operatorname{k}}^{M}\_{2}(X) its cokernel.
+
+###### Proposition 4.4.17.

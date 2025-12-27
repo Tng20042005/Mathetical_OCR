@@ -1,0 +1,54 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \bigoplus\_{y\in T}\kappa(y)^{\times}\xrightarrow{\sum\_{y/x}N\_{y/x}}\bigoplus\_{% x\in Z}\kappa(x)^{\times}\xrightarrow{\ i\_{\*}\ }\operatorname{SK}^{\prime}\_{1}% (X)\rightarrow 0 |  |
+
+where the sum runs over the points y/x\in T/Z, and N\_{y/x} denotes the norm map of the finite field extension \kappa(y)/\kappa(x).
+
+###### Proof.
+
+As X is Nagata, the normalization map p is finite. Since X is 1-dimensional Noetherian reduced, its singular locus Z has positive codimension. The first claim follows.
+Assume that \operatorname{SK}\_{1}(\widetilde{X})=0.
+According to (4.4.3.a), one gets: \operatorname{SK}^{\prime}\_{1}(X)\simeq A\_{0}(X,\operatorname{K}^{M}\_{2}), \operatorname{SK}\_{1}(\widetilde{X})\simeq A\_{0}(\tilde{X},\operatorname{K}^{M%
+}\_{2}).
+The square \Delta is a cdh-square, so it induces a long exact sequence for Chow groups with coefficients in the cycle module \operatorname{K}^{M}\_{\*} over X
+according to 1.5.9.
+The end of this long exact sequence is precisely the desired exact sequence.
+∎
+
+###### Example 4.4.10.
+
+If A is an order in a number ring \mathcal{O}\_{F}, then one has \operatorname{SK}^{\prime}\_{1}(A)=0. Indeed, the ideal \mathfrak{f} of Z (resp. T) in X=\operatorname{Spec}(A) (resp. \widetilde{X}=\operatorname{Spec}(\mathcal{O}\_{F}))
+corresponds to the conductor of A in \mathcal{O}\_{F}. One concludes by applying Lemma 4.4.9 to this situation, using the case of \mathcal{O}\_{F} in 4.4.7, the surjectivity of q and the fact that the norm map N\_{y/x} is surjective for extensions of finite fields.
+
+In contrast, the group \operatorname{SK}\_{1}(A) vanishes if and only if \mathfrak{f} is square free.
+
+###### Corollary 4.4.11.
+
+Let A\subset\mathcal{O}\_{F} be an order in a number ring, X=\operatorname{Spec}(A). Then the forgetful map (4.4.4.b) is an isomorphism. In particular, for a finite set S of finite places of F, and any invertible \mathcal{O}\_{F,S}-module L, we have a canonical isomorphism
+212121Some computations of the Chow group of 0-cycles of orders in a number ring can be found in [KK24].
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widetilde{\operatorname{CH}}{}^{1}(\mathcal{O}\_{F,S},L)\simeq\mathrm{Cl}(% \mathcal{O}\_{F,S}). |  |
+
+###### Proof.
+
+The first (resp. second) condition of 4.4.6 is true according to [MH73, Chap. V] (resp. 4.4.10).
+∎
+
+In fact, more original examples follow from 4.4.6:
+
+###### Corollary 4.4.12.
+
+Let S=\operatorname{Spec}(\mathcal{O}\_{F}) be the spectrum of a number ring, \mathfrak{p}\subset\mathcal{O}\_{F} a prime,
+and U=S-\{\mathfrak{p}\}. Consider one of the following situations:
+
+1. (1)
+
+   Consider the non-separated (*i.e.* non-affine in this case) Dedekind scheme X=S\sqcup\_{U}S. This is the spectrum of a number
+   ring with the point \mathfrak{p} doubled.
+2. (2)
+
+   Consider the *pinching* X=S\sqcup\_{\{\mathfrak{p}\}}S=\operatorname{Spec}(\mathcal{O}\_{F}\times\_{%
+   \kappa(\mathfrak{p})}\mathcal{O}\_{F}) as defined in [Fer03].
+   This is a normal crossing scheme made of two copies of the Dedekind scheme S glued at the point \mathfrak{p}.

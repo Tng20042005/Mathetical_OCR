@@ -1,0 +1,58 @@
+at (10, 3) G\_{0}=\{(x,t):u\_{\xi}=u\_{\eta}=-2\}: blue part;
+
+\node
+
+at (10, 2) G\_{1}=\{(x,t):u\_{\xi}=u\_{\eta}=1\}: red part;
+
+Figure 5. The set G satisfies GCC, but on which the observability fails.
+
+### 2.3. Necessary for unique continuation
+
+Proposition 2.2 is equivalent to the necessity of observability by duality.
+
+###### Proposition 2.4 (Observability implies OSC).
+
+If the observability (1.2) holds on some observation set G\subset[0,T]\times{\mathbb{T}}, then for all non-trivial pair (A,B), G does not obey the ({\rm OSC}) for (A,B).
+
+Indeed, we can even show that OSC is necessary for the unique continuation property.
+
+###### Proposition 2.5 (UCP implies OSC).
+
+Assume that the following unique continuation property holds
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{ Let u be a solution of \eqref{eq: wave-eq-0} and }u\_{t}=0\mbox{ a.e. in% }G\Longrightarrow u\equiv 0. |  |
+
+Then for any non-trivial pair (A,B), G does not obey the ({\rm OSC}) for (A,B).
+
+###### Proof.
+
+We argue by contradiction. Assume that
+there are two non-trivial sets A,B such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L\_{\xi\in A}]\,\Delta\,[G\cap L\_{% \eta\in B}]\Big{)}=0. |  |
+
+This implies that (see Fig. 6)
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle G\subset(L\_{\xi\in A}\cap L\_{\eta\in B})\cup\Big{(}([0,T]\times{% \mathbb{T}})\backslash(L\_{\xi\in A}\cup L\_{\eta\in B})\Big{)}. |  | (2.7) |
+
+\tikzset
+
+every picture/.style=line width=0.75pt
+
+{tikzpicture}
+
+[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+
+\draw
+
+[fill=blue!30 ,fill opacity=1 ] (162.61,59) – (424.61,59) – (424.61,214) – (162.61,214) – cycle ;
+\draw[fill=rgb, 255:red, 255; green, 255; blue, 255 ,fill opacity=1 ] (336.83,59) – (370.23,59) – (250.39,214) – (217,214) – cycle ;
+\draw[fill=rgb, 255:red, 255; green, 255; blue, 255 ,fill opacity=1 ] (228.77,59.09) – (192.77,59.37) – (350.29,214.1) – (386.29,213.82) – cycle ;
+\draw(217.6,214.2) .. controls (217.65,218.79) and (219.97,221.05) .. (224.56,220.99) – (224.56,220.99) .. controls (231.11,220.92) and (234.41,223.17) .. (234.47,227.75) .. controls (234.41,223.17) and (237.66,220.84) .. (244.21,220.76)(241.26,220.79) – (244.21,220.76) .. controls (248.79,220.7) and (251.05,218.38) .. (251,213.8) ;
+\draw(349.4,214.6) .. controls (349.5,219.27) and (351.88,221.55) ..

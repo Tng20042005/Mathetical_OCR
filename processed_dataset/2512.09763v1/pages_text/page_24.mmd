@@ -1,0 +1,52 @@
+###### Theorem 7.13.
+
+Assume that there exists C>0 such that L and G satisfy
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\|G\|\_{\infty}\leq C,\quad\forall\mu,\nu,\quad|G(m)-G(m^{\prime})% |\leq CW\_{2}(m,m^{\prime}), |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\forall s,x,z,m,\quad C^{-1}|z|^{2}-C\leq L(s,x,z,m), |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\forall s,x,y,z,m,m^{\prime},\quad|L(s,x,z,m)-L(s,x,z,m^{\prime})% |\leq C(1+|z|)(|x-y|+W\_{2}(m,m^{\prime})) |  |
+
+Then, there exists C\_{0} depending only on C and T such that for all t\in[0,T],m,m^{\prime}\in\mathcal{P}\_{2}(\mathbb{R}^{d}),
+
+|  |  |  |
+| --- | --- | --- |
+|  | |U(t,m)-U(t,m^{\prime})|\leq C\_{0}W\_{2}(m,m^{\prime}). |  |
+
+###### Proof.
+
+Let t\in[0,T],m,m^{\prime}\in\mathcal{P}\_{2}(\mathbb{R}^{d}) and \gamma optimal for W\_{2}(m,m^{\prime}). The proof consists in taking an almost optimal curve for U(t,m) and translating it along \gamma. Using this translation for U(t,m^{\prime}) shall then yield the result.
+
+Note first that U(t,m) is indeed well defined since we can simply choose the pair (b,\mu,K) such that K is trivial, b\equiv 0 and \mu\_{s}(dx)=m(dx). Let \epsilon>0 and an \epsilon optimal control (b,\mu,K) for U(t,\mu). Consider a translating coupling \eta of (b,\mu,K) along \gamma. Note that m\_{s}=(\pi\_{1})\_{\#}\eta\_{s} and define m^{\prime}\_{s}=(\pi\_{2})\_{\#}\eta\_{s}. By \epsilon optimality in U(t,m) and admissibility in U(t,m^{\prime}), we obtain the following bound.
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle U | \displaystyle(t,m^{\prime})-U(t,m)\leq G(\tilde{m}\_{T})-G(m\_{T})+\epsilon+ |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle+\int\_{t}^{T}\int\_{\mathbb{R}^{d}\times\mathbb{R}^{d}\times K}L(s% ,y,b(s,x,k),m^{\prime}\_{s})-L(s,x,b(s,x,k),m\_{s})\eta\_{s}(dx,dy,dk)ds |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\leq | \displaystyle\int\_{t}^{T}\int\_{\mathbb{R}^{d}\times\mathbb{R}^{d}\times K}C(1+% |b(s,x,k)|)(|x-y|+W\_{2}(m\_{s},m^{\prime}\_{s}))\eta\_{s}(dx,dy,dk)ds |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle+CW\_{2}(m^{\prime}\_{T},m\_{T})+\epsilon. |  |
+
+Remark now that because of the growth condition on L, both
+
+|  |  |  |
+| --- | --- | --- |
+|  | I:=\int\_{t}^{T}\int\_{\mathbb{R}^{d}\times\mathbb{R}^{d}\times K}|b(s,x,k)|^{2}% \eta\_{s}(dx,dy,dk)ds<\infty |  |
+
+and I\leq C(C+U(t,\mu)). Thus, using Cauchy-Schwarz inequality, and recalling that for any s\in[t,T],W^{2}\_{2}(m\_{s},m^{\prime}\_{s})\leq\mathbb{E}[|X\_{s}-Y\_{s}|^{2}]=%
+\mathbb{E}[|X\_{t}-Y\_{t}|^{2}]=W\_{2}^{2}(m,m^{\prime}), we obtain the required result.
+∎
+
+The previous result was already known, and it was namely proven by controllability argument [5]. This proof makes transparent the link with standard proofs in finite dimensional cases, see for instance [15].
+
+###### Remark 7.14.

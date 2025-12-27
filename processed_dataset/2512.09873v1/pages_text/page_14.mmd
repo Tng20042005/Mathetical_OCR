@@ -1,0 +1,81 @@
+Let u be a solution to (1.1). Then for almost every \xi (resp. \eta), \partial\_{\xi}u (resp. \partial\_{\eta}u) is a constant almost everywhere on the \xi-characteristics (resp. \eta-characteristics).
+
+###### Proposition 3.2 (Unique continuation implies weak GCC).
+
+Let T>0 and G\in[0,T]\times{\mathbb{T}}. Assume that the following unique continuation property holds
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{ Let u be a solution of \eqref{eq: wave-eq-0} and }u\_{t}=0\mbox{ a.e. in% }G\Longrightarrow u\equiv 0. |  |
+
+Then G satisfies the (weak GCC).
+
+###### Proof.
+
+We argue by contradiction. Suppose that G does not satisfy the (weak GCC), there exists a subset A\subset{\mathbb{T}} such that \mbox{meas}\_{\mathbb{R}}(A)>0 and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\mbox{meas}\_{\mathbb{R}}(G\cap L\_{\eta\in A})=0\quad\mbox{ or }% \quad\mbox{meas}\_{\mathbb{R}}(G\cap L\_{\xi\in A})=0. |  |
+
+Without loss of generality, we only consider the case
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\mbox{meas}\_{\mathbb{R}}(G\cap L\_{\eta\in A})=0. |  | (3.1) |
+
+Since A has positive measure, one can find a non-zero function \phi such that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{A}\phi(x){\,\rm d}x=0,\quad\int\_{A}|\phi|{\,\rm d}x=\mbox{% meas}\_{\mathbb{R}}(A)>0. |  | (3.2) |
+
+Set
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{0x}=-u\_{1}=\chi\_{A}\phi. |  |
+
+This is possible since \int\_{\mathbb{T}}u\_{0,x}{\,\rm d}x=\int\_{A}\phi{\,\rm d}x=0. Then we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\xi}u|\_{t=0}=u\_{0x}+u\_{1}=0,\quad\partial\_{\eta}u|\_{t=0}=u\_{0x}-u\_{1% }=2\chi\_{A}\phi. |  |
+
+It follows that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\xi}u=0\quad\mbox{ on }[0,T]\times{\mathbb{T}} |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \partial\_{\eta}u=0\quad\mbox{ on }L\_{\eta\in{\mathbb{T}}\backslash A}. |  |
+
+Thus we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{t}=\frac{1}{2}(\partial\_{\xi}u-\partial\_{\eta}u)=0\quad\mbox{ on }L\_{\eta% \in{\mathbb{T}}\backslash A}. |  |
+
+Thanks to (3.1), we see G\subset L\_{\eta\in{\mathbb{T}}\backslash A}, and thus u\_{t}=0 on G. By the UCP, we must have \partial\_{\eta}u|\_{t=0}=2\chi\_{A}\phi\equiv 0, which leads a contradiction with (3.2).
+∎
+
+### 3.2. OSC and GCC imply unique continuation
+
+We already know that (weak GCC) is necessary for unique continuation. Now we turn to analyze the difference between these two conditions: (GCC) and ({\rm OSC}). We start by proving that (GCC) implies unique continuation up to a symmetry function pair from the class \mathcal{S}^{2}\_{c}.
+
+###### Proposition 3.3 (GCC implies UCP up to \mathcal{S}^{2}\_{c}).
+
+Let T>0. Let G\in[0,T]\times{\mathbb{T}} satisfy ({\rm GCC}).
+If u solves the wave equation (1.1) and u\_{t}=0 on G, then its initial state (\partial\_{\xi}u,\partial\_{\eta}u)|\_{t=0} belongs to the symmetry function pair class \mathcal{S}^{2}\_{c}.
+
+###### Proof.
+
+Since \partial\_{t}u=\partial\_{\xi}u-\partial\_{\eta}u, the assumption u\_{t}=0 almost everywhere on G implies that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \partial\_{\xi}u=\partial\_{\eta}u\text{ a.e. on }G. |  | (3.3) |

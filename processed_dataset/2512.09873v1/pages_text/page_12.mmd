@@ -1,0 +1,102 @@
+(356.55,221.45) – (357.96,221.41) .. controls (364.62,221.27) and (368,223.53) .. (368.11,228.2) .. controls (368,223.53) and (371.28,221.13) .. (377.95,220.98)(374.95,221.04) – (379.35,220.95) .. controls (384.02,220.85) and (386.3,218.47) .. (386.2,213.8) ;
+\draw[fill=red!30 ,fill opacity=1 ] (290.4,119.68) – (309.6,138.08) – (294.2,158.6) – (274.2,139.4) – (290.4,119.68) – cycle ;
+
+\draw
+
+(228.49,227.53) node [anchor=north west][inner sep=0.75pt] [font=,rotate=-0.72] B;
+\draw(361.69,228.33) node [anchor=north west][inner sep=0.75pt] [font=,rotate=-0.72] A;
+\draw(312.6,84.2) node [anchor=north west][inner sep=0.75pt] [font=] L\_{\eta\in B};
+\draw(228.6,82.6) node [anchor=north west][inner sep=0.75pt] [font=] L\_{\xi\in A};
+\draw(367.6,125.2) node [anchor=north west][inner sep=0.75pt] [font=] G;
+
+Figure 6. A typical region G (blue part plus red part) satisfies the observable symmetry condition for the pair (A,B).
+
+We are going to construct nonzero solutions such that u\_{t}=0 on G. The construction is the same as in (2.5). Let
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle u\_{\eta}|\_{t=0}=\chi\_{A}+a\chi\_{{\mathbb{T}}\backslash A},\quad u% \_{\xi}|\_{t=0}=\chi\_{B}+a\chi\_{{\mathbb{T}}\backslash B} |  | (2.8) |
+
+where a is given by (2.6). Then
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{\mathbb{T}}u\_{0x}{\,\rm d}x=\int\_{\mathbb{T}}(u\_{\eta}+u\_{\xi})|\_{t=0}{% \,\rm d}x=0. |  |
+
+It is easy to see that
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{\eta}=1\mbox{ on }L\_{\xi\in A},\quad u\_{\eta}=a\mbox{ on }L\_{\xi\in{\mathbb% {T}}\backslash A} |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{\xi}=1\mbox{ on }L\_{\eta\in B},\quad u\_{\xi}=a\mbox{ on }L\_{\eta\in{\mathbb% {T}}\backslash B}. |  |
+
+It follows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle u\_{t}=\frac{1}{2}(u\_{\xi}-u\_{\eta})=0\mbox{ on }(L\_{\xi\in A}% \cap L\_{\eta\in B})\cup(L\_{\xi\in{\mathbb{T}}\backslash A}\cap L\_{\eta\in{% \mathbb{T}}\backslash B}) |  | (2.9) |
+
+and
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle u\_{t}=-1\mbox{ on }L\_{\xi\in A}\backslash L\_{\eta\in B},\quad u\_% {t}=1\mbox{ on }L\_{\eta\in A}\backslash L\_{\xi\in B}. |  | (2.10) |
+
+Thanks to (2.7) and (2.9), we find
+
+|  |  |  |
+| --- | --- | --- |
+|  | u\_{t}=0\mbox{ on }G |  |
+
+but (2.10) shows that u is not identically zero on [0,T]\times{\mathbb{T}}, which leads a contradiction with the UCP.
+∎
+
+### 2.4. Generated symmetric function pairs
+
+Motivated by the symmetry condition ({\rm OSC}) as well as the above examples, we define the following.
+
+###### Definition 2.6 (Decomposition pair).
+
+We say \{(A\_{k},B\_{k}),\ k=1,\dots,K\} is a decomposition pair, if A\_{k},B\_{k}\subset{\mathbb{T}} are positive measure sets such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\{A\_{k}:k=1,...,K\}\subset{\mathbb{T}}\textrm{ are disjoint % measurable sets, } |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\{B\_{k}:k=1,...,K\}\subset{\mathbb{T}}\textrm{ are disjoint % measurable sets, } |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\cup\_{1\leq k\leq K}A\_{k}=\cup\_{1\leq k\leq K}B\_{k}={\mathbb{T}}. |  |
+
+###### Definition 2.7 (Symmetric function pair).
+
+We say
+(f,g) is a symmetric function pair if there exists a decomposition pair \{(A\_{k},B\_{k}),\ k=1,\dots,K\}, a sequence of different numbers \{s\_{k}\}\_{k=1}^{K} such that
+
+|  |  |  |
+| --- | --- | --- |
+|  | f=\sum\_{1\leq k\leq K}s\_{k}\chi\_{A\_{k}},\quad g=\sum\_{1\leq k\leq K}s\_{k}\chi\_% {B\_{k}}, |  |
+
+and
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{{\mathbb{T}}}(f+g)(x){\,\rm d}x=0. |  |
+
+The set of all symmetric function pairs is denoted by \mathcal{S}^{2}\_{c}.
+
+The essential feature is that f and g take the same values s\_{k} on the respective positive-measure sets A\_{k} and B\_{k}. Such symmetric pairs are closely related to ({\rm OSC})
+and, in particular, are used to study the relation between the (GCC) and the UCP.
+
+In what follows, we introduce slightly weaker notions, the weak decomposition pair and the weak symmetric function pair, which will be used to investigate the corresponding relationship between the (weak GCC) and UCP.
+
+###### Definition 2.8 (Weak decomposition pair).
+
+Let I be a countable index set (it can be finite).
+We say \{(A\_{k},B\_{k}),\ k\in I\} is a weak decomposition pair, if A\_{k},B\_{k}\subset{\mathbb{T}} are positive measure sets such that

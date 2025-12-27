@@ -1,0 +1,59 @@
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| (4.2.1.a) |  | \displaystyle C^{p}(X/S,M\_{q},\mathcal{L}) | \displaystyle:=C^{p}(X,M\_{q},\mathcal{L}) | \displaystyle:=\bigoplus\_{x\in X^{(p)}}M\_{q-p}(x,\omega\_{X,x}\otimes\lambda\_{x% }\otimes\mathcal{L}\_{x}^{\vee}), |  |
+|  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| (4.2.1.b) |  | \displaystyle A^{p}(X/S,M\_{q},\mathcal{L}) | \displaystyle:=H^{p}\big{(}C^{\*}(X/S,M\_{q},\mathcal{L})\big{)} | \displaystyle:=H^{p}\big{(}C^{\*}(X,M\_{q},\mathcal{L})\big{)}. |  |
+
+so that we have the (trivial) *duality isomorphism* (3.3.7.c).
+When X=S, we simply write: A^{p}(X,M\_{q},\mathcal{L}) for the above cohomology group.
+
+The functoriality properties can be translated from the homological case,
+using (3.3.7.c). Let us be more explicit for the comfort of the reader.
+Given an slci morphism f:Y\rightarrow X (resp. proper morphism \pi:X^{\prime}\rightarrow X)
+of essentially slci S-schemes, one gets:
+
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle f^{\*}: | \displaystyle A^{p}(X/S,M\_{q},\mathcal{L})\rightarrow A^{p}(Y/S,M\_{q},f^{\*}% \mathcal{L}), | (2.4.0.a). |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | \displaystyle\pi\_{!}: | \displaystyle A^{p}(X^{\prime}/S,M\_{q},\omega\_{\pi}\otimes\pi^{\*}\mathcal{L})% \rightarrow A^{p}(X/S,M\_{q},\mathcal{L}), | \displaystyle\text{\lx@cref{creftypecap~refnum}{num:pushforward}}. |  |
+
+Note that \omega\_{\pi} is well-defined as \pi is quasi-smooth under our assumptions.
+In fact, A^{p}(-/S,M\_{q},\mathcal{L}) is a cohomology theory on any of the sites
+defined in 2.2.7. Moreover,
+it is SL-oriented according to 2.4.2,
+and admits an action of Euler classes according to 2.3.1.
+
+###### 4.2.2.
+
+Canonical choices (regular case).
+It is relevant to consider a simpler notation when X=S is a regular scheme.
+As in 4.1.5, we consider the canonical pinning \lambda such that \lambda\_{x}=\omega\_{x},
+for any point x:\operatorname{Spec}(E)\rightarrow X with canonical sheaf \omega\_{x};
+and the canonical dimension function \delta=-\operatorname{codim}\_{X}. Note that these choices correspond to the choice of dualizing complex K\_{X}=\mathcal{O}\_{X}
+on X (see 3.1.5).
+
+Let M be a the MW-module as in (4.1.1.a), and \mathcal{L} a line bundle over X.
+With the preceding choices, the definition of the previous paragraph in the case X=S allow
+to define the cohomological Chow-Witt groups of X with twists \mathcal{L} and with coefficients in M:
+
+|  |  |  |
+| --- | --- | --- |
+|  | C^{p}(X,M\_{q},\mathcal{L}):=\bigoplus\_{x\in X^{(p)}}M\_{q-p}(x,\nu\_{x}\otimes% \mathcal{L}\_{x}^{\vee}),A^{p}(X,M\_{q},\mathcal{L})=H\_{p}(C^{p}(X,M\_{q},% \mathcal{L})). |  |
+
+where x\in X^{(p)} now really is a codimension p point of X,
+and \nu\_{x}=\det(\mathcal{N}\_{x/S\_{(x)}}). One also defines the codimension p cycles on X with coefficients in M
+as Z^{p}(X,M\_{q},\mathcal{L})\subset C^{p}(X,M\_{q},\mathcal{L}) defined by the kernel of the differential of the complex.
+Let us introduce an explicit definition.
+
+###### Definition 4.2.3.
+
+Consider the above notation: X a regular scheme, \mathcal{L} a line bundle over X,
+and the choices of pinning and dimension function are normalized by the choice of dualizing complex
+K\_{X}=\mathcal{O}\_{X}. Specializing the above definition by taking M=\operatorname{K}^{MW}\_{\*}, q=p, one defines the *Chow-Witt group*
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widetilde{\operatorname{CH}}{}^{p}(X,\mathcal{L})=A^{p}(X,\operatorname{K}^{% MW}\_{p},\mathcal{L}). |  |

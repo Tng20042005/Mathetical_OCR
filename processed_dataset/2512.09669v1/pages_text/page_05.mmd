@@ -1,0 +1,43 @@
+he geometric Sen morphism is also injective at every geometric point, thus [1, Theorem 1.17] applies in such a case (and we also expect global perfectoidness). In particular, this holds in the setting of Example 1.2.4 precisely when the map f to the flag variety is an immersion, and this yields many new examples where [1, Theorem 1.17] applies.
+
+#### 1.2.6. Derivatives of period maps
+
+Inscribed v-sheaves, as introduced in [Howe.InscriptionTwistorsAndPAdicPeriods], provide a differential structure on top of the usual theory of diamonds and v-sheaves.
+The construction of [Howe.InscriptionTwistorsAndPAdicPeriods, §7] associates to the filtered G-bundle with integrable connection \tilde{S}\_{\mathrm{dR}} an inscribed Hodge period map and inscribed lattice Hodge period map fitting in a commutative diagram
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tikzcd{S^{{\diamond\_{\mathrm{lf}}}}}&{\mathrm{Gr}^{\mathrm{split}}\_{G}/G(% \overline{\mathbb{B}^{+}\_{\mathrm{dR}}})}\\ \\ {\mathrm{Fl}\_{G}^{\diamond\_{\mathrm{lf}}}/G(\overline{\mathcal{O}})}\arrow["{% \pi^{+}\_{\mathrm{Hdg}}}"{description},from=1-1,to=1-3]\arrow["{\pi\_{\mathrm{% Hdg}}}"{description},from=1-1,to=3-3]\arrow["\mathrm{BB}"{description},from=1-% 3,to=3-3] |  |
+
+Here \mathrm{Gr}^{\mathrm{split}}\_{G} is the disjoint union of Schubert cells in the (inscribed) \mathbb{B}^{+}\_{\mathrm{dR}}-affine Grassmannian for G and \mathrm{BB} is the Bialynicki-Birula map. By [Howe.InscriptionTwistorsAndPAdicPeriods, Lemma 7.1.6], the derivative of \pi\_{\mathrm{Hdg}} is (the inscibred extension of) the Kodaira-Spencer morphism \kappa\_{\tilde{S}\_{\mathrm{dR}}}, and the derivative of \mathrm{BB} is naturally identified with (the inscribed extension of) the map q\_{\tilde{S}} as above. Because d\pi\_{\mathrm{Hdg}}=d\mathrm{BB}\circ d\pi\_{\mathrm{Hdg}}^{+}, we deduce from Theorem A that d\pi\_{\mathrm{Hdg}}^{+} is the geometric Sen morphism (after restriction to the underlying v-sheaf; in particular, d\pi\_{\mathrm{Hdg}}^{+} provides a natural inscribed extension of the geometric Sen morphism which is not, a priori, pinned down by the original geometric Sen morphism because the latter is defined using the completed structure sheaf).
+
+### 1.3. Outline
+
+In §2 we recall some constructions with filtered bundles with integrable connection and construct the Kodaira-Spencer morphism. In §3 we prove Theorem A.
+
+### 1.4. Acknowledgements
+
+We thank Tongmu He, Lue Pan, and Juan Esteban Rodriguez Camargo for helpful conversations. This work was supported in part by National Science Foundation grants DMS-2201112 and DMS-2501816.
+
+## 2. Filtered bundles with integrable connection
+
+Let L be any complete extension of \mathbb{Q}\_{p}, and let S/L be a smooth rigid analytic variety. In this section we explain our terminology for filtered vector bundles and torsors with integrable connection, then construct the Kodaira-Spencer morphism.
+
+### 2.1. Filtered vector bundles with integrable connection
+
+We consider the exact category of filtered vector bundles with integrable connection on S, whose objects are vector bundles \mathcal{V} equipped with a locally separated and exhaustive descending filtration \mathrm{Fil}^{\bullet}\mathcal{V} by local direct summands and equipped with a connection \nabla\_{\mathcal{V}}:\mathcal{V}\rightarrow\mathcal{V}\otimes\_{\mathcal{O}}%
+\Omega^{1}\_{S} such that \nabla^{2}=0. We say (\mathcal{V},\mathrm{Fil}^{\bullet},\nabla) satisfies Griffiths transversality if \nabla|\_{\mathrm{Fil}^{i}\mathcal{V}} factors through \mathrm{Fil}^{i-1}\mathcal{V}\otimes\_{\mathcal{O}}\Omega^{1}\_{S}.
+
+### 2.2. Filtered torsors with integrable connection
+
+Suppose G/L is a connected linear algebraic group. A filtered G-bundle with integrable connection on S is an exact tensor functor \omega from \mathrm{Rep}\_{L}G to filtered vector bundles with integrable connection on S. We say it satisfies Griffiths transversality if it factors through the subcategory of filtered vector bundles with integrable connection satisfying Griffiths transversality.
+
+Given a filtered G-bundle with integrable connection \omega, we obtain a geometric G-torsor \rho:\mathcal{G}\rightarrow S representing the functor of trivializations of the underlying G-bundle. In particular, over \mathcal{G} the filtration on the G-bundle is transported G-equivariantly to a filtration on the trivial bundle that is classified by a G-equivariant map \pi:\mathcal{G}\rightarrow\mathrm{Fl}\_{G}, where \mathrm{Fl}\_{G} is the flag variety parameterizing trivializations on the trivial G-torsor (its geometric connected components are in bijection with conjugacy classes [\mu] of geometric cocharacters of G, which are the flag varieties \mathrm{Fl}\_{[\mu]} most often considered in the literature). The connection gives rise to a G-equivariant splitting T\_{\mathcal{G}/L}=\operatorname{Lie}G\oplus\rho^{\*}T\_{S/L}, where here \operatorname{Lie}G is treated as a vector group and corresponds to the vertical tangent directions via the G-action. We refer to the data of \mathcal{G}, \pi, and the splitting as the associated filtered G-torsor with integrable connection; note that one can recover \omega from this data (but to obtain an equivalence between the notions we should further require that the splitting also respect Lie brackets of vector fields).
+
+### 2.3. The Kodaira-Spencer morphism
+
+Continuing with the notation of §2.2, we can restrict d\pi to \rho^{\*}T\_{S/L}\subseteq T\_{\mathcal{G}/L} and then descend along the G-action back to S to obtain
+
+|  |  |  |
+| --- | --- | --- |
+|  | \kappa\_{\mathcal{G}}:T\_{S/L}\rightarrow\omega(\mathfrak{g})/\mathrm{Fil}^{0}% \omega(\mathfrak{g}). |  |

@@ -1,0 +1,33 @@
+\prime},y\_{i}\}\} that induce a rainbow copy of \mathcal{F}\_{i+1}, where \{y\_{2,1}^{\prime},\ldots,y\_{i,1}^{\prime}\}\cap N\_{F}(x\_{0})=\emptyset. Define W\_{i}:=\{\cup\_{j=2}^{i}\{y\_{j},y\_{j,1}^{\prime}\}\}\cup\{y\_{0},x\_{0},x\}\cup V%
+(T\_{1}). Let’s consider the step for i+1. Since d\_{G}(\{y\_{i+1},x\_{0}\})\geq 2k-1 and T\_{1}\cap N\_{G}(\{y\_{i+1},x\_{0}\})=\emptyset, there exists y\_{i+1,1}^{\prime}\in N\_{G}(\{y\_{i+1},x\_{0}\})-(W\_{i}\cup N\_{F}(x\_{0})
+such that \{\{T\_{1}\cup\{x\_{0}\},\{x\_{0},y\_{0},x\},\{x\_{0},y\_{2,1}^{\prime},y\_{2}\},%
+\ldots,\{x\_{0},y\_{i+1,1}^{\prime},y\_{i+1}\}\} induces a rainbow copy of \mathcal{F}\_{i+2}. Continuing the process until i=k-1, we can obtain a rainbow copy of \mathcal{F}\_{k} denoted by \mathcal{M}. Recall that d\_{G}(\{y\_{k},x\_{0}\})\geq 2k-1 and T\_{1}\cap N\_{G}(\{y\_{k},x\_{0}\})=\emptyset. As a result, there exists a vertex y\_{k,1}^{\prime} in the set N\_{G}(\{y\_{k},x\_{0}\})-W\_{k-1}. Moreover, by the choice of y\_{k},
+c(\{x\_{0},y\_{k},y\_{k,1}^{\prime}\})\notin\{c(\{x\_{0},y\_{0},x\}),c(T\_{1}\cup\{x%
+\_{0}\})\}. Hence E(\mathcal{M})\cup\{x\_{0},y\_{k},y\_{k,1}^{\prime}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction.
+This completes the proof of Claim 5.
+
+Next by Lemma 8, we proceed by discussing two subcases.
+
+Subcase 2.1. F=R\_{1}\cup R\_{2}, where R\_{1}\cong K\_{k-1} and R\_{2} is a factor-critical graph of order k+1 with degree sequence (k-1,\ldots,k-1,k-2).
+
+Claim 6.  \{c(g\cup\{x\})\ |\ g\in{[n]-\{x\}-V(R\_{1}\cup R\_{2})\choose 2}\} contains exactly one color denoted by c\_{0} which belongs to the color set C\_{Q}.
+
+We will use a proof by contradiction. Firstly, suppose that there exists g\in{[n]-\{x\}-V(R\_{1}\cup R\_{2})\choose 2} such that c(g\cup\{x\})\in\{c(p\cup\{x\})\ |\ p\in E(R\_{1}\cup R\_{2})\}. Write c(g\cup\{x\})=c(g^{\prime}\cup\{x\}), where g^{\prime}\in E(R\_{1}\cup R\_{2}). Since R\_{1} and R\_{2} are factor-critical graphs, F-g^{\prime} has a matching M\_{1} of size k-1. Let h\in Q such that x\notin h and h\cap V(M\_{1}\cup\{g\})=\emptyset. It follows that \{p\cup\{x\}\ |\ p\in M\_{1}\cup\{g,h\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction. Subsequently, suppose that there are two distinct edges g\_{1},g\_{2}\in{[n]-\{x\}-V(R\_{1})-V(R\_{2})\choose 2} such that c(g\_{1}\cup\{x\})\neq c(g\_{2}\cup\{x\}) and neither of them belongs to \{c(p\cup\{x\})\ |\ p\in E(R\_{1}\cup R\_{2})\}.
+Let M\_{2} be a matching of size k-1 in R\_{1}\cup R\_{2}. Since |Q|\geq 2k+6, we may choose h\in Q such that x\notin h and h\cap V(M\_{2}\cup\{g\_{1},g\_{2}\})=\emptyset. It follows that either \{p\cup\{x\}\ |\ p\in M\_{2}\cup\{g\_{1},h\}\} or \{p\cup\{x\}\ |\ p\in M\_{2}\cup\{g\_{2},h\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, a contradiction. This completes the proof of Claim 6.
+
+Claim 7. For any f\in([n]-V(R\_{1})-\{x\})\times V(R\_{1}), we have c(f\cup\{x\})\in\{c\_{0}\}\cup\{c(p\cup\{x\})\ |\ p\in E(F)\}; and for any g\in([n]-V(R\_{1}\cup R\_{2})-\{x\})\times V(R\_{2}), we have c(g\cup\{x\})=c\_{0}.
+
+We will use a proof by contradiction.
+Firstly, suppose that there exists f\_{1}\in([n]-V(R\_{1})-\{x\})\times V(R\_{1}) such that c(f\_{1}\cup\{x\})\notin\{c\_{0}\}\cup\{c(p\cup\{x\})\ |\ p\in E(R\_{1}\cup R\_{2})\}. Since R\_{1} and R\_{2} are factor-critical graphs, F-V(f\_{1}) contains a matching M\_{3} of size k-1. Then we can select h\in{[n]-V(R\_{1}\cup R\_{2})-\{x\}\choose 2} such that h\cap V(f\_{1})=\emptyset. By Claim 6, we have c(h\cup\{x\})=c\_{0}. Thus \{p\cup\{x\}\ |\ p\in M\_{3}\cup\{f\_{1},h\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, which is a contradiction.
+Next consider that there exists g\_{1}\in([n]-V(R\_{1}\cup R\_{2})-\{x\})\times V(R\_{2}) such that c(g\_{1}\cup\{x\})\neq c\_{0}. If c(g\_{1}\cup\{x\})\notin\{c(p\cup\{x\})\ |\ p\in E(R\_{1}\cup R\_{2})\}, let M\_{4} be a matching of size k-1 of F-V(g\_{1}) and let h^{\prime} be a 2-subset of [n]-(g\_{1}\cup V(F)\cup\{x\})\cup V(M), then \{p\cup\{x\}\ |\ p\in M\_{4}\cup\{g\_{1},h^{\prime}\}\} induces a rainbow copy of \mathcal{F}\_{k+1}
+a contradiction again. So we may assume that c(g\_{1}\cup\{x\})\in\{c(p\cup\{x\})\ |\ p\in E(R\_{1}\cup R\_{2})\}. Select an edge
+g\_{2}\in E(R\_{1}\cup R\_{2}) such that c(g\_{2}\cup\{x\})=c(g\_{1}\cup\{x\}). Then, pick an element g\_{0}\in{[n]-V(F)-V(g\_{1}\cup g\_{2})-\{x\})\choose 2}. By Claim 6, we have c(g\_{0}\cup\{x\})=c\_{0}.
+If F-V(g\_{1})-g\_{2} has a matching M of size k-1, then
+\{e\cup\{x\}\ |\ e\in M\cup\{g\_{0},g\_{1}\}\} induces a rainbow copy of \mathcal{F}\_{k+1}, which is a contradiction.
+Consequently, we can assume that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\nu(F-V(g\_{1})-g\_{2})<k-1. |  | (8) |
+
+If k\geq 6, by Lemma 10, \nu(F-V(g\_{1})-g\_{2})=k-1, which contradicts inequality (8). So we can conclude k=4.

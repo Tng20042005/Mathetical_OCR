@@ -1,0 +1,57 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E\left[\|(r\_{\cP})\_{\sharp}(\hat{\mu}\_{n}-\mu)\|\_{\tv}\right] | \displaystyle=\frac{1}{2}\E\left[\sum\_{P\in\cP}|(\hat{\mu}\_{n}-\mu)(P)|\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\frac{1}{2}\E\left[\sum\_{P\in\cP\_{R}}|(\hat{\mu}\_{n}-\mu)(P)|+% \sum\_{P\in\cP\setminus\cP\_{R}}|(\hat{\mu}\_{n}-\mu)(P)|\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{\frac{|\cP\_{R}|}{n}}+\E\left[\sum\_{P\in\cP\setminus% \cP\_{R}}\hat{\mu}\_{n}(P)+\mu(P)\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{\frac{|\cP\_{R}|}{n}}+\mu(\R^{d}\setminus B) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{\frac{(3\sqrt{2\log(n)})^{d}r^{-d}}{n}}+\frac{1}{n} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\widetilde{O}\left(\sqrt{\frac{5^{d}r^{-d}}{n}}\right), |  |
+
+as desired.
+∎
+
+###### Lemma 10.
+
+There exists a partition \cP parameterized by \delta>0 such that, for all \mu\in\cP(\R^{d}) with \E\_{\mu}[\|X\|^{p+1}]\leq 1 and any rounding map r\_{\cP}, we have \E\left[\|(r\_{\cP})\_{\sharp}(\hat{\mu}\_{n}-\mu)\|\_{\tv}\right]=\widetilde{O}%
+\bigl{(}\sqrt{\delta^{-d}/n}\bigr{)} and \|r\_{\cP}-\Id\|\_{L^{p}(\mu)}\lesssim\delta.
+
+###### Proof.
+
+Let X\_{0} be a minimal (3\delta)-covering of the unit ball, denoted S\_{0}. In particular, this implies that |X\_{0}|\leq\delta^{-d}. Now, take \cP\_{0} to be the Voronoi partition of S\_{0} induced by X\_{0}, so that \cP\_{0} has at most \delta^{-d} cells of diameter at most 6\delta. Then for each integer i>0, set S\_{i}\defeq 2^{i}S\_{0}\setminus 2^{i-1}S\_{0}, and let \cP\_{i} be the dilated partition \{(2^{i}P)\cap S\_{i}:P\in\cP\_{0}\}. By construction, |\cP\_{i}|\leq\delta^{-d} and each P\in\cP\_{i} has diameter at most 2^{i}\cdot 6\delta, for all i\geq 0. Moreover, by Markov’s inequality, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mu(S\_{i})\leq\Pr\_{\mu}\bigl{(}\|X\|>2^{i-1}\bigr{)}=\Pr\_{\mu}\bigl{(}\|X\|^{p% +1}>2^{(p+1)(i-1)}\bigr{)}\leq 2^{(1-i)(p+1)} |  |
+
+for each i>0. We thus bound
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\E\left[\|(r\_{\cP})\_{\sharp}(\mu-\hat{\mu}\_{n})\|\_{\tv}\right] | \displaystyle=\E\left[\sum\_{i=0}^{\infty}\sum\_{P\in\cP\_{i}}|(\mu-\hat{\mu}\_{n}% )(P)|\right] |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\sum\_{i=0}^{\infty}\sum\_{P\in\cP\_{i}}\sqrt{\Var\_{\mu^{\otimes n% }}[\hat{\mu}\_{n}(P)]} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\frac{1}{\sqrt{n}}\cdot\sum\_{i=0}^{\infty}\sum\_{P\in\cP\_{i}}% \sqrt{\mu(P)} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\frac{1}{\sqrt{n}}\cdot\sum\_{i=0}^{\infty}\sqrt{|\cP\_{i}|\mu(% S\_{i})} |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq(\delta^{d}n)^{-\frac{1}{2}}\cdot\left(1+\sum\_{i=1}^{\infty}2% ^{\frac{1-i}{2}}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim(\delta^{d}n)^{-\frac{1}{2}}. |  |
+
+Similarly, we bound

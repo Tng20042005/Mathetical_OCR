@@ -1,0 +1,36 @@
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\cE\_{p}(\hat{\kappa}\_{n};\mu,\nu) | \displaystyle\leq\cE\_{p}(\hat{\kappa}\_{n};\mu,\hat{\nu}\_{n})+\Wp(\hat{\nu}\_{n}% ,\nu) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\cE\_{p}(\hat{\kappa}\_{n};\hat{\mu}\_{n},\hat{\nu}\_{n})+2\Wp(% \mu,\hat{\mu}\_{n})+4\sqrt{d}\,\Wp(\mu,\hat{\mu})^{\frac{1}{p}}\tau^{-\frac{1}{% p}}+\Wp(\nu,\hat{\nu}\_{n}) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq 4(\tau d)^{\frac{1}{p}}\log(e^{2}d\tau^{-1})+4\sqrt{d}\,\Wp(% \mu,\hat{\mu})^{\frac{1}{p}}\tau^{-\frac{1}{p}}+2\Wp(\mu,\hat{\mu}\_{n})+\Wp(% \nu,\hat{\nu}\_{n}). |  |
+
+Taking expectations, applying 1, and plugging in \tau gives the theorem.∎
+
+### B.2 Minimax Lower Bound under Sampling
+
+Fix \mu=\delta\_{0}, so that the constant kernel \kappa^{\star} defined by \kappa^{\star}\_{x}\equiv\nu is optimal. Note that the error \cE\_{p}(\kappa;\mu,\nu) of any kernel \kappa is thus lower bounded by the feasibility gap \Wp(\kappa\_{0},\nu). Since we only observe n i.i.d. samples from \nu\in\cP([0,1]^{d}), any upper bound on an estimator for this problem instance also gives an upper bound for n-sample distribution estimation of \nu under \Wp. However, the minimax lower bound of Singh and Póczos [2018] implies that no distribution estimator can achieve \Wp error less than n^{-1/(2p\lor d)} for all \nu\in\cP([0,1]^{d}).
+
+### B.3 Proof of 2
+
+We start with some helpful lemmas.
+
+###### Lemma 8 (Rigollet [2015], Theorem 1.14).
+
+Let \mu\in\cP(\R) be 1-sub-Gaussian. Then, for X\_{1},\dots,X\_{n} sampled i.i.d. from \mu, we have \max\_{i=1,\dots,n}X\_{i}\leq\sqrt{2\log(n/\delta)} with probability at least 1-\delta.
+
+###### Lemma 9.
+
+Let \mu\in\cP(\R^{d}) be 1-sub-Gaussian and let \cP denote the regular partition of \R^{d} into cubes of side-length r>0. Then, for any choice of rounding map r\_{\cP}, we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | \E\left[\|(r\_{\cP})\_{\sharp}(\hat{\mu}\_{n}-\mu)\|\_{\tv}\right]=\widetilde{O}% \left(\sqrt{\frac{5^{d}r^{-d}}{n}}\right). |  |
+
+###### Proof.
+
+Let B denote a ball of radius R=\sqrt{2\log(n)} centered at the origin, so that \mu(B)\geq 1-1/n by 8.
+Write \cP\_{R} for the subset of partition blocks P\in\cP which intersect B, and note that |\cP\_{R}|\leq\vol(B)r^{-d}\leq(3R/r)^{d}. We then bound

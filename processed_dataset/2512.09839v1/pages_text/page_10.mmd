@@ -1,0 +1,48 @@
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\left|g(z\_{1})-g(z\_{2})\right|\leq 16\rho\exp\left[2\log R\left(1% -\frac{1}{K}\right)\right]\leq 32\rho. |  |
+
+On the other hand, if \left|z\_{1}-z\_{2}\right|=c\_{s}\rho, (3.7) implies that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\left|g(z\_{1})-g(z\_{2})\right|\geq\frac{R}{16}\left(\frac{c\_{s}% \rho}{R}\right)^{K}\geq c\_{s}\frac{\rho}{16}\left(\frac{\varepsilon}{aR}\right% )^{K-1}\geq c\_{s}\frac{\rho}{16}\exp\left[-2\log R\left(K-1\right)\right]\geq c% \_{s}\frac{\rho}{32}. |  |
+
+Recalling that c\_{s}=2^{10}10^{2}, we may conclude that
+
+|  |  |  |
+| --- | --- | --- |
+|  | \left|g(z\_{1})-g(z\_{2})\right|\geq 3200\rho. |  |
+
+Therefore, h is harmonic in B\_{R}\setminus\bigcup D\_{j}, where each D\_{j} is a disk of radius 32\rho.
+Moreover, the disks are 3200\rho-separated from each other, 0, and g(z\_{0}), while h doesn’t change sign in any of the annuli 100D\_{j}\setminus D\_{j}.
+Since z\_{0}\in\overline{B}\_{R-S}\cap\Omega, then for every z\in\partial B\_{R}, \left|z\_{0}-z\right|\geq S\geq 2^{8} and the distortion estimate described by (3.7) shows that
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\left|g(z\_{0})-g(z)\right| | \displaystyle\geq\frac{R}{16}\left|\frac{z\_{0}-z}{R}\right|^{K}\geq\frac{R}{16% }\left(\frac{S}{R}\right)^{K}=\frac{S}{16}\left(\frac{2^{8}}{R}\right)^{K-1}% \geq\frac{S}{16}R^{1-K}\geq\frac{S}{16}\exp\left(-\frac{\ln 2}{2}\right)>\frac% {S}{32}. |  |
+
+It follows that g(z\_{0})\in B\_{T}\setminus\bigcup 3D\_{j}, where T:=R-\frac{S}{32}.
+
+Since g:B\_{R}\to B\_{R}, then we may rescale the map to get
+
+|  |  |  |
+| --- | --- | --- |
+|  | \tilde{g}:=\frac{g}{32\rho}:B\_{R}\to B\_{\frac{R}{32\rho}} |  |
+
+which is onto with \tilde{g}(0)=0.
+Using (3.4) and (3.8), set C\_{1}=\frac{a}{32}\sqrt{\frac{2C\_{K}}{\ln 2}} and define
+
+|  |  |  |
+| --- | --- | --- |
+|  | \widetilde{R}=\frac{R}{32\rho}=C\_{1}R\sqrt{\log R}. |  |
+
+From here, we see that \tilde{h}:=f\circ\tilde{g}^{-1} is harmonic in \tilde{g}\left(\Omega\_{1}\right).
+In particular, \tilde{h} is harmonic in B\_{\widetilde{R}}\setminus\bigcup\widetilde{D}\_{j}, where the \widetilde{D}\_{j} are unit disks that are 100-separated from each other, from 0, and from \tilde{g}(z\_{0}).
+Moreover, \tilde{h} doesn’t change signs on any annuli 5\widetilde{D}\_{j}\setminus\widetilde{D}\_{j}.
+With \widetilde{S}:=C\_{1}S\sqrt{\log R} and \widetilde{T}:=\widetilde{R}-\frac{\widetilde{S}}{32}=C\_{1}T\sqrt{\log R}, \tilde{g}(z\_{0})\in B\_{\widetilde{T}}\setminus\bigcup 3\widetilde{D}\_{j}.
+Set \hat{R}\_{0}=\max\left\{R\_{1},R\_{2},2^{10},\exp\left(C\_{1}^{-2}\right)\right\} so the above arguments hold.
+Since R\geq\hat{R}\_{0} implies that C\_{1}\sqrt{\log R}\geq 1 and R\geq 2^{10}, then \widetilde{R}=C\_{1}R\sqrt{\log R}\geq 2^{10} as well.
+Because S\in\left(2^{8},\frac{R}{2}\right), then \widetilde{S}\in\left(2^{8},\frac{\widetilde{R}}{2}\right).
+
+As z\_{0} satisfies the bound in (3.2), then (3.6) shows that

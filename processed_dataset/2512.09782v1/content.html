@@ -1,0 +1,1473 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quasi-isometric rigidity for a product of lattices</title>
+<!--Generated on Thu Dec 11 22:19:52 2025 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on December 11, 2025.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="ltx-amsart.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" lang="en" content="quasi-isometry,  quasi-isometric rigidity,  nilpotent Lie group,  negatively curved symmetric space,  non-uniform lattice,  neutered space,  nilcentral extension">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line ltx_leqno">
+<h1 class="ltx_title ltx_title_document">Quasi-isometric rigidity for a product of lattices</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Josiah Oh
+</span></span>
+</div>
+<div class="ltx_dates">(Date: December 11, 2025)</div>
+
+<div class="ltx_abstract">
+<h6 class="ltx_title ltx_title_abstract">Abstract.</h6>
+<p class="ltx_p">We demonstrate quasi-isometric rigidity for the product of a non-uniform rank one lattice and a nilpotent lattice. Specifically, we show that any finitely-generated group quasi-isometric to such a product is, up to finite noise, an extension of a non-uniform rank one lattice by a nilpotent lattice. Furthermore, we show under extra conditions that this extension is nilcentral, a notion which generalizes central extensions to extensions by a nilpotent group.</p>
+</div>
+<div class="ltx_keywords">
+<h6 class="ltx_title ltx_title_keywords">Key words and phrases: </h6>quasi-isometry, quasi-isometric rigidity, nilpotent Lie group, negatively curved symmetric space, non-uniform lattice, neutered space, nilcentral extension
+</div>
+<div class="ltx_classification">
+<h6 class="ltx_title ltx_title_classification">2010 Mathematics Subject Classification: </h6>20F65, 20F69, 20F18, 51F99
+</div>
+<div class="ltx_acknowledgements">The first author was partially supported by the NSF, under grant DMS-1547357
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1. </span>Introduction</h2>
+
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1. </span>Background</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">One theme of geometric group theory is the rich relationship between the algebraic structure of groups and the large-scale geometry of spaces on which they act. By the “large-scale geometry” of a space we mean the metric structure that is preserved by quasi-isometries, maps which preserve distances up to a controlled error. Gromov proposed in a 1983 ICM address <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="Infinite groups as geometric objects" class="ltx_ref">GRO83</a>]</cite> a broad research program of studying finitely generated groups as geometric objects and classifying them up to quasi-isometry. One aspect involves identifying instances of quasi-isometric rigidity, the phenomenon which occurs when algebraic properties of a finitely generated group are determined by its large-scale geometry. For example, a celebrated theorem by Gromov <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="Groups of polynomial growth and expanding maps (with an appendix by Jacques Tits)" class="ltx_ref">GRO81</a>]</cite> states that finitely generated groups of polynomial growth are virtually nilpotent (the converse is also true <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="Growth of finitely generated solvable groups and curvature of Riemannian manifolds" class="ltx_ref">WOL68</a>]</cite>). Since growth rate is invariant under quasi-isometry, it follows that any finitely generated group which is quasi-isometric to a space of polynomial growth necessarily has a nilpotent subgroup of finite index. Thus we have an instance of when the quasi-isometry type of a group determines some of its algebraic structure.</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<p class="ltx_p">One of the landmark results in research on quasi-isometric rigidity is the complete quasi-isometry classification of lattices in semisimple Lie groups. A large body of work in the 1980s and 1990s by several people over many papers culminated in a general theorem on the rigidity of the class of lattices among all finitely generated groups (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="The quasi-isometry classification of lattices in semisimple lie groups" class="ltx_ref">FAR97</a>]</cite> for a detailed survey). Informally, this theorem states that any group quasi-isometric to a lattice in a semisimple Lie group is almost a lattice in that Lie group. More precisely,</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span><span class="ltx_text ltx_font_bold"> </span>(Rigidity of lattices)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <span id="Thmtheorem1.p1.m1" class="ltx_Math">\Gamma</span> is a finitely generated group quasi-isometric to an irreducible lattice in a semisimple Lie group <span id="Thmtheorem1.p1.m2" class="ltx_Math">G</span>, then there is a short exact sequence</span></p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex1.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Gamma\rightarrow[r]\Lambda\rightarrow[%
+r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem1.p1.m3" class="ltx_Math">\Lambda</span> is a lattice in <span id="Thmtheorem1.p1.m4" class="ltx_Math">G</span>, and <span id="Thmtheorem1.p1.m5" class="ltx_Math">F</span> is a finite group.</span></p>
+</div>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">One of the major breakthroughs leading to this general classification was the work of Schwartz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite> on non-uniform lattices in rank one semisimple Lie groups. These Lie groups agree, up to index 2, with the isometry groups of the negatively curved symmetric spaces: real, complex, quaternionic hyperbolic space, and the Cayley hyperbolic plane.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span><span class="ltx_text ltx_font_bold"> </span>(Schwartz)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem2.p1.m1" class="ltx_Math">X</span> be a negatively curved symmetric space other than the real hyperbolic plane <span id="Thmtheorem2.p1.m2" class="ltx_Math">\mathbb{H}^{2}</span>. If <span id="Thmtheorem2.p1.m3" class="ltx_Math">\Gamma</span> is a finitely generated group quasi-isometric to a non-uniform lattice <span id="Thmtheorem2.p1.m4" class="ltx_Math">\Lambda</span> in <span id="Thmtheorem2.p1.m5" class="ltx_Math">\textup{Isom}({X})</span>, then there exists a short exact sequence</span></p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex2.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Gamma\rightarrow[r]\Lambda^{\prime}%
+\rightarrow[r]1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem2.p1.m6" class="ltx_Math">\Lambda^{\prime}\leq\textup{Isom}({X})</span> is a non-uniform lattice commensurable to <span id="Thmtheorem2.p1.m7" class="ltx_Math">\Lambda</span>, and <span id="Thmtheorem2.p1.m8" class="ltx_Math">F</span> is a finite group.</span></p>
+</div>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<p class="ltx_p">In the case of <span id="S1.SS1.p4.m1" class="ltx_Math">X=\mathbb{H}^{2}</span>, non-uniform lattices in <span id="S1.SS1.p4.m2" class="ltx_Math">\textup{Isom}({\mathbb{H}^{2}})=\text{PSL}(2,\mathbb{R})</span> are virtually the fundamental groups of complete hyperbolic surfaces with finitely many punctures, and hence are virtually free. Any group quasi-isometric to a virtually free group is also virtually free, and every free group can be realized as a non-uniform lattice in <span id="S1.SS1.p4.m3" class="ltx_Math">\text{PSL}(2,\mathbb{R})</span>, so quasi-isometric rigidity does hold in this case. However, the additional conclusion of commensurability fails. One reason for this failure is that commensurability preserves arithmeticity, and <span id="S1.SS1.p4.m4" class="ltx_Math">\text{PSL}(2,\mathbb{R})</span> contains both arithmetic and non-arithmetic non-uniform lattices. But since these lattices are virtually free, they are quasi-isometric to each other.</p>
+</div>
+<div id="S1.SS1.p5" class="ltx_para">
+<p class="ltx_p">Following Schwartz, lattices such as <span id="S1.SS1.p5.m1" class="ltx_Math">\Lambda</span> and <span id="S1.SS1.p5.m2" class="ltx_Math">\Lambda^{\prime}</span> shall from now on be called <span class="ltx_text ltx_font_italic">non-uniform rank one lattices</span>. Then an informal summary might be: any group quasi-isometric to a non-uniform rank one lattice is almost a commensurable non-uniform rank one lattice.</p>
+</div>
+<div id="S1.SS1.p6" class="ltx_para">
+<p class="ltx_p">In an extensive study on high-dimensional graph manifolds <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="Rigidity of high dimensional graph manifolds" class="ltx_ref">FLS15</a>]</cite>, Frigerio–Lafont–Sisto prove, among many other things, a quasi-isometric rigidity result for products of the form <span id="S1.SS1.p6.m1" class="ltx_Math">\pi_{1}(M)\times\mathbb{Z}^{d}</span>, where <span id="S1.SS1.p6.m2" class="ltx_Math">M</span> is a complete non-compact finite-volume hyperbolic <span id="S1.SS1.p6.m3" class="ltx_Math">m</span>-manifold, <span id="S1.SS1.p6.m4" class="ltx_Math">m\geq 3</span>.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span><span class="ltx_text ltx_font_bold"> </span>(Frigerio–Lafont–Sisto)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <span id="Thmtheorem3.p1.m1" class="ltx_Math">\Gamma</span> is a finitely generated group quasi-isometric to <span id="Thmtheorem3.p1.m2" class="ltx_Math">\pi_{1}(M)\times\mathbb{Z}^{d}</span>, then there exist short exact sequences</span></p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex3.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;\mathbb{Z}^{d}\rightarrow[r,"j"]\Gamma^{\prime}%
+\rightarrow[r]\Delta\rightarrow[r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex4.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Delta\rightarrow[r]\pi_{1}(M^{\prime})%
+\rightarrow[r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem3.p1.m3" class="ltx_Math">\Gamma^{\prime}\leq\Gamma</span> has finite index, <span id="Thmtheorem3.p1.m4" class="ltx_Math">M^{\prime}</span> is a finite-sheeted covering of <span id="Thmtheorem3.p1.m5" class="ltx_Math">M</span>, <span id="Thmtheorem3.p1.m6" class="ltx_Math">\Delta</span> is a group, and <span id="Thmtheorem3.p1.m7" class="ltx_Math">F</span> is a finite group. Moreover, <span id="Thmtheorem3.p1.m8" class="ltx_Math">j(\mathbb{Z}^{d})</span> is contained in the center of <span id="Thmtheorem3.p1.m9" class="ltx_Math">\Gamma^{\prime}</span>. In other words, <span id="Thmtheorem3.p1.m10" class="ltx_Math">\Gamma</span> is virtually a central extension by <span id="Thmtheorem3.p1.m11" class="ltx_Math">\mathbb{Z}^{d}</span> of a finite extension of <span id="Thmtheorem3.p1.m12" class="ltx_Math">\pi_{1}(M^{\prime})</span>.</span></p>
+</div>
+</div>
+<div id="S1.SS1.p7" class="ltx_para">
+<p class="ltx_p">Observe that the case <span id="S1.SS1.p7.m1" class="ltx_Math">d=0</span> is covered by Schwartz’ theorem, and indeed, the proof of this theorem applies many of the ideas and results from <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite>.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2. </span>Main results</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Our main contribution is a generalization of Theorem <a href="#Thmtheorem3" title="Theorem 3 (Frigerio–Lafont–Sisto). ‣ 1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> to products <span id="S1.SS2.p1.m1" class="ltx_Math">\Lambda\times L</span>, where <span id="S1.SS2.p1.m2" class="ltx_Math">\Lambda</span> is a non-uniform rank one lattice and <span id="S1.SS2.p1.m3" class="ltx_Math">L</span> is a lattice in a simply connected nilpotent Lie group. From now on, a lattice such as <span id="S1.SS2.p1.m4" class="ltx_Math">L</span> is called a <span class="ltx_text ltx_font_italic">nilpotent lattice</span>. Our first theorem says that up to finite noise, any group quasi-isometric to <span id="S1.SS2.p1.m5" class="ltx_Math">\Lambda\times L</span> is an extension of a non-uniform rank one lattice commensurable to <span id="S1.SS2.p1.m6" class="ltx_Math">\Lambda</span> by a nilpotent lattice quasi-isometric to <span id="S1.SS2.p1.m7" class="ltx_Math">L</span>.</p>
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thmx">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem A</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmthmx1.p1.m1" class="ltx_Math">X\neq\mathbb{H}^{2}</span> be a negatively curved symmetric space. Let <span id="Thmthmx1.p1.m2" class="ltx_Math">\Lambda</span> be a non-uniform lattice in <span id="Thmthmx1.p1.m3" class="ltx_Math">\textup{Isom}(X)</span> and <span id="Thmthmx1.p1.m4" class="ltx_Math">L</span> be a nilpotent lattice. If <span id="Thmthmx1.p1.m5" class="ltx_Math">\Gamma</span> is a finitely generated group quasi-isometric to <span id="Thmthmx1.p1.m6" class="ltx_Math">\Lambda\times L</span>, then there exist short exact sequences</span></p>
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(1)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.E1.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;L^{\prime}\rightarrow[r]\Gamma^{\prime}\rightarrow[r]%
+\Delta\rightarrow[r]1,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex5.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Delta\rightarrow[r]\Lambda^{\prime}%
+\rightarrow[r]1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmthmx1.p1.m7" class="ltx_Math">\Gamma^{\prime}\leq\Gamma</span> and <span id="Thmthmx1.p1.m8" class="ltx_Math">\Lambda^{\prime}\leq\Lambda</span> have finite index, <span id="Thmthmx1.p1.m9" class="ltx_Math">L^{\prime}</span> is a nilpotent lattice quasi-isometric to <span id="Thmthmx1.p1.m10" class="ltx_Math">L</span>, <span id="Thmthmx1.p1.m11" class="ltx_Math">\Delta</span> is a group, and <span id="Thmthmx1.p1.m12" class="ltx_Math">F</span> is a finite group.</span></p>
+</div>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<p class="ltx_p">The general outline of the proof is similar to that of the proof of Theorem <a href="#Thmtheorem3" title="Theorem 3 (Frigerio–Lafont–Sisto). ‣ 1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>. First, the quasi-isometry between <span id="S1.SS2.p2.m1" class="ltx_Math">\Gamma</span> and <span id="S1.SS2.p2.m2" class="ltx_Math">\Lambda\times L</span> induces a quasi-action of <span id="S1.SS2.p2.m3" class="ltx_Math">\Gamma</span> on <span id="S1.SS2.p2.m4" class="ltx_Math">B\times N</span>, where <span id="S1.SS2.p2.m5" class="ltx_Math">B\subset X</span> is the neutered space associated to <span id="S1.SS2.p2.m6" class="ltx_Math">\Lambda</span>, and <span id="S1.SS2.p2.m7" class="ltx_Math">N</span> is the simply connected nilpotent Lie group in which <span id="S1.SS2.p2.m8" class="ltx_Math">L</span> is a lattice. A theorem of Kapovich–Kleiner–Leeb <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="Quasi-isometries and the de Rham decomposition" class="ltx_ref">KKL98</a>]</cite> guarantees that quasi-isometries <span id="S1.SS2.p2.m9" class="ltx_Math">B\times N\to B\times N</span> project to quasi-isometries <span id="S1.SS2.p2.m10" class="ltx_Math">B\to B</span>, up to bounded error. Thus the quasi-action of <span id="S1.SS2.p2.m11" class="ltx_Math">\Gamma</span> on <span id="S1.SS2.p2.m12" class="ltx_Math">B\times N</span> induces a quasi-action of <span id="S1.SS2.p2.m13" class="ltx_Math">\Gamma</span> on <span id="S1.SS2.p2.m14" class="ltx_Math">B</span>. A key result in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite> is that quasi-isometries of the neutered space <span id="S1.SS2.p2.m15" class="ltx_Math">B</span> have finite distance (with respect to the sup norm) from isometries of <span id="S1.SS2.p2.m16" class="ltx_Math">X</span>. Thus we obtain a homomorphism <span id="S1.SS2.p2.m17" class="ltx_Math">\theta:\Gamma\to\text{Isom}(X)</span>, and we show that the image <span id="S1.SS2.p2.m18" class="ltx_Math">\text{im}\hskip 2.27622pt\theta</span> is a non-uniform lattice commensurable to <span id="S1.SS2.p2.m19" class="ltx_Math">\Lambda</span>. The action <span id="S1.SS2.p2.m20" class="ltx_Math">\theta:\Gamma\to\text{Isom}(X)</span> came from a quasi-action on <span id="S1.SS2.p2.m21" class="ltx_Math">B</span>, which itself was coarsely projected from a quasi-action on <span id="S1.SS2.p2.m22" class="ltx_Math">B\times N</span>. Hence we are able to show that the kernel of <span id="S1.SS2.p2.m23" class="ltx_Math">\theta</span> is quasi-isometric to <span id="S1.SS2.p2.m24" class="ltx_Math">N</span>. Then <span id="S1.SS2.p2.m25" class="ltx_Math">\Gamma=\text{im}\hskip 2.27622pt\theta/\ker\theta</span>, so we pass to finite-index subgroups as necessary to obtain the desired short exact sequences.</p>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">Theorem <a href="#Thmtheorem3" title="Theorem 3 (Frigerio–Lafont–Sisto). ‣ 1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> asserts that <span id="S1.SS2.p3.m1" class="ltx_Math">\mathbb{Z}^{d}</span> can be made central in the group extension. In our more general setting, however, the extension is by a nilpotent group. So we define the notion of a nilcentral extension, analogous to that of a central extension, and find conditions which are sufficient to guarantee that (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) may be taken to be a nilcentral extension. Given a nilpotent group <span id="S1.SS2.p3.m2" class="ltx_Math">G</span> with upper central series <span id="S1.SS2.p3.m3" class="ltx_Math">1=Z_{0}\lhd Z_{1}\lhd\dots\lhd Z_{n}=G</span>, define</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S1.Ex6.m1" class="ltx_Math">\Sigma(G)\vcentcolon=\max_{i}\text{rank}(Z_{i+1}/Z_{i}).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthmx2" class="ltx_theorem ltx_theorem_thmx">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem B</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmthmx2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Assume the hypotheses of Theorem <a href="#Thmthmx1" title="Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a> and let <span id="Thmthmx2.p1.m1" class="ltx_Math">L^{\prime}</span> be the nilpotent lattice obtained from the conclusion of the theorem. If <span id="Thmthmx2.p1.m2" class="ltx_Math">X</span> is either quaternionic hyperbolic space or the Cayley hyperbolic plane, and <span id="Thmthmx2.p1.m3" class="ltx_Math">\dim\textup{Isom}(X)&gt;\Sigma(L^{\prime})</span>, then the group extension (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in the conclusion of Theorem <a href="#Thmthmx1" title="Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a> is virtually nilcentral.</span></p>
+</div>
+</div>
+<div id="S1.SS2.p4" class="ltx_para">
+<p class="ltx_p">Our proof of this theorem relies on a form of Margulis–Corlette–Gromov–Schoen superrigidity for Lie groups with Kazhdan’s property (T). The precise statement we apply is in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="Strengthening Kazhdan’s property (T) by Bochner methods" class="ltx_ref">FH12</a>]</cite>.</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2. </span>Preliminaries</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S2.p1.m1" class="ltx_Math">(X,d_{X})</span> and <span id="S2.p1.m2" class="ltx_Math">(Y,d_{Y})</span> be metric spaces, and let <span id="S2.p1.m3" class="ltx_Math">k\geq 1</span> and <span id="S2.p1.m4" class="ltx_Math">c\geq 0</span> be real numbers. A map <span id="S2.p1.m5" class="ltx_Math">f:X\to Y</span> is a <span id="S2.p1.m6" class="ltx_Math">(k,c)</span><span class="ltx_text ltx_font_italic">-quasi-isometric embedding</span> if for all <span id="S2.p1.m7" class="ltx_Math">a,b\in X</span>,</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex7.m1" class="ltx_Math">\frac{1}{k}d_{X}(a,b)-c\leq d_{Y}(f(a),f(b))\leq kd_{X}(a,b)+c.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A <span id="S2.p1.m8" class="ltx_Math">(k,c)</span>-quasi-isometric embedding <span id="S2.p1.m9" class="ltx_Math">f</span> is a <span id="S2.p1.m10" class="ltx_Math">(k,c)</span>-<span class="ltx_text ltx_font_italic">quasi-isometry</span> if there is a <span id="S2.p1.m11" class="ltx_Math">(k,c)</span>-quasi-isometric embedding <span id="S2.p1.m12" class="ltx_Math">g:Y\to X</span> such that <span id="S2.p1.m13" class="ltx_Math">d_{X}(x,(g\circ f)(x))\leq c</span> for all <span id="S2.p1.m14" class="ltx_Math">x\in X</span>, and <span id="S2.p1.m15" class="ltx_Math">d_{Y}(y,(f\circ g)(y))\leq c</span> for all <span id="S2.p1.m16" class="ltx_Math">y\in Y</span>. Such a map <span id="S2.p1.m17" class="ltx_Math">g</span> is a <span class="ltx_text ltx_font_italic">quasi-inverse</span> of <span id="S2.p1.m18" class="ltx_Math">f</span>. For maps <span id="S2.p1.m19" class="ltx_Math">h_{1},h_{2}:X\to Y</span>, let <span id="S2.p1.m20" class="ltx_Math">d_{Y}(h_{1},h_{2})</span> denote <span id="S2.p1.m21" class="ltx_Math">\sup_{x\in X}d_{Y}(h_{1}(x),h_{2}(x))</span>. If <span id="S2.p1.m22" class="ltx_Math">d_{Y}(h_{1},h_{2})&lt;\infty</span> then we say that <span id="S2.p1.m23" class="ltx_Math">h_{1}</span> <span class="ltx_text ltx_font_italic">has finite distance from</span> <span id="S2.p1.m24" class="ltx_Math">h_{2}</span>. With this notation, <span id="S2.p1.m25" class="ltx_Math">g</span> is a quasi-inverse of <span id="S2.p1.m26" class="ltx_Math">f</span> if and only if <span id="S2.p1.m27" class="ltx_Math">d_{X}(\text{id}_{X},g\circ f)\leq c</span> and <span id="S2.p1.m28" class="ltx_Math">d_{Y}(\text{id}_{Y},f\circ g)\leq c</span>. A <span id="S2.p1.m29" class="ltx_Math">(k,c)</span>-quasi-isometric embedding is a <span id="S2.p1.m30" class="ltx_Math">(k^{\prime},c^{\prime})</span>-quasi-isometry for some <span id="S2.p1.m31" class="ltx_Math">k^{\prime}\geq 1</span> and <span id="S2.p1.m32" class="ltx_Math">c^{\prime}\geq 0</span> if and only if it is <span class="ltx_text ltx_font_italic">coarsely surjective</span>, that is, its image is <span id="S2.p1.m33" class="ltx_Math">r</span>-dense for some <span id="S2.p1.m34" class="ltx_Math">r\geq 0</span>. A map <span id="S2.p1.m35" class="ltx_Math">f\colon X\to Y</span> is a <span class="ltx_text ltx_font_italic">quasi-isometry</span> between <span id="S2.p1.m36" class="ltx_Math">X</span> and <span id="S2.p1.m37" class="ltx_Math">Y</span> if it is a <span id="S2.p1.m38" class="ltx_Math">(k,c)</span>-quasi-isometry for some <span id="S2.p1.m39" class="ltx_Math">k\geq 1,c\geq 0</span>. Two metric spaces <span id="S2.p1.m40" class="ltx_Math">X</span> and <span id="S2.p1.m41" class="ltx_Math">Y</span> are <span class="ltx_text ltx_font_italic">quasi-isometric</span> if there exists a quasi-isometry between them. Observe that a composition of quasi-isometries is again a quasi-isometry.
+</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Let <span id="S2.p2.m1" class="ltx_Math">G</span> be a group with a finite, symmetric generating set <span id="S2.p2.m2" class="ltx_Math">S</span>. For <span id="S2.p2.m3" class="ltx_Math">g\in G</span>, let <span id="S2.p2.m4" class="ltx_Math">\left|{g}\right|_{S}</span> denote the length of a shortest word representing <span id="S2.p2.m5" class="ltx_Math">g</span> with letters in <span id="S2.p2.m6" class="ltx_Math">S</span>. Then <span id="S2.p2.m7" class="ltx_Math">G</span> is endowed with a <span class="ltx_text ltx_font_italic">word metric</span> <span id="S2.p2.m8" class="ltx_Math">d_{S}</span> defined by <span id="S2.p2.m9" class="ltx_Math">d_{S}(g,h)=\left|{g^{-1}h}\right|_{S}</span>. Note that left multiplication of <span id="S2.p2.m10" class="ltx_Math">G</span> on itself is an isometric action. If <span id="S2.p2.m11" class="ltx_Math">S^{\prime}</span> is another finite, symmetric generating set for <span id="S2.p2.m12" class="ltx_Math">G</span>, then the identity map <span id="S2.p2.m13" class="ltx_Math">(G,d_{S})\to(G,d_{S^{\prime}})</span> is a quasi-isometry (in fact it is bi-Lipschitz). So the word metric on a finitely generated group is well-defined up to quasi-isometry. In other words, the quasi-isometry type of a finitely generated group is well-defined.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Recall the fundamental observation in geometric group theory which equates the quasi-isometry type of a group with the quasi-isometry type of a metric space on which it acts geometrically. Let <span id="S2.p3.m1" class="ltx_Math">X</span> be a geodesic metric space which is <span class="ltx_text ltx_font_italic">proper</span>, i.e., closed balls are compact. An isometric group action <span id="S2.p3.m2" class="ltx_Math">G\curvearrowright X</span> is <span class="ltx_text ltx_font_italic">properly discontinuous</span> if for all compact <span id="S2.p3.m3" class="ltx_Math">K\subseteq X</span> the set <span id="S2.p3.m4" class="ltx_Math">\left\{{g\in G:g\cdot K\cap K\neq\emptyset}\right\}</span> is finite, and <span class="ltx_text ltx_font_italic">cocompact</span> if <span id="S2.p3.m5" class="ltx_Math">G\backslash X</span> is compact. The action is <span class="ltx_text ltx_font_italic">geometric</span> if it is properly discontinuous and cocompact.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4</span></span><span class="ltx_text ltx_font_bold"> </span>(Milnor-Schwarz)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If a group <span id="Thmtheorem4.p1.m1" class="ltx_Math">G</span> acts geometrically on a proper geodesic metric space <span id="Thmtheorem4.p1.m2" class="ltx_Math">X</span>, then <span id="Thmtheorem4.p1.m3" class="ltx_Math">G</span> is finitely generated and quasi-isometric to <span id="Thmtheorem4.p1.m4" class="ltx_Math">X</span>. A quasi-isometry <span id="Thmtheorem4.p1.m5" class="ltx_Math">G\mapsto X</span> is given by <span id="Thmtheorem4.p1.m6" class="ltx_Math">g\mapsto g\cdot x_{0}</span>, where <span id="Thmtheorem4.p1.m7" class="ltx_Math">x_{0}\in X</span> is any basepoint.</span></p>
+</div>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">For example, if <span id="S2.p4.m1" class="ltx_Math">M</span> is a compact Riemannian manifold with Riemannian universal cover <span id="S2.p4.m2" class="ltx_Math">\widetilde{M}</span>, then <span id="S2.p4.m3" class="ltx_Math">\pi_{1}(M)</span> acts geometrically on <span id="S2.p4.m4" class="ltx_Math">\widetilde{M}</span> and therefore <span id="S2.p4.m5" class="ltx_Math">\pi_{1}(M)</span> is quasi-isometric to <span id="S2.p4.m6" class="ltx_Math">\widetilde{M}</span>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">A more general version of the Milnor-Schwarz lemma exists for quasi-actions, which we now define. Let <span id="S2.p5.m1" class="ltx_Math">(X,d)</span> be a geodesic metric space, and let QI(<span id="S2.p5.m2" class="ltx_Math">X</span>) be the set of quasi-isometries <span id="S2.p5.m3" class="ltx_Math">X\to X</span> (in contrast to our use, QI(<span id="S2.p5.m4" class="ltx_Math">X</span>) is sometimes used to denote the <span class="ltx_text ltx_font_italic">quasi-isometry group</span> of <span id="S2.p5.m5" class="ltx_Math">X</span> whose elements are equivalence classes of quasi-isometries). For <span id="S2.p5.m6" class="ltx_Math">k\geq 1</span>, a <span class="ltx_text ltx_font_italic">k-quasi-action</span> of a group <span id="S2.p5.m7" class="ltx_Math">G</span> on <span id="S2.p5.m8" class="ltx_Math">X</span> is a map <span id="S2.p5.m9" class="ltx_Math">h:G\to\text{QI}(X)</span> such that</p>
+<ol id="S2.I1" class="ltx_enumerate">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(1)</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">For all <span id="S2.I1.i1.p1.m1" class="ltx_Math">g\in G</span>, <span id="S2.I1.i1.p1.m2" class="ltx_Math">h(g)</span> is a <span id="S2.I1.i1.p1.m3" class="ltx_Math">(k,k)</span>-quasi-isometry with <span id="S2.I1.i1.p1.m4" class="ltx_Math">k</span>-dense image,</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(2)</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span id="S2.I1.i2.p1.m1" class="ltx_Math">d(h(1),\text{id}_{X})\leq k</span>;</p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">(3)</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all <span id="S2.I1.i3.p1.m1" class="ltx_Math">g_{1},g_{2}\in G</span>, <span id="S2.I1.i3.p1.m2" class="ltx_Math">d(h(g_{1}g_{2}),h(g_{1})h(g_{2}))\leq k</span>,</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">where <span id="S2.p5.m10" class="ltx_Math">h(g_{1})h(g_{2})</span> means <span id="S2.p5.m11" class="ltx_Math">h(g_{1})\circ h(g_{2})</span>. A <span id="S2.p5.m12" class="ltx_Math">k</span>-quasi-action <span id="S2.p5.m13" class="ltx_Math">h</span> is <span class="ltx_text ltx_font_italic">k’-cobounded</span> if every <span id="S2.p5.m14" class="ltx_Math">G</span>-orbit is <span id="S2.p5.m15" class="ltx_Math">k^{\prime}</span>-dense in <span id="S2.p5.m16" class="ltx_Math">X</span>. A <span class="ltx_text ltx_font_italic">(cobounded) quasi-action</span> is a map which is a (<span id="S2.p5.m17" class="ltx_Math">k^{\prime}</span>-cobounded) <span id="S2.p5.m18" class="ltx_Math">k</span>-quasi-action for some <span id="S2.p5.m19" class="ltx_Math">k\geq 1\ (k^{\prime}\geq 1)</span>. Now we can state a stronger version of the Milnor-Schwarz lemma.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 5</span></span><span class="ltx_text ltx_font_bold"> </span>(<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="Rigidity of high dimensional graph manifolds" class="ltx_ref">FLS15</a>]</cite> Lemma 1.4)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem5.p1.m1" class="ltx_Math">X</span> be a geodesic metric space with basepoint <span id="Thmtheorem5.p1.m2" class="ltx_Math">x_{0}</span>, and let <span id="Thmtheorem5.p1.m3" class="ltx_Math">G</span> be a group. Let <span id="Thmtheorem5.p1.m4" class="ltx_Math">h:G\to\textup{QI}(X)</span> be a cobounded quasi-action of <span id="Thmtheorem5.p1.m5" class="ltx_Math">G</span> on <span id="Thmtheorem5.p1.m6" class="ltx_Math">X</span>, and suppose that for each <span id="Thmtheorem5.p1.m7" class="ltx_Math">r&gt;0</span>, the set <span id="Thmtheorem5.p1.m8" class="ltx_Math">\left\{{g\in G:h(g)B(x_{0},r)\cap B(x_{0},r)\neq\emptyset}\right\}</span> is finite. Then <span id="Thmtheorem5.p1.m9" class="ltx_Math">G</span> is finitely generated and quasi-isometric to <span id="Thmtheorem5.p1.m10" class="ltx_Math">X</span>. A quasi-isometry <span id="Thmtheorem5.p1.m11" class="ltx_Math">G\to X</span> is given by <span id="Thmtheorem5.p1.m12" class="ltx_Math">g\mapsto h(g)(x_{0})</span>.</span></p>
+</div>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">Here are two more lemmas related to quasi-actions that will be useful later.</p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If a quasi-action has at least one dense orbit, then it is cobounded.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Suppose <span id="S2.p7.m1" class="ltx_Math">h:G\to\text{QI}(X)</span> is a <span id="S2.p7.m2" class="ltx_Math">k</span>-quasi-action such that the <span id="S2.p7.m3" class="ltx_Math">G</span>-orbit of <span id="S2.p7.m4" class="ltx_Math">x\in X</span> is <span id="S2.p7.m5" class="ltx_Math">k^{\prime}</span>-dense in <span id="S2.p7.m6" class="ltx_Math">X</span>. Let <span id="S2.p7.m7" class="ltx_Math">y,p\in X</span> be arbitrary, and take <span id="S2.p7.m8" class="ltx_Math">g_{1},g_{2}\in G</span> such that <span id="S2.p7.m9" class="ltx_Math">d(y,h(g_{1})(x))\leq k^{\prime}</span> and <span id="S2.p7.m10" class="ltx_Math">d(p,h(g_{2})(x))\leq k^{\prime}</span>. Then</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S2.Ex8.m1" class="ltx_Math">\displaystyle d(p,h(g_{2}g_{1}^{-1})(y))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex8.m2" class="ltx_Math">\displaystyle\leq d(p,h(g_{2})(x))+d(h(g_{2})(x),h(g_{2}g_{1}^{-1})(y))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex9.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+d(h(g_{2})(x),h(g_{2})h(g_{1}^{-1})(y))+d(h(g_{2}%
+)h(g_{1}^{-1})(y),h(g_{2}g_{1}^{-1})(y))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex10.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+kd(x,h(g_{1}^{-1})(y))+k+k</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex11.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+2k+k^{2}d(h(g_{1})(x),h(g_{1})h(g_{1}^{-1})(y))+k%
+^{3}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex12.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+2k+k^{3}+k^{2}d(h(g_{1})(x),h(1)(y))+k^{2}d(h(1)(%
+y),h(g_{1})h(g_{1}^{-1})(y))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex13.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+2k+k^{3}+k^{2}d(h(g_{1})(x),y)+k^{2}d(y,h(1)(y))+%
+k^{3}</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S2.Ex14.m1" class="ltx_Math">\displaystyle\leq k^{\prime}+2k+3k^{3}+k^{2}k^{\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So <span id="S2.p7.m11" class="ltx_Math">h</span> is <span id="S2.p7.m12" class="ltx_Math">(k^{\prime}+2k+3k^{3}+k^{2}k^{\prime})</span>-cobounded.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A quasi-isometry between a finitely generated group <span id="Thmtheorem7.p1.m1" class="ltx_Math">G</span> and the fundamental group <span id="Thmtheorem7.p1.m2" class="ltx_Math">\pi_{1}(M)</span> of a geodesic metric space induces a cobounded quasi-action of <span id="Thmtheorem7.p1.m3" class="ltx_Math">G</span> on the metric universal cover <span id="Thmtheorem7.p1.m4" class="ltx_Math">\widetilde{M}</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">Indeed, since <span id="S2.p8.m1" class="ltx_Math">\pi_{1}(M)</span> is quasi-isometric to <span id="S2.p8.m2" class="ltx_Math">\widetilde{M}</span>, we get a quasi-isometry <span id="S2.p8.m3" class="ltx_Math">\varphi:G\to\widetilde{M}</span>. Let <span id="S2.p8.m4" class="ltx_Math">\psi:\widetilde{M}\to G</span> be a quasi-inverse of <span id="S2.p8.m5" class="ltx_Math">\varphi</span>. For each <span id="S2.p8.m6" class="ltx_Math">g\in G</span>, define <span id="S2.p8.m7" class="ltx_Math">h(g):\widetilde{M}\to\widetilde{M}</span> by</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S2.Ex15.m1" class="ltx_Math">h(g)(x)=\varphi(g\psi(x)),\qquad x\in\widetilde{M}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <span id="S2.p8.m8" class="ltx_Math">h(g)</span> is the composition of three quasi-isometries with fixed constants. So <span id="S2.p8.m9" class="ltx_Math">h(g)</span> is a quasi-isometry with constants that are independent of <span id="S2.p8.m10" class="ltx_Math">g</span>. Moreover, <span id="S2.p8.m11" class="ltx_Math">h(1)=\varphi\circ\psi</span> has finite distance from <span id="S2.p8.m12" class="ltx_Math">\text{id}_{\widetilde{M}}</span>. It is also easily checked that <span id="S2.p8.m13" class="ltx_Math">h(g_{1}g_{2})</span> has finite distance (bounded independently of <span id="S2.p8.m14" class="ltx_Math">g_{1},g_{2}</span>) from <span id="S2.p8.m15" class="ltx_Math">h(g_{1})\circ h(g_{2})</span>. So <span id="S2.p8.m16" class="ltx_Math">h</span> is a quasi-action, and since <span id="S2.p8.m17" class="ltx_Math">\varphi</span> is coarsely surjective and the left multiplication action of <span id="S2.p8.m18" class="ltx_Math">G</span> on itself is transitive, <span id="S2.p8.m19" class="ltx_Math">h</span> is cobounded.
+∎</p>
+</div>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Finally, we recall some facts about non-uniform rank one lattices and their associated neutered spaces. Details may be found in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite> and <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="Geometric group theory" class="ltx_ref">DK18</a>]</cite>. Let <span id="S2.p9.m1" class="ltx_Math">X</span> be a negatively curved symmetric space with distance function <span id="S2.p9.m2" class="ltx_Math">d_{X}</span>, and let <span id="S2.p9.m3" class="ltx_Math">\Lambda</span> be a non-uniform lattice in Isom(<span id="S2.p9.m4" class="ltx_Math">X</span>). We call such a group a <span class="ltx_text ltx_font_italic">non-uniform rank one lattice</span>. By Selberg’s lemma <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib25" title="On discontinuous groups in higher-dimensional symmetric spaces" class="ltx_ref">SEL60</a>]</cite>, <span id="S2.p9.m5" class="ltx_Math">\Lambda</span> is virtually torsion-free. Since we are concerned with the quasi-isometry type of <span id="S2.p9.m6" class="ltx_Math">\Lambda</span>, we may assume without loss of generality that <span id="S2.p9.m7" class="ltx_Math">\Lambda</span> is torsion-free. Then <span id="S2.p9.m8" class="ltx_Math">X/\Lambda</span> is a finite-volume non-compact manifold. By truncating the cusps of <span id="S2.p9.m9" class="ltx_Math">X/\Lambda</span> we obtain a compact manifold with boundary <span id="S2.p9.m10" class="ltx_Math">Y</span>, and the universal cover is a <span class="ltx_text ltx_font_italic">neutered space</span> <span id="S2.p9.m11" class="ltx_Math">B\subset X</span>. By definition, <span id="S2.p9.m12" class="ltx_Math">B</span> is the complement in <span id="S2.p9.m13" class="ltx_Math">X</span> of the union of an infinite equivariant family of open horoballs with pairwise disjoint closures. We refer to the boundaries of these horoballs as the <span class="ltx_text ltx_font_italic">peripheral horospheres</span> (or just <span class="ltx_text ltx_font_italic">horospheres</span>) of <span id="S2.p9.m14" class="ltx_Math">B</span>. Since <span id="S2.p9.m15" class="ltx_Math">X/\Lambda</span> has finite volume, it has finitely many cusps and <span id="S2.p9.m16" class="ltx_Math">Y</span> has finitely many boundary components. It follows that there is an <span id="S2.p9.m17" class="ltx_Math">R&gt;0</span> such that the <span id="S2.p9.m18" class="ltx_Math">d_{X}</span>-distance between every pair of distinct horosopheres of <span id="S2.p9.m19" class="ltx_Math">B</span> is at least <span id="S2.p9.m20" class="ltx_Math">R</span>. A horosphere <span id="S2.p9.m21" class="ltx_Math">O</span> is centered at a point <span id="S2.p9.m22" class="ltx_Math">p</span> in the ideal boundary <span id="S2.p9.m23" class="ltx_Math">\partial X</span>. We say that <span id="S2.p9.m24" class="ltx_Math">p</span> is the <span class="ltx_text ltx_font_italic">basepoint</span> of <span id="S2.p9.m25" class="ltx_Math">O</span> and that <span id="S2.p9.m26" class="ltx_Math">O</span> is <span class="ltx_text ltx_font_italic">based</span> at <span id="S2.p9.m27" class="ltx_Math">p</span>. Since <span id="S2.p9.m28" class="ltx_Math">X/\Lambda</span> has finite volume, the basepoints of the horospheres of <span id="S2.p9.m29" class="ltx_Math">B</span> are dense in <span id="S2.p9.m30" class="ltx_Math">\partial X</span>. In general, two horospheres in <span id="S2.p9.m31" class="ltx_Math">X</span> share a basepoint if and only if the Hausdorff distance between them is finite.</p>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">Since <span id="S2.p10.m1" class="ltx_Math">B</span> is a subspace of <span id="S2.p10.m2" class="ltx_Math">X</span>, it has two natural metrics: the restricted metric <span id="S2.p10.m3" class="ltx_Math">d_{X}|_{B}</span>, and the induced length metric <span id="S2.p10.m4" class="ltx_Math">d_{B}(x,y)\vcentcolon=\inf_{p}\text{length}_{X}(p)</span>, where the infimum is taken over all paths in <span id="S2.p10.m5" class="ltx_Math">B</span> between <span id="S2.p10.m6" class="ltx_Math">x</span> and <span id="S2.p10.m7" class="ltx_Math">y</span>. We will often use the following fact, sometimes without mention.</p>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 8</span></span><span class="ltx_text ltx_font_bold"> </span>(<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib12" title="Geometric group theory" class="ltx_ref">DK18</a>]</cite> Lemma 24.2)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The identity map <span id="Thmtheorem8.p1.m1" class="ltx_Math">(B,d_{B})\to(B,d_{X}|_{B})</span> is 1-Lipschitz and uniformly proper.</span></p>
+</div>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p">Recall that a map <span id="S2.p11.m1" class="ltx_Math">f:Z\to W</span> between proper metric spaces is <span class="ltx_text ltx_font_italic">uniformly proper</span> if <span id="S2.p11.m2" class="ltx_Math">f</span> is coarse Lipschitz and there exists a function <span id="S2.p11.m3" class="ltx_Math">\zeta:\mathbb{R}_{+}\to\mathbb{R}_{+}</span> such that <span id="S2.p11.m4" class="ltx_Math">\text{diam}(f^{-1}(B(w,r)))\leq\zeta(r)</span> for all <span id="S2.p11.m5" class="ltx_Math">w\in W</span>, <span id="S2.p11.m6" class="ltx_Math">r&gt;0</span>.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3. </span>Projecting a quasi-action</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p1.m1" class="ltx_Math">X,\Lambda,Y,</span> and <span id="S3.p1.m2" class="ltx_Math">B</span> be as above. Let <span id="S3.p1.m3" class="ltx_Math">L</span> be a lattice in a simply connected nilpotent Lie group <span id="S3.p1.m4" class="ltx_Math">N</span>. Define <span id="S3.p1.m5" class="ltx_Math">M</span> to be the product <span id="S3.p1.m6" class="ltx_Math">Y\times(N/L)</span>. Let <span id="S3.p1.m7" class="ltx_Math">\Gamma</span> be a finitely generated group and assume that <span id="S3.p1.m8" class="ltx_Math">\Gamma</span> is quasi-isometric to <span id="S3.p1.m9" class="ltx_Math">\Lambda\times L</span>. Then by Lemma <a href="#Thmtheorem7" title="Lemma 7. ‣ 2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>, the quasi-isometry between <span id="S3.p1.m10" class="ltx_Math">\Gamma</span> and <span id="S3.p1.m11" class="ltx_Math">\pi_{1}(M)=\Lambda\times L</span> induces a <span id="S3.p1.m12" class="ltx_Math">k</span>-cobounded <span id="S3.p1.m13" class="ltx_Math">k</span>-quasi-action <span id="S3.p1.m14" class="ltx_Math">h</span> of <span id="S3.p1.m15" class="ltx_Math">\Gamma</span> on <span id="S3.p1.m16" class="ltx_Math">\widetilde{M}=B\times N</span> for some <span id="S3.p1.m17" class="ltx_Math">k\geq 1</span>. We denote the metrics on <span id="S3.p1.m18" class="ltx_Math">B\times N,X</span>, and <span id="S3.p1.m19" class="ltx_Math">B</span> by <span id="S3.p1.m20" class="ltx_Math">d,d_{X}</span>, and <span id="S3.p1.m21" class="ltx_Math">d_{B}</span>, respectively.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">We first show that <span id="S3.p2.m1" class="ltx_Math">h</span> induces a quasi-action of <span id="S3.p2.m2" class="ltx_Math">\Gamma</span> on <span id="S3.p2.m3" class="ltx_Math">B</span>. In order to do so, we use a theorem of Kapovich–Kleiner–Leeb <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="Quasi-isometries and the de Rham decomposition" class="ltx_ref">KKL98</a>]</cite> which implies that quasi-isometries of the product <span id="S3.p2.m4" class="ltx_Math">B\times N</span> coarsely project to quasi-isometries of <span id="S3.p2.m5" class="ltx_Math">B</span>. Their theorem is more general than we need, so we only state its application in our situation.</p>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 9</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite"><span class="ltx_text ltx_font_italic">[</span><a href="#bib.bib20" title="Quasi-isometries and the de Rham decomposition" class="ltx_ref">KKL98</a><span class="ltx_text ltx_font_italic">, Theorem B]</span></cite><span class="ltx_text ltx_font_italic">
+There exist <span id="Thmtheorem9.p1.m1" class="ltx_Math">D&gt;0</span> and <span id="Thmtheorem9.p1.m2" class="ltx_Math">k^{\prime}\geq 1</span>, both depending only on <span id="Thmtheorem9.p1.m3" class="ltx_Math">k</span>, for which the following holds: For each <span id="Thmtheorem9.p1.m4" class="ltx_Math">\gamma\in\Gamma</span>, there exists a <span id="Thmtheorem9.p1.m5" class="ltx_Math">(k^{\prime},k^{\prime})</span>-quasi-isometry <span id="Thmtheorem9.p1.m6" class="ltx_Math">\psi(\gamma):B\to B</span> with <span id="Thmtheorem9.p1.m7" class="ltx_Math">k^{\prime}</span>-dense image such that the diagram</span></p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex16.m1" class="ltx_Math">\tikzcd B\times N\rightarrow[r,"h(\gamma)"]\rightarrow[d,"\pi"^{\prime}]&amp;B%
+\times N\rightarrow[d,"\pi"]\\
+B\rightarrow[r,"\psi(\gamma)"^{\prime}]B</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">commutes up to an error bounded by <span id="Thmtheorem9.p1.m8" class="ltx_Math">D</span>, where <span id="Thmtheorem9.p1.m9" class="ltx_Math">\pi:B\times N\to B</span> is the natural projection.</span></p>
+</div>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">In an effort to make calculations more readable, we denote the value of <span id="S3.p3.m1" class="ltx_Math">\pi</span> at <span id="S3.p3.m2" class="ltx_Math">(b,n)\in B\times N</span> by <span id="S3.p3.m3" class="ltx_Math">\pi[(b,n)]</span> instead of <span id="S3.p3.m4" class="ltx_Math">\pi((b,n))</span>.</p>
+</div>
+<div id="Thmtheorem10" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 10</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The map <span id="Thmtheorem10.p1.m1" class="ltx_Math">\psi:\Gamma\to\textup{QI}(B)</span> is a <span id="Thmtheorem10.p1.m2" class="ltx_Math">K</span>-cobounded <span id="Thmtheorem10.p1.m3" class="ltx_Math">K</span>-quasi-action for some <span id="Thmtheorem10.p1.m4" class="ltx_Math">K\geq 1</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">By definition, we already know that each <span id="S3.p4.m1" class="ltx_Math">\psi(\gamma)</span> is a <span id="S3.p4.m2" class="ltx_Math">(k^{\prime},k^{\prime})</span>-quasi-isometry with <span id="S3.p4.m3" class="ltx_Math">k^{\prime}</span>-dense image. In the following calculations, 1 denotes the identity element of <span id="S3.p4.m4" class="ltx_Math">\Gamma</span> and <span id="S3.p4.m5" class="ltx_Math">e</span> denotes the identity element of <span id="S3.p4.m6" class="ltx_Math">N</span>. For all <span id="S3.p4.m7" class="ltx_Math">b\in B</span>,</p>
+<table id="S6.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex17.m1" class="ltx_Math">\displaystyle d_{B}(\psi(1)(b),b)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex17.m2" class="ltx_Math">\displaystyle\leq d_{B}(\psi(1)(b),\pi[h(1)(b,e)])+d_{B}(\pi[h(1)(b,e)],\pi[(b%
+,e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex18.m1" class="ltx_Math">\displaystyle\leq D+d(h(1)(b,e),(b,e))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex19.m1" class="ltx_Math">\displaystyle\leq D+k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let <span id="S3.p4.m8" class="ltx_Math">\gamma_{1},\gamma_{2}\in\Gamma</span> and <span id="S3.p4.m9" class="ltx_Math">b\in B</span>. Then</p>
+<table id="S6.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex20.m1" class="ltx_Math">\displaystyle d_{B}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\psi(\gamma_{1}\gamma_%
+{2})(b))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex20.m2" class="ltx_Math">\displaystyle\leq d_{B}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\pi[h(\gamma_{1})h%
+(\gamma_{2})(b,e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex21.m1" class="ltx_Math">\displaystyle\qquad+d_{B}(\pi[h(\gamma_{1})h(\gamma_{2})(b,e)],\pi[h(\gamma_{1%
+}\gamma_{2})(b,e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex22.m1" class="ltx_Math">\displaystyle\qquad+d_{B}(\pi[h(\gamma_{1}\gamma_{2})(b,e)],\psi(\gamma_{1}%
+\gamma_{2})(b)).</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The first term on the right can be bounded as follows.</p>
+<table id="S6.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex23.m1" class="ltx_Math">\displaystyle d_{B}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\pi[h(\gamma_{1})h(%
+\gamma_{2})(b,e)])</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex23.m2" class="ltx_Math">\displaystyle\leq d_{B}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\psi(\gamma_{1})(%
+\pi[h(\gamma_{2})(b,e)]))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex24.m1" class="ltx_Math">\displaystyle\qquad+d_{B}(\psi(\gamma_{1})(\pi[h(\gamma_{2})(b,e)]),\pi[h(%
+\gamma_{1})h(\gamma_{2})(b,e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex25.m1" class="ltx_Math">\displaystyle\leq k^{\prime}d_{B}(\psi(\gamma_{2})(b),\pi[h(\gamma_{2})(b,e)])%
++k^{\prime}+D</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex26.m1" class="ltx_Math">\displaystyle\leq k^{\prime}D+k^{\prime}+D.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Hence,</p>
+<table id="S6.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex27.m1" class="ltx_Math">\displaystyle d_{B}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\psi(\gamma_{1}\gamma_%
+{2})(b))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex27.m2" class="ltx_Math">\displaystyle\leq(k^{\prime}D+k^{\prime}+D)+d_{B}(\pi[h(\gamma_{1})h(\gamma_{2%
+})(b,e)],\pi[h(\gamma_{1}\gamma_{2})(b,e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex28.m1" class="ltx_Math">\displaystyle\qquad+d_{B}(\pi[h(\gamma_{1}\gamma_{2})(b,e)],\psi(\gamma_{1}%
+\gamma_{2})(b))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex29.m1" class="ltx_Math">\displaystyle\leq k^{\prime}D+k^{\prime}+D+d(h(\gamma_{1})h(\gamma_{2})(b,e),h%
+(\gamma_{1}\gamma_{2})(b,e))+D</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex30.m1" class="ltx_Math">\displaystyle\leq k^{\prime}D+k^{\prime}+2D+k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Set <span id="S3.p4.m10" class="ltx_Math">K=k^{\prime}D+k^{\prime}+2D+k</span>. So <span id="S3.p4.m11" class="ltx_Math">\psi</span> is a <span id="S3.p4.m12" class="ltx_Math">K</span>-quasi-action. Let <span id="S3.p4.m13" class="ltx_Math">b_{1},b_{2}\in B</span>. Since <span id="S3.p4.m14" class="ltx_Math">h</span> is <span id="S3.p4.m15" class="ltx_Math">k</span>-cobounded, there exists <span id="S3.p4.m16" class="ltx_Math">\gamma\in\Gamma</span> such that <span id="S3.p4.m17" class="ltx_Math">d_{B}(h(\gamma)(b_{1},e),(b_{2},e))\leq k</span>. Then</p>
+<table id="S6.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex31.m1" class="ltx_Math">\displaystyle d_{B}(\psi(\gamma)(b_{1}),b_{2})</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex31.m2" class="ltx_Math">\displaystyle\leq d_{B}(\psi(\gamma)(b_{1}),\pi[h(\gamma)(b_{1},e)])+d_{B}(\pi%
+[h(\gamma)(b_{1},e)],\pi[(b_{2},e)])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex32.m1" class="ltx_Math">\displaystyle\leq D+d(h(\gamma)(b_{1},e),(b_{2},e))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex33.m1" class="ltx_Math">\displaystyle\leq D+k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So by possibly increasing <span id="S3.p4.m18" class="ltx_Math">K</span>, it follows that <span id="S3.p4.m19" class="ltx_Math">\psi</span> is <span id="S3.p4.m20" class="ltx_Math">K</span>-cobounded.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">Next we show that the quasi-action <span id="S3.p6.m1" class="ltx_Math">\psi</span> induces a homomorphism <span id="S3.p6.m2" class="ltx_Math">\Gamma\to\text{Isom}(X)</span>. It is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite> that the quasi-isometry <span id="S3.p6.m3" class="ltx_Math">\psi(\gamma)</span> of <span id="S3.p6.m4" class="ltx_Math">B</span> coarsely extends to an isometry of <span id="S3.p6.m5" class="ltx_Math">X</span>. More precisely, for each <span id="S3.p6.m6" class="ltx_Math">\gamma\in\Gamma</span> there exists <span id="S3.p6.m7" class="ltx_Math">\beta&gt;0</span> and <span id="S3.p6.m8" class="ltx_Math">\theta(\gamma)\in\text{Isom}(X)</span> such that</p>
+<table id="S6.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(2)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.E2.m1" class="ltx_Math">\displaystyle d_{X}(\psi(\gamma)(b),\theta(\gamma)(b))\leq\beta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all <span id="S3.p6.m9" class="ltx_Math">b\in B</span>. It turns out the constant <span id="S3.p6.m10" class="ltx_Math">\beta</span> depends only on the quasi-isometry constants of <span id="S3.p6.m11" class="ltx_Math">\psi(\gamma)</span>. Hence <span id="S3.p6.m12" class="ltx_Math">\beta</span> depends on <span id="S3.p6.m13" class="ltx_Math">K</span> and not on <span id="S3.p6.m14" class="ltx_Math">\gamma</span>. Before we show that <span id="S3.p6.m15" class="ltx_Math">\theta</span> is our desired homomorphism, we need the following lemma which states that isometries of <span id="S3.p6.m16" class="ltx_Math">X</span> which behave similarly on <span id="S3.p6.m17" class="ltx_Math">B</span> must be identical.</p>
+</div>
+<div id="Thmtheorem11" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 11</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem11.p1.m1" class="ltx_Math">\alpha,\alpha^{\prime}\in\textup{Isom}(X)</span>. If there is a constant <span id="Thmtheorem11.p1.m2" class="ltx_Math">c</span> such that <span id="Thmtheorem11.p1.m3" class="ltx_Math">d_{X}(\alpha(b),\alpha^{\prime}(b))\leq c</span> for all <span id="Thmtheorem11.p1.m4" class="ltx_Math">b\in B</span>, then <span id="Thmtheorem11.p1.m5" class="ltx_Math">\alpha=\alpha^{\prime}</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">By considering <span id="S3.p7.m1" class="ltx_Math">(\alpha^{\prime})^{-1}\circ\alpha</span>, we may assume without loss of generality that <span id="S3.p7.m2" class="ltx_Math">\alpha^{\prime}=\text{Id}_{X}</span>. Let <span id="S3.p7.m3" class="ltx_Math">O</span> be a peripheral horosphere of <span id="S3.p7.m4" class="ltx_Math">B</span> and let <span id="S3.p7.m5" class="ltx_Math">p\in\partial X</span> be its basepoint. Let <span id="S3.p7.m6" class="ltx_Math">\left\{{b_{n}}\right\}</span> be a sequence of points in <span id="S3.p7.m7" class="ltx_Math">O</span> converging to <span id="S3.p7.m8" class="ltx_Math">p</span>. Since <span id="S3.p7.m9" class="ltx_Math">d_{X}(\alpha(b_{n}),b_{n})\leq c</span> for all <span id="S3.p7.m10" class="ltx_Math">n</span>, the sequence <span id="S3.p7.m11" class="ltx_Math">\left\{{\alpha(b_{n})}\right\}</span> also converges to <span id="S3.p7.m12" class="ltx_Math">p</span>. So the extension of <span id="S3.p7.m13" class="ltx_Math">\alpha</span> to <span id="S3.p7.m14" class="ltx_Math">\partial X</span> must fix <span id="S3.p7.m15" class="ltx_Math">p</span>. Since the basepoints of the horospheres of <span id="S3.p7.m16" class="ltx_Math">B</span> are dense in <span id="S3.p7.m17" class="ltx_Math">\partial X</span> and the extension of <span id="S3.p7.m18" class="ltx_Math">\alpha</span> to <span id="S3.p7.m19" class="ltx_Math">\partial X</span> is a homeomorphism, <span id="S3.p7.m20" class="ltx_Math">\alpha</span> must fix <span id="S3.p7.m21" class="ltx_Math">\partial X</span> pointwise. Only the identity map on <span id="S3.p7.m22" class="ltx_Math">X</span> extends to the identity map on <span id="S3.p7.m23" class="ltx_Math">\partial X</span>, so we must have <span id="S3.p7.m24" class="ltx_Math">\alpha=\text{id}_{X}</span>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem12" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 12</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The map <span id="Thmtheorem12.p1.m1" class="ltx_Math">\theta:\Gamma\to\textup{Isom}(X)</span> is a group homomorphism.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Let <span id="S3.p8.m1" class="ltx_Math">\gamma_{1},\gamma_{2}\in\Gamma</span>. We need to show that <span id="S3.p8.m2" class="ltx_Math">\theta(\gamma_{1}\gamma_{2})=\theta(\gamma_{1})\theta(\gamma_{2})</span>. By Lemma <a href="#Thmtheorem11" title="Lemma 11. ‣ 3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>, it suffices to produce a constant <span id="S3.p8.m3" class="ltx_Math">c</span> such that for all <span id="S3.p8.m4" class="ltx_Math">b\in B</span>,</p>
+<table id="S3.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S3.Ex34.m1" class="ltx_Math">d_{X}(\theta(\gamma_{1}\gamma_{2})(b),\theta(\gamma_{1})\theta(\gamma_{2})(b))%
+\leq c.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <span id="S3.p8.m5" class="ltx_Math">\psi</span> is a <span id="S3.p8.m6" class="ltx_Math">K</span>-quasi-action, we have that for all <span id="S3.p8.m7" class="ltx_Math">b\in B</span>,</p>
+<table id="S6.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S3.Ex35.m1" class="ltx_Math">\displaystyle d_{X}(\theta(\gamma_{1}\gamma_{2})(b),\theta(\gamma_{1})\theta(%
+\gamma_{2})(b))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex35.m2" class="ltx_Math">\displaystyle\leq d_{X}(\theta(\gamma_{1}\gamma_{2})(b),\psi(\gamma_{1}\gamma_%
+{2})(b))+d_{X}(\psi(\gamma_{1}\gamma_{2})(b),\psi(\gamma_{1})\psi(\gamma_{2})(%
+b))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex36.m1" class="ltx_Math">\displaystyle\qquad+d_{X}(\psi(\gamma_{1})\psi(\gamma_{2})(b),\theta(\gamma_{1%
+})\psi(\gamma_{2})(b))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex37.m1" class="ltx_Math">\displaystyle\qquad+d_{X}(\theta(\gamma_{1})\psi(\gamma_{2})(b),\theta(\gamma_%
+{1})\theta(\gamma_{2})(b))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S3.Ex38.m1" class="ltx_Math">\displaystyle\leq\beta+K+\beta+\beta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So set <span id="S3.p8.m8" class="ltx_Math">c=K+3\beta</span>.
+∎</p>
+</div>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">Now that we have a homomorphism <span id="S3.p9.m1" class="ltx_Math">\theta:\Gamma\to\text{Isom}(X)</span>, we can extract information about the algebraic structure of <span id="S3.p9.m2" class="ltx_Math">\Gamma</span> by studying the image and kernel of <span id="S3.p9.m3" class="ltx_Math">\theta</span>.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4. </span>The image of <span id="S4.m1" class="ltx_Math">\theta</span>
+</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p1.m1" class="ltx_Math">\Lambda_{\Gamma}</span> denote the image of <span id="S4.p1.m2" class="ltx_Math">\theta</span>. Our goal is to show that <span id="S4.p1.m3" class="ltx_Math">\Lambda_{\Gamma}&lt;\text{Isom}(X)</span> is a non-uniform lattice that is commensurable with <span id="S4.p1.m4" class="ltx_Math">\Lambda</span>. Our arguments in this section closely follow those in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="Rigidity of high dimensional graph manifolds" class="ltx_ref">FLS15</a>]</cite>. From now on, unless otherwise stated, the Hausdorff distance <span id="S4.p1.m5" class="ltx_Math">\text{dist}_{\text{H}}\left({{\cdot},{\cdot}}\right)</span> between subsets of <span id="S4.p1.m6" class="ltx_Math">X</span> will be considered with respect to <span id="S4.p1.m7" class="ltx_Math">d_{X}</span>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Recall that a quasi-isometry of the neutered space <span id="S4.p2.m1" class="ltx_Math">B</span> coarsely permutes the peripheral horospheres <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib24" title="The quasi-isometry classification of rank one lattices" class="ltx_ref">SCH95</a>]</cite>. The inequality (<a href="#S3.E2" title="(2) ‣ 3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) says that the isometry <span id="S4.p2.m2" class="ltx_Math">\theta(\gamma)</span> is at finite distance (on <span id="S4.p2.m3" class="ltx_Math">B</span>) from the quasi-isometry <span id="S4.p2.m4" class="ltx_Math">\psi(\gamma)</span>. So it follows that <span id="S4.p2.m5" class="ltx_Math">\theta(\gamma)</span> also coarsely permutes the peripheral horospheres of <span id="S4.p2.m6" class="ltx_Math">B</span>. We make this precise in the following lemma. Let <span id="S4.p2.m7" class="ltx_Math">\Omega</span> denote the set of peripheral horospheres of <span id="S4.p2.m8" class="ltx_Math">B</span>.</p>
+</div>
+<div id="Thmtheorem13" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 13</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There exists a <span id="Thmtheorem13.p1.m1" class="ltx_Math">\beta^{\prime}&gt;0</span> such that the following holds. For each <span id="Thmtheorem13.p1.m2" class="ltx_Math">\alpha\in\Lambda_{\Gamma}</span> and horosphere <span id="Thmtheorem13.p1.m3" class="ltx_Math">O\in\Omega</span>, there is a unique horosphere <span id="Thmtheorem13.p1.m4" class="ltx_Math">O^{\prime}\in\Omega</span> such that <span id="Thmtheorem13.p1.m5" class="ltx_Math">\text{dist}_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)\leq\beta^{\prime}</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p3.m1" class="ltx_Math">\alpha</span> and <span id="S4.p3.m2" class="ltx_Math">O</span> be given. Then <span id="S4.p3.m3" class="ltx_Math">\alpha=\theta(\gamma)</span> for some <span id="S4.p3.m4" class="ltx_Math">\gamma\in\Gamma</span>. The quasi-isometry <span id="S4.p3.m5" class="ltx_Math">\psi(\gamma)</span> permutes the peripheral horospheres of <span id="S4.p3.m6" class="ltx_Math">B</span> up to a constant error which depends only on the quasi-isometry constants of <span id="S4.p3.m7" class="ltx_Math">\psi(\gamma)</span>. Since <span id="S4.p3.m8" class="ltx_Math">\psi</span> is a <span id="S4.p3.m9" class="ltx_Math">K</span>-quasi-action, this means there is a constant <span id="S4.p3.m10" class="ltx_Math">C=C(K)</span> and a unique <span id="S4.p3.m11" class="ltx_Math">O^{\prime}\in\Omega</span> such that <span id="S4.p3.m12" class="ltx_Math">\text{dist}_{\text{H}}\left({{\psi(\gamma)(O)},{O^{\prime}}}\right)\leq C</span>. From (<a href="#S3.E2" title="(2) ‣ 3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) we also have <span id="S4.p3.m13" class="ltx_Math">\text{dist}_{\text{H}}\left({{\psi(\gamma)(O)},{\theta(\gamma)(O)}}\right)\leq\beta</span>. Set <span id="S4.p3.m14" class="ltx_Math">\beta^{\prime}=\beta+C</span>. Then <span id="S4.p3.m15" class="ltx_Math">\beta^{\prime}</span> is independent of <span id="S4.p3.m16" class="ltx_Math">\alpha</span> and <span id="S4.p3.m17" class="ltx_Math">O</span>, and</p>
+<table id="S4.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex39.m1" class="ltx_Math">\text{dist}_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)\leq\text{dist}_{%
+\text{H}}\left({{\theta(\gamma)(O)},{\psi(\gamma)(O)}}\right)+\text{dist}_{%
+\text{H}}\left({{\psi(\gamma)(O)},{O^{\prime}}}\right)=\beta+C=\beta^{\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p4.m1" class="ltx_Math">P\subset\partial X</span> denote the set of basepoints of the peripheral horospheres of <span id="S4.p4.m2" class="ltx_Math">B</span>. Since each element of <span id="S4.p4.m3" class="ltx_Math">\Lambda_{\Gamma}</span> coarsely permutes these horospheres, we obtain an action of <span id="S4.p4.m4" class="ltx_Math">\Lambda_{\Gamma}</span> on <span id="S4.p4.m5" class="ltx_Math">P</span>.</p>
+</div>
+<div id="Thmtheorem14" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 14</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The group <span id="Thmtheorem14.p1.m1" class="ltx_Math">\Lambda_{\Gamma}</span> acts on the set <span id="Thmtheorem14.p1.m2" class="ltx_Math">P</span> with finitely many orbits, and given <span id="Thmtheorem14.p1.m3" class="ltx_Math">p\in P</span>, every element of <span id="Thmtheorem14.p1.m4" class="ltx_Math">\Lambda_{\Gamma}</span> that fixes <span id="Thmtheorem14.p1.m5" class="ltx_Math">p</span> under this action also preserves the peripheral horosphere in <span id="Thmtheorem14.p1.m6" class="ltx_Math">\Omega</span> based at <span id="Thmtheorem14.p1.m7" class="ltx_Math">p</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p5.m1" class="ltx_Math">\alpha\in\Lambda_{\Gamma}</span> and <span id="S4.p5.m2" class="ltx_Math">p\in P</span>. Let <span id="S4.p5.m3" class="ltx_Math">O\in\Omega</span> be the horosphere based at <span id="S4.p5.m4" class="ltx_Math">p</span>. By Lemma <a href="#Thmtheorem13" title="Lemma 13. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>, there is a unique <span id="S4.p5.m5" class="ltx_Math">O^{\prime}\in\Omega</span> such that <span id="S4.p5.m6" class="ltx_Math">\text{dist}_{\text{H}}\left({{\alpha(O)},{O^{\prime}}}\right)&lt;\infty</span>. Let <span id="S4.p5.m7" class="ltx_Math">p^{\prime}\in P</span> be the basepoint of <span id="S4.p5.m8" class="ltx_Math">O^{\prime}</span>. Since the Hausdorff distance between <span id="S4.p5.m9" class="ltx_Math">\alpha(O)</span> and <span id="S4.p5.m10" class="ltx_Math">O^{\prime}</span> is finite, the horosphere <span id="S4.p5.m11" class="ltx_Math">\alpha(O)</span> is also based at <span id="S4.p5.m12" class="ltx_Math">p^{\prime}</span>. So in the extension of <span id="S4.p5.m13" class="ltx_Math">\alpha</span> to <span id="S4.p5.m14" class="ltx_Math">\partial X</span>, we in fact have <span id="S4.p5.m15" class="ltx_Math">\alpha(p)=p^{\prime}</span>. Thus <span id="S4.p5.m16" class="ltx_Math">\alpha\cdot p=p^{\prime}</span> defines an action of <span id="S4.p5.m17" class="ltx_Math">\Lambda_{\Gamma}</span> on <span id="S4.p5.m18" class="ltx_Math">P</span>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Next we show that this action has finitely many orbits. Fix a point <span id="S4.p6.m1" class="ltx_Math">b\in B</span>. For any <span id="S4.p6.m2" class="ltx_Math">r&gt;0</span>, <span id="S4.p6.m3" class="ltx_Math">\overline{B_{X}(b,r)}</span> is compact, and since there is a lower bound on the <span id="S4.p6.m4" class="ltx_Math">d_{X}</span>-distance between horospheres of <span id="S4.p6.m5" class="ltx_Math">B</span>, only finitely many of them may intersect <span id="S4.p6.m6" class="ltx_Math">B_{X}(b,r)</span>. Hence, we denote by <span id="S4.p6.m7" class="ltx_Math">A\subset\Omega</span> the finite subset of horospheres whose <span id="S4.p6.m8" class="ltx_Math">d_{X}</span>-distance from <span id="S4.p6.m9" class="ltx_Math">b</span> is at most <span id="S4.p6.m10" class="ltx_Math">K+\beta+\beta^{\prime}</span>, and let <span id="S4.p6.m11" class="ltx_Math">P_{0}\subset P</span> be the finite set of basepoints of horospheres in <span id="S4.p6.m12" class="ltx_Math">A</span>. We show that every orbit in <span id="S4.p6.m13" class="ltx_Math">P</span> has a representative in <span id="S4.p6.m14" class="ltx_Math">P_{0}</span>. Fix <span id="S4.p6.m15" class="ltx_Math">p\in P</span>. Let <span id="S4.p6.m16" class="ltx_Math">O\in\Omega</span> be the horosphere based at <span id="S4.p6.m17" class="ltx_Math">p</span>, and let <span id="S4.p6.m18" class="ltx_Math">x\in O</span>. Since the quasi-action of <span id="S4.p6.m19" class="ltx_Math">\Gamma</span> on <span id="S4.p6.m20" class="ltx_Math">B</span> is <span id="S4.p6.m21" class="ltx_Math">K</span>-cobounded, there is a <span id="S4.p6.m22" class="ltx_Math">\gamma\in\Gamma</span> such that <span id="S4.p6.m23" class="ltx_Math">d_{X}(b,\psi(\gamma)(x))\leq d_{B}(b,\psi(\gamma)(x))\leq K</span>. Let <span id="S4.p6.m24" class="ltx_Math">\alpha=\theta(\gamma)</span>. Then <span id="S4.p6.m25" class="ltx_Math">d_{X}(b,\alpha(x))\leq K+\beta</span> by (<a href="#S3.E2" title="(2) ‣ 3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). By Lemma <a href="#Thmtheorem13" title="Lemma 13. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>, there is a horosphere <span id="S4.p6.m26" class="ltx_Math">O^{\prime}\in\Omega</span> such that the Hausdorff distance between <span id="S4.p6.m27" class="ltx_Math">\alpha(O)</span> and <span id="S4.p6.m28" class="ltx_Math">O^{\prime}</span> is at most <span id="S4.p6.m29" class="ltx_Math">\beta^{\prime}</span>. In particular, there exists <span id="S4.p6.m30" class="ltx_Math">x^{\prime}\in O^{\prime}</span> such that <span id="S4.p6.m31" class="ltx_Math">d_{X}(\alpha(x),x^{\prime})\leq\beta^{\prime}</span>. Then</p>
+<table id="S6.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex40.m1" class="ltx_Math">\displaystyle d_{X}(b,x^{\prime})\leq d_{X}(b,\alpha(x))+d_{X}(\alpha(x),x^{%
+\prime})\leq K+\beta+\beta^{\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So <span id="S4.p6.m32" class="ltx_Math">O^{\prime}\in A</span> and its basepoint <span id="S4.p6.m33" class="ltx_Math">p^{\prime}</span> is in <span id="S4.p6.m34" class="ltx_Math">P_{0}</span>. By definition of the action of <span id="S4.p6.m35" class="ltx_Math">\Lambda_{\Gamma}</span> on <span id="S4.p6.m36" class="ltx_Math">P</span>, we have <span id="S4.p6.m37" class="ltx_Math">\alpha\cdot p=p^{\prime}</span>. Hence <span id="S4.p6.m38" class="ltx_Math">p=\alpha^{-1}\cdot p^{\prime}</span>, so <span id="S4.p6.m39" class="ltx_Math">p</span> is in the orbit of a point in <span id="S4.p6.m40" class="ltx_Math">P_{0}</span>. This proves the first part of the statement.</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Now let <span id="S4.p7.m1" class="ltx_Math">p\in P</span> be the basepoint of <span id="S4.p7.m2" class="ltx_Math">O\in\Omega</span> and suppose <span id="S4.p7.m3" class="ltx_Math">\alpha\in\Lambda_{\Gamma}</span> fixes <span id="S4.p7.m4" class="ltx_Math">p</span>. Since <span id="S4.p7.m5" class="ltx_Math">\alpha\cdot p=p</span>, the horosphere <span id="S4.p7.m6" class="ltx_Math">\alpha(O)</span> is also based at <span id="S4.p7.m7" class="ltx_Math">p</span>. If <span id="S4.p7.m8" class="ltx_Math">\alpha(O)\neq O</span> then <span id="S4.p7.m9" class="ltx_Math">\delta=\text{dist}_{\text{H}}\left({{O},{\alpha(O)}}\right)&gt;0</span>. Moreover, <span id="S4.p7.m10" class="ltx_Math">\alpha</span> must be a hyperbolic isometry whose axis has <span id="S4.p7.m11" class="ltx_Math">p</span> as an endpoint. So <span id="S4.p7.m12" class="ltx_Math">\text{dist}_{\text{H}}\left({{O},{\alpha^{n}(O)}}\right)=n\delta</span>. Then for large <span id="S4.p7.m13" class="ltx_Math">n</span>, the Hausdorff distance between <span id="S4.p7.m14" class="ltx_Math">O</span> and <span id="S4.p7.m15" class="ltx_Math">\alpha^{n}(O)</span> would exceed <span id="S4.p7.m16" class="ltx_Math">\beta^{\prime}</span>, contradicting Lemma <a href="#Thmtheorem13" title="Lemma 13. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>. Thus <span id="S4.p7.m17" class="ltx_Math">\alpha(O)=O</span>.
+∎</p>
+</div>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p8.m1" class="ltx_Math">P_{0}=\left\{{p_{1},\dots,p_{k}}\right\}\subset P</span> be a finite set of representatives for the action of <span id="S4.p8.m2" class="ltx_Math">\Lambda_{\Gamma}</span> on <span id="S4.p8.m3" class="ltx_Math">P</span>, given by Lemma <a href="#Thmtheorem14" title="Lemma 14. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>. By removing elements from <span id="S4.p8.m4" class="ltx_Math">P_{0}</span> as necessary, we may assume that no two elements in <span id="S4.p8.m5" class="ltx_Math">P_{0}</span> represent the same orbit. So the orbits of the points in <span id="S4.p8.m6" class="ltx_Math">P_{0}</span> form a partition of <span id="S4.p8.m7" class="ltx_Math">P</span>. For each <span id="S4.p8.m8" class="ltx_Math">i=1,\dots,k</span>, let <span id="S4.p8.m9" class="ltx_Math">O_{i}\in\Omega</span> be the horosphere based at <span id="S4.p8.m10" class="ltx_Math">p_{i}</span>, and let <span id="S4.p8.m11" class="ltx_Math">\widehat{O}_{i}</span> be the horosphere contained in the horoball bounded by <span id="S4.p8.m12" class="ltx_Math">O_{i}</span> such that <span id="S4.p8.m13" class="ltx_Math">\text{dist}_{\text{H}}\left({{\widehat{O}_{i}},{O_{i}}}\right)=\beta^{\prime}</span>. Let <span id="S4.p8.m14" class="ltx_Math">\widehat{\Omega}</span> be the set of horospheres obtained by translating <span id="S4.p8.m15" class="ltx_Math">\widehat{O}_{1},\dots,\widehat{O}_{k}</span> by the elements of <span id="S4.p8.m16" class="ltx_Math">\Lambda_{\Gamma}</span>. The second part of Lemma <a href="#Thmtheorem14" title="Lemma 14. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a> guarantees that no two distinct horospheres of <span id="S4.p8.m17" class="ltx_Math">\widehat{\Omega}</span> share the same basepoint. Let <span id="S4.p8.m18" class="ltx_Math">\widehat{B}</span> denote the complement in <span id="S4.p8.m19" class="ltx_Math">X</span> of the union <span id="S4.p8.m20" class="ltx_Math">U</span> of the open horoballs bounded by the horospheres in <span id="S4.p8.m21" class="ltx_Math">\widehat{\Omega}</span>, and endow <span id="S4.p8.m22" class="ltx_Math">\widehat{B}</span> with the path-metric induced by <span id="S4.p8.m23" class="ltx_Math">d_{X}</span>. Note that <span id="S4.p8.m24" class="ltx_Math">U</span> is <span id="S4.p8.m25" class="ltx_Math">\Lambda_{\Gamma}</span>-invariant by construction, and so <span id="S4.p8.m26" class="ltx_Math">\widehat{B}</span> is <span id="S4.p8.m27" class="ltx_Math">\Lambda_{\Gamma}</span>-invariant. It follows that <span id="S4.p8.m28" class="ltx_Math">\Lambda_{\Gamma}</span> acts isometrically on <span id="S4.p8.m29" class="ltx_Math">\widehat{B}</span>. We observe in the next lemma that <span id="S4.p8.m30" class="ltx_Math">\widehat{B}</span> is a thickening of <span id="S4.p8.m31" class="ltx_Math">B</span>.</p>
+</div>
+<div id="Thmtheorem15" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 15</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem15.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The following containments hold:</span></p>
+<table id="S4.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex41.m1" class="ltx_Math">B\subseteq\widehat{B}\subseteq N_{2\beta^{\prime}}(B),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem15.p1.m1" class="ltx_Math">N_{r}(B)=\left\{{x\in X:d_{X}(x,B)\leq r}\right\}</span> for <span id="Thmtheorem15.p1.m2" class="ltx_Math">r&gt;0</span>. In particular, <span id="Thmtheorem15.p1.m3" class="ltx_Math">B</span> and <span id="Thmtheorem15.p1.m4" class="ltx_Math">\widehat{B}</span> are quasi-isometric.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">Let <span id="S4.p9.m1" class="ltx_Math">\widehat{O}\in\widehat{\Omega}</span>. Then <span id="S4.p9.m2" class="ltx_Math">\widehat{O}</span> is based at some <span id="S4.p9.m3" class="ltx_Math">p\in P</span>, and we let <span id="S4.p9.m4" class="ltx_Math">O</span> be the horosphere in <span id="S4.p9.m5" class="ltx_Math">\Omega</span> that is based at <span id="S4.p9.m6" class="ltx_Math">p</span>. By definition, <span id="S4.p9.m7" class="ltx_Math">\widehat{O}=\alpha(\widehat{O}_{i})</span> for some <span id="S4.p9.m8" class="ltx_Math">i\in\left\{{1,\dots,k}\right\}</span> and <span id="S4.p9.m9" class="ltx_Math">\alpha\in\Lambda_{\Gamma}</span>. Recall that <span id="S4.p9.m10" class="ltx_Math">\widehat{O}_{i}</span> is the horosphere contained in the horoball bounded by <span id="S4.p9.m11" class="ltx_Math">O_{i}</span> such that <span id="S4.p9.m12" class="ltx_Math">\text{dist}_{\text{H}}\left({{\widehat{O}_{i}},{O_{i}}}\right)=\beta^{\prime}</span>. Since <span id="S4.p9.m13" class="ltx_Math">\alpha</span> is an isometry, <span id="S4.p9.m14" class="ltx_Math">\alpha(\widehat{O}_{i})</span> must be the horosphere contained in the horoball bounded by <span id="S4.p9.m15" class="ltx_Math">\alpha(O_{i})</span> such that <span id="S4.p9.m16" class="ltx_Math">\text{dist}_{\text{H}}\left({{\alpha(\widehat{O}_{i})},{\alpha(O_{i})}}\right)%
+=\beta^{\prime}</span>. By Lemma <a href="#Thmtheorem13" title="Lemma 13. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a>, <span id="S4.p9.m17" class="ltx_Math">\text{dist}_{\text{H}}\left({{\alpha(O_{i})},{O}}\right)\leq\beta^{\prime}</span>. Altogether, <span id="S4.p9.m18" class="ltx_Math">\widehat{O}</span> must be contained in the horoball bounded by <span id="S4.p9.m19" class="ltx_Math">O</span>, and
+</p>
+<table id="S6.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S4.Ex42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S4.Ex42.m1" class="ltx_Math">\displaystyle\text{dist}_{\text{H}}\left({{O},{\widehat{O}}}\right)\leq\text{%
+dist}_{\text{H}}\left({{O},{\alpha(O_{i})}}\right)+\text{dist}_{\text{H}}\left%
+({{\alpha(O_{i})},{\alpha(\widehat{O}_{i})}}\right)\leq 2\beta^{\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The first part of the lemma follows, and so the inclusion <span id="S4.p9.m20" class="ltx_Math">B\hookrightarrow\widehat{B}</span> is a quasi-isometry.
+∎</p>
+</div>
+</div>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p">Since <span id="S4.p10.m1" class="ltx_Math">B/\Lambda</span> has finitely many boundary components which lift to the peripheral horospheres, there is an <span id="S4.p10.m2" class="ltx_Math">R&gt;0</span> such that the <span id="S4.p10.m3" class="ltx_Math">d_{X}</span>-distance between distinct horospheres of <span id="S4.p10.m4" class="ltx_Math">B</span> is at least <span id="S4.p10.m5" class="ltx_Math">R</span>. Then <span id="S4.p10.m6" class="ltx_Math">B\subseteq\widehat{B}</span> implies that the <span id="S4.p10.m7" class="ltx_Math">d_{X}</span>-distance between distinct elements of <span id="S4.p10.m8" class="ltx_Math">\widehat{\Omega}</span> is also at least <span id="S4.p10.m9" class="ltx_Math">R</span>. We are now equipped to show that <span id="S4.p10.m10" class="ltx_Math">\Lambda_{\Gamma}</span> is a non-uniform lattice.</p>
+</div>
+<div id="Thmtheorem16" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 16</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem16.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The group <span id="Thmtheorem16.p1.m1" class="ltx_Math">\Lambda_{\Gamma}</span> is a non-uniform lattice in <span id="Thmtheorem16.p1.m2" class="ltx_Math">\textup{Isom}(X)</span>, and admits <span id="Thmtheorem16.p1.m3" class="ltx_Math">\widehat{B}</span> as its associated neutered space.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p">We first show that <span id="S4.p11.m1" class="ltx_Math">\Lambda_{\Gamma}</span> is a discrete subgroup. Recall that <span id="S4.p11.m2" class="ltx_Math">P\subset\partial X</span> is a dense subset. So pick horospheres <span id="S4.p11.m3" class="ltx_Math">\widehat{O}_{1},\dots,\widehat{O}_{m+1}</span> in <span id="S4.p11.m4" class="ltx_Math">\widehat{\Omega}</span>, where <span id="S4.p11.m5" class="ltx_Math">m=\dim X</span>, with basepoints <span id="S4.p11.m6" class="ltx_Math">p_{1},\dots,p_{m+1}</span> such that <span id="S4.p11.m7" class="ltx_Math">\left\{{p_{1},\dots,p_{m+1}}\right\}</span> is not contained in the ideal boundary of any hyperplane of <span id="S4.p11.m8" class="ltx_Math">X</span>. Then the only isometry of <span id="S4.p11.m9" class="ltx_Math">X</span> whose extension to <span id="S4.p11.m10" class="ltx_Math">\partial X</span> fixes every <span id="S4.p11.m11" class="ltx_Math">p_{i}</span> is the identity map. For each <span id="S4.p11.m12" class="ltx_Math">i=1,\dots,m+1</span>, pick some <span id="S4.p11.m13" class="ltx_Math">x_{i}\in\widehat{O}_{i}</span>, and set</p>
+<table id="S4.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S4.Ex43.m1" class="ltx_Math">U=\left\{{\alpha\in\text{Isom}(X):d_{X}(\alpha(x_{i}),x_{i})&lt;R\text{ for }i=1,%
+\dots,m+1}\right\}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <span id="S4.p11.m14" class="ltx_Math">U\subset\text{Isom}(X)</span> is an open neighborhood of the identity, with respect to the compact-open topology. Let <span id="S4.p11.m15" class="ltx_Math">\alpha\in\Lambda_{\Gamma}\cap U</span>. Since <span id="S4.p11.m16" class="ltx_Math">\alpha\in\Lambda_{\Gamma}</span>, <span id="S4.p11.m17" class="ltx_Math">\alpha</span> permutes <span id="S4.p11.m18" class="ltx_Math">\widehat{\Omega}</span>. Since <span id="S4.p11.m19" class="ltx_Math">\alpha\in U</span>, <span id="S4.p11.m20" class="ltx_Math">d_{X}(\alpha(\widehat{O}_{i}),\widehat{O}_{i})&lt;R</span>. Together, these imply that <span id="S4.p11.m21" class="ltx_Math">\alpha(\widehat{O}_{i})=\widehat{O}_{i}</span>, and hence <span id="S4.p11.m22" class="ltx_Math">\alpha\cdot p_{i}=p_{i}</span>, for each <span id="S4.p11.m23" class="ltx_Math">i=1,\dots,m+1</span>. So <span id="S4.p11.m24" class="ltx_Math">\alpha=\text{id}_{X}</span> and <span id="S4.p11.m25" class="ltx_Math">\Lambda_{\Gamma}\cap U=\left\{{\text{id}_{X}}\right\}</span>. Thus <span id="S4.p11.m26" class="ltx_Math">\Lambda_{\Gamma}</span> is a discrete subgroup.</p>
+</div>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p">Next we show that <span id="S4.p12.m1" class="ltx_Math">X/\Lambda_{\Gamma}</span> has finite volume. Recall that the quasi-action of <span id="S4.p12.m2" class="ltx_Math">\Gamma</span> on <span id="S4.p12.m3" class="ltx_Math">B</span> is <span id="S4.p12.m4" class="ltx_Math">K</span>-cobounded. It follows from the definition of <span id="S4.p12.m5" class="ltx_Math">\Lambda_{\Gamma}</span> and the containment <span id="S4.p12.m6" class="ltx_Math">\widehat{B}\subseteq N_{2\beta^{\prime}}(B)</span> that the <span id="S4.p12.m7" class="ltx_Math">\Lambda_{\Gamma}</span>-orbit of a (every) point in <span id="S4.p12.m8" class="ltx_Math">\widehat{B}</span> is <span id="S4.p12.m9" class="ltx_Math">(K+3\beta^{\prime})</span>-dense in <span id="S4.p12.m10" class="ltx_Math">\widehat{B}</span>. Hence the quotient orbifold <span id="S4.p12.m11" class="ltx_Math">\widehat{B}/\Lambda_{\Gamma}</span> is compact, and by Lemma <a href="#Thmtheorem14" title="Lemma 14. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">14</span></a>, it has finitely many boundary components <span id="S4.p12.m12" class="ltx_Math">V_{1},\dots,V_{j}</span>. Suppose <span id="S4.p12.m13" class="ltx_Math">\widehat{O}_{i}\in\widehat{\Omega}</span> projects onto the boundary component <span id="S4.p12.m14" class="ltx_Math">V_{i}</span>. Note that <span id="S4.p12.m15" class="ltx_Math">\alpha(\widehat{O}_{i})\cap\widehat{O}_{i}\neq\emptyset</span> if and only if <span id="S4.p12.m16" class="ltx_Math">\alpha(\widehat{O}_{i})=\widehat{O}_{i}</span> if and only if <span id="S4.p12.m17" class="ltx_Math">\alpha</span> is in the stabilizer <span id="S4.p12.m18" class="ltx_Math">{\Lambda_{\Gamma}}_{i}</span> of the basepoint of <span id="S4.p12.m19" class="ltx_Math">\widehat{O}_{i}</span>. The subset <span id="S4.p12.m20" class="ltx_Math">V_{i}=\widehat{O}_{i}/{\Lambda_{\Gamma}}_{i}</span> of the compact quotient <span id="S4.p12.m21" class="ltx_Math">\widehat{B}/\Lambda_{\Gamma}</span> is closed, and therefore, compact. Let <span id="S4.p12.m22" class="ltx_Math">W_{i}\subset X</span> be the horoball bounded by <span id="S4.p12.m23" class="ltx_Math">\widehat{O}_{i}</span>. Then <span id="S4.p12.m24" class="ltx_Math">W_{i}/{\Lambda_{\Gamma}}_{i}</span> has finite volume, and since <span id="S4.p12.m25" class="ltx_Math">\left({\bigcup_{i=1}^{j}W_{i}}\right)\cup\widehat{B}</span> projects surjectively onto <span id="S4.p12.m26" class="ltx_Math">X/\Lambda_{\Gamma}</span>, we conclude that <span id="S4.p12.m27" class="ltx_Math">X/\Lambda_{\Gamma}</span> has finite volume. Thus <span id="S4.p12.m28" class="ltx_Math">\Lambda_{\Gamma}</span> is a non-uniform lattice.
+∎</p>
+</div>
+</div>
+<div id="S4.p13" class="ltx_para">
+<p class="ltx_p">We are now in a position to use Schwartz’ rigidity theorem for non-uniform rank one lattices.</p>
+</div>
+<div id="Thmtheorem17" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 17</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem17.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The group <span id="Thmtheorem17.p1.m1" class="ltx_Math">\Lambda_{\Gamma}</span> is commensurable with <span id="Thmtheorem17.p1.m2" class="ltx_Math">\Lambda</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p14" class="ltx_para">
+<p class="ltx_p">Recall that <span id="S4.p14.m1" class="ltx_Math">B</span> and <span id="S4.p14.m2" class="ltx_Math">\widehat{B}</span> are quasi-isometric by Lemma <a href="#Thmtheorem15" title="Lemma 15. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">15</span></a>. Since <span id="S4.p14.m3" class="ltx_Math">\Lambda</span> acts geometrically on <span id="S4.p14.m4" class="ltx_Math">B</span> and <span id="S4.p14.m5" class="ltx_Math">\Lambda_{\Gamma}</span> acts geometrically on <span id="S4.p14.m6" class="ltx_Math">\widehat{B}</span>, the Milnor-Schwarz lemma implies that the two non-uniform lattices <span id="S4.p14.m7" class="ltx_Math">\Lambda</span> and <span id="S4.p14.m8" class="ltx_Math">\Lambda_{\Gamma}</span> are quasi-isometric. Then the corollary follows from Schwartz’ theorem.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5. </span>The kernel of <span id="S5.m1" class="ltx_Math">\theta</span>
+</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Next we analyze the kernel of <span id="S5.p1.m1" class="ltx_Math">\theta</span>, and our goal is to show that <span id="S5.p1.m2" class="ltx_Math">\ker\theta</span> is virtually a nilpotent lattice. To this end, we first show that via the quasi-action <span id="S5.p1.m3" class="ltx_Math">h</span> of <span id="S5.p1.m4" class="ltx_Math">\Gamma</span> on <span id="S5.p1.m5" class="ltx_Math">B\times N</span>, each <span id="S5.p1.m6" class="ltx_Math">\gamma\in\ker\theta</span> coarsely preserves the fibers <span id="S5.p1.m7" class="ltx_Math">\left\{{b}\right\}\times N\subset B\times N</span>.</p>
+</div>
+<div id="Thmtheorem18" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 18</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem18.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There is a <span id="Thmtheorem18.p1.m1" class="ltx_Math">\delta&gt;0</span> such that for each <span id="Thmtheorem18.p1.m2" class="ltx_Math">\gamma\in\ker\theta</span> the following holds. For every fiber <span id="Thmtheorem18.p1.m3" class="ltx_Math">F=\left\{{b}\right\}\times N\subset B\times N</span> and every <span id="Thmtheorem18.p1.m4" class="ltx_Math">x\in F</span>, we have <span id="Thmtheorem18.p1.m5" class="ltx_Math">h(\gamma)(x)\in N_{\delta}(F)</span></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Fix <span id="S5.p2.m1" class="ltx_Math">\gamma\in\ker\theta</span>. Then <span id="S5.p2.m2" class="ltx_Math">\theta(\gamma)=\text{id}_{X}</span> and so <span id="S5.p2.m3" class="ltx_Math">d_{X}(\psi(\gamma)(b),b)\leq\beta</span> for all <span id="S5.p2.m4" class="ltx_Math">b\in B</span>. By Lemma <a href="#Thmtheorem8" title="Lemma 8 ([DK18] Lemma 24.2). ‣ 2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>, there exists <span id="S5.p2.m5" class="ltx_Math">\delta^{\prime}&gt;0</span> so that in <span id="S5.p2.m6" class="ltx_Math">B</span>, every <span id="S5.p2.m7" class="ltx_Math">d_{X}</span>-ball of radius <span id="S5.p2.m8" class="ltx_Math">\beta</span> is contained in a <span id="S5.p2.m9" class="ltx_Math">d_{B}</span>-ball of radius <span id="S5.p2.m10" class="ltx_Math">\delta^{\prime}</span>. Then <span id="S5.p2.m11" class="ltx_Math">d_{B}(\psi(\gamma)(b),b)\leq\delta^{\prime}</span> for all <span id="S5.p2.m12" class="ltx_Math">b\in B</span>. Take a fiber <span id="S5.p2.m13" class="ltx_Math">F=\left\{{b_{0}}\right\}\times N\subset B\times N</span> and let <span id="S5.p2.m14" class="ltx_Math">x\in F</span>. Then</p>
+<table id="S6.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex44"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex44.m1" class="ltx_Math">\displaystyle d_{B}(\pi[h(\gamma)(x)],b_{0})</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex44.m2" class="ltx_Math">\displaystyle\leq d_{B}(\pi[h(\gamma)(x)],\psi(\gamma)(\pi[x]))+d_{B}(\psi(%
+\gamma)(b_{0}),b_{0})\leq D+\delta^{\prime}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Set <span id="S5.p2.m15" class="ltx_Math">\delta=D+\delta^{\prime}</span> and note that this value does not depend on the choice of <span id="S5.p2.m16" class="ltx_Math">\gamma</span>. Then observe that <span id="S5.p2.m17" class="ltx_Math">d_{B}(\pi[h(\gamma)(x)],b_{0})\leq\delta</span> if and only if <span id="S5.p2.m18" class="ltx_Math">h(\gamma)(x)\in N_{\delta}(F)</span>.
+∎</p>
+</div>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">Fix a fiber <span id="S5.p3.m1" class="ltx_Math">F_{0}=\left\{{b_{0}}\right\}\times N\subset B\times N</span>. For <span id="S5.p3.m2" class="ltx_Math">\gamma\in\ker\theta</span> and <span id="S5.p3.m3" class="ltx_Math">x\in F_{0}</span>, Lemma <a href="#Thmtheorem18" title="Lemma 18. ‣ 5. The kernel of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">18</span></a> guarantees that there exists a point <span id="S5.p3.m4" class="ltx_Math">f(\gamma)(x)</span> in <span id="S5.p3.m5" class="ltx_Math">F_{0}</span> such that <span id="S5.p3.m6" class="ltx_Math">d(f(\gamma)(x),h(\gamma)(x))\leq\delta</span>. So for each <span id="S5.p3.m7" class="ltx_Math">\gamma\in\ker\theta</span> we have a map <span id="S5.p3.m8" class="ltx_Math">f(\gamma):F_{0}\to F_{0}</span>.</p>
+</div>
+<div id="Thmtheorem19" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 19</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem19.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The map <span id="Thmtheorem19.p1.m1" class="ltx_Math">\gamma\mapsto f(\gamma)</span> is a cobounded quasi-action of <span id="Thmtheorem19.p1.m2" class="ltx_Math">\ker\theta</span> on <span id="Thmtheorem19.p1.m3" class="ltx_Math">F_{0}</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">First we show that <span id="S5.p4.m1" class="ltx_Math">f(\gamma)</span> is a quasi-isometry.
+Fix <span id="S5.p4.m2" class="ltx_Math">\gamma\in\ker\theta</span>, and let <span id="S5.p4.m3" class="ltx_Math">x,y\in F_{0}</span>. Then</p>
+<table id="S6.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex45"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex45.m1" class="ltx_Math">\displaystyle d(f(\gamma)(x),f(\gamma)(y))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex45.m2" class="ltx_Math">\displaystyle\leq d(h(\gamma)(x),h(\gamma)(y))+2\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex46"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex46.m1" class="ltx_Math">\displaystyle\leq kd(x,y)+k+2\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and
+</p>
+<table id="S6.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex47"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex47.m1" class="ltx_Math">\displaystyle d(f(\gamma)(x),f(\gamma)(y))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex47.m2" class="ltx_Math">\displaystyle\geq d(h(\gamma)(x),h(\gamma)(y))-2\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex48"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex48.m1" class="ltx_Math">\displaystyle\geq\frac{1}{k}d(x,y)-k-2\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Let <span id="S5.p4.m4" class="ltx_Math">z\in F_{0}</span>. Since <span id="S5.p4.m5" class="ltx_Math">h(\gamma)</span> has <span id="S5.p4.m6" class="ltx_Math">k</span>-dense image, there is some <span id="S5.p4.m7" class="ltx_Math">y=(b,n)\in B\times N</span> for which <span id="S5.p4.m8" class="ltx_Math">d(z,h(\gamma)(y))\leq k</span>. By Lemma <a href="#Thmtheorem18" title="Lemma 18. ‣ 5. The kernel of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">18</span></a>, <span id="S5.p4.m9" class="ltx_Math">d_{B}(\pi[h(\gamma)(y)],b)\leq\delta</span>. So it turns out that <span id="S5.p4.m10" class="ltx_Math">b</span> cannot be too far from <span id="S5.p4.m11" class="ltx_Math">b_{0}</span>. Indeed,</p>
+<table id="S6.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex49"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex49.m1" class="ltx_Math">\displaystyle d_{B}(b_{0},b)</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex49.m2" class="ltx_Math">\displaystyle\leq d_{B}(b_{0},\pi[h(\gamma)(y)])+d_{B}(\pi[h(\gamma)(y)],b)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex50"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex50.m1" class="ltx_Math">\displaystyle\leq d(z,h(\gamma)(x))+\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex51"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex51.m1" class="ltx_Math">\displaystyle\leq k+\delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Set <span id="S5.p4.m12" class="ltx_Math">x=(b_{0},n)</span>. Then <span id="S5.p4.m13" class="ltx_Math">d(x,y)=d_{B}(b_{0},b)\leq k+\delta</span>, and so</p>
+<table id="S6.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex52"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex52.m1" class="ltx_Math">\displaystyle d(z,f(\gamma)(x))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex52.m2" class="ltx_Math">\displaystyle\leq d(z,h(\gamma)(y))+d(h(\gamma)(y),h(\gamma)(x))+d(h(\gamma)(x%
+),f(\gamma)(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex53"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex53.m1" class="ltx_Math">\displaystyle\leq k+(kd(x,y)+k)+\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex54.m1" class="ltx_Math">\displaystyle\leq k+k(k+\delta)+k+\delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It follows that <span id="S5.p4.m14" class="ltx_Math">f(\gamma)</span> is a quasi-isometry.</p>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">For all <span id="S5.p5.m1" class="ltx_Math">x\in F_{0}</span>,</p>
+<table id="S5.Ex55" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S5.Ex55.m1" class="ltx_Math">d(f(1)(x),x)\leq d(f(1)(x),h(1)(x))+d(h(1)(x),x)\leq\delta+k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <span id="S5.p5.m2" class="ltx_Math">\gamma_{1},\gamma_{2}\in\Gamma</span> and <span id="S5.p5.m3" class="ltx_Math">x\in F_{0}</span>. Then</p>
+<table id="S6.EGx16" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex56"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex56.m1" class="ltx_Math">\displaystyle d(f(\gamma_{1}\gamma_{2})(x),f(\gamma_{1})f(\gamma_{2})(x))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex56.m2" class="ltx_Math">\displaystyle\leq d(f(\gamma_{1}\gamma_{2})(x),h(\gamma_{1}\gamma_{2})(x))+d(h%
+(\gamma_{1}\gamma_{2})(x),f(\gamma_{1})f(\gamma_{2})(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex57"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex57.m1" class="ltx_Math">\displaystyle\leq\delta+d(h(\gamma_{1}\gamma_{2})(x),h(\gamma_{1})h(\gamma_{2}%
+)(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex58"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex58.m1" class="ltx_Math">\displaystyle\qquad+d(h(\gamma_{1})h(\gamma_{2})(x),f(\gamma_{1})f(\gamma_{2})%
+(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex59"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex59.m1" class="ltx_Math">\displaystyle\leq\delta+k+d(h(\gamma_{1})h(\gamma_{2})(x),h(\gamma_{1})f(%
+\gamma_{2})(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex60"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex60.m1" class="ltx_Math">\displaystyle\qquad+d(h(\gamma_{1})f(\gamma_{2})(x),f(\gamma_{1})f(\gamma_{2})%
+(x))</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex61"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex61.m1" class="ltx_Math">\displaystyle\leq\delta+k+[kd(h(\gamma_{2})(x),f(\gamma_{2})(x))+k]+\delta</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex62"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex62.m1" class="ltx_Math">\displaystyle\leq\delta+k+k\delta+k+\delta.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It follows that <span id="S5.p5.m4" class="ltx_Math">f</span> is a quasi-action, and it remains to show that <span id="S5.p5.m5" class="ltx_Math">f</span> is cobounded.</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Recall that it suffices to show that the orbit of <span id="S5.p6.m1" class="ltx_Math">x_{0}=(b_{0},e)\in F_{0}</span> is <span id="S5.p6.m2" class="ltx_Math">r</span>-dense in <span id="S5.p6.m3" class="ltx_Math">F_{0}</span> for some <span id="S5.p6.m4" class="ltx_Math">r&gt;0</span>. First we claim that if <span id="S5.p6.m5" class="ltx_Math">\gamma\in\Gamma</span> is such that <span id="S5.p6.m6" class="ltx_Math">h(\gamma)(x_{0})\in N_{k}(F_{0})</span>, then <span id="S5.p6.m7" class="ltx_Math">\theta(\gamma)</span> moves <span id="S5.p6.m8" class="ltx_Math">b_{0}</span> by a distance which is bounded independently of <span id="S5.p6.m9" class="ltx_Math">\gamma</span>. Indeed, if <span id="S5.p6.m10" class="ltx_Math">h(\gamma)(x_{0})\in N_{k}(F_{0})</span> then</p>
+<table id="S6.EGx17" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex63"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex63.m1" class="ltx_Math">\displaystyle d_{X}(\theta(\gamma)(b_{0}),b_{0})</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex63.m2" class="ltx_Math">\displaystyle\leq d_{X}(\theta(\gamma)(b_{0}),\psi(\gamma)(b_{0}))+d_{B}(\psi(%
+\gamma)(\pi[x_{0}]),\pi[h(\gamma)(x_{0})])+d_{B}(\pi[h(\gamma)(x_{0})],\pi[x_{%
+0}])</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex64"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex64.m1" class="ltx_Math">\displaystyle\leq\beta+D+k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By an Arzelà-Ascoli theorem, the isometries of <span id="S5.p6.m11" class="ltx_Math">X</span> which move <span id="S5.p6.m12" class="ltx_Math">b_{0}</span> by a distance at most <span id="S5.p6.m13" class="ltx_Math">\beta+D+k</span> lie in a compact subset <span id="S5.p6.m14" class="ltx_Math">C</span> of the compact-open topology on <span id="S5.p6.m15" class="ltx_Math">\text{Isom}(X)</span>. Since <span id="S5.p6.m16" class="ltx_Math">\Lambda_{\Gamma}\subset\text{Isom}(X)</span> is discrete, the intersection <span id="S5.p6.m17" class="ltx_Math">A=\Lambda_{\Gamma}\cap C</span> is finite. In summary, <span id="S5.p6.m18" class="ltx_Math">h(\gamma)(x_{0})\in N_{k}(F_{0})</span> implies <span id="S5.p6.m19" class="ltx_Math">\theta(\gamma)\in A</span>. For each <span id="S5.p6.m20" class="ltx_Math">a\in A</span>, pick <span id="S5.p6.m21" class="ltx_Math">\gamma_{a}\in\theta^{-1}(\left\{{a}\right\})</span> and set <span id="S5.p6.m22" class="ltx_Math">M=\max_{a\in A}d(x_{0},h(\gamma_{a}^{-1})(x_{0}))</span>.</p>
+</div>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">Now, let <span id="S5.p7.m1" class="ltx_Math">y\in F_{0}</span> be arbitrary. Since the quasi-action <span id="S5.p7.m2" class="ltx_Math">h</span> of <span id="S5.p7.m3" class="ltx_Math">\Gamma</span> on <span id="S5.p7.m4" class="ltx_Math">B\times N</span> is <span id="S5.p7.m5" class="ltx_Math">k</span>-cobounded, there is a <span id="S5.p7.m6" class="ltx_Math">\gamma\in\Gamma</span> such that <span id="S5.p7.m7" class="ltx_Math">d(y,h(\gamma)(x_{0}))\leq k</span>. Then <span id="S5.p7.m8" class="ltx_Math">h(\gamma)(x_{0})\in N_{k}(F_{0})</span>, so <span id="S5.p7.m9" class="ltx_Math">\theta(\gamma)</span> is equal to some <span id="S5.p7.m10" class="ltx_Math">a\in A</span>. Then <span id="S5.p7.m11" class="ltx_Math">\gamma\gamma_{a}^{-1}\in\ker\theta</span> and</p>
+<table id="S6.EGx18" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S5.Ex65"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span id="S5.Ex65.m1" class="ltx_Math">\displaystyle d(y,h(\gamma\gamma_{a}^{-1})(x_{0}))</span></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex65.m2" class="ltx_Math">\displaystyle\leq d(y,h(\gamma)h(\gamma_{a}^{-1})(x_{0}))+k</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex66"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex66.m1" class="ltx_Math">\displaystyle\leq d(y,h(\gamma)(x_{0}))+d(h(\gamma)(x_{0}),h(\gamma)h(\gamma_{%
+a}^{-1})(x_{0}))+k</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex67"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex67.m1" class="ltx_Math">\displaystyle\leq kd(x_{0},h(\gamma_{a}^{-1})(x_{0}))+3k</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S5.Ex68"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span id="S5.Ex68.m1" class="ltx_Math">\displaystyle\leq kM+3k.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Hence, <span id="S5.p7.m12" class="ltx_Math">d(y,f(\gamma\gamma_{a}^{-1})(x_{0}))\leq kM+3k+\delta</span>, and so the <span id="S5.p7.m13" class="ltx_Math">(\ker\theta)</span>-orbit of <span id="S5.p7.m14" class="ltx_Math">x_{0}</span> is <span id="S5.p7.m15" class="ltx_Math">(kM+3k+\delta)</span>-dense in <span id="S5.p7.m16" class="ltx_Math">F_{0}</span>.</p>
+</div>
+<div id="S5.p8" class="ltx_para">
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmtheorem20" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 20</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem20.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The group <span id="Thmtheorem20.p1.m1" class="ltx_Math">\ker\theta</span> is finitely generated and quasi-isometric to <span id="Thmtheorem20.p1.m2" class="ltx_Math">N</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p9" class="ltx_para">
+<p class="ltx_p">Set <span id="S5.p9.m1" class="ltx_Math">x_{0}=(b_{0},e)\in F_{0}</span>. Since <span id="S5.p9.m2" class="ltx_Math">f</span> is a cobounded quasi-action of <span id="S5.p9.m3" class="ltx_Math">\ker\theta</span> on <span id="S5.p9.m4" class="ltx_Math">F_{0}</span>, and <span id="S5.p9.m5" class="ltx_Math">F_{0}</span> is isometric to <span id="S5.p9.m6" class="ltx_Math">N</span>, the proposition follows from the stronger version of the Milnor-Schwarz lemma once we show that for <span id="S5.p9.m7" class="ltx_Math">r&gt;0</span>, the set <span id="S5.p9.m8" class="ltx_Math">\left\{{\gamma\in\ker\theta:f(\gamma)B_{F_{0}}(x_{0},r)\cap B_{F_{0}}(x_{0},r)%
+\neq\emptyset}\right\}</span> is finite. By definition, <span id="S5.p9.m9" class="ltx_Math">d(f(\gamma)(x),h(\gamma)(x))\leq\delta</span> for <span id="S5.p9.m10" class="ltx_Math">\gamma\in\ker\theta</span> and <span id="S5.p9.m11" class="ltx_Math">x\in F_{0}</span>. So it suffices to show that for <span id="S5.p9.m12" class="ltx_Math">r&gt;0</span>, the set <span id="S5.p9.m13" class="ltx_Math">\left\{{\gamma\in\Gamma:h(\gamma)B(x_{0},r)\cap B(x_{0},r)\neq\emptyset}\right\}</span> is finite, where <span id="S5.p9.m14" class="ltx_Math">B(x_{0},r)=B_{B\times N}(x_{0},r)</span>. Recall that <span id="S5.p9.m15" class="ltx_Math">h</span> is defined by <span id="S5.p9.m16" class="ltx_Math">h(\gamma)(x)=\varphi(\gamma\varphi^{-1}(x))</span> for <span id="S5.p9.m17" class="ltx_Math">\gamma\in\Gamma</span> and <span id="S5.p9.m18" class="ltx_Math">x\in B\times N</span>, where <span id="S5.p9.m19" class="ltx_Math">\varphi:\Gamma\to B\times N</span> is a quasi-isometry and <span id="S5.p9.m20" class="ltx_Math">\varphi^{-1}</span> is a quasi-inverse. Since <span id="S5.p9.m21" class="ltx_Math">\varphi</span> is a quasi-isometry, the set <span id="S5.p9.m22" class="ltx_Math">\left\{{\gamma^{\prime}\in\Gamma:\varphi(\gamma^{\prime})\in B(x_{0},r)}\right\}</span> is finite. Since <span id="S5.p9.m23" class="ltx_Math">\varphi^{-1}</span> is a quasi-isometry, <span id="S5.p9.m24" class="ltx_Math">\varphi^{-1}(B(x_{0},r))</span> is also finite. It follows that the set <span id="S5.p9.m25" class="ltx_Math">\left\{{\gamma\in\Gamma:\varphi(\gamma\varphi^{-1}(B(x_{0},r)))\cap B(x_{0},r)%
+\neq\emptyset}\right\}</span> must be finite, as desired.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6. </span>Quasi-isometric rigidity and nilcentral extensions</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">We are now ready to prove our main result which is quasi-isometric rigidity for products of the form <span id="S6.p1.m1" class="ltx_Math">\Lambda\times L</span>, where <span id="S6.p1.m2" class="ltx_Math">\Lambda</span> is a non-uniform rank one lattice and <span id="S6.p1.m3" class="ltx_Math">L</span> is a nilpotent lattice.</p>
+</div>
+<div id="Thmtheorem21" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 21</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem21.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <span id="Thmtheorem21.p1.m1" class="ltx_Math">X\neq\mathbb{H}^{2}</span> be a negatively curved symmetric space. Let <span id="Thmtheorem21.p1.m2" class="ltx_Math">\Lambda</span> be a non-uniform lattice in <span id="Thmtheorem21.p1.m3" class="ltx_Math">\textup{Isom}(X)</span> and <span id="Thmtheorem21.p1.m4" class="ltx_Math">L</span> be a nilpotent lattice. If <span id="Thmtheorem21.p1.m5" class="ltx_Math">\Gamma</span> is a finitely generated group quasi-isometric to <span id="Thmtheorem21.p1.m6" class="ltx_Math">\Lambda\times L</span>, then there exist short exact sequences</span></p>
+<table id="S6.Ex69" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex69.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;L^{\prime}\rightarrow[r]\Gamma^{\prime}\rightarrow[r]%
+\Delta\rightarrow[r]1,</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S6.Ex70" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex70.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Delta\rightarrow[r]\Lambda^{\prime}%
+\rightarrow[r]1.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where <span id="Thmtheorem21.p1.m7" class="ltx_Math">\Gamma^{\prime}\leq\Gamma</span> and <span id="Thmtheorem21.p1.m8" class="ltx_Math">\Lambda^{\prime}\leq\Lambda</span> have finite index, <span id="Thmtheorem21.p1.m9" class="ltx_Math">L^{\prime}</span> is a nilpotent lattice quasi-isometric to <span id="Thmtheorem21.p1.m10" class="ltx_Math">L</span>, <span id="Thmtheorem21.p1.m11" class="ltx_Math">\Delta</span> is a group, and <span id="Thmtheorem21.p1.m12" class="ltx_Math">F</span> is a finite group.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">By Proposition <a href="#Thmtheorem20" title="Proposition 20. ‣ 5. The kernel of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20</span></a>, <span id="S6.p2.m1" class="ltx_Math">\ker\theta</span> is quasi-isometric to <span id="S6.p2.m2" class="ltx_Math">N</span>, where <span id="S6.p2.m3" class="ltx_Math">N</span> is the simply connected nilpotent Lie group in which <span id="S6.p2.m4" class="ltx_Math">L</span> is a lattice. In particular <span id="S6.p2.m5" class="ltx_Math">\ker\theta</span> has polynomial growth. Then by Gromov’s polynomial growth theorem, <span id="S6.p2.m6" class="ltx_Math">\ker\theta</span> is virtually nilpotent. So <span id="S6.p2.m7" class="ltx_Math">\ker\theta</span> has a finite-index, hence finitely generated, nilpotent subgroup <span id="S6.p2.m8" class="ltx_Math">K</span>. Such groups are virtually torsion-free, so take a finite-index torsion-free subgroup <span id="S6.p2.m9" class="ltx_Math">K^{\prime}\leq K</span>. Since <span id="S6.p2.m10" class="ltx_Math">\ker\theta</span> is finitely generated, it has only finitely many subgroups with the same index as <span id="S6.p2.m11" class="ltx_Math">K^{\prime}</span>. Let <span id="S6.p2.m12" class="ltx_Math">L^{\prime}</span> denote their intersection. Then <span id="S6.p2.m13" class="ltx_Math">L^{\prime}</span> is a finite-index characteristic subgroup of <span id="S6.p2.m14" class="ltx_Math">\ker\theta</span>. Moreover, <span id="S6.p2.m15" class="ltx_Math">L^{\prime}</span> is finitely generated, nilpotent, and torsion-free. A theorem of Malcev <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="On a class of homogeneous spaces" class="ltx_ref">MAL51</a>]</cite> then says that <span id="S6.p2.m16" class="ltx_Math">L^{\prime}</span> embeds as a lattice in a simply connected nilpotent Lie group <span id="S6.p2.m17" class="ltx_Math">N^{\prime}</span>, known as the (real) Malcev completion of <span id="S6.p2.m18" class="ltx_Math">L^{\prime}</span> (see also <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib23" title="Discrete subgroups of lie groups" class="ltx_ref">RAG72</a>, Theorem 2.18]</cite>). Since <span id="S6.p2.m19" class="ltx_Math">L^{\prime}</span> is characteristic in <span id="S6.p2.m20" class="ltx_Math">\ker\theta</span>, it is normal in <span id="S6.p2.m21" class="ltx_Math">\Gamma</span>. By construction, <span id="S6.p2.m22" class="ltx_Math">\Gamma/L^{\prime}</span> is an extension of <span id="S6.p2.m23" class="ltx_Math">\Lambda_{\Gamma}=\Gamma/\ker\theta</span> by the finite group <span id="S6.p2.m24" class="ltx_Math">F=\ker\theta/L^{\prime}</span>. By Corollary <a href="#Thmtheorem17" title="Corollary 17. ‣ 4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">17</span></a>, <span id="S6.p2.m25" class="ltx_Math">\Lambda_{\Gamma}</span> is virtually a finite-index subgroup <span id="S6.p2.m26" class="ltx_Math">\Lambda^{\prime}\leq\Lambda</span> which is also a non-uniform lattice in <span id="S6.p2.m27" class="ltx_Math">\text{Isom}(X)</span>. Let <span id="S6.p2.m28" class="ltx_Math">\Gamma^{\prime}=\theta^{-1}(\Lambda^{\prime})</span> and <span id="S6.p2.m29" class="ltx_Math">\Delta=\Gamma^{\prime}/L^{\prime}</span>. Then we obtain the desired short exact sequences.</p>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Since lattices in simply connected nilpotent Lie groups are uniform, <span id="S6.p3.m1" class="ltx_Math">L,N,\ker\theta</span>, and <span id="S6.p3.m2" class="ltx_Math">L^{\prime}</span> are all quasi-isometric to each other. The quotient <span id="S6.p3.m3" class="ltx_Math">\Gamma^{\prime}/L^{\prime}</span> is a finite extension of a finite-index subgroup of <span id="S6.p3.m4" class="ltx_Math">\Lambda</span>, so <span id="S6.p3.m5" class="ltx_Math">\Gamma^{\prime}/L^{\prime}</span> and <span id="S6.p3.m6" class="ltx_Math">\Lambda</span> are virtually isomorphic, hence quasi-isometric, to each other.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem22" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 22</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem22.p1" class="ltx_para">
+<p class="ltx_p">One may wonder whether the fact that <span id="Thmtheorem22.p1.m1" class="ltx_Math">N</span> and <span id="Thmtheorem22.p1.m2" class="ltx_Math">N^{\prime}</span> are quasi-isometric determines any algebraic relation between them or between <span id="Thmtheorem22.p1.m3" class="ltx_Math">L</span> and <span id="Thmtheorem22.p1.m4" class="ltx_Math">L^{\prime}</span>. However, it is an open problem whether quasi-isometric simply connected nilpotent Lie groups are necessarily isomorphic.</p>
+</div>
+</div>
+<div id="Thmtheorem23" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 23</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem23.p1" class="ltx_para">
+<p class="ltx_p">It is natural to wonder whether the short exact sequence (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) splits, perhaps after passing to further finite-index subgroups. Indeed, a conclusion such as this would strengthen even further the connection between the algebraic structure of <span id="Thmtheorem23.p1.m1" class="ltx_Math">\Gamma</span> and that of <span id="Thmtheorem23.p1.m2" class="ltx_Math">\Lambda\times L</span>. However, it was shown in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="Rigidity of high dimensional graph manifolds" class="ltx_ref">FLS15</a>]</cite> that the sequence does not in general virtually split when <span id="Thmtheorem23.p1.m3" class="ltx_Math">\Lambda</span> is the fundamental group of a complete finite-volume real hyperbolic <span id="Thmtheorem23.p1.m4" class="ltx_Math">m</span>-manifold, <span id="Thmtheorem23.p1.m5" class="ltx_Math">m\geq 3</span>, and <span id="Thmtheorem23.p1.m6" class="ltx_Math">N=\mathbb{Z}^{d}</span>.</p>
+</div>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">In the setting of Theorem <a href="#Thmtheorem3" title="Theorem 3 (Frigerio–Lafont–Sisto). ‣ 1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> where <span id="S6.p4.m1" class="ltx_Math">L^{\prime}=\mathbb{Z}^{d}</span>, <span id="S6.p4.m2" class="ltx_Math">\Gamma^{\prime}</span> may be chosen so that the group extension (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a central extension. In our more general setting where <span id="S6.p4.m3" class="ltx_Math">L^{\prime}</span> is not necessarily abelian, it does not make sense to ask whether (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a central extension. Despite this, we are still able to derive some extra structure for the group extension (<a href="#S1.E1" title="(1) ‣ Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), analogous to centrality, when we focus our attention to the case when <span id="S6.p4.m4" class="ltx_Math">X</span> is either quaternionic hyperbolic space or the Cayley hyperbolic plane. Our argument works for these specific symmetric spaces because we rely on a superrigidity theorem that applies when <span id="S6.p4.m5" class="ltx_Math">\text{Isom}(X)</span> has Kazhdan’s property (T). Indeed, for those symmetric spaces, <span id="S6.p4.m6" class="ltx_Math">\textup{Isom}({X})</span> is either <span id="S6.p4.m7" class="ltx_Math">\text{Sp}(n,1)</span> or <span id="S6.p4.m8" class="ltx_Math">\text{F}_{4(-20)}</span>, both of which are known to have property (T) by Kostant <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="On the existence and irreducibility of certain series of representations" class="ltx_ref">KOS69</a>]</cite> (see also <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="Kazhdan’s property (t)" class="ltx_ref">BdV08</a>]</cite>). On the other hand, if <span id="S6.p4.m9" class="ltx_Math">X</span> is real or complex hyperbolic space, then <span id="S6.p4.m10" class="ltx_Math">\textup{Isom}({X})</span> is <span id="S6.p4.m11" class="ltx_Math">\text{SO}(n,1)</span> or <span id="S6.p4.m12" class="ltx_Math">\text{SU}(n,1)</span> and does not have property (T).</p>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">To state the superrigidity theorem, we first give a definition. Let <span id="S6.p5.m1" class="ltx_Math">V</span> be a finite-dimensional vector space over <span id="S6.p5.m2" class="ltx_Math">\mathbb{R}</span> or <span id="S6.p5.m3" class="ltx_Math">\mathbb{C}</span>. Given a lattice <span id="S6.p5.m4" class="ltx_Math">\Lambda</span> in a locally compact group <span id="S6.p5.m5" class="ltx_Math">G</span> and a representation <span id="S6.p5.m6" class="ltx_Math">\pi:\Lambda\to\text{GL}(V)</span>, we say that <span id="S6.p5.m7" class="ltx_Math">\pi</span> <span class="ltx_text ltx_font_italic">almost extends to a continuous representation of</span> <span id="S6.p5.m8" class="ltx_Math">G</span> if there exist representations <span id="S6.p5.m9" class="ltx_Math">\pi_{1}:G\to\text{GL}(V)</span> and <span id="S6.p5.m10" class="ltx_Math">\pi_{2}:\Lambda\to\text{GL}(V)</span> such that: <span id="S6.p5.m11" class="ltx_Math">\pi_{2}</span> has bounded image, the images of <span id="S6.p5.m12" class="ltx_Math">\pi_{1}</span> and <span id="S6.p5.m13" class="ltx_Math">\pi_{2}</span> commute, and <span id="S6.p5.m14" class="ltx_Math">\pi(\gamma)=\pi_{1}(\gamma)\pi_{2}(\gamma)</span> for all <span id="S6.p5.m15" class="ltx_Math">\gamma\in G</span>.</p>
+</div>
+<div id="Thmtheorem24" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 24</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem24.p1" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite"><span class="ltx_text ltx_font_italic">[</span><a href="#bib.bib14" title="Strengthening Kazhdan’s property (T) by Bochner methods" class="ltx_ref">FH12</a><span class="ltx_text ltx_font_italic">, Theorem 3.7]</span></cite><span class="ltx_text ltx_font_italic">
+Let <span id="Thmtheorem24.p1.m1" class="ltx_Math">G</span> be a semisimple Lie group with no compact factors and Kazhdan’s property (T). Let <span id="Thmtheorem24.p1.m2" class="ltx_Math">\Lambda</span> be a lattice in <span id="Thmtheorem24.p1.m3" class="ltx_Math">G</span> and <span id="Thmtheorem24.p1.m4" class="ltx_Math">\pi:\Lambda\to\textup{GL}(V)</span> a finite-dimensional representation. Then <span id="Thmtheorem24.p1.m5" class="ltx_Math">\pi</span> almost extends to a continuous representation of <span id="Thmtheorem24.p1.m6" class="ltx_Math">G</span>.</span></p>
+</div>
+</div>
+<div id="S6.p6" class="ltx_para">
+<p class="ltx_p">We now give a precise definition of the extra structure we alluded to above. Let <span id="S6.p6.m1" class="ltx_Math">G</span> be a group with a nilpotent normal subgroup <span id="S6.p6.m2" class="ltx_Math">N</span>. The upper central series of <span id="S6.p6.m3" class="ltx_Math">N</span> is</p>
+<table id="S6.Ex71" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex71.m1" class="ltx_Math">1=Z_{0}\lhd Z_{1}\lhd\dots\lhd Z_{n}=N</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S6.p6.m4" class="ltx_Math">Z_{1}=Z(N)</span> and <span id="S6.p6.m5" class="ltx_Math">Z_{i+1}/Z_{i}=Z(N/Z_{i})</span>. Recall that the <span id="S6.p6.m6" class="ltx_Math">Z_{i}</span> are characteristic subgroups of <span id="S6.p6.m7" class="ltx_Math">N</span>, so in particular they are normal in <span id="S6.p6.m8" class="ltx_Math">G</span>. We say that <span id="S6.p6.m9" class="ltx_Math">N</span> is a <span class="ltx_text ltx_font_italic">nilcentral</span> subgroup of <span id="S6.p6.m10" class="ltx_Math">G</span> if <span id="S6.p6.m11" class="ltx_Math">Z(N/Z_{i})\subseteq Z(G/Z_{i})</span> for each <span id="S6.p6.m12" class="ltx_Math">i=0,\dots,n</span>. Observe that <span id="S6.p6.m13" class="ltx_Math">N</span> is nilcentral in <span id="S6.p6.m14" class="ltx_Math">G</span> if and only if <span id="S6.p6.m15" class="ltx_Math">Z(N)\subseteq Z(G)</span> and <span id="S6.p6.m16" class="ltx_Math">N/Z(N)</span> is nilcentral in <span id="S6.p6.m17" class="ltx_Math">G/Z(N)</span>. An abelian subgroup is nilcentral if and only if it is central, and a nilpotent group <span id="S6.p6.m18" class="ltx_Math">N</span> is nilcentral in <span id="S6.p6.m19" class="ltx_Math">N\times G</span> for every group <span id="S6.p6.m20" class="ltx_Math">G</span>. We now give an example of a group with a normal subgroup which is nilpotent but not nilcentral.</p>
+</div>
+<div id="Thmtheorem25" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 25</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem25.p1" class="ltx_para">
+<p class="ltx_p">Let <span id="Thmtheorem25.p1.m1" class="ltx_Math">N</span> be the discrete Heisenberg group with group presentation</p>
+<table id="S6.Ex72" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex72.m1" class="ltx_Math">N=\left\langle{a,b,c\ |\ [a,c],[b,c],[a,b]c^{-1}}\right\rangle.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <span id="Thmtheorem25.p1.m2" class="ltx_Math">H=\mathbb{Z}_{2}=\left\{{\pm 1}\right\}</span> act on <span id="Thmtheorem25.p1.m3" class="ltx_Math">N</span> via the action <span id="Thmtheorem25.p1.m4" class="ltx_Math">\varphi:H\to\text{Aut}(N)</span> defined by</p>
+<table id="S6.Ex73" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex73.m1" class="ltx_Math">\varphi_{-1}(a)=a,\quad\varphi_{-1}(b)=b,\quad\varphi_{-1}(c)=c^{-1}.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <span id="Thmtheorem25.p1.m5" class="ltx_Math">G=N\rtimes_{\varphi}H</span>. Then <span id="Thmtheorem25.p1.m6" class="ltx_Math">N</span> is a nilpotent normal subgroup of <span id="Thmtheorem25.p1.m7" class="ltx_Math">G</span> but it is not nilcentral because <span id="Thmtheorem25.p1.m8" class="ltx_Math">Z(N)\not\subseteq Z(G)</span>. Indeed,</p>
+<table id="S6.Ex74" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex74.m1" class="ltx_Math">(c,1)(a,-1)=(ca,-1)\qquad\text{and}\qquad(a,-1)(c,1)=(ac^{-1},-1),</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">but <span id="Thmtheorem25.p1.m9" class="ltx_Math">(ca,-1)=(ac^{-1},-1)=(c^{-1}a,-1)</span> if and only if <span id="Thmtheorem25.p1.m10" class="ltx_Math">c=c^{-1}</span>, which is not the case. Thus <span id="Thmtheorem25.p1.m11" class="ltx_Math">c\in Z(N)</span>, but <span id="Thmtheorem25.p1.m12" class="ltx_Math">(c,1)\notin Z(G)</span>.</p>
+</div>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p">Let</p>
+<table id="S6.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(3)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.E3.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;N\rightarrow[r,"j"]G\rightarrow[r]H\rightarrow[r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be a short exact sequence of groups, where <span id="S6.p7.m1" class="ltx_Math">N</span> is nilpotent. We say that (<a href="#S6.E3" title="(3) ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) is a <span class="ltx_text ltx_font_italic">nilcentral</span> extension if <span id="S6.p7.m2" class="ltx_Math">j(N)</span> is nilcentral in <span id="S6.p7.m3" class="ltx_Math">G</span>. Note that an abelian extension is nilcentral if and only if it is central. Our theorem at the end of the section provides a family of non-trivial examples of nilpotent extensions that are nilcentral. On the other hand, if <span id="S6.p7.m4" class="ltx_Math">\varphi:H\to\text{Aut}(N)</span> is as in Example <a href="#Thmtheorem25" title="Example 25. ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">25</span></a>, then</p>
+<table id="S6.Ex75" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.Ex75.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;N\rightarrow[r]N\rtimes_{\varphi}H\rightarrow[r]H%
+\rightarrow[r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a nilpotent extension which is not nilcentral.</p>
+</div>
+<div id="S6.p8" class="ltx_para">
+<p class="ltx_p">We will see that in the situation of Theorem <a href="#Thmthmx1" title="Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a> under some additional conditions, passing to a finite-index subgroup of <span id="S6.p8.m1" class="ltx_Math">\Gamma^{\prime}</span> does yield a nilcentral extension. To this end, we make the following definition. We say that (<a href="#S6.E3" title="(3) ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) is a <span class="ltx_text ltx_font_italic">virtually nilcentral</span> extension if <span id="S6.p8.m2" class="ltx_Math">G</span> has a finite-index subgroup <span id="S6.p8.m3" class="ltx_Math">G^{\prime}</span> containing <span id="S6.p8.m4" class="ltx_Math">j(N)</span> such that <span id="S6.p8.m5" class="ltx_Math">j(N)</span> is nilcentral in <span id="S6.p8.m6" class="ltx_Math">G^{\prime}</span>. Recall that this means <span id="S6.p8.m7" class="ltx_Math">Z(N/Z_{i})\subseteq Z(G^{\prime}/Z_{i})</span> for <span id="S6.p8.m8" class="ltx_Math">i=0,\dots,n</span>, where <span id="S6.p8.m9" class="ltx_Math">N</span> is identified with <span id="S6.p8.m10" class="ltx_Math">j(N)\subseteq G</span>. We now give a more tractable characterization of virtually nilcentral extensions.</p>
+</div>
+<div id="Thmtheorem26" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 26</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem26.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The short exact sequence (<a href="#S6.E3" title="(3) ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) is a virtually nilcentral extension if and only if for each <span id="Thmtheorem26.p1.m1" class="ltx_Math">i=0,\dots,n</span>, <span id="Thmtheorem26.p1.m2" class="ltx_Math">G/Z_{i}</span> has a finite-index subgroup <span id="Thmtheorem26.p1.m3" class="ltx_Math">K_{i}</span> containing <span id="Thmtheorem26.p1.m4" class="ltx_Math">N/Z_{i}</span>, such that <span id="Thmtheorem26.p1.m5" class="ltx_Math">Z(N/Z_{i})\subseteq Z(K_{i})</span>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p9" class="ltx_para">
+<p class="ltx_p">The forward direction is done by taking <span id="S6.p9.m1" class="ltx_Math">K_{i}=G^{\prime}/Z_{i}</span> for each <span id="S6.p9.m2" class="ltx_Math">i</span>. For the reverse direction, recall that <span id="S6.p9.m3" class="ltx_Math">K_{i}=G_{i}/Z_{i}</span> for some <span id="S6.p9.m4" class="ltx_Math">G_{i}\leq G</span>. So <span id="S6.p9.m5" class="ltx_Math">N\leq G_{i}</span> and <span id="S6.p9.m6" class="ltx_Math">[G:G_{i}]=[G/Z_{i}:K_{i}]&lt;\infty</span>. Let <span id="S6.p9.m7" class="ltx_Math">G^{\prime}=\bigcap G_{i}</span>. Since each <span id="S6.p9.m8" class="ltx_Math">G_{i}</span> has finite index, so does <span id="S6.p9.m9" class="ltx_Math">G^{\prime}</span>. For each <span id="S6.p9.m10" class="ltx_Math">i</span>, <span id="S6.p9.m11" class="ltx_Math">N/Z_{i}\subset G^{\prime}/Z_{i}\subset K_{i}</span>, and since <span id="S6.p9.m12" class="ltx_Math">Z(N/Z_{i})\subset Z(K_{i})</span>, we have <span id="S6.p9.m13" class="ltx_Math">Z(N/Z_{i})\subset Z(G^{\prime}/Z_{i})</span>.
+∎</p>
+</div>
+</div>
+<div id="S6.p10" class="ltx_para">
+<p class="ltx_p">Now suppose we are in the situation of Theorem <a href="#Thmthmx1" title="Theorem A. ‣ 1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">A</span></a> and we have the following two short exact sequences.</p>
+<table id="S6.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(4)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.E4.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;N\rightarrow[r]\Gamma\rightarrow[r]\Delta\rightarrow[r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S6.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_left"><span class="ltx_tag ltx_tag_equation ltx_align_left">(5)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span id="S6.E5.m1" class="ltx_Math">\tikzcd 1\rightarrow[r]&amp;F\rightarrow[r]\Delta\rightarrow[r]\Lambda\rightarrow[%
+r]1</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <span id="S6.p10.m1" class="ltx_Math">N</span> is a nilpotent lattice (we are now using <span id="S6.p10.m2" class="ltx_Math">N</span> to denote the lattice, not the ambient Lie group), <span id="S6.p10.m3" class="ltx_Math">F</span> is finite, and <span id="S6.p10.m4" class="ltx_Math">\Lambda</span> is a non-uniform lattice in <span id="S6.p10.m5" class="ltx_Math">\text{Isom}(X)</span>, where <span id="S6.p10.m6" class="ltx_Math">X\neq\mathbb{H}^{2}</span> is a negatively curved symmetric space. Since <span id="S6.p10.m7" class="ltx_Math">N</span> is finitely generated, nilpotent, and torsion-free, <span id="S6.p10.m8" class="ltx_Math">Z(N/Z_{i})=Z_{i+1}/Z_{i}</span> is a finitely generated free abelian group. That is, <span id="S6.p10.m9" class="ltx_Math">Z(N/Z_{i})=\mathbb{Z}^{d_{i}}</span> for some <span id="S6.p10.m10" class="ltx_Math">d_{i}</span>, and so <span id="S6.p10.m11" class="ltx_Math">\Sigma(N)=\max_{i}d_{i}</span>. We now focus on the situation when <span id="S6.p10.m12" class="ltx_Math">X</span> is quaternionic hyperbolic space or the Cayley hyperbolic plane, and <span id="S6.p10.m13" class="ltx_Math">\text{Isom}(X)</span> has sufficiently large dimension.</p>
+</div>
+<div id="Thmtheorem27" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 27</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem27.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose <span id="Thmtheorem27.p1.m1" class="ltx_Math">X</span> is either quaternionic hyperbolic space or the Cayley hyperbolic plane. If <span id="Thmtheorem27.p1.m2" class="ltx_Math">\dim\textup{Isom}(X)&gt;\Sigma(N)</span>, then (<a href="#S6.E4" title="(4) ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) is a virtually nilcentral extension.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p11" class="ltx_para">
+<p class="ltx_p">Fix <span id="S6.p11.m1" class="ltx_Math">i\in\left\{{0,\dots,n}\right\}</span>. By Proposition <a href="#Thmtheorem26" title="Proposition 26. ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">26</span></a> it suffices to show that <span id="S6.p11.m2" class="ltx_Math">\Gamma/Z_{i}</span> has a finite-index subgroup <span id="S6.p11.m3" class="ltx_Math">K_{i}</span> containing <span id="S6.p11.m4" class="ltx_Math">N/Z_{i}</span> in which <span id="S6.p11.m5" class="ltx_Math">Z(N/Z_{i})</span> is central. Since <span id="S6.p11.m6" class="ltx_Math">N/Z_{i}</span> is normal in <span id="S6.p11.m7" class="ltx_Math">\Gamma/Z_{i}</span> and <span id="S6.p11.m8" class="ltx_Math">Z(N/Z_{i})</span> is characteristic in <span id="S6.p11.m9" class="ltx_Math">N/Z_{i}</span>, we have <span id="S6.p11.m10" class="ltx_Math">Z(N/Z_{i})\lhd\Gamma/Z_{i}</span>. So <span id="S6.p11.m11" class="ltx_Math">\Gamma/Z_{i}</span> acts by conjugation on <span id="S6.p11.m12" class="ltx_Math">Z(N/Z_{i})</span>, and we call this action <span id="S6.p11.m13" class="ltx_Math">\rho_{1}</span>. If <span id="S6.p11.m14" class="ltx_Math">\rho_{1}:\Gamma/Z_{i}\to\text{Aut}(Z(N/Z_{i}))</span> has finite image, then we may take <span id="S6.p11.m15" class="ltx_Math">K_{i}=\ker\rho_{1}</span> to finish. Since <span id="S6.p11.m16" class="ltx_Math">N/Z_{i}\leq\ker\rho_{1}</span>, we may project <span id="S6.p11.m17" class="ltx_Math">\rho_{1}</span> to an action <span id="S6.p11.m18" class="ltx_Math">\rho_{2}</span> of <span id="S6.p11.m19" class="ltx_Math">\Delta=(\Gamma/Z_{i})/(N/Z_{i})</span> on <span id="S6.p11.m20" class="ltx_Math">Z(N/Z_{i})</span>. Then it suffices to show that <span id="S6.p11.m21" class="ltx_Math">\rho_{2}:\Delta\to\text{Aut}(Z(N/Z_{i}))</span> has finite image because <span id="S6.p11.m22" class="ltx_Math">\text{im }\rho_{2}=\text{im }\rho_{1}</span>.</p>
+</div>
+<div id="S6.p12" class="ltx_para">
+<p class="ltx_p">Recall that <span id="S6.p12.m1" class="ltx_Math">Z(N/Z_{i})=\mathbb{Z}^{d}</span> for some <span id="S6.p12.m2" class="ltx_Math">d\leq r</span>. So <span id="S6.p12.m3" class="ltx_Math">\text{Aut}(Z(N/Z_{i}))=\text{GL}(d,\mathbb{Z})</span>, and the latter group naturally embeds into <span id="S6.p12.m4" class="ltx_Math">\text{GL}(d,\mathbb{R})</span>. Composing <span id="S6.p12.m5" class="ltx_Math">\rho_{2}</span> with this inclusion yields a homomorphism <span id="S6.p12.m6" class="ltx_Math">\rho_{3}:\Delta\to\text{GL}(d,\mathbb{R})</span>, and it suffices to show that <span id="S6.p12.m7" class="ltx_Math">\rho_{3}</span> has bounded image. From (<a href="#S6.E5" title="(5) ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>), <span id="S6.p12.m8" class="ltx_Math">\Delta</span> is finitely generated because <span id="S6.p12.m9" class="ltx_Math">F</span> is finite and the lattice <span id="S6.p12.m10" class="ltx_Math">\Lambda</span> is finitely generated. Thus by Selberg’s lemma, <span id="S6.p12.m11" class="ltx_Math">\rho_{3}(\Delta)</span> has a finite-index subgroup which is torsion-free. This subgroup has pre-image <span id="S6.p12.m12" class="ltx_Math">\Delta^{\prime}\leq\Delta</span> which also has finite index. Let <span id="S6.p12.m13" class="ltx_Math">\rho_{4}:\Delta^{\prime}\to\text{GL}(d,\mathbb{R})</span> be the restriction <span id="S6.p12.m14" class="ltx_Math">\rho_{3}|_{\Delta^{\prime}}</span>, and note that since <span id="S6.p12.m15" class="ltx_Math">[\Delta:\Delta^{\prime}]&lt;\infty</span>, it suffices to show that <span id="S6.p12.m16" class="ltx_Math">\rho_{4}</span> has bounded image. Since <span id="S6.p12.m17" class="ltx_Math">\rho_{4}(\Delta^{\prime})</span> is torsion-free and <span id="S6.p12.m18" class="ltx_Math">F</span> is finite, we have that <span id="S6.p12.m19" class="ltx_Math">\Delta^{\prime}\cap F\subset\ker\rho_{4}</span>. So <span id="S6.p12.m20" class="ltx_Math">\rho_{4}</span> projects to a homomorphism <span id="S6.p12.m21" class="ltx_Math">\rho_{5}:\Delta^{\prime}/(\Delta^{\prime}\cap F)\to\text{GL}(d,\mathbb{R})</span>. Since <span id="S6.p12.m22" class="ltx_Math">\text{im}\ \rho_{5}=\text{im}\ \rho_{4}</span>, it suffices to show that <span id="S6.p12.m23" class="ltx_Math">\rho_{5}</span> has bounded image.</p>
+</div>
+<div id="S6.p13" class="ltx_para">
+<p class="ltx_p">Now, <span id="S6.p13.m1" class="ltx_Math">\Delta^{\prime}/(\Delta^{\prime}\cap F)</span> is isomorphic to <span id="S6.p13.m2" class="ltx_Math">(\Delta^{\prime}F)/F</span>, and since <span id="S6.p13.m3" class="ltx_Math">\Delta^{\prime}</span> has finite index in <span id="S6.p13.m4" class="ltx_Math">\Delta</span>, <span id="S6.p13.m5" class="ltx_Math">(\Delta^{\prime}F)/F</span> has finite index in <span id="S6.p13.m6" class="ltx_Math">\Delta/F=\Lambda</span>. Thus, <span id="S6.p13.m7" class="ltx_Math">\Delta^{\prime}/(\Delta^{\prime}\cap F)</span> is a lattice in <span id="S6.p13.m8" class="ltx_Math">\text{Isom}(X)</span>. The hypothesis on <span id="S6.p13.m9" class="ltx_Math">X</span> implies <span id="S6.p13.m10" class="ltx_Math">\text{Isom}(X)</span> has property (T). Hence, we may apply Theorem <a href="#Thmtheorem24" title="Theorem 24. ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">24</span></a> to <span id="S6.p13.m11" class="ltx_Math">\rho_{5}</span> to obtain representations <span id="S6.p13.m12" class="ltx_Math">\pi_{1}:\text{Isom}(X)\to\text{GL}(d,\mathbb{R})</span> and <span id="S6.p13.m13" class="ltx_Math">\pi_{2}:\Delta^{\prime}/(\Delta^{\prime}\cap F)\to\text{GL}(d,\mathbb{R})</span>, where <span id="S6.p13.m14" class="ltx_Math">\pi_{2}</span> has bounded image, such that <span id="S6.p13.m15" class="ltx_Math">\rho_{5}(\gamma)=\pi_{1}(\gamma)\pi_{2}(\gamma)</span> for <span id="S6.p13.m16" class="ltx_Math">\gamma\in\Delta^{\prime}/(\Delta^{\prime}\cap F)</span>. If <span id="S6.p13.m17" class="ltx_Math">\dim\text{Isom}(X)&gt;\Sigma(N)\geq d</span>, so that the simple group <span id="S6.p13.m18" class="ltx_Math">\text{Isom}(X)</span> has larger dimension than <span id="S6.p13.m19" class="ltx_Math">\text{GL}(d,\mathbb{R})</span>, then <span id="S6.p13.m20" class="ltx_Math">\pi_{1}</span> must be trivial, in which case <span id="S6.p13.m21" class="ltx_Math">\rho_{5}=\pi_{2}</span> has bounded image.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem28" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Remark 28</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmtheorem28.p1" class="ltx_para">
+<p class="ltx_p"><span id="Thmtheorem28.p1.m1" class="ltx_Math">\dim\text{Sp}(n,1)=2n^{2}+5n+3</span> and <span id="Thmtheorem28.p1.m2" class="ltx_Math">\dim\text{F}_{4(-20)}=52</span>.</p>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib11" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[BdV08]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">B. Bekka, P. de la Harpe, and A. Valette</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Kazhdan’s property (t)</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S6.p4" title="6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6</span></a>.
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[DK18]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. Druţu and M. Kapovich</span><span class="ltx_text ltx_bib_year"> (2018)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Geometric group theory</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">American Mathematical Society</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#Thmtheorem8" title="Lemma 8 ([DK18] Lemma 24.2). ‣ 2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Lemma 8</span></a>.
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[FAR97]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">B. Farb</span><span class="ltx_text ltx_bib_year"> (1997)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The quasi-isometry classification of lattices in semisimple lie groups</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Mathematical Research Letters</span> <span class="ltx_text ltx_bib_volume">4</span>, <span class="ltx_text ltx_bib_pages"> pp. 705–717</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p2" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>.
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[FH12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Fisher and T. Hitchman</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Strengthening Kazhdan’s property (T) by Bochner methods</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Geometriae Dedicata</span> <span class="ltx_text ltx_bib_volume">160</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 333–364</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS2.p4" title="1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.2</span></a>,
+<a href="#Thmtheorem24.p1" title="Theorem 24. ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Theorem 24</span></a>.
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[FLS15]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Frigerio, J. Lafont, and A. Sisto</span><span class="ltx_text ltx_bib_year"> (2015)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Rigidity of high dimensional graph manifolds</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Astérisque</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p6" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>,
+<a href="#S4.p1" title="4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>,
+<a href="#Thmtheorem23.p1" title="Remark 23. ‣ 6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Remark 23</span></a>,
+<a href="#Thmtheorem5" title="Lemma 5 ([FLS15] Lemma 1.4). ‣ 2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Lemma 5</span></a>.
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[GRO81]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Gromov</span><span class="ltx_text ltx_bib_year"> (1981)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Groups of polynomial growth and expanding maps (with an appendix by Jacques Tits)</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Inst. Hautes Études Sci. Publ. Math.</span> <span class="ltx_text ltx_bib_volume">53</span>, <span class="ltx_text ltx_bib_pages"> pp. 53–73</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0073-8301,1618-1913</span>,
+<a href="http://www.numdam.org/item?id=PMIHES_1981__53__53_0" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="https://www.ams.org/mathscinet-getitem?mr=623534" title="" class="ltx_ref mr ltx_bib_external">MathReview (J. A. Wolf)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p1" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>.
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem ltx_bib_inproceedings">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[GRO83]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Gromov</span><span class="ltx_text ltx_bib_year"> (1983)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Infinite groups as geometric objects</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Proceedings of the ICM Warsaw</span>,
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p1" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>.
+</span>
+</li>
+<li id="bib.bib20" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[KKL98]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. Kapovich, B. Kleiner, and B. Leeb</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Quasi-isometries and the de Rham decomposition</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Topology</span> <span class="ltx_text ltx_bib_volume">37</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 1193–1211</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS2.p2" title="1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.2</span></a>,
+<a href="#S3.p2" title="3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>,
+<a href="#Thmtheorem9.p1" title="Proposition 9. ‣ 3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">Proposition 9</span></a>.
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[KOS69]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">B. Kostant</span><span class="ltx_text ltx_bib_year"> (1969)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On the existence and irreducibility of certain series of representations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bull. Amer. Math. Soc.</span> <span class="ltx_text ltx_bib_volume">75</span>, <span class="ltx_text ltx_bib_pages"> pp. 627–642</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S6.p4" title="6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6</span></a>.
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[MAL51]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. I. Malcev</span><span class="ltx_text ltx_bib_year"> (1951)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On a class of homogeneous spaces</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. Math. Soc. Translation</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S6.p2" title="6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6</span></a>.
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[RAG72]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. S. Raghunathan</span><span class="ltx_text ltx_bib_year"> (1972)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Discrete subgroups of lie groups</span>.
+</span>
+<span class="ltx_bibblock">Vol. <span class="ltx_text ltx_bib_volume">3</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S6.p2" title="6. Quasi-isometric rigidity and nilcentral extensions ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§6</span></a>.
+</span>
+</li>
+<li id="bib.bib24" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[SCH95]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. E. Schwartz</span><span class="ltx_text ltx_bib_year"> (1995)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The quasi-isometry classification of rank one lattices</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Publications Mathématiques de l’Institut des Hautes Études Scientifiques</span> <span class="ltx_text ltx_bib_volume">82</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 133–168</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p3" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>,
+<a href="#S1.SS1.p7" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>,
+<a href="#S1.SS2.p2" title="1.2. Main results ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.2</span></a>,
+<a href="#S2.p9" title="2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S3.p6" title="3. Projecting a quasi-action ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>,
+<a href="#S4.p2" title="4. The image of θ ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[SEL60]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Selberg</span><span class="ltx_text ltx_bib_year"> (1960)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On discontinuous groups in higher-dimensional symmetric spaces</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">“Contributions to
+Function Theory</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2. Preliminaries ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib26" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_abbrv ltx_role_refnum ltx_tag_bibitem">[WOL68]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. A. Wolf</span><span class="ltx_text ltx_bib_year"> (1968)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Growth of finitely generated solvable groups and curvature of Riemannian manifolds</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Journal of differential Geometry</span> <span class="ltx_text ltx_bib_volume">2</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 421–446</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.SS1.p1" title="1.1. Background ‣ 1. Introduction ‣ Quasi-isometric rigidity for a product of lattices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1.1</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Dec 11 22:19:52 2025 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

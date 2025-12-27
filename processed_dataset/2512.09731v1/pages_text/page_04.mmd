@@ -1,0 +1,51 @@
+Our paper is organized as follows. In section 2 we fix the notation and recall the basic definitions from the theory of quivers.
+In section 3 we formulate the conjectural description of the reduced scheme structure of the principal quiver Grassmannians.
+In section 4 we formulate a conjecture on the locus of the irreducible principal quiver Grassmannians of the minimal possible dimension.
+Sections 5 and 6 treat the case of (possibly reducible)
+principal quiver Grassmannians of the minimal possible dimension.
+In Section 7 we discuss the conjectural properties of the homogeneous coordinate rings.
+Section 8 contains a brief description of the software used to compute examples supporting conjectures given
+in the paper.
+
+## Acknowledgments
+
+We are grateful to Markus Reineke for useful discussions.
+EF was partially supported by the ISF grant 493/24.
+
+## 2. The setup
+
+In this section we recall main definitions from the theory of quiver representations and quiver Grassmannians [ASS06, CB92, CR00, Schi14].
+
+### 2.1. Generalities
+
+We fix an algebraically closed field {\mathbf{k}} of characteristic zero.
+Let Q be a Dynkin quiver with the set of vertices Q\_{0} and the set of arrows Q\_{1}.
+For an arrow \alpha we write s(\alpha) for its source and t(\alpha) for its target. A representation of Q is a collection of vector spaces M\_{i}, i\in Q\_{0}
+and a collection of linear maps M\_{\alpha}:M\_{s(\alpha)}\to M\_{t(\alpha)}.
+
+The simple modules of Q are labeled by the vertices of Q. For i\in Q\_{0}
+we denote by S\_{i} the simple 1-dimensional module supported at the vertex i.
+There are finitely many iso-classes of indecomposable representations of Q;
+these iso-classes are in bijection with positive roots of the simple Lie algebra
+whose Dynkin diagram is Q. In what follows for a vertex i we denote by
+P\_{i} the corresponding indecomposable projective module and by I\_{i} the
+corresponding indecomposable injective module.
+In particular, one has
+the canonical embedding S\_{i}\to I\_{i} and the canonical projection P\_{i}\to S\_{i}.
+We note that (P\_{i})\_{j}, i,j\in Q\_{0}
+is non-zero if and only if there exists a path from i to j in Q and
+(I\_{i})\_{j}, i,j\in Q\_{0}
+is non-zero if and only if there exists a path from j to i.
+
+For a dimension vector {\bf d}\in{\mathbb{Z}}\_{\geq 0}^{Q\_{0}} let {\rm Rep}\_{\bf d} be the representation
+space of Q of dimension {\bf d}:
+
+|  |  |  |
+| --- | --- | --- |
+|  | {\rm Rep}\_{\bf d}=\bigoplus\_{\alpha\in Q\_{1}}{\rm Hom}({\mathbf{k}}^{d\_{s(% \alpha)}},{\mathbf{k}}^{d\_{t(\alpha)}}). |  |
+
+The space {\rm Rep}\_{\bf d} is naturally acted upon (via the base change) by the group G\_{\bf d},
+which is the product of the general linear groups GL\_{d\_{i}} for i\in Q\_{0}.
+The orbits of this action parametrize the isomorphism classes of the {\bf d}-dimensional
+representations of Q. We denote by {\rm Rep}(Q) the set of all representations
+of the quiver Q.

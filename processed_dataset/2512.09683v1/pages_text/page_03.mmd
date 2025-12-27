@@ -1,0 +1,51 @@
+Organization of the paper. In Section 2, we review the explicit relation between the laws of conformal radii and moduli for \operatorname{SLE}\_{8/3}-type loops. Such relation was implicitly established in [ARS25b], and we will provide its proof in Appendix A for completeness. Then in Section 3, we define a layer structure for the cut points of B[0,\tau\_{\mathbbm{D}}] and solve it explicitly, based on the results of [CFSX25] and Section 2. Finally, we finish the proof of Theorem 1.1 in Section 4.
+
+Basic notations.
+For two compact sets A,B\subset\mathbbm{C}, let \mathrm{dist}(A,B):=\inf\{|a-b|:a\in A,b\in B\}.
+For a simple loop \ell\subset\mathbbm{C}, let D(\ell) be the bounded connected component of \mathbbm{C}\backslash\ell. For a simple loop \ell\subset\mathbbm{C} with 0\in D(\ell), we denote the conformal radius of D(\ell) seen from 0 by \mathrm{CR}(\ell,0), i.e. if f:\mathbbm{D}\to D(\ell) is a conformal map that fixes the origin, then \mathrm{CR}(\ell,0)=|f^{\prime}(0)|.
+
+For 0<r<1, let \mathbbm{A}\_{r} be the standard annulus \{z\in\mathbbm{C}:r<|z|<1\}. For each annular domain A\subset\mathbbm{C},
+there exists a unique \tau>0 such that A and \mathbbm{A}\_{e^{-2\pi\tau}} are conformally equivalent. We call \tau the modulus of A and write \mathrm{Mod}(A):=\tau. For two simple loops \eta\_{1},\eta\_{2} such that \overline{D(\eta\_{1})}\subset D(\eta\_{2}), we also write the modulus of the annular domain D(\eta\_{2})\setminus\overline{D(\eta\_{1})} as \mathrm{Mod}(\eta\_{1},\eta\_{2}) for simplicity.
+
+We will frequently deal with elementary functions such as \sqrt{x},\sinh(\sqrt{x}),\cosh(\sqrt{x}), and \tanh(\sqrt{x}). In the following, we view them as functions defined on \mathbbm{R} by taking i\sqrt{|x|},i\sin(\sqrt{|x|}),\cos(\sqrt{|x|}), and i\tan(\sqrt{|x|}) for x<0, respectively.
+
+Acknowledgment.
+We are grateful to Xin Sun for many helpful discussions and suggestions on the early draft of this paper.
+G.C. and Z.X. were partially supported by National Key R&D Program of China (No. 2023YFA1010700). G.C. was partially supported by National Key R&D Program of China (No. 2021YFA1002700).
+
+## 2 Conformal radii of \operatorname{SLE}\_{8/3}-type loops
+
+The \operatorname{SLE}\_{8/3} loop measure on \mathbbm{C} is a canonical infinite measure on simple loops characterized by conformal restriction [Wer08], which can be obtained by taking outer boundaries from the Brownian loop measure on \mathbbm{C}. According to [GM19, AHS23], the \operatorname{SLE}\_{8/3} loop measure on \mathbbm{C} also describes the welding interface when conformally welding two independent Brownian disks into a Brownian sphere.
+
+Let \operatorname{SLE}^{\mathrm{loop}}\_{8/3,\mathbbm{D}} be the \operatorname{SLE}\_{8/3} loop measure on \mathbbm{C} restricted to the loops that are contained in \mathbbm{D} and surround 0.
+By [ARS25b], \operatorname{SLE}\_{8/3,\mathbbm{D}}^{\mathrm{loop}} is the welding interface when comformally welding a Brownian disk and an independent Brownian annulus into a larger Brownian disk. This, combined with integrability of Liouville conformal field theory on the annulus by [Wu22], gives the following
+
+###### Theorem 2.1 ([ARS25b]).
+
+Let \mu\_{\mathbbm{D}} be a measure on simple loops contained in \mathbbm{D} and surrounding 0, such that \frac{d\mu\_{\mathbbm{D}}}{d\operatorname{SLE}^{\mathrm{loop}}\_{8/3,\mathbbm{D}%
+}}(\eta)=f(\mathrm{Mod}(\eta,\mathbbm{S}^{1})) for some positive continuous function f:\mathbbm{R}\_{+}\to\mathbbm{R}\_{+}.
+Then there is a constant C>0 such that for each \lambda\geq 0,
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\mathrm{CR}(\eta,0)^{\lambda}\mu\_{\mathbbm{D}}(d\eta)=C\frac{\sqrt{12% \lambda-1}}{\sinh\left(\frac{\pi}{3}\sqrt{12\lambda-1}\right)}\int\_{0}^{\infty% }e^{-(2\lambda-\frac{1}{6})\pi\tau}\eta(2i\tau)f(\tau)d\tau. |  |
+
+Here \eta(2i\tau)=e^{-\frac{\pi}{6}\tau}\prod\_{n=1}^{\infty}(1-e^{-4\pi n\tau}) is the Dedekind eta function.
+When \lambda\in(0,\frac{1}{12}), the right side is defined by analytic continuation; see the end of Section 1.
+
+The proof of Theorem 2.1 is implicit in [ARS25b], and we will provide a proof in Appendix A for completeness. In the following, we turn to the proof of Theorem 1.1.
+
+## 3 The exact laws of the conformal radii
+
+For the Brownian trajectory B[0,\tau\_{\mathbbm{D}}], we say t\in(0,\tau\_{\mathbbm{D}})
+is a *cut time* if B[0,t)\cap B(t,\tau\_{\mathbbm{D}}]=\emptyset, and the corresponding
+B\_{t} is called a cut point.
+Note that for any \varepsilon>0, B[0,\tau\_{\mathbbm{D}}] has infinitely many cut points contained in \varepsilon\mathbbm{D} [Bur89, Theorem 2.2].
+
+###### Definition 3.1.
+
+Let (t\_{i})\_{i\geq 1} be the collection of cut time t’s of B[0,\tau\_{\mathbbm{D}}] such that the outer boundary of B[0,t] is a simple loop, ranked in decreasing order.
+Note that a.s. \lim\_{i\to\infty}t\_{i}=0.
+For each i\geq 1, define s\_{i} to be the last cut time before t\_{i} (thus t\_{i}>s\_{i}>t\_{i+1}). Let \ell\_{i} and \widetilde{\ell}\_{i} be the outer boundary of B[0,t\_{i}] and the boundary of the connected component of \mathbbm{D}\setminus B[s\_{i},t\_{i}] containing the origin, respectively.
+
+Figure 1: Illustration of Definition 3.1.

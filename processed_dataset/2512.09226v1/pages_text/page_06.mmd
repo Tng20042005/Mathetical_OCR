@@ -1,0 +1,77 @@
+Finally, in Section 8 we prove the test space characterization for L\_{1}.
+The only missing step is showing that the Hamming cube embeds into the Cayley graph of a cycle and a transposition.
+The embedding is similar to that of Arzhantseva, Guba and Sapir [2] for \mathbb{Z}/n\wr\mathbb{Z}/n,
+and the analysis uses the word metric formula in Section 2.
+
+## 2. The word metric of cycle and transposition
+
+We begin by slowly examining the word length of various types of permutations.
+  
+Adjacent transpositions: Via conjugating by cyclic permutations, we can obtain any transposition between adjacent numbers:
+
+|  |  |  |
+| --- | --- | --- |
+|  | c^{k}tc^{-k}=(k(k+1))\;\;\;for\;all\;k\in\mathbb{Z}/n. |  |
+
+General transpositions: Any transposition between non-adjacent numbers can be obtained by applying transpositions between adjacent numbers.
+For example, (13)=(12)(23)(12).
+More generally, for any k\in\mathbb{Z}/n, (k(k+2))=(k(k+1))((k+1)(k+2))(k(k+1)).
+Substituting the expression of (k(k+1)) in terms of our generators, we observe cancellation between the conjugation exponents:
+
+|  |  |  |
+| --- | --- | --- |
+|  | (k(k+2))=c^{k}tc^{-k}c^{k+1}tc^{-k-1}c^{k}tc^{-k}=c^{k}tctc^{-1}tc^{-k}. |  |
+
+We now want to express a general transposition as the product of generators. For every 2\leq l\leq\lfloor n/2\rfloor+1 we have:
+
+|  |  |  |
+| --- | --- | --- |
+|  | (0l)=(01)(12)...((l-2)(l-1))((l-1)l)((l-2)(l-1))...(12)(01)=(tc)^{l-1}t(tc)^{-% (l-1)} |  |
+
+while for \lfloor n/2\rfloor+1\leq l\leq n-1 we have a shorter expression since (0(n-1))=c^{-1}tc=:t^{\prime}
+
+|  |  |  |
+| --- | --- | --- |
+|  | (0l)=(t^{\prime}c^{-1})^{l-1}t^{\prime}(t^{\prime}c^{-1})^{-(l-1)}. |  |
+
+To obtain a general transposition (k(k+l)) we simply conjugate the transposition (0l).
+We have the word length estimates:
+
+|  |  |  |
+| --- | --- | --- |
+|  | |(0l)|\_{S}\leq 4d\_{\mathbb{Z}/n}(0,l)\;\;\;and\;\;\;|(k(k+l))|\_{S}\leq 4d\_{% \mathbb{Z}/n}(0,l)+2d\_{\mathbb{Z}/n}(0,k). |  |
+
+Cyclic permutations:
+Take a cyclic permutation (k\_{1}k\_{2}...k\_{m}) where m\in[n] and k\_{1},...,k\_{m}\in\mathbb{Z}/n are distinct.
+We write the cyclic permutation as the product of transpositions and observe that there is cancellation between the conjugation exponents:
+
+|  |  |  |
+| --- | --- | --- |
+|  | (k\_{1}...k\_{m})=(k\_{1}k\_{2})(k\_{2}k\_{3})...(k\_{m-2}k\_{m-1})(k\_{m-1}k\_{m}) |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | =c^{k\_{1}}(0(k\_{2}-k\_{1}))c^{-k\_{1}}c^{k\_{2}}(0(k\_{3}-k\_{2}))c^{-k\_{2}}...c^{k% \_{m-1}}(0(k\_{m}-k\_{m-1}))c^{-k\_{m-1}}=c^{k\_{1}}\left(\prod\_{i=1}^{m-1}(0(k\_{i+% 1}-k\_{i}))c^{k\_{i+1}-k\_{i}}\right)c^{-k\_{m}}. |  |
+
+By the triangle inequality we arrive at the estimate:
+
+|  |  |  |
+| --- | --- | --- |
+|  | |(k\_{1}...k\_{m})|\_{S}\leq d\_{\mathbb{Z}/n}(0,k\_{1})+d\_{\mathbb{Z}/n}(0,k\_{m})+% 5\sum\_{i=1}^{m-1}d\_{\mathbb{Z}/n}(k\_{i},k\_{i+1})\leq 2d\_{\mathbb{Z}/n}(0,k\_{1}% )+6\sum\_{i=1}^{m-1}d\_{\mathbb{Z}/n}(k\_{i},k\_{i+1}) |  |
+
+The following estimate on the word length of a permutation
+is a variation of a lemma due to Yadin about the lampshuffler groups (in the paper titled ”Rate of Escape of the Mixer Chain”).
+
+{lemm}
+
+For each permutation \pi\in Sym\_{n}, the word length is given by
+
+|  |  |  |
+| --- | --- | --- |
+|  | |\pi|\_{S}\asymp\min\_{l\in\mathbb{Z}/n}\left(\sum\_{k\in\mathbb{Z}/n}d\_{\mathbb{% Z}/n}(k,\pi(k)+l)+diam\_{\mathbb{Z}/n}(\{0,l\}\cup\{p:\pi(p)\neq p-l\})\right). |  |
+
+To be more precise, we have:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \dfrac{1}{3}\min\_{l\in\mathbb{Z}/n}\left(\sum\_{k\in\mathbb{Z}/n}d\_{\mathbb{Z}/% n}(k,\pi(k)+l)+diam\_{\mathbb{Z}/n}(\{0,l\}\cup\{p:\pi(p)\neq p-l\})\right) |  |

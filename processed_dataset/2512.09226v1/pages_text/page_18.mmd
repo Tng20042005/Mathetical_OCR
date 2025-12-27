@@ -1,0 +1,56 @@
+###### Proof.
+
+STEP 1: Compactness and convergence to a limit group:
+  
+We recall the definition of Grigorchuk’s space of marked groups \mathcal{M}\_{r} (see Section 6 in [17]).
+The points of \mathcal{M}\_{r} consist of pairs (G,S) where G is a group, and S is an ordered generating set of size =r.
+Every such pair (G,S) is in one-to-one correspondence with the kernel \ker(\pi) of the unique canonical epimorphism from the free group to G, \pi:\mathbb{F}\_{r}\twoheadrightarrow G, which preserves the order of the generators.
+Each subgroup can be viewed as a subset of \mathbb{F}\_{r}, i.e. \ker(\pi)\in\{0,1\}^{\mathbb{F}\_{r}}.
+  
+The topology of \mathcal{M}\_{r} is the subspace topology inherited from the Tychonoff topology on \{0,1\}^{\mathbb{F}\_{r}}.
+One checks that \mathcal{M}\_{r} is a compact topological space (see Proposition 6.1 in [17]) and that this topology is metrizable (see end of page 286 in [17]).
+  
+For each n, order the generators S\_{n}=\{s\_{1},...,s\_{r}\} in any manner. Consider the sequence of points in the space of marked groups \{(G\_{n},S\_{n})\}\_{n}\subset\mathcal{M}\_{r} and pick a convergent subsequence \{(G\_{n\_{k}},S\_{n\_{k}})\}\_{k} which we will relabel and denote by \{(G\_{n},S\_{n})\}\_{n} (a slight abuse of notation) for our convenience.
+  
+STEP 2: The limit group must be virtually abelian
+  
+Note that convergence in the space of marked groups implies local convergence in the sense of Benjamini and Schramm.
+For every R\in\mathbb{N} consider the ball of radius R in the free group \mathbb{F}\_{r} with standard generators.
+There exists n\_{0} such that for all n>n\_{0}, (G\_{n},S\_{n}) and (G,S) satisfy the same relations of length \leq R.
+This implies that the ball of radius R/2 in the Cayley graph \Gamma(G\_{n},S\_{n}), is graph-isomorphic to the ball of radius R/2 in \Gamma(G,S) and consequently, the word metric on the ball of radius R/4 in \Gamma(G\_{n},S\_{n}) is isometric to that of \Gamma(G,S).
+By the hypothesis, we conclude that every finite subset of \Gamma(G,S) embeds into Hilbert space with distortion O(1).
+  
+A theorem of Ostrovskii [39] states that for every Banach space X and every locally finite metric space (M,d) (i.e. a space where each ball has finitely many points), if every finite subset of M embeds into X with bi-Lipschitz distortion \leq D for some D\in(0,\infty), then the entire metric space (M,d) embeds with bi-Lipschitz distortion \leq CD where C\in(0,\infty) is a universal constant.
+It follows that the Cayley graph \Gamma(G,S) embeds bi-Lipschiztly into Hilbert space.
+  
+A positive answer to Conjecture 7 would imply that G has an abelian subgroup H\leq G of finite index which we denote by K:=[G:H]<\infty.
+  
+STEP 3: The finite groups must also be virtually abelian.
+  
+This step of the proof was shown to us by Emmanuel Breuillard.
+  
+Consider the canonical projection homomorphism \pi:\mathbb{F}\_{r}\twoheadrightarrow G.
+Recall that G\cong\mathbb{F}\_{r}/\ker(\pi).
+Consider the subgroup F:=\pi^{-1}(H) which has index
+
+|  |  |  |
+| --- | --- | --- |
+|  | [\mathbb{F}\_{r}:F]=[\mathbb{F}\_{r}/\ker\pi:F/\ker\pi]=[G:H]=K. |  |
+
+By the Milnor–Schwarz lemma (see [15]) every finite index subgroup of a finitely generated group is finitely generated.
+Pick a finite generating set F=<w\_{1},...,w\_{r^{\prime}}> (where r^{\prime}\in\mathbb{N} and \{w\_{1},...,w\_{r^{\prime}}\} are words in S\cup S^{-1}).
+  
+Each G\_{n}, has its canonical projection map \pi\_{n}:\mathbb{F}\_{r}\twoheadrightarrow G\_{n}.
+Define the subgroup: H\_{n}:=\pi\_{n}(F).
+  
+We have H\_{n}\cong F/(F\cap\ker\pi\_{n})\cong(F\ker\pi\_{n})/\ker\pi\_{n} and the index bound:
+
+|  |  |  |
+| --- | --- | --- |
+|  | [G\_{n}:H\_{n}]=\left[\dfrac{\mathbb{F}\_{r}}{\ker(\pi\_{n})}:\dfrac{F\ker(\pi\_{n}% )}{\ker(\pi\_{n})}\right]=[\mathbb{F}\_{r}:F\ker(\pi\_{n})]\leq[\mathbb{F}\_{r}:F]% =K. |  |
+
+Since H is abelian, \pi([w\_{i},w\_{j}])=1 for all i,j\in[r^{\prime}].
+There exists R\in\mathbb{N} such that each word [w\_{i},w\_{j}] (i,j\in[r^{\prime}]) has length <R.
+By the convergence (G\_{n},S\_{n})\to(G,S), there exists n\_{0} such that for all n>n\_{0},
+(G\_{n},S\_{n}) and (G,S) satisfy the same relation of length \leq R,
+and hence

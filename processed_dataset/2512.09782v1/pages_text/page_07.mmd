@@ -1,0 +1,46 @@
+for all b\in B. It turns out the constant \beta depends only on the quasi-isometry constants of \psi(\gamma). Hence \beta depends on K and not on \gamma. Before we show that \theta is our desired homomorphism, we need the following lemma which states that isometries of X which behave similarly on B must be identical.
+
+###### Lemma 11.
+
+Let \alpha,\alpha^{\prime}\in\textup{Isom}(X). If there is a constant c such that d\_{X}(\alpha(b),\alpha^{\prime}(b))\leq c for all b\in B, then \alpha=\alpha^{\prime}.
+
+###### Proof.
+
+By considering (\alpha^{\prime})^{-1}\circ\alpha, we may assume without loss of generality that \alpha^{\prime}=\text{Id}\_{X}. Let O be a peripheral horosphere of B and let p\in\partial X be its basepoint. Let \left\{{b\_{n}}\right\} be a sequence of points in O converging to p. Since d\_{X}(\alpha(b\_{n}),b\_{n})\leq c for all n, the sequence \left\{{\alpha(b\_{n})}\right\} also converges to p. So the extension of \alpha to \partial X must fix p. Since the basepoints of the horospheres of B are dense in \partial X and the extension of \alpha to \partial X is a homeomorphism, \alpha must fix \partial X pointwise. Only the identity map on X extends to the identity map on \partial X, so we must have \alpha=\text{id}\_{X}.
+∎
+
+###### Lemma 12.
+
+The map \theta:\Gamma\to\textup{Isom}(X) is a group homomorphism.
+
+###### Proof.
+
+Let \gamma\_{1},\gamma\_{2}\in\Gamma. We need to show that \theta(\gamma\_{1}\gamma\_{2})=\theta(\gamma\_{1})\theta(\gamma\_{2}). By Lemma 11, it suffices to produce a constant c such that for all b\in B,
+
+|  |  |  |
+| --- | --- | --- |
+|  | d\_{X}(\theta(\gamma\_{1}\gamma\_{2})(b),\theta(\gamma\_{1})\theta(\gamma\_{2})(b))% \leq c. |  |
+
+Since \psi is a K-quasi-action, we have that for all b\in B,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle d\_{X}(\theta(\gamma\_{1}\gamma\_{2})(b),\theta(\gamma\_{1})\theta(% \gamma\_{2})(b)) | \displaystyle\leq d\_{X}(\theta(\gamma\_{1}\gamma\_{2})(b),\psi(\gamma\_{1}\gamma\_% {2})(b))+d\_{X}(\psi(\gamma\_{1}\gamma\_{2})(b),\psi(\gamma\_{1})\psi(\gamma\_{2})(% b)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\qquad+d\_{X}(\psi(\gamma\_{1})\psi(\gamma\_{2})(b),\theta(\gamma\_{1% })\psi(\gamma\_{2})(b)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\qquad+d\_{X}(\theta(\gamma\_{1})\psi(\gamma\_{2})(b),\theta(\gamma\_% {1})\theta(\gamma\_{2})(b)) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\leq\beta+K+\beta+\beta. |  |
+
+So set c=K+3\beta.
+∎
+
+Now that we have a homomorphism \theta:\Gamma\to\text{Isom}(X), we can extract information about the algebraic structure of \Gamma by studying the image and kernel of \theta.
+
+## 4. The image of \theta
+
+Let \Lambda\_{\Gamma} denote the image of \theta. Our goal is to show that \Lambda\_{\Gamma}<\text{Isom}(X) is a non-uniform lattice that is commensurable with \Lambda. Our arguments in this section closely follow those in [FLS15]. From now on, unless otherwise stated, the Hausdorff distance \text{dist}\_{\text{H}}\left({{\cdot},{\cdot}}\right) between subsets of X will be considered with respect to d\_{X}.

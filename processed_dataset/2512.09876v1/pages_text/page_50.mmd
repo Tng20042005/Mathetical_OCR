@@ -1,0 +1,71 @@
+We will use the homological conventions of 4.1.1, with X=S.
+In particular, according to 4.1.2
+(resp. 4.3.3) for any line bundle \mathcal{L} on X,
+one defines the Chow-Witt group \widetilde{\operatorname{CH}}{}\_{0}(X,\mathcal{L})
+of (Milnor-Witt) 0-cycles
+(resp. unramified first Milnor-Witt first K-group \underline{\operatorname{K}}^{MW}\_{1}(X,\mathcal{L}))
+as the cokernel (resp. kernel) of the
+(quadratic) divisor class map:
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.4.a) |  | \bigoplus\_{\eta\in X\_{(1)}}\operatorname{K}^{MW}\_{1}(\kappa(\eta),\mathcal{L}\_% {\eta})\xrightarrow{\mathrm{div}\_{X}}\bigoplus\_{x\in X\_{(0)}}\operatorname{GW}% (\kappa(x),\lambda\_{x}\otimes\mathcal{L}\_{x}) |  |
+
+Replacing Milnor-Witt K-theory by Milnor K-theory, or in fact Quillen K-theory,
+one similarly gets the Chow group \operatorname{CH}\_{0}(X) of 0-cycles on X
+(resp. unramified (Milnor) K-theory \underline{\operatorname{K}}^{M}\_{1}(X)).
+Then (4.1.2.a) provides a canonical “forgetful map”
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (4.4.4.b) |  | F:\widetilde{\operatorname{CH}}{}\_{0}(X,\mathcal{L})\rightarrow\operatorname{% CH}\_{0}(X). |  |
+
+###### Example 4.4.5.
+
+In general, the map (4.4.4.b) is not always an isomorphism. Here are a few examples:
+
+1. (1)
+
+   If X is the spectrum of a field F, then the map (4.4.4.b) is canonically identified with the rank map \operatorname{GW}(F,\mathcal{L})\to\mathbf{Z}, which is not always an isomorphism.
+2. (2)
+
+   If F is a field and \mathcal{L} is an odd degree line bundle over the projective line \mathbf{P}^{1}\_{F}, Fasel ([Fas13]) shows
+   that \widetilde{\operatorname{CH}}{}^{1}(\mathbf{P}^{1}\_{F},\mathcal{L})\simeq%
+   \operatorname{GW}(F) (see also [Dég25, Th. 3.4.4] for an elementary proof), and the rank map \operatorname{GW}(F)\rightarrow\mathbf{Z} need not be an isomorphism as above.
+3. (3)
+
+   Here is an example of a smooth affine curve. We know that the map (4.4.4.b) together with the map P in (4.3.10.b) induce a canonical map
+
+   |  |  |  |  |
+   | --- | --- | --- | --- |
+   | (4.4.5.a) |  | \widetilde{\operatorname{CH}}{}\_{0}(X,\mathcal{L})\to\operatorname{CH}\_{0}(X)% \oplus H\_{0}^{BM}(X\_{r},\mathcal{L}) |  |
+
+   where H\_{0}^{BM}(X\_{r},\mathcal{L}) is the Borel-Moore real étale homology ([JX25]), and the map (4.4.5.a) is an isomorphism after inverting 2. If X=\operatorname{Spec}R where R=\mathbf{R}[X,Y]/(X^{2}+Y^{2}-1) is a Dedekind domain, then the topological space X(\mathbf{R}) is simply the sphere S^{1}, and we have
+
+   |  |  |  |
+   | --- | --- | --- |
+   |  | H\_{0}^{BM}(X\_{r},\mathcal{O}\_{X})\simeq H\_{0}^{BM}(X(\mathbf{R}))\simeq H\_{0}^% {BM}(S^{1})\simeq\mathbf{Z}, |  |
+
+   so the map (4.4.4.b) is not an isomorphism.
+
+The goal of this section is to give a criterion for the map (4.4.4.b) to be an isomorphism.
+The following result is a consequence of all the theory we have developed,
+together with the Milnor conjecture as restated in 3.4.5.
+
+###### Theorem 4.4.6.
+
+Consider the above notation and assume that the following conditions hold:
+
+1. (1)
+
+   The residue field \kappa(x) of every closed point x\in X\_{(0)} satisfies I^{2}(\kappa(x))=0.
+2. (2)
+
+   The group \operatorname{SK}^{\prime}\_{1}(X), namely the kernel of the map (4.4.1.a), is 2-divisible.
+
+Then the map (4.4.4.b) is an isomorphism.
+
+###### Proof.
+
+Under our assumptions and notation, the exact sequence (3.4.6.b)
+gives rise to the following short exact sequence:

@@ -1,0 +1,34 @@
+A simple geometric proof forthe characterisation of e-merging functions
+
+# A simple geometric proof for the characterisation of e-merging functions
+
+Eugenio Clerico111Correspondence at eugenio.clerico@gmail.com
+
+(Department of Statistics, University of Oxford)
+
+###### Abstract
+
+E-values offer a powerful framework for aggregating evidence across different (possibly dependent) statistical experiments. A fundamental question is to identify e-merging functions, namely mappings that merge several e-values into a single valid e-value. A simple and elegant characterisation of this function class was recently obtained by Wang (2025), though via technically involved arguments. This note gives a short and intuitive geometric proof of the same characterisation, based on a supporting hyperplane argument applied to concave envelopes. We also show that the result holds even without imposing monotonicity in the definition of e-merging functions, which was needed for the existing proof. This shows that any non-monotone merging rule is automatically dominated by a monotone one, and hence extending the definition beyond the monotone case brings no additional generality.
+
+## Introduction
+
+Testing with *e-values* is emerging as a flexible alternative to classical *p-value*–based hypothesis testing (Ramdas et al., 2023). One of the main advantages of e-values is their ability to aggregate evidence across experiments more effectively than standard p-values, a feature that is particularly valuable in multiple and sequential testing (see, e.g., Vovk and Wang 2021; Wang and Ramdas 2022; Hartog and Lei 2025). Formally, an e-value is the observed realisation of an e-variable, defined as a non-negative random variable whose expectation under the null hypothesis is upper bounded by one. Functions that take several e-values as inputs and combine them into a single “summary” e-value are called *e-merging* functions. A key strength of this framework is that e-merging can be easily performed without imposing any assumptions on the dependence structure of the individual e-values.
+
+In a recent work, Wang (2025) provided a complete characterisation of e-merging functions, by showing that every such function must be dominated by an affine map, and hence yielding a remarkably simple final description. Despite the simplicity of the result, the proof proposed by Wang (2025) is technically involved, relying on a minimax theorem and tools from optimal transport duality, and proceeding through several auxiliary results. In this short note, we show that the same characterisation can be obtained by a much more concise, and arguably more intuitive, geometric argument. Moreover, our approach yields a slightly stronger result: the same conclusion holds without explicitly assuming monotonicity in the definition of an e-merging function. In particular, any potentially non-monotone e-merging function is automatically dominated by a non-decreasing one. This refinement does not follow directly from the arguments in Wang (2025), where the monotonicity assumption is needed in the proof.
+
+## Characterisation of the e-merging functions
+
+Given a measurable space \mathcal{X}, and a collection \mathcal{H} of probability measures on \mathcal{X} (the so-called *null hypothesis*), an *e-variable* for \mathcal{H} is a non-negative measurable function E:\mathcal{X}\to[0,\infty), whose expectation is upper bounded by 1 under every P\in\mathcal{H}. For K\geq 1 integer, following Wang (2025) we define an *e-merging function* as a component-wise non-decreasing mapping
+F\,:\,[0,\infty)^{K}\to[0,\infty) such that, for any K-tuple \mathbf{E}=(E\_{1},\dots,E\_{K}) of e-variables for \mathcal{H}, the composition
+
+|  |  |  |
+| --- | --- | --- |
+|  | F\circ\mathbf{E}\;:\;x\mapsto F\big{(}E\_{1}(x),\dots,E\_{K}(x)\big{)} |  |
+
+is again an e-variable for \mathcal{H}. As a side remark, e-variables are typically allowed to take the value infinity, and one would therefore wish to consider mappings [0,\infty]^{K}\to[0,\infty] in the definition of e-merging functions. However, as noted by Vovk and Wang (2021), despite the conceptual importance of infinite e-values, it is sufficient to restrict attention to finite e-values when discussing e-merging functions (see Appendix C therein).
+
+Wang (2025) proved the following simple and direct characterisation of e-merging functions. A non-decreasing mapping F:[0,\infty)^{K}\to[0,\infty) is an e-merging function if, and only if, there is a K-tuple \mathbf{w}=(w\_{1},\dots,w\_{K}) of non-negative coefficients that sum up to at most 1, such that, for any \mathbf{u}\in[0,\infty)^{K},
+
+|  |  |  |
+| --- | --- | --- |
+|  | F(\mathbf{u})\leq 1+\sum\_{k=1}^{K}w\_{k}(u\_{k}-1)\,. |  |

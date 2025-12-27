@@ -1,0 +1,55 @@
+|  |  |  |
+| --- | --- | --- |
+|  | U\_{\varepsilon}(t,x)={\varepsilon^{-\beta/2\alpha}}u\left(\frac{t}{\varepsilon% },\frac{x}{\varepsilon^{\beta/\alpha}}\right) |  |
+
+converge weakly to the finite-dimensional distributions of the zero-mean Gaussian random field defined by
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| (3.1) |  | U\_{0}(t,x)=\sqrt{\sum\_{j=1}^{n}c\_{1}(\kappa\_{j})A\_{j}K\_{\frac{\kappa\_{j}-1}{2}% }(|w\_{j}|)|w\_{j}|^{\frac{\kappa\_{j}-1}{2}}}\int\_{\mathbb{R}}e^{i\lambda x}E\_{% \beta}\left(-\mu t^{\beta}|\lambda|^{\alpha}\right)W(d\lambda), |  |
+
+with the covariance function
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle{\rm Cov}\left(U\_{0}(t,x),U\_{0}(t^{\prime},x^{\prime})\right) | \displaystyle=\sum\_{j=1}^{n}2c\_{1}(\kappa\_{j})A\_{j}K\_{\frac{\kappa\_{j}-1}{2}}(% |w\_{j}|)|w\_{j}|^{\frac{\kappa\_{j}-1}{2}} |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.2) |  |  | \displaystyle\times\int\_{0}^{+\infty}\cos\lambda(x-x^{\prime})E\_{\beta}(-\mu t% ^{\beta}|\lambda|^{\alpha})E\_{\beta}(-\mu(t^{\prime})^{\beta}|\lambda|^{\alpha% })d\lambda. |  |
+
+###### Proof.
+
+The proof combines the methods from [2] and [3]. By (2.4), it holds in the sense of the finite-dimensional distributions that
+
+|  |  |  |
+| --- | --- | --- |
+|  | U\_{\varepsilon}(t,x)=\frac{1}{\varepsilon^{\beta/2\alpha}}\int\_{\mathbb{R}}e^{% i\lambda x/\varepsilon^{\beta/\alpha}}E\_{\beta}\left(-\mu|\lambda|^{\alpha}(1+% |\lambda|^{2})^{\frac{\gamma}{2}}\left(\frac{t}{\varepsilon}\right)^{\beta}% \right)\sqrt{f(\lambda)}W(d\lambda). |  |
+
+Note, that by (2.8)
+
+|  |  |  |
+| --- | --- | --- |
+|  | c\_{1}(\kappa\_{j})K\_{\frac{\kappa\_{j}-1}{2}}(|\lambda|)|\lambda|^{\frac{\kappa\_% {j}-1}{2}}=c\_{2}(\kappa\_{j})\frac{1-{\theta\_{\kappa\_{j}}(|\lambda|)}}{|\lambda% |^{1-\kappa\_{j}}},\,\lambda\in\mathbb{R}. |  |
+
+By (2.7), the change of variable \lambda=\tilde{\lambda}\varepsilon^{\beta/\alpha}, and using the Brownian scaling property,
+  
+W(d(\tilde{\lambda}\varepsilon^{\beta/\alpha}))\overset{d}{=}\varepsilon^{%
+\beta/2\alpha}W(d\tilde{\lambda}), one obtains
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle U\_{\varepsilon}(t,x) | \displaystyle\overset{d}{=}\frac{1}{\varepsilon^{\beta/2\alpha}}\int\_{\mathbb{% R}}e^{i\tilde{\lambda}x}E\_{\beta}\left(-\mu|\tilde{\lambda}\varepsilon^{\beta/% \alpha}|^{\alpha}(1+|\tilde{\lambda}\varepsilon^{\beta/\alpha}|^{2})^{\gamma/2% }\left(\frac{t}{\varepsilon}\right)^{\beta}\right) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\times\sqrt{f(\tilde{\lambda}\varepsilon^{\beta/\alpha})}W(d% \tilde{\lambda}\varepsilon^{\beta/\alpha})\overset{d}{=}\int\_{\mathbb{R}}e^{i% \tilde{\lambda}x}E\_{\beta}\left(-\mu|\tilde{\lambda}|^{\alpha}(1+|\tilde{% \lambda}\varepsilon^{\beta/\alpha}|^{2})^{\gamma/2}t^{\beta}\right) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| (3.3) |  |  | \displaystyle\times\sqrt{\sum\_{j=-n}^{n}A\_{j}\frac{c\_{2}(\kappa\_{j})}{2}\frac{% 1-\theta\_{\kappa\_{j}}(|\tilde{\lambda}\varepsilon^{\beta/\alpha}+w\_{j}|)}{|% \tilde{\lambda}\varepsilon^{\beta/\alpha}+w\_{j}|^{1-\kappa\_{j}}}}W(d\tilde{% \lambda}). |  |
+
+Then, by (3.1) and (3)
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle R(t,x) | \displaystyle=\mathbb{E}(U\_{\varepsilon}(t,x)-U\_{0}(t,x))^{2}=\mathbb{E}\Bigg{% (}\int\_{\mathbb{R}}e^{i{\lambda}x}E\_{\beta}\left(-\mu|{\lambda}|^{\alpha}(1+|{% \lambda}\varepsilon^{\beta/\alpha}|^{2})^{\gamma/2}t^{\beta}\right) |  |
+|  |  |  |  |
+| --- | ---

@@ -1,0 +1,66 @@
+\frac{1-\Delta}{2% }(1-c)\right)-1+c+\sqrt{2d}\,t^{\frac{1}{p}}|\Delta|^{\frac{1}{p}}\right] |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle=\left[\sqrt{d}c(\Delta+1)+\sqrt{2d}\,t^{\frac{1}{p}}|\Delta|^{1/% p}\right] |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\geq\sqrt{d}\left[c(1-|\Delta|)+t^{1/p}|\Delta|\right] |  |
+|  |  |  |
+| --- | --- | --- |
+|  | \displaystyle\geq\sqrt{d}\min\{c/2,t^{1/p}/2\} |  |
+
+Now, supposing that \rho<\sqrt{d}, we can safely take c=t^{1/p}=\rho^{1/2}d^{-1/4}/2 while ensuring that c\in[0,1] and t\in[0,1/2], which were the only constraints on our construction. Otherwise, we take c=t^{1/p}=1/2. In either case, we have \Wp(\mu\_{0},\mu\_{t})=t^{1/p}\cdot 2c\sqrt{d}=(\rho\land\sqrt{d})/2\leq\rho. Thus, the observation \tilde{\mu}=\mu\_{0} is compatible with both \mu=\mu\_{0} and \mu\_{t} under our corruption model. This gives the desired minimax lower bound of \Omega(\sqrt{d}c\land t^{1/p})=\Omega(d^{1/4}\rho^{1/2}\land\sqrt{d}).
+
+### D.3 Efficient Computation
+
+We now introduce D.3 to achieve efficient computation, focusing on p=1 where we match the rate of 4. Here, we identify finite sets with their uniform distributions when convenient.
+
+{algorithm2e}
+
+[t]
+Randomized Rounding for Efficient OT Kernel Estimation
+\KwInn corrupted source points S\subseteq\R^{d} and target points T\subseteq[0,1]^{d}, budgets \rho\geq 0, \eps\in[0,1]
+{algorithmic}[1]
+\Statem\leftarrow n^{2}, \tau\leftarrow n^{-1/(d+2)}, \sigma\leftarrow 3^{d/(2+d)}(nd)^{-1/(d+2)}+\rho^{1/2}d^{-1/4}
+\StateS^{\prime}\leftarrow\{\proj\_{S}(X^{\prime}\_{i}+Z\_{i})\}\_{i=1}^{m}, where each X^{\prime}\_{i}\!\sim\!S and Z\_{i}\!\sim\!\cN\_{\sigma} are sampled independently
+\StateCompute kernel \bar{\kappa}\in\cK(S^{\prime},T) s.t. \bar{\kappa}\_{\sharp}\Unif(S^{\prime})=\Unif(T)
+
+|  |  |  |
+| --- | --- | --- |
+|  | \frac{1}{m}\sum\_{x\in S^{\prime}}\int\|x-y\|\dd\bar{\kappa}(y|x)\leq\Wone(S^{% \prime},T)+\tau\vspace{-2mm} |  |
+
+\State
+
+Return \hat{\kappa}\in\cK(\R^{d},T) defined by \hat{\kappa}=\bar{\kappa}\circ\proj\_{S}\circ\,N^{\sigma}
+
+###### Theorem 5 (Efficient implementation).
+
+Under the setting of 5 with p=1, the kernel \hat{\kappa} returned by D.3 matches the risk bound of 4. Using an entropic OT solver for Step 3, D.3 runs in time O((C\_{\infty}+d)n^{2+o\_{d}(1)}), where C\_{\infty}=\max\_{i,j}\|\tilde{X}\_{i}-\tilde{Y}\_{j}\|. Moreover, \hat{\kappa} can be evaluated (i.e., given x\in\cX we can sample Y\sim\hat{\kappa}\_{x}) in time O(nd).
+
+The proof below employs a similar analysis to that of 4, with multiple applications of 5 to account for various sampling errors along with TV contamination. We restrict to p=1 due to the worsened scaling of 5 for p>1.
+
+###### Proof.
+
+Set \alpha=N^{\sigma}\_{\sharp}\tilde{\mu}\_{n}, \beta=\proj\_{S}\alpha, and \beta\_{m}=\Unif(S^{\prime}). By construction, S^{\prime} is sampled i.i.d. from \beta, so Fact 5 gives that \E[\|\beta-\beta\_{m}\|\_{\tv}]=\E[\E[\|\beta-\beta\_{m}\|\_{\tv}|S^{\prime}]]%
+\lesssim\sqrt{n/m}. Moreover,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\|\proj\_{S}(x)-x\|\dd\alpha(x) | \displaystyle=\frac{1}{n}\sum\_{x\in S}\int\|\proj\_{S}(x+z)-x+z\|\dd N^{\sigma}% (z) |  |
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | \displaystyle\leq\frac{1}{n}\sum\_{x\in S}\int\|x-x+z\|\dd N^{\sigma}(z) |  | (x\in S) |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle=\int\|z\|\dd N^{\sigma}(z) |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  |  | \displaystyle\lesssim\sqrt{d}\,\sigma. |  |
+
+Now, we restate our guarantee for \bar{\kappa}; namely, we have:
+
+|  |  |  |
+| --- | --- | --- |
+|  | \iint\|x-y\|\dd\bar{\kappa}(y|x)\dd\beta\_{m}(x)\leq\Wone(\beta\_{m},\tilde{\nu}% \_{n})+\tau. |  |
+
+Thus, by 7, we have

@@ -1,0 +1,52 @@
+{claim}
+
+For each n\in\mathbb{N}, the Hamming cube (\{0,1\}^{n},||\cdot||\_{1}) embeds into \Gamma(Sym\_{4n^{2}},\{c,t\}) with bi-Lipschitz distortion <100.
+
+###### Proof.
+
+For each n\in\mathbb{N} consider the following n disjoint transpositions in Sym\_{4n^{2}}
+
+|  |  |  |
+| --- | --- | --- |
+|  | t\_{1}:=(0,n),t\_{2}:=(1\;n+1),t\_{3}:=(2\;n+2),...,t\_{n}:=(n-1\;2n-1). |  |
+
+Map each (\epsilon\_{1},...,\epsilon\_{n})\in\{0,1\}^{n} to the permutation
+f\_{\epsilon}:=t\_{1}^{\epsilon\_{1}}...t\_{n}^{\epsilon\_{n}}.
+  
+Fix distinct \epsilon=(\epsilon\_{1},...,\epsilon\_{n}),\delta=(\delta\_{1},...,\delta\_{n})\in%
+\{0,1\}^{n}.
+By the word metric formula in Section 2, we have the upper bound:
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(f\_{\epsilon},f\_{\delta})\leq\min\_{l\in\mathbb{Z}/4n^{2}}\left(5\sum\_{k\in% \mathbb{Z}/4n^{2}}d\_{\mathbb{Z}/4n^{2}}(f\_{\epsilon}(k)-l,f\_{\delta}(k))+3diam% \_{\mathbb{Z}/n^{2}}(\{0,l\}\cup\{p:f\_{\epsilon}^{-1}(p)\neq f\_{\delta}^{-1}(p-% l)\})\right) |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | \leq 5\sum\_{k\in\mathbb{Z}/4n^{2}}d\_{\mathbb{Z}/4n^{2}}(f\_{\epsilon}(k),f\_{% \delta}(k))+6n=5n||\epsilon-\delta||\_{1}+6n\leq 11n||\epsilon-\delta||\_{1}, |  |
+
+and the lower bound:
+
+|  |  |  |
+| --- | --- | --- |
+|  | d(f\_{\epsilon},f\_{\delta})\geq\dfrac{1}{3}\min\_{l\in\mathbb{Z}/4n^{2}}\sum\_{k% \in\mathbb{Z}/4n^{2}}d\_{\mathbb{Z}/4n^{2}}(f\_{\epsilon}(k)-l,f\_{\delta}(k)) |  |
+
+|  |  |  |
+| --- | --- | --- |
+|  | =\dfrac{1}{3}\min\_{l\in\mathbb{Z}/4n^{2}}\left((4n^{2}-2n)d\_{\mathbb{Z}/4n^{2}% }(0,l)+\sum\_{i:\epsilon\_{i}=\delta\_{i}}d\_{\mathbb{Z}/4n^{2}}(0,l)+\sum\_{% \epsilon\_{i}=0,\delta\_{i}=1}d\_{\mathbb{Z}/4n^{2}}(n,l)+\sum\_{\epsilon\_{i}=1,% \delta\_{i}=0}d\_{\mathbb{Z}/4n^{2}}(-n,l)\right). |  |
+
+By inspection, it is clear that the minimizer occurs at l=0 so we get
+
+|  |  |  |
+| --- | --- | --- |
+|  | \dfrac{1}{3}n||\epsilon-\delta||\_{1}\leq d(f\_{\epsilon},f\_{\delta})\leq 11n||% \epsilon-\delta||\_{1}. |  |
+
+∎
+
+## Acknowledgments
+
+I thank Assaf Naor for his results which have been included in Section 7 of this paper, for encouragement, insightful discussions, writing advice, tons of context around this work, and for helping me with the use of representation theory for the embedding in Section 4.
+I thank Mikhail Ostrovskii for telling me his Question 1, and for insightful discussions and context.
+I thank Emmanuel Breuillard for showing me step 3 in Proposition 7.
+I also thank Kunal Chawla, Seung-Yeon Ryoo, and Eduardo Silva for insightful discussions and context.
+Finally, I thank the Casa Matemática Oaxaca (CMO) and Banff International Research Station for Mathematical Innovation and Discovery (BIRS), as well as the American Institute of Mathematics (AIM) for giving me the opportunity to speak with Mikhail Ostrovskii and learn about his question.

@@ -1,0 +1,45 @@
+Let p\in[1,\infty] and let \pi:\mathcal{G}\rightarrow\mathbb{C} be a Borel function with \|\pi\|\_{I}<\infty. We distinguish three cases.
+
+* •
+
+  *Case 1*: Consider the case p=1 and let \xi\in L^{1}(\mathcal{G},\mu\_{t}). Then, \sum\_{h\in\mathcal{G}^{r(g)}}|\xi(h)|\,|\pi(g^{-1}h)|\leq\|\pi\|\_{I}\,\|\xi|\_{%
+  \mathcal{G}^{r(g)}}\|\_{1} for \mu\_{t}-almost every g\in\mathcal{G}. Thus the sum defining P^{\pi}(\xi) converges absolutely, and, arguing as in case 3, we get that \|P^{\pi}\|\leq\|\pi\|\_{I}.
+* •
+
+  *Case 2*: For p=\infty and \xi\in L^{\infty}(\mathcal{G},\mu\_{t}) one has that
+
+  |  |  |  |
+  | --- | --- | --- |
+  |  | \sum\_{h\in\mathcal{G}^{s(g)}}|\xi(gh)|\,|\pi(h)|\leq\|\xi\|\_{\infty}\sum\_{h\in% \mathcal{G}^{s(g)}}|\pi(h)|\leq\|\pi\|\_{I}\|\xi\|\_{\infty} |  |
+
+  for \mu\_{t}-almost every g\in\mathcal{G}. As above, P^{\pi} is well defined and \|P^{\pi}\|\leq\|\pi\|\_{I}.
+* •
+
+  *Case 3*: Now assume that 1<p<\infty and let q\in(1,\infty) with \frac{1}{p}+\frac{1}{q}=1. With Hölder’s inequality it follows that for \xi\in L^{p}(\mathcal{G},\mu\_{t}),
+
+  |  |  |  |  |  |  |
+  | --- | --- | --- | --- | --- | --- |
+  |  | \displaystyle\sum\_{h\in\mathcal{G}^{s(g)}}|\xi(gh)||\pi(h)| | \displaystyle\leq | \displaystyle\left(\sum\_{h\in\mathcal{G}^{s(g)}}|\xi(gh)|^{p}|\pi(h)|\right)^{% \frac{1}{p}}\left(\sum\_{h\in\mathcal{G}^{s(g)}}|\pi(h)|\right)^{\frac{1}{q}} |  | (3.1) |
+  |  |  | \displaystyle\leq | \displaystyle\|\pi\|\_{I}^{\frac{1}{q}}\left(\sum\_{h\in\mathcal{G}^{s(g)}}|\xi(% gh)|^{p}|\pi(h)|\right)^{\frac{1}{p}} |  |
+
+  for \mu\_{t}-almost every g\in\mathcal{G}. By \sum\_{h\in\mathcal{G}^{r(g)}}|\xi(h)|^{p}|\pi(g^{-1}h)|\leq\|\pi\|\_{I}\,\|\xi|%
+  \_{\mathcal{G}^{s(g)}}\|\_{p}^{p} the sum on the right-hand side of (3.1) converges absolutely. This in particular implies that P^{\pi}(\xi) is well-defined with
+
+  |  |  |  |  |  |
+  | --- | --- | --- | --- | --- |
+  |  | \displaystyle\|P^{\pi}(\xi)\|\_{p}^{p} | \displaystyle= | \displaystyle\int\_{\mathcal{G}}\left|\sum\_{h\in\mathcal{G}^{s(g)}}\xi(gh)\pi(h% )\right|^{p}d\mu\_{t}(g) |  |
+  |  |  | \displaystyle= | \displaystyle\int\_{\mathcal{G}^{(0)}}\left(\sum\_{g\in\mathcal{G}^{x}}\left|% \sum\_{h\in\mathcal{G}^{s(g)}}\xi(gh)\pi(h)\right|^{p}\right)d\mu(x) |  |
+  |  |  | \displaystyle\leq | \displaystyle\|\pi\|\_{I}^{p}\,\|\xi\|\_{p}^{p}. |  |
+
+This finishes the proof.
+∎
+
+From the lemma it in particular follows that every symmetric Borel field of probability measures gives rise to a Markov operator of norm at most 1.
+
+Given Borel functions \pi\_{1} and \pi\_{2} on a discrete p.m.p. groupoid (\mathcal{G},\mu) with \|\pi\_{1}\|\_{I},\|\pi\_{2}\|\_{I}<\infty, their *convolution product* is defined by
+
+|  |  |  |
+| --- | --- | --- |
+|  | (\pi\_{1}\ast\pi\_{2})(g):=\sum\_{h\in\mathcal{G}^{r(g)}}\pi\_{1}(h)\,\pi\_{2}(h^{-% 1}g),\;\text{ for }g\in\mathcal{G}\,. |  |
+
+This produces again a Borel function with finite I-norm. The convolution is associative with P^{\pi\_{1}\ast\pi\_{2}}=P^{\pi\_{1}}P^{\pi\_{2}} and \chi\_{\mathcal{G}^{(0)}}\ast\pi=\pi=\pi\ast\chi\_{\mathcal{G}^{(0)}}.

@@ -1,0 +1,71 @@
+## 2. Observable symmetry condition
+
+In this section, we prove a conservation law under the observable symmetry condition, and further show that this symmetry condition provides a necessary condition for controllability and unique continuation.
+
+### 2.1. A conservation law
+
+Let T>0. Let f defined in (t,x)\in[0,T]\times{\mathbb{T}} and G be a measurable subset of [0,T]\times{\mathbb{T}}. Assume u is a solution of the wave equation (1.3) with force f. Extend the solution, the set G, and the force f 2\pi-periodically to x\in\mathbb{R}. Thus f is defined in t\in(0,T),x\in\mathbb{R} and u satisfies,
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | (\partial\_{t}^{2}-\partial\_{x}^{2})u=f\mathbf{1}\_{G},\;\;\forall t\in(0,T),x% \in\mathbb{R}. |  | (2.1) |
+
+Let A,B be subsets of [0,2\pi]. Recall the definition of L\_{\xi\in A} and L\_{\eta\in B}. Define the regions
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\Omega^{+}(B;T) | \displaystyle:=L\_{\eta\in B}\cap\{[0,T]\times\mathbb{R}\}=\{(t,x)\mid 0\leq t% \leq T,\;x\in B+t\}, |  |
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\Omega^{-}(A;T) | \displaystyle:=L\_{\xi\in A}\cap\{[0,T]\times\mathbb{R}\}=\{(t,x)\mid 0\leq t% \leq T,\;x\in A-t\}, |  |
+
+where A-t=\{x-t:x\in A\},B+t=\{x+t\mid x\in B\}.
+First prove the following lemma.
+
+###### Lemma 2.1.
+
+Let u be a smooth solution of (2.1) and U=u\_{x}+u\_{t},V=u\_{x}-u\_{t}. Let A,B be two measurable subsets of [0,2\pi]. Then
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{A}U(x,0){\,\rm d}x-\int\_{A-T}U(x,T){\,\rm d}x=-\iint\_{G\cap L% \_{\xi\in A}}f{\,\rm d}x{\,\rm d}t, |  | (2.2) |
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+|  | \displaystyle\int\_{B+T}V(x,T){\,\rm d}x-\int\_{B}V(x,0){\,\rm d}x=-\iint\_{G\cap L% \_{\eta\in B}}f{\,\rm d}x{\,\rm d}t. |  | (2.3) |
+
+###### Proof.
+
+Applying Lemma A.7 to U, we obtain
+
+|  |  |  |
+| --- | --- | --- |
+|  | \iint\_{\Omega^{-}(A;T)}\bigl{(}U\_{x}-U\_{t}\bigr{)}{\,\rm d}x{\,\rm d}t=\int\_{A% }U(x,0){\,\rm d}x-\int\_{A-T}U(x,T){\,\rm d}x. |  |
+
+By the definition of U, using the equation (2.1), we have
+
+|  |  |  |
+| --- | --- | --- |
+|  | U\_{x}-U\_{t}=(\partial\_{x}^{2}-\partial\_{t}^{2})u=-f\chi\_{G}\quad\mbox{ in }L\_{% \xi\in A}\cap\{[0,T]\times\mathbb{R}\}. |  |
+
+Thus
+
+|  |  |  |
+| --- | --- | --- |
+|  | \int\_{A}U(x,0){\,\rm d}x-\int\_{A-T}U(x,T){\,\rm d}x=-\iint\_{L\_{\xi\in A}\cap\{% [0,T]\times\mathbb{R}\}}\chi\_{G}f{\,\rm d}x{\,\rm d}t=-\iint\_{G\cap L\_{\xi\in A% }}f{\,\rm d}x{\,\rm d}t. |  |
+
+This proves (2.2).
+Similarly, we obtain (2.3).
+∎
+
+###### Proof of Proposition 1.1.
+
+By a standard density argument, it suffices to consider smooth solutions. Thus, we assume u\in C^{\infty}((0,T)\times{\mathbb{T}}) now.
+
+Step 1. We show that I(T)=I(0). If G satisfies the following symmetric property
+
+|  |  |  |
+| --- | --- | --- |
+|  | \mbox{meas}\_{\mathbb{R}^{2}}\Big{(}[G\cap L\_{\xi\in A}]\,\Delta\,[G\cap L\_{% \eta\in B}]\Big{)}=0, |  |
+
+then G\cap L\_{\xi\in A} equals to G\cap L\_{\eta\in B} up to a zero measure set. Thus for any f we have
